@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+	<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+		<title>Raspberry Pi Pinout - Rev 2 Board</title>
+		<link href='http://fonts.googleapis.com/css?family=Sanchez|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+		<link href='/prettify/prettify.css' rel='stylesheet' />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<link href="/pinout.css?v=0010" rel="stylesheet">
+    <script type='text/javascript'>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32070014-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+	</head>
+	<body>
+		<div id="container">
+		<div class="latest" style="padding:10px;font-size:14px;margin-bottom:10px;text-align:right;">
+			Latest at Gadgetoid: <a href="http://pi.gadgetoid.com/article/parallax-propeller-p8x32a-first-impressions">Propeller ASC+, the Arduino-compatible multi-core micro: read my first impressions</a>
+		</div>
+		<h1><img src="/pinout-logo.png" style="top:8px;" /><span>Pi</span>n<span class="out">out</span></h1>
+
+<nav id="gpio">
+	<div id="pinbase"></div>
+	<div id="pinbaseplus"></div>
+	<ul class="bottom">
+<li class="pin1 3v3"><a href="/pindb/pin1_3v3_power"><span class="default"><span class="phys">1</span> 3v3 Power</span><span class="pin"></span>
+</a></li>
+<li class="pin3 gpio i2c"><a href="/pindb/pin3_gpio2"><span class="default"><span class="phys">3</span> GPIO 2 <small>(SDA)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 8</span></a></li>
+<li class="pin5 gpio i2c"><a href="/pindb/pin5_gpio3"><span class="default"><span class="phys">5</span> GPIO 3 <small>(SCL)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 9</span></a></li>
+<li class="pin7 gpio"><a href="/pindb/pin7_gpio4"><span class="default"><span class="phys">7</span> GPIO 4 <small>(GPCLK0)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Green LED</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 7</span></a></li>
+<li class="pin9 gnd"><a href="/pindb/pin9_ground"><span class="default"><span class="phys">9</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin11 gpio"><a href="/pindb/pin11_gpio17"><span class="default"><span class="phys">11</span> GPIO 17 </span><span class="pin"></span>
+<span class="alternate legend_pibrella">Yellow LED</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin13 gpio"><a href="/pindb/pin13_gpio27"><span class="default"><span class="phys">13</span> GPIO 27 <small>(PCM_D)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Red LED</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 2</span></a></li>
+<li class="pin15 gpio"><a href="/pindb/pin15_gpio22"><span class="default"><span class="phys">15</span> GPIO 22 </span><span class="pin"></span>
+<span class="alternate legend_pibrella">Output A</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 3</span></a></li>
+<li class="pin17 3v3"><a href="/pindb/pin17_3v3_power"><span class="default"><span class="phys">17</span> 3v3 Power</span><span class="pin"></span>
+</a></li>
+<li class="pin19 gpio spi"><a href="/pindb/pin19_gpio10"><span class="default"><span class="phys">19</span> GPIO 10 <small>(MOSI)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Input D</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 12</span></a></li>
+<li class="pin21 gpio spi"><a href="/pindb/pin21_gpio9"><span class="default"><span class="phys">21</span> GPIO 9 <small>(MISO)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Input A</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 13</span></a></li>
+<li class="pin23 gpio spi"><a href="/pindb/pin23_gpio11"><span class="default"><span class="phys">23</span> GPIO 11 <small>(SCKL)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Button</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 14</span></a></li>
+<li class="pin25 gnd"><a href="/pindb/pin25_ground"><span class="default"><span class="phys">25</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin27 gpio i2c"><a href="/pindb/pin27_id_sd"><span class="default"><span class="phys">27</span> ID_SD</span><span class="pin"></span>
+</a></li>
+<li class="pin29 gpio"><a href="/pindb/pin29_gpio5"><span class="default"><span class="phys">29</span> GPIO 5 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin31 gpio"><a href="/pindb/pin31_gpio6"><span class="default"><span class="phys">31</span> GPIO 6 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin33 gpio"><a href="/pindb/pin33_gpio13"><span class="default"><span class="phys">33</span> GPIO 13 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin35 gpio spi"><a href="/pindb/pin35_gpio19"><span class="default"><span class="phys">35</span> GPIO 19 <small>(MISO)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin37 gpio"><a href="/pindb/pin37_gpio26"><span class="default"><span class="phys">37</span> GPIO 26 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin39 gnd"><a href="/pindb/pin39_ground"><span class="default"><span class="phys">39</span> Ground</span><span class="pin"></span>
+</a></li>
+</ul>
+<ul class="top">
+<li class="pin2 5v"><a href="/pindb/pin2_5v_power"><span class="default"><span class="phys">2</span> 5v Power</span><span class="pin"></span>
+</a></li>
+<li class="pin4 5v"><a href="/pindb/pin4_5v_power"><span class="default"><span class="phys">4</span> 5v Power</span><span class="pin"></span>
+</a></li>
+<li class="pin6 gnd"><a href="/pindb/pin6_ground"><span class="default"><span class="phys">6</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin8 gpio uart"><a href="/pindb/pin8_gpio14"><span class="default"><span class="phys">8</span> GPIO 14 <small>(TXD)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 15</span></a></li>
+<li class="pin10 gpio uart"><a href="/pindb/pin10_gpio15"><span class="default"><span class="phys">10</span> GPIO 15 <small>(RXD)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 16</span></a></li>
+<li class="pin12 gpio"><a href="/pindb/pin12_gpio18"><span class="default"><span class="phys">12</span> GPIO 18 <small>(PCM_C)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Buzzer</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 1</span></a></li>
+<li class="pin14 gnd"><a href="/pindb/pin14_ground"><span class="default"><span class="phys">14</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin16 gpio"><a href="/pindb/pin16_gpio23"><span class="default"><span class="phys">16</span> GPIO 23 </span><span class="pin"></span>
+<span class="alternate legend_pibrella">Output B</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 4</span></a></li>
+<li class="pin18 gpio"><a href="/pindb/pin18_gpio24"><span class="default"><span class="phys">18</span> GPIO 24 </span><span class="pin"></span>
+<span class="alternate legend_pibrella">Output C</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 5</span></a></li>
+<li class="pin20 gnd"><a href="/pindb/pin20_ground"><span class="default"><span class="phys">20</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin22 gpio"><a href="/pindb/pin22_gpio25"><span class="default"><span class="phys">22</span> GPIO 25 </span><span class="pin"></span>
+<span class="alternate legend_pibrella">Output D</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 6</span></a></li>
+<li class="pin24 gpio spi"><a href="/pindb/pin24_gpio8"><span class="default"><span class="phys">24</span> GPIO 8 <small>(CE0)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Input C</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 10</span></a></li>
+<li class="pin26 gpio spi"><a href="/pindb/pin26_gpio7"><span class="default"><span class="phys">26</span> GPIO 7 <small>(CE1)</small></span><span class="pin"></span>
+<span class="alternate legend_pibrella">Input B</span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 11</span></a></li>
+<li class="pin28 gpio"><a href="/pindb/pin28_id_sc"><span class="default"><span class="phys">28</span> ID_SC</span><span class="pin"></span>
+</a></li>
+<li class="pin30 gnd"><a href="/pindb/pin30_ground"><span class="default"><span class="phys">30</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin32 gpio"><a href="/pindb/pin32_gpio12"><span class="default"><span class="phys">32</span> GPIO 12 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin34 gnd"><a href="/pindb/pin34_ground"><span class="default"><span class="phys">34</span> Ground</span><span class="pin"></span>
+</a></li>
+<li class="pin36 gpio"><a href="/pindb/pin36_gpio16"><span class="default"><span class="phys">36</span> GPIO 16 </span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin38 gpio spi"><a href="/pindb/pin38_gpio20"><span class="default"><span class="phys">38</span> GPIO 20 <small>(MOSI)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+<li class="pin40 gpio spi"><a href="/pindb/pin40_gpio21"><span class="default"><span class="phys">40</span> GPIO 21 <small>(SCLK)</small></span><span class="pin"></span>
+<span class="alternate legend_wiringpi">Wiring Pi pin 0</span></a></li>
+</ul>
+</nav>
+<div id="content">
+<article id="pibrella"><h1>Pibrella</h1>
+<p>The all-in-one light, sound, input and output add-on board from Pimoroni vs Cyntech uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.</p>
+<p>Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:</p>
+<pre class="codehilite"><code class="language-bash">sudo apt-get install python-pip
+sudo pip install pibrella</code></pre>
+
+
+<p>Then import it into your Python script and start tinkering:</p>
+<pre class="codehilite"><code class="language-bash">import pibrella
+pibrella.light.red.on()</code></pre></article>
+
+</div>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/cycle/2.9999.81/jquery.cycle.all.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
+    		<script src='/prettify/lang-ruby.js'></script>
+    		<script src='/prettify/lang-bash.js'></script>
+		<script src='//cdn.jsdelivr.net/history.js/1.7.1/history.js'></script>
+		<script src='//cdn.jsdelivr.net/history.js/1.7.1/history.adapter.jquery.js'></script>
+		<script src='/pinout.js?v=0.8'></script>
+	<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","3cd5994c2d","2368869","Jl1cQ0MODVRUSho1DAtTRkVQTiBIQRdyIzFFQltZXhQVFxlja0laRm8ZHg==",0,1,new Date().getTime(),"","","","",""]);}</script></body>
+</html>
+

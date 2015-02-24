@@ -2,10 +2,8 @@
 	"name": "Pibrella",
 	"manufacturer": "Pimoroni",
 	"url": "https://github.com/pimoroni/pibrella",
-	"description": {
-		"short": "An all-in-one light, sound, input and output add-on board.",
-		"long": "pibrella.md"
-	},
+	"description": "An all-in-one light, sound, input and output add-on board.",
+	"pincount": 26,
 	"pin": {
 		"7": {
 			"name": "Green LED",

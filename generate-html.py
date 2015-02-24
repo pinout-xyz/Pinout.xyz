@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 import json
+import markdown, gfm
 import unicodedata
 import re
 
-overlays = ['pibrella','break']
+overlays = ['pibrella','explorerhat']
+
+template = open('template/layout.html').read()
 
 def slugify(value):
     """
@@ -17,9 +20,23 @@ def slugify(value):
 
 def load_overlay(overlay):
 	try:
-	    return json.load(open('overlay/{}.json'.format(overlay)))
+		loaded = json.load(open('overlay/{}.json'.format(overlay)))
 	except IOError:
 		return None
+
+	loaded['long_description'] = load_text(overlay)
+	return loaded
+
+def load_text(overlay):
+	try:
+		return markdown.markdown(open('description/overlay/{}.md'.format(overlay)).read(), extensions=[gfm.HiddenHiliteExtension([]),'fenced_code'])
+	except IOError:
+		return None
+
+def render_overlay_page(overlay):
+	if overlay == None:
+		return ''
+	return '<article id="{}">{}</article>'.format(slugify(overlay['name']),overlay['long_description'])
 
 db = json.load(open('pi-pinout.json'))
 
@@ -28,6 +45,7 @@ pins = db['pins']
 html_odd = ''
 html_even = ''
 
+overlay_text = map(load_text,overlays)
 overlays = map(load_overlay,overlays)
 
 def render_alternate(handle, name):
@@ -75,6 +93,13 @@ for odd in range(1,len(pins),2):
 	html_odd += render_pin(odd)
 	html_even += render_pin(odd+1)
 
-html = '<nav class="gpio" id="gpio">\n<ul class="bottom">\n{}</ul>\n<ul class="top">\n{}</ul>\n</nav>'.format(html_odd, html_even)
+pages = map(render_overlay_page,overlays)
+
+html = '''<ul class="bottom">
+{}</ul>
+<ul class="top">
+{}</ul>'''.format(html_odd, html_even)
+
+html = template.replace('{{nav}}',html).replace('{{content}}','\n'.join(pages))
 
 print(html)

@@ -1,0 +1,249 @@
+* {margin:0;padding:0;text-decoration:none;}
+body {font-family:'Sanchez', sans-serif;}
+pre {font-family:'Ubuntu Mono', sans-serif;font-size:13px;}
+ul.bottom a {color:#E9E5D2;}
+ul.top a {color:#063541;}
+table {margin:20px 0;border-collapse:collapse;}
+table td, table th {border:1px solid #073642;padding:5px;}
+table th {background:#073642;color:#EBE6D3;}
+table * {text-align:left;font-size:13px;}
+nav#gpio {
+	position:relative;
+	width:244px;
+	background:#5F8645;
+	height:680px;
+	float:left;
+	margin-right:136px;
+}
+.phys {font-size:90%;opacity:0.8;color:#D33682;}
+.bottom .phys {color:#002B36;}
+.bottom .active .phys, .bottom :hover .phys,
+.bottom .legend .phys {color:#FFF;}
+#content {
+	float:left;
+	background:#EBE6D3;
+	width:500px;
+	min-height:600px;
+	padding-bottom:60px;
+}
+#content article {
+	background:#EBE6D3;
+	padding:20px;
+	width:560px;
+	min-height:680px;
+}
+nav#gpio ul.top {
+	position:absolute;
+	left:200px;
+	top:17px;
+	list-style:none;
+}
+nav#gpio ul.bottom {
+	position:absolute;
+	left:16px;
+	top:17px;
+	list-style:none;
+}
+nav#gpio ul.top li {text-indent:52px;}
+nav#gpio li a {
+	display:block;
+	width:180px;
+	position:relative;
+	font-size:12px;
+	line-height:29px;
+	height:27px;
+	margin-bottom:2px;
+}
+nav#gpio li a:hover,
+nav#gpio li.active a {
+	background:#EBE6D3;
+	border-top-left-radius:13px;
+	border-bottom-left-radius:13px;
+}
+nav#gpio ul.bottom li a:hover,
+nav#gpio ul.bottom li.active a {
+	background:#063541;
+	border-top-right-radius:13px;
+	border-bottom-right-radius:13px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+nav#gpio ul.bottom a {
+	text-indent:10px;
+}
+nav#gpio span.pin {
+	display:block;
+	border:1px solid #FFFFFF;
+	border-radius:50%;
+	width:19px;
+	height:19px;
+	background:#002B36;
+	position:absolute;
+	right:3px;
+	top:3px;
+}
+nav#gpio li.legend a {
+	background:#EBE6D3;
+}
+nav#gpio li.legend a {}
+nav#gpio ul.bottom li.legend a {
+	background:#063541;
+}
+nav#gpio ul.top li.legend {
+	width:177px;
+	position:relative;
+	padding-left:5px;
+	left:-5px;
+}
+nav#gpio ul.top span.pin {
+	left:3px;
+	top:3px;
+}
+nav#gpio span.pin:after {
+	content:'';
+	display:block;
+	border-radius:100%;
+	background:#FDF6E3;
+	position:absolute;
+	left:6px;
+	top:6px;
+	width:7px;
+	height:7px;
+	font-size:7px;
+	box-shadow: 0 0 5px rgba(10,41,51,0.5);
+}
+nav#gpio li.pin2 span.pin,
+nav#gpio li.pin4 span.pin {
+	background:#DC322F;
+}
+nav#gpio li.pin3 span.pin,
+nav#gpio li.pin5 span.pin,
+nav#gpio li.pin27 span.pin,
+nav#gpio li.pin28 span.pin {
+	background:#268BD2;
+}
+nav#gpio li.pin8 span.pin,
+nav#gpio li.pin10 span.pin,
+nav#gpio li.pin17 span.pin {
+	background:#B58900;
+}
+nav#gpio li.pin7 span.pin,
+nav#gpio li.pin11 span.pin,
+nav#gpio li.pin13 span.pin,
+nav#gpio li.pin15 span.pin,
+nav#gpio li.pin12 span.pin,
+nav#gpio li.pin16 span.pin,
+nav#gpio li.pin18 span.pin,
+nav#gpio li.pin22 span.pin,
+
+nav#gpio li.pin29 span.pin,
+nav#gpio li.pin31 span.pin,
+nav#gpio li.pin33 span.pin,
+nav#gpio li.pin32 span.pin,
+nav#gpio li.pin35 span.pin,
+nav#gpio li.pin36 span.pin,
+nav#gpio li.pin37 span.pin,
+nav#gpio li.pin38 span.pin,
+nav#gpio li.pin40 span.pin  {
+	background:#859900;
+}
+nav#gpio li.pin19 span.pin,
+nav#gpio li.pin21 span.pin,
+nav#gpio li.pin23 span.pin,
+nav#gpio li.pin24 span.pin,
+nav#gpio li.pin26 span.pin {
+	background:#D33682;
+}
+nav#gpio li.pin1 span.pin {
+	border-radius:0;
+	background:#B58900;
+}
+div#pinbase {
+	width:72px;
+	height:389px;
+	background:#073642;
+	position:absolute;
+	left:162px;
+	top:10px;
+}
+div#pinbasebplus {
+	width:72px;
+	height:215px;
+	background:#184753;
+	position:absolute;
+	left:162px;
+	top:401px;
+}
+h1 {
+	width:250px;
+	font-size:34px;
+	color:#888888;
+	margin-bottom:5px;
+	cursor:pointer;
+}
+h1 img {float:left;position:relative;top:0px;margin:0 13px;
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	width:30px;
+}
+h1 span {
+	color:#D6264E;
+}
+h1 span.out {
+	color:#5FB12D;
+}
+.pin27, .pin28 {margin-top:16px;}
+p.intro {
+	color:#268BD2;
+}
+p,pre {
+margin-top:10px;
+font-size: 15px;
+line-height: 150%;
+}
+h3 {
+	color:#D33682;
+	font-size:16px;
+	font-weight:bold;
+}
+#container {
+	width:980px;
+	margin:0 auto;
+	margin-top:10px;
+}
+article a {color:#859900;text-decoration:underline;}
+article ul {margin-left:20px;margin-top:10px;}
+ul.legend {
+	float:right;
+	list-style:none;
+	margin-top:-26px;
+}
+ul.legend.expansion {
+	margin-top:-52px;
+}
+ul.legend li {
+	float:left;
+	line-height:20px;
+	font-size:12px;
+	padding:3px 7px;
+	height:20px;
+}
+ul.legend li a {
+	color:#FDF6E3;
+}
+li.legend_5 {background:#DC322F;}
+li.legend_3 {background:#B58900;}
+li.legend_ground, li.legend_pwm {background:#002B36;}
+li.legend_uart {background:#B58900;}
+li.legend_gpio, li.legend_dot3k {background:#859900;}
+li.legend_spi {background:#D33682;}
+li.legend_i2c, li.legend_atmega, li.legend_pibrella {background:#268BD2;}
+li.legend_ladder {background:#5F8645;}
+li.legend_wiringpi {background:#EBE6D3;}
+ul.legend li.legend_wiringpi a {color:#063541;}
+li.legend_ledborg {background:#000000;}
+ul.legend li.legend_ledborg a {color:#FFFFFF;}
+li.legend_clockatoo {background:#D33682;}
+span.alternate {display:none;}
+ol.linenums {margin-left:30px;}

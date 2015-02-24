@@ -1,12 +1,14 @@
 jQuery(document).ready(function(){
 	var History = window.History;
 
-	var homepage = jQuery('article.homepage').index();
+	var homepage = jQuery('article.page_index').index();
 	var pincount = 40;
 
 	History.Adapter.bind(window,'statechange',function(){
 		var State = History.getState();
 		var url = State.url.replace('http://pi.gadgetoid.com','');
+		
+		console.log(State);
 		if( url == '/pinout' )
 		{
 			jQuery('h1').click();
@@ -37,7 +39,7 @@ jQuery(document).ready(function(){
 		jQuery('span.alternate').hide();
 
 		var legend = jQuery(this).parent().attr('class');
-		var page = jQuery('article.' + legend).index();
+		var page = jQuery('article.page_' + legend).index();
 		var pins = [];
 		if( jQuery(this).parent().data('pins') ){
 			pins = jQuery(this).parent().data('pins').split(',');
@@ -54,20 +56,30 @@ jQuery(document).ready(function(){
 		History.pushState({legend:jQuery(this).attr('class'),url:jQuery(this).attr('href')}, 'Raspberry Pi Pinout - ' + title, url)
 	});
 
-	function showPage(object,offset){
+	function showPage(object){
+		var url;
+		var page;
+
 		jQuery('span.default').show();
 		jQuery('span.alternate').hide();
 		jQuery('nav#gpio li').removeClass('legend active');
-		jQuery('#pages').cycle(offset+object.parent().index());
+
+		url = object.attr('href').split('/');
+		url = url[url.length-1];
+
+		page = jQuery('article.' + url).index();
+
+		jQuery('#pages').cycle(page);
+
 		object.parent().addClass('active');
 		title = 'Pin ' + object.find('span.default').text().replace(' ',': ');
-		History.pushState({pin:offset+object.parent().index(),url:object.attr('href')}, title, object.attr('href'));
+		History.pushState({pin:page,url:object.attr('href')}, title, object.attr('href'));
 	}
 
 	jQuery('nav#gpio ul.bottom a').on('click',function(e){
-		e.preventDefault();showPage(jQuery(this),0);});
+		e.preventDefault();showPage(jQuery(this));});
 	jQuery('nav#gpio ul.top a').on('click',function(e){
-		e.preventDefault();showPage(jQuery(this),pincount/2);});
+		e.preventDefault();showPage(jQuery(this));});
 
 	jQuery('h1').on('click',function(){
 		jQuery('span.default').show();

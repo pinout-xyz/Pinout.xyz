@@ -174,23 +174,23 @@ div#pinbasebplus {
 	left:162px;
 	top:401px;
 }
-h1 {
+.logo {
 	width:250px;
 	font-size:34px;
 	color:#888888;
 	margin-bottom:5px;
 	cursor:pointer;
 }
-h1 img {float:left;position:relative;top:0px;margin:0 13px;
+.logo img {float:left;position:relative;top:0px;margin:0 13px;
 	-moz-transform:rotate(-45deg);
 	-webkit-transform:rotate(-45deg);
 	transform:rotate(-45deg);
 	width:30px;
 }
-h1 span {
+.logo span {
 	color:#D6264E;
 }
-h1 span.out {
+.logo span.out {
 	color:#5FB12D;
 }
 .pin27, .pin28 {margin-top:16px;}

@@ -1,0 +1,27 @@
+{
+	"name": "Explorer HAT Pro",
+	"manufacturer": "Pimoroni",
+	"url": "https://github.com/pimoroni/explorer-hat",
+	"description": {
+		"short": "An all-in-one light, input, motor, touch and output add-on board.",
+		"long": "pibrella.md"
+	},
+	"pin": {
+		"7": {
+			"name": "LED 1",
+			"exclusive": "true"
+		},
+		"11": {
+			"name": "LED 2",
+			"exclusive": "true"
+		},
+		"13": {
+			"name": "LED 3",
+			"exclusive": "true"
+		},
+		"25": {
+			"name": "LED 4",
+			"exclusive": "true"
+		},
+	}
+}

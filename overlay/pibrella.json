@@ -1,0 +1,63 @@
+{
+	"name": "Pibrella",
+	"manufacturer": "Pimoroni",
+	"url": "https://github.com/pimoroni/pibrella",
+	"description": {
+		"short": "An all-in-one light, sound, input and output add-on board.",
+		"long": "pibrella.md"
+	},
+	"pin": {
+		"7": {
+			"name": "Green LED",
+			"exclusive": "true"
+		},
+		"11": {
+			"name": "Yellow LED",
+			"exclusive": "true"
+		},
+		"13": {
+			"name": "Red LED",
+			"exclusive": "true"
+		},
+		"15": {
+			"name": "Output A",
+			"exclusive": "true"
+		},
+		"19": {
+			"name": "Input D",
+			"exclusive": "true"
+		},
+		"21": {
+			"name": "Input A",
+			"exclusive": "true"
+		},
+		"23": {
+			"name": "Button",
+			"exclusive": "true"
+		},
+		"12": {
+			"name": "Buzzer",
+			"exclusive": "true"
+		},
+		"16": {
+			"name": "Output B",
+			"exclusive": "true"
+		},
+		"18": {
+			"name": "Output C",
+			"exclusive": "true"
+		},
+		"22": {
+			"name": "Output D",
+			"exclusive": "true"
+		},
+		"24": {
+			"name": "Input C",
+			"exclusive": "true"
+		},
+		"26": {
+			"name": "Input B",
+			"exclusive": "true"
+		}
+	}
+}

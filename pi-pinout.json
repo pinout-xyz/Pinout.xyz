@@ -1,0 +1,272 @@
+{
+    "name": "Raspberry Pi GPIO Pinout",
+    "pins":{
+        "1":{
+            "name":			"3v3 Power",
+            "type":			"+3v3"
+        },
+        "3":{
+            "name":			"SDA",
+            "type":			"GPIO/I2C",
+            "scheme": {
+                "wiringpi":	8,
+                "bcm":		2,
+                "bcmAlt":	0
+            }
+        },
+        "5":{
+            "name":			"SCL",
+            "type":			"GPIO/I2C",
+            "scheme": {
+                "wiringpi":	9,
+                "bcm":		3,
+                "bcmAlt":	1
+            }
+        },
+        "7":{
+            "name":			"GPCLK0",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	7,
+                "bcm":		4
+            }
+        },
+        "9":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "11":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		17
+            }
+        },
+        "13":{
+            "name":         "PCM_D",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	2,
+                "bcm":		27,
+                "bcmAlt":	21
+            }
+        },
+        "15":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	3,
+                "bcm":		22
+            }
+        },
+        "17":{
+            "name":			"3v3 Power",
+            "type":			"+3v3"
+        },
+        "19":{
+            "name":			"MOSI",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	12,
+                "bcm":		10
+            }
+        },
+        "21":{
+            "name":			"MISO",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	13,
+                "bcm":		9
+            }
+        },
+        "23":{
+            "name":			"SCKL",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	14,
+                "bcm":		11
+            }
+        },
+        "25":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "27":{
+            "name":			"ID_SD",
+            "type":			"GPIO/I2C"
+        },
+        "29":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		5
+            }
+        },
+        "31":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		6
+            }
+        },
+        "33":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		13
+            }
+        },
+        "35":{
+            "name":			"MISO",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		19
+            }
+        },
+        "37":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		26
+            }
+        },
+        "39":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "2":{
+            "name":			"5v Power",
+            "type":			"+5v"
+        },
+        "4":{
+            "name":			"5v Power",
+            "type":			"+5v"
+        },
+        "6":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "8":{
+            "name":			"TXD",
+            "type":			"GPIO/UART",
+            "scheme": {
+                "wiringpi":	15,
+                "bcm":		14
+            }
+        },
+        "10":{
+            "name":			"RXD",
+            "type":			"GPIO/UART",
+            "scheme": {
+                "wiringpi":	16,
+                "bcm":		15
+            }
+        },
+        "12":{
+            "name":			"PCM_C",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	1,
+                "bcm":		18
+            }
+        },
+        "14":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "16":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	4,
+                "bcm":		23
+            }
+        },
+        "18":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	5,
+                "bcm":		24
+            }
+        },
+        "20":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "22":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	6,
+                "bcm":		25
+            }
+        },
+        "24":{
+            "name":			"CE0",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	10,
+                "bcm":		8
+            }
+        },
+        "26":{
+            "name":			"CE1",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	11,
+                "bcm":		7
+            }
+        },
+        "28":{
+            "name":			"ID_SC",
+            "type":			"GPIO"
+        },
+        "30":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "32":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		12
+            }
+        },
+        "34":{
+            "name":			"Ground",
+            "type":			"GND"
+        },
+        "36":{
+            "name":			"",
+            "type":			"GPIO",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		16
+            }
+        },
+        "38":{
+            "name":			"MOSI",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		20
+            }
+        },
+        "40":{
+            "name":			"SCLK",
+            "type":			"GPIO/SPI",
+            "scheme": {
+                "wiringpi":	0,
+                "bcm":		21
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 all:
-	./generate-html.py > output/test.html
+	./generate-html.py
 
 serve:
 	cd output && python -m SimpleHTTPServer

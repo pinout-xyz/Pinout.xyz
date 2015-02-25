@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	var History = window.History;
+	/*var History = window.History;
 
 	var homepage = jQuery('article.page_index').index();
 	var pincount = 40;
@@ -17,19 +17,19 @@ jQuery(document).ready(function(){
 		{
 			jQuery('a[href="' + url + '"]').click();
 		}
-	})
+	})*/
 
 	window.prettyPrint&&prettyPrint();
 
-	jQuery('#pages').cycle({
+	/*jQuery('#pages').cycle({
 		timeout:0,
 		slideExpr:'article',
 		startingSlide:homepage,
 		speed:200,
 		containerResize:0
-	});
+	});*/
 
-	jQuery('.legend li a').on('click',function(e){
+	/*jQuery('.legend li a').on('click',function(e){
 		e.preventDefault();
 		jQuery('nav#gpio li').removeClass('legend active');
 		var title = jQuery(this).attr('title');
@@ -92,4 +92,5 @@ jQuery(document).ready(function(){
 	url = window.location.href.replace('http://pi.gadgetoid.com/','/');
 
 	jQuery('a[href="' + url + '"]').click();
+	*/
 });

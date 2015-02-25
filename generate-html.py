@@ -3,10 +3,17 @@ import json
 import markdown
 import unicodedata
 import re
+import os
 
 overlays = ['pibrella','explorerhat']
 
 template = open('template/layout.html').read()
+
+pages = {}
+
+html_odd = ''
+html_even = ''
+
 
 def slugify(value):
     """
@@ -25,6 +32,8 @@ def load_overlay(overlay):
 		return None
 
 	loaded['long_description'] = load_md('description/overlay/{}.md'.format(overlay))
+	loaded['url'] = slugify(loaded['name'])
+	pages[loaded['url']] = render_overlay_page(loaded)
 	return loaded
 
 def load_md(filename):
@@ -48,13 +57,11 @@ db = json.load(open('pi-pinout.json'))
 
 pins = db['pins']
 
-html_odd = ''
-html_even = ''
+pages['index'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
 
 overlays = map(load_overlay,overlays)
 
-pages = [render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})]
-pages += map(render_overlay_page,overlays)
+#pages += map(render_overlay_page,overlays)
 
 def render_alternate(handle, name):
 	handle = slugify(handle.lower())
@@ -106,9 +113,9 @@ def render_pin(pin_num):
 
 	pin_text = render_pin_text(pin_num,pin_url,pin_text_name,'<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)))
 	if pin_text != None:
-		pages.append(pin_text)
+		pages[pin_url] = pin_text
 
-	return '<li class="pin{} {}"><a href="/pindb/{}"><span class="default"><span class="phys">{}</span> {}</span><span class="pin"></span>\n{}</a></li>\n'.format(
+	return '<li class="pin{} {}"><a href="{}.html"><span class="default"><span class="phys">{}</span> {}</span><span class="pin"></span>\n{}</a></li>\n'.format(
 		pin_num,
 		' '.join(map(slugify,pin_type)),
 		pin_url,
@@ -117,16 +124,29 @@ def render_pin(pin_num):
 		'\n'.join(alternates)
 		)
 
-for odd in range(1,len(pins),2):
-	html_odd += render_pin(odd)
-	html_even += render_pin(odd+1)
+def render_page(nav, content):
+	global template
+	return template.replace('{{nav}}',nav).replace('{{content}}',content)
+
+def render_nav():
+	global html_odd, html_even
+	for odd in range(1,len(pins),2):
+		html_odd += render_pin(odd)
+		html_even += render_pin(odd+1)
 
 
-html = '''<ul class="bottom">
+	return '''<ul class="bottom">
 {}</ul>
 <ul class="top">
 {}</ul>'''.format(html_odd, html_even)
 
-html = template.replace('{{nav}}',html).replace('{{content}}','\n'.join(pages))
 
-print(html)
+nav = render_nav()
+
+for page in pages:
+	content = pages[page]
+	print(content)
+	html = render_page(nav, content)
+	with open(os.path.join('output','{}.html'.format(page)),'w') as f:
+		f.write(html)
+

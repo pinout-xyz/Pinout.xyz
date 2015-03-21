@@ -20,9 +20,57 @@
 			"name": "LED 3",
 			"exclusive": "true"
 		},
-		"25": {
+		"29": {
 			"name": "LED 4",
 			"exclusive": "true"
 		},
+		"31": {
+			"name": "Output 1",
+			"exclusive": "true"
+		},
+		"32": {
+			"name": "Output 2",
+			"exclusive": "true"
+		},
+		"33": {
+			"name": "Output 3",
+			"exclusive": "true"
+		},
+		"36": {
+			"name": "Output 4",
+			"exclusive": "true"
+		},
+		"16": {
+			"name": "Input 1",
+			"exclusive": "true"
+		},
+		"15": {
+			"name": "Input 2",
+			"exclusive": "true"
+		},
+		"18": {
+			"name": "Input 3",
+			"exclusive": "true"
+		},
+		"22": {
+			"name": "Input 4",
+			"exclusive": "true"
+		},
+		"40": {
+			"name": "Motor 2 +",
+			"exclusive": "true"
+		},
+		"37": {
+			"name": "Motor 2 -",
+			"exclusive": "true"
+		},
+		"35": {
+			"name": "Motor 1 +",
+			"exclusive": "true"
+		},
+		"38": {
+			"name": "Motor 1 -",
+			"exclusive": "true"
+		}
 	}
 }

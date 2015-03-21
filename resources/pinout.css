@@ -7,13 +7,14 @@ table {margin:20px 0;border-collapse:collapse;}
 table td, table th {border:1px solid #073642;padding:5px;}
 table th {background:#073642;color:#EBE6D3;}
 table * {text-align:left;font-size:13px;}
+
 nav#gpio {
 	position:relative;
-	width:244px;
+	width:300px;
 	background:#5F8645;
 	height:680px;
 	float:left;
-	margin-right:136px;
+	margin-right:200px;
 }
 .phys {font-size:90%;opacity:0.8;color:#D33682;}
 .bottom .phys {color:#002B36;}
@@ -29,12 +30,12 @@ nav#gpio {
 #content article {
 	background:#EBE6D3;
 	padding:20px;
-	width:560px;
+	width:460px;
 	min-height:680px;
 }
 nav#gpio ul.top {
 	position:absolute;
-	left:200px;
+	left:255px;
 	top:17px;
 	list-style:none;
 }
@@ -47,19 +48,34 @@ nav#gpio ul.bottom {
 nav#gpio ul.top li {text-indent:52px;}
 nav#gpio li a {
 	display:block;
-	width:180px;
+	width:236px;
 	position:relative;
-	font-size:12px;
+	font-size:14px;
 	line-height:29px;
 	height:27px;
 	margin-bottom:2px;
 }
+
+nav#gpio li.overlay-pin a {
+	background:rgba(235, 230, 211, 0.50);
+	border-top-left-radius:13px;
+	border-bottom-left-radius:13px;
+}
+nav#gpio ul.bottom li.overlay-pin a {
+	background:rgba(6, 53, 65, 0.50);
+	border-top-right-radius:13px;
+	border-bottom-right-radius:13px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+
 nav#gpio li a:hover,
 nav#gpio li.active a {
 	background:#EBE6D3;
 	border-top-left-radius:13px;
 	border-bottom-left-radius:13px;
 }
+
 nav#gpio ul.bottom li a:hover,
 nav#gpio ul.bottom li.active a {
 	background:#063541;
@@ -163,7 +179,7 @@ div#pinbase {
 	height:389px;
 	background:#073642;
 	position:absolute;
-	left:162px;
+	left:218px;
 	top:10px;
 }
 div#pinbasebplus {
@@ -171,7 +187,7 @@ div#pinbasebplus {
 	height:215px;
 	background:#184753;
 	position:absolute;
-	left:162px;
+	left:218px;
 	top:401px;
 }
 .logo {
@@ -208,12 +224,12 @@ h3 {
 	font-weight:bold;
 }
 #container {
-	width:980px;
+	width:1000px;
 	margin:0 auto;
 	margin-top:10px;
 }
 article a {color:#859900;text-decoration:underline;}
-article ul {margin-left:20px;margin-top:10px;}
+article ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}
 ul.legend {
 	float:right;
 	list-style:none;

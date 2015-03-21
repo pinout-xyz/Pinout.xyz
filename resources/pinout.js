@@ -19,6 +19,8 @@ jQuery(document).ready(function(){
 		}
 	})*/
 
+	$('pre').addClass('prettyprint').addClass('linenums');
+
 	window.prettyPrint&&prettyPrint();
 
 	/*jQuery('#pages').cycle({

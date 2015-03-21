@@ -5,6 +5,23 @@
 	"description": "A 3-line character LCD with an RGB backlight and joystick",
 	"pincount": 40,
 	"pin": {
+		"3": {
+			"mode": "i2c"
+		},
+		"5": {
+			"mode": "i2c"
+		},
+		"19": {
+			"mode": "spi"
+		},
+		"23": {
+			"mode": "spi"
+		},
+		"22": {
+			"name": "LCD CMD/DATA",
+			"mode": "output",
+			"active": "high"
+		},
 		"7": {
 			"name": "Joystick Button",
 			"mode": "input",

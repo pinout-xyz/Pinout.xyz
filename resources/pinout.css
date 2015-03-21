@@ -82,11 +82,12 @@ nav#gpio li a {
 	display:block;
 	width:236px;
 	position:relative;
-	font-size:14px;
+	font-size:13px;
 	line-height:29px;
 	height:27px;
 	margin-bottom:2px;
 }
+nav#gpio li a small {font-size:11px;}
 
 nav#gpio li.overlay-pin a {
 	background:rgba(235, 230, 211, 0.50);

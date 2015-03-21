@@ -16,6 +16,7 @@ overlays = [
 	'i2c',
 	'arduino-spi',
 	'rtk-000-001',
+	'piborg-ledborg',
 	'pibrella',
 	'explorer-hat-pro',
 	'explorer-hat',
@@ -70,6 +71,12 @@ def load_overlay(overlay):
 	if 'pin' in loaded:
 		uses = len(loaded['pin'])
 		details.append('* Uses {} GPIO pins'.format(uses))
+		if '3' in loaded['pin'] and '5' in loaded['pin']:
+			pin_3 = loaded['pin']['3']
+			pin_5 = loaded['pin']['5']
+			if 'mode' in pin_3 and 'mode' in pin_5:
+				if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
+					details.append('* Uses I2C')
 
 	if 'url' in loaded:
 		details.append('* [More Information]({url})'.format(url=loaded['url']))
@@ -153,17 +160,16 @@ def render_pin(pin_num, selected_url, overlay=None):
 	pin_type = list([x.strip() for x in pin['type'].lower().split('/')])
 	pin_url = pin['name']
 	pin_name = pin['name']
-	pin_text_name = pin['name']
 	pin_used = False
 	pin_link_title = []
 
 
 	if overlay != None and str(pin_num) in overlay['pin']:
 		overlay_pin = overlay['pin'][str(pin_num)]
-		pin_text_name = ''
-		#print(overlay)
-		pin_name = overlay_pin['name']
 		pin_used = True
+		#print(overlay)
+		if 'name' in overlay_pin:
+			pin_name = overlay_pin['name']
 
 		if 'description' in overlay_pin:
 			pin_link_title.append(overlay_pin['description'])

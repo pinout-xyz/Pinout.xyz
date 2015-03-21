@@ -15,6 +15,7 @@ overlays = [
 	'uart',
 	'i2c',
 	'arduino-spi',
+	'rtk-000-001',
 	'pibrella',
 	'explorer-hat-pro',
 	'explorer-hat',
@@ -71,7 +72,14 @@ def load_overlay(overlay):
 		details.append('* Uses {} GPIO pins'.format(uses))
 
 	if 'url' in loaded:
-		details.append('* Resources: [{}]({})'.format(loaded['url'],loaded['url']))
+		details.append('* [More Information]({url})'.format(url=loaded['url']))
+
+	if 'github' in loaded:
+		details.append('* [GitHub Repository]({url})'.format(url=loaded['github']))
+
+	if 'buy' in loaded:
+		details.append('* [Buy Now]({url})'.format(url=loaded['buy']))
+
 
 	loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],markdown.markdown('\n'.join(details)))
 

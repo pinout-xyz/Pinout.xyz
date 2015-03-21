@@ -1,12 +1,21 @@
 #Pinout 2
 
-Pinout 2 will be the successor to the popular Pi pinout website http://pi.gadgetoid.com/pinout
+Pinout 2 is the successor to the popular Pi pinout website http://pi.gadgetoid.com/pinout
 
 This project aims to build a consistent workflow behind the Pinout front-end, and invite board manufacturers
 to produce their own "overlay" files which describe which pins their Pi add-ons use.
 
 I hope that by making this project open and extensible I will invite not only contributions of board pinouts,
 but translation efforts too.
+
+#Contributing
+
+The contents of this GitHub repository are used to build http://pi.gadgetoid.com/pinout.
+
+If you have a board you'd like to contribute, you should look at these folders:
+
+* [overlay/](overlay/)
+* [description/overlay/](description/overlay/)
 
 #Roadmap
 

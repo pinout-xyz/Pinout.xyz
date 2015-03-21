@@ -26,7 +26,7 @@ jQuery(document).ready(function(){
 	$('.overlay').on('change',function(){
 		var url = $(this).val();
 		if( url != '' ){
-			window.location.href = url + '.html'
+			window.location.href = '/pinout/' + url
 		}
 	})
 

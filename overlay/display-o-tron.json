@@ -1,0 +1,34 @@
+{
+	"name": "Display-o-Tron 3000",
+	"manufacturer": "Pimoroni",
+	"url": "https://github.com/pimoroni/dot3k",
+	"description": "A 3-line character LCD with an RGB backlight and joystick",
+	"pincount": 40,
+	"pin": {
+		"7": {
+			"name": "Joystick Button",
+			"mode": "input",
+			"active": "low"
+		},
+		"11": {
+			"name": "Joystick Left",
+			"mode": "input",
+			"active": "low"
+		},
+		"13": {
+			"name": "Joystick Up",
+			"mode": "input",
+			"active": "low"
+		},
+		"15": {
+			"name": "Joystick Right",
+			"mode": "input",
+			"active": "low"
+		},
+		"21": {
+			"name": "Joystick Down",
+			"mode": "input",
+			"active": "low"
+		}
+	}
+}

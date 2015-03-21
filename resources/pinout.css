@@ -8,6 +8,37 @@ table td, table th {border:1px solid #073642;padding:5px;}
 table th {background:#073642;color:#EBE6D3;}
 table * {text-align:left;font-size:13px;}
 
+.main-nav {
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.main-nav li {
+	margin:0;
+	padding:0;
+	float:left;
+	  border-right: 1px solid #666;
+  padding-right: 10px;
+}
+
+.main-nav li:last-child {
+	border-right:none;
+	padding-right:0px;
+}
+
+
+.main-nav li a {
+	padding-left:10px;
+	color:#6D6D6D;
+	font-size:16px;
+}
+.main-nav li a:hover {
+	color:#D6264E;
+}
+
 nav#gpio {
 	position:relative;
 	width:300px;
@@ -196,6 +227,9 @@ div#pinbasebplus {
 	color:#888888;
 	margin-bottom:5px;
 	cursor:pointer;
+	position: absolute;
+	left:0px;
+	top:5px;
 }
 .logo img {float:left;position:relative;top:0px;margin:0 13px;
 	-moz-transform:rotate(-45deg);
@@ -228,11 +262,12 @@ h3 {
 	margin:0 auto;
 	margin-top:10px;
 	position:relative;
+	padding-top:70px;
 }
 .overlay-container {
 	position: absolute;
 	right: 0px;
-	top: 65px;
+	top: 40px;
 }
 article a {color:#859900;text-decoration:underline;}
 article ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}

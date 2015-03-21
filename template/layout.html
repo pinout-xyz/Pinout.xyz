@@ -5,7 +5,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Sanchez|Ubuntu+Mono' rel='stylesheet' type='text/css' />
 		<link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-		<link href="{{resource_url}}pinout.css?v=0100" rel="stylesheet">
+		<link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!--script type='text/javascript'>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-32070014-1']);
@@ -19,10 +20,12 @@
 	</head>
 	<body>
 		<div id="container">
-		<div class="latest" style="padding:10px;font-size:14px;margin-bottom:10px;text-align:right;">
-			Latest at Gadgetoid: <a href="http://pi.gadgetoid.com/article/parallax-propeller-p8x32a-first-impressions">Propeller ASC+, the Arduino-compatible multi-core micro: read my first impressions</a>
-		</div>
-		<h1 class="logo"><a href="index.html"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /></a><span>Pi</span>n<span class="out">out</span></h1>
+		<ul class="main-nav">
+			<li><a href="http://pi.gadgetoid.com/">Pi Blog</a></li>
+			<li><a href="https://twitter.com/gadgetoid"><i class="fa fa-twitter"></i> @Gadgetoid</a></li>
+			<li><a href="https://github.com/Gadgetoid/Pinout2"><i class="fa fa-github"></i> Contribute</a></li>
+		</ul>
+		<h1 class="logo"><a href="/pinout"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /></a><span>Pi</span>n<span class="out">out</span></h1>
 		<div class="overlay-container">
 			<span>Learn more about:</span>
 			<select class="overlay">
@@ -48,7 +51,7 @@
     	<script src='{{resource_url}}prettify/lang-bash.js'></script>
 		<script src='http://cdn.jsdelivr.net/history.js/1.7.1/history.js'></script>
 		<script src='http://cdn.jsdelivr.net/history.js/1.7.1/history.adapter.jquery.js'></script>
-		<script src='{{resource_url}}pinout.js?v=00000001'></script>
+		<script src='{{resource_url}}pinout.js?v={{v}}'></script>
 	<!--script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
 NREUMQ.push(["load",new Date().getTime()]);
 var e=document.createElement("script");

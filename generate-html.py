@@ -4,11 +4,18 @@ import markdown
 import unicodedata
 import re
 import os
+import time
 
-resource_url = '/pinout2/resources/'
-#resource_url = '/resources/'
+base_url = '/pinout/'
+resource_url = '/resources/'
 
-overlays = ['pibrella','explorer-hat-pro','explorer-hat']
+
+overlays = [
+	'pibrella',
+	'explorer-hat-pro',
+	'explorer-hat',
+	'display-o-tron'
+	]
 
 template = open('template/layout.html').read()
 
@@ -17,6 +24,11 @@ navs = {}
 select_overlays = {}
 
 overlays_html = ''
+
+try:
+	os.mkdir('output/pinout')
+except OSError:
+	pass
 
 def slugify(value):
     """
@@ -72,7 +84,7 @@ def load_md(filename):
 		return html
 		#return markdown.markdown(open(filename).read(), extensions=[gfm.HiddenHiliteExtension([]),'fenced_code'])
 	except IOError:
-		return None
+		return ''
 
 def render_pin_text(pin_num, pin_url, pin_name, pin_subtext):
 	return '<article class="{}"><h1>{}</h1>{}{}</article>'.format(pin_url,pin_name,pin_subtext,load_md('description/pins/pin-{}.md'.format(pin_num)))
@@ -163,16 +175,17 @@ def render_pin(pin_num, selected_url, overlay=None):
 
 		#print(pin_type)
 
-	pin_url = slugify('pin{}_{}'.format(pin_num,pin_url))
+	pin_url = base_url + slugify('pin{}_{}'.format(pin_num,pin_url))
 
 	#print(selected_url)
 	selected = ''
-	if selected_url == pin_url:
+
+	if base_url + selected_url == pin_url:
 		selected = ' active'
 	if pin_used:
 		selected += ' overlay-pin'
 
-	return '<li class="pin{} {}{}"><a href="{}.html"><span class="default"><span class="phys">{}</span> {}</span><span class="pin"></span></a></li>\n'.format(
+	return '<li class="pin{} {}{}"><a href="{}"><span class="default"><span class="phys">{}</span> {}</span><span class="pin"></span></a></li>\n'.format(
 		pin_num,
 		' '.join(map(slugify,pin_type)),
 		selected,
@@ -206,19 +219,19 @@ for url in select_overlays:
 	overlays_html += '<option value="{}">{}</option>'.format(url, select_overlays[url])
 
 
-pages['index'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
-navs['index'] = render_nav('index')
+pages['pinout'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
+navs['pinout'] = render_nav('pinout')
 
 print('Rendering pin pages...')
 
 for pin in range(1,len(pins)+1):
 	(pin_url, pin_html) = render_pin_page(pin)
 	pin_nav = render_nav(pin_url)
-	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html)
+	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html).replace('{{v}}',str(int(time.time())))
 
 	print('Outputting page {}'.format(pin_url))
 
-	with open(os.path.join('output','{}.html'.format(pin_url)),'w') as f:
+	with open(os.path.join('output/pinout','{}.html'.format(pin_url)),'w') as f:
 		f.write(pin_html)
 
 #nav = render_nav()
@@ -229,7 +242,11 @@ for url in pages:
 	content = pages[url]
 	nav = navs[url]
 	print('Outputting page {}'.format(url))
-	html = template.replace('{{nav}}',nav).replace('{{content}}',content).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html)
+	html = template.replace('{{nav}}',nav).replace('{{content}}',content).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html).replace('{{v}}',str(int(time.time())))
+	
+	if url != 'pinout':
+		url = os.path.join('pinout',url)
+
 	with open(os.path.join('output','{}.html'.format(url)),'w') as f:
 		f.write(html)
 

@@ -23,6 +23,13 @@ jQuery(document).ready(function(){
 
 	window.prettyPrint&&prettyPrint();
 
+	$('.overlay').on('change',function(){
+		var url = $(this).val();
+		if( url != '' ){
+			window.location.href = url + '.html'
+		}
+	})
+
 	/*jQuery('#pages').cycle({
 		timeout:0,
 		slideExpr:'article',

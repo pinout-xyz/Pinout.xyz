@@ -6,14 +6,17 @@ import re
 import os
 
 resource_url = '/pinout2/resources/'
-#resource_url = '/resources/'
+resource_url = '/resources/'
 
-overlays = ['pibrella','explorer-hat-pro']
+overlays = ['pibrella','explorer-hat-pro','explorer-hat']
 
 template = open('template/layout.html').read()
 
 pages = {}
 navs = {}
+select_overlays = {}
+
+overlays_html = ''
 
 def slugify(value):
     """
@@ -30,7 +33,6 @@ def load_overlay(overlay):
 		loaded = json.load(open('overlay/{}.json'.format(overlay)))
 	except IOError:
 		return None
-
 
 	loaded['long_description'] = load_md('description/overlay/{}.md'.format(overlay))
 
@@ -60,6 +62,7 @@ def load_overlay(overlay):
 	loaded['page_url'] = slugify(loaded['name'])
 	pages[loaded['page_url']] = render_overlay_page(loaded)
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
+	select_overlays[loaded['page_url']] = loaded['name']
  	return loaded
 
 def load_md(filename):
@@ -132,7 +135,7 @@ def render_pin(pin_num, selected_url, overlay=None):
 
 	if overlay != None and str(pin_num) in overlay['pin']:
 		pin_text_name = ''
-		print(overlay)
+		#print(overlay)
 		pin_name = overlay['pin'][str(pin_num)]['name']
 		pin_used = True
 		#alternates = []
@@ -199,6 +202,9 @@ pins = db['pins']
 
 overlays = map(load_overlay,overlays)
 
+for url in select_overlays:
+	overlays_html += '<option value="{}">{}</option>'.format(url, select_overlays[url])
+
 
 pages['index'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
 navs['index'] = render_nav('index')
@@ -208,7 +214,7 @@ print('Rendering pin pages...')
 for pin in range(1,len(pins)+1):
 	(pin_url, pin_html) = render_pin_page(pin)
 	pin_nav = render_nav(pin_url)
-	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html).replace('{{resource_url}}',resource_url)
+	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html)
 
 	print('Outputting page {}'.format(pin_url))
 
@@ -223,7 +229,7 @@ for url in pages:
 	content = pages[url]
 	nav = navs[url]
 	print('Outputting page {}'.format(url))
-	html = template.replace('{{nav}}',nav).replace('{{content}}',content).replace('{{resource_url}}',resource_url)
+	html = template.replace('{{nav}}',nav).replace('{{content}}',content).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html)
 	with open(os.path.join('output','{}.html'.format(url)),'w') as f:
 		f.write(html)
 

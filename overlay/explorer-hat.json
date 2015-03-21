@@ -1,11 +1,8 @@
 {
-	"name": "Explorer HAT Pro",
+	"name": "Explorer HAT",
 	"manufacturer": "Pimoroni",
 	"url": "https://github.com/pimoroni/explorer-hat",
-	"description": {
-		"short": "An all-in-one light, input, motor, touch and output add-on board.",
-		"long": "pibrella.md"
-	},
+	"description": "An all-in-one light, input, touch and output add-on board.",
 	"pincount": 40,
 	"pin": {
 		"7": {
@@ -66,26 +63,6 @@
 		"22": {
 			"name": "Input 4",
 			"direction": "input",
-			"active": "high"
-		},
-		"40": {
-			"name": "Motor 2 +",
-			"direction": "output",
-			"active": "high"
-		},
-		"37": {
-			"name": "Motor 2 -",
-			"direction": "output",
-			"active": "high"
-		},
-		"35": {
-			"name": "Motor 1 +",
-			"direction": "output",
-			"active": "high"
-		},
-		"38": {
-			"name": "Motor 1 -",
-			"direction": "output",
 			"active": "high"
 		}
 	}

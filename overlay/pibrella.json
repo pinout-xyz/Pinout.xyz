@@ -7,55 +7,68 @@
 	"pin": {
 		"7": {
 			"name": "Green LED",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"11": {
 			"name": "Yellow LED",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"13": {
 			"name": "Red LED",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"15": {
 			"name": "Output A",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"19": {
 			"name": "Input D",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"21": {
 			"name": "Input A",
-			"exclusive": "true"
+			"direction": "input",
+			"active": "high"
 		},
 		"23": {
 			"name": "Button",
-			"exclusive": "true"
+			"direction": "input",
+			"active": "high"
 		},
 		"12": {
 			"name": "Buzzer",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"16": {
 			"name": "Output B",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"18": {
 			"name": "Output C",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"22": {
 			"name": "Output D",
-			"exclusive": "true"
+			"direction": "output",
+			"active": "high"
 		},
 		"24": {
 			"name": "Input C",
-			"exclusive": "true"
+			"direction": "input",
+			"active": "high"
 		},
 		"26": {
 			"name": "Input B",
-			"exclusive": "true"
+			"direction": "input",
+			"active": "high"
 		}
 	}
 }

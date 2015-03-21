@@ -6,7 +6,7 @@ import re
 import os
 
 resource_url = '/pinout2/resources/'
-resource_url = '/resources/'
+#resource_url = '/resources/'
 
 overlays = ['pibrella','explorer-hat-pro','explorer-hat']
 

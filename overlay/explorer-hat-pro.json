@@ -10,82 +10,82 @@
 	"pin": {
 		"7": {
 			"name": "LED 1",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"11": {
 			"name": "LED 2",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"13": {
 			"name": "LED 3",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"29": {
 			"name": "LED 4",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"31": {
 			"name": "Output 1",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"32": {
 			"name": "Output 2",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"33": {
 			"name": "Output 3",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"36": {
 			"name": "Output 4",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"16": {
 			"name": "Input 1",
-			"direction": "input",
+			"mode": "input",
 			"active": "high"
 		},
 		"15": {
 			"name": "Input 2",
-			"direction": "input",
+			"mode": "input",
 			"active": "high"
 		},
 		"18": {
 			"name": "Input 3",
-			"direction": "input",
+			"mode": "input",
 			"active": "high"
 		},
 		"22": {
 			"name": "Input 4",
-			"direction": "input",
+			"mode": "input",
 			"active": "high"
 		},
 		"40": {
 			"name": "Motor 2 +",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"37": {
 			"name": "Motor 2 -",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"35": {
 			"name": "Motor 1 +",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		},
 		"38": {
 			"name": "Motor 1 -",
-			"direction": "output",
+			"mode": "output",
 			"active": "high"
 		}
 	}

@@ -214,9 +214,9 @@ p.intro {
 	color:#268BD2;
 }
 p,pre {
-margin-top:10px;
-font-size: 15px;
-line-height: 150%;
+	margin-top:10px;
+	font-size: 15px;
+	line-height: 150%;
 }
 h3 {
 	color:#D33682;
@@ -227,6 +227,12 @@ h3 {
 	width:1000px;
 	margin:0 auto;
 	margin-top:10px;
+	position:relative;
+}
+.overlay-container {
+	position: absolute;
+	right: 0px;
+	top: 65px;
 }
 article a {color:#859900;text-decoration:underline;}
 article ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}

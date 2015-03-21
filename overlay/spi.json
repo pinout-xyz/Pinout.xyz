@@ -1,0 +1,37 @@
+{
+	"name": "SPI",
+	"description": "Raspberry Pi SPI pins",
+	"pincount": 5,
+	"pin": {
+		"19": {
+			"name": "MOSI",
+			"direction": "output",
+			"active": "high",
+			"description":  "Master Out / Slave In"
+		},
+		"21": {
+			"name": "MISO",
+			"direction": "input",
+			"active": "high",
+			"description":  "Master In / Slave Out"
+		},
+		"23": {
+			"name": "SCKL",
+			"direction": "output",
+			"active": "high",
+			"description":  "Clock"
+		},
+		"24": {
+			"name": "CE0",
+			"direction": "output",
+			"active": "high",
+			"description":  "Chip Select 0"
+		},
+		"26": {
+			"name": "CE1",
+			"direction": "output",
+			"active": "high",
+			"description":  "Chip Select 1"
+		}
+	}
+}

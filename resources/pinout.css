@@ -8,6 +8,8 @@ table td, table th {border:1px solid #073642;padding:5px;}
 table th {background:#073642;color:#EBE6D3;}
 table * {text-align:left;font-size:13px;}
 
+h2 {font-size:18px;margin-top:20px;}
+
 .main-nav {
 	position:absolute;
 	right:0px;
@@ -51,6 +53,7 @@ nav#gpio {
 .bottom .phys {color:#002B36;}
 .bottom .active .phys, .bottom :hover .phys,
 .bottom .legend .phys {color:#FFF;}
+
 #content {
 	float:left;
 	background:#EBE6D3;
@@ -58,11 +61,9 @@ nav#gpio {
 	min-height:600px;
 	padding-bottom:60px;
 }
+
 #content article {
-	background:#EBE6D3;
 	padding:20px;
-	width:460px;
-	min-height:680px;
 }
 nav#gpio ul.top {
 	position:absolute;
@@ -304,3 +305,12 @@ ul.legend li.legend_ledborg a {color:#FFFFFF;}
 li.legend_clockatoo {background:#D33682;}
 span.alternate {display:none;}
 ol.linenums {margin-left:30px;}
+
+@media (min-width:1200px){
+	#container {
+		width:1200px;
+	}
+	#content {
+		width:700px;
+	}
+}

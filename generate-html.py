@@ -11,6 +11,10 @@ resource_url = '/resources/'
 
 
 overlays = [
+	'spi',
+	'uart',
+	'i2c',
+	'arduino-spi',
 	'pibrella',
 	'explorer-hat-pro',
 	'explorer-hat',
@@ -21,7 +25,7 @@ template = open('template/layout.html').read()
 
 pages = {}
 navs = {}
-select_overlays = {}
+select_overlays = []
 
 overlays_html = ''
 
@@ -74,7 +78,7 @@ def load_overlay(overlay):
 	loaded['page_url'] = slugify(loaded['name'])
 	pages[loaded['page_url']] = render_overlay_page(loaded)
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
-	select_overlays[loaded['page_url']] = loaded['name']
+	select_overlays.append((loaded['page_url'], loaded['name']))
  	return loaded
 
 def load_md(filename):
@@ -143,13 +147,18 @@ def render_pin(pin_num, selected_url, overlay=None):
 	pin_name = pin['name']
 	pin_text_name = pin['name']
 	pin_used = False
+	pin_link_title = []
 
 
 	if overlay != None and str(pin_num) in overlay['pin']:
+		overlay_pin = overlay['pin'][str(pin_num)]
 		pin_text_name = ''
 		#print(overlay)
-		pin_name = overlay['pin'][str(pin_num)]['name']
+		pin_name = overlay_pin['name']
 		pin_used = True
+
+		if 'description' in overlay_pin:
+			pin_link_title.append(overlay_pin['description'])
 		#alternates = []
 
 		#for overlay in overlays:
@@ -169,8 +178,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 		#	    pin_subname_text = '({})'.format(pin['name'])
 			pin_name = 'BCM {} {}'.format(bcm, pin_subname)
 		#	pin_text_name = 'BCM {} {}'.format(bcm, pin_subname_text)
-		#if 'wiringpi' in pin['scheme']:
-		#	wiringpi = pin['scheme']['wiringpi']
+		if 'wiringpi' in pin['scheme']:
+			wiringpi = pin['scheme']['wiringpi']
+			pin_link_title.append('Wiring Pi pin {}'.format(wiringpi))
 		#	alternates.append(render_alternate('wiringpi','Wiring Pi pin {}'.format(wiringpi)))
 
 		#print(pin_type)
@@ -185,13 +195,13 @@ def render_pin(pin_num, selected_url, overlay=None):
 	if pin_used:
 		selected += ' overlay-pin'
 
-	return '<li class="pin{} {}{}"><a href="{}"><span class="default"><span class="phys">{}</span> {}</span><span class="pin"></span></a></li>\n'.format(
-		pin_num,
-		' '.join(map(slugify,pin_type)),
-		selected,
-		pin_url,
-		pin_num,
-		pin_name
+	return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"><span class="phys">{pin_num}</span> {pin_name}</span><span class="pin"></span></a></li>\n'.format(
+		pin_num = pin_num,
+		pin_type = ' '.join(map(slugify,pin_type)),
+		pin_selected = selected,
+		pin_url = pin_url,
+		pin_title = ', '.join(pin_link_title),
+		pin_name = pin_name
 		)
 
 def render_nav(url, overlay=None):
@@ -215,8 +225,8 @@ pins = db['pins']
 
 overlays = map(load_overlay,overlays)
 
-for url in select_overlays:
-	overlays_html += '<option value="{}">{}</option>'.format(url, select_overlays[url])
+for url, name in select_overlays:
+	overlays_html += '<option value="{}">{}</option>'.format(url, name)
 
 
 pages['pinout'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})

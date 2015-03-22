@@ -7,6 +7,7 @@
         },
         "3":{
             "name":			"SDA",
+            "description":  "I2C Data",
             "type":			"GPIO/I2C",
             "scheme": {
                 "wiringpi":	8,
@@ -16,6 +17,7 @@
         },
         "5":{
             "name":			"SCL",
+            "description":  "I2C Clock",
             "type":			"GPIO/I2C",
             "scheme": {
                 "wiringpi":	9,
@@ -94,13 +96,14 @@
         },
         "27":{
             "name":			"ID_SD",
+            "description":  "HAT EEPROM i2c Data",
             "type":			"GPIO/I2C"
         },
         "29":{
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	21,
                 "bcm":		5
             }
         },
@@ -108,7 +111,7 @@
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	22,
                 "bcm":		6
             }
         },
@@ -116,15 +119,16 @@
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	23,
                 "bcm":		13
             }
         },
         "35":{
             "name":			"MISO",
+            "description":  "SPI Master-In",
             "type":			"GPIO/SPI",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	24,
                 "bcm":		19
             }
         },
@@ -132,7 +136,7 @@
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	25,
                 "bcm":		26
             }
         },
@@ -154,6 +158,7 @@
         },
         "8":{
             "name":			"TXD",
+            "description":  "UART Transmit",
             "type":			"GPIO/UART",
             "scheme": {
                 "wiringpi":	15,
@@ -162,6 +167,7 @@
         },
         "10":{
             "name":			"RXD",
+            "description":  "UART Receive",
             "type":			"GPIO/UART",
             "scheme": {
                 "wiringpi":	16,
@@ -170,6 +176,7 @@
         },
         "12":{
             "name":			"PCM_C",
+            "description":  "PCM Clock",
             "type":			"GPIO",
             "scheme": {
                 "wiringpi":	1,
@@ -210,6 +217,7 @@
         },
         "24":{
             "name":			"CE0",
+            "description":  "SPI Chip Select 0",
             "type":			"GPIO/SPI",
             "scheme": {
                 "wiringpi":	10,
@@ -218,6 +226,7 @@
         },
         "26":{
             "name":			"CE1",
+            "description":  "SPI Chip Select 1",
             "type":			"GPIO/SPI",
             "scheme": {
                 "wiringpi":	11,
@@ -226,6 +235,7 @@
         },
         "28":{
             "name":			"ID_SC",
+            "description":  "HAT EEPROM i2c Clock",
             "type":			"GPIO"
         },
         "30":{
@@ -236,7 +246,7 @@
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	26,
                 "bcm":		12
             }
         },
@@ -248,23 +258,25 @@
             "name":			"",
             "type":			"GPIO",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	27,
                 "bcm":		16
             }
         },
         "38":{
             "name":			"MOSI",
+            "description":  "SPI Master-Out",
             "type":			"GPIO/SPI",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	28,
                 "bcm":		20
             }
         },
         "40":{
             "name":			"SCLK",
+            "description":  "SPI Clock",
             "type":			"GPIO/SPI",
             "scheme": {
-                "wiringpi":	0,
+                "wiringpi":	29,
                 "bcm":		21
             }
         }

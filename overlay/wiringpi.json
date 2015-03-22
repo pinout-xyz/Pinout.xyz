@@ -1,0 +1,84 @@
+{
+    "name": "WiringPi GPIO Pinout",
+    "page_url": "wiringpi",
+    "pin":{
+        "3":{
+            "name":"WiringPi 8"
+        },
+        "5":{
+            "name":"WiringPi 9"
+        },
+        "7":{
+            "name":"WiringPi 7"
+        },
+        "11":{
+            "name":"WiringPi 0"
+        },
+        "13":{
+            "name":"WiringPi 2"
+        },
+        "15":{
+            "name":"WiringPi 3"
+        },
+        "19":{
+            "name":"WiringPi 12"
+        },
+        "21":{
+            "name":"WiringPi 13"
+        },
+        "23":{
+            "name":"WiringPi 14"
+        },
+        "29":{
+            "name":"WiringPi 21"
+        },
+        "31":{
+            "name":"WiringPi 22"
+        },
+        "33":{
+            "name":"WiringPi 23"
+        },
+        "35":{
+            "name":"WiringPi 24"
+        },
+        "37":{
+            "name":"WiringPi 25"
+        },
+        "8":{
+            "name":"WiringPi 15"
+        },
+        "10":{
+            "name":"WiringPi 16"
+        },
+        "12":{
+            "name":"WiringPi 1"
+        },
+        "16":{
+            "name":"WiringPi 4"
+        },
+        "18":{
+            "name":"WiringPi 5"
+        },
+        "22":{
+            "name":"WiringPi 6"
+        },
+        "24":{
+            "name":"WiringPi 10"
+        },
+        "26":{
+            "name":"WiringPi 11"
+        },
+        "32":{
+            "name":"WiringPi 26"
+        },
+        "36":{
+            "name":"WiringPi 27"
+        },
+        "38":{
+            "name":"WiringPi 28"
+        },
+        "40":{
+            "name":"WiringPi 29"
+        }
+    }
+}

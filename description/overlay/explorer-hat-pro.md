@@ -11,5 +11,5 @@ Then import it into your Python script and start tinkering:
 
 ```bash
 import explorerhat
-pibrella.light.on()
+explorerhat.light.on()
 ```

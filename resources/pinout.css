@@ -95,7 +95,8 @@ nav#gpio li.overlay-pin a {
 	border-bottom-left-radius:13px;
 }
 nav#gpio ul.bottom li.overlay-pin a {
-	background:rgba(6, 53, 65, 0.50);
+	background:rgba(235, 230, 211, 0.50); /*rgba(6, 53, 65, 0.50);*/
+	color:#063541;
 	border-top-right-radius:13px;
 	border-bottom-right-radius:13px;
 	border-top-left-radius:0px;
@@ -104,7 +105,9 @@ nav#gpio ul.bottom li.overlay-pin a {
 
 nav#gpio li a:hover,
 nav#gpio li.active a {
-	background:#EBE6D3;
+	background:#063541;
+	/*background:#EBE6D3;*/
+	color:#FFF;
 	border-top-left-radius:13px;
 	border-bottom-left-radius:13px;
 }
@@ -112,6 +115,7 @@ nav#gpio li.active a {
 nav#gpio ul.bottom li a:hover,
 nav#gpio ul.bottom li.active a {
 	background:#063541;
+	color:#FFF;
 	border-top-right-radius:13px;
 	border-bottom-right-radius:13px;
 	border-top-left-radius:0px;
@@ -161,21 +165,45 @@ nav#gpio span.pin:after {
 	font-size:7px;
 	box-shadow: 0 0 5px rgba(10,41,51,0.5);
 }
+nav#gpio li.pow5v span.pin {
+	background:#DC322F;
+}
+
+nav#gpio li.gpio span.pin {
+	background:#859900;
+}
+
+nav#gpio li.uart span.pin,
+nav#gpio li.pow3v3 span.pin {
+	background:#B58900;
+}
+
+nav#gpio li.i2c span.pin {
+	background:#268BD2;
+}
+
+nav#gpio li.spi span.pin {
+	background:#D33682;
+}
+/*
 nav#gpio li.pin2 span.pin,
 nav#gpio li.pin4 span.pin {
 	background:#DC322F;
 }
+
 nav#gpio li.pin3 span.pin,
 nav#gpio li.pin5 span.pin,
 nav#gpio li.pin27 span.pin,
 nav#gpio li.pin28 span.pin {
 	background:#268BD2;
 }
+
 nav#gpio li.pin8 span.pin,
 nav#gpio li.pin10 span.pin,
 nav#gpio li.pin17 span.pin {
 	background:#B58900;
 }
+
 nav#gpio li.pin7 span.pin,
 nav#gpio li.pin11 span.pin,
 nav#gpio li.pin13 span.pin,
@@ -203,6 +231,7 @@ nav#gpio li.pin24 span.pin,
 nav#gpio li.pin26 span.pin {
 	background:#D33682;
 }
+*/
 nav#gpio li.pin1 span.pin {
 	border-radius:0;
 	background:#B58900;

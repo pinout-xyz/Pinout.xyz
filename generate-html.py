@@ -9,15 +9,24 @@ import time
 base_url = '/pinout/'
 resource_url = '/resources/'
 
+default_desc = 'The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry Pi, B+ and Pi 2'
+default_title = 'Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2'
+title_suffix = ' at Raspberry Pi GPIO Pinout'
+
+pins = None
 
 overlays = [
 	'spi',
 	'uart',
 	'i2c',
+	'wiringpi',
 	'arduino-spi',
 	'rtk-000-001',
 	'piborg-ledborg',
+	'piglow',
 	'pibrella',
+	'unicorn-hat',
+	'skywriter-hat',
 	'explorer-hat-pro',
 	'explorer-hat',
 	'display-o-tron'
@@ -35,6 +44,13 @@ try:
 	os.mkdir('output/pinout')
 except OSError:
 	pass
+
+def cssify(value):
+	value = slugify(value);
+	if value[0] == '3' or value[0] == '5':
+		value = 'pow' + value
+	
+	return value
 
 def slugify(value):
     """
@@ -69,7 +85,21 @@ def load_overlay(overlay):
 			details.append('* {} pin header'.format(pincount))
 
 	if 'pin' in loaded:
-		uses = len(loaded['pin'])
+		#uses = len(loaded['pin'])
+		uses_5v = False
+		uses_3v = False
+		uses = 0
+		for pin in loaded['pin']:
+			if pin in pins:
+				actual_pin = pins[pin]
+				if actual_pin['type'] in ['+3v3','+5v','GND']:
+					if actual_pin['type'] == '+3v3':
+						uses_3v = True
+					if actual_pin['type'] == '+5v':
+						uses_5v = True
+				else:
+					uses += 1
+
 		details.append('* Uses {} GPIO pins'.format(uses))
 		if '3' in loaded['pin'] and '5' in loaded['pin']:
 			pin_3 = loaded['pin']['3']
@@ -90,8 +120,11 @@ def load_overlay(overlay):
 
 	loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],markdown.markdown('\n'.join(details)))
 
-	loaded['page_url'] = slugify(loaded['name'])
-	pages[loaded['page_url']] = render_overlay_page(loaded)
+	if not 'page_url' in loaded:
+		loaded['page_url'] = slugify(loaded['name'])
+
+	loaded['rendered_html'] = render_overlay_page(loaded)
+	pages[loaded['page_url']] = loaded
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
 	select_overlays.append((loaded['page_url'], loaded['name']))
  	return loaded
@@ -133,8 +166,11 @@ def render_pin_page(pin_num):
 		if 'bcm' in pin['scheme']:
 			bcm = pin['scheme']['bcm']
 			pin_url = 'gpio{}'.format(bcm)
-			pin_subname_text = ''
-			pin_text_name = 'BCM {} {}'.format(bcm, pin_subname_text)
+
+			#pin_subname_text = ''
+			#pin_text_name = 'BCM {} {}'.format(bcm, pin_subname_text)
+			pin_text_name = 'BCM {}'.format(bcm)
+
 			if pin['name'] != '':
 			    pin_subname_text = '({})'.format(pin['name'])
 			pin_subtext.append('BCM pin {}'.format(bcm))
@@ -145,12 +181,15 @@ def render_pin_page(pin_num):
 			bcmAlt = pin['scheme']['bcmAlt']
 			pin_subtext.append('BCM pin {} on Rev 1 ( very early ) Pi'.format(bcmAlt))
 
+	if 'description' in pin:
+		pin_text_name = '{} ({})'.format(pin_text_name, pin['description'])
+
 
 	pin_url = slugify('pin{}_{}'.format(pin_num,pin_url))
 
 	pin_text = render_pin_text(pin_num,pin_url,pin_text_name,'<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)))
 	#if pin_text != None:
-	return (pin_url, pin_text) #pages[pin_url] = pin_text
+	return (pin_url, pin_text, pin_text_name) #pages[pin_url] = pin_text
 
 
 def render_pin(pin_num, selected_url, overlay=None):
@@ -211,7 +250,7 @@ def render_pin(pin_num, selected_url, overlay=None):
 
 	return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"><span class="phys">{pin_num}</span> {pin_name}</span><span class="pin"></span></a></li>\n'.format(
 		pin_num = pin_num,
-		pin_type = ' '.join(map(slugify,pin_type)),
+		pin_type = ' '.join(map(cssify,pin_type)),
 		pin_selected = selected,
 		pin_url = pin_url,
 		pin_title = ', '.join(pin_link_title),
@@ -243,15 +282,20 @@ for url, name in select_overlays:
 	overlays_html += '<option value="{}">{}</option>'.format(url, name)
 
 
-pages['pinout'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
+pages['pinout'] = {}
+pages['pinout']['rendered_html'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
 navs['pinout'] = render_nav('pinout')
 
 print('Rendering pin pages...')
 
 for pin in range(1,len(pins)+1):
-	(pin_url, pin_html) = render_pin_page(pin)
+	(pin_url, pin_html, pin_title) = render_pin_page(pin)
 	pin_nav = render_nav(pin_url)
-	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html).replace('{{v}}',str(int(time.time())))
+	pin_html = template.replace('{{nav}}',pin_nav).replace('{{content}}',pin_html)
+	pin_html = pin_html.replace('{{resource_url}}',resource_url)
+	pin_html = pin_html.replace('{{overlays}}',overlays_html).replace('{{v}}',str(int(time.time())))
+	pin_html = pin_html.replace('{{description}}',default_desc)
+	pin_html = pin_html.replace('{{title}}',pin_title + title_suffix)
 
 	print('Outputting page {}'.format(pin_url))
 
@@ -263,10 +307,23 @@ for pin in range(1,len(pins)+1):
 print('Rendering overlay and index pages...')
 
 for url in pages:
-	content = pages[url]
+	content = pages[url]['rendered_html']
 	nav = navs[url]
+
+	if not 'description' in pages[url]:
+		pages[url]['description'] = default_desc
+
+	if 'name' in pages[url]:
+		pages[url]['name'] = pages[url]['name'] + title_suffix
+	else:
+		pages[url]['name'] = default_title
+
 	print('Outputting page {}'.format(url))
-	html = template.replace('{{nav}}',nav).replace('{{content}}',content).replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html).replace('{{v}}',str(int(time.time())))
+	html = template.replace('{{nav}}',nav).replace('{{content}}',content)
+	html = html.replace('{{resource_url}}',resource_url).replace('{{overlays}}',overlays_html)
+	html = html.replace('{{v}}',str(int(time.time())))
+	html = html.replace('{{description}}',pages[url]['description'])
+	html = html.replace('{{title}}',pages[url]['name'])
 	
 	if url != 'pinout':
 		url = os.path.join('pinout',url)

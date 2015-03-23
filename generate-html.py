@@ -29,8 +29,9 @@ overlays = [
 	'skywriter-hat',
 	'explorer-hat-pro',
 	'explorer-hat',
-	'display-o-tron'
-	]
+	'display-o-tron',
+	'dots'
+]
 
 template = open('template/layout.html').read()
 
@@ -90,6 +91,18 @@ def load_overlay(overlay):
 		uses_3v = False
 		uses = 0
 		for pin in loaded['pin']:
+			if pin.startswith('bcm'):
+				pin = pin[3:]
+				for idx in pins:
+					compare_pin = pins[idx]
+					#print(compare_pin)
+					if 'scheme' in compare_pin:
+						if 'bcm' in compare_pin['scheme']:
+							if compare_pin['scheme']['bcm'] == int(pin):
+								print("Mapping BCM{} to {}".format(pin, str(idx)))
+								pin = str(idx)
+								break
+
 			if pin in pins:
 				actual_pin = pins[pin]
 				if actual_pin['type'] in ['+3v3','+5v','GND']:
@@ -201,10 +214,18 @@ def render_pin(pin_num, selected_url, overlay=None):
 	pin_name = pin['name']
 	pin_used = False
 	pin_link_title = []
+	bcm_pin = None
+	if 'scheme' in pin:
+		if 'bcm' in pin['scheme']:
+			bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
+	if overlay != None and ( str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
 
-	if overlay != None and str(pin_num) in overlay['pin']:
-		overlay_pin = overlay['pin'][str(pin_num)]
+		if str(pin_num) in overlay['pin']:
+			overlay_pin = overlay['pin'][str(pin_num)]
+		else:
+			overlay_pin = overlay['pin'][bcm_pin]
+
 		pin_used = True
 		#print(overlay)
 		if 'name' in overlay_pin:

@@ -97,7 +97,11 @@
         "27":{
             "name":			"ID_SD",
             "description":  "HAT EEPROM i2c Data",
-            "type":			"GPIO/I2C"
+            "type":			"GPIO/I2C",
+            "scheme": {
+                "wiringpi": 30,
+                "bcm":      0
+            }
         },
         "29":{
             "name":			"",
@@ -236,7 +240,11 @@
         "28":{
             "name":			"ID_SC",
             "description":  "HAT EEPROM i2c Clock",
-            "type":			"GPIO"
+            "type":			"GPIO/I2C",
+            "scheme": {
+                "wiringpi": 31,
+                "bcm":      1
+            }
         },
         "30":{
             "name":			"Ground",

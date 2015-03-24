@@ -151,8 +151,13 @@ def load_md(filename):
 	except IOError:
 		return ''
 
-def render_pin_text(pin_num, pin_url, pin_name, pin_subtext):
-	return '<article class="{}"><h1>{}</h1>{}{}</article>'.format(pin_url,pin_name,pin_subtext,load_md('description/pins/pin-{}.md'.format(pin_num)))
+def render_pin_text(pin_num, pin_url, pin_name, pin_functions, pin_subtext):
+	return '<article class="{pin_url}"><h1>{pin_name}</h1>{pin_functions}{pin_subtext}{pin_text}</article>'.format(
+		pin_url=pin_url,
+		pin_name=pin_name,
+		pin_functions=pin_functions,
+		pin_subtext=pin_subtext,
+		pin_text=load_md('description/pins/pin-{}.md'.format(pin_num)))
 
 def render_overlay_page(overlay):
 	if overlay == None:
@@ -197,10 +202,44 @@ def render_pin_page(pin_num):
 	if 'description' in pin:
 		pin_text_name = '{} ({})'.format(pin_text_name, pin['description'])
 
+	fn_headings = []
+	fn_functions = []
+	pin_functions = ''
+	if 'functions' in pin:
+		for x in range(6):
+			fn_headings.append( 'Alt' + str(x) )
+
+			function = ''
+			if 'alt' + str(x) in pin['functions']:
+				function = pin['functions']['alt' + str(x)]
+
+			fn_functions.append( function )
+
+		pin_functions = '''<table class="pin-functions">
+		<thead>
+			<tr>
+				<th>{headings}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{functions}</td>
+			</tr>
+		</tbody>
+		</table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
+
+
+
 
 	pin_url = slugify('pin{}_{}'.format(pin_num,pin_url))
 
-	pin_text = render_pin_text(pin_num,pin_url,pin_text_name,'<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)))
+	pin_text = render_pin_text(
+		pin_num,
+		pin_url,
+		pin_text_name,
+		pin_functions,
+		'<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext))
+		)
 	#if pin_text != None:
 	return (pin_url, pin_text, pin_text_name) #pages[pin_url] = pin_text
 

@@ -1,18 +1,18 @@
 #Pinout!
 
-###The comprehensive Raspberry Pi Pinout guide for the Raspberry Pi, now with Model B+ and Pi 2
+###The comprehensive Raspberry Pi GPIO Pinout guide, now with Raspberry Pi Model B+ and Raspberry Pi 2
 
-Pinout isn't meant to be printable, but it's a great quick-reference and a comprehensive starter guide to learning about your Raspberry Pi's GPIO pins.
+This GPIO Pinout isn't meant to be printable, but it's both a great quick-reference and a comprehensive guide to your Raspberry Pi's GPIO pins.
 
 ##What do these numbers mean, anyway?
 
-* BCM - Broadcom pin number, these are the ones you probably want to use with RPi.GPIO
+* BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO
 * WiringPi - Wiring Pi pin number, for Gordon's Wiring Pi library
 * Physical - Number corresponding to the pins physical location on the header
 
 ##Pi 2+
 
-To celebrate the launch of the Pi 2 and the new Pi-enthusiasts it'll bring, Pinout has been updated to be cleaner, more comprehensive and more accurate.
+To celebrate the launch of the Pi 2 and the new Pi-enthusiasts it'll bring, Pinout has been updated to be cleaner, more comprehensive and more accurate and will continue to be improved.
 
 ##Model B+
 

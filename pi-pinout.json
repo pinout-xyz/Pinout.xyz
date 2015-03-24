@@ -13,6 +13,10 @@
                 "wiringpi":	8,
                 "bcm":		2,
                 "bcmAlt":	0
+            },
+            "functions": {
+                "alt0":     "SDA1",
+                "alt1":     "SA3"
             }
         },
         "5":{
@@ -23,6 +27,10 @@
                 "wiringpi":	9,
                 "bcm":		3,
                 "bcmAlt":	1
+            },
+            "functions": {
+                "alt0":     "SCL1",
+                "alt1":     "SA2"
             }
         },
         "7":{
@@ -31,6 +39,11 @@
             "scheme": {
                 "wiringpi":	7,
                 "bcm":		4
+            },
+            "functions": {
+                "alt0":     "GPCLK0",
+                "alt1":     "SA1",
+                "alt5":     "ARM_TDI"
             }
         },
         "9":{
@@ -43,6 +56,14 @@
             "scheme": {
                 "wiringpi":	0,
                 "bcm":		17
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD9",
+                "alt2":     "Reserved",
+                "alt3":     "RTS0",
+                "alt4":     "SPI1_CE1_N",
+                "alt5":     "RTS1"
             }
         },
         "13":{
@@ -52,6 +73,13 @@
                 "wiringpi":	2,
                 "bcm":		27,
                 "bcmAlt":	21
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "Reserved",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_DAT3",
+                "alt4":     "ARM_TMS"
             }
         },
         "15":{
@@ -60,6 +88,13 @@
             "scheme": {
                 "wiringpi":	3,
                 "bcm":		22
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD14",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_CLK",
+                "alt4":     "ARM_TRST"
             }
         },
         "17":{
@@ -72,6 +107,11 @@
             "scheme": {
                 "wiringpi":	12,
                 "bcm":		10
+            },
+            "functions": {
+                "alt0":     "SPI0_MOSI",
+                "alt1":     "SD2",
+                "alt2":     "Reserved"
             }
         },
         "21":{
@@ -80,6 +120,11 @@
             "scheme": {
                 "wiringpi":	13,
                 "bcm":		9
+            },
+            "functions": {
+                "alt0":     "SPI0_MISO",
+                "alt1":     "SD1",
+                "alt2":     "Reserved"
             }
         },
         "23":{
@@ -88,6 +133,11 @@
             "scheme": {
                 "wiringpi":	14,
                 "bcm":		11
+            },
+            "functions": {
+                "alt0":     "SPI0_SCLK",
+                "alt1":     "SD3",
+                "alt2":     "Reserved"
             }
         },
         "25":{
@@ -101,6 +151,11 @@
             "scheme": {
                 "wiringpi": 30,
                 "bcm":      0
+            },
+            "functions": {
+                "alt0":     "SDA0",
+                "alt1":     "SA5",
+                "alt2":     "Reserved"
             }
         },
         "29":{
@@ -109,6 +164,12 @@
             "scheme": {
                 "wiringpi":	21,
                 "bcm":		5
+            },
+            "functions": {
+                "alt0":     "GPCLK1",
+                "alt1":     "SA0",
+                "alt2":     "Reserved",
+                "alt5":     "ARM_TDO"
             }
         },
         "31":{
@@ -117,6 +178,12 @@
             "scheme": {
                 "wiringpi":	22,
                 "bcm":		6
+            },
+            "functions": {
+                "alt0":     "GPCLK2",
+                "alt1":     "SOE_N / SE",
+                "alt2":     "Reserved",
+                "alt5":     "ARM_RTCK"
             }
         },
         "33":{
@@ -125,6 +192,12 @@
             "scheme": {
                 "wiringpi":	23,
                 "bcm":		13
+            },
+            "functions": {
+                "alt0":     "PWM1",
+                "alt1":     "SD5",
+                "alt2":     "Reserved",
+                "alt5":     "ARM_TCK"
             }
         },
         "35":{
@@ -134,6 +207,14 @@
             "scheme": {
                 "wiringpi":	24,
                 "bcm":		19
+            },
+            "functions": {
+                "alt0":     "PCM_FS",
+                "alt1":     "SD11",
+                "alt2":     "Reserved",
+                "alt3":     "BSCSL SCL / SCLK",
+                "alt4":     "SPI1_MISO",
+                "alt5":     "PWM1"
             }
         },
         "37":{
@@ -142,6 +223,13 @@
             "scheme": {
                 "wiringpi":	25,
                 "bcm":		26
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "Reserved",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_DAT2",
+                "alt4":     "ARM_TDI"
             }
         },
         "39":{
@@ -167,6 +255,12 @@
             "scheme": {
                 "wiringpi":	15,
                 "bcm":		14
+            },
+            "functions": {
+                "alt0":     "TXD0",
+                "alt1":     "SD6",
+                "alt2":     "Reserved",
+                "alt5":     "TXD1"
             }
         },
         "10":{
@@ -176,6 +270,12 @@
             "scheme": {
                 "wiringpi":	16,
                 "bcm":		15
+            },
+            "functions": {
+                "alt0":     "RXD0",
+                "alt1":     "SD7",
+                "alt2":     "Reserved",
+                "alt5":     "RXD1"
             }
         },
         "12":{
@@ -185,6 +285,14 @@
             "scheme": {
                 "wiringpi":	1,
                 "bcm":		18
+            },
+            "functions": {
+                "alt0":     "PCM_CLK",
+                "alt1":     "SD10",
+                "alt2":     "Reserved",
+                "alt3":     "BSCSL SDA / MOSI",
+                "alt4":     "SPI1_CE0_N",
+                "alt5":     "PWM0"
             }
         },
         "14":{
@@ -197,6 +305,13 @@
             "scheme": {
                 "wiringpi":	4,
                 "bcm":		23
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD15",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_CMD",
+                "alt4":     "ARM_RTCK"
             }
         },
         "18":{
@@ -205,6 +320,13 @@
             "scheme": {
                 "wiringpi":	5,
                 "bcm":		24
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD16",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_DAT0",
+                "alt4":     "ARM_TDO"
             }
         },
         "20":{
@@ -217,6 +339,13 @@
             "scheme": {
                 "wiringpi":	6,
                 "bcm":		25
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD17",
+                "alt2":     "Reserved",
+                "alt3":     "SD1_DAT1",
+                "alt4":     "ARM_TCK"
             }
         },
         "24":{
@@ -226,6 +355,11 @@
             "scheme": {
                 "wiringpi":	10,
                 "bcm":		8
+            },
+            "functions": {
+                "alt0":     "SPI0_CE0_N",
+                "alt1":     "SD0",
+                "alt2":     "Reserved"
             }
         },
         "26":{
@@ -235,6 +369,11 @@
             "scheme": {
                 "wiringpi":	11,
                 "bcm":		7
+            },
+            "functions": {
+                "alt0":     "SPI0_CE1_N",
+                "alt1":     "SWE_N / SRW_N",
+                "alt2":     "Reserved"
             }
         },
         "28":{
@@ -244,6 +383,11 @@
             "scheme": {
                 "wiringpi": 31,
                 "bcm":      1
+            },
+            "functions": {
+                "alt0":     "SCL0",
+                "alt1":     "SA4",
+                "alt2":     "Reserved"
             }
         },
         "30":{
@@ -256,6 +400,12 @@
             "scheme": {
                 "wiringpi":	26,
                 "bcm":		12
+            },
+            "functions": {
+                "alt0":     "PWM0",
+                "alt1":     "SD4",
+                "alt2":     "Reserved",
+                "alt5":     "ARM_TMS"
             }
         },
         "34":{
@@ -268,6 +418,14 @@
             "scheme": {
                 "wiringpi":	27,
                 "bcm":		16
+            },
+            "functions": {
+                "alt0":     "Reserved",
+                "alt1":     "SD8",
+                "alt2":     "Reserved",
+                "alt3":     "CTS0",
+                "alt4":     "SPI1_CE2_N",
+                "alt5":     "CTS1"
             }
         },
         "38":{
@@ -277,6 +435,14 @@
             "scheme": {
                 "wiringpi":	28,
                 "bcm":		20
+            },
+            "functions": {
+                "alt0":     "PCM_DIN",
+                "alt1":     "SD12",
+                "alt2":     "Reserved",
+                "alt3":     "BSCSL / MISO",
+                "alt4":     "SPI1_MOSI",
+                "alt5":     "CPCLK0"
             }
         },
         "40":{
@@ -286,6 +452,14 @@
             "scheme": {
                 "wiringpi":	29,
                 "bcm":		21
+            },
+            "functions": {
+                "alt0":     "PCM_DOUT",
+                "alt1":     "SD13",
+                "alt2":     "Reserved",
+                "alt3":     "BSCSL / CE_N",
+                "alt4":     "SPI1_SCLK",
+                "alt5":     "GPCLK1"
             }
         }
     }

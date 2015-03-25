@@ -2,11 +2,17 @@
 
 Pinout 2 is the successor to the popular Pi pinout website http://pi.gadgetoid.com/pinout
 
+To support translation efforts, and allow people to build tools with the data in this repository, Pinout 2 is
+provided under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
 This project aims to build a consistent workflow behind the Pinout front-end, and invite board manufacturers
 to produce their own "overlay" files which describe which pins their Pi add-ons use.
 
 I hope that by making this project open and extensible I will invite not only contributions of board pinouts,
-but translation efforts too.
+but translations too.
+
+I'm also looking for feedback about the structure of the JSON files, what information needs to be contained in
+them, how they can better support translation and any other suggestions you might have.
 
 #Contributing
 

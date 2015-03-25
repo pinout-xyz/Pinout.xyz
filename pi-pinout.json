@@ -128,7 +128,7 @@
             }
         },
         "23":{
-            "name":			"SCKL",
+            "name":			"SCLK",
             "type":			"GPIO/SPI",
             "scheme": {
                 "wiringpi":	14,

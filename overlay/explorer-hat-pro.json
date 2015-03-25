@@ -6,7 +6,26 @@
 	"buy": "http://shop.pimoroni.com/products/explorer-hat",
 	"description": "An all-in-one light, input, motor, touch and output add-on board.",
 	"pincount": 40,
+	"i2c": {
+		"0x28": {
+			"name":   "Cap Touch",
+			"device": "cap1208"
+		},
+		"0x48": {
+			"name":   "Analog Input",
+			"device": "ads1015"
+		}
+	},
 	"pin": {
+		"3": {},
+		"5": {},
+		"8": {},
+		"10": {},
+		"12": {},
+		"19": {},
+		"21": {},
+		"23": {},
+		"24": {},
 		"7": {
 			"name": "LED 1",
 			"mode": "output",

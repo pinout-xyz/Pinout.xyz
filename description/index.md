@@ -10,7 +10,7 @@ This GPIO Pinout isn't meant to be printable, but it's both a great quick-refere
 * WiringPi - Wiring Pi pin number, for Gordon's Wiring Pi library
 * Physical - Number corresponding to the pins physical location on the header
 
-##Pi 2+
+##Pi 2
 
 To celebrate the launch of the Pi 2 and the new Pi-enthusiasts it'll bring, Pinout has been updated to be cleaner, more comprehensive and more accurate and will continue to be improved.
 

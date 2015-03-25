@@ -6,6 +6,7 @@ import re
 import os
 import time
 
+lang = "en-GB"
 base_url = '/pinout/'
 resource_url = '/resources/'
 
@@ -33,7 +34,7 @@ overlays = [
 	'dots'
 ]
 
-template = open('template/layout.html').read()
+template = open('src/{}/template/layout.html'.format(lang)).read()
 
 pages = {}
 navs = {}
@@ -42,7 +43,8 @@ select_overlays = []
 overlays_html = ''
 
 try:
-	os.mkdir('output/pinout')
+	os.mkdir('output/{}'.format(lang))
+	os.mkdir('output/{}/pinout'.format(lang))
 except OSError:
 	pass
 
@@ -65,11 +67,11 @@ def slugify(value):
 
 def load_overlay(overlay):
 	try:
-		loaded = json.load(open('overlay/{}.json'.format(overlay)))
+		loaded = json.load(open('src/{}/overlay/{}.json'.format(lang,overlay)))
 	except IOError:
 		return None
 
-	loaded['long_description'] = load_md('description/overlay/{}.md'.format(overlay))
+	loaded['long_description'] = load_md('src/{}/description/overlay/{}.md'.format(lang,overlay))
 
 	details = []
 
@@ -157,7 +159,7 @@ def render_pin_text(pin_num, pin_url, pin_name, pin_functions, pin_subtext):
 		pin_name=pin_name,
 		pin_functions=pin_functions,
 		pin_subtext=pin_subtext,
-		pin_text=load_md('description/pins/pin-{}.md'.format(pin_num)))
+		pin_text=load_md('src/{}/description/pins/pin-{}.md'.format(lang,pin_num)))
 
 def render_overlay_page(overlay):
 	if overlay == None:
@@ -332,7 +334,7 @@ def render_nav(url, overlay=None):
 
 
 
-db = json.load(open('pi-pinout.json'))
+db = json.load(open('src/{}/pi-pinout.json'.format(lang)))
 
 pins = db['pins']
 
@@ -359,7 +361,7 @@ for pin in range(1,len(pins)+1):
 
 	print('Outputting page {}'.format(pin_url))
 
-	with open(os.path.join('output/pinout','{}.html'.format(pin_url)),'w') as f:
+	with open(os.path.join('output',lang,'pinout','{}.html'.format(pin_url)),'w') as f:
 		f.write(pin_html)
 
 #nav = render_nav()
@@ -388,6 +390,6 @@ for url in pages:
 	if url != 'pinout':
 		url = os.path.join('pinout',url)
 
-	with open(os.path.join('output','{}.html'.format(url)),'w') as f:
+	with open(os.path.join('output',lang,'{}.html'.format(url)),'w') as f:
 		f.write(html)
 

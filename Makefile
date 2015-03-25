@@ -1,9 +1,9 @@
 all:
-	./generate-html.py
-	cp -r resources output/
+	./generate-html.py en-GB
+	cp -r resources output/en-GB/
 
 clean:
-	rm -r output/*
+	rm -r output/en-GB/*
 
 serve:
 	cd output && python -m SimpleHTTPServer

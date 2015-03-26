@@ -1,9 +1,14 @@
 #!/usr/bin/env python
-from flask import Flask, send_from_directory
+from flask import Flask, redirect, send_from_directory
 import sys
 app = Flask(__name__)
 
 lang = 'en-GB'
+
+@app.route("/")
+def redirect_to_pinout():
+	return redirect('/pinout')
+	
 
 @app.route("/resources/<path:filename>")
 def custom_static(filename):

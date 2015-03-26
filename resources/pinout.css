@@ -80,6 +80,7 @@ nav#gpio ul.bottom {
 	top:17px;
 	list-style:none;
 }
+
 nav#gpio ul.top li {text-indent:52px;}
 nav#gpio li a {
 	display:block;
@@ -89,41 +90,53 @@ nav#gpio li a {
 	line-height:29px;
 	height:27px;
 	margin-bottom:2px;
-}
-nav#gpio li a small {font-size:11px;}
-
-nav#gpio li.overlay-pin a {
-	background:rgba(235, 230, 211, 0.50);
 	border-top-left-radius:13px;
 	border-bottom-left-radius:13px;
 }
-nav#gpio ul.bottom li.overlay-pin a {
-	background:rgba(235, 230, 211, 0.50); /*rgba(6, 53, 65, 0.50);*/
-	color:#063541;
+nav#gpio ul.bottom li a {
 	border-top-right-radius:13px;
 	border-bottom-right-radius:13px;
 	border-top-left-radius:0px;
 	border-bottom-left-radius:0px;
 }
+
+nav#gpio li a small {font-size:11px;}
+
+
 
 nav#gpio li a:hover,
 nav#gpio li.active a {
 	background:#063541;
 	/*background:#EBE6D3;*/
 	color:#FFF;
-	border-top-left-radius:13px;
-	border-bottom-left-radius:13px;
 }
 
 nav#gpio ul.bottom li a:hover,
 nav#gpio ul.bottom li.active a {
 	background:#063541;
 	color:#FFF;
-	border-top-right-radius:13px;
-	border-bottom-right-radius:13px;
-	border-top-left-radius:0px;
-	border-bottom-left-radius:0px;
 }
+
+
+nav#gpio li.overlay-pin a {
+	background:rgba(235, 230, 211, 0.50);
+	color:#063541;
+}
+nav#gpio ul.bottom li.overlay-pin a {
+	background:rgba(235, 230, 211, 0.50); /*rgba(6, 53, 65, 0.50);*/
+	color:#063541;
+}
+
+article .pin-hover {cursor:help;}
+article .pin-hover:hover {color:#880000;}
+
+
+nav#gpio ul li.hover-pin a,
+nav#gpio ul.bottom li.hover-pin a {
+	color:#FFF;
+	background:rgba(200,0,0,0.6);
+}
+
 nav#gpio ul.bottom a {
 	text-indent:10px;
 }

@@ -6,4 +6,4 @@ clean:
 	rm -r output/en-GB/*
 
 serve:
-	cd output && python -m SimpleHTTPServer
+	./serve.py en-GB

@@ -43,10 +43,11 @@ select_overlays = []
 overlays_html = ''
 
 try:
+	os.mkdir('output')
 	os.mkdir('output/{}'.format(lang))
 	os.mkdir('output/{}/pinout'.format(lang))
 except OSError:
-	pass
+	exit("Failed to create required directories!")
 
 def cssify(value):
 	value = slugify(value);

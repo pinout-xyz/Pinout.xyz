@@ -18,6 +18,7 @@ if len(sys.argv) > 1:
 pinout.load(lang)
 
 overlays = [
+	'ground',
 	'spi',
 	'uart',
 	'i2c',
@@ -118,7 +119,9 @@ def load_overlay(overlay):
 				else:
 					uses += 1
 
-		details.append('* Uses {} GPIO pins'.format(uses))
+		if uses > 0:
+			details.append('* Uses {} GPIO pins'.format(uses))
+
 		if '3' in loaded['pin'] and '5' in loaded['pin']:
 			pin_3 = loaded['pin']['3']
 			pin_5 = loaded['pin']['5']
@@ -178,6 +181,10 @@ def render_alternate(handle, name):
 def render_pin_page(pin_num):
 	pin = pinout.pins[str(pin_num)]
 	pin_url = pin['name']
+
+	if pin_url == 'Ground':
+		return (None, None, None)
+
 	pin_text_name = pin['name']
 
 	pin_subtext = []
@@ -292,6 +299,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 
 	pin_url = base_url + slugify('pin{}_{}'.format(pin_num,pin_url))
 
+	if pin['name'] == 'Ground':
+		pin_url = base_url + 'ground'
+
 	selected = ''
 
 	if base_url + selected_url == pin_url:
@@ -342,6 +352,8 @@ print('Rendering pin pages...')
 
 for pin in range(1,len(pinout.pins)+1):
 	(pin_url, pin_html, pin_title) = render_pin_page(pin)
+	if pin_url == None:
+		continue
 	pin_nav = render_nav(pin_url)
 	pin_html = pinout.render_html(template,
 		nav = pin_nav,

@@ -5,10 +5,14 @@ import unicodedata
 import re
 import os
 import time
+import sys
 
 lang = "en-GB"
 base_url = '/pinout/'
 resource_url = '/resources/'
+
+if len(sys.argv) > 1:
+	lang  = sys.argv[1]
 
 default_desc = 'The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry Pi, B+ and Pi 2'
 default_title = 'Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2'

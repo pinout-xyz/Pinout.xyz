@@ -78,7 +78,7 @@ def physical_to(pin, scheme='bcm'):
         return pin
     return None
 
-db = json.load(open('src/{}/pi-pinout.json'.format(lang)))
+db = json.load(open('../src/{}/pi-pinout.json'.format(lang)))
 pins = db['pins']
 
 define = {}
@@ -95,7 +95,7 @@ if len(sys.argv) >= 3:
     pin_scheme   = sys.argv[2]
     output_lang  = sys.argv[3]
 
-    overlay = json.load(open('src/{}/overlay/{}.json'.format(lang,overlay_file)))
+    overlay = json.load(open('../src/{}/overlay/{}.json'.format(lang,overlay_file)))
 
     if 'i2c' in overlay:
         for addr in overlay['i2c']:

@@ -13,6 +13,46 @@ table.pin-functions td {width:16.6666%;}
 
 h2 {font-size:18px;margin-top:20px;}
 
+.drop-down {
+	float: right;
+	display: block;
+	width: 250px;
+	border:2px solid #D6264E;
+	margin-left:20px;
+}
+.overlay {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display:none;
+	background:rgba(255,255,255,0.95);
+	padding:10px 0px;
+	clear:both;
+}
+.drop-down:hover .overlay {display:block;}
+.overlay-container span {
+	display:block;
+	float:left;
+}
+.overlay li {
+	display:block;
+	width:250px;
+}
+.overlay li:nth-child(odd) a {
+	background:rgba(214, 38, 78, 0.05);
+}
+.overlay li a, .drop-down span {
+	display:block;
+	font-size:14px;
+	line-height:28px;
+	color:#063541;
+	padding:0 10px;
+}
+.overlay li a:hover {
+	color:#FFFFFF;
+	background:#073642;
+}
+
 .main-nav {
 	position:absolute;
 	right:0px;

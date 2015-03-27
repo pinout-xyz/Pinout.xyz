@@ -17,7 +17,7 @@ if len(sys.argv) > 1:
 
 pinout.load(lang)
 
-overlays = [
+'''overlays = [
 	'ground',
 	'spi',
 	'uart',
@@ -34,7 +34,9 @@ overlays = [
 	'explorer-hat',
 	'display-o-tron',
 	'dots'
-]
+]'''
+
+overlays = pinout.settings['overlays']
 
 template = open('src/{}/template/layout.html'.format(lang)).read()
 
@@ -334,7 +336,7 @@ def render_nav(url, overlay=None):
 overlays = map(load_overlay,overlays)
 
 for url, name in select_overlays:
-	overlays_html += '<option value="{}">{}</option>'.format(url, name)
+	overlays_html += '<li><a href="{}{}">{}</a></li>'.format(base_url, url, name)
 
 
 '''

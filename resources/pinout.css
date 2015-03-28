@@ -46,6 +46,12 @@ h2 {font-size:18px;margin-top:20px;}
 	line-height:28px;
 	color:#063541;
 	padding:0 10px;
+	cursor:pointer;
+	width:230px;
+}
+.drop-down span:hover, .drop-down:hover span {
+	background:#D6264E;
+	color:#FFFFFF;
 }
 .overlay li a:hover {
 	color:#FFFFFF;

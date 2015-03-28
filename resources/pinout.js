@@ -1,15 +1,21 @@
 jQuery(document).ready(function(){
+	var overlay = $('.drop-down .overlay');
+	var overlay_slideUp;
 
 	$('pre').addClass('prettyprint').addClass('linenums');
 
 	window.prettyPrint&&prettyPrint();
 
-	$('.overlay').on('change',function(){
-		var url = $(this).val();
-		if( url != '' ){
-			window.location.href = '/pinout/' + url
-		}
-	})
+	$('.drop-down').on('click',function(){
+		overlay.slideDown(100);
+	});
+	$('.drop-down').hover(function(){
+		clearTimeout(overlay_slideUp);
+		overlay_slideUp = setTimeout(function(){overlay.slideDown(100);}, 200);
+	},function(){
+		clearTimeout(overlay_slideUp);
+		overlay_slideUp = setTimeout(function(){overlay.slideUp(100);}, 500);
+	});
 
 	$.gaat({
 		trackExternal: true,

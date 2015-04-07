@@ -33,7 +33,8 @@ pinout.load(lang)
 	'explorer-hat-pro',
 	'explorer-hat',
 	'display-o-tron',
-	'dots'
+	'dots',
+	'traffic-hat'
 ]'''
 
 overlays = pinout.settings['overlays']

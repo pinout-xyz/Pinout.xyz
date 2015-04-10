@@ -7,6 +7,11 @@ import os
 import time
 import sys
 import pinout
+import yaml
+import markjaml
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 lang = "en-GB"
 base_url = '/pinout/'
@@ -16,26 +21,6 @@ if len(sys.argv) > 1:
 	lang  = sys.argv[1]
 
 pinout.load(lang)
-
-'''overlays = [
-	'ground',
-	'spi',
-	'uart',
-	'i2c',
-	'wiringpi',
-	'arduino-spi',
-	'rtk-000-001',
-	'piborg-ledborg',
-	'piglow',
-	'pibrella',
-	'unicorn-hat',
-	'skywriter-hat',
-	'explorer-hat-pro',
-	'explorer-hat',
-	'display-o-tron',
-	'dots',
-	'traffic-hat'
-]'''
 
 overlays = pinout.settings['overlays']
 
@@ -83,11 +68,13 @@ def slugify(value):
 
 def load_overlay(overlay):
 	try:
-		loaded = json.load(open('src/{}/overlay/{}.json'.format(lang,overlay)))
+		data = markjaml.load('src/{}/overlay/{}.md'.format(lang,overlay))
+
+		loaded = data['data']
+		loaded['long_description'] = data['html']
 	except IOError:
 		return None
 
-	loaded['long_description'] = load_md('description/overlay/{}.md'.format(overlay))
 
 	details = []
 
@@ -108,6 +95,7 @@ def load_overlay(overlay):
 		uses_3v = False
 		uses = 0
 		for pin in loaded['pin']:
+			pin = str(pin)
 			if pin.startswith('bcm'):
 				pin = pinout.bcm_to_physical(pin[3:])
 
@@ -169,7 +157,7 @@ def render_pin_text(pin_num, pin_url, pin_name, pin_functions, pin_subtext):
 		pin_name=pin_name,
 		pin_functions=pin_functions,
 		pin_subtext=pin_subtext,
-		pin_text=load_md('description/pins/pin-{}.md'.format(pin_num)))
+		pin_text=load_md('pin/pin-{}.md'.format(pin_num)))
 
 def render_overlay_page(overlay):
 	if overlay == None:
@@ -271,12 +259,17 @@ def render_pin(pin_num, selected_url, overlay=None):
 		if 'bcm' in pin['scheme']:
 			bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
-	if overlay != None and ( str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
+	if overlay != None and ( pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
 
-		if str(pin_num) in overlay['pin']:
+		if pin_num in overlay['pin']:
+			overlay_pin = overlay['pin'][pin_num]
+		elif str(pin_num) in overlay['pin']:
 			overlay_pin = overlay['pin'][str(pin_num)]
 		else:
 			overlay_pin = overlay['pin'][bcm_pin]
+
+		if overlay_pin == None:
+			overlay_pin = {}
 
 		pin_used = True
 		#print(overlay)
@@ -302,8 +295,8 @@ def render_pin(pin_num, selected_url, overlay=None):
 
 	pin_url = base_url + slugify('pin{}_{}'.format(pin_num,pin_url))
 
-	if pin['name'] == 'Ground':
-		pin_url = base_url + 'ground'
+	if pin['type'] in pinout.get_setting('urls'):
+		pin_url = base_url + pinout.get_setting('urls')[pin['type']]
 
 	selected = ''
 
@@ -348,7 +341,7 @@ and all other pages in /pinout/
 serve.py will mirror this structure for testing.
 '''
 pages['pinout'] = {}
-pages['pinout']['rendered_html'] = render_overlay_page({'name':'Index','long_description':load_md('description/index.md')})
+pages['pinout']['rendered_html'] = render_overlay_page({'name':'Index','long_description':load_md('index.md')})
 navs['pinout'] = render_nav('pinout')
 
 print('Rendering pin pages...')

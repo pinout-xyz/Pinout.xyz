@@ -1,6 +1,20 @@
+<!--
+---
+name: Ground
+description: Raspberry Pi Ground Pins
+pin:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
+-->
 #Ground
 
-The Ground pins on the Raspberry Pi are all electrically connected, so it doesn't matter
+The Ground pins ona the Raspberry Pi are all electrically connected, so it doesn't matter
 which one you use if you're wiring up a voltage supply.
 
 Generally the one that's most convinient or closest to the rest of your connections is tidier

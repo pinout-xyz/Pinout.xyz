@@ -1,12 +1,18 @@
 import json
+import yaml
 import time
 import markdown
 
-DB_FILE = 'pi-pinout.json'
-SETTINGS_FILE = 'settings.json'
+DB_FILE = 'pi-pinout.yaml'
+SETTINGS_FILE = 'settings.yaml'
 
 pins = None
 settings = None
+
+def get_setting(setting):
+    if setting in settings:
+        return settings[setting]
+    return None
 
 def render_html(*args, **kwargs):
     html = args[0]
@@ -50,8 +56,14 @@ def physical_to(pin, scheme='bcm'):
 
 def load(lang='en-GB'):
     global pins, settings
-    db = json.load(open('src/{}/{}'.format(lang,DB_FILE)))
-    settings = json.load(open('src/{}/{}'.format(lang,SETTINGS_FILE)))
+    if DB_FILE.endswith('.yaml'):
+        db = yaml.load(open('src/{}/{}'.format(lang,DB_FILE)).read())
+    else:
+        db = json.load(open('src/{}/{}'.format(lang,DB_FILE)))
+    if SETTINGS_FILE.endswith('.yaml'):
+        settings = yaml.load(open('src/{}/{}'.format(lang,SETTINGS_FILE)).read())
+    else:
+        settings = json.load(open('src/{}/{}'.format(lang,SETTINGS_FILE)))
     pins = db['pins']
 
 

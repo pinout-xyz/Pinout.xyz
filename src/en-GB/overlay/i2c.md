@@ -1,3 +1,26 @@
+<!--
+---
+name: I2C
+description: Raspberry Pi i2c pins
+pin:
+  '3':
+    name: Data
+    direction: both
+    active: high
+  '5':
+    name: Clock
+    direction: both
+    active: high
+  '27':
+    name: EEPROM Data
+    direction: both
+    active: high
+  '28':
+    name: EEPROM Clock
+    direction: both
+    active: high
+
+-->
 #I2C - Inter Integrated Circuit
 
 The Raspberry Pi's I2C pins are an extremely useful way to talk to many different types of external peripheral; from the MCP23017 digital IO expander, to a connected ATmega.

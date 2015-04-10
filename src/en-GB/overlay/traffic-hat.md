@@ -1,3 +1,34 @@
+<!--
+---
+name: Traffic HAT
+manufacturer: Ryanteck LTD.
+url: http://www.ryanteck.uk/
+buy: http://www.ryanteck.uk/
+description: A quick and easy way to learn the basics of GPIO on a budget. All in
+  a nice HAT.
+pincount: 40
+pin:
+  '15':
+    name: LED1 / Green
+    direction: output
+    active: high
+  '16':
+    name: LED2 / Amber
+    direction: output
+    active: high
+  '18':
+    name: LED3 / Red
+    direction: output
+    active: high
+  '22':
+    name: Button
+    direction: input
+    active: high
+  '29':
+    name: Buzzer
+    direction: output
+    active: high
+-->
 #Traffic HAT
 
 ###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.

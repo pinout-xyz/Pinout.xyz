@@ -1,3 +1,17 @@
+<!--
+---
+name: UART
+description: Raspberry Pi UART pins
+pin:
+  '8':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '10':
+    name: RXD / Receive
+    direction: input
+    active: high
+-->
 #UART - Universal Asynchronous Receiver/Transmitter
 
 ###The 2 UART pins in WiringPi are: 15, 16

@@ -1,0 +1,1 @@
+18 no'lu BCM pini olan PWM0, oldukça kullanışlıdır. Bu pin, doğrudan belleğe erişebilen kurnazlıklar ile çok kesin zamanlama gerektiren işlemlerde kullanılabilir. [Unicorn HAT](/pinout/unicorn_hat)'teki WS2812 LED'leri bu pinin kullanımına güzel bir örnek teşkil eder.

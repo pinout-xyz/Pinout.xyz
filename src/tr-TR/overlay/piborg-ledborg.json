@@ -1,0 +1,25 @@
+{
+	"name": "PiBorg LEDBorg",
+	"description": "Raspberry Pi RGB ledlerine sahip bir kart",
+	"buy": "https://www.piborg.org/ledborg",
+	"pin": {
+		"11": {
+			"name": "Red LED",
+			"direction": "output",
+			"active": "high",
+			"description":  "PiBorg Red LED"
+		},
+		"13": {
+			"name": "Green LED",
+			"direction": "input",
+			"active": "high",
+			"description":  "PiBorg Green LED"
+		},
+		"15": {
+			"name": "Blue LED",
+			"direction": "output",
+			"active": "high",
+			"description":  "PiBorg Blue LED"
+		}
+	}
+}

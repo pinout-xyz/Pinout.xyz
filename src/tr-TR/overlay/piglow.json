@@ -1,0 +1,21 @@
+{
+	"name": "PiGlow",
+	"manufacturer": "Pimoroni",
+	"url": "https://github.com/pimoroni/piglow",
+	"github": "https://github.com/pimoroni/piglow",
+	"buy": "http://shop.pimoroni.com/products/piglow",
+	"description": "Spiral olarak 18 LED barındıran, ve de Python'dan kontrol edilebilen bir kart.",
+	"pincount": 26,
+	"pin": {
+		"1" : {},
+		"2" : {},
+		"3": {
+			"mode": "i2c"
+		},
+		"5": {
+			"mode": "i2c"
+		},
+		"14" : {},
+		"17" : {}
+	}
+}

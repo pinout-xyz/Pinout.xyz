@@ -14,9 +14,6 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 lang = "en-GB"
-base_url = '/pinout-tr/pinout/'
-resource_url = '/pinout-tr/resources/'
-url_suffix = '.html'
 
 if len(sys.argv) > 1:
 	lang  = sys.argv[1]
@@ -24,6 +21,10 @@ if len(sys.argv) > 1:
 pinout.load(lang)
 
 overlays = pinout.settings['overlays']
+
+base_url = pinout.get_setting('base_url','/pinout/') # '/pinout-tr/pinout/'
+resource_url = pinout.get_setting('resource_url','/resources/') # '/pinout-tr/resources/'
+url_suffix = pinout.get_setting('url_suffix','') # '.html'
 
 template = open('src/{}/template/layout.html'.format(lang)).read()
 

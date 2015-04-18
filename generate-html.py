@@ -14,8 +14,9 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 lang = "en-GB"
-base_url = '/pinout/'
-resource_url = '/resources/'
+base_url = '/pinout-tr/pinout/'
+resource_url = '/pinout-tr/resources/'
+url_suffix = '.html'
 
 if len(sys.argv) > 1:
 	lang  = sys.argv[1]
@@ -304,6 +305,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 		selected = ' active'
 	if pin_used:
 		selected += ' overlay-pin'
+
+
+	pin_url = pin_url + url_suffix
 
 	return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"><span class="phys">{pin_num}</span> {pin_name}</span><span class="pin"></span></a></li>\n'.format(
 		pin_num = pin_num,

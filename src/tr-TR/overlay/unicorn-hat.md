@@ -1,3 +1,20 @@
+<!--
+---
+name: Unicorn HAT
+manufacturer: Pimoroni
+url: http://shop.pimoroni.com/products/unicorn-hat
+buy: http://shop.pimoroni.com/products/unicorn-hat
+description: Tek bir HAT kart üzerinde 64 adet programlanabilir parlak led modülü.
+github: https://github.com/pimoroni/unicornhat
+pincount: 40
+pin:
+  '12':
+    name: Data
+    direction: output
+    mode: pwm
+    active: high
+    description: WS2812 Data
+-->
 #Unicorn HAT
 
 64 adet parlak LEDe sahip bu HAT kart'ı bir C kütüphanesi ile çok hızlı çalışacak bir şekilde yönetebilir, LEDlerin daha parlak veya sönük yanmasını sağlayabilirsiniz.

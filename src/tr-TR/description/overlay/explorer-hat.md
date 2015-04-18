@@ -1,1 +1,0 @@
-explorer-hat-pro.md

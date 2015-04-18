@@ -1,3 +1,29 @@
+<!--
+---
+name: Arduino SPI
+description: Raspberry Pi SPI ile Arduino programlama
+pin:
+  '19':
+    name: MOSI
+    direction: output
+    active: high
+    description: Master Out / Slave In
+  '21':
+    name: MISO
+    direction: input
+    active: high
+    description: Master In / Slave Out
+  '23':
+    name: SCKL
+    direction: output
+    active: high
+    description: Clock
+  '24':
+    name: CE0
+    direction: output
+    active: high
+    description: Arduino Reset
+-->
 #SPI üzerinden ATmega 328p / Arduino
 
 ###Raspberry pi'nizin doğrudan ATmega 328p/Arduino'yu besleyip onunla programlama yapmanıza olanak sağladığını biliyor muydunuz? Bunu sadece birkaç kablo, bir breadboard, bir 16MHZ kristal with nothing but a few wires, a breadboard, a 16Mhz crystal osilatör ve de birkaç 22pF kondansatör ile yapabilirsiniz!

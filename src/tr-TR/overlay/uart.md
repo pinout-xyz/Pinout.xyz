@@ -1,3 +1,17 @@
+<!--
+---
+name: UART
+description: Raspberry Pi UART pinleri
+pin:
+  '8':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '10':
+    name: RXD / Receive
+    direction: input
+    active: high
+-->
 #UART - Universal Asenkron Verici/Alcı
 
 ###WiringPi'deki 2 UART pini Pin 15 ve 16'dır

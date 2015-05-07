@@ -9,10 +9,10 @@ SETTINGS_FILE = 'settings.yaml'
 pins = None
 settings = None
 
-def get_setting(setting):
-    if setting in settings:
+def get_setting(setting, default = None):
+    if setting in settings and settings[setting] != None:
         return settings[setting]
-    return None
+    return default
 
 def render_html(*args, **kwargs):
     html = args[0]

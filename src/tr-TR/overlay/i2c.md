@@ -1,3 +1,25 @@
+<!--
+---
+name: I2C
+description: Raspberry Pi i2c pinleri
+pin:
+  '3':
+    name: Data
+    direction: both
+    active: high
+  '5':
+    name: Clock
+    direction: both
+    active: high
+  '27':
+    name: EEPROM Data
+    direction: both
+    active: high
+  '28':
+    name: EEPROM Clock
+    direction: both
+    active: high
+-->
 #I2C - Inter Integrated Circuit
 
 Raspberry Pi'nin I2C pinleri eğer pek çok harici bileşen ile çalışıyorsanız oldukça işinize yarayacaktır.

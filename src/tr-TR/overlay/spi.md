@@ -1,3 +1,47 @@
+<!--
+---
+name: SPI
+description: Raspberry Pi SPI pinleri
+pincount: 5
+pin:
+  '11':
+    name: SPI1 CE1
+  '12':
+    name: SPI1 CE0
+  '19':
+    name: SPI0 MOSI
+    direction: output
+    active: high
+    description: Master Out / Slave In
+  '21':
+    name: SPI0 MISO
+    direction: input
+    active: high
+    description: Master In / Slave Out
+  '23':
+    name: SPI0 SCLK
+    direction: output
+    active: high
+    description: Clock
+  '24':
+    name: SPI0 CE0
+    direction: output
+    active: high
+    description: Chip Select 0
+  '26':
+    name: SPI0 CE1
+    direction: output
+    active: high
+    description: Chip Select 1
+  '35':
+    name: SPI1 MISO
+  '36':
+    name: SPI1 CE2
+  '38':
+    name: SPI1 MOSI
+  '40':
+    name: SPI1 SCLK
+-->
 #SPI - Serial Peripheral Interface
 
 ###four-wire serial bus olarak da bilinen SPI, bir pin setinden birden fazla adresteki birden fazla uygun cihazı [papatya zinciri](https://tr.wikipedia.org/wiki/Papatya_zinciri) yapıp yönetmenizi sağlar.

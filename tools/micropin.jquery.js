@@ -1,4 +1,6 @@
-$(document).ready(function(){    
+$(document).ready(function(){   
+    var pin_size = 10;
+    
     $('a').each(function(idx, obj){
         var href = $(obj).attr('href');
         if( href.indexOf('http://pi.gadgetoid.com/pinout/pin') == 0){
@@ -9,13 +11,13 @@ $(document).ready(function(){
                 function(){$(this).find('.pinout_popup').slideDown(100);},
                 function(){$(this).find('.pinout_popup').slideUp(100);}
             );
-            
+            var w = ( pin_size + 4 ) * 2;
             var pinout_popup = $('<div>')
             .css({
                 position: 'absolute',
-                width: 24,
+                width: w,
                 overflow: 'hidden',
-                marginLeft: -12,
+                marginLeft: -(w/2),
                 left: '50%',
                 top:  $(this).css('line-height'),
                 background: '#073642',
@@ -49,12 +51,13 @@ $(document).ready(function(){
                 $('<div>')
                 .css({
                     float: 'left',
-                    width: 6,
-                    height: 6,
+                    width: pin_size-2,
+                    height: pin_size-2,
                     margin: 2,
                     background: x==pin ? '#FFFFFF' : bgcol,
-                    borderRadius:x==1 ? 0 : 4,
-                    border: '1px solid #FFFFFF'
+                    borderRadius:x==1 ? 0 : pin_size/2,
+                    border: '1px solid #FFFFFF',
+                    boxShadow : x==pin ? '0px 0px 10px #FFFFFF' : 'none'
                 })
                 .appendTo(pinout_popup);
             }

@@ -15,7 +15,7 @@ install:
     - 'python3-dev'
   'python':
     - 'dot3k'
-  'examples': 'examples/'
+  'examples': 'python/examples/'
 pincount: 40
 pin:
   3:

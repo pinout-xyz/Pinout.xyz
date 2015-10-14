@@ -4,6 +4,18 @@ name: Display-o-Tron 3000
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with an RGB backlight and joystick
+install:
+  'devices':
+    - 'i2c'
+    - 'spi'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'dot3k'
+  'examples': 'examples/'
 pincount: 40
 pin:
   3:

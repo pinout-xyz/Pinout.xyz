@@ -2,6 +2,7 @@
 ---
 name: Display-o-Tron 3000
 manufacturer: Pimoroni
+github: https://github.com/pimoroni/dot3k
 url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with an RGB backlight and joystick
 install:

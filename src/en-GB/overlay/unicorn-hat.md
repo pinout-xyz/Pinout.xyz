@@ -10,9 +10,9 @@ install:
   'apt':
     - 'python-dev'
     - 'python3-dev'
-  'python'
+  'python':
     - 'unicornhat'
-  'python3'
+  'python3':
     - 'unicornhat'
   'examples': 'python/examples/'
 pincount: 40

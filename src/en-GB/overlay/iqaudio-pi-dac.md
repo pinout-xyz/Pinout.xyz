@@ -1,33 +1,33 @@
 <!--
 ---
-name: "IQaudIO Pi-DAC+"
-description: Program Arduino with Raspberry Pi SPI
+name: "Pi-DAC+"
+manufacturer: IQaudIO
+buy: http://www.iqaudio.co.uk
+description: An I2S digital to analog audio converter HAT for the Pi
+install:
+  'devices':
+    - 'i2c'
+pincount: 40
 pin:
-  1:
-  2:
   3:
-  4:
+    mode: i2c
   5:
-  6:
-  9:
+    mode: i2c
   12:
     name: I2S
-  14:
+  15:
+    name: (optional) Mute/Unmute Pi-AMP+
   16:
-    name: Rotary Encoder
+    name: (optional) Rotary Encoder
   18:
-    name: Rotary Encoder
+    name: (optional) Rotary Encoder
+  20:
   22:
-    name: Mute/Unmute
-  25:
-    name: IR Sensor
-  27:
-  28:
+    name: (optional) IR Sensor
   35:
     name: I2S
   38:
     name: I2S
-  39:
   40:
     name: I2S
 -->
@@ -35,11 +35,13 @@ pin:
 
 The Pi-DAC+ takes the digital audio signals (I2S) from the Raspberry Pi and through the
 onboard Texas Instruments PCM5122 DAC delivers variable output (hardware volume
-control) analog audio to the Pi-DAC+’s Phono connectors. The PI-DAC+ also, via the
+control) analog audio to the Pi-DAC+ Phono connectors. The PI-DAC+ also, via the
 Texas Instruments TPA6133A headphone amp, supports the direct use of headphones via
-the Pi-DAC+’s 3.5mm audio jack.
+the Pi-DAC+ 3.5mm audio jack.
 
 The Pi Dac uses GPIO22 to mute/unmute the Pi-AMP+.
 
 You can use GPIO25 to connect an IR sensor and GPIO23/24 for a rotary encoder. Both of
-these parts are optional, but are broken out on the Pi-DAC+ for convinient access.
+these parts are optional, but are broken out on the Pi-DAC+ for convenient access.
+
+Note: pins marked as optional can be used for general purpose if those add-ons are not enabled by software.

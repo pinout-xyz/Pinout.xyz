@@ -411,6 +411,9 @@ ol.linenums {margin-left:30px;}
 	#container {
 		width:1200px;
 	}
+	.board {
+		right:1200px;
+	}
 	#content {
 		width:700px;
 	}

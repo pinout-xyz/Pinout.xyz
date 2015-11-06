@@ -8,7 +8,6 @@ lang = 'en-GB'
 @app.route("/")
 def redirect_to_pinout():
 	return redirect('/pinout')
-	
 
 @app.route("/resources/<path:filename>")
 def custom_static(filename):

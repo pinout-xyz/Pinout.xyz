@@ -6,6 +6,15 @@ url: http://shop.pimoroni.com/products/unicorn-hat
 buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 blindingly bright RGB LEDs on a single HAT
 github: https://github.com/pimoroni/unicornhat
+install:
+  'apt':
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'unicornhat'
+  'python3':
+    - 'unicornhat'
+  'examples': 'python/examples/'
 pincount: 40
 pin:
   '12':

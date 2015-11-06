@@ -6,6 +6,15 @@ url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
 description: An all-in-one light, input, motor, touch and output add-on board.
+install:
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'explorerhat'
+  'examples': 'examples/'
 pincount: 40
 i2c:
   '0x28':

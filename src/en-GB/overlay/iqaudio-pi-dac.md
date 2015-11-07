@@ -16,14 +16,18 @@ pin:
   12:
     name: I2S
   15:
-    name: (optional) Mute/Unmute Pi-AMP+
+    name: Mute/Unmute
+    description: Pi-AMP+ only (optional) 
   16:
-    name: (optional) Rotary Encoder
+    name: Rotary Encoder
+    description: (optional) 
   18:
-    name: (optional) Rotary Encoder
+    name: Rotary Encoder
+    description: (optional) 
   20:
   22:
-    name: (optional) IR Sensor
+    name: IR Sensor
+    description: (optional) 
   35:
     name: I2S
   38:

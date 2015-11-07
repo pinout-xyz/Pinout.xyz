@@ -10,5 +10,5 @@ all:
 clean:
 	rm -r output/$(LANG)/*
 
-serve:
+serve: all
 	./serve.py $(LANG)

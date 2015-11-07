@@ -16,9 +16,14 @@ h2 {font-size:18px;margin-top:20px;}
 .drop-down {
 	float: right;
 	display: block;
-	width: 250px;
+	width: 500px;
 	border:2px solid #D6264E;
 	margin-left:20px;
+}
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 .overlay {
 	margin: 0;
@@ -28,6 +33,7 @@ h2 {font-size:18px;margin-top:20px;}
 	background:rgba(255,255,255,0.95);
 	padding:10px 0px;
 	clear:both;
+	overflow:hidden;
 }
 .overlay-container span {
 	display:block;
@@ -36,8 +42,12 @@ h2 {font-size:18px;margin-top:20px;}
 .overlay li {
 	display:block;
 	width:250px;
+	float:left;
 }
 .overlay li:nth-child(odd) a {
+	border-right:2px solid #D6264E;
+}
+.overlay li:nth-child(4n+1) a,.overlay li:nth-child(4n+2) a {
 	background:rgba(214, 38, 78, 0.05);
 }
 .overlay li a, .drop-down span {
@@ -49,6 +59,7 @@ h2 {font-size:18px;margin-top:20px;}
 	cursor:pointer;
 	width:230px;
 }
+.drop-down span {width:60px;}
 .drop-down span:hover, .drop-down:hover span {
 	background:#D6264E;
 	color:#FFFFFF;

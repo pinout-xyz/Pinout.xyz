@@ -57,6 +57,10 @@ def generate_for_lang(lang="en-GB"):
 
 	overlays = pinout.settings['overlays']
 
+	base_url = pinout.get_setting('base_url','/pinout/')
+
+	domain = pinout.get_setting('domain','pinout.xyz')
+
 	overlays_html = ''
 
 	overlays = map(lambda overlay: load_overlay_url(overlay, lang),overlays)
@@ -66,13 +70,16 @@ def generate_for_lang(lang="en-GB"):
 		if pin_url is None:
 			continue
 
-		url_lookup['pin{}'.format(pin)] = '{}'.format(pin_url)
+		url_lookup['pin{}'.format(pin)] = '//{domain}{base_url}{url}'.format(domain=domain,base_url=base_url,url=pin_url)
 
 	for url in overlays:
 		if url is None:
 			continue
 
-		url_lookup['{}'.format(url[0])] = '{}'.format(url[1])
+		url_lookup['{}'.format(url[0])] = '//{domain}{base_url}{url}'.format(domain=domain,base_url=base_url,url=url[1])
+
+	
+	url_lookup['index'] = '//{}'.format(domain)
 
 	return url_lookup
 

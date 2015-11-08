@@ -14,67 +14,6 @@ import urlmapper
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-lang = "en-GB"
-default_strings = {
-	'made_by': '* Made by {manufacturer}',
-	'type_hat': '* HAT form-factor',
-	'type_classic': '* Classic form-factor',
-	'pin_header': '* {} pin header',
-	'uses_i2c': '* Uses I2C',
-	'wiring_pi_pin': 'Wiring Pi pin {}'
-}
-
-if len(sys.argv) > 1:
-	lang  = sys.argv[1]
-
-alternate_urls = urlmapper.generate_urls(lang)
-
-pinout.load(lang)
-
-overlays = pinout.settings['overlays']
-
-strings = pinout.get_setting('strings',{})
-
-if type(strings) == list:
-	_strings = {}
-	for item in strings:
-		_strings[item.keys()[0]] = item.values()[0]
-	strings = _strings
-
-for key, val in default_strings.items():
-	if key not in strings:
-		strings[key] = val
-
-
-base_url = pinout.get_setting('base_url','/pinout/') # '/pinout-tr/pinout/'
-resource_url = pinout.get_setting('resource_url','/resources/') # '/pinout-tr/resources/'
-url_suffix = pinout.get_setting('url_suffix','') # '.html'
-
-template = open('src/{}/template/layout.html'.format(lang)).read()
-
-pages = {}
-navs = {}
-select_overlays = []
-
-overlays_html = ''
-
-
-if not os.path.isdir('output'):
-	try:
-		os.mkdir('output')
-	except OSError:
-		exit('Failed to create output dir')
-if not os.path.isdir('output/{}'.format(lang)):
-	try:
-		os.mkdir('output/{}'.format(lang))
-	except OSError:
-		exit('Failed to create output/{} dir'.format(lang))
-if not os.path.isdir('output/{}/pinout'.format(lang)):
-	try:
-		os.mkdir('output/{}/pinout'.format(lang))
-	except OSError:
-		exit('Failed to create output/{}/pinout dir'.format(lang))
-
 def cssify(value):
 	value = slugify(value);
 	if value[0] == '3' or value[0] == '5':
@@ -356,6 +295,102 @@ def render_nav(url, overlay=None):
 <ul class="top">
 {}</ul>'''.format(html_odd, html_even)
 
+def get_hreflang_urls(src):
+	hreflang = []
+	for lang in alternate_urls:
+		if src in alternate_urls[lang]:
+			url = alternate_urls[lang][src]
+			hreflang.append('<link rel="alternate" src="{url}" hreflang="{lang}"/>'.format(
+					lang=lang,
+					url=url
+				))
+	return hreflang
+
+
+def get_lang_urls(src):
+	urls = []
+	for url_lang in alternate_urls:
+		if src in alternate_urls[url_lang]:
+			img_css = ''
+			if url_lang == lang:
+				img_css = ' class="grayscale"'
+			url = alternate_urls[url_lang][src]
+			urls.append('<li><a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" /></a>'.format(
+					lang=url_lang,
+					url=url,
+					resource_url=resource_url,
+					css=img_css
+				))
+	return urls
+
+
+
+'''
+Main Program Flow
+'''
+
+
+lang = "en-GB"
+default_strings = {
+	'made_by': '* Made by {manufacturer}',
+	'type_hat': '* HAT form-factor',
+	'type_classic': '* Classic form-factor',
+	'pin_header': '* {} pin header',
+	'uses_i2c': '* Uses I2C',
+	'wiring_pi_pin': 'Wiring Pi pin {}'
+}
+
+if len(sys.argv) > 1:
+	lang  = sys.argv[1]
+
+alternate_urls = urlmapper.generate_urls(lang)
+
+pinout.load(lang)
+
+overlays = pinout.settings['overlays']
+
+strings = pinout.get_setting('strings',{})
+
+if type(strings) == list:
+	_strings = {}
+	for item in strings:
+		_strings[item.keys()[0]] = item.values()[0]
+	strings = _strings
+
+for key, val in default_strings.items():
+	if key not in strings:
+		strings[key] = val
+
+
+base_url = pinout.get_setting('base_url','/pinout/') # '/pinout-tr/pinout/'
+resource_url = pinout.get_setting('resource_url','/resources/') # '/pinout-tr/resources/'
+url_suffix = pinout.get_setting('url_suffix','') # '.html'
+
+template = open('src/{}/template/layout.html'.format(lang)).read()
+
+pages = {}
+navs = {}
+select_overlays = []
+
+overlays_html = ''
+
+
+if not os.path.isdir('output'):
+	try:
+		os.mkdir('output')
+	except OSError:
+		exit('Failed to create output dir')
+if not os.path.isdir('output/{}'.format(lang)):
+	try:
+		os.mkdir('output/{}'.format(lang))
+	except OSError:
+		exit('Failed to create output/{} dir'.format(lang))
+if not os.path.isdir('output/{}/pinout'.format(lang)):
+	try:
+		os.mkdir('output/{}/pinout'.format(lang))
+	except OSError:
+		exit('Failed to create output/{}/pinout dir'.format(lang))
+
 
 overlays = map(load_overlay,overlays)
 
@@ -381,24 +416,12 @@ for pin in range(1,len(pinout.pins)+1):
 	if pin_url == None:
 		continue
 
-	hreflang = []
-
-	src = 'pin{}'.format(pin)
-
-	for code in alternate_urls:
-		if src in alternate_urls[code]:
-			alt = alternate_urls[code][src]
-			code_lang = code.split('-')[0] + '.'
-			if code_lang == 'en.':
-				code_lang = ''
-			hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz/pinout/{alt}" hreflang="{code}"/>'.format(
-					lang=code_lang,
-					alt=alt,
-					code=code
-				))
+	hreflang = get_hreflang_urls('pin{}'.format(pin))
+	langlinks = get_lang_urls('pin{}'.format(pin))
 
 	pin_nav = render_nav(pin_url)
 	pin_html = pinout.render_html(template,
+		lang_links="\n\t\t".join(langlinks),
 		hreflang = "\n\t\t".join(hreflang),
 		nav = pin_nav,
 		content = pin_html,
@@ -420,32 +443,16 @@ for url in pages:
 	content = pages[url]['rendered_html']
 	nav = navs[url]
 	hreflang = []
+	langlinks = []
 
 	if url == 'index':
-		for code in alternate_urls:
-			code_lang = code.split('-')[0] + '.'
-			if code_lang == 'en.':
-				code_lang = ''
-			hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz" hreflang="{code}"/>'.format(
-					lang=code_lang,
-					alt=alt,
-					code=code
-				))
+		hreflang = get_hreflang_urls('index')
+		langlinks = get_lang_urls('index')
 
 	if 'src' in pages[url]:
 		src = pages[url]['src']
-
-		for code in alternate_urls:
-			if src in alternate_urls[code]:
-				alt = alternate_urls[code][src]
-				code_lang = code.split('-')[0] + '.'
-				if code_lang == 'en.':
-					code_lang = ''
-				hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz/pinout/{alt}" hreflang="{code}"/>'.format(
-						lang=code_lang,
-						alt=alt,
-						code=code
-					))
+		hreflang = get_hreflang_urls(src)
+		langlinks = get_lang_urls(src)
 
 	if not 'description' in pages[url]:
 		pages[url]['description'] = pinout.settings['default_desc']
@@ -456,6 +463,7 @@ for url in pages:
 		pages[url]['name'] = pinout.settings['default_title']
 
 	html = pinout.render_html(template,
+		lang_links="\n\t\t".join(langlinks),
 		hreflang = "\n\t\t".join(hreflang),
 		nav = nav,
 		content = content,

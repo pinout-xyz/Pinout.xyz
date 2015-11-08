@@ -5,6 +5,7 @@ default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
 title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
+domain: fr.pinout.xyz
 url_suffix:
 urls:
   GND: ground

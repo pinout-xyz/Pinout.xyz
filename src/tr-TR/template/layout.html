@@ -10,21 +10,29 @@
 		<link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		{{hreflang}}
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-69846516-2', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 	</head>
 	<body>
 		<div id="container">
 			<ul class="main-nav">
-
-				<li><a href="http://pinout.xyz" hreflang="en-GB"><img src="{{resource_url}}gb.png" /></a></li>
-				<li><a><img class="grayscale" src="{{resource_url}}tr.png" /></a></li>
 				<li><a href="http://www.raspi.gen.tr/">Raspberry Pi Türkiye</a></li>
 				<li><a href="https://twitter.com/RPiTR"><i class="fa fa-twitter"></i> @RPiTR</a></li>
 				<li><a href="http://forum.raspi.gen.tr/">Forumlar</a></li>
 				<li><a href="http://pi.gadgetoid.com/">Pi Blog</a></li>
 				<li><a href="https://twitter.com/gadgetoid"><i class="fa fa-twitter"></i> @Gadgetoid</a></li>
 				<li><a href="https://github.com/Ardakilic/Pinout2"><i class="fa fa-github"></i> Destekleyin</a></li>
+				{{lang_links}}
 			</ul>
-			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/pinout-tr/pinout.html"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
+			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="//tr.pinout.xyz"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
 			<div class="overlay-container">
 				<span>Raspberry Pi Eklenti kartları ve özellikleri <i class="fa fa-arrow-right"></i></span>
 				<div class="drop-down">

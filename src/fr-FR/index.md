@@ -8,7 +8,7 @@ Ce document n'est pas destiné à l'impression, c'est à la fois un outil de ré
 
 * BCM - numérotation Broadcom, plus communément apellée "GPIO"; utile pour travailler avec la librarie RPi.GPIO
 * WiringPi - numérotation Wiring Pi; utile pour travailler avec la librarie Wiring Pi
-* Physical - numérotation correspondante à la position physique des broches sur le connecteur GPIO
+* Physique - numérotation correspondante à la position physique des broches sur le connecteur GPIO
 
 ##Pi 2 (note 1)
 

@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 lang = 'en-GB'
 
-@app.route("/")
-def redirect_to_pinout():
-	return redirect('/pinout')
+@app.route('/')
+def show_index():
+	return send_from_directory(basedir,'index.html')
 
 @app.route("/resources/<path:filename>")
 def custom_static(filename):

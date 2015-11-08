@@ -16,35 +16,49 @@ them, how they can better support translation and any other suggestions you migh
 
 #Contributing
 
-The contents of this GitHub repository are used to build http://pi.gadgetoid.com/pinout.
+If you have a board you'd like to contribute, raise an issue and we'll consider it!
 
-If you have a board you'd like to contribute, you should look at these folders:
+#Translating
 
-* [overlay/](overlay/)
-* [description/overlay/](description/overlay/)
+The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
+
+Current known contributors are:
+
+* tr-TR - @Ardakilic
+* fr-FR - @RogueM
+
+We're looking for ( based on traffic ):
+
+* German, de-DE
+* Italian, it-IT
+* Spanish ( Spain ), es-ES
+* Polish pl-PL
+* And any others!
+
+You should start by duplicating the `src/en-GB` directory to the
+appropriate culture. For example if you want to create a German translation you would create the folder `src/de-DE`.
+
+At the moment cultures are not fully supported, so you can't have `src/fr-CA` ( sorry! ), and there are no plans for this.
+
+Once you've made your translation, build and preview it with, for example:
+
+```bash
+make serve LANG=de-DE
+```
+
+And then open: http://127.0.0.1:5000 in your browser.
+
+Please do not attempt to translate the `/resources` folder, this is shared between sites on the server and should be generic.
+
+Feel free to modify the template with links relevent to your country, and your Twitter handle but don't fiddle with the structure!
+
+Submit your finished translation as a pull request and I'll get it live on pinout.xyz.
 
 #Roadmap
 
-##Phase 1
-
-Replace the current Pinout site with a generated version built from this repository, aim for 100% compatibility.
-
-* Drop ancient and redundant boards such as ladder, Clockatoo
-* Replace things like Arduino with more relevant and up-to-date alternatives ( Alex's PiDuino )
-* Compliment Pibrella with Explorer HAT (Pro)
-
-##Phase 2
-
-Redesign UI to support browsing a wider variety of boards and viewing their pinouts, description, links to library
-+  buy links etc.
-
+* Redesign UI to support browsing a wider variety of boards and viewing their pinouts ( partially done with drop down )
 * Replace top tabs with some sort of search functionality or easy categorised UI for finding boards
 * Allow for slightly longer descriptions of Pin functions ( baloons? ), current width is very restrictive
-
-##Phase 3
-
-Introduce advanced functionality such as board compatibility checks and more detailed overlays on Pin alt functions.
-
 * Does X board work with Y board
-* What extra functions does this pin have
-* Convert WiringPi to GPIO to BCM and back
+* What extra functions does this pin have ( mostly done with ALT functions tables, but needs descriptions )
+* Tool to convert WiringPi to GPIO to BCM and back

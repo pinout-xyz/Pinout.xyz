@@ -23,8 +23,7 @@ pin:
     description: (optional) 
   18:
     name: Rotary Encoder
-    description: (optional) 
-  20:
+    description: (optional)
   22:
     name: IR Sensor
     description: (optional) 
@@ -48,4 +47,4 @@ The Pi Dac uses GPIO22 to mute/unmute the Pi-AMP+.
 You can use GPIO25 to connect an IR sensor and GPIO23/24 for a rotary encoder. Both of
 these parts are optional, but are broken out on the Pi-DAC+ for convenient access.
 
-Note: pins marked as optional can be used for general purpose if those add-ons are not enabled by software.
+Note: pins reserved for the rotary encoder and IR sensor can be used for other purposes if those add-ons have not been fitted and enabled by software.

@@ -8,6 +8,13 @@ resource_url: /resources/
 url_suffix:
 urls:
   GND: ground
+strings:
+- made_by: '* Made by {manufacturer}'
+- type_hat: '* HAT form-factor'
+- type_classic: '* Classic form-factor'
+- pin_header: '* {} pin header'
+- uses_i2c: '* Uses I2C'
+- wiring_pi_pin: 'Wiring Pi pin {}'
 overlays:
 - ground
 - spi

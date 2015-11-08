@@ -2,9 +2,9 @@
 default_desc: Raspberry Pi, B+ ve Pi 2 için Pin şematiği
 default_title: Raspberry Pi GPIO Pinleri - Pi 1, B+, Pi 2
 title_suffix: " - Raspberry Pi Pinleri"
-base_url: /pinout-tr/pinout/
-resource_url: /pinout-tr/resources/
-url_suffix: .html
+base_url: /pinout/
+resource_url: /resources/
+url_suffix: ''
 urls:
   GND: ground_toprak
 overlays:

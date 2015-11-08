@@ -9,18 +9,42 @@ import sys
 import pinout
 import yaml
 import markjaml
+import urlmapper
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 lang = "en-GB"
+default_strings = {
+	'made_by': '* Made by {manufacturer}',
+	'type_hat': '* HAT form-factor',
+	'type_classic': '* Classic form-factor',
+	'pin_header': '* {} pin header',
+	'uses_i2c': '* Uses I2C',
+	'wiring_pi_pin': 'Wiring Pi pin {}'
+}
 
 if len(sys.argv) > 1:
 	lang  = sys.argv[1]
 
+alternate_urls = urlmapper.generate_urls(lang)
+
 pinout.load(lang)
 
 overlays = pinout.settings['overlays']
+
+strings = pinout.get_setting('strings',{})
+
+if type(strings) == list:
+	_strings = {}
+	for item in strings:
+		_strings[item.keys()[0]] = item.values()[0]
+	strings = _strings
+
+for key, val in default_strings.items():
+	if key not in strings:
+		strings[key] = val
+
 
 base_url = pinout.get_setting('base_url','/pinout/') # '/pinout-tr/pinout/'
 resource_url = pinout.get_setting('resource_url','/resources/') # '/pinout-tr/resources/'
@@ -81,16 +105,16 @@ def load_overlay(overlay):
 	details = []
 
 	if 'manufacturer' in loaded:
-		details.append('* Made by ' + loaded['manufacturer'])
+		details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
 
 	if 'pincount' in loaded:
 		pincount = int(loaded['pincount'])
 		if pincount == 40:
-			details.append('* HAT form-factor')
+			details.append(strings['type_hat'])
 		elif pincount == 26:
-			details.append('* Classic 26-pin')
+			details.append(strings['type_classic'])
 		else:
-			details.append('* {} pin header'.format(pincount))
+			details.append(strings['pin_header'].format(pincount))
 
 	if 'pin' in loaded:
 		uses_5v = False
@@ -120,7 +144,7 @@ def load_overlay(overlay):
 			pin_5 = loaded['pin']['5']
 			if 'mode' in pin_3 and 'mode' in pin_5:
 				if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-					details.append('* Uses I2C')
+					details.append(strings['uses_i2c'])
 
 	if 'url' in loaded:
 		details.append('* [More Information]({url})'.format(url=loaded['url']))
@@ -138,6 +162,7 @@ def load_overlay(overlay):
 		loaded['page_url'] = slugify(loaded['name'])
 
 	loaded['rendered_html'] = render_overlay_page(loaded)
+	loaded['src'] = overlay
 	pages[loaded['page_url']] = loaded
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
 	select_overlays.append((loaded['page_url'], loaded['name']))
@@ -293,7 +318,7 @@ def render_pin(pin_num, selected_url, overlay=None):
 			pin_name = 'BCM {} {}'.format(bcm, pin_subname)
 		if 'wiringpi' in pin['scheme']:
 			wiringpi = pin['scheme']['wiringpi']
-			pin_link_title.append('Wiring Pi pin {}'.format(wiringpi))
+			pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
 
 	pin_url = base_url + slugify('pin{}_{}'.format(pin_num,pin_url))
 
@@ -345,9 +370,9 @@ and all other pages in /pinout/
 
 serve.py will mirror this structure for testing.
 '''
-pages['pinout'] = {}
-pages['pinout']['rendered_html'] = render_overlay_page({'name':'Index','long_description':load_md('index.md')})
-navs['pinout'] = render_nav('pinout')
+pages['index'] = {}
+pages['index']['rendered_html'] = render_overlay_page({'name':'Index','long_description':load_md('index.md')})
+navs['index'] = render_nav('pinout')
 
 print('Rendering pin pages...')
 
@@ -355,8 +380,26 @@ for pin in range(1,len(pinout.pins)+1):
 	(pin_url, pin_html, pin_title) = render_pin_page(pin)
 	if pin_url == None:
 		continue
+
+	hreflang = []
+
+	src = 'pin{}'.format(pin)
+
+	for code in alternate_urls:
+		if src in alternate_urls[code]:
+			alt = alternate_urls[code][src]
+			code_lang = code.split('-')[0] + '.'
+			if code_lang == 'en.':
+				code_lang = ''
+			hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz/pinout/{alt}" hreflang="{code}"/>'.format(
+					lang=code_lang,
+					alt=alt,
+					code=code
+				))
+
 	pin_nav = render_nav(pin_url)
 	pin_html = pinout.render_html(template,
+		hreflang = "\n\t\t".join(hreflang),
 		nav = pin_nav,
 		content = pin_html,
 		resource_url = resource_url,
@@ -376,6 +419,33 @@ print('Rendering overlay and index pages...')
 for url in pages:
 	content = pages[url]['rendered_html']
 	nav = navs[url]
+	hreflang = []
+
+	if url == 'index':
+		for code in alternate_urls:
+			code_lang = code.split('-')[0] + '.'
+			if code_lang == 'en.':
+				code_lang = ''
+			hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz" hreflang="{code}"/>'.format(
+					lang=code_lang,
+					alt=alt,
+					code=code
+				))
+
+	if 'src' in pages[url]:
+		src = pages[url]['src']
+
+		for code in alternate_urls:
+			if src in alternate_urls[code]:
+				alt = alternate_urls[code][src]
+				code_lang = code.split('-')[0] + '.'
+				if code_lang == 'en.':
+					code_lang = ''
+				hreflang.append('<link rel="alternate" src="//{lang}pinout.xyz/pinout/{alt}" hreflang="{code}"/>'.format(
+						lang=code_lang,
+						alt=alt,
+						code=code
+					))
 
 	if not 'description' in pages[url]:
 		pages[url]['description'] = pinout.settings['default_desc']
@@ -386,6 +456,7 @@ for url in pages:
 		pages[url]['name'] = pinout.settings['default_title']
 
 	html = pinout.render_html(template,
+		hreflang = "\n\t\t".join(hreflang),
 		nav = nav,
 		content = content,
 		overlays = overlays_html,
@@ -395,7 +466,7 @@ for url in pages:
 	)
 	print('Outputting page {}'.format(url))
 	
-	if url != 'pinout':
+	if url != 'index':
 		url = os.path.join('pinout',url)
 
 	with open(os.path.join('output',lang,'{}.html'.format(url)),'w') as f:

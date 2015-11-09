@@ -84,7 +84,7 @@ def generate_for_lang(lang="en-GB"):
 	return url_lookup
 
 def generate_urls(lang="en-GB"):
-	languages = [l.replace('src/','') for l in glob.glob('src/*')] #  if not l == 'src/'+lang
+	languages = [l.replace('src/','') for l in glob.glob('src/*-*')] #  if not l == 'src/'+lang
 	urls = {}
 	for lang in languages:
 		urls[lang] = generate_for_lang(lang)

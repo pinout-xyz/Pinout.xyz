@@ -1,3 +1,1 @@
-# HAT EEPROM Pins ID_SC and ID_SD
-
-These pins are generally reserved for i2c communication with a HAT EEPROM.
+Ces broches sont généralement réservées à la communication i2c avec l'EEPROM des 'chapeaux' HAT.

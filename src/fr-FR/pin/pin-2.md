@@ -1,5 +1,5 @@
-###The 5v power pins are connected directly to the Pi's power input and will capably provide the full current of your mains adaptor, less that used by the Pi itself.
+###Les broches d'alimentation en 5V sont connectées directement à l'arrivée de courant de la Raspi et permettent de débiter la totalité de la source de courant (moins ce que la Pi elle-même requière).
 
-With a decent power supply, such as the official Pi adaptor, you can expect to pull about 1.5A.
+N'ayez aucune inquiétude cependant, une tension relativement basse de 5V est amplement suffisante pour alimenter des périphériques tels que circuits intégrés de type Arduino ou même des fils électroluminescents.
 
-Don't be disuaded by what sounds like a measly low voltage. You can do a lot with 5v. Power Arduinos, and even run a small Electroluminescent wire inverter right off the 5v pin!
+Conseil: Une source de courant telle que l'alimentation officielle de la Raspberry Foundation est hautement conseillée, et vous permettra de bénéficier d'un total de 1.5A pour votre système.

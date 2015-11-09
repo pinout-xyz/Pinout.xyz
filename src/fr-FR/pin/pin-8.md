@@ -1,5 +1,9 @@
-This pin doubles up as the UART transmit pin, thus the name TXD. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
+Cette broche correspond à la ligne de transmission UART, TXD.
 
-UART is also extremely useful if you want to talk to Arduino or Propeller boards from your Pi, but you must make sure you disable the Serial Console in raspi-config first.
+UART est communément appelé le bus 'série' (asynchrone). Les données transmises (et reçues) peuvent être facilement consultées depuis la console série. Moyennant un cable de liaison approprié il est également très simple de contrôler votre machine depuis un terminal.
 
-[Learn more about UART](/pinout/uart)
+Conseil: le protocol UART est souvent utilisé pour prendre en charge les RasPi sans écran/clavier, et les relier à un réseau.
+
+le bus série est aussi extrêmement pratique pour communiquer avec des microprocesseurs de type Arduino ou Propeller, mais il est important alors de déactiver la console série à l'aide de raspi-config!
+
+[référence UART](/pinout/uart)

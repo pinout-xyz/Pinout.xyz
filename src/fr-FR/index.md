@@ -23,3 +23,5 @@ Veuillez notez que la séparation des 14 broches du B+ dans leur présentation P
 ##Auteurs et contributeurs
 
 L'auteur principal de ce guide est Phil Howard (@Gadgetoid). Les contributeurs sont renseignés dans les notes des commits du projet Github parent (https://github.com/Gadgetoid/Pinout2)!
+
+Traduction: <a href="https://twitter.com/roguehal13">@RogueHAL13</a>

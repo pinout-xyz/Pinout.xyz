@@ -34,7 +34,7 @@ pin:
 -->
 #Sense HAT
 
-LED Matrix: LED2472G -> ATTINY88 -> SPI(8/9/10/11)
+LED Matrix: LED2472G -> ATTINY88 -> SPI
 Joystick: SKRHABE010 -> ATTINY88 -> GPIO23/24/25
 Axis/IMU: LSM9DS1 -> i2c 0x1c(1e),0x6a(6b) (INT on MCU)
 Pressure/Temp: LPS25H -> i2c 0x5c

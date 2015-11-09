@@ -1,1 +1,3 @@
-The PWM0 output of BCM 18 is particularly useful, in combination with some fast, direct memory access trickery, for driving tricky devices with very specific timings. The WS2812 LEDs on the [Unicorn HAT](/pinout/unicorn_hat) are a good example of this in action.
+La broche BCM 18 est capable de délivrer un signal de type PWM. Ceci, combiné avec des procédés d'accès de mémoire directe, permet de contrôler des périphériques nécessitant un timing des données complexe.
+
+Les LEDs WS2812 de l'[Unicorn HAT](/pinout/unicorn_hat) est un exemple de ce type d'approche.

@@ -1,7 +1,7 @@
 <!--
 ---
 name: Ground
-description: Raspberry Pi Ground Pins
+description: broches raccordées à la masse
 pin:
   '6':
   '9':
@@ -12,13 +12,10 @@ pin:
   '34':
   '39':
 -->
-#Ground
+#Masse
 
-The Ground pins ona the Raspberry Pi are all electrically connected, so it doesn't matter
-which one you use if you're wiring up a voltage supply.
+Les broches raccordées à la masse de la Raspberry Pi sont interconnectées et celle que vous utilisez n'a aucune importance.
 
-Generally the one that's most convinient or closest to the rest of your connections is tidier
-and easier, or alternatively the one closes to the supply pin that you use.
+De manière générale, optez pour la broche qui vous rend la vie pratique, par exemple la plus proche de la broche d'alimentation que votre projet requière.
 
-It's a good idea to use Physical Pin 17 for 3v3 and Physical Pin 25 for ground when using
-the [SPI](/pinout/spi) connections, for example, as these are right next to the important pins for SPI0.
+Conseil: si vous devez connectez le bus [SPI](/pinout/spi), privilégiez les broches physiques 17 et 25 pour l'alimentation et la masse, respectivement, celles-ci se situent à proximité de celles de ce bus.

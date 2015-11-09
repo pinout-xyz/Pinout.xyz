@@ -1,11 +1,11 @@
-SDA is one of the i2c pins on the Pi, [learn more about i2c](/pinout/i2c).
+SDA est la broche fournissant le signal de données du bus i2c de la Raspberry Pi, [référence i2c](/pinout/i2c).
 
-It's easy to get started writing a digital HIGH or LOW to a GPIO pin, but you've got to remember a few things:
+Conseil: Il est aisé de basculer une broche de l'état haut (HIGH) vers l'état bas (LOW), ou vice versa, mais prenez cependant quelques précautions:
 
-* Run your script as root
-* Set your pin's mode to OUTPUT (1)
+* Exécutez vos scripts en invoquant l'utilisateur 'root' 
+* n'oubliez pas de déclarer la broche en tant que sortie (OUTPUT, 1)
 
-Assuming you've installed WiringPi2-Python ( pip install wiringpi2 ) then try pasting the following into a .py file:
+Par exemple, sous WiringPi2-Python ( pip install wiringpi2 ):
 
 ```python
 import wiringpi2 as wiringpi
@@ -18,7 +18,7 @@ wiringpi.pinMode(8,OUTPUT)
 wiringpi.digitalWrite(8,HIGH)
 ```
 
-Then run it with:
+Puis:
 
 ```bash
 sudo python myscript.py

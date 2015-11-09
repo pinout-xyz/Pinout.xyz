@@ -38,10 +38,10 @@ Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave,
 
 It uses two Microchip CAP1188 chips with the i2c addresses 0x28 and 0x2b.
 
-You can use the one-line product installer to get Piano HAT set up and ready to go, just:
+To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/pianohat | bash
+curl -sS get.pimoroni.com/pianohat | bash
 ```
 
 And follow the instructions!

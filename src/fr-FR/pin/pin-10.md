@@ -1,5 +1,9 @@
-This pin doubles up as the UART recieve pin, RXD. It's also commonly known as "Serial". By default your Pi will receive serial commands over this Pi and pass them into a Console, which gives you command-line control over your Pi using a Serial cable.
+Cette broche correspond à la ligne de reception UART, RXD.
 
-The UART pins, with an appropriate cable, are extremely useful for setting up a "headless" ( a Pi without a screen ) Pi and getting it connected to a network.
+UART est communément appelé le bus 'série' (asynchrone). Les données reçues (et transmises) peuvent être facilement consultées depuis la console série. Moyennant un cable de liaison approprié il est également très simple de contrôler votre machine depuis un terminal.
 
-[Learn more about UART](/pinout/uart)
+Conseil: le protocol UART est souvent utilisé pour prendre en charge les RasPi sans écran/clavier, et les relier à un réseau.
+
+le bus série est aussi extrêmement pratique pour communiquer avec des microprocesseurs de type Arduino ou Propeller, mais il est important alors de déactiver la console série à l'aide de raspi-config!
+
+[référence UART](/pinout/uart)

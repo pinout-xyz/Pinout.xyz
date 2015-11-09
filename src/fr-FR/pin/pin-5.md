@@ -1,4 +1,4 @@
-SCL is one of the i2c pins on the Pi, [learn more about i2c](/pinout/i2c).
+SCL est la broche fournissant le signal d'horloge du bus i2c de la Raspberry Pi, [référence i2c](/pinout/i2c).
 
 ```python
 require 'wiringpi2'

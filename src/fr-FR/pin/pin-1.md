@@ -1,3 +1,4 @@
-###The 3v3, 3.3 volt, supply pin on the Pi has a max available current of about 50 mA. Enough to power a couple of LEDs or a microprocessor, but not much more.
+###L'alimentation en 3.3V de la Raspi à une capabilité de courant d'à peu près 50 mA. Ceci est assez pour faire fonctionner quelques LEDs ou un microprocesseur, mais pas beaucoup plus.
 
-You should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.
+
+Conseil: Il est généralement préférable d'utiliser une source de courant capable de fournir 5V en conjonction avec un régulateur à 3.3V pour les projets nécessitant ce voltage.

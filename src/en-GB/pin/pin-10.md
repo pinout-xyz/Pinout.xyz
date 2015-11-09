@@ -1,5 +1,7 @@
-This pin doubles up as the UART recieve pin, RXD. It's also commonly known as "Serial". By default your Pi will receive serial commands over this Pi and pass them into a Console, which gives you command-line control over your Pi using a Serial cable.
+This pin doubles up as the UART recieve pin, RXD. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
 
-The UART pins, with an appropriate cable, are extremely useful for setting up a "headless" ( a Pi without a screen ) Pi and getting it connected to a network.
+Thus, The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.
+
+UART can also be extremely useful if you want to talk to Arduino or Propeller boards from your Pi, but you must make sure you disable the Serial Console in raspi-config first.
 
 [Learn more about UART](/pinout/uart)

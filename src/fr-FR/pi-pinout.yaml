@@ -2,7 +2,7 @@
 name: Raspberry Pi GPIO Pinout
 pins:
   '1':
-    name: Alimentation 3v3
+    name: Alimentation 3.3v
     type: "+3v3"
   '2':
     name: Alimentation 5v
@@ -141,7 +141,7 @@ pins:
       alt3: SD1_CMD
       alt4: ARM_RTCK
   '17':
-    name: Alimentation 3v3
+    name: Alimentation 3.3v
     type: "+3v3"
   '18':
     name: ''

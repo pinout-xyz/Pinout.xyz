@@ -1,14 +1,21 @@
 ---
-default_desc: The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry
+default_desc: Le guide complet des broches GPIO de la Raspberry Pi
   Pi, B+ and Pi 2
 default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
-title_suffix: " at Raspberry Pi GPIO Pinout"
+title_suffix: " Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
 domain: fr.pinout.xyz
 url_suffix:
 urls:
   GND: ground
+strings:
+- made_by: '* Produit {manufacturer}'
+- type_hat: '* format HAT'
+- type_classic: '* format Classic'
+- pin_header: '* {} broches'
+- uses_i2c: '* bus I2C'
+- wiring_pi_pin: 'Broche Wiring Pi {}'
 overlays:
 - ground
 - spi
@@ -30,3 +37,4 @@ overlays:
 - traffic-hat
 - iqaudio-pi-dac
 - piano-hat
+- sense-hat

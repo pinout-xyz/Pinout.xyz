@@ -8,7 +8,7 @@ Ce document n'est pas destiné à l'impression, c'est à la fois un outil de ré
 
 * BCM - numérotation Broadcom, plus communément apellée "GPIO"; utile pour travailler avec la librarie RPi.GPIO
 * WiringPi - numérotation Wiring Pi; utile pour travailler avec la librarie Wiring Pi
-* Physical - numérotation correspondante à la position physique des broches sur le connecteur GPIO
+* Physique - numérotation correspondante à la position physique des broches sur le connecteur GPIO
 
 ##Pi 2 (note 1)
 
@@ -23,3 +23,5 @@ Veuillez notez que la séparation des 14 broches du B+ dans leur présentation P
 ##Auteurs et contributeurs
 
 L'auteur principal de ce guide est Phil Howard (@Gadgetoid). Les contributeurs sont renseignés dans les notes des commits du projet Github parent (https://github.com/Gadgetoid/Pinout2)!
+
+Traduction: <a href="https://twitter.com/roguehal13">@RogueHAL13</a>

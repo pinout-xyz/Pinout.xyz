@@ -4,18 +4,18 @@
 
 Este diagrama de pinos GPIO não foi feito com o propósito de ser imprimido mas é tanto um bom guia de referência rápida como um guia para os pinos GPIO do teu Raspberry Pi.
 
-##What do these numbers mean, anyway?
+##O que é que estes números significam, afinal?
 
-* BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO
-* WiringPi - Wiring Pi pin number, for Gordon's Wiring Pi library
-* Physical - Number corresponding to the pins physical location on the header
+* BCM - Número de pino Broadcom (Broadcom pin number), frequentemente chamados "GPIO", estes são os que provavelmente vais querer usar com o RPi.GPIO
+* WiringPi - Número de pino Wiring Pi, para a biblioteca Wiring Pi de Gordon.
+* Physical - Número correspondente à localização física dos pinos no cabeçalho.
 
 ##Pi 2
 
-To celebrate the launch of the Pi 2 and the new Pi-enthusiasts it'll bring, Pinout has been updated to be cleaner, more comprehensive and more accurate and will continue to be improved.
+Para celebrar o lançamento do Pi 2 e os novos Pi-entusiastas que vai trazer, o diagrama de pinos foi atualizado para ser mais limpo, detalhado e preciso e vai continuar a ser melhorado.
 
 ##Model B+
 
-Now that the Raspberry Pi Model B Plus is here, I've updated Pinout with the 14 extra pins you'll find on your shiny new board.
+Agora que o Raspberry Pi Model B Plus está disponível, atualizei o diagrama de pinos com os 14 pinos extras que vais encontrar na tua placa novinha em folha.
 
-Note: While I've placed a gap to visually separate the additional 14 pins on the B+, you wont find this gap on the actual board!
+Nota: Ainda que eu tenha colocado um espaço para separar visualmente os 14 pinos adicionais no B+, não vais encontrar este espaço na placa de verdade!

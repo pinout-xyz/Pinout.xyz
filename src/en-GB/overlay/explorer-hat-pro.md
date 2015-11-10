@@ -102,9 +102,10 @@ pin:
 
 5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
 
+To get the HAT set up and ready to go you can use the one-line product installer:
+
 ```bash
-sudo apt-get install python-pip
-sudo pip install explorer-hat
+curl -sS get.pimoroni.com/explorerhat
 ```
 
 Then import it into your Python script and start tinkering:

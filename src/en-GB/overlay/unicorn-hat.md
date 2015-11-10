@@ -32,10 +32,10 @@ from Python make Unicorn HAT PiGlow's bigger, brighter brother.
 Note: Unicorn HAT uses some special PWM trickery, performed with the same hardware that lets you Pi produce sound
 through the audio jack ( analog audio ) so you can't use both at the same time!
 
-Setup is easy, just:
+To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/unicornhat | bash
+curl -sS get.pimoroni.com/unicornhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

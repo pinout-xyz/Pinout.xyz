@@ -54,10 +54,12 @@ pin:
 -->
 #Display-o-Tron 3000
 
-You can use the one-line product installer to get Display-o-Tron 3000 set up and ready to go, just:
+The Display-o-Tron 3000 is a 3-line character LCD with an RGB backlight and joystick
+
+To get the module set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS get.pimoroni.com/dot3k | bash
 ```
 
 And follow the instructions!

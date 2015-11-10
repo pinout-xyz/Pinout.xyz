@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: An all-in-one light, input, touch and output add-on board.
+description: Un chapeau multi-usage avec entrées et sorties 5V
 install:
   'devices':
     - 'i2c'
@@ -20,6 +20,10 @@ install:
     - 'explorerhat'
   'examples': 'examples/'
 pincount: 40
+i2c:
+  '0x28':
+    name: Capteur tactile
+    device: cap1208
 pin:
   '7':
     name: LED 1
@@ -34,19 +38,19 @@ pin:
     mode: output
     active: high
   '15':
-    name: Input 2
+    name: Entrée 2
     mode: input
     active: high
   '16':
-    name: Input 1
+    name: Entrée 1
     mode: input
     active: high
   '18':
-    name: Input 3
+    name: Entrée 3
     mode: input
     active: high
   '22':
-    name: Input 4
+    name: Entrée 4
     mode: input
     active: high
   '29':
@@ -54,32 +58,33 @@ pin:
     mode: output
     active: high
   '31':
-    name: Output 1
+    name: Sortie 1
     mode: output
     active: high
   '32':
-    name: Output 2
+    name: Sortie 2
     mode: output
     active: high
   '33':
-    name: Output 3
+    name: Sortie 3
     mode: output
     active: high
   '36':
-    name: Output 4
+    name: Sortie 4
     mode: output
     active: high
 -->
-#Explorer HAT and Explorer HAT Pro
+#Explorer HAT
 
-5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
+L'Explorer HAT est un chapeau multi-usage avec entrées et sorties en 5V, LED et touches tactiles. Une extension utile pour tout prototype!
+
+Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install explorer-hat
+curl -sS get.pimoroni.com/explorerhat
 ```
 
-Then import it into your Python script and start tinkering:
+Puis, sous Python, en guise de test que tout fonctionne bien:
 
 ```bash
 import explorerhat

@@ -24,14 +24,14 @@ The contents of this GitHub repository are used to build http://pinout.xyz and i
 
 Current known contributors are:
 
-* tr-TR - @Ardakilic
+* es-ES - @NiXijav
 * fr-FR - @RogueM
+* tr-TR - @Ardakilic
 
 We're looking for ( based on traffic ):
 
 * German, de-DE
 * Italian, it-IT
-* Spanish ( Spain ), es-ES
 * Polish pl-PL
 * And any others!
 

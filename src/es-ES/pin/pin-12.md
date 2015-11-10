@@ -1,0 +1,1 @@
+La salida PWM0 del BCM0 es particularmente útil, en combinación con unos truquillos rápidos de acceso directo a la memoria, para utilizar complicados dispostivos con tiempos muy precisos. Los LEDs WS2812 en el [Unicorn HAT] (/pinout/unicorn_hat) son un buen ejemplo de esto en acción.

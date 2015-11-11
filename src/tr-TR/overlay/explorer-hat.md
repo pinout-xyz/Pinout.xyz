@@ -19,7 +19,7 @@ install:
     - 'explorerhat'
   'python3':
     - 'explorerhat'
-    'examples': 'examples/'
+  'examples': 'examples/'
 pincount: 40
 pin:
   '7':

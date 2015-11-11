@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
-description: A 3D positional and gesture sensor.
+description: Ein 3D Positions- und Gesten-Sensor.
 install:
   'apt':
     - 'python-smbus'
@@ -28,7 +28,7 @@ pin:
 -->
 #Skywriter HAT
 
-Skywriter HAT senses your finger's position above it in 3 dimensions, outputting an X, Y, Z axis
-which you can use in your Python scripts.
+Skywriter HAT spürt die Position Deines Fingers über ihm in drei Dimensionen und gibt die somit die X-, Y- und Z-Koordinaten, welche Du in Deinen Python-Skripten verarbeiten kannst.
 
-It also recognises gestures, including swipes and more.
+Er erkennt auch Gesten wie z.B. wischen und andere.
+

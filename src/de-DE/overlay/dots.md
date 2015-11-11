@@ -1,12 +1,12 @@
 <!--
 ---
 name: Raspberry Pi Dots
-description: Join the dots to make a circuit
+description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 pin:
   bcm0:
-    name: 'Color: Blue'
+    name: 'Farbe: Blau'
     direction: input
   bcm1:
     name: Dot 7
@@ -36,7 +36,7 @@ pin:
     name: Dot 17
     direction: input
   bcm10:
-    name: 'Color: Green'
+    name: 'Farbe: Grün'
     direction: input
   bcm11:
     name: Dot 8
@@ -63,7 +63,7 @@ pin:
     name: Dot 20
     direction: input
   bcm19:
-    name: 'Color: Orange'
+    name: 'Farbe: Orange'
     direction: input
   bcm20:
     name: Bear
@@ -87,16 +87,18 @@ pin:
     name: Dot 11
     direction: input
   bcm27:
-    name: 'Color: Red'
+    name: 'Farbe: Rot'
     direction: input
 -->
 #Raspberry Pi Dots
 
-###Dots is a Dot to Dot HAT board for the Raspberry Pi that lets you join-the-dots with BARE Conductive Paint!
+###Dots ist eine verbinde die Punkte HAT Platine für den Raspberry Pi, auf dem Du Punkte mit leitender Farbe verbindest!
 
-Every Dot on the Dots board is a "floating" metal contact just waiting to be pulled down to ground with a dab of paint.
+Jeder Punkt auf der Dots-Platine ist ein offener Metallkontakt der darauf wartet mit der Farbe kontaktiert zu werden.
 
-To read a Dot you should set its corresponding pin as an INPUT and make sure it's pulled up like so:
+
+Um einen Punkt auszulesen setze den dazugehörigen Anschluss als Eingang und checke, ob der Kontakt hergestellt ist:
+
 
 ```python
 import RPi.GPIO as GPIO
@@ -105,8 +107,8 @@ GPIO.setup(dot_pin, GPIO.IN, GPIO.PUD_UP)
 state = GPIO.input(dot_pin)
 ```
 
-It's good practise to only turn on the PULLUP when you actually want to read the Dot, so a method like
-this is recommended for reading:
+Es ist gute Praxis den Eingang nur auf PULLUP zu schalten, wenn Du den Kontakt auch lesen möchtest.
+Somit ist folgender Code empfohlen:
 
 ```python
 def is_dot_connected(dot_pin):

@@ -15,7 +15,7 @@ strings:
 - type_classic: '* fattore di forma classico'
 - pin_header: '* {} pin header'
 - uses_i2c: '* utilizza I2C'
-- wiring_pi_pin: 'pin Wiring Pi {}'
+- wiring_pi_pin: 'Wiring Pi pin {}'
 overlays:
 - ground
 - spi

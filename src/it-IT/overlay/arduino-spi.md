@@ -1,7 +1,7 @@
 <!--
 ---
 name: Arduino SPI
-description: Program Arduino with Raspberry Pi SPI
+description: Programma Arduino con le porte  SPI del Raspberry Pi
 pin:
   19:
     name: MOSI
@@ -24,31 +24,31 @@ pin:
     active: high
     description: Arduino Reset
 -->
-#ATmega 328p / Arduino over SPI
+#ATmega 328p / Arduino via SPI
 
-###Did you know that your Pi could power and program an ATmega 328p/Arduino directly, with nothing but a few wires, a breadboard, a 16Mhz crystal oscillator and some 22pF capacitors?
+###Sapevi che il tuo Raspberry può alimentare e programmare un ATmega 328p/Arduino direttamente, soltanto con pochi cavi, una breadboard, un oscillatore a 16Mhz ed alcuni condensatori da 22pF?
 
-Read my [complete Pico PiDuino tutorial](http://pi.gadgetoid.com/article/building-the-pico-piduino) to get started for just over &pound;5
+Leggi il mio [tutorial completo a Pico PiDuino](http://pi.gadgetoid.com/article/building-the-pico-piduino) per imparare le basi per poco più di 5&pound;
 
-You'll need to install [Gordon's modified AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
+Dovrai installare l'[AVRDude modificato di Gordon](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
 
-Connect 8/CEO to your ATmega's Reset/RST pin, 9/MISO to its MISO pin (D12), 10 to its MOSI pin (D11) and 11/SCLK to its SCLK pin (D13).
+Collega 8/CEO al pin Reset/RST dell'ATmega, il 9/MISO al pin MISO (D12), il 10 al pin MOSI (D11) e 11/SCLK al pin SCLK (D13).
 
-Power your ATmega with the 3.3v and GND pins from your Pi, and you're good to go.
+Alimenta l'ATmega con i 3.3v e la massa (pin GND) del tuo Raspberry, e sei pronto a procedere.
 
-Make sure you have no rogue SPI device drivers running and check it's connected correctly using:
+Assicurati di non avere alcun malefico driver SPI in esecuzione e controlla che sia collegato correttamente con:
 
 ```bash
 avrdude -p m328p -c gpio
 ```
 
-To get started compiling Arduino sketches from the command line:
+Per fare i primi tentativi con la compilazione per Arduino, lancia da un terminale:
 
 ```bash
 sudo apt-get install arduino arduino-mk
 ```
 
-This basic Makefile should get you started. Create a basic sketch, name it mysketch.ino and run:
+Questo Makefile essenziale dovrebbe darti le basi. Per creare un semplice progetto, dagli nome mysketch.ino e lancia:
 
 ```bash
 export BOARD=atmega328

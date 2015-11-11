@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: An all-in-one light, input, motor, touch and output add-on board.
+description: Eine Platine mit LEDs, Ein- und Ausgängen, Motorsteuerung, Sensor-Tasten und Steckbrett.
 install:
   'apt':
     - 'python-smbus'
@@ -98,16 +98,17 @@ pin:
     mode: output
     active: high
 -->
-#Explorer HAT and Explorer HAT Pro
+#Explorer HAT und Explorer HAT Pro
 
-5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
+Der Explorer HAT Pro besteht aus 5V Ein- und Ausgängen, Sensor-Tasten, LEDs, analogen Eingängen und einem H-Bridge Motor-Treiber. 
+Perfekt für alle möglichen Ideen auf dem Raspberry Pi auszuprobieren.
 
 ```bash
 sudo apt-get install python-pip
 sudo pip install explorer-hat
 ```
 
-Then import it into your Python script and start tinkering:
+Anschliessend die Libraries in Dein Python-Skript importieren und basteln:
 
 ```bash
 import explorerhat

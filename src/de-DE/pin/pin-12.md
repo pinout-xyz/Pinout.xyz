@@ -1,1 +1,2 @@
-The PWM0 output of BCM 18 is particularly useful, in combination with some fast, direct memory access trickery, for driving tricky devices with very specific timings. The WS2812 LEDs on the [Unicorn HAT](/pinout/unicorn_hat) are a good example of this in action.
+Der PWM0 Ausgang an Pin BCM 18 ist recht nützlich, wenn man Geräte mit recht genauen zeitlichen Signalen ansteuern möchte.
+Die WS2812 LEDS auf dem [Unicorn HAT][/pinout/unicorn_hat) sind ein gutes Beispiel hierfür. 

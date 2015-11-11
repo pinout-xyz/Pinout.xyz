@@ -55,7 +55,7 @@ pins:
     functions:
       alt0: TXD0
       alt1: SD6
-      alt2: Reserved
+      alt2: reserviert
       alt5: TXD1
   '9':
     name: Masse (Ground)
@@ -70,7 +70,7 @@ pins:
     functions:
       alt0: RXD0
       alt1: SD7
-      alt2: Reserved
+      alt2: reserviert
       alt5: RXD1
   '11':
     name: ''
@@ -79,9 +79,9 @@ pins:
       wiringpi: 0
       bcm: 17
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD9
-      alt2: Reserved
+      alt2: reserviert
       alt3: RTS0
       alt4: SPI1_CE1_N
       alt5: RTS1
@@ -95,7 +95,7 @@ pins:
     functions:
       alt0: PCM_CLK
       alt1: SD10
-      alt2: Reserved
+      alt2: reserviert
       alt3: BSCSL SDA / MOSI
       alt4: SPI1_CE0_N
       alt5: PWM0
@@ -107,9 +107,9 @@ pins:
       bcm: 27
       bcmAlt: 21
     functions:
-      alt0: Reserved
-      alt1: Reserved
-      alt2: Reserved
+      alt0: reserviert
+      alt1: reserviert
+      alt2: reserviert
       alt3: SD1_DAT3
       alt4: ARM_TMS
   '14':
@@ -122,9 +122,9 @@ pins:
       wiringpi: 3
       bcm: 22
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD14
-      alt2: Reserved
+      alt2: reserviert
       alt3: SD1_CLK
       alt4: ARM_TRST
   '16':
@@ -134,9 +134,9 @@ pins:
       wiringpi: 4
       bcm: 23
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD15
-      alt2: Reserved
+      alt2: reserviert
       alt3: SD1_CMD
       alt4: ARM_RTCK
   '17':
@@ -149,9 +149,9 @@ pins:
       wiringpi: 5
       bcm: 24
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD16
-      alt2: Reserved
+      alt2: reserviert
       alt3: SD1_DAT0
       alt4: ARM_TDO
   '19':
@@ -163,7 +163,7 @@ pins:
     functions:
       alt0: SPI0_MOSI
       alt1: SD2
-      alt2: Reserved
+      alt2: reserviert
   '20':
     name: Masse (Ground)
     type: GND
@@ -176,7 +176,7 @@ pins:
     functions:
       alt0: SPI0_MISO
       alt1: SD1
-      alt2: Reserved
+      alt2: reserviert
   '22':
     name: ''
     type: GPIO
@@ -184,9 +184,9 @@ pins:
       wiringpi: 6
       bcm: 25
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD17
-      alt2: Reserved
+      alt2: reserviert
       alt3: SD1_DAT1
       alt4: ARM_TCK
   '23':
@@ -198,7 +198,7 @@ pins:
     functions:
       alt0: SPI0_SCLK
       alt1: SD3
-      alt2: Reserved
+      alt2: reserviert
   '24':
     name: CE0
     description: SPI Chip Select 0
@@ -209,7 +209,7 @@ pins:
     functions:
       alt0: SPI0_CE0_N
       alt1: SD0
-      alt2: Reserved
+      alt2: reserviert
   '25':
     name: Masse (Ground)
     type: GND
@@ -223,7 +223,7 @@ pins:
     functions:
       alt0: SPI0_CE1_N
       alt1: SWE_N / SRW_N
-      alt2: Reserved
+      alt2: reserviert
   '27':
     name: ID_SD
     description: HAT EEPROM i2c Daten
@@ -234,7 +234,7 @@ pins:
     functions:
       alt0: SDA0
       alt1: SA5
-      alt2: Reserved
+      alt2: reserviert
   '28':
     name: ID_SC
     description: HAT EEPROM i2c Tackt (Clock)
@@ -245,7 +245,7 @@ pins:
     functions:
       alt0: SCL0
       alt1: SA4
-      alt2: Reserved
+      alt2: reserviert
   '29':
     name: ''
     type: GPIO
@@ -255,7 +255,7 @@ pins:
     functions:
       alt0: GPCLK1
       alt1: SA0
-      alt2: Reserved
+      alt2: reserviert
       alt5: ARM_TDO
   '30':
     name: Masse (Ground)
@@ -269,7 +269,7 @@ pins:
     functions:
       alt0: GPCLK2
       alt1: SOE_N / SE
-      alt2: Reserved
+      alt2: reserviert
       alt5: ARM_RTCK
   '32':
     name: ''
@@ -280,7 +280,7 @@ pins:
     functions:
       alt0: PWM0
       alt1: SD4
-      alt2: Reserved
+      alt2: reserviert
       alt5: ARM_TMS
   '33':
     name: ''
@@ -291,7 +291,7 @@ pins:
     functions:
       alt0: PWM1
       alt1: SD5
-      alt2: Reserved
+      alt2: reserviert
       alt5: ARM_TCK
   '34':
     name: Masse (Ground)
@@ -306,7 +306,7 @@ pins:
     functions:
       alt0: PCM_FS
       alt1: SD11
-      alt2: Reserved
+      alt2: reserviert
       alt3: BSCSL SCL / SCLK
       alt4: SPI1_MISO
       alt5: PWM1
@@ -317,9 +317,9 @@ pins:
       wiringpi: 27
       bcm: 16
     functions:
-      alt0: Reserved
+      alt0: reserviert
       alt1: SD8
-      alt2: Reserved
+      alt2: reserviert
       alt3: CTS0
       alt4: SPI1_CE2_N
       alt5: CTS1
@@ -330,9 +330,9 @@ pins:
       wiringpi: 25
       bcm: 26
     functions:
-      alt0: Reserved
-      alt1: Reserved
-      alt2: Reserved
+      alt0: reserviert
+      alt1: reserviert
+      alt2: reserviert
       alt3: SD1_DAT2
       alt4: ARM_TDI
   '38':
@@ -345,7 +345,7 @@ pins:
     functions:
       alt0: PCM_DIN
       alt1: SD12
-      alt2: Reserved
+      alt2: reserviert
       alt3: BSCSL / MISO
       alt4: SPI1_MOSI
       alt5: CPCLK0
@@ -362,7 +362,7 @@ pins:
     functions:
       alt0: PCM_DOUT
       alt1: SD13
-      alt2: Reserved
+      alt2: reserviert
       alt3: BSCSL / CE_N
       alt4: SPI1_SCLK
       alt5: GPCLK1

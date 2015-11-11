@@ -1,3 +1,3 @@
-###The 3v3, 3.3 volt, supply pin on the Pi has a max available current of about 50 mA. Enough to power a couple of LEDs or a microprocessor, but not much more.
+###Der 3v3 (3,3 Volt) Stromversorgungsanschluss auf dem Pi liefert maximal 50 mA. Das ist genug um ein paar LEDs oder ICs anzusteuern, aber auch nicht viel mehr.
 
-You should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.
+Generell solltests Du eher die 5V Stromversorgung benutzen - zusammen mit einem 3,3 Volt Spannungsregler für 3,3 Volt Projekte.

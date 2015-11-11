@@ -1,3 +1,4 @@
-# HAT EEPROM Pins ID_SC and ID_SD
+# HAT EEPROM Anschlüsse ID_SC und ID_SD
 
-These pins are generally reserved for i2c communication with a HAT EEPROM.
+Diese Anschlüsse sind für die HAT genannten Erweiterungsplatinen des Pi. Über diese
+wird das EEPROM der Erweiterung per I2C angesprochen.

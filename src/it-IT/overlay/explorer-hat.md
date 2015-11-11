@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: An all-in-one light, input, touch and output add-on board.
+description: All-in-one luce, input, touch e add-on output board.
 install:
   'devices':
     - 'i2c'
@@ -22,7 +22,7 @@ install:
 pincount: 40
 i2c:
   '0x28':
-    name: Cap Touch
+    name: Touch capacitivo
     device: cap1208
 pin:
   '7':
@@ -76,15 +76,15 @@ pin:
 -->
 #Explorer HAT
 
-5V inputs and outputs, touch pads and LEDs make up the Explorer HAT, a jack of all trades prototyping side-kick for your Raspberry Pi.
+Input ed output a 5V, touch pad, LED sono le caratteristiche dell'Explorer HAT Pro- un asso nella manica per il tuo Raspberry Pi.
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Per preparare e impostare il modulo puoi utilizzare l'installer fornito:
 
 ```bash
 curl -sS get.pimoroni.com/explorerhat
 ```
 
-Then import it into your Python script and start tinkering:
+Importalo poi nel tuo script Python e inizia a smanettare:
 
 ```bash
 import explorerhat

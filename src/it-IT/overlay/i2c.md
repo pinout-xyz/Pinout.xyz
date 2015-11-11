@@ -1,10 +1,10 @@
 <!--
 ---
 name: I2C
-description: Raspberry Pi i2c pins
+description: Raspberry Pi pin i2c
 pin:
   '3':
-    name: Data
+    name: Dati
     direction: both
     active: high
   '5':
@@ -12,33 +12,33 @@ pin:
     direction: both
     active: high
   '27':
-    name: EEPROM Data
+    name: Dati EEPROM
     direction: both
     active: high
   '28':
-    name: EEPROM Clock
+    name: Clock EEPROM
     direction: both
     active: high
 
 -->
 #I2C - Inter Integrated Circuit
 
-The Raspberry Pi's I2C pins are an extremely useful way to talk to many different types of external peripheral; from the MCP23017 digital IO expander, to a connected ATmega.
+L'I2C del Raspberry è un modo estremamente utile per comunicare con molti tipi diversi di periferiche esterne, dall'expander digitale MCP23017, ad un ATmega collegato.
 
-You can verify the address of connected I2C peripherals with a simple one-liner:
+Puoi controllare l'indirizzo delle periferiche I2C collegate con una singola riga di codice:
 
 ```bash
 sudo apt-get install i2c-tools
 sudo i2cdetect -y 1
 ```
 
-You can access i2c from Python using the smbus library:
+Puoi accedere ad i2c da Python usando la libreria smbus:
 
 ```bash
 sudo apt-get install python-smbus
 ```
 
-And then in Python:
+E poi sempre in Python:
 
 ```python
 import smbus

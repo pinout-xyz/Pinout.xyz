@@ -1,36 +1,37 @@
 <!--
 ---
 name: PiBorg LEDBorg
-description: A single RGB LED for your Raspberry Pi
+description: Un singolo LED RBG per il tuo Raspberry Pi
 buy: https://www.piborg.org/ledborg
 pin:
   '11':
-    name: Red LED
+    name: LED rosso
     direction: output
     active: high
-    description: PiBorg Red LED
+    description: PiBorg LED rosso
   '13':
-    name: Green LED
+    name: LED verde
     direction: input
     active: high
-    description: PiBorg Green LED
+    description: PiBorg LED verde
   '15':
-    name: Blue LED
+    name: LED blu
     direction: output
     active: high
-    description: PiBorg Blue LED
+    description: PiBorg LED blu
 -->
-###The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi.
+###Il PiBorg LedBorg è un LED RGB ultra-luminoso per il Raspberry Pi.
 
-PiBorg has its own driver, so you don't need to drive it manually.
+PiBorg ha il suo driver, quindi non devi controllarlo manualmente.
 
-If you want a much, much wider range of colours, though, you can drive it manually using softPwm in WiringPi. The pin assignments for this are as follows:
+Se vuoi una gamma di colori decisamente più ampia tuttavia, puoi controllarlo manualmente 
+usando softPwm su WiringPi. L'assegnazione dei pin è come segue:
 
-WiringPi pin 0: Red LED
-WiringPi pin 2: Green LED
-WiringPi pin 3: Blue LED
+WiringPi pin 0: LED rosso
+WiringPi pin 2: LED verde
+WiringPi pin 3: LED blu
 
-This is easy using WiringPi in Python:
+È facile usando WiringPi con Python:
 
 
 ```python
@@ -41,8 +42,8 @@ wiringpi.softPwmCreate(0,0,100)
 wiringpi.softPwmCreate(2,0,100)
 wiringpi.softPwmCreate(3,0,100)
 
-# Purple!
-wiringpi.softPwmWrite(3,100) # Full Blue
-wiringpi.softPwmWrite(0,100) # Full Red
-wiringpi.softPWMWrite(2,0)	 # No Green
+# Viola!
+wiringpi.softPwmWrite(3,100) # Blu al massimo
+wiringpi.softPwmWrite(0,100) # Rosso al massimo
+wiringpi.softPWMWrite(2,0)	 # Verde spento
 ```

@@ -1,30 +1,34 @@
 <!--
 ---
 name: UART
-description: Raspberry Pi UART pins
+description: Pin UART del Raspberry
 pin:
   '8':
-    name: TXD / Transmit
+    name: TXD / Trasmissione
     direction: output
     active: high
   '10':
-    name: RXD / Receive
+    name: RXD / Ricezione
     direction: input
     active: high
 -->
 #UART - Universal Asynchronous Receiver/Transmitter
 
-###The 2 UART pins in WiringPi are: 15, 16
+###I due pin UART in WiringPi sono il 15 e il 16
 
-UART is a handy, straight forward way to interface an Arduino ( or bootloaded ATmega ) with your Pi. You must, however, be careful with logic-levels between the two devices: the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
+UART è una maniera facile e semplice per collegare un Arduino (or un ATmega bootloaded) con il tuo Raspberry. Devi, tuttavia, 
+fare attenzione alla differenza di tensione tra le due periferiche: il Raspberry è a 3.3V, e l'Arduino invece a 5V. Se 
+li colleghi rischi di evocare del magico fumo blu.
 
-Personally I'm a fan of building out a Arduino Bootloaded ATmega 328 circuit on a breadboard with a voltage regulator to take the Pi's 5v line and convert it to 3.3v. The ATmega 328 seems to run quite happily at 3.3v using a 16Mhz crystal and you'll then have an Arduino clone with 3.3v logic.
+Personalmente preferisco costruire un circuito con un Arduino Bootloaded ATmega 328 su una breadboard con un regolatore di tensione 
+per prendere la linea a 5V del Raspberry e convertirla in 3.3V. L'ATmega 328 sembra piuttosto soddisfatto di funzionare a 3.3V con un 
+cristallo a 16Mhz, e così ottieni un clone di Arduino con una logica a 3.3V.
 
-Assuming you have WiringPi2-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'
+Se hai WiringPi2-Python installato, questo esempio in python apre l'UART del Raspberry a 9600baud e ci scrive 'ciao mondo!'
 
 ```python
 import wiringpi2 as wiringpi
 wiringpi.wiringPiSetup()
 serial = wiringpi.serialOpen('/dev/ttyAMA0',9600)
-wiringpi.serialPuts(serial,'hello world!')
+wiringpi.serialPuts(serial,'ciao mondo!')
 ```

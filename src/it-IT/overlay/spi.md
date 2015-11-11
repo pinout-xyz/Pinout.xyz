@@ -1,7 +1,7 @@
 <!--
 ---
 name: SPI
-description: Raspberry Pi SPI pins
+description: Pin SPI del Raspberry
 pincount: 5
 pin:
   '11':
@@ -44,11 +44,12 @@ pin:
 -->
 #SPI - Serial Peripheral Interface
 
-###Known as the four-wire serial bus, SPI lets you daisy-chain multiple compatible devices off a single set of pins by assigning them different chip-select pins.
+###Conosciuto come il bus seriale "a quattro fili", l'SPI ti permette di concatenare una serie di periferiche compatibili 
+su un solo set di pin assegnandogli dei diversi pin chip-select.
 
-A useful example of an SPI peripheral is the MCP23S17 digital IO expander chip Note the S in place of the 0 found on the I2C version.
+Un esempio efficace di una periferica SPI è l'MCP23S17, un chip IO expander digitale (nota la S al posto dello zero nella versione I2C).
 
-To talk to an SPI device, you assert its corresponding chip-select pin. By default the Pi has CE0 and CE1.
+Per comunicare con una periferica SPI, devi controllare il suo chip-select pin corrispondente. Di default, il Raspberry ha CE0 e CE1.
 
 ```python
 import spidev
@@ -59,8 +60,10 @@ spi.max_speed_hz = 1000000
 spi.xfer([value_8bit])
 ```
 
-You can also use the SPI port to "Bit-Bang" an ATmega 328, loading Arduino sketches onto it with Gordon's modified version of AVRDude.
+Puoi utilizzare anche le porte SPI per fare "Bit-Bang" su un ATmega 328, caricando i progetti di Arduino tramite la versione modificata 
+dell'AVRDude di Gordon.
 
-Hook up you Pi's SPI port to that of your ATmega, and power the ATmega from the 3.3v pin on the Pi. Make sure you're not running any SPI device drivers, and run "avrdude -p m328p -c gpio" to verify the connection.
+Collega la porta SPI del Raspberry a quella dell'ATmega, ed alimenta l'ATmega dal pin a 3.3V sul Raspberry. 
+Assicurati di non avere alcun driver SPI in esecuzione, ed esegui "avrdude -p m328p -c gpio" per verificare la connessione.
 
-See the individual pins to learn how to connect up your ATmega.
+Controlla i pin individuali per imparare come collegare il tuo ATmega.

@@ -1,7 +1,7 @@
 <!--
 ---
 name: Ground
-description: Raspberry Pi Ground Pins
+description: Pin a massa del Raspberry Pi
 pin:
   '6':
   '9':
@@ -12,13 +12,13 @@ pin:
   '34':
   '39':
 -->
-#Ground
+#Massa
 
-The Ground pins on the Raspberry Pi are all electrically connected, so it doesn't matter
-which one you use if you're wiring up a voltage supply.
+I pin a massa sul Raspberry Pi sono tutti collegati, quindi non importa quale colleghi nel fornire 
+la tensione di alimentazione.
 
-Generally the one that's most convenient or closest to the rest of your connections is tidier
-and easier, or alternatively the one closest to the supply pin that you use.
+Quello che è più conveniente da raggiungere o più vicino alle tue connessioni è in generale la soluzione
+più pulita; in alternativa puoi usare uno vicino al pin di alimentazione che usi.
 
-It's a good idea to use Physical Pin 17 for 3v3 and Physical Pin 25 for ground when using
-the [SPI](/pinout/spi) connections, for example, as these are right next to the important pins for SPI0.
+È una buona idea utilizzare il pin fisico 17 per la 3v3 e il pin 25 per la massa quando usi le connessioni 
+[SPI](/pinout/spi), per esempio, dal momento che sono vicini ai pin più importanti per l'SPI0.

@@ -28,7 +28,18 @@ pin:
 -->
 #Skywriter HAT
 
+##AWAITING TRANSLATION
+##EN COURS DE TRADUCTION
+
 Skywriter HAT senses your finger's position above it in 3 dimensions, outputting an X, Y, Z axis
 which you can use in your Python scripts.
 
 It also recognises gestures, including swipes and more.
+
+To get the HAT set up and ready to go you can use the one-line product installer:
+
+```bash
+curl -sS get.pimoroni.com/skywriter | bash
+```
+
+And follow the instructions!

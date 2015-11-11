@@ -1,7 +1,7 @@
 <!--
 ---
 name: Arduino SPI
-description: Program Arduino with Raspberry Pi SPI
+description: Programmer une carte Arduino avec une Raspberry Pi
 pin:
   19:
     name: MOSI
@@ -26,13 +26,16 @@ pin:
 -->
 #ATmega 328p / Arduino over SPI
 
-###Did you know that your Pi could power and program an ATmega 328p/Arduino directly, with nothing but a few wires, a breadboard, a 16Mhz crystal oscillator and some 22pF capacitors?
+###Saviez-vous qu'il était possible de programmer une carte Arduino ou un ATmega328 à partir d'une Raspberry Pi, en utilisant juste quelques cables, un 'breadboard', Quartz de 16 MHz et quelques condensateurs?
 
-Read my [complete Pico PiDuino tutorial](http://pi.gadgetoid.com/article/building-the-pico-piduino) to get started for just over &pound;5
+Did you know that your Pi could power and program an ATmega 328p/Arduino directly, with nothing but a few wires, a breadboard, a 16Mhz crystal oscillator and some 22pF capacitors?
 
-You'll need to install [Gordon's modified AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
+Voici un article qui vous guidera dans cette entreprise:
+[Construire un Arduino](https://itechnofrance.wordpress.com/2013/04/13/construire-un-arduino/)
 
-Connect 8/CEO to your ATmega's Reset/RST pin, 9/MISO to its MISO pin (D12), 10 to its MOSI pin (D11) and 11/SCLK to its SCLK pin (D13).
+Une fois votre 'Arduino' assemblé, il vous faudra installer une version modifiée de [AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
+
+Connectez la broche 8 de la Raspi à l'ATmega Reset/RST, la broche 9 à son MISO/D12, la broche 10 à son MOSI/D11, et finalement la broche 11 au SCLK/D13.
 
 Power your ATmega with the 3.3v and GND pins from your Pi, and you're good to go.
 

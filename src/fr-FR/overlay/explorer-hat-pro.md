@@ -5,8 +5,10 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: An all-in-one light, input, motor, touch and output add-on board.
+description: Un chapeau multi-usage avec entrées analogiques et contrôle moteurs
 install:
+  'devices':
+    - 'i2c'
   'apt':
     - 'python-smbus'
     - 'python3-smbus'
@@ -14,14 +16,16 @@ install:
     - 'python3-dev'
   'python':
     - 'explorerhat'
+  'python3':
+    - 'explorerhat'
   'examples': 'examples/'
 pincount: 40
 i2c:
   '0x28':
-    name: Cap Touch
+    name: Capteur tactile
     device: cap1208
   '0x48':
-    name: Analog Input
+    name: Entrées analogiques
     device: ads1015
 pin:
   '3': {}
@@ -42,21 +46,21 @@ pin:
     mode: output
     active: high
   '15':
-    name: Input 2
+    name: Entrée 2
     mode: input
     active: high
   '16':
-    name: Input 1
+    name: Entrée 1
     mode: input
     active: high
   '18':
-    name: Input 3
+    name: Entrée 3
     mode: input
     active: high
   '19': {}
   '21': {}
   '22':
-    name: Input 4
+    name: Entrée 4
     mode: input
     active: high
   '23': {}
@@ -66,48 +70,49 @@ pin:
     mode: output
     active: high
   '31':
-    name: Output 1
+    name: Sortie 1
     mode: output
     active: high
   '32':
-    name: Output 2
+    name: Sortie 2
     mode: output
     active: high
   '33':
-    name: Output 3
+    name: Sortie 3
     mode: output
     active: high
   '35':
-    name: Motor 1 +
+    name: Moteur 1 +
     mode: output
     active: high
   '36':
-    name: Output 4
+    name: Sortie 4
     mode: output
     active: high
   '37':
-    name: Motor 2 -
+    name: Moteur 2 -
     mode: output
     active: high
   '38':
-    name: Motor 1 -
+    name: Moteur 1 -
     mode: output
     active: high
   '40':
-    name: Motor 2 +
+    name: Moteur 2 +
     mode: output
     active: high
 -->
-#Explorer HAT and Explorer HAT Pro
+#Explorer HAT Pro
 
-5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
+L'Explorer HAT pro est un chapeau multi-usage avec entrées et sorties en 5V, entrées analogiques et contrôle moteurs. Tout cela agrémenté de LED et touches tactiles. C'est donc d'un véritable couteau Suisse dont il s'agit!
+
+Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install explorer-hat
+curl -sS get.pimoroni.com/explorerhat
 ```
 
-Then import it into your Python script and start tinkering:
+Puis, sous Python, en guise de test que tout fonctionne bien:
 
 ```bash
 import explorerhat

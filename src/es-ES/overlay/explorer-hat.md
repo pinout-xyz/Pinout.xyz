@@ -70,9 +70,9 @@ pin:
     mode: salida
     active: alto (encendido)
 -->
-#Explorer HAT y Explorer HAT Pro
+#Explorer HAT
 
-Entradas y salidas de 5V, paneles táctiles, LEDs, entradas analógicas y un Puente-H para controlar motores componen el Explorer HAT Pro.
+Entradas y salidas de 5V, paneles táctiles y LEDs componen el Explorer HAT.
 
 Para preparar e instalar el HAT utiliza la siguiente línea:
 

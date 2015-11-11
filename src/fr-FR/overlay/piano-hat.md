@@ -3,15 +3,15 @@
 name: Piano HAT
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piano-hat
-description: A tiny Pi piano with 16 touch-sensitive buttons
+description: Un mini-piano avec 16 touches tactiles
 pincount: 40
 i2c:
   '0x28':
-    name: Cap Touch A
+    name: Capteur tactile A
     device: cap1188
     datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
   '0x2b':
-    name: Cap Touch B
+    name: Capteur tactile B
     device: cap1188
     datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 pin:
@@ -20,13 +20,13 @@ pin:
   5:
     mode: i2c
   7:
-    name: Alert A
+    name: Alerte A
     mode: input
   11:
     name: Reset A
     mode: output
   13:
-    name: Alert B
+    name: Alerte B
     mode: input
   15:
     name: Reset B
@@ -34,14 +34,12 @@ pin:
 -->
 #Piano HAT
 
-Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave, the rest give you octave up/down and instrument select functionality.
+Le Piano HAT est un mini-piano pour la RasPi muni de 16 touches tactiles. 13 d'entre elles forment le clavier en lui-même, s'étendant sur une octave. Les autres quant à elles servent à déplacer l'octave vers le haut ou le bas, ainsi que la sélection d'instrument.
 
-It uses two Microchip CAP1188 chips with the i2c addresses 0x28 and 0x2b.
+Les microchips responsables de la gestion des touches tactiles sont deux CAP1188, communiquant par l'interface i2c, aux adresses 0x28 et 0x2b.
 
-You can use the one-line product installer to get Piano HAT set up and ready to go, just:
+Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl get.pimoroni.com/pianohat | bash
+curl -sS get.pimoroni.com/pianohat | bash
 ```
-
-And follow the instructions!

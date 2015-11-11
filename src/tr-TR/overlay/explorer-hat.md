@@ -7,6 +7,19 @@ github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
 description: Hepsi-bir-arada, hafif, hızlı, dokunma, giriş ve çıkış destekleyen eklenti
   kartı.
+install:
+  'devices':
+    - 'i2c'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'explorerhat'
+  'python3':
+    - 'explorerhat'
+    'examples': 'examples/'
 pincount: 40
 pin:
   '7':
@@ -58,13 +71,12 @@ pin:
     mode: output
     active: high
  -->
-#Explorer HAT ve Explorer HAT Pro
+#Explorer HAT
 
-5V giriş ve çıkışları, dokunmatik paneli, LEDler, analog girişler ve bir H-Bridge motor ile Explorer HAT Pro, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
+5V giriş ve çıkışları, dokunmatik paneli ve LEDler ile Explorer HAT, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install explorer-hat
+curl -sS get.pimoroni.com/explorerhat
 ```
 
 Ardından Python scriptinize aşağıdaki kodları ekleyip prototipinizi kurcalamaya başlayabilirsiniz:

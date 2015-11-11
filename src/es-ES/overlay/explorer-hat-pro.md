@@ -7,12 +7,16 @@ github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
 description: Una placa completa, con luz, entradas, entradas táctiles y salidas.
 install:
+  'devices':
+    - 'i2c'
   'apt':
     - 'python-smbus'
     - 'python3-smbus'
     - 'python-dev'
     - 'python3-dev'
   'python':
+    - 'explorerhat'
+  'python3':
     - 'explorerhat'
   'examples': 'examples/'
 pincount: 40
@@ -98,7 +102,7 @@ pin:
     mode: salida
     active: alto (encendido)
 -->
-#Explorer HAT y Explorer HAT Pro
+#Explorer HAT Pro
 
 Entradas y salidas de 5V, paneles táctiles, LEDs, entradas analógicas y un Puente-H para controlar motores componen el Explorer HAT Pro.
 

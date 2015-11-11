@@ -108,7 +108,7 @@ sudo apt-get install python-pip
 sudo pip install explorer-hat
 ```
 
-Anschliessend die Libraries in Dein Python-Skript importieren und basteln:
+Anschliessend die Libraries in Dein Python-Skript importieren und anfangen zu basteln:
 
 ```bash
 import explorerhat

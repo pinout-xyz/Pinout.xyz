@@ -4,7 +4,7 @@ name: Display-o-Tron 3000
 manufacturer: Pimoroni
 github: https://github.com/pimoroni/dot3k
 url: https://github.com/pimoroni/dot3k
-description: A 3-line character LCD with an RGB backlight and joystick
+description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick
 install:
   'devices':
     - 'i2c'
@@ -24,25 +24,25 @@ pin:
   5:
     mode: i2c
   7:
-    name: Joystick Button
+    name: Joystick Taste
     mode: input
     active: low
   11:
-    name: Joystick Left
+    name: Joystick links
     mode: input
     active: low
   13:
-    name: Joystick Up
+    name: Joystick oben
     mode: input
     active: low
   15:
-    name: Joystick Right
+    name: Joystick rechts
     mode: input
     active: low
   19:
     mode: spi
   21:
-    name: Joystick Down
+    name: Joystick unten
     mode: input
     active: low
   22:
@@ -54,10 +54,10 @@ pin:
 -->
 #Display-o-Tron 3000
 
-You can use the one-line product installer to get Display-o-Tron 3000 set up and ready to go, just:
+Mit diesem Einzeiler installierst Du das Display-o-Tron 3000:
 
 ```bash
 curl get.pimoroni.com/dot3k | bash
 ```
 
-And follow the instructions!
+...den Rest findest Du in der Anleitung auf Github :-)

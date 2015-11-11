@@ -36,6 +36,9 @@ pin:
 -->
 #IQaudIO Pi-DAC+
 
+##AWAITING TRANSLATION
+##EN COURS DE TRADUCTION
+
 The Pi-DAC+ takes the digital audio signals (I2S) from the Raspberry Pi and through the
 onboard Texas Instruments PCM5122 DAC delivers variable output (hardware volume
 control) analog audio to the Pi-DAC+ Phono connectors. The PI-DAC+ also, via the

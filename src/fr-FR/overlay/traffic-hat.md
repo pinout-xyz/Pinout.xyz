@@ -33,6 +33,9 @@ pin:
 
 ###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
 
+##AWAITING TRANSLATION
+##EN COURS DE TRADUCTION
+
 ```python
 import RPi.GPIO as IO
 from time import sleep

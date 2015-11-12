@@ -102,7 +102,7 @@ def load_overlay(overlay):
 	pages[loaded['page_url']] = loaded
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
 	select_overlays.append((loaded['page_url'], loaded['name']))
- 	return loaded
+	return loaded
 
 def load_md(filename):
 	filename = 'src/{}/{}'.format(lang, filename)

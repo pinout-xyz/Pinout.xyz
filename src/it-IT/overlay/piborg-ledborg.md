@@ -27,9 +27,9 @@ PiBorg ha il suo driver, quindi non devi controllarlo manualmente.
 Se vuoi una gamma di colori decisamente più ampia tuttavia, puoi controllarlo manualmente 
 usando softPwm su WiringPi. L'assegnazione dei pin è come segue:
 
-WiringPi pin 0: LED rosso
-WiringPi pin 2: LED verde
-WiringPi pin 3: LED blu
+* WiringPi pin 0: LED rosso
+* WiringPi pin 2: LED verde
+* WiringPi pin 3: LED blu
 
 È facile usando WiringPi con Python:
 

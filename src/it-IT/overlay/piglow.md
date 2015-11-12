@@ -18,3 +18,5 @@ pin:
   '17': {}
 -->
 #PiGlow
+
+Semplicemente 18 LED disposti a spirale, controllati in Python.

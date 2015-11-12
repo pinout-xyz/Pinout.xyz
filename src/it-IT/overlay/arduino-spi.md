@@ -28,7 +28,7 @@ pin:
 
 ###Sapevi che il tuo Raspberry può alimentare e programmare un ATmega 328p/Arduino direttamente, soltanto con pochi cavi, una breadboard, un oscillatore a 16Mhz ed alcuni condensatori da 22pF?
 
-Leggi il mio [tutorial completo a Pico PiDuino](http://pi.gadgetoid.com/article/building-the-pico-piduino) per imparare le basi per poco più di 5&pound;
+Leggi il mio [tutorial completo a Pico PiDuino](http://pi.gadgetoid.com/article/building-the-pico-piduino) per imparare le basi con poco più di 5&pound;.
 
 Dovrai installare l'[AVRDude modificato di Gordon](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
 

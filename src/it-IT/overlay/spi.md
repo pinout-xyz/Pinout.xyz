@@ -44,8 +44,7 @@ pin:
 -->
 #SPI - Serial Peripheral Interface
 
-###Conosciuto come il bus seriale "a quattro fili", l'SPI ti permette di concatenare una serie di periferiche compatibili 
-su un solo set di pin assegnandogli dei diversi pin chip-select.
+###Conosciuto come il bus seriale "four-wire", l'SPI ti permette di concatenare una serie di periferiche compatibili su un solo set di pin assegnandogli dei diversi pin chip-select.
 
 Un esempio efficace di una periferica SPI è l'MCP23S17, un chip IO expander digitale (nota la S al posto dello zero nella versione I2C).
 

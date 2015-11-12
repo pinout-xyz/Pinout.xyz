@@ -24,7 +24,7 @@ pin:
     direction: input
     active: high
   '29':
-    name: Buzzer (cicalino)
+    name: Buzzer - cicalino
     direction: output
     active: high
 -->

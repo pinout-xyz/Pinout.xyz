@@ -15,7 +15,7 @@ pin:
     direction: output
     active: high
   '12':
-    name: Buzzer (cicalino)
+    name: Buzzer - cicalino
     direction: output
     active: high
   '13':
@@ -62,9 +62,9 @@ pin:
 #Pibrella
 
 La scheda all-in-one per luci, suoni, input ed output di Pimoroni vs Cyntech utilizza molti dei pin IO 
-del Raspberry ma la seriale e l'I2C restano liberi, lasciando molto spazio alla creatività.
+del Raspberry, ma la seriale e l'I2C restano liberi, lasciando molto spazio alla creatività.
 
-Pibrella è facile da usare, per primo devi installare il modulo usando un terminale (LXTerminal):
+Pibrella è facile da usare; innanzitutto devi installare il modulo usando un terminale (LXTerminal):
 
 ```bash
 curl -sS get.pimoroni.com/pibrella

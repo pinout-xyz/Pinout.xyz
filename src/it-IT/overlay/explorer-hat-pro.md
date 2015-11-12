@@ -104,7 +104,7 @@ pin:
 -->
 #Explorer HAT Pro
 
-Input ed output a 5V, touch pad, LED, input analogici e un motore H-Bridge sono le caratteristiche dell'Explorer HAT Pro- un asso nella manica per il tuo Raspberry Pi.
+Input ed output a 5V, touch pad, LED, input analogici e un motore H-Bridge sono le caratteristiche dell'Explorer HAT Pro--un asso nella manica per il tuo Raspberry Pi.
 
 Per preparare e impostare il modulo puoi utilizzare l'installer fornito:
 

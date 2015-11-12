@@ -14,9 +14,9 @@ pin:
 -->
 #UART - Universal Asynchronous Receiver/Transmitter
 
-###I due pin UART in WiringPi sono il 15 e il 16
+###I due pin UART in WiringPi sono il 15 e il 16.
 
-UART è una maniera facile e semplice per collegare un Arduino (or un ATmega bootloaded) con il tuo Raspberry. Devi, tuttavia, 
+UART è una maniera facile e semplice per collegare un Arduino (o un ATmega bootloaded) con il tuo Raspberry. Devi, tuttavia, 
 fare attenzione alla differenza di tensione tra le due periferiche: il Raspberry è a 3.3V, e l'Arduino invece a 5V. Se 
 li colleghi rischi di evocare del magico fumo blu.
 

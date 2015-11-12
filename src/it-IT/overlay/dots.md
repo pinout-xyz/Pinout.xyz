@@ -92,9 +92,9 @@ pin:
 -->
 #Raspberry Pi Dots
 
-###Dots è una scheda HAT punto-a-punto per ill Raspberry Pi che ti permette di chiudere il circuito con la vernice conduttiva BARE!
+###Dots è una scheda HAT punto-a-punto per il Raspberry Pi che ti permette di chiudere il circuito con la vernice conduttiva BARE!
 
-Ogni puntino ("Dot") sulla scheda Dots è un contatto metallico "mobile", in attesa di essere collegato con una pennellata di vernice.
+Ogni puntino ("Dot") sulla scheda Dots è un contatto metallico temporaneo, in attesa di essere collegato con una pennellata di vernice.
 
 Per leggere un Dot devi impostare il pin corrispondente come INPUT e assicurarti che sia impostato così:
 
@@ -111,7 +111,7 @@ qualcosa del genere:
 ```python
 def is_dot_connected(dot_pin):
     GPIO.setup(dot_pin, GPIO.IN, GPIO.PUD_UP)
-    state = GPIO.input( dot_pin )
+    state = GPIO.input(dot_pin)
     GPIO.setup(dot_pin, GPIO.IN, GPIO.PUD_OFF)
     return state == 0
 ```

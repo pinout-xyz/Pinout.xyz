@@ -1,6 +1,6 @@
 #Pinout!
 
-##Le guide complet des broches GPIO de la Raspberry Pi, modèles B+ et Raspberry Pi 2 inclus!
+###Le guide complet des broches GPIO de la Raspberry Pi, modèles B+ et Raspberry Pi 2 inclus!
 
 Ce document n'est pas destiné à l'impression, c'est à la fois un outil de référence rapide et un guide complet des broches GPIO de la Raspberry Pi.
 

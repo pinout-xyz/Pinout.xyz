@@ -5,7 +5,7 @@ default_title: Assegnazione pin GPIO del Raspberry Pi - Pi 1, B+, Pi 2
 title_suffix: " - Assegnazione pin GPIO del Raspberry Pi"
 base_url: /pinout/
 resource_url: /resources/
-domain: pinout.xyz
+domain: it.pinout.xyz
 url_suffix:
 urls:
   GND: ground

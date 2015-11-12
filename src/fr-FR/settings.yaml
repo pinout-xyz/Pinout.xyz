@@ -8,7 +8,7 @@ resource_url: /resources/
 domain: fr.pinout.xyz
 url_suffix:
 urls:
-  GND: ground
+  GND: masse
 strings:
 - made_by: '* Produit {manufacturer}'
 - type_hat: '* format HAT'

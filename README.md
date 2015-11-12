@@ -27,13 +27,10 @@ Current known contributors are:
 * de-DE - @rdmueller and KojoePi
 * es-ES - @ResonantWave
 * fr-FR - @RogueM
+* it-IT - @LizardM4 
 * tr-TR - @Ardakilic
 
-We're looking for ( based on traffic ):
-
-* Italian, it-IT
-* Polish pl-PL
-* And any others!
+We are looking for additional contributors to cater for languages not yet in our repository. If you wish to help translate into a new language:
 
 You should start by duplicating the `src/en-GB` directory to the
 appropriate culture. For example if you want to create a German translation you would create the folder `src/de-DE`.

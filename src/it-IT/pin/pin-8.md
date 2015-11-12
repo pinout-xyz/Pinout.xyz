@@ -1,7 +1,9 @@
-This pin doubles up as the UART transmit pin, TXD. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
+Questo pin fa il paio con il pin di ricezione UART, RXD. È anche noto come "Seriale" e, di default, restituisce una console dal tuo 
+Raspberry che, con un cavo seriale adeguato, puoi utilizzare per controllare il tuo Raspberry da riga di comando.
 
-Thus, The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.
+Per questo, i pin UART sono utili per preparare un Raspberry "headless" (cioè senza alcuno schermo) e collegarlo ad una rete.
 
-UART can also be extremely useful if you want to talk to Arduino or Propeller boards from your Pi, but you must make sure you disable the Serial Console in raspi-config first.
+L'UART risulta estremamente utile se vuoi comunicare con una scheda Arduino o Propeller dal tuo Raspberry; devi tuttavia far attenzione 
+a disabilitare la console seriale in raspi-config.
 
-[Learn more about UART](/pinout/uart)
+[Maggiori informazioni su UART](/pinout/uart)

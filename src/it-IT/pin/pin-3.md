@@ -1,6 +1,6 @@
-SDA is one of the i2c pins on the Pi, [learn more about i2c](/pinout/i2c).
+SDA è uno dei pin i2c del Raspberry, [maggiori informazioni su i2c](/pinout/i2c).
 
-It's easy to get started writing a digital HIGH or LOW to a GPIO pin, but you've got to remember a few things:
+È facile muovere i primi passi scrivendo un HIGH o LOW digitale su un pin GPIO, ma devi ricordarti un paio di cose:
 
-* Run your script as root
-* Set your pin's mode to OUTPUT (1)
+* Lancia il tuo script come root
+* Imposta la modalità del tuo pin ad OUTPUT (1)

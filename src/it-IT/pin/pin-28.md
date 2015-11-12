@@ -1,1 +1,1 @@
-These pins are generally reserved for i2c communication with a HAT EEPROM.
+Questi pin sono generalmente riservati per la comunicazione I2C con un'EEPROM HAT.

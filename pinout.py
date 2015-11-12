@@ -1,7 +1,6 @@
 import json
 import yaml
 import time
-import markdown
 
 DB_FILE = 'pi-pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'

@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/piglow
 github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow
-description: 18 einfache LEDs als Spirale angeordnet und über Python ansteuerbar.
+description: Semplicemente 18 LED disposti a spirale, controllati in Python.
 pincount: 26
 pin:
   '1': {}
@@ -18,3 +18,5 @@ pin:
   '17': {}
 -->
 #PiGlow
+
+Semplicemente 18 LED disposti a spirale, controllati in Python.

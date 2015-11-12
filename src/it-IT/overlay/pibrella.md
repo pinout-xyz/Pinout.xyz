@@ -3,23 +3,23 @@
 name: Pibrella
 manufacturer: Pimoroni Vs Cyntech
 url: https://github.com/pimoroni/pibrella
-description: eine "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine.
+description: Una scheda all-in-one per luci, suoni, input ed output.
 pincount: 26
 pin:
   '7':
-    name: Green LED
+    name: LED verde
     direction: output
     active: high
   '11':
-    name: Yellow LED
+    name: LED giallo
     direction: output
     active: high
   '12':
-    name: Buzzer
+    name: Buzzer - cicalino
     direction: output
     active: high
   '13':
-    name: Red LED
+    name: LED rosso
     direction: output
     active: high
   '15':
@@ -61,17 +61,16 @@ pin:
 -->
 #Pibrella
 
-Die "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine von Pimoroni vs Cyntech 
-benutzt jede Menge I/O Anschlüsse des Pi aber lässt die serielle Schnittstelle und den I2C-Bus noch frei und somit viel Raum für creative Erweiterungen!
+La scheda all-in-one per luci, suoni, input ed output di Pimoroni vs Cyntech utilizza molti dei pin IO 
+del Raspberry, ma la seriale e l'I2C restano liberi, lasciando molto spazio alla creatività.
 
-Pibrella is einfach zu benutzen - einfach das entsprechende Modul über die Kommandozeile installieren:
+Pibrella è facile da usare; innanzitutto devi installare il modulo usando un terminale (LXTerminal):
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install pibrella
+curl -sS get.pimoroni.com/pibrella
 ```
 
-... dann die Library in Dein Python-Skript importieren und anfangen zu basteln:
+E poi lo importi nel tuo script Python per smanettare:
 
 ```bash
 import pibrella

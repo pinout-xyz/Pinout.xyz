@@ -8,7 +8,7 @@ all:
 	cp -r resources output/$(LANG)/
 
 clean:
-	rm -r output/$(LANG)/*
+	rm -rf output/$(LANG)/*
 
 serve: all
 	./serve.py $(LANG)

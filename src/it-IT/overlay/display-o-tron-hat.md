@@ -3,7 +3,7 @@
 name: Display-o-Tron HAT
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/dot3k
-description: Ein 3-zeiliges LCD mit einer 6-Zonen RGB Hintergrundbeleuchtung und 6 Tasten
+description: Un LCD da 3 righe di caratteri, RGB retroilluminato a 6 zone con 6 bottoni touch
 pincount: 40
 pin:
   3:
@@ -32,13 +32,13 @@ pin:
 -->
 #Display-o-Tron HAT
 
-Der Display-o-Tron HAT benutzt den SPI- und I2C-Bus um das LC-Display, die Hintergrundbeleuchtung und die Tasten zu steuern bzw. abzufragen.
-Beide Busse können aber weiterhin noch mit anderen Komponenten genutzt werden.
+Il Display-o-Tron HAT usa sia l'SPI che l'I2c per controllare il display LCD, la retroilluminazione e il touchscreen. 
+Entrambi questi bus possono essere comunque condivisi con altre periferiche.
 
-Mit diesem Einzeiler installierst Du den Display-o-Tron HAT:
+Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS get.pimoroni.com/dot3k | bash
 ```
 
-...den Rest findest Du in der Anleitung auf Github :-)
+&hellip;e seguire le istruzioni!

@@ -1,13 +1,10 @@
 #!/usr/bin/env python
-import json
 import markdown
 import unicodedata
 import re
 import os
-import time
 import sys
 import pinout
-import yaml
 import markjaml
 import urlmapper
 
@@ -105,7 +102,7 @@ def load_overlay(overlay):
 	pages[loaded['page_url']] = loaded
 	navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
 	select_overlays.append((loaded['page_url'], loaded['name']))
- 	return loaded
+	return loaded
 
 def load_md(filename):
 	filename = 'src/{}/{}'.format(lang, filename)
@@ -300,7 +297,7 @@ def get_hreflang_urls(src):
 	for lang in alternate_urls:
 		if src in alternate_urls[lang]:
 			url = alternate_urls[lang][src]
-			hreflang.append('<link rel="alternate" src="{url}" hreflang="{lang}"/>'.format(
+			hreflang.append('<link rel="alternate" href="{url}" hreflang="{lang}"/>'.format(
 					lang=lang,
 					url=url
 				))

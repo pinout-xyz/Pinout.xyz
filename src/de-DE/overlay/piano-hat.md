@@ -3,7 +3,7 @@
 name: Piano HAT
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piano-hat
-description: A tiny Pi piano with 16 touch-sensitive buttons
+description: Ein kleines Pi Piano mit 16 berührungsempfindlichen Tasten
 pincount: 40
 i2c:
   '0x28':
@@ -34,14 +34,14 @@ pin:
 -->
 #Piano HAT
 
-Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave, the rest give you octave up/down and instrument select functionality.
+Piano HAT hat 16 berührungsempfindliche Tasten. 13 dieser Tasten bilden eine Piano-Oktave, die anderen lassen die die Oktave hoch oder runter schalten und Instrumente auswählen.
 
-It uses two Microchip CAP1188 chips with the i2c addresses 0x28 and 0x2b.
+Der HAT benutzt zwei Microchip CAP1188 ICs mit den I2C Adressen 0x28 und 0x2b.
 
-You can use the one-line product installer to get Piano HAT set up and ready to go, just:
+Mit folgendem Einzeiler installierst Du die nötige Software:
 
 ```bash
 curl get.pimoroni.com/pianohat | bash
 ```
 
-And follow the instructions!
+Den Rest findest Du in der Anleitung!

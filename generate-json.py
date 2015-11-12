@@ -3,11 +3,8 @@ import json
 import markdown
 import unicodedata
 import re
-import os
-import time
 import sys
 import pinout
-import yaml
 import markjaml
 
 reload(sys)

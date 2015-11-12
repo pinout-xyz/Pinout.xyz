@@ -2,10 +2,10 @@
 name: Assegnazione pin GPIO di Raspberry Pi
 pins:
   '1':
-    name: Alimentazione 3v3
+    name: Alimentazione a 3.3V
     type: "+3v3"
   '2':
-    name: Alimentazione 5v
+    name: Alimentazione a 5V
     type: "+5v"
   '3':
     name: SDA
@@ -19,7 +19,7 @@ pins:
       alt0: SDA1
       alt1: SA3
   '4':
-    name: Alimentazione 5v
+    name: Alimentazione a 5V
     type: "+5v"
   '5':
     name: SCL
@@ -140,7 +140,7 @@ pins:
       alt3: SD1_CMD
       alt4: ARM_RTCK
   '17':
-    name: Alimentazione 3v3
+    name: Alimentazione a 3.3V
     type: "+3v3"
   '18':
     name: ''

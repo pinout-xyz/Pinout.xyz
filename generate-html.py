@@ -297,7 +297,7 @@ def get_hreflang_urls(src):
 	for lang in alternate_urls:
 		if src in alternate_urls[lang]:
 			url = alternate_urls[lang][src]
-			hreflang.append('<link rel="alternate" src="{url}" hreflang="{lang}"/>'.format(
+			hreflang.append('<link rel="alternate" href="{url}" hreflang="{lang}"/>'.format(
 					lang=lang,
 					url=url
 				))

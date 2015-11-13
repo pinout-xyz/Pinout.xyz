@@ -327,7 +327,7 @@ Main Program Flow
 '''
 
 
-lang = "en-GB"
+lang = "en"
 default_strings = {
 	'made_by': '* Made by {manufacturer}',
 	'type_hat': '* HAT form-factor',
@@ -425,7 +425,8 @@ for pin in range(1,len(pinout.pins)+1):
 		resource_url = resource_url,
 		overlays = overlays_html,
 		description = pinout.settings['default_desc'],
-		title = pin_title + pinout.settings['title_suffix']
+		title = pin_title + pinout.settings['title_suffix'],
+		langcode = lang
 	)
 	print('Outputting page {}'.format(pin_url))
 
@@ -467,7 +468,8 @@ for url in pages:
 		overlays = overlays_html,
 		resource_url = resource_url,
 		description = pages[url]['description'],
-		title = pages[url]['name']
+		title = pages[url]['name'],
+		langcode = lang
 	)
 	print('Outputting page {}'.format(url))
 	

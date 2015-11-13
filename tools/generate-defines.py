@@ -7,7 +7,7 @@ import os
 import time
 import sys
 
-lang = 'en-GB'
+lang = 'en'
 
 pins = None
 

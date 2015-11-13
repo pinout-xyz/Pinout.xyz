@@ -30,17 +30,15 @@ Current known contributors are:
 * it-IT - @LizardM4 
 * tr-TR - @Ardakilic
 
-We are looking for additional contributors to cater for languages not yet in our repository. If you wish to help translate into a new language:
+You should start by duplicating the `src/en` directory to the
+appropriate culture. For example if you want to create a German translation you would create the folder `src/de`.
 
-You should start by duplicating the `src/en-GB` directory to the
-appropriate culture. For example if you want to create a German translation you would create the folder `src/de-DE`.
-
-At the moment cultures are not fully supported, so you can't have `src/fr-CA` ( sorry! ), and there are no plans for this.
+There are no plans to support cultures, so you can't have `src/fr-CA` ( sorry! ).
 
 Once you've made your translation, build and preview it with, for example:
 
 ```bash
-make serve LANG=de-DE
+make serve LANG=de
 ```
 
 And then open: http://127.0.0.1:5000 in your browser.

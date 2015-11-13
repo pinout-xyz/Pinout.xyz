@@ -328,7 +328,7 @@ Main Program Flow
 '''
 
 
-lang = "en-GB"
+lang = "en"
 default_strings = {
 	'made_by': '* Made by {manufacturer}',
 	'type_hat': '* HAT form-factor',
@@ -469,7 +469,8 @@ for url in pages:
 		overlays = overlays_html,
 		resource_url = resource_url,
 		description = pages[url]['description'],
-		title = pages[url]['name']
+		title = pages[url]['name'],
+		langcode = lang
 	)
 	print('Outputting page {}'.format(url))
 	

@@ -53,7 +53,7 @@ def physical_to(pin, scheme='bcm'):
         return pin
     return None
 
-def load(lang='en-GB'):
+def load(lang='en'):
     global pins, settings
     if DB_FILE.endswith('.yaml'):
         db = yaml.load(open('src/{}/{}'.format(lang,DB_FILE)).read())

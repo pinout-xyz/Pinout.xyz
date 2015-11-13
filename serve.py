@@ -3,7 +3,7 @@ from flask import Flask, send_from_directory
 import sys
 app = Flask(__name__)
 
-lang = 'en-GB'
+lang = 'en'
 
 @app.route('/')
 def show_index():

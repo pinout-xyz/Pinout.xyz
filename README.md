@@ -24,26 +24,26 @@ The contents of this GitHub repository are used to build http://pinout.xyz and i
 
 Current known contributors are:
 
-* de-DE - @rdmueller and KojoePi
-* es-ES - @ResonantWave
-* fr-FR - @RogueM
-* tr-TR - @Ardakilic
+* de - @rdmueller and KojoePi
+* es - @ResonantWave
+* fr - @RogueM
+* tr - @Ardakilic
 
 We're looking for ( based on traffic ):
 
-* Italian, it-IT
-* Polish pl-PL
+* Italian, it
+* Polish pl
 * And any others!
 
-You should start by duplicating the `src/en-GB` directory to the
-appropriate culture. For example if you want to create a German translation you would create the folder `src/de-DE`.
+You should start by duplicating the `src/en` directory to the
+appropriate culture. For example if you want to create a German translation you would create the folder `src/de`.
 
-At the moment cultures are not fully supported, so you can't have `src/fr-CA` ( sorry! ), and there are no plans for this.
+There are no plans to support cultures, so you can't have `src/fr-CA` ( sorry! ).
 
 Once you've made your translation, build and preview it with, for example:
 
 ```bash
-make serve LANG=de-DE
+make serve LANG=de
 ```
 
 And then open: http://127.0.0.1:5000 in your browser.

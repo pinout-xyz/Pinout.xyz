@@ -5,6 +5,7 @@ import sys
 import pinout
 import markjaml
 import glob
+import os
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -46,7 +47,7 @@ def get_pin_url(pin_num,pinout):
 
 	return url_slugify('pin{}_{}'.format(pin_num,pin_url))
 
-def generate_for_lang(lang="en-GB"):
+def generate_for_lang(lang="en"):
 	url_lookup = {}
 
 	pinout.load(lang)
@@ -79,8 +80,8 @@ def generate_for_lang(lang="en-GB"):
 
 	return url_lookup
 
-def generate_urls(lang="en-GB"):
-	languages = [l.replace('src/','') for l in glob.glob('src/*-*')] #  if not l == 'src/'+lang
+def generate_urls(lang="en"):
+	languages = [l.replace('src/','') for l in glob.glob('src/??') if os.path.isdir(l)] #  if not l == 'src/'+lang
 	urls = {}
 	for lang in languages:
 		urls[lang] = generate_for_lang(lang)

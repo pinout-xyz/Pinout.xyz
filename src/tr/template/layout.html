@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="es-ES">
+<html lang="{{langcode}}">
 	<head>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>{{title}}</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="description" content="{{description}}" />
 		<link href='//fonts.googleapis.com/css?family=Sanchez|Ubuntu+Mono' rel='stylesheet' type='text/css' />
 		<link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
-		<link href="{{resource_url}}print.css?v={{v}}" rel="stylesheet" media="print">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		{{hreflang}}
 		<script>
@@ -17,7 +16,7 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-69846516-5', 'auto');
+		  ga('create', 'UA-69846516-2', 'auto');
 		  ga('send', 'pageview');
 
 		</script>
@@ -25,16 +24,18 @@
 	<body>
 		<div id="container">
 			<ul class="main-nav">
+				<li><a href="http://www.raspi.gen.tr/">Raspberry Pi Türkiye</a></li>
+				<li><a href="http://forum.raspi.gen.tr/">Forumlar</a></li>
+				<li><a href="https://twitter.com/RPiTR"><i class="fa fa-twitter"></i> @RPiTR</a></li>
 				<li><a href="https://twitter.com/gadgetoid"><i class="fa fa-twitter"></i> @Gadgetoid</a></li>
-				<li><a href="https://twitter.com/nixijav"><i class="fa fa-twitter"></i> @nixijav</a></li>
-				<li><a href="https://github.com/Gadgetoid/Pinout2"><i class="fa fa-github"></i> Contribuye</a></li>
+				<li><a href="https://github.com/Ardakilic/Pinout2"><i class="fa fa-github"></i> Destekleyin</a></li>
 				{{lang_links}}
 			</ul>
-			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
+			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="//tr.pinout.xyz"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
 			<div class="overlay-container">
-				<span>Aprende los pines de la Pi y sus add-ons <i class="fa fa-arrow-right"></i></span>
+				<span>Raspberry Pi Eklenti kartları ve özellikleri <i class="fa fa-arrow-right"></i></span>
 				<div class="drop-down">
-					<span>Elige&hellip;</span>
+					<span>Seçiniz&hellip;</span>
 					<ul class="overlay">
 						{{overlays}}
 					</ul>
@@ -51,16 +52,18 @@
 				</div>
 			</div>
 			<div class="footer" style="clear: both;padding: 20px 0px;text-align:center;">
-				<p>Gracias a <a href="https://twitter.com/roguehal13">@RogueHAL13</a>, <a href="https://twitter.com/ardadev">@ardadev</a>, <a href="https://twitter.com/nixijav">@nixijav</a></p>
-				<p>¿Has encontrado un error o quieres añadir tu propia placa? <a href="https://github.com/gadgetoid/Pinout2">Ven a nuestro repositorio de GitHub</a> y envía un Issue o un Pull Request!</p>
+				<p>Türkçeleştirme: <a href="http://arda.pw">Arda Kılıçdağı</a></p>
+				<p>Bir hata ile mi karşılaştınız, ya da kendi tasarladığınız kartın projeye eklenmesini mi istiyorsunuz? <a href="https://github.com/gadgetoid/Pinout2">Orijinal Repoya</a> veya <a href="https://github.com/Ardakilic/Pinout2">Türkçe Repoya uğrayarak</a> kodları inceleyebilir, fikir ve önerilerinizi sunabilir, geliştirmede katkıda bulunabilirsiniz.</p>
+				<p><a href="http://www.raspi.gen.tr">Siteye Geri Dön</a></p>
 			</div>
 		</div>
 
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
-    	<script src='{{resource_url}}prettify/lang-ruby.js'></script>
-    	<script src='{{resource_url}}prettify/lang-bash.js'></script>
-	<script src='{{resource_url}}gaat.js'></script>
+		<script src='{{resource_url}}prettify/lang-ruby.js'></script>
+		<script src='{{resource_url}}prettify/lang-bash.js'></script>
+		<script src='{{resource_url}}gaat.js'></script>
 		<script src='{{resource_url}}pinout.js?v={{v}}'></script>
+
 </body>
 </html>

@@ -86,7 +86,7 @@ pins:
       alt4: SPI1_CE1_N
       alt5: RTS1
   '12':
-    name: PCM_C
+    name: PWM0
     description: PCM Tackt (Clock)
     type: GPIO
     scheme:
@@ -100,7 +100,7 @@ pins:
       alt4: SPI1_CE0_N
       alt5: PWM0
   '13':
-    name: PCM_D
+    name: ''
     type: GPIO
     scheme:
       wiringpi: 2
@@ -272,7 +272,7 @@ pins:
       alt2: reserviert
       alt5: ARM_RTCK
   '32':
-    name: ''
+    name: PWM0
     type: GPIO
     scheme:
       wiringpi: 26
@@ -283,7 +283,7 @@ pins:
       alt2: reserviert
       alt5: ARM_TMS
   '33':
-    name: ''
+    name: PWM1
     type: GPIO
     scheme:
       wiringpi: 23

@@ -109,7 +109,7 @@ L'Explorer HAT pro est un chapeau multi-usage avec entrées et sorties en 5V, en
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat
+curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
 Puis, sous Python, en guise de test que tout fonctionne bien:

@@ -77,7 +77,7 @@ Entradas y salidas de 5V, paneles táctiles y LEDs componen el Explorer HAT.
 Para preparar e instalar el HAT utiliza la siguiente línea:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat
+curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

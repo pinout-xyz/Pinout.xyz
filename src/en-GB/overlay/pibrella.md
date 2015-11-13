@@ -66,7 +66,7 @@ The all-in-one light, sound, input and output add-on board from Pimoroni vs Cynt
 Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella
+curl -sS get.pimoroni.com/pibrella | bash
 ```
 
 Then import it into your Python script and start tinkering:

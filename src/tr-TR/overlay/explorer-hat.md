@@ -76,7 +76,7 @@ pin:
 5V giriş ve çıkışları, dokunmatik paneli ve LEDler ile Explorer HAT, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat
+curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
 Ardından Python scriptinize aşağıdaki kodları ekleyip prototipinizi kurcalamaya başlayabilirsiniz:

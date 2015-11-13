@@ -42,16 +42,10 @@ Make sure you have no rogue SPI device drivers running and check it's connected 
 avrdude -p m328p -c gpio
 ```
 
-To get started compiling Arduino sketches from the command line:
+To get started compiling Arduino sketches from the command line, first:
 
 ```bash
 sudo apt-get install arduino arduino-mk
 ```
 
-This basic Makefile should get you started. Create a basic sketch, name it mysketch.ino and run:
-
-```bash
-export BOARD=atmega328
-make
-avrdude -p m328p -c gpio -e -U flash:w:build-cli/Arduino.hex
-```
+Then refer to this [article](http://pi.gadgetoid.com/article/programming-your-pico-piduino) for a complete run-through of the process!

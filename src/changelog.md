@@ -1,6 +1,9 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Nov 12, 2015
+- major tweaks to arduino-spi.md
+
 Nov 9, 2015
 - major tweaks to sense-hat.md
 

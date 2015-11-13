@@ -1,6 +1,6 @@
 <!--
 ---
-name: Ground
+name: Masse
 description: broches raccordées à la masse
 pin:
   '6':

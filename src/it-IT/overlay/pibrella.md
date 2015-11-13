@@ -67,7 +67,7 @@ del Raspberry, ma la seriale e l'I2C restano liberi, lasciando molto spazio alla
 Pibrella è facile da usare; innanzitutto devi installare il modulo usando un terminale (LXTerminal):
 
 ```bash
-curl -sS get.pimoroni.com/pibrella
+curl -sS get.pimoroni.com/pibrella | bash
 ```
 
 E poi lo importi nel tuo script Python per smanettare:

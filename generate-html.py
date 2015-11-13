@@ -294,7 +294,7 @@ def render_nav(url, overlay=None):
 
 def get_hreflang_urls(src):
 	hreflang = []
-	for lang in alternate_urls:
+	for lang in sorted(alternate_urls):
 		if src in alternate_urls[lang]:
 			url = alternate_urls[lang][src]
 			hreflang.append('<link rel="alternate" href="{url}" hreflang="{lang}"/>'.format(
@@ -306,7 +306,7 @@ def get_hreflang_urls(src):
 
 def get_lang_urls(src):
 	urls = []
-	for url_lang in alternate_urls:
+	for url_lang in sorted(alternate_urls):
 		if src in alternate_urls[url_lang]:
 			img_css = ''
 			if url_lang == lang:

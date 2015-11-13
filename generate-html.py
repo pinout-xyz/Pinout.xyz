@@ -277,7 +277,8 @@ def render_pin(pin_num, selected_url, overlay=None):
 		pin_selected = selected,
 		pin_url = pin_url,
 		pin_title = ', '.join(pin_link_title),
-		pin_name = pin_name
+		pin_name = pin_name,
+		langcode = lang
 		)
 
 def render_nav(url, overlay=None):
@@ -425,7 +426,8 @@ for pin in range(1,len(pinout.pins)+1):
 		resource_url = resource_url,
 		overlays = overlays_html,
 		description = pinout.settings['default_desc'],
-		title = pin_title + pinout.settings['title_suffix']
+		title = pin_title + pinout.settings['title_suffix'],
+		langcode = lang
 	)
 	print('Outputting page {}'.format(pin_url))
 

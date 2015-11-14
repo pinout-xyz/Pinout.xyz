@@ -15,6 +15,7 @@ strings:
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
 - uses_i2c: 'Uses I2C'
+- uses_spi: 'Uses SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - uses_n_gpio_pins: ' Uses {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'

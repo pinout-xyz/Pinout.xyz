@@ -15,7 +15,14 @@ strings:
 - type_classic: 'formato clásico'
 - pin_header: '{} pin header'
 - uses_i2c: 'Usa I2C'
+- uses_spi: 'Usa SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
+- uses_n_gpio_pins: ' Usa {} GPIO pins'
+- bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
+- physical_pin_n: 'Physical pin {}'
+- more_information: 'More Information'
+- github_repository: 'GitHub Repository'
+- buy_now: 'Buy Now'
 overlays:
 - ground
 - spi

@@ -1,0 +1,368 @@
+---
+name: Raspberry Pi GPIO Pinout
+pins:
+  '1':
+    name: 3v3 Power
+    type: "+3v3"
+  '2':
+    name: 5v Power
+    type: "+5v"
+  '3':
+    name: SDA
+    description: I2C Data
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 8
+      bcm: 2
+      bcmAlt: 0
+    functions:
+      alt0: SDA1
+      alt1: SA3
+  '4':
+    name: 5v Power
+    type: "+5v"
+  '5':
+    name: SCL
+    description: I2C Clock
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 9
+      bcm: 3
+      bcmAlt: 1
+    functions:
+      alt0: SCL1
+      alt1: SA2
+  '6':
+    name: Ground
+    type: GND
+  '7':
+    name: GPCLK0
+    type: GPIO
+    scheme:
+      wiringpi: 7
+      bcm: 4
+    functions:
+      alt0: GPCLK0
+      alt1: SA1
+      alt5: ARM_TDI
+  '8':
+    name: TXD
+    description: UART Transmit
+    type: GPIO/UART
+    scheme:
+      wiringpi: 15
+      bcm: 14
+    functions:
+      alt0: TXD0
+      alt1: SD6
+      alt2: Reserved
+      alt5: TXD1
+  '9':
+    name: Ground
+    type: GND
+  '10':
+    name: RXD
+    description: UART Receive
+    type: GPIO/UART
+    scheme:
+      wiringpi: 16
+      bcm: 15
+    functions:
+      alt0: RXD0
+      alt1: SD7
+      alt2: Reserved
+      alt5: RXD1
+  '11':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 0
+      bcm: 17
+    functions:
+      alt0: Reserved
+      alt1: SD9
+      alt2: Reserved
+      alt3: RTS0
+      alt4: SPI1_CE1_N
+      alt5: RTS1
+  '12':
+    name: PWM0
+    description: PWM0
+    type: GPIO
+    scheme:
+      wiringpi: 1
+      bcm: 18
+    functions:
+      alt0: PCM_CLK
+      alt1: SD10
+      alt2: Reserved
+      alt3: BSCSL SDA / MOSI
+      alt4: SPI1_CE0_N
+      alt5: PWM0
+  '13':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 2
+      bcm: 27
+      bcmAlt: 21
+    functions:
+      alt0: Reserved
+      alt1: Reserved
+      alt2: Reserved
+      alt3: SD1_DAT3
+      alt4: ARM_TMS
+  '14':
+    name: Ground
+    type: GND
+  '15':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 3
+      bcm: 22
+    functions:
+      alt0: Reserved
+      alt1: SD14
+      alt2: Reserved
+      alt3: SD1_CLK
+      alt4: ARM_TRST
+  '16':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 4
+      bcm: 23
+    functions:
+      alt0: Reserved
+      alt1: SD15
+      alt2: Reserved
+      alt3: SD1_CMD
+      alt4: ARM_RTCK
+  '17':
+    name: 3v3 Power
+    type: "+3v3"
+  '18':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 5
+      bcm: 24
+    functions:
+      alt0: Reserved
+      alt1: SD16
+      alt2: Reserved
+      alt3: SD1_DAT0
+      alt4: ARM_TDO
+  '19':
+    name: MOSI
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 12
+      bcm: 10
+    functions:
+      alt0: SPI0_MOSI
+      alt1: SD2
+      alt2: Reserved
+  '20':
+    name: Ground
+    type: GND
+  '21':
+    name: MISO
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 13
+      bcm: 9
+    functions:
+      alt0: SPI0_MISO
+      alt1: SD1
+      alt2: Reserved
+  '22':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 6
+      bcm: 25
+    functions:
+      alt0: Reserved
+      alt1: SD17
+      alt2: Reserved
+      alt3: SD1_DAT1
+      alt4: ARM_TCK
+  '23':
+    name: SCLK
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 14
+      bcm: 11
+    functions:
+      alt0: SPI0_SCLK
+      alt1: SD3
+      alt2: Reserved
+  '24':
+    name: CE0
+    description: SPI Chip Select 0
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 10
+      bcm: 8
+    functions:
+      alt0: SPI0_CE0_N
+      alt1: SD0
+      alt2: Reserved
+  '25':
+    name: Ground
+    type: GND
+  '26':
+    name: CE1
+    description: SPI Chip Select 1
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 11
+      bcm: 7
+    functions:
+      alt0: SPI0_CE1_N
+      alt1: SWE_N / SRW_N
+      alt2: Reserved
+  '27':
+    name: ID_SD
+    description: HAT EEPROM i2c Data
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 30
+      bcm: 0
+    functions:
+      alt0: SDA0
+      alt1: SA5
+      alt2: Reserved
+  '28':
+    name: ID_SC
+    description: HAT EEPROM i2c Clock
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 31
+      bcm: 1
+    functions:
+      alt0: SCL0
+      alt1: SA4
+      alt2: Reserved
+  '29':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 21
+      bcm: 5
+    functions:
+      alt0: GPCLK1
+      alt1: SA0
+      alt2: Reserved
+      alt5: ARM_TDO
+  '30':
+    name: Ground
+    type: GND
+  '31':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 22
+      bcm: 6
+    functions:
+      alt0: GPCLK2
+      alt1: SOE_N / SE
+      alt2: Reserved
+      alt5: ARM_RTCK
+  '32':
+    name: PWM0
+    type: GPIO
+    scheme:
+      wiringpi: 26
+      bcm: 12
+    functions:
+      alt0: PWM0
+      alt1: SD4
+      alt2: Reserved
+      alt5: ARM_TMS
+  '33':
+    name: PWM1
+    type: GPIO
+    scheme:
+      wiringpi: 23
+      bcm: 13
+    functions:
+      alt0: PWM1
+      alt1: SD5
+      alt2: Reserved
+      alt5: ARM_TCK
+  '34':
+    name: Ground
+    type: GND
+  '35':
+    name: MISO
+    description: SPI Master-In
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 24
+      bcm: 19
+    functions:
+      alt0: PCM_FS
+      alt1: SD11
+      alt2: Reserved
+      alt3: BSCSL SCL / SCLK
+      alt4: SPI1_MISO
+      alt5: PWM1
+  '36':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 27
+      bcm: 16
+    functions:
+      alt0: Reserved
+      alt1: SD8
+      alt2: Reserved
+      alt3: CTS0
+      alt4: SPI1_CE2_N
+      alt5: CTS1
+  '37':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 25
+      bcm: 26
+    functions:
+      alt0: Reserved
+      alt1: Reserved
+      alt2: Reserved
+      alt3: SD1_DAT2
+      alt4: ARM_TDI
+  '38':
+    name: MOSI
+    description: SPI Master-Out
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 28
+      bcm: 20
+    functions:
+      alt0: PCM_DIN
+      alt1: SD12
+      alt2: Reserved
+      alt3: BSCSL / MISO
+      alt4: SPI1_MOSI
+      alt5: CPCLK0
+  '39':
+    name: Ground
+    type: GND
+  '40':
+    name: SCLK
+    description: SPI Clock
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 29
+      bcm: 21
+    functions:
+      alt0: PCM_DOUT
+      alt1: SD13
+      alt2: Reserved
+      alt3: BSCSL / CE_N
+      alt4: SPI1_SCLK
+      alt5: GPCLK1

@@ -10,11 +10,11 @@ url_suffix:
 urls:
   GND: tierra
 strings:
-- made_by: '* Hecho por {manufacturer}'
-- type_hat: '* formato HAT'
-- type_classic: '* formato clásico'
-- pin_header: '* {} pin header'
-- uses_i2c: '* Usa I2C'
+- made_by: 'Hecho por {manufacturer}'
+- type_hat: 'formato HAT'
+- type_classic: 'formato clásico'
+- pin_header: '{} pin header'
+- uses_i2c: 'Usa I2C'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 overlays:
 - ground

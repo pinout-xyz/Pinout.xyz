@@ -10,11 +10,11 @@ url_suffix:
 urls:
   GND: masse
 strings:
-- made_by: '* Produit {manufacturer}'
-- type_hat: '* format HAT'
-- type_classic: '* format Classic'
-- pin_header: '* {} broches'
-- uses_i2c: '* bus I2C'
+- made_by: 'Produit {manufacturer}'
+- type_hat: 'format HAT'
+- type_classic: 'format Classic'
+- pin_header: '{} broches'
+- uses_i2c: 'bus I2C'
 - wiring_pi_pin: 'Broche Wiring Pi {}'
 overlays:
 - ground

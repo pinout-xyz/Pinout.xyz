@@ -10,11 +10,11 @@ url_suffix:
 urls:
   GND: massa
 strings:
-- made_by: '* Prodotto da {manufacturer}'
-- type_hat: '* Fattore di forma HAT'
-- type_classic: '* Fattore di forma classico'
-- pin_header: '* {} pin header'
-- uses_i2c: '* Utilizza I2C'
+- made_by: 'Prodotto da {manufacturer}'
+- type_hat: 'Fattore di forma HAT'
+- type_classic: 'Fattore di forma classico'
+- pin_header: '{} pin header'
+- uses_i2c: 'Utilizza I2C'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 overlays:
 - ground

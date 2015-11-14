@@ -10,12 +10,19 @@ url_suffix:
 urls:
   GND: masse
 strings:
-- made_by: 'Produit {manufacturer}'
+- made_by: 'produit {manufacturer}'
 - type_hat: 'format HAT'
 - type_classic: 'format Classic'
 - pin_header: '{} broches'
 - uses_i2c: 'bus I2C'
-- wiring_pi_pin: 'Broche Wiring Pi {}'
+- uses_spi: 'bus SPI'
+- wiring_pi_pin: 'broche Wiring Pi {}'
+- uses_n_gpio_pins: ' {} broches GPIO actives'
+- bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
+- physical_pin_n: 'broche physique {}'
+- more_information: 'plus d'information'
+- github_repository: 'lien GitHub'
+- buy_now: 'achat'
 overlays:
 - ground
 - spi

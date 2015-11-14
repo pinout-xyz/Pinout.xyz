@@ -20,7 +20,7 @@ strings:
 - uses_n_gpio_pins: ' {} broches GPIO actives'
 - bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
 - physical_pin_n: 'broche physique {}'
-- more_information: 'plus d'information'
+- more_information: 'informations supplémentaires'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
 overlays:

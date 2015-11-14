@@ -24,13 +24,13 @@ The contents of this GitHub repository are used to build http://pinout.xyz and i
 
 Current known contributors are:
 
-* de-DE - @rdmueller and KojoePi
-* es-ES - @ResonantWave
-* fr-FR - @RogueM
-* it-IT - @LizardM4 
-* tr-TR - @Ardakilic
+* de - @rdmueller and @KojoePi
+* es - @ResonantWave
+* fr - @RogueM
+* it - @LizardM4 
+* tr - @Ardakilic
 
-You should start by duplicating the `src/en` directory to the
+If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the
 appropriate culture. For example if you want to create a German translation you would create the folder `src/de`.
 
 There are no plans to support cultures, so you can't have `src/fr-CA` ( sorry! ).

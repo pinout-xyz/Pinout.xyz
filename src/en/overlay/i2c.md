@@ -26,7 +26,7 @@ pin:
 
 The Raspberry Pi's I2C pins are an extremely useful way to talk to many different types of external peripheral; from the MCP23017 digital IO expander, to a connected ATmega.
 
-The i2c pins include a fixed 1.8k pull-up resistor to 3.3v. This means they are not suitable for use as general purpose IO where a pull-up is not required.
+The i2c pins include a fixed 1.8 kohms pull-up resistor to 3.3v. This means they are not suitable for use as general purpose IO where a pull-up is not required.
 
 You can verify the address of connected I2C peripherals with a simple one-liner:
 

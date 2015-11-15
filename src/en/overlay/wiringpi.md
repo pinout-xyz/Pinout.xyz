@@ -2,6 +2,8 @@
 ---
 name: WiringPi GPIO Pinout
 page_url: wiringpi
+github: https://github.com/WiringPi/WiringPi2-Python
+url: http://wiringpi.com
 pin:
   '3':
     name: WiringPi 8
@@ -60,7 +62,7 @@ pin:
 
 ###WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 
-The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across muliple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi2" respectively.
+The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi2" respectively.
 
 Python users note the 2 on the end, the WiringPi2-Python library finally brings a whole host of existing WiringPi functionality to Python including brand new features from WiringPi 2.
 

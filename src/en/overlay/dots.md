@@ -100,13 +100,12 @@ To read a Dot you should set its corresponding pin as an INPUT and make sure it'
 
 ```python
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM )
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(dot_pin, GPIO.IN, GPIO.PUD_UP)
 state = GPIO.input(dot_pin)
 ```
 
-It's good practise to only turn on the PULLUP when you actually want to read the Dot, so a method like
-this is recommended for reading:
+It's good practice to only turn on the PULLUP when you actually want to read the Dot, so a method like this is recommended for reading:
 
 ```python
 def is_dot_connected(dot_pin):

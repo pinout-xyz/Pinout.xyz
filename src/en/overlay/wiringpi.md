@@ -75,3 +75,5 @@ Installing to Python couldn't be easier, just:
 ```bash
 sudo pip install wiringpi2
 ```
+
+For more information about WiringPi you should visit the official WiringPi website.

@@ -19,37 +19,37 @@ install:
   'examples': 'python/examples/'
 pincount: 40
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  7:
+  '7':
     name: Botón del Joystick
     mode: entrada
     active: bajo (apagado)
-  11:
+  '11':
     name: Joystick Izquierda
     mode: entrada
     active: bajo (apagado)
-  13:
+  '13':
     name: Joystick Arriba
     mode: entrada
     active: bajo (apagado)
-  15:
+  '15':
     name: Joystick Derecha
     mode: entrada
     active: bajo (apagado)
-  19:
+  '19':
     mode: spi
-  21:
+  '21':
     name: Joystick Abajo
     mode: entrada
     active: bajo (apagado)
-  22:
+  '22':
     name: LCD CMD/DATA
     mode: salida
     active: alto (encendido)
-  23:
+  '23':
     mode: spi
 -->
 #Display-o-Tron 3000

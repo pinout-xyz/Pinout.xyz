@@ -10,26 +10,26 @@ install:
     - 'spi'    
 pincount: 40
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  16:
+  '16':
     name: Joystick
     mode: input
-  18:
+  '18':
     name: Joystick
     mode: input
-  19:
+  '19':
     mode: spi
-  21:
+  '21':
     mode: spi
-  22:
+  '22':
     name: Joystick
     mode: input
-  23:
+  '23':
     mode: spi
-  24:
+  '24':
     mode: spi
 -->
 #Sense HAT

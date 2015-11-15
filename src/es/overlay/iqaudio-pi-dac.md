@@ -9,30 +9,30 @@ install:
     - 'i2c'
 pincount: 40
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  12:
+  '12':
     name: I2S
-  15:
+  '15':
     name: Mutear/Desmutear
     description: Solo Pi-AMP+ (opcional) 
-  16:
+  '16':
     name: Codificador rotatorio
     description: (opcional) 
-  18:
+  '18':
     name: Codificador rotatorio
     description: (opcional) 
-  20:
-  22:
+  '20':
+  '22':
     name: Sensor de infrarrojos
     description: (opcional) 
-  35:
+  '35':
     name: I2S
-  38:
+  '38':
     name: I2S
-  40:
+  '40':
     name: I2S
 -->
 #IQaudIO Pi-DAC+

@@ -4,7 +4,7 @@ name: Unicorn HAT
 manufacturer: Pimoroni
 url: http://shop.pimoroni.com/products/unicorn-hat
 buy: http://shop.pimoroni.com/products/unicorn-hat
-description: 64 blindingly bright RGB LEDs on a single HAT
+description: une matrice 8x8 de LEDs RGB
 github: https://github.com/pimoroni/unicornhat
 install:
   'apt':
@@ -18,7 +18,7 @@ install:
 pincount: 40
 pin:
   '12':
-    name: Data
+    name: données
     direction: output
     mode: pwm
     active: high
@@ -26,22 +26,17 @@ pin:
 -->
 #Unicorn HAT
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+l'Unicorn présente une matrice composée de 64 LEDs tricolores RGB contrôlées par une bibliothèque programmée en C, mais addressable depuis Python.
 
-64 blindingly bright LEDs packed into a HAT and driven with an ultra-fast, C library that you can talk to
-from Python make Unicorn HAT PiGlow's bigger, brighter brother.
+Important: l'opération de l'Unicorn au travers de la broche PWM n'est pas compatible avec l'usage de la sortie analogique audio de la Raspberry Pi, et il n'est pas possible d'utiliser les deux simultanément.
 
-Note: Unicorn HAT uses some special PWM trickery, performed with the same hardware that lets you Pi produce sound
-through the audio jack ( analog audio ) so you can't use both at the same time!
-
-To get the HAT set up and ready to go you can use the one-line product installer:
+Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
 curl -sS get.pimoroni.com/unicornhat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Puis, sous Python, en guise de test que tout fonctionne bien:
 
 ```bash
 import unicornhat

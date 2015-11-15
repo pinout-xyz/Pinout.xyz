@@ -1,40 +1,39 @@
 <!--
 ---
-name: PiBorg LEDBorg
-description: A single RGB LED for your Raspberry Pi
+name: PiBorg LedBorg
+manufacturer: PiBorg
+description: une carte LED RGB pour la Raspberry Pi
+url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg
+pincount: 26
 pin:
   '11':
-    name: Red LED
+    name: LED rouge
     direction: output
     active: high
-    description: PiBorg Red LED
+    description: LED rouge de la PiBorg
   '13':
-    name: Green LED
+    name: LED verte
     direction: input
     active: high
-    description: PiBorg Green LED
+    description: LED verte de la PiBorg
   '15':
-    name: Blue LED
+    name: LED bleue
     direction: output
     active: high
-    description: PiBorg Blue LED
+    description: LED bleue de la PiBorg
 -->
-###The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi.
+###La carte PiBorg LedBorg ajoute une LED tricolore RGB à votre Raspberry Pi.
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+La carte LedBorg prend en charge la gestion de la LED. Cependant, si vous désirez contrôler le gamut de couleurs de manière plus précise, vous pouvez vous tourner vers WiringPi et son softPwn.
 
-PiBorg has its own driver, so you don't need to drive it manually.
+Pour ce faire, sachez que les broches WiringPi concernées sont les suivantes:
 
-If you want a much, much wider range of colours, though, you can drive it manually using softPwm in WiringPi. The pin assignments for this are as follows:
+WiringPi broche 0: LED rouge
+WiringPi broche 2: LED verte
+WiringPi broche 3: LED bleue
 
-WiringPi pin 0: Red LED
-WiringPi pin 2: Green LED
-WiringPi pin 3: Blue LED
-
-This is easy using WiringPi in Python:
-
+Voici un exemple WiringPi sous Python:
 
 ```python
 import wiringpi2 as wiringpi
@@ -44,8 +43,8 @@ wiringpi.softPwmCreate(0,0,100)
 wiringpi.softPwmCreate(2,0,100)
 wiringpi.softPwmCreate(3,0,100)
 
-# Purple!
-wiringpi.softPwmWrite(3,100) # Full Blue
-wiringpi.softPwmWrite(0,100) # Full Red
-wiringpi.softPWMWrite(2,0)	 # No Green
+# Pour du violet:
+wiringpi.softPwmWrite(0,100) # max rouge
+wiringpi.softPwmWrite(3,100) # max bleu
+wiringpi.softPWMWrite(2,0)	 # pas de vert
 ```

@@ -1,115 +1,112 @@
 <!--
 ---
 name: Raspberry Pi Dots
-description: Join the dots to make a circuit
+description: créez un circuit avec de la peinture électrique
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 pin:
   bcm0:
-    name: 'Color: Blue'
+    name: 'couleur: bleue'
     direction: input
   bcm1:
-    name: Dot 7
+    name: point 7
     direction: input
   bcm2:
-    name: Dot 22
+    name: point 22
     direction: input
   bcm3:
-    name: Dot 21
+    name: point 21
     direction: input
   bcm4:
-    name: Dot 2
+    name: point 2
     direction: input
   bcm5:
-    name: Dot 9
+    name: point 9
     direction: input
   bcm6:
-    name: Dot 14
+    name: point 14
     direction: input
   bcm7:
-    name: Dot 6
+    name: point 6
     direction: input
   bcm8:
-    name: Dot 18
+    name: point 18
     direction: input
   bcm9:
-    name: Dot 17
+    name: point 17
     direction: input
   bcm10:
-    name: 'Color: Green'
+    name: 'couleur: vert'
     direction: input
   bcm11:
-    name: Dot 8
+    name: point 8
     direction: input
   bcm12:
-    name: Dot 10
+    name: point 10
     direction: input
   bcm13:
-    name: Cloud
+    name: 'forme: nuage'
     direction: input
   bcm14:
-    name: Dot 1
+    name: point 1
     direction: input
   bcm15:
-    name: Dot 3
+    name: point 3
     direction: input
   bcm16:
-    name: Dot 13
+    name: point 13
     direction: input
   bcm17:
-    name: Dot 4
+    name: point 4
     direction: input
   bcm18:
-    name: Dot 20
+    name: point 20
     direction: input
   bcm19:
-    name: 'Color: Orange'
+    name: 'couleur: orange'
     direction: input
   bcm20:
-    name: Bear
+    name: 'forme: ours'
     direction: input
   bcm21:
-    name: Dot 12
+    name: point 12
     direction: input
   bcm22:
-    name: Dot 15
+    name: point 15
     direction: input
   bcm23:
-    name: Dot 16
+    name: point 16
     direction: input
   bcm24:
-    name: Dot 19
+    name: point 19
     direction: input
   bcm25:
-    name: Dot 5
+    name: point 5
     direction: input
   bcm26:
-    name: Dot 11
+    name: point 11
     direction: input
   bcm27:
-    name: 'Color: Red'
+    name: 'couleur: rouge'
     direction: input
 -->
 #Raspberry Pi Dots
 
-###Dots is a Dot to Dot HAT board for the Raspberry Pi that lets you join-the-dots with BARE Conductive Paint!
+###Dots est un project éducatif qui vous permet de créez un circuit en joignant les points représentés avec de la peinture électrique.
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+Les points du circuit sont des contacts métalliques que la peinture connectera à la masse, créant un effect de résistance de rappel.
 
-Every Dot on the Dots board is a "floating" metal contact just waiting to be pulled down to ground with a dab of paint.
+Pour lire l'état d'un contact métallique, assurez vous de déclarer la broche correspondante en tant qu'entrée et en 'pull-up', comme ceci:
 
-To read a Dot you should set its corresponding pin as an INPUT and make sure it's pulled up like so:
 
 ```python
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM )
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(dot_pin, GPIO.IN, GPIO.PUD_UP)
 state = GPIO.input(dot_pin)
 ```
 
-It's good practise to only turn on the PULLUP when you actually want to read the Dot, so a method like
-this is recommended for reading:
+Il est cependant recommandé de n'activer le 'pull-up' que lorsque nécessaire pour la requête, par l'intermédiaire d'une fonction telle que celle qui suit:
 
 ```python
 def is_dot_connected(dot_pin):

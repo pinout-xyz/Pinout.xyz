@@ -10,7 +10,7 @@ import markjaml
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-lang = "en-GB"
+lang = "en"
 
 if len(sys.argv) > 1:
 	lang  = sys.argv[1]

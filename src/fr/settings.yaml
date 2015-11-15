@@ -1,0 +1,47 @@
+---
+default_desc: Le guide complet des broches GPIO de la Raspberry Pi
+  Pi, B+ and Pi 2
+default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
+title_suffix: " Raspberry Pi GPIO Pinout"
+base_url: /pinout/
+resource_url: /resources/
+domain: fr.pinout.xyz
+url_suffix:
+urls:
+  GND: masse
+strings:
+- made_by: 'produit {manufacturer}'
+- type_hat: 'format HAT'
+- type_classic: 'format Classic'
+- pin_header: '{} broches'
+- uses_i2c: 'bus I2C'
+- uses_spi: 'bus SPI'
+- wiring_pi_pin: 'broche Wiring Pi {}'
+- uses_n_gpio_pins: ' {} broches GPIO actives'
+- bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
+- physical_pin_n: 'broche physique {}'
+- more_information: 'informations supplémentaires'
+- github_repository: 'lien GitHub'
+- buy_now: 'achat'
+overlays:
+- ground
+- spi
+- uart
+- i2c
+- wiringpi
+- arduino-spi
+- rtk-000-001
+- piborg-ledborg
+- piglow
+- pibrella
+- unicorn-hat
+- skywriter-hat
+- explorer-hat-pro
+- explorer-hat
+- display-o-tron
+- display-o-tron-hat
+- dots
+- traffic-hat
+- iqaudio-pi-dac
+- piano-hat
+- sense-hat

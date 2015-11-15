@@ -42,7 +42,7 @@ control) analog audio to the Pi-DAC+ Phono connectors. The PI-DAC+ also, via the
 Texas Instruments TPA6133A headphone amp, supports the direct use of headphones via
 the Pi-DAC+ 3.5mm audio jack.
 
-The Pi Dac uses GPIO22 to mute/unmute the Pi-AMP+.
+The Pi-DAC+ uses GPIO22 to mute/unmute the Pi-AMP+.
 
 You can use GPIO25 to connect an IR sensor and GPIO23/24 for a rotary encoder. Both of
 these parts are optional, but are broken out on the Pi-DAC+ for convenient access.

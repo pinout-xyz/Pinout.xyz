@@ -1,8 +1,11 @@
 <!--
 ---
 name: PiBorg LEDBorg
+manufacturer: PiBorg
 description: A single RGB LED for your Raspberry Pi
+url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg
+pincount: 26
 pin:
   '11':
     name: Red LED
@@ -22,7 +25,7 @@ pin:
 -->
 ###The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi.
 
-PiBorg has its own driver, so you don't need to drive it manually.
+the PiBorg Ledborg has its own driver, so you don't need to drive it manually.
 
 If you want a much, much wider range of colours, though, you can drive it manually using softPwm in WiringPi. The pin assignments for this are as follows:
 
@@ -31,7 +34,6 @@ WiringPi pin 2: Green LED
 WiringPi pin 3: Blue LED
 
 This is easy using WiringPi in Python:
-
 
 ```python
 import wiringpi2 as wiringpi

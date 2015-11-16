@@ -43,7 +43,7 @@ def load_overlay(overlay):
     details = []
 
     if 'type' not in loaded:
-    	loaded['type'] = 'addon'
+        loaded['type'] = 'addon'
 
     if 'manufacturer' in loaded:
         details.append('* ' + strings['made_by'].format(manufacturer=loaded['manufacturer']))
@@ -92,7 +92,7 @@ def load_overlay(overlay):
         details.append('* [{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
 
     if loaded['type'] != 'info':
-    	loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], markdown.markdown('\n'.join(details)))
+        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], markdown.markdown('\n'.join(details)))
 
     if 'page_url' not in loaded:
         loaded['page_url'] = slugify(loaded['name'])

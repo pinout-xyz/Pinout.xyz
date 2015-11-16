@@ -2,6 +2,8 @@
 ---
 name: WiringPi GPIO Pinout
 page_url: wiringpi
+github: https://github.com/WiringPi/WiringPi2-Python
+url: http://wiringpi.com
 pin:
   '3':
     name: WiringPi 8
@@ -56,29 +58,24 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#Raspberry Pi WiringPi
+#WiringPi sur Raspberry Pi
 
-###WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
+###WiringPi est un concept proche de la façon dont Arduino adresse ses entrées et sorties, privilégiant la simplicité.
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+Le but avoué est de définir une librairie unique ainsi qu'un set de fonctions permettant l'accès au GPIO de la Raspberry Pi à partir de plusieurs languages de programmation.
 
-The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across muliple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi2" respectively.
+En effet, bien que WiringPi soit une bibliothèque en C au départ, elle est aussi disponible en Ruby et Python. Pour l'installer, un simple "gem install wiringpi" ou "pip install wiringpi2" fera l'affaire, pour l'environnement Ruby et Python respectivement.
 
-Python users note the 2 on the end, the WiringPi2-Python library finally brings a whole host of existing WiringPi functionality to Python including brand new features from WiringPi 2.
+Pour les usagers Python, noter bien le '2' suivant le 'wiringpi', cette nouvelle version est basée sur WiringPi 2 et incorpore la majorité des fonctionnalités de la version C.
 
-For more information about WiringPi you should visit the official WiringPi website.
+##Premiers pas avec WiringPi
 
-##Getting started with WiringPi
+WiringPi présente son propre système de numérotation des broches GPIO, visible sur la gauche de cette page.
 
-WiringPi uses its own pin numbering scheme, here you'll learn how WiringPi numbers your GPIO pins, what those pins do and how to do shiny things with them from within Python or Ruby.
-
-WiringPi, the Arduino-like GPIO library for the Pi, is available in C right from Gordon's git repository, Python, Ruby and even Perl and PHP to a lesser extent.
-
-Installing to Python couldn't be easier, just:
+Installez la librairie sous Python est particulièrement simple:
 
 ```bash
 sudo pip install wiringpi2
 ```
 
-Note the 2 on the end? That's the all new, shinier WiringPi!
+Pour toute information supplémentaire, visitez le site officiel de WiringPi!

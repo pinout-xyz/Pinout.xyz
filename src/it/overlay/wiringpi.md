@@ -2,6 +2,8 @@
 ---
 name: Mappa pin GPIO WiringPi
 page_url: wiringpi
+github: https://github.com/WiringPi/WiringPi2-Python
+url: http://wiringpi.com
 pin:
   '3':
     name: WiringPi 8
@@ -67,15 +69,10 @@ rispettivamente "gem install wiringpi" e "pip install wiringpi2".
 Gli utenti Python noteranno il 2 alla fine del pacchetto; la libreria WiringPi2-Python finalmente porta tutta una serie di 
 funzionalità preesistenti di WiringPi a Python, incluse le ultime presenti in WiringPi 2.
 
-Per maggiori informazioni su WiringPi, dai un'occhiata al loro sito ufficiale.
-
 ##Primi passi con WiringPi
 
 WiringPi usa il suo sistema di numerazione dei pin; qui imparerai come WiringPi indicizza i pin GPIO, cosa fanno tali pin e 
 come realizzare progetti interessanti con Python o Ruby.
-
-WiringPi, la libreria GPIO "simil-Arduino" per il Raspberry, è disponibile in C, direttamente dalla repository git di Gordon, 
-in Python, in Ruby, e persino in Perl e PHP, sebbene non in maniera altrettanto completa.
 
 Installarla in Python non potrebbe essere più semplice. Semplicemente:
 
@@ -83,4 +80,4 @@ Installarla in Python non potrebbe essere più semplice. Semplicemente:
 sudo pip install wiringpi2
 ```
 
-Hai notato il 2 alla fine? È la nuova, splendente libreria WiringPi!
+Per maggiori informazioni su WiringPi, dai un'occhiata al loro sito ufficiale.

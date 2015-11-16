@@ -1,6 +1,9 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Nov 15, 2015
+- major tweaks to piglow.md
+
 Nov 14, 2015
 - major tweaks to i2c.md and related pins
 

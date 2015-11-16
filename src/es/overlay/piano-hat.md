@@ -15,20 +15,20 @@ i2c:
     device: cap1188
     datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  7:
+  '7':
     name: Alerta A
     mode: entrada
-  11:
+  '11':
     name: Reset A
     mode: salida
-  13:
+  '13':
     name: Alerta B
     mode: entrada
-  15:
+  '15':
     name: Reset B
     mode: salida
 -->

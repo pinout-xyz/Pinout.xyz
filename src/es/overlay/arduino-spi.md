@@ -3,22 +3,22 @@
 name: Arduino SPI
 description: Programa un Arduino con el SPI de Raspberry Pi
 pin:
-  19:
+  '19':
     name: MOSI
     direction: salida
     active: alto (encendido)
     description: Master Out / Slave In
-  21:
+  '21':
     name: MISO
     direction: entrada
     active: alto (encendido)
     description: Master In / Slave Out
-  23:
+  '23':
     name: SCKL
     direction: salida
     active: alto (encendido)
     description: Reloj
-  24:
+  '24':
     name: CE0
     direction: salida
     active: alto (encendido)

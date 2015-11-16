@@ -28,19 +28,18 @@ i2c:
     name: Entrada Analógica
     device: ads1015
 pin:
-  '3': {}
-  '5': {}
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: salida
     active: alto (encendido)
-  '8': {}
-  '10': {}
   '11':
     name: LED 2
     mode: salida
     active: alto (encendido)
-  '12': {}
   '13':
     name: LED 3
     mode: salida
@@ -57,14 +56,10 @@ pin:
     name: Entrada 3
     mode: entrada
     active: alto (encendido)
-  '19': {}
-  '21': {}
   '22':
     name: Entrada 4
     mode: entrada
     active: alto (encendido)
-  '23': {}
-  '24': {}
   '29':
     name: LED 4
     mode: salida

@@ -3,51 +3,43 @@
 name: "Pi-DAC+"
 manufacturer: IQaudIO
 buy: http://www.iqaudio.co.uk
-description: An I2S digital to analog audio converter HAT for the Pi
+description: Convertisseur numérique-analogique pour la Raspberry Pi
 install:
   'devices':
     - 'i2c'
 pincount: 40
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  12:
+  '12':
     name: I2S
-  15:
-    name: Mute/Unmute
-    description: Pi-AMP+ only (optional) 
-  16:
-    name: Rotary Encoder
-    description: (optional) 
-  18:
-    name: Rotary Encoder
-    description: (optional)
-  22:
-    name: IR Sensor
-    description: (optional) 
-  35:
+  '15':
+    name: silence
+    description: pour le Pi-AMP+ (option) 
+  '16':
+    name: encodeur rotatif
+    description: (option) 
+  '18':
+    name: encodeur rotatif
+    description: (option)
+  '22':
+    name: capteur IR
+    description: (option) 
+  '35':
     name: I2S
-  38:
+  '38':
     name: I2S
-  40:
+  '40':
     name: I2S
 -->
 #IQaudIO Pi-DAC+
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+Le Pi-DAC+ permet de convertir le signal audio numérique I2S de la Raspi en analogique, à l'aide de son CDA Texas Instrument PCM5122 et sorties phono. Il comprend aussi un pre-ampli pour sortie casque Texas Instrument TPA6133A.
 
-The Pi-DAC+ takes the digital audio signals (I2S) from the Raspberry Pi and through the
-onboard Texas Instruments PCM5122 DAC delivers variable output (hardware volume
-control) analog audio to the Pi-DAC+ Phono connectors. The PI-DAC+ also, via the
-Texas Instruments TPA6133A headphone amp, supports the direct use of headphones via
-the Pi-DAC+ 3.5mm audio jack.
+La broche GPIO22 peut être utilisée pour couper le volume de l'ampli optionnel Pi-AMP+ rapidement (fonction mute/silence).
 
-The Pi Dac uses GPIO22 to mute/unmute the Pi-AMP+.
+De même la broche GPIO25 peut être utilisée pour la lecture d'un capteur IR, et les broches GPIO23/24 pour celle d'un encodeur rotatif. Ces composants sont des options à souder sur la carte en elle-même.
 
-You can use GPIO25 to connect an IR sensor and GPIO23/24 for a rotary encoder. Both of
-these parts are optional, but are broken out on the Pi-DAC+ for convenient access.
-
-Note: pins reserved for the rotary encoder and IR sensor can be used for other purposes if those add-ons have not been fitted and enabled by software.
+Note: Les broches réservées à ces options peuvent être utilisées pour d'autres applications du moment qu'elles n'ont pas été activées programmatiquement pour leur fonction Pi-DAC.

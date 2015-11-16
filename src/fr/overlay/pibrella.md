@@ -3,76 +3,73 @@
 name: Pibrella
 manufacturer: Pimoroni Vs Cyntech
 url: https://github.com/pimoroni/pibrella
-description: An all-in-one light, sound, input and output add-on board.
+description: carte multi-usage avec son, lumière, entrées et sorties
 pincount: 26
 pin:
   '7':
-    name: Green LED
+    name: LED verte
     direction: output
     active: high
   '11':
-    name: Yellow LED
+    name: LED jaune
     direction: output
     active: high
   '12':
-    name: Buzzer
+    name: buzzer piezo
     direction: output
     active: high
   '13':
-    name: Red LED
+    name: LED rouge
     direction: output
     active: high
   '15':
-    name: Output A
+    name: sortie A
     direction: output
     active: high
   '16':
-    name: Output B
+    name: sortie B
     direction: output
     active: high
   '18':
-    name: Output C
+    name: sortie C
     direction: output
     active: high
   '19':
-    name: Input D
+    name: sortie D
     direction: output
     active: high
   '21':
-    name: Input A
+    name: entrée A
     direction: input
     active: high
   '22':
-    name: Output D
+    name: entrée D
     direction: output
     active: high
   '23':
-    name: Button
+    name: bouton
     direction: input
     active: high
   '24':
-    name: Input C
+    name: entrée C
     direction: input
     active: high
   '26':
-    name: Input B
+    name: entrée B
     direction: input
     active: high
 -->
 #Pibrella
 
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+La Pibrella est une carte à usage multiple avec son, lumière, entrées et sorties. Elle monopolise un nombre élevé de broches GPIO tout en laissant cependant les bus série, SPI et i2c libres.
 
-The all-in-one light, sound, input and output add-on board from Pimoroni vs Cyntech uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
-
-Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
+Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
 curl -sS get.pimoroni.com/pibrella | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Puis, sous Python, en guise de test que tout fonctionne bien:
 
 ```bash
 import pibrella

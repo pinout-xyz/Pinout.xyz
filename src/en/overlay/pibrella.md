@@ -23,15 +23,15 @@ pin:
     direction: output
     active: high
   '15':
-    name: Output A
+    name: Output E
     direction: output
     active: high
   '16':
-    name: Output B
+    name: Output F
     direction: output
     active: high
   '18':
-    name: Output C
+    name: Output G
     direction: output
     active: high
   '19':
@@ -43,7 +43,7 @@ pin:
     direction: input
     active: high
   '22':
-    name: Output D
+    name: Output H
     direction: output
     active: high
   '23':

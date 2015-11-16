@@ -58,8 +58,6 @@ def load_overlay(overlay):
             details.append('* ' + strings['pin_header'].format(pincount))
 
     if 'pin' in loaded:
-        uses_5v = False
-        uses_3v = False
         uses = 0
         for pin in loaded['pin']:
             pin = str(pin)
@@ -69,11 +67,8 @@ def load_overlay(overlay):
             if pin in pinout.pins:
                 actual_pin = pinout.pins[pin]
 
-                if actual_pin['type'] in ['+3v3', '+5v', 'GND']:
-                    if actual_pin['type'] == '+3v3':
-                        uses_3v = True
-                    if actual_pin['type'] == '+5v':
-                        uses_5v = True
+                if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
+                    raise Exception("{} includes a reference to the {} pin, which isn't allowed".format(overlay, actual_pin['type']))
                 else:
                     uses += 1
 

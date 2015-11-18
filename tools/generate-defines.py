@@ -32,6 +32,7 @@ comment_prefix = {
     'c':      '//'
 }
 
+
 def slugify(value):
     """
     Normalizes string, converts to lowercase, removes non-alpha characters,
@@ -39,10 +40,11 @@ def slugify(value):
     """
     value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = value.replace('+','PLUS')
-    value = value.replace('-','MINUS')
+    value = value.replace('+', 'PLUS')
+    value = value.replace('-', 'MINUS')
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
+
 
 def bcm_to_physical(pin):
     pin = pin[3:]
@@ -54,12 +56,14 @@ def bcm_to_physical(pin):
                     print("Mapping BCM{} to {}".format(pin, str(idx)))
                     return str(idx)
 
+
 def physical_to_bcm(pin):
     pin = pins[pin]
     if 'scheme' in pin:
         if 'bcm' in pin['scheme']:
             return str(pin['scheme']['bcm'])
     return None
+
 
 def physical_to_wiringpi(pin):
     pin = pins[pin]
@@ -68,8 +72,9 @@ def physical_to_wiringpi(pin):
             return str(pin['scheme']['wiringpi'])
     return None
 
+
 def physical_to(pin, scheme='bcm'):
-    if scheme in ['bcm','wiringpi']:
+    if scheme in ['bcm', 'wiringpi']:
         pin = pins[pin]
         if 'scheme' in pin:
             if scheme in pin['scheme']:
@@ -78,16 +83,18 @@ def physical_to(pin, scheme='bcm'):
         return pin
     return None
 
-db = json.load(open('../src/{}/pi-pinout.json'.format(lang)))
-pins = db['pins']
-
-define = {}
-keys = []
 
 def add_define(key, value):
     global keys, define
     keys.append(key)
     define[key] = value
+
+
+db = json.load(open('../src/{}/pi-pinout.json'.format(lang)))
+pins = db['pins']
+
+define = {}
+keys = []
 
 if len(sys.argv) >= 3:
 
@@ -95,7 +102,7 @@ if len(sys.argv) >= 3:
     pin_scheme   = sys.argv[2]
     output_lang  = sys.argv[3]
 
-    overlay = json.load(open('../src/{}/overlay/{}.json'.format(lang,overlay_file)))
+    overlay = json.load(open('../src/{}/overlay/{}.json'.format(lang, overlay_file)))
 
     if 'i2c' in overlay:
         for addr in overlay['i2c']:
@@ -129,7 +136,7 @@ if len(sys.argv) >= 3:
             board_name = board_name,
             name = name
         )
-        row_length = max(len(key),row_length)
+        row_length = max(len(key), row_length)
 
 
     for name in keys:
@@ -137,9 +144,9 @@ if len(sys.argv) >= 3:
             board_name = board_name,
             name = name
         )
-        
+
         value = value_template[output_lang].format(value = define[name])
 
-        value = value.rjust(row_length - len(key) + len(value),' ')
+        value = value.rjust(row_length - len(key) + len(value), ' ')
 
         print(key+value)

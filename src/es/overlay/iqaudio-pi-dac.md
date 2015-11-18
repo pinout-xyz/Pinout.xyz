@@ -24,7 +24,6 @@ pin:
   '18':
     name: Codificador rotatorio
     description: (opcional) 
-  '20':
   '22':
     name: Sensor de infrarrojos
     description: (opcional) 

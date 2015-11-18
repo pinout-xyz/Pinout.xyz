@@ -10,19 +10,19 @@ url_suffix:
 urls:
   GND: masse_ground
 strings:
-- made_by: 'Made by {manufacturer}'
+- made_by: 'Hersteller: {manufacturer}'
 - type_hat: 'HAT form-factor'
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
-- uses_i2c: 'Uses I2C'
-- uses_spi: 'Uses SPI'
-- wiring_pi_pin: 'Wiring Pi pin {}'
-- uses_n_gpio_pins: 'Uses {} GPIO pins'
-- bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
+- uses_i2c: 'benutzt I2C'
+- uses_spi: 'benutzt SPI'
+- wiring_pi_pin: 'Wiring Pi Anschluss {}'
+- uses_n_gpio_pins: 'benutzt {} GPIO Anschlüsse'
+- bcm_pin_rev1_pi: 'BCM Anschluss {} auf dem Rev 1 ( sehr alter ) Pi'
 - physical_pin_n: 'Physical pin {}'
-- more_information: 'More Information'
+- more_information: 'Mehr Informationen'
 - github_repository: 'GitHub Repository'
-- buy_now: 'Buy Now'
+- buy_now: 'jetzt kaufen'
 overlays:
 - ground
 - spi

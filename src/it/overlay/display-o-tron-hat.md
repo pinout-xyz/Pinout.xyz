@@ -6,26 +6,26 @@ url: https://github.com/pimoroni/dot3k
 description: Un LCD da 3 righe di caratteri, RGB retroilluminato a 6 zone con 6 bottoni touch
 pincount: 40
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  22:
+  '22':
     name: LCD CMD/DATA
     mode: output
     active: high
-  19:
+  '19':
     mode: spi
-  22:
+  '22':
     name: LCD Register Select
     mode: output
-  23:
+  '23':
     mode: spi
-  24:
+  '24':
     name: LCD Chip Select
     mode: chipselect
     active: high
-  32:
+  '32':
     name: LCD Reset
     mode: output
     active: low

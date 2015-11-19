@@ -2,6 +2,8 @@
 ---
 name: Pinout del GPIO WiringPi
 page_url: wiringpi
+github: https://github.com/WiringPi/WiringPi2-Python
+url: http://wiringpi.com
 pin:
   '3':
     name: WiringPi 8
@@ -64,16 +66,14 @@ El objetivo es tener una única plataforma común y set de funciones para accede
 
 Los usuarios de Python deben tener cuidado con el 2 al final; la librería WiringPi2-Python finalmente proporciona un montón de funcionalidades existentes a Python, y también incluyendo algunas completamente nuevas.
 
-Para más información sobre WiringPi deberías visitar la página oficial de WiringPi.
-
 ##Empezando con WiringPi
 
 WiringPi utiliza su propio sistema de numeración de pines, aquí aprenderás como WiringPi los numera, que hacen esos pines y como hacer brillantes cosas con ellos desde Python o Ruby.
-
-La librería está disponible en C, Python, Ruby e incluso Perl y PHP en un menor grado, directamente del repositorio git de Gordon
 
 Instalar WiringPi en Python no puede ser más fácil, solo:
 
 ```bash
 sudo pip install wiringpi2
 ```
+
+Para más información sobre WiringPi deberías visitar la página oficial de WiringPi.

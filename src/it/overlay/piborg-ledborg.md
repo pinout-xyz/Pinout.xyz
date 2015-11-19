@@ -1,8 +1,11 @@
 <!--
 ---
 name: PiBorg LEDBorg
+manufacturer: PiBorg
 description: Un singolo LED RBG per il tuo Raspberry Pi
+url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg
+pincount: 26
 pin:
   '11':
     name: LED rosso
@@ -24,7 +27,7 @@ pin:
 
 PiBorg ha il suo driver, quindi non devi controllarlo manualmente.
 
-Se vuoi una gamma di colori decisamente più ampia tuttavia, puoi controllarlo manualmente 
+Se vuoi una gamma di colori decisamente più ampia tuttavia, puoi controllarlo manualmente
 usando softPwm su WiringPi. L'assegnazione dei pin è come segue:
 
 * WiringPi pin 0: LED rosso

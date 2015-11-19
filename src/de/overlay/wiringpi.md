@@ -1,6 +1,7 @@
 <!--
 ---
-name: WiringPi GPIO Pinout
+name: WiringPi Anschlussbelegung
+url: http://wiringpi.com/
 page_url: wiringpi
 pin:
   '3':
@@ -56,26 +57,18 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#Raspberry Pi WiringPi
+#WiringPi Bibliothek
 
-###WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
+###WiringPi is der Versuch die Einfachheit der VErdrahtung des Arduino auf den Raspberry Pi zu bringen.
 
-The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across muliple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi2" respectively.
+Das Ziel dieser Bibliothek ist es, eine einzige gemeinsame Plattform und Programmierschnistelle für den Zugriff auf die
+GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur VErfügung zu stellen.
+Im Kern ist WiringPi eine C-Bibliothek, aber sie steht auch in Ruby und Python per "gem install wiringpi" bzw. "pip install wiringpi2" zur Verfügung.
 
-Python users note the 2 on the end, the WiringPi2-Python library finally brings a whole host of existing WiringPi functionality to Python including brand new features from WiringPi 2.
+Bei Python muss man auf die "2" am Ende achten - das ist die WiringPi2-Python Bibliothek, die momentan die aktuelle Version ist.
 
-For more information about WiringPi you should visit the official WiringPi website.
+Mehr Informationen findest Du auf der offiziellen WiringPi-Webseite.
 
-##Getting started with WiringPi
+##Erste Schritte mit WiringPi
 
-WiringPi uses its own pin numbering scheme, here you'll learn how WiringPi numbers your GPIO pins, what those pins do and how to do shiny things with them from within Python or Ruby.
-
-WiringPi, the Arduino-like GPIO library for the Pi, is available in C right from Gordon's git repository, Python, Ruby and even Perl and PHP to a lesser extent.
-
-Installing to Python couldn't be easier, just:
-
-```bash
-sudo pip install wiringpi2
-```
-
-Note the 2 on the end? That's the all new, shinier WiringPi!
+WiringPi benutzt seine eigene Nummerierung der Anschlüsse am Pi. Links siehst Du die entsprechende Nummerierung.

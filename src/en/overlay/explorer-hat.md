@@ -76,7 +76,7 @@ pin:
 -->
 #Explorer HAT
 
-5V inputs and outputs, touch pads and LEDs make up the Explorer HAT, a jack of all trades prototyping side-kick for your Raspberry Pi.
+5V inputs and outputs, touch pads and LEDs make up the Explorer HAT; a jack of all trades prototyping side-kick for your Raspberry Pi.
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

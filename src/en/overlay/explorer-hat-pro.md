@@ -28,19 +28,18 @@ i2c:
     name: Analog Input
     device: ads1015
 pin:
-  '3': {}
-  '5': {}
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: output
     active: high
-  '8': {}
-  '10': {}
   '11':
     name: LED 2
     mode: output
     active: high
-  '12': {}
   '13':
     name: LED 3
     mode: output
@@ -57,14 +56,10 @@ pin:
     name: Input 3
     mode: input
     active: high
-  '19': {}
-  '21': {}
   '22':
     name: Input 4
     mode: input
     active: high
-  '23': {}
-  '24': {}
   '29':
     name: LED 4
     mode: output
@@ -104,7 +99,7 @@ pin:
 -->
 #Explorer HAT Pro
 
-5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
+5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro; a jack of all trades prototyping side-kick for your Raspberry Pi.
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

@@ -28,19 +28,18 @@ i2c:
     name: Entrées analogiques
     device: ads1015
 pin:
-  '3': {}
-  '5': {}
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: output
     active: high
-  '8': {}
-  '10': {}
   '11':
     name: LED 2
     mode: output
     active: high
-  '12': {}
   '13':
     name: LED 3
     mode: output
@@ -57,14 +56,10 @@ pin:
     name: Entrée 3
     mode: input
     active: high
-  '19': {}
-  '21': {}
   '22':
     name: Entrée 4
     mode: input
     active: high
-  '23': {}
-  '24': {}
   '29':
     name: LED 4
     mode: output
@@ -104,7 +99,7 @@ pin:
 -->
 #Explorer HAT Pro
 
-L'Explorer HAT pro est un chapeau multi-usage avec entrées et sorties en 5V, entrées analogiques et contrôle moteurs. Tout cela agrémenté de LED et touches tactiles. C'est donc d'un véritable couteau Suisse dont il s'agit!
+L'Explorer HAT pro est un chapeau à usage multiple avec entrées et sorties en 5V, entrées analogiques et contrôle moteurs. Tout cela agrémenté de LED et touches tactiles. C'est donc d'un véritable couteau Suisse dont il s'agit!
 
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 

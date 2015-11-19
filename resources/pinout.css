@@ -245,7 +245,10 @@ nav#gpio li.gpio span.pin {
 	background:#859900;
 }
 
-nav#gpio li.uart span.pin,
+nav#gpio li.uart span.pin {
+	background:#6c71c4;
+}
+
 nav#gpio li.pow3v3 span.pin {
 	background:#B58900;
 }

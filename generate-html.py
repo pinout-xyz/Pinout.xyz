@@ -43,23 +43,21 @@ def load_overlay(overlay):
     details = []
 
     if 'type' not in loaded:
-    	loaded['type'] = 'addon'
+        loaded['type'] = 'addon'
 
     if 'manufacturer' in loaded:
-        details.append('* ' + strings['made_by'].format(manufacturer=loaded['manufacturer']))
+        details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
 
     if 'pincount' in loaded:
         pincount = int(loaded['pincount'])
         if pincount == 40:
-            details.append('* ' + strings['type_hat'])
+            details.append(strings['type_hat'])
         elif pincount == 26:
-            details.append('* ' + strings['type_classic'])
+            details.append(strings['type_classic'])
         else:
-            details.append('* ' + strings['pin_header'].format(pincount))
+            details.append(strings['pin_header'].format(pincount))
 
     if 'pin' in loaded:
-        uses_5v = False
-        uses_3v = False
         uses = 0
         for pin in loaded['pin']:
             pin = str(pin)
@@ -69,11 +67,8 @@ def load_overlay(overlay):
             if pin in pinout.pins:
                 actual_pin = pinout.pins[pin]
 
-                if actual_pin['type'] in ['+3v3', '+5v', 'GND']:
-                    if actual_pin['type'] == '+3v3':
-                        uses_3v = True
-                    if actual_pin['type'] == '+5v':
-                        uses_5v = True
+                if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
+                    raise Exception("{} includes a reference to a {} pin, which isn't allowed".format(overlay, actual_pin['type']))
                 else:
                     uses += 1
 
@@ -85,19 +80,19 @@ def load_overlay(overlay):
             pin_5 = loaded['pin']['5']
             if 'mode' in pin_3 and 'mode' in pin_5:
                 if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-                    details.append('* ' + strings['uses_i2c'])
+                    details.append(strings['uses_i2c'])
 
     if 'url' in loaded:
-        details.append('* [{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
+        details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
 
     if 'github' in loaded:
-        details.append('* [{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
+        details.append('[{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
 
     if 'buy' in loaded:
-        details.append('* [{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
+        details.append('[{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
 
     if loaded['type'] != 'info':
-    	loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], markdown.markdown('\n'.join(details)))
+        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], markdown.markdown('\n'.join(map(lambda d: '* ' + d, details))))
 
     if 'page_url' not in loaded:
         loaded['page_url'] = slugify(loaded['name'])
@@ -340,7 +335,7 @@ default_strings = {
     'pin_header': '{} pin header',
     'uses_i2c': 'Uses I2C',
     'wiring_pi_pin': 'Wiring Pi pin {}',
-    'uses_n_gpio_pins': '* Uses {} GPIO pins',
+    'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
     'more_information': 'More Information',

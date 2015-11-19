@@ -17,12 +17,12 @@ strings:
 - uses_i2c: 'Utilizza I2C'
 - uses_spi: 'Utilizza SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
-- uses_n_gpio_pins: ' Utilizza {} GPIO pins'
-- bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
-- physical_pin_n: 'Physical pin {}'
-- more_information: 'More Information'
+- uses_n_gpio_pins: 'Utilizza {} GPIO pins'
+- bcm_pin_rev1_pi: 'BCM pin {} su Raspberry Rev 1 (le prime edizioni)'
+- physical_pin_n: 'Pin fisico {}'
+- more_information: 'Maggiori informazioni'
 - github_repository: 'GitHub Repository'
-- buy_now: 'Buy Now'
+- buy_now: 'Acquista'
 overlays:
 - ground
 - spi

@@ -24,7 +24,6 @@ pin:
   18:
     name: Rotary Encoder
     description: (optional) 
-  20:
   22:
     name: IR Sensor
     description: (optional) 

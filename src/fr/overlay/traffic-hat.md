@@ -4,52 +4,48 @@ name: Traffic HAT
 manufacturer: Ryanteck LTD.
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
-description: A quick and easy way to learn the basics of GPIO on a budget. All in
-  a nice HAT.
+description: carte multi-usage avec buzzer, LED et bouton
 pincount: 40
 pin:
   '15':
-    name: LED1 / Green
+    name: LED1 / vert
     direction: output
     active: high
   '16':
-    name: LED2 / Amber
+    name: LED2 / orange
     direction: output
     active: high
   '18':
-    name: LED3 / Red
+    name: LED3 / rouge
     direction: output
     active: high
   '22':
-    name: Button
+    name: bouton
     direction: input
     active: high
   '29':
-    name: Buzzer
+    name: buzzer
     direction: output
     active: high
 -->
 #Traffic HAT
 
-###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
-
-##AWAITING TRANSLATION
-##EN COURS DE TRADUCTION
+###Contrôler les broches GPIO du Traffic HAT depuis votre Raspberry Pi est aisé: 
 
 ```python
-import RPi.GPIO as IO
+import RPi.GPIO as GPIO
 from time import sleep
 
-IO.setmode(IO.BCM)
+GPIO.setmode(GPIO.BCM)
 
-#Lights
-IO.setup(22,IO.OUT)
-IO.setup(23,IO.OUT)
-IO.setup(24,IO.OUT)
+#LEDs
+GPIO.setup(22,GPIO.OUT)
+GPIO.setup(23,GPIO.OUT)
+GPIO.setup(24,GPIO.OUT)
 
 #Buzzer
-IO.setup(5,IO.OUT)
+GPIO.setup(5,GPIO.OUT)
 
-#Button
-IO.setup(25,IO.IN,pull_up_down=IO.PUD_UP)
+#Bouton
+GPIO.setup(25,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 ```

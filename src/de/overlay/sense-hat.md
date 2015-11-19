@@ -3,7 +3,7 @@
 name: "Sense HAT"
 manufacturer: Raspberry Pi Foundation
 url: https://www.raspberrypi.org/products/sense-hat/
-description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors 
+description: Erweiterungsmodul mit einer 8×8 RGB LED Matrix, 5-Tasten Joystick sowie jede menge Sensoren (Gyroskop, Beschleunigungsmesser, Magnetometer, Temperatur, Luftdruck und Luftfeuchtigkeit) 
 install:
   'devices':
     - 'i2c'
@@ -37,5 +37,5 @@ pin:
 LED Matrix: LED2472G -> ATTINY88 -> SPI(8/9/10/11)
 Joystick: SKRHABE010 -> ATTINY88 -> GPIO23/24/25
 Axis/IMU: LSM9DS1 -> i2c 0x1c(1e),0x6a(6b) (INT on MCU)
-Pressure/Temp: LPS25H -> i2c 0x5c
-Humidity/Temp: HTS221 -> i2c 0x5f
+Luftdruck/Temp: LPS25H -> i2c 0x5c
+Luftfeuchtigkeit/Temp: HTS221 -> i2c 0x5f

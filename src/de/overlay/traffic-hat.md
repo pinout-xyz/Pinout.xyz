@@ -4,24 +4,23 @@ name: Traffic HAT
 manufacturer: Ryanteck LTD.
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
-description: A quick and easy way to learn the basics of GPIO on a budget. All in
-  a nice HAT.
+description: Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
 pincount: 40
 pin:
   '15':
-    name: LED1 / Green
+    name: LED1 / Grün
     direction: output
     active: high
   '16':
-    name: LED2 / Amber
+    name: LED2 / Orange
     direction: output
     active: high
   '18':
-    name: LED3 / Red
+    name: LED3 / Rot
     direction: output
     active: high
   '22':
-    name: Button
+    name: Taster
     direction: input
     active: high
   '29':
@@ -31,7 +30,7 @@ pin:
 -->
 #Traffic HAT
 
-###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
+###Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
 
 ```python
 import RPi.GPIO as IO

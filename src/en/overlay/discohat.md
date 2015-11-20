@@ -56,10 +56,6 @@ pin:
     name: MOSI
     mode: spi
     description: LED strip data
-  '19':
-    name: MOSI
-    mode: spi
-    description: LED strip data
   '23':
     name: SCLK
     mode: spi

@@ -77,7 +77,7 @@ DiscoHAT was created to be used with QLC+ an Open Source light and sound control
 
 The Raspberry Pi 2 has a bit more power and is recommended for DiscoHAT. You can also exchange the 40 pin connector with the 26 pin connector for using it on older Raspberries but then you lose HAT functionality and 4 buttons. The connectors are not soldered to DiscoHAT. It uses SMD through pin sockets.
 
-DiscoHAT is being used by myself in our theater productions. The DMX output and the pushbuttons are optically isolated to cope with static electricity that easily builds up on stage due to long wires, hot air, plastic surfaces and nylon clothing.
+DiscoHAT is being used by myself in our theater productions. The DMX output and the pushbuttons are optically isolated and ESD protected to cope with static electricity that easily builds up on stage due to long wires, hot air, plastic surfaces and nylon clothing.
 
 The system has been in use for two plays so far and it is time to share the good things with other entertainers.
 

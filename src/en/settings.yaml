@@ -45,3 +45,4 @@ overlays:
 - iqaudio-pi-dac
 - piano-hat
 - sense-hat
+- cirruslogicaudiocard

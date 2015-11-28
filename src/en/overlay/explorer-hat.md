@@ -84,9 +84,14 @@ To get the HAT set up and ready to go you can use the one-line product installer
 curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+To start tinkering with GPIO Zero:
 
 ```bash
-import explorerhat
-explorerhat.light.on()
+from gpiozero import LED
+leds={'led1':4,'led2':5,'led3':17,'led4':27}
+
+while True:                                 
+    for io,pin in leds.items():
+        io=LED(pin)
+        io.blink(1,1,1,False)
 ```

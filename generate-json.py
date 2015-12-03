@@ -59,6 +59,8 @@ def load_overlay(overlay):
         pincount = int(loaded['pincount'])
         if pincount == 40:
             details.append('* HAT form-factor')
+        elif pincount == 38:
+            details.append('* pHAT form-factor')
         elif pincount == 26:
             details.append('* Classic 26-pin')
         else:

@@ -52,6 +52,8 @@ def load_overlay(overlay):
         pincount = int(loaded['pincount'])
         if pincount == 40:
             details.append(strings['type_hat'])
+        elif pincount == 38:
+            details.append(strings['type_phat'])
         elif pincount == 26:
             details.append(strings['type_classic'])
         else:

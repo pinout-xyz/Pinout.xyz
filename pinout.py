@@ -24,29 +24,33 @@ def render_html(*args, **kwargs):
 
 
 def bcm_to_physical(pin):
-    for idx in pins:
-        compare_pin = pins[idx]
-        if 'scheme' in compare_pin:
-            if 'bcm' in compare_pin['scheme']:
-                if compare_pin['scheme']['bcm'] == int(pin):
-                    #print("Mapping BCM{} to {}".format(pin, str(idx)))
-                    return str(idx)
+    return physical_from(pin, 'bcm')
+
+
+def wiringpi_to_physical(pin):
+    return physical_from(pin, 'wiringpi')
+
+
+def physical_from(pin, scheme='bcm'):
+    if scheme in ['bcm', 'wiringpi']:
+        for idx in pins:
+            compare_pin = pins[idx]
+            if 'scheme' in compare_pin:
+                if scheme in compare_pin['scheme']:
+                    if compare_pin['scheme'][scheme] == int(pin):
+                        #print("Mapping {}{} to {}".format(scheme, pin, str(idx)))
+                        return str(idx)
+    elif scheme == 'physical':
+        return pin
+    return None
 
 
 def physical_to_bcm(pin):
-    pin = pins[pin]
-    if 'scheme' in pin:
-        if 'bcm' in pin['scheme']:
-            return str(pin['scheme']['bcm'])
-    return None
+    return physical_to(pin, 'bcm')
 
 
 def physical_to_wiringpi(pin):
-    pin = pins[pin]
-    if 'scheme' in pin:
-        if 'wiringpi' in pin['scheme']:
-            return str(pin['scheme']['wiringpi'])
-    return None
+    return physical_to(pin, 'wiringpi')
 
 
 def physical_to(pin, scheme='bcm'):

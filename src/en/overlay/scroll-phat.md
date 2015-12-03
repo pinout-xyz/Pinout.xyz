@@ -12,7 +12,7 @@ install:
   'apt':
     - 'python-smbus'
     - 'python3-smbus'
-    'python':
+  'python':
     - 'scrollphat'
   'python3':
     - 'scrollphat'

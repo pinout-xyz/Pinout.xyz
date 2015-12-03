@@ -28,6 +28,7 @@ Current known contributors are:
 * es - @ResonantWave
 * fr - @RogueM
 * it - @LizardM4 
+* pt - @Maslor
 * tr - @Ardakilic
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the

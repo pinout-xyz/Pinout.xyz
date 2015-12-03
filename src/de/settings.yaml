@@ -12,6 +12,7 @@ urls:
 strings:
 - made_by: 'Hersteller: {manufacturer}'
 - type_hat: 'HAT form-factor'
+- type_phat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
 - uses_i2c: 'benutzt I2C'
@@ -25,23 +26,23 @@ strings:
 - buy_now: 'jetzt kaufen'
 overlays:
 - ground
-- spi
 - uart
 - i2c
-- wiringpi
+- spi
 - arduino-spi
-- rtk-000-001
-- piborg-ledborg
-- piglow
-- pibrella
-- unicorn-hat
-- skywriter-hat
-- explorer-hat-pro
-- explorer-hat
+- wiringpi
+- iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
 - dots
-- traffic-hat
-- iqaudio-pi-dac
+- explorer-hat
+- explorer-hat-pro
 - piano-hat
+- piborg-ledborg
+- pibrella
+- piglow
+- rtk-000-001
 - sense-hat
+- skywriter-hat
+- traffic-hat
+- unicorn-hat

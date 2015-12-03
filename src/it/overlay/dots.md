@@ -4,6 +4,7 @@ name: Raspberry Pi Dots
 description: Unisci i puntini e crea un circuito
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+pincount: 38
 pin:
   bcm0:
     name: 'Colore: Blu'

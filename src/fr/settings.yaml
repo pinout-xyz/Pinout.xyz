@@ -12,6 +12,7 @@ urls:
 strings:
 - made_by: 'produit {manufacturer}'
 - type_hat: 'format HAT'
+- type_phat: 'format pHAT (pas d''EEPROM)'
 - type_classic: 'format Classic'
 - pin_header: '{} broches'
 - uses_i2c: 'bus I2C'
@@ -25,23 +26,23 @@ strings:
 - buy_now: 'achat'
 overlays:
 - ground
-- spi
 - uart
 - i2c
-- wiringpi
+- spi
 - arduino-spi
-- rtk-000-001
-- piborg-ledborg
-- piglow
-- pibrella
-- unicorn-hat
-- skywriter-hat
-- explorer-hat-pro
-- explorer-hat
+- wiringpi
+- iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
 - dots
-- traffic-hat
-- iqaudio-pi-dac
+- explorer-hat
+- explorer-hat-pro
 - piano-hat
+- piborg-ledborg
+- pibrella
+- piglow
+- rtk-000-001
 - sense-hat
+- skywriter-hat
+- traffic-hat
+- unicorn-hat

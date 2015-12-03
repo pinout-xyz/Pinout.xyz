@@ -4,6 +4,7 @@ name: Raspberry Pi Dots
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+pincount: 38
 pin:
   bcm0:
     name: 'Farbe: Blau'

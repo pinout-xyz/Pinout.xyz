@@ -50,14 +50,23 @@ def load_overlay(overlay):
 
     if 'pincount' in loaded:
         pincount = int(loaded['pincount'])
-        if pincount == 40:
+        if 'formfactor' in loaded:
+            formfactor = str(loaded['formfactor'])
+            if pincount == 40 and formfactor == 'HAT':
+                details.append(strings['type_hat'])
+            elif pincount == 40 and formfactor == 'pHAT':
+                details.append(strings['type_phat'])
+            elif pincount == 40 and formfactor == '40-way':
+                details.append(strings['pin_header'].format(pincount))
+            else:
+                details.append(strings['pin_header'].format(pincount))                
+        elif pincount == 40:
             details.append(strings['type_hat'])
-        elif pincount == 38:
-            details.append(strings['type_phat'])
         elif pincount == 26:
             details.append(strings['type_classic'])
         else:
             details.append(strings['pin_header'].format(pincount))
+            
 
     if 'pin' in loaded:
         uses = 0

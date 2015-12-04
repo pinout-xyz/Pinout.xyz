@@ -19,7 +19,8 @@ install:
   'python3':
     - 'explorerhat'
   'examples': 'examples/'
-pincount: 38
+formfactor: 'pHAT'
+pincount: 40
 i2c:
 '0x48':
     name: Analog Input

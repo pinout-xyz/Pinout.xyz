@@ -17,7 +17,8 @@ install:
   'python3':
     - 'scrollphat'
   'examples': 'examples/'
-pincount: 38
+formfactor: 'pHAT'
+pincount: 40
 i2c:
 '0x60':
     name: Matrix LED driver

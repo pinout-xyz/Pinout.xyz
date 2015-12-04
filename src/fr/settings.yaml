@@ -12,7 +12,7 @@ urls:
 strings:
 - made_by: 'produit {manufacturer}'
 - type_hat: 'format HAT'
-- type_phat: 'format pHAT (pas d''EEPROM)'
+- type_phat: 'format pHAT'
 - type_classic: 'format Classic'
 - pin_header: '{} broches'
 - uses_i2c: 'bus I2C'

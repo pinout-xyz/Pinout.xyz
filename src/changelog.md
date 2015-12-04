@@ -1,6 +1,10 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Dec 3, 2015
+- added explorer-phat.md
+- added scroll-phat.md
+
 Nov 21, 2015
 - added cirruslogicaudiocard.md
 

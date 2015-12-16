@@ -22,7 +22,7 @@ pin:
     active: low
     mode: input
     description: Button 2
-  '7':
+  '22':
     name: Button3
     active: low
     mode: input
@@ -32,12 +32,12 @@ pin:
     active: low
     mode: input
     description: Button 4
-  '29':
+  '16':
     name: Button5
     active: low
     mode: input
     description: Button 5
-  '31':
+  '37':
     name: Button6
     active: low
     mode: input

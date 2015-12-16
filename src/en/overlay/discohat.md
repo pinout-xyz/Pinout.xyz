@@ -62,11 +62,11 @@ pin:
     description: LED strip clock
   '12':
     name: AudioR
-    mode: spi
+    mode: output
     description: Audio right
   '33':
     name: AudioL
-    mode: spi
+    mode: output
     description: Audio left
 -->
 #DiscoHAT

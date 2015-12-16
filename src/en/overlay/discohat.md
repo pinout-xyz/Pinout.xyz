@@ -22,7 +22,7 @@ pin:
     active: low
     mode: input
     description: Button 2
-  '7':
+  '22':
     name: Button3
     active: low
     mode: input
@@ -32,12 +32,12 @@ pin:
     active: low
     mode: input
     description: Button 4
-  '29':
+  '16':
     name: Button5
     active: low
     mode: input
     description: Button 5
-  '31':
+  '37':
     name: Button6
     active: low
     mode: input
@@ -60,6 +60,14 @@ pin:
     name: SCLK
     mode: spi
     description: LED strip clock
+  '12':
+    name: AudioR
+    mode: spi
+    description: Audio right
+  '33':
+    name: AudioL
+    mode: spi
+    description: Audio left
 -->
 #DiscoHAT
 
@@ -72,6 +80,8 @@ With DiscoHAT you can control DMX equipment and LED strips. It also has interfac
 DiscoHAT was created to be used with QLC+ an Open Source light and sound control software that is absolutely AMAZING. The push buttons can trigger scenes (steady lights), chases (lights changing in a pattern) and shows (lights synced to music) from stage without need for displays, keyboards or mice. With a WiFi dongle you can also control the lights from your tablet or mobile phone.
 
 The Raspberry Pi 2 has a bit more power and is recommended for DiscoHAT. You can also exchange the 40 pin connector with the 26 pin connector for using it on older Raspberries but then you lose HAT functionality and 4 buttons. The connectors are not soldered to DiscoHAT. It uses SMD through pin sockets.
+
+For PiZero there is a smaller version called DiscoCap that includes audio out.
 
 DiscoHAT is being used by myself in our theater productions. The DMX output and the pushbuttons are optically isolated and ESD protected to cope with static electricity that easily builds up on stage due to long wires, hot air, plastic surfaces and nylon clothing.
 

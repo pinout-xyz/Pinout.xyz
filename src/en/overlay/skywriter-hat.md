@@ -16,6 +16,11 @@ install:
     - 'skywriter'
   'examples': 'python/examples/'
 pincount: 40
+power: 3v3
+i2c:
+  '0x42':
+    name: Gesture sensor
+    device: MGC3130
 pin:
   '3':
     mode: i2c

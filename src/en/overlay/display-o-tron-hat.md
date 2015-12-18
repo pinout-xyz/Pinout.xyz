@@ -5,6 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with a 6-zone RGB backlight and 6 touch buttons
 pincount: 40
+power: 3v3,5v
 pin:
   '3':
     mode: i2c

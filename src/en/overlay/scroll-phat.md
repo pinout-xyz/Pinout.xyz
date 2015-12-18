@@ -19,6 +19,7 @@ install:
   'examples': 'examples/'
 formfactor: 'pHAT'
 pincount: 40
+power: 5v
 i2c:
 '0x60':
     name: Matrix LED driver

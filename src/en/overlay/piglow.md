@@ -7,6 +7,7 @@ github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow
 description: Simply 18 LEDs in a spiral pattern controllable in Python.
 pincount: 26
+power: 3v3,5v
 pin:
   '3':
     mode: i2c

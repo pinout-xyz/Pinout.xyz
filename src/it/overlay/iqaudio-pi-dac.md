@@ -1,12 +1,7 @@
 <!--
 ---
 name: "Pi-DAC+"
-manufacturer: IQaudIO
-buy: http://www.iqaudio.co.uk
 description: Un convertitore audio I2S da digitale ad analogico per il Raspberry
-install:
-  'devices':
-    - 'i2c'
 pincount: 40
 pin:
   '3':

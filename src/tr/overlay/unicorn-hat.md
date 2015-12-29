@@ -1,11 +1,7 @@
 <!--
 ---
 name: Unicorn HAT
-manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: Tek bir HAT kart üzerinde 64 adet programlanabilir parlak led modülü.
-github: https://github.com/pimoroni/unicornhat
 pincount: 40
 pin:
   '12':

@@ -1,10 +1,7 @@
 <!--
 ---
 name: Display-o-Tron 3000
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/dot3k
-description: 3 satır destekleyen, RGB renkli arka plana sahip bir LCD ve joystick
-  butonları
+description: 3 satır destekleyen, RGB renkli arka plana sahip bir LCD ve joystick butonları
 pincount: 26
 pin:
   '3':

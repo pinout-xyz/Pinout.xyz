@@ -2,8 +2,6 @@
 ---
 name: Raspberry Pi Dots
 description: créez un circuit avec de la peinture électrique
-url: http://www.raspberrypi.org/dots/
-github: https://github.com/raspberrypilearning/dots
 formfactor: '40-way'
 pincount: 40
 pin:

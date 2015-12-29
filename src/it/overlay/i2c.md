@@ -2,7 +2,7 @@
 ---
 name: I2C
 description: Raspberry Pi pin i2c
-type: info
+pincount: 2
 pin:
   '3':
     name: Dati

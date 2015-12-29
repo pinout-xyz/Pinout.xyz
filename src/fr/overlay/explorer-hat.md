@@ -1,29 +1,8 @@
 <!--
 ---
 name: Explorer HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
-github: https://github.com/pimoroni/explorer-hat
-buy: http://shop.pimoroni.com/products/explorer-hat
 description: Un chapeau multi-usage avec entrées et sorties 5V
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
 pincount: 40
-i2c:
-  '0x28':
-    name: Capteur tactile
-    device: cap1208
 pin:
   '7':
     name: LED 1
@@ -73,6 +52,10 @@ pin:
     name: Sortie 4
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Capteur tactile
+    device: cap1208
 -->
 #Explorer HAT
 

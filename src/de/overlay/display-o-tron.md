@@ -1,55 +1,40 @@
 <!--
 ---
 name: Display-o-Tron 3000
-manufacturer: Pimoroni
-github: https://github.com/pimoroni/dot3k
-url: https://github.com/pimoroni/dot3k
 description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'dot3k'
-  'examples': 'python/examples/'
 pincount: 26
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  7:
+  '7':
     name: Joystick Taste
     mode: input
     active: low
-  11:
+  '11':
     name: Joystick links
     mode: input
     active: low
-  13:
+  '13':
     name: Joystick oben
     mode: input
     active: low
-  15:
+  '15':
     name: Joystick rechts
     mode: input
     active: low
-  19:
+  '19':
     mode: spi
-  21:
+  '21':
     name: Joystick unten
     mode: input
     active: low
-  22:
+  '22':
     name: LCD CMD/DATA
     mode: output
     active: high
-  23:
+  '23':
     mode: spi
 -->
 #Display-o-Tron 3000

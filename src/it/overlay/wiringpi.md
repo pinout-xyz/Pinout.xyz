@@ -1,9 +1,8 @@
 <!--
 ---
 name: Mappa pin GPIO WiringPi
-page_url: wiringpi
-github: https://github.com/WiringPi/WiringPi2-Python
-url: http://wiringpi.com
+description: Mappa pin GPIO WiringPi
+pincount: 40
 pin:
   '3':
     name: WiringPi 8

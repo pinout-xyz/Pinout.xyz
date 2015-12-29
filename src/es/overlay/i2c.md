@@ -2,6 +2,7 @@
 ---
 name: I2C
 description: Pines de i2c de Rasberry Pi
+pincount: 2
 pin:
   '3':
     name: Datos
@@ -19,7 +20,6 @@ pin:
     name: Reloj EEPROM
     direction: ambas
     active: alto (encendido)
-
 -->
 #I2C - Inter Integrated Circuit
 

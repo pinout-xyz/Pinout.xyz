@@ -2,6 +2,7 @@
 ---
 name: Tierra
 description: Pines de tierra de Raspberry Pi
+pincount: 1
 pin:
   '6':
   '9':

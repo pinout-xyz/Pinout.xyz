@@ -1,20 +1,7 @@
 <!--
 ---
 name: Unicorn HAT
-manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: une matrice 8x8 de LEDs RGB
-github: https://github.com/pimoroni/unicornhat
-install:
-  'apt':
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'unicornhat'
-  'python3':
-    - 'unicornhat'
-  'examples': 'python/examples/'
 pincount: 40
 pin:
   '12':

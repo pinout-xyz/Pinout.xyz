@@ -1,10 +1,6 @@
 <!--
 ---
 name: Skywriter HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/skywriter-hat
-github: https://github.com/pimoroni/skywriter-hat
-buy: http://shop.pimoroni.com/products/skywriter-hat
 description: 3 Boyutlu pozisyon ve hareket sensörü.
 pincount: 40
 pin:

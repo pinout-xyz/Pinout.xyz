@@ -1,10 +1,6 @@
 <!--
 ---
 name: PiGlow
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/piglow
-github: https://github.com/pimoroni/piglow
-buy: http://shop.pimoroni.com/products/piglow
 description: une spirale de LED contrôlable depuis Python.
 pincount: 26
 pin:

@@ -2,6 +2,7 @@
 ---
 name: Arduino SPI
 description: Programmer une carte Arduino avec une Raspberry Pi
+pincount: 4
 pin:
   '19':
     name: MOSI

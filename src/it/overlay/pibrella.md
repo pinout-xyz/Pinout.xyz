@@ -1,8 +1,6 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
 description: Una scheda all-in-one per luci, suoni, input ed output.
 pincount: 26
 pin:

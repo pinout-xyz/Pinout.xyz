@@ -1,8 +1,8 @@
 <!--
 ---
 name: WiringPi Anschlussbelegung
-url: http://wiringpi.com/
-page_url: wiringpi
+description: WiringPi Bibliothek
+pincount: 40
 pin:
   '3':
     name: WiringPi 8

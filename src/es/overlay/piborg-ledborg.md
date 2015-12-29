@@ -2,7 +2,6 @@
 ---
 name: PiBorg LEDBorg
 description: Un único LED RGB para tu Raspberry Pi
-buy: https://www.piborg.org/ledborg
 pincount: 26
 pin:
   '11':

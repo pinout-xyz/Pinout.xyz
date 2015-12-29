@@ -1,10 +1,7 @@
 <!--
 ---
 name: PiBorg LEDBorg
-manufacturer: PiBorg
 description: Un singolo LED RBG per il tuo Raspberry Pi
-url: https://www.piborg.org/ledborg-new/install
-buy: https://www.piborg.org/ledborg
 pincount: 26
 pin:
   '11':

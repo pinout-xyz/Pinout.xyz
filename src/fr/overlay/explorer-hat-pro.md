@@ -1,32 +1,8 @@
 <!--
 ---
 name: Explorer HAT Pro
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
-github: https://github.com/pimoroni/explorer-hat
-buy: http://shop.pimoroni.com/products/explorer-hat
 description: Un chapeau multi-usage avec entrées analogiques et contrôle moteurs
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
 pincount: 40
-i2c:
-  '0x28':
-    name: Capteur tactile
-    device: cap1208
-  '0x48':
-    name: Entrées analogiques
-    device: ads1015
 pin:
   '3':
     mode: i2c
@@ -96,6 +72,13 @@ pin:
     name: Moteur 2 +
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Capteur tactile
+    device: cap1208
+  '0x48':
+    name: Entrées analogiques
+    device: ads1015
 -->
 #Explorer HAT Pro
 

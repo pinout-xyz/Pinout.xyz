@@ -1,19 +1,8 @@
 <!--
 ---
 name: Piano HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/piano-hat
 description: Un piccolo Pi-piano con 16 tasti touch
 pincount: 40
-i2c:
-  '0x28':
-    name: Touch capacitivo A
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
-  '0x2b':
-    name: Touch capacitivo B
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 pin:
   '3':
     mode: i2c
@@ -31,6 +20,15 @@ pin:
   '15':
     name: Reset B
     mode: output
+i2c:
+  '0x28':
+    name: Touch capacitivo A
+    device: cap1188
+    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
+  '0x2b':
+    name: Touch capacitivo B
+    device: cap1188
+    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
 #Piano HAT
 

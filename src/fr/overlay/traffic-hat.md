@@ -1,9 +1,6 @@
 <!--
 ---
 name: Traffic HAT
-manufacturer: Ryanteck LTD.
-url: http://www.ryanteck.uk/store/traffichat
-buy: http://www.ryanteck.uk/store/traffichat
 description: carte multi-usage avec buzzer, LED et bouton
 pincount: 40
 pin:

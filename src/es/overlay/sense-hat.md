@@ -1,13 +1,7 @@
 <!--
 ---
 name: "Sense HAT"
-manufacturer: Raspberry Pi Foundation
-url: https://www.raspberrypi.org/products/sense-hat/
 description: Placa que incluye una matriz LED RGB de 8x8, joystick de 5 botones, un IMU y sensonres ambientales
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'    
 pincount: 40
 pin:
   '3':

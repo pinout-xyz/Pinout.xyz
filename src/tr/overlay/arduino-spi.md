@@ -2,6 +2,7 @@
 ---
 name: Arduino SPI
 description: Raspberry Pi SPI ile Arduino programlama
+pincount: 4
 pin:
   '19':
     name: MOSI

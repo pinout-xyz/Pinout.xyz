@@ -1,8 +1,6 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
 description: An all-in-one light, sound, input and output add-on board.
 pincount: 26
 pin:

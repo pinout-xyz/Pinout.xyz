@@ -2,6 +2,7 @@
 ---
 name: UART
 description: Pin UART del Raspberry
+pincount: 2
 pin:
   '8':
     name: TXD / Trasmissione

@@ -2,7 +2,6 @@
 ---
 name: PiBorg LEDBorg
 description: Raspberry Pi RGB ledlerine sahip bir kart
-buy: https://www.piborg.org/ledborg
 pincount: 26
 pin:
   '11':

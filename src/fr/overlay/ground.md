@@ -2,6 +2,7 @@
 ---
 name: Masse
 description: broches raccordées à la masse
+pincount: 1
 pin:
   '6':
   '9':

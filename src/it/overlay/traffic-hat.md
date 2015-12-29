@@ -1,9 +1,6 @@
 <!--
 ---
 name: Traffic HAT
-manufacturer: Ryanteck LTD.
-url: http://www.ryanteck.uk/store/traffichat
-buy: http://www.ryanteck.uk/store/traffichat
 description: Una maniera facile e veloce per imparare le basi del GPIO a basso prezzo. Tutto in un singolo HAT.
 pincount: 40
 pin:

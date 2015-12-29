@@ -1,20 +1,7 @@
 <!--
 ---
 name: Skywriter HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/skywriter-hat
-github: https://github.com/pimoroni/skywriter-hat
-buy: http://shop.pimoroni.com/products/skywriter-hat
 description: un capteur de mouvements 3D
-install:
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'skywriter'
-  'examples': 'python/examples/'
 pincount: 40
 pin:
   '3':

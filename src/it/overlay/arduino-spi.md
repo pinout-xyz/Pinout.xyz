@@ -2,6 +2,7 @@
 ---
 name: Arduino SPI
 description: Programma Arduino con le porte  SPI del Raspberry Pi
+pincount: 4
 pin:
   '19':
     name: MOSI

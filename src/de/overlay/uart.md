@@ -2,6 +2,7 @@
 ---
 name: UART
 description: Raspberry Pi UART Anschlüsse
+pincount: 2
 pin:
   '8':
     name: TXD / Senden

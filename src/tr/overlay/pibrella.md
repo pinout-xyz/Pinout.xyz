@@ -1,8 +1,6 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
 description: Hepsi-bir-arada, hafif, ses, giriş ve çıkış destekleyen eklenti kartı.
 pincount: 26
 pin:

@@ -1,8 +1,6 @@
 <!--
 ---
 name: Display-o-Tron HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/dot3k
 description: Un LCD 3x16 avec rétro-éclairage sur 6 zones RGB et buttons tactiles
 pincount: 40
 pin:
@@ -10,15 +8,12 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  '22':
-    name: LCD CMD/DATA
-    mode: output
-    active: high
   '19':
     mode: spi
   '22':
     name: Selection Registre LCD
     mode: output
+    active: high
   '23':
     mode: spi
   '24':

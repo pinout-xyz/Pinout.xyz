@@ -1,7 +1,8 @@
 <!--
 ---
 name: WiringPi GPIO Pinout
-page_url: wiringpi
+description: WiringPi GPIO Pinout
+pincount: 40
 pin:
   '3':
     name: WiringPi 8

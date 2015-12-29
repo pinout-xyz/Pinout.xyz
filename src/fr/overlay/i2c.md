@@ -2,6 +2,7 @@
 ---
 name: I2C
 description: broches i2c de la Raspberry Pi
+pincount: 2
 pin:
   '3':
     name: Données
@@ -19,7 +20,6 @@ pin:
     name: EEPROM Horloge
     direction: both
     active: high
-
 -->
 #I2C (Inter Integrated Circuit)
 

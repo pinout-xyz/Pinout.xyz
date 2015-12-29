@@ -2,8 +2,6 @@
 ---
 name: Raspberry Pi Dots
 description: Noktaları birleştirerek bir devre oluşturun
-url: http://www.raspberrypi.org/dots/
-github: https://github.com/raspberrypilearning/dots
 formfactor: '40-way'
 pincount: 40
 pin:

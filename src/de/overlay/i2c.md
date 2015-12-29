@@ -2,6 +2,7 @@
 ---
 name: I2C
 description: Raspberry Pi I2C Anschlüsse
+pincount: 2
 pin:
   '3':
     name: Data
@@ -19,7 +20,6 @@ pin:
     name: EEPROM Clock
     direction: both
     active: high
-
 -->
 #I2C - Inter Integrated Circuit 
 

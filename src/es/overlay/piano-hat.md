@@ -1,19 +1,8 @@
 <!--
 ---
 name: Piano HAT
-manufacturer: Pimoroni
-url: https://github.com/pimoroni/piano-hat
 description: Un mini Pi piano con 16 botones capacitivos
 pincount: 40
-i2c:
-  '0x28':
-    name: Cap Touch A
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
-  '0x2b':
-    name: Cap Touch B
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 pin:
   '3':
     mode: i2c

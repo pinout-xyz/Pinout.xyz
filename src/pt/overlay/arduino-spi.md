@@ -2,23 +2,24 @@
 ---
 name: Arduino SPI
 description: Program Arduino with Raspberry Pi SPI
+pincount: 4
 pin:
-  19:
+  '19':
     name: MOSI
     direction: output
     active: high
     description: Master Out / Slave In
-  21:
+  '21':
     name: MISO
     direction: input
     active: high
     description: Master In / Slave Out
-  23:
+  '23':
     name: SCKL
     direction: output
     active: high
     description: Clock
-  24:
+  '24':
     name: CE0
     direction: output
     active: high

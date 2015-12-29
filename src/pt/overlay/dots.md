@@ -2,8 +2,6 @@
 ---
 name: Raspberry Pi Dots
 description: Join the dots to make a circuit
-url: http://www.raspberrypi.org/dots/
-github: https://github.com/raspberrypilearning/dots
 formfactor: '40-way'
 pincount: 40
 pin:

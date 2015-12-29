@@ -2,6 +2,7 @@
 ---
 name: UART
 description: Raspberry Pi UART pinleri
+pincount: 2
 pin:
   '8':
     name: TXD / Transmit

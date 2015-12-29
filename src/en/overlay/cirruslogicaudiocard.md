@@ -1,10 +1,11 @@
 <!--
 ---
+type: board
 name: Cirrus Logic Audio Card
 manufacturer: Cirrus Logic and element14
+description: Audio Card with unprecedented level of features and performance for Raspberry Pi.
 url: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
 buy: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
-description: Cirrus Logic Audio Card offers an unprecedented level of features and performance for avid audiophiles who want to use their Raspberry Pi for audio applications.
 pincount: 40
 pin:
   '3':

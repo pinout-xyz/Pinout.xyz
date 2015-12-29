@@ -1,5 +1,6 @@
 <!--
 ---
+type: info
 name: Ground
 description: Raspberry Pi Ground Pins
 pin:

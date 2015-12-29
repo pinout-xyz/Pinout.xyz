@@ -1,5 +1,6 @@
 <!--
 ---
+type: info
 name: UART
 description: Raspberry Pi UART pins
 pin:

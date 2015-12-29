@@ -1,9 +1,9 @@
 <!--
 ---
+type: content
 name: WiringPi GPIO Pinout
-page_url: wiringpi
-github: https://github.com/WiringPi/WiringPi2-Python
 url: http://wiringpi.com
+github: https://github.com/WiringPi/WiringPi2-Python
 pin:
   '3':
     name: WiringPi 8

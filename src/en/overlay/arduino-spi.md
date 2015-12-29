@@ -1,5 +1,6 @@
 <!--
 ---
+type: content
 name: Arduino SPI
 description: Program Arduino with Raspberry Pi SPI
 pin:

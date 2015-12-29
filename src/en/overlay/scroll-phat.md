@@ -1,11 +1,25 @@
 <!--
 ---
+type: board
 name: Scroll pHAT
 manufacturer: Pimoroni
+description: A 11 x 5 LED matrix.
 url: https://github.com/pimoroni/scroll-phat
 github: https://github.com/pimoroni/scroll-phat
 buy: https://shop.pimoroni.com/products/scroll-phat
-description: A 11 x 5 LED matrix.
+formfactor: 'pHAT'
+pincount: 40
+eeprom: no
+power: 5v
+pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
+i2c:
+  '0x60':
+    name: Matrix LED driver
+    device: IS31FL3730
 install:
   'devices':
     - 'i2c'
@@ -17,18 +31,6 @@ install:
   'python3':
     - 'scrollphat'
   'examples': 'examples/'
-formfactor: 'pHAT'
-pincount: 40
-power: 5v
-i2c:
-'0x60':
-    name: Matrix LED driver
-    device: IS31FL3730
-pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
 -->
 #Scroll pHAT
 

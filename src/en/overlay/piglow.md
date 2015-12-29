@@ -1,12 +1,15 @@
 <!--
 ---
+type: board
 name: PiGlow
 manufacturer: Pimoroni
+description: Simply 18 LEDs in a spiral pattern controllable in Python.
 url: https://github.com/pimoroni/piglow
 github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow
-description: Simply 18 LEDs in a spiral pattern controllable in Python.
+formfactor: '26-way'
 pincount: 26
+eeprom: no
 power: 3v3,5v
 pin:
   '3':

@@ -1,23 +1,15 @@
 <!--
 ---
+type: board
 name: Display-o-Tron 3000
 manufacturer: Pimoroni
-github: https://github.com/pimoroni/dot3k
-url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with an RGB backlight and joystick
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'dot3k'
-  'examples': 'python/examples/'
+url: https://github.com/pimoroni/dot3k
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/displayotron-3000
+formfactor: '26-way'
 pincount: 26
+eeprom: no
 power: 3v3,5v
 pin:
   '3':
@@ -52,6 +44,18 @@ pin:
     active: high
   '23':
     mode: spi
+install:
+  'devices':
+    - 'i2c'
+    - 'spi'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'dot3k'
+  'examples': 'python/examples/'
 -->
 #Display-o-Tron 3000
 
@@ -60,7 +64,7 @@ The Display-o-Tron 3000 is a 3-line character LCD with an RGB backlight and joys
 To get the module set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS get.pimoroni.com/displayotron | bash
 ```
 
 And follow the instructions!

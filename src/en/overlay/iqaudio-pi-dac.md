@@ -1,13 +1,13 @@
 <!--
 ---
+type: board
 name: "Pi-DAC+"
 manufacturer: IQaudIO
-buy: http://www.iqaudio.co.uk
 description: An I2S digital to analog audio converter HAT for the Pi
-install:
-  'devices':
-    - 'i2c'
+buy: http://www.iqaudio.co.uk
+formfactor: 'HAT'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -33,6 +33,9 @@ pin:
     name: I2S
   '40':
     name: I2S
+install:
+  'devices':
+    - 'i2c'
 -->
 #IQaudIO Pi-DAC+
 

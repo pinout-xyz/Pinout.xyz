@@ -1,14 +1,13 @@
 <!--
 ---
+type: board
 name: "Sense HAT"
 manufacturer: Raspberry Pi Foundation
-url: https://www.raspberrypi.org/products/sense-hat/
 description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors 
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'    
+url: https://www.raspberrypi.org/products/sense-hat/
+formfactor: 'HAT'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -31,6 +30,10 @@ pin:
     mode: spi
   '24':
     mode: spi
+install:
+  'devices':
+    - 'i2c'
+    - 'spi'
 -->
 #Sense HAT
 

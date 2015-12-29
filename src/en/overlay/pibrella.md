@@ -1,10 +1,13 @@
 <!--
 ---
+type: board
 name: Pibrella
 manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
 description: An all-in-one light, sound, input and output add-on board.
+url: https://github.com/pimoroni/pibrella
+formfactor: '26-way'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: Green LED

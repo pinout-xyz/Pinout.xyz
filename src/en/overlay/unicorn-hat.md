@@ -1,11 +1,22 @@
 <!--
 ---
+type: board
 name: Unicorn HAT
 manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 blindingly bright RGB LEDs on a single HAT
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
+buy: http://shop.pimoroni.com/products/unicorn-hat
+formfactor: 'HAT'
+pincount: 40
+eeprom: yes
+pin:
+  '12':
+    name: Data
+    direction: output
+    mode: pwm
+    active: high
+    description: WS2812 Data
 install:
   'apt':
     - 'python-dev'
@@ -15,14 +26,6 @@ install:
   'python3':
     - 'unicornhat'
   'examples': 'python/examples/'
-pincount: 40
-pin:
-  '12':
-    name: Data
-    direction: output
-    mode: pwm
-    active: high
-    description: WS2812 Data
 -->
 #Unicorn HAT
 

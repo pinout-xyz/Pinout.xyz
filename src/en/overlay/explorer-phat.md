@@ -1,30 +1,15 @@
 <!--
 ---
+type: board
 name: Explorer pHAT
 manufacturer: Pimoroni
+description: An all-in-one input, output and motor add-on board.
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: https://shop.pimoroni.com/products/explorer-phat
-description: An all-in-one input, output and motor add-on board.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
 formfactor: 'pHAT'
 pincount: 40
-i2c:
-'0x48':
-    name: Analog Input
-    device: ads1015
+eeprom: no
 pin:
   '3':
     mode: i2c
@@ -78,6 +63,23 @@ pin:
     name: Motor 2 +
     mode: output
     active: high
+i2c:
+  '0x48':
+    name: Analog Input
+    device: ads1015
+install:
+  'devices':
+    - 'i2c'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'explorerhat'
+  'python3':
+    - 'explorerhat'
+  'examples': 'examples/'
 -->
 #Explorer pHAT
 

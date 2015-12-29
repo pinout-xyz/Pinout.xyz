@@ -1,8 +1,8 @@
 <!--
 ---
+type: info
 name: I2C
 description: Raspberry Pi i2c pins
-type: info
 pin:
   '3':
     name: Data
@@ -20,7 +20,6 @@ pin:
     name: EEPROM Clock
     direction: both
     active: high
-
 -->
 #I2C - Inter Integrated Circuit
 

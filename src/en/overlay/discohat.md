@@ -1,10 +1,11 @@
 <!--
 ---
+type: board
 name: DiscoHAT
 manufacturer: Kertatuote
+description: Computer controlled DMX lights, sounds and special effects.
 url: http://discohat.com
 buy: http://discohat.com/shop
-description: Computer controlled DMX lights, sounds and special effects.
 pincount: 40
 pin:
   '8':

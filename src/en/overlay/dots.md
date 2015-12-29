@@ -1,11 +1,14 @@
 <!--
 ---
+type: board
 name: Raspberry Pi Dots
+manufacturer: Raspberry Pi Foundation
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 formfactor: '40-way'
 pincount: 40
+eeprom: no
 pin:
   bcm0:
     name: 'Color: Blue'

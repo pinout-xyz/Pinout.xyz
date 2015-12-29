@@ -1,6 +1,9 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Dec 29, 2015
+- added Drum HAT.md
+
 Dec 16, 2015
 - added pHAT Dac.md
 

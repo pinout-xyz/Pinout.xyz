@@ -16,15 +16,12 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  '22':
-    name: LCD CMD/DATA
-    mode: output
-    active: high
   '19':
     mode: spi
   '22':
     name: LCD Register Select
     mode: output
+    active: high
   '23':
     mode: spi
   '24':

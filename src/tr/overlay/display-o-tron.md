@@ -5,7 +5,7 @@ manufacturer: Pimoroni
 url: https://github.com/pimoroni/dot3k
 description: 3 satır destekleyen, RGB renkli arka plana sahip bir LCD ve joystick
   butonları
-pincount: 40
+pincount: 26
 pin:
   '3':
     mode: i2c

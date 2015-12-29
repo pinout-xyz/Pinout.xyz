@@ -17,7 +17,7 @@ install:
   'python':
     - 'dot3k'
   'examples': 'python/examples/'
-pincount: 40
+pincount: 26
 pin:
   '3':
     mode: i2c

@@ -17,7 +17,7 @@ install:
   'python':
     - 'dot3k'
   'examples': 'python/examples/'
-pincount: 40
+pincount: 26
 power: 3v3,5v
 pin:
   '3':

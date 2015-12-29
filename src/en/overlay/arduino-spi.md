@@ -3,6 +3,7 @@
 type: content
 name: Arduino SPI
 description: Program Arduino with Raspberry Pi SPI
+pincount: 4
 pin:
   '19':
     name: MOSI

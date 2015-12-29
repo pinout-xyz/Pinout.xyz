@@ -3,6 +3,7 @@
 type: info
 name: Ground
 description: Raspberry Pi Ground Pins
+pincount: 1
 pin:
   '6':
   '9':

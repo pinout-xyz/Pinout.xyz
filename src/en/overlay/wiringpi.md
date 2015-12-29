@@ -4,6 +4,7 @@ type: content
 name: WiringPi GPIO Pinout
 url: http://wiringpi.com
 github: https://github.com/WiringPi/WiringPi2-Python
+pincount: 40
 pin:
   '3':
     name: WiringPi 8

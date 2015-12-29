@@ -3,6 +3,7 @@
 type: info
 name: UART
 description: Raspberry Pi UART pins
+pincount: 2
 pin:
   '8':
     name: TXD / Transmit

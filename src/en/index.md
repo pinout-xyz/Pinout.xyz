@@ -6,7 +6,7 @@ This GPIO Pinout isn't meant to be printable, but it's both a great quick-refere
 
 ##What do these numbers mean, anyway?
 
-* BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO
+* BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO and GPIO Zero
 * WiringPi - Wiring Pi pin number, for Gordon's Wiring Pi library
 * Physical - Number corresponding to the pins physical location on the header
 

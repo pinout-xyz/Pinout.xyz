@@ -35,8 +35,17 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		var dropdown = $(this).parent().find('div');
 		clearTimeout(overlay_slideUp);
-		overlay_slideUp = setTimeout(function(){dropdown.slideUp(100);}, 500);
+		overlay_slideUp = setTimeout(function(){dropdown.slideUp(100);}, 100);
 	});
+
+	$('#sections > ul > li > div').hover(function(e){
+		clearTimeout(overlay_slideUp);
+	},function(e){
+		e.preventDefault();
+		var dropdown = $(this);
+		clearTimeout(overlay_slideUp);
+		overlay_slideUp = setTimeout(function(){dropdown.slideUp(100);}, 100);
+	})
 
 	$.gaat({
 		trackExternal: true,

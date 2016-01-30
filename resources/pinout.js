@@ -9,10 +9,19 @@ jQuery(document).ready(function(){
 
 	$('#container').on('click',function(){
 		dropdowns.slideUp(100);
-	})
+	});
 
-	$('#sections > ul > li').hover(function(){
-		var dropdown = $(this).find('div');
+	$('#sections > ul > li > a').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var dropdown = $(this).parent().find('div');
+		dropdowns.hide();
+		dropdown.show();
+	});
+
+	$('#sections > ul > li > a').hover(function(e){
+		e.preventDefault();
+		var dropdown = $(this).parent().find('div');
 		clearTimeout(overlay_slideUp);
 		if(dropdowns.filter(':visible').length){
 			dropdowns.hide();
@@ -22,8 +31,9 @@ jQuery(document).ready(function(){
 		{
 			overlay_slideUp = setTimeout(function(){dropdowns.slideUp(100);dropdown.slideDown(100);}, 300);
 		}
-	},function(){
-		var dropdown = $(this).find('div');
+	},function(e){
+		e.preventDefault();
+		var dropdown = $(this).parent().find('div');
 		clearTimeout(overlay_slideUp);
 		overlay_slideUp = setTimeout(function(){dropdown.slideUp(100);}, 500);
 	});

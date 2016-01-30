@@ -31,21 +31,31 @@
 				{{lang_links}}
 			</ul>
 			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
-			<div class="overlay-container">
-				<span>Learn about Pi pins and add-ons <i class="fa fa-arrow-right"></i></span>
-				<div class="drop-down">
-					<span>Select&hellip;</span>
-					<ul class="overlay">
-						{{overlays}}
-					</ul>
-				</div>
-			</div>
 			<nav id="gpio">
 				<div id="pinbase"></div>
 				<div id="pinbasebplus"></div>
 				{{nav}}
 			</nav>
 			<div id="content">
+				<div id="sections">
+					<ul>
+						<li><a href="" title="Add-on boards for Raspberry Pi">Boards</a>
+							<div><ul>
+								{{overlays}}
+							</ul></div>
+						</li>
+						<li><a href="" title="Raspberry Pi hardware interfaces">Interfaces</a>
+							<div><ul>
+								{{overlays}}
+							</ul></div>
+						</li>
+						<li><a href="" title="Connection guides for Raspberry Pi GPIO">Guides</a>
+							<div><ul>
+								{{overlays}}
+							</ul></div>
+						</li>
+					</ul>
+				</div>
 				<div id="pages">
 					{{content}}
 				</div>

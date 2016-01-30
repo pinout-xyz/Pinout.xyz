@@ -162,8 +162,8 @@ Drop down nav
 #sections ul div {
 	display:none;
 	position:absolute;
-	left:0px;
-	width:100%;
+	right:0px;
+	min-width:500px;
 	z-index:1;
 }
 /*#sections > ul > li:hover div {display:block;z-index:1;}*/
@@ -414,6 +414,9 @@ ol.linenums {margin-left:30px;}
 	}
 	.board {
 		right:1200px;
+	}
+	#sections ul div {
+		min-width:700px;
 	}
 	#content {
 		width:700px;

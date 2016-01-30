@@ -127,7 +127,6 @@ Drop down nav
 	list-style: none;
 	margin:0;
 	padding:0;
-	float:left;
 }
 #sections > ul {
 	display:block;
@@ -140,6 +139,7 @@ Drop down nav
 	width:33.333%;
 	box-sizing:border-box;
 	border-left:4px solid #FFF;
+	float:left;
 }
 #sections > ul > li > a {
 	padding:21px 20px;
@@ -169,8 +169,13 @@ Drop down nav
 /*#sections > ul > li:hover div {display:block;z-index:1;}*/
 #sections ul div ul {
 	padding:20px;
+	text-align:right;
+	box-sizing:border-box;
+	display:block;
 }
 #sections ul ul li {
+	float:none;
+	display: inline-block;
 }
 #sections ul ul a {
 	color:#FFF;

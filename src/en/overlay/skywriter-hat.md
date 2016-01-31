@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: gesture
 name: Skywriter HAT
 manufacturer: Pimoroni
 description: A 3D positional and gesture sensor.

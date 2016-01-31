@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: multi
 name: Pibrella
 manufacturer: Pimoroni Vs Cyntech
 description: An all-in-one light, sound, input and output add-on board.

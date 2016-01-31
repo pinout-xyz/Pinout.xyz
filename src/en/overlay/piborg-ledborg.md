@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: led
 name: PiBorg LEDBorg
 manufacturer: PiBorg
 description: A single RGB LED for your Raspberry Pi

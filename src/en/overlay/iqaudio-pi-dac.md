@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: audio
 name: "Pi-DAC+"
 manufacturer: IQaudIO
 description: An I2S digital to analog audio converter HAT for the Pi
@@ -17,16 +18,16 @@ pin:
     name: I2S
   '15':
     name: Mute/Unmute
-    description: Pi-AMP+ only (optional) 
+    description: Pi-AMP+ only (optional)
   '16':
     name: Rotary Encoder
-    description: (optional) 
+    description: (optional)
   '18':
     name: Rotary Encoder
     description: (optional)
   '22':
     name: IR Sensor
-    description: (optional) 
+    description: (optional)
   '35':
     name: I2S
   '38':

@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: led
 name: Unicorn HAT
 manufacturer: Pimoroni
 description: 64 blindingly bright RGB LEDs on a single HAT

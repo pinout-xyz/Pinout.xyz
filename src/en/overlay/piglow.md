@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: led
 name: PiGlow
 manufacturer: Pimoroni
 description: Simply 18 LEDs in a spiral pattern controllable in Python.

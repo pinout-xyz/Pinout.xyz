@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: audio
 name: Cirrus Logic Audio Card
 manufacturer: Cirrus Logic and element14
 description: Audio Card with unprecedented level of features and performance for Raspberry Pi.

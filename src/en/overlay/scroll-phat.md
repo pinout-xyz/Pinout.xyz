@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: led
 name: Scroll pHAT
 manufacturer: Pimoroni
 description: A 11 x 5 LED matrix.

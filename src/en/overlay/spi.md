@@ -1,6 +1,7 @@
 <!--
 ---
-type: info
+class: interface
+type: pinout
 name: SPI
 description: Raspberry Pi SPI pins
 pincount: 5

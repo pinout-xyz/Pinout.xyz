@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: audio
 name: "pHAT DAC"
 manufacturer: Pimoroni
 description: An I2S digital to analog audio converter
@@ -11,7 +12,7 @@ eeprom: no
 power: 3v3,5v
 pin:
   '12':
-    name: I2S 
+    name: I2S
   '35':
     name: I2S
   '40':

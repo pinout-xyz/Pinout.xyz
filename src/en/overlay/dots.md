@@ -1,6 +1,7 @@
 <!--
 ---
-type: board
+class: board
+type: other
 name: Raspberry Pi Dots
 manufacturer: Raspberry Pi Foundation
 description: Join the dots to make a circuit

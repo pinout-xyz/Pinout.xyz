@@ -1,5 +1,5 @@
 * {margin:0;padding:0;text-decoration:none;}
-body {font-family:'Avenir', sans-serif;}
+body {font-family:'Avenir', sans-serif;font-weight:500;}
 pre {font-family:'Ubuntu Mono', sans-serif;font-size:13px;}
 ul.bottom a {color:#E9E5D2;}
 ul.top a {color:#063541;}
@@ -10,9 +10,6 @@ table * {text-align:left;font-size:13px;}
 
 table.pin-functions {width:100%;}
 table.pin-functions td {width:16.6666%;}
-
-h2 {font-size:18px;margin-top:20px;}
-#content h1,h2,h3,h4,h5 {font-family:Minion, Serif;}
 
 
 .logo {
@@ -96,10 +93,12 @@ Content Area
 	float:left;
 	background:#EBE6D3;
 	width:500px;
-	min-height:644px;
+	min-height:640px;
 	padding-bottom:20px;
 }
 #content h1 {font-size:30px;}
+#content h2 {font-size:20px;margin-top:20px;}
+#content h1,h2,h3,h4,h5 {font-family:Minion, Serif;}
 
 #content article {
 	padding:15px;
@@ -115,7 +114,7 @@ p,pre {
 }
 h3 {
 	color:#D33682;
-	font-size:18px;
+	font-size:22px;
 	font-weight:bold;
 }
 
@@ -221,7 +220,7 @@ nav#gpio {
 	position:relative;
 	width:292px;
 	background:#5F8645;
-	height:666px;
+	height:662px;
 	float:left;
 	margin-right:208px;
 	border-top-right-radius:46px;
@@ -240,7 +239,7 @@ nav#gpio:before, nav#gpio:after {
 	position: absolute;
 }
 nav#gpio:after {
-	top:590px;
+	top:586px;
 }
 .phys {
 	color:#002B36;
@@ -380,16 +379,16 @@ nav#gpio li.pin1 span.pin {border-radius:0;}
 div#pinbase, div#pinbasebplus {width:58px;position:absolute;left:216px;}
 
 div#pinbase {
-	height:326px;
+	height:324px;
 	background:#073642;
 	top:80px;
 }
 div#pinbasebplus {
 	height:177px;
 	background:#184753;
-	top:408px;
+	top:404px;
 }
-.pin27, .pin28 {margin-top:16px;}
+.pin27, .pin28 {margin-top:12px;}
 
 ul.legend {
 	float:right;

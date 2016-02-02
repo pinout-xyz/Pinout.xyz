@@ -4,7 +4,7 @@ div#pinbasebplus,
 div#pinbase {background:transparent;}
 #article {padding:0px;}
 
-.main-nav, .overlay-container, .logo img {display:none;}
+.main-nav, .overlay-container, .logo img, #sections, #lang, nav#gpio:before, nav#gpio:after {display:none;}
 
 ul.bottom a {
 	color:#000000;

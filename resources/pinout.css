@@ -98,7 +98,7 @@ Content Area
 }
 #content h1 {font-size:30px;}
 #content h2 {font-size:20px;margin-top:20px;}
-#content h1,h2,h3,h4,h5 {font-family:Minion, Serif;}
+#content h1,h2,h3,h4,h5 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
 #content article {
 	padding:15px;

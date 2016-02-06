@@ -11,7 +11,6 @@ buy: http://shop.pimoroni.com/products/skywriter-hat
 formfactor: 'HAT'
 pincount: 40
 eeprom: yes
-power: 3v3
 i2c:
   '0x42':
     name: Gesture sensor

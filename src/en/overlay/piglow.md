@@ -11,7 +11,12 @@ buy: http://shop.pimoroni.com/products/piglow
 formfactor: '26-way'
 pincount: 26
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+  '17':
+ground:
+  '14':
 pin:
   '3':
     mode: i2c

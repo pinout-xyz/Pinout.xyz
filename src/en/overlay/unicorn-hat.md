@@ -11,6 +11,10 @@ buy: http://shop.pimoroni.com/products/unicorn-hat
 formfactor: 'HAT'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+ground:
+  '9':
 pin:
   '12':
     name: Data

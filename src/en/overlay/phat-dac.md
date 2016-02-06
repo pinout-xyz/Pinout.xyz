@@ -9,7 +9,11 @@ buy: https://shop.pimoroni.com/products/phat-dac
 formfactor: 'pHAT'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
   '12':
     name: I2S

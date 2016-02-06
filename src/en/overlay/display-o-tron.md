@@ -11,7 +11,11 @@ buy: https://shop.pimoroni.com/products/displayotron-3000
 formfactor: '26-way'
 pincount: 26
 eeprom: no
-power: 3v3,5v
+power:
+  '2':
+  '17':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c

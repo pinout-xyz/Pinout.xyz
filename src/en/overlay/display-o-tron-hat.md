@@ -11,7 +11,11 @@ buy: https://shop.pimoroni.com/products/display-o-tron-hat
 formfactor: 'HAT'
 pincount: 40
 eeprom: yes
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c

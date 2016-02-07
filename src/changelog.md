@@ -1,11 +1,17 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Feb 7, 2016
+- added espiot-phat.md
+
+Jan 31, 2016
+- major tweaks to sense-hat.md
+
 Dec 29, 2015
-- added Drum HAT.md
+- added drum-hat.md
 
 Dec 16, 2015
-- added pHAT Dac.md
+- added phat-dac.md
 
 Dec 3, 2015
 - added explorer-phat.md

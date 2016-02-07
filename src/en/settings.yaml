@@ -32,15 +32,16 @@ overlays:
 - arduino-spi
 - wiringpi
 - cirruslogicaudiocard
-- iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
 - discohat
 - drum-hat
+- espiot-phat
 - explorer-hat
 - explorer-hat-pro
 - explorer-phat
 - phat-dac
+- iqaudio-pi-dac
 - piano-hat
 - piborg-ledborg
 - pibrella

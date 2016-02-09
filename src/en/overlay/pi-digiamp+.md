@@ -10,10 +10,27 @@ formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 pin:
+  '3':
+    name: I2C
+  '5':
+    name: I2C
   '15':
-    name: ID_SD
+    name: GEN3
+  '27':
+    name: ID_SD (HAT)
+  '35':
+    name: I2S
+  '12':
+    name: I2S (CLK)
+  '28':
+    name: HAT
+  '38':
+    name: I2S (DIN)
+  '40':
+    name: I2S
 -->
-#Pi-DigiAMP+
+
+# Pi-DigiAMP+
 
 The Pi-DigiAMP+ is an add-on board that includes a Digital to Analog Converter (DAC) and powerful 35w stereo amplifier. If you want to turn your Raspberry Pi into a working Hi Fi stereo, just add speakers and you're off.
 

@@ -40,71 +40,91 @@ def load_overlay(overlay):
     except IOError:
         return None
 
-    details = []
+    '''
+    If this is not an info page, then build a collection of details and append them to long_description
+    '''
+    if 'type' not in loaded or loaded['type'] != 'info':
+        details = []
 
-    if 'type' not in loaded:
-        loaded['type'] = 'addon'
+        if 'type' not in loaded:
+            loaded['type'] = 'addon'
 
-    if 'manufacturer' in loaded:
-        details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
+        if 'manufacturer' in loaded:
+            details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
 
-    if 'pincount' in loaded:
-        pincount = int(loaded['pincount'])
-        if 'formfactor' in loaded:
-            formfactor = str(loaded['formfactor'])
-            if pincount == 40 and formfactor == 'HAT':
-                details.append(strings['type_hat'])
-            elif pincount == 40 and formfactor == 'pHAT':
-                details.append(strings['type_phat'])
-            elif pincount == 40 and formfactor == '40-way':
-                details.append(strings['pin_header'].format(pincount))
-            else:
-                details.append(strings['pin_header'].format(pincount))                
-        elif pincount == 40:
-            details.append(strings['type_hat'])
-        elif pincount == 26:
-            details.append(strings['type_classic'])
-        else:
-            details.append(strings['pin_header'].format(pincount))
-            
-
-    if 'pin' in loaded:
-        uses = 0
-        for pin in loaded['pin']:
-            pin = str(pin)
-            if pin.startswith('bcm'):
-                pin = pinout.bcm_to_physical(pin[3:])
-
-            if pin in pinout.pins:
-                actual_pin = pinout.pins[pin]
-
-                if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
-                    raise Exception("{} includes a reference to a {} pin, which isn't allowed".format(overlay, actual_pin['type']))
+        if 'pincount' in loaded:
+            '''
+            Choose correct board type to be displayed based upon pincount and form factor.
+            This could be a HAT, a pHAT or other...
+            '''
+            pincount = int(loaded['pincount'])
+            if 'formfactor' in loaded:
+                formfactor = str(loaded['formfactor'])
+                if pincount == 40 and formfactor == 'HAT':
+                    details.append(strings['type_hat'])
+                elif pincount == 40 and formfactor == 'pHAT':
+                    details.append(strings['type_phat'])
+                elif pincount == 40 and formfactor == '40-way':
+                    details.append(strings['pin_header'].format(pincount))
                 else:
-                    uses += 1
+                    details.append(strings['pin_header'].format(pincount))
+            elif pincount == 40:
+                details.append(strings['type_hat'])
+            elif pincount == 26:
+                details.append(strings['type_classic'])
+            else:
+                details.append(strings['pin_header'].format(pincount))
 
-        if uses > 0:
-            details.append(strings['uses_n_gpio_pins'].format(uses))
+        '''
+        If the overlay includes a collection of pins then
+        loop through them and count how many non-power pins are used
+        '''
+        if 'pin' in loaded:
+            uses = 0
+            for pin in loaded['pin']:
+                pin = str(pin)
+                if pin.startswith('bcm'):
+                    pin = pinout.bcm_to_physical(pin[3:])
 
-        if '3' in loaded['pin'] and '5' in loaded['pin']:
-            pin_3 = loaded['pin']['3']
-            pin_5 = loaded['pin']['5']
-            if 'mode' in pin_3 and 'mode' in pin_5:
-                if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-                    details.append(strings['uses_i2c'])
+                if pin in pinout.pins:
+                    actual_pin = pinout.pins[pin]
 
-    if 'url' in loaded:
-        details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
+                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
+                        raise Exception(
+                            "{} includes a reference to a {} pin, which isn't allowed".format(overlay, actual_pin['type']))
+                    else:
+                        uses += 1
 
-    if 'github' in loaded:
-        details.append('[{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
+            if uses > 0:
+                details.append(strings['uses_n_gpio_pins'].format(uses))
 
-    if 'buy' in loaded:
-        details.append('[{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
+            '''
+            If the collection of pins includes pins 3 and 5 in i2c mode, then
+            assume the board uses i2c communication
+            '''
+            if '3' in loaded['pin'] and '5' in loaded['pin']:
+                pin_3 = loaded['pin']['3']
+                pin_5 = loaded['pin']['5']
+                if 'mode' in pin_3 and 'mode' in pin_5:
+                    if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
+                        details.append(strings['uses_i2c'])
 
-    if loaded['type'] != 'info':
-        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], markdown.markdown('\n'.join(map(lambda d: '* ' + d, details))))
+        # A URL to more information about the add-on board, could be a GitHub readme or an about page
+        if 'url' in loaded:
+            details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
 
+        # Should only ever be a URL to the github repository with code supporting the product
+        if 'github' in loaded:
+            details.append('[{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
+
+        # A URL to a preferred place to buy the add-on board
+        if 'buy' in loaded:
+            details.append('[{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
+
+        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],
+                                                    markdown.markdown('\n'.join(map(lambda d: '* ' + d, details))))
+
+    # Automatically generate a page slug from the name if none is specified
     if 'page_url' not in loaded:
         loaded['page_url'] = slugify(loaded['name'])
 
@@ -112,7 +132,7 @@ def load_overlay(overlay):
     loaded['src'] = overlay
     pages[loaded['page_url']] = loaded
     navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
-    select_overlays.append((loaded['page_url'], loaded['name']))
+
     return loaded
 
 
@@ -167,8 +187,6 @@ def render_pin_page(pin_num):
 
             pin_text_name = 'BCM {}'.format(bcm)
 
-            if pin['name'] != '':
-                pin_subname_text = '({})'.format(pin['name'])
             pin_subtext.append('BCM pin {}'.format(bcm))
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
@@ -232,7 +250,8 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'bcm' in pin['scheme']:
             bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
-    if overlay is not None and (pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
+    if overlay is not None and (
+                        pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
 
         if pin_num in overlay['pin']:
             overlay_pin = overlay['pin'][pin_num]
@@ -245,7 +264,7 @@ def render_pin(pin_num, selected_url, overlay=None):
             overlay_pin = {}
 
         pin_used = True
-        # print(overlay)
+
         if 'name' in overlay_pin:
             pin_name = overlay_pin['name']
 
@@ -256,11 +275,10 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'bcm' in pin['scheme']:
             bcm = pin['scheme']['bcm']
             pin_subname = ''
-            # pin_subname_text = ''
-            # if pin_url == '':
+
             pin_url = 'gpio{}'.format(bcm)
-            if pin_name != '':  # pin['name'] != '':
-                pin_subname = '<small>({})</small>'.format(pin_name)  # pin['name'])
+            if pin_name != '':
+                pin_subname = '<small>({})</small>'.format(pin_name)
             pin_name = 'BCM {} {}'.format(bcm, pin_subname)
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
@@ -383,9 +401,10 @@ template = open('src/{}/template/layout.html'.format(lang)).read()
 
 pages = {}
 navs = {}
-select_overlays = []
 
-overlays_html = ''
+overlays_html = []
+
+nav_html = {}
 
 if not os.path.isdir('output'):
     try:
@@ -405,8 +424,29 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
 
 overlays = map(load_overlay, overlays)
 
-for url, name in select_overlays:
-    overlays_html += '<li><a href="{}{}">{}</a></li>'.format(base_url, url, name)
+'''
+Build up the navigation between overlays. This needs to be done before rendering pages
+as it's used in every single page.
+
+overlays_html is generated with all types for legacy reasons
+'''
+for overlay in overlays:
+    link = (overlay['page_url'], overlay['name'])
+
+    overlays_html += [link]
+
+    if 'class' in overlay:
+        if overlay['class'] in nav_html:
+            nav_html[overlay['class']] += [link]
+        else:
+            nav_html[overlay['class']] = [link]
+
+overlays_html.sort()
+overlays_html = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), overlays_html))
+
+for overlay_type, items in nav_html.iteritems():
+    items.sort()
+    nav_html[overlay_type] = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items))
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -439,14 +479,14 @@ for pin in range(1, len(pinout.pins) + 1):
                                   overlays=overlays_html,
                                   description=pinout.settings['default_desc'],
                                   title=pin_title + pinout.settings['title_suffix'],
-                                  langcode=lang
+                                  langcode=lang,
+                                  nav_html=nav_html
                                   )
     print('Outputting page {}'.format(pin_url))
 
     with open(os.path.join('output', lang, 'pinout', '{}.html'.format(pin_url)), 'w') as f:
         f.write(pin_html)
 
-# nav = render_nav()
 
 print('Rendering overlay and index pages...')
 
@@ -482,7 +522,8 @@ for url in pages:
                               resource_url=resource_url,
                               description=pages[url]['description'],
                               title=pages[url]['name'],
-                              langcode=lang
+                              langcode=lang,
+                              nav_html=nav_html
                               )
     print('Outputting page {}'.format(url))
 

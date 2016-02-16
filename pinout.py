@@ -19,7 +19,11 @@ def render_html(*args, **kwargs):
     html = args[0]
     kwargs['v'] = str(int(time.time()))
     for key in kwargs:
-        html = html.replace('{{' + key + '}}', kwargs[key])
+        if type(kwargs[key]) == dict:
+            for d_key, d_value in kwargs[key].iteritems():
+                html = html.replace('{{' + key + '_' + d_key + '}}', d_value)
+        elif type(kwargs[key]) == str:
+            html = html.replace('{{' + key + '}}', kwargs[key])
     return html
 
 

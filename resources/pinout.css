@@ -175,9 +175,8 @@ Drop down nav
 	max-width:704px;
 	z-index:1;
 }
-/*#sections > ul > li:hover div {display:block;z-index:1;}*/
-#sections ul div ul {
-	padding:20px;
+#sections ul div > ul {
+	padding:10px;
 	text-align:right;
 	box-sizing:border-box;
 	display:block;
@@ -186,24 +185,46 @@ Drop down nav
 	float:none;
 	display: inline-block;
 }
-#sections ul ul a {
+#sections ul ul a, #sections .group-title {
 	color:#FFF;
-	padding:10px;
+	padding:8px;
 	display:inline-block;
-	font-size:18px;
+	font-size:16px;
+	margin:2px;
 }
-#sections ul li:nth-child(1) a, #sections ul li:nth-child(1) div {background: #D33682;}
-#sections ul li:nth-child(1) ul a:hover {color: #D33682;}
-#sections > ul > li:nth-child(2) a, #sections ul li:nth-child(2) div {background: #6c71c4;}
-#sections ul li:nth-child(2) ul a:hover {color: #6c71c4;}
-#sections > ul > li:nth-child(3) a, #sections ul li:nth-child(3) div {background: #268BD2;}
-#sections ul li:nth-child(3) ul a:hover {color: #268BD2;}
+#sections .group .group-title  {
+	position:relative;
+	padding-right:20px;
+}
+#sections .group .group-title:after {
+	content: '';
+	border:5px solid transparent;
+	border-left-color:#ffffff;
+	position:absolute;
+	right:0;
+	top:50%;
+	margin-top:-5px;
+}
+
+#sections > ul > li:nth-child(1) a, #sections > ul > li:nth-child(1) div {background: #D33682;}
+#sections > ul > li:nth-child(1) ul a {background: #C32672;}
+#sections > ul > li:nth-child(1) ul a:hover {color: #D33682;background:#FFF;}
+
+#sections > ul > li:nth-child(2) a, #sections > ul > li:nth-child(2) div {background: #6c71c4;}
+#sections > ul > li:nth-child(2) ul a {background: #5c61b4;}
+#sections > ul > li:nth-child(2) ul a:hover {color: #6c71c4;background:#FFF;}
+
+#sections > ul > li:nth-child(3) a, #sections > ul > li:nth-child(3) div {background: #268BD2;}
+#sections > ul > li:nth-child(3) ul a {background: #167BC2;}
+#sections > ul > li:nth-child(3) ul a:hover {color: #268BD2;background:#FFF;}
+
+#sections > ul > li:nth-child(2) .group-title, #sections > ul > li:nth-child(3) .group-title {
+	display:none;
+}
+
 #sections > ul > li:first-child {
 	border-left:none;
 	width:34%;
-}
-#sections ul li ul a:hover {
-	background:#FFF;
 }
 
 /*

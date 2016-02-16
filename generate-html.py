@@ -369,7 +369,18 @@ default_strings = {
     'physical_pin_n': 'Physical pin {}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
-    'buy_now': 'Buy Now'
+    'buy_now': 'Buy Now',
+    'group_multi': 'Multi',
+    'group_led': 'LED',
+    'group_iot': 'IOT',
+    'group_instrument': 'Instrument',
+    'group_lcd': 'LCD',
+    'group_other': 'Other',
+    'group_motor': 'Motor',
+    'group_audio': 'Audio',
+    'group_gesture': 'Gesture',
+    'group_pinout': 'Pinout',
+    'group_info': 'Info'
 }
 
 if len(sys.argv) > 1:
@@ -435,18 +446,27 @@ for overlay in overlays:
 
     overlays_html += [link]
 
-    if 'class' in overlay:
-        if overlay['class'] in nav_html:
-            nav_html[overlay['class']] += [link]
+    if 'class' in overlay and 'type' in overlay:
+        o_class = overlay['class']
+        o_type = overlay['type']
+
+        if o_class in nav_html:
+            if o_type in nav_html[o_class]:
+                nav_html[o_class][o_type] += [link]
+            else:
+                nav_html[o_class][o_type] = [link]
         else:
-            nav_html[overlay['class']] = [link]
+            nav_html[o_class] = {}
+            nav_html[o_class][o_type] = [link]
 
 overlays_html.sort()
 overlays_html = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), overlays_html))
 
-for overlay_type, items in nav_html.iteritems():
-    items.sort()
-    nav_html[overlay_type] = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items))
+for overlay_type in nav_html.keys():
+    for overlay_group, items in nav_html[overlay_type].iteritems():
+        items.sort()
+        nav_html[overlay_type][overlay_group] = '<li class="group"><ul><li class="group-title">' + strings['group_' + overlay_group] + '</li>' + (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items))) + '</ul></li>'
+    nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
 
 '''
 Manually add the index page as 'pinout', this is due to how the

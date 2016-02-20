@@ -12,6 +12,37 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
+
+lang = "en"
+default_strings = {
+    'made_by': 'Made by {manufacturer}',
+    'type_hat': 'HAT form-factor',
+    'type_classic': 'Classic form-factor',
+    'pin_header': '{} pin header',
+    'uses_i2c': 'Uses I2C',
+    'wiring_pi_pin': 'Wiring Pi pin {}',
+    'uses_n_gpio_pins': 'Uses {} GPIO pins',
+    'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
+    'physical_pin_n': 'Physical pin {}',
+    'more_information': 'More Information',
+    'github_repository': 'GitHub Repository',
+    'buy_now': 'Buy Now',
+    'group_multi': 'Multi',
+    'group_led': 'LED',
+    'group_iot': 'IOT',
+    'group_instrument': 'Instrument',
+    'group_lcd': 'LCD',
+    'group_other': 'Other',
+    'group_motor': 'Motor',
+    'group_audio': 'Audio',
+    'group_gesture': 'Gesture',
+    'group_pinout': 'Pinout',
+    'group_info': 'Info',
+    'group_featured': 'Featured'
+}
+
+
+
 def cssify(value):
     value = slugify(value);
     if value[0] == '3' or value[0] == '5':
@@ -143,7 +174,7 @@ def load_md(filename):
 
         return html
     except IOError:
-        print('Unable to load markdown from {}'.format(filename))
+        print('!! Unable to load markdown from {}'.format(filename))
         return ''
 
 
@@ -356,33 +387,6 @@ def get_lang_urls(src):
 Main Program Flow
 '''
 
-lang = "en"
-default_strings = {
-    'made_by': 'Made by {manufacturer}',
-    'type_hat': 'HAT form-factor',
-    'type_classic': 'Classic form-factor',
-    'pin_header': '{} pin header',
-    'uses_i2c': 'Uses I2C',
-    'wiring_pi_pin': 'Wiring Pi pin {}',
-    'uses_n_gpio_pins': 'Uses {} GPIO pins',
-    'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
-    'physical_pin_n': 'Physical pin {}',
-    'more_information': 'More Information',
-    'github_repository': 'GitHub Repository',
-    'buy_now': 'Buy Now',
-    'group_multi': 'Multi',
-    'group_led': 'LED',
-    'group_iot': 'IOT',
-    'group_instrument': 'Instrument',
-    'group_lcd': 'LCD',
-    'group_other': 'Other',
-    'group_motor': 'Motor',
-    'group_audio': 'Audio',
-    'group_gesture': 'Gesture',
-    'group_pinout': 'Pinout',
-    'group_info': 'Info'
-}
-
 if len(sys.argv) > 1:
     lang = sys.argv[1]
 
@@ -434,6 +438,8 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
         exit('Failed to create output/{}/pinout dir'.format(lang))
 
 overlays = map(load_overlay, overlays)
+overlay_subnav = ['featured']
+featured_boards = []
 
 '''
 Build up the navigation between overlays. This needs to be done before rendering pages
@@ -446,27 +452,63 @@ for overlay in overlays:
 
     overlays_html += [link]
 
+    if 'featured' in overlay and 'image' in overlay and len(featured_boards) < 3:
+        featured_boards.append(overlay)
+
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
         o_type = overlay['type']
 
-        if o_class in nav_html:
-            if o_type in nav_html[o_class]:
-                nav_html[o_class][o_type] += [link]
-            else:
-                nav_html[o_class][o_type] = [link]
-        else:
+        if o_class not in nav_html:
             nav_html[o_class] = {}
-            nav_html[o_class][o_type] = [link]
 
+        if o_type not in nav_html[o_class]:
+            nav_html[o_class][o_type] = []
+
+        if o_class == 'board' and o_type not in overlay_subnav:
+            overlay_subnav.append(o_type)
+
+        nav_html[o_class][o_type] += [link]
+
+
+
+featured_boards_html = ''
+for overlay in featured_boards:
+    featured_boards_html += '<div class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+            image=overlay['image'],
+            name=overlay['name'],
+            page_url=overlay['page_url'],
+            base_url=base_url,
+            resource_url=resource_url,
+            description=overlay['description']
+        )
+
+featured_boards_html = '<div class="group group_featured">' + featured_boards_html + '</div>'
+
+'''
+Generate legacy navigation menu for all overlays in a single drop-down
+'''
 overlays_html.sort()
 overlays_html = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), overlays_html))
+
+'''
+Generate the new categorised navigation menu
+'''
+overlay_subnav = ''.join(map(lambda overlay_type: '<li class="group_{cls}" data-group="{cls}">{text}</li>'.format(cls=overlay_type,text=strings['group_' + overlay_type]),overlay_subnav))
 
 for overlay_type in nav_html.keys():
     for overlay_group, items in nav_html[overlay_type].iteritems():
         items.sort()
-        nav_html[overlay_type][overlay_group] = '<li class="group"><ul><li class="group-title">' + strings['group_' + overlay_group] + '</li>' + (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items))) + '</ul></li>'
+        group_items = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items)))
+        
+        nav_html[overlay_type][overlay_group] = '<div class="group group_' + overlay_group + '"><ul>' + group_items + '</ul></div>'
     nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
+    
+    if overlay_type == 'board':
+        nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + featured_boards_html + nav_html[overlay_type]
+
+
+print(nav_html)
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -479,7 +521,17 @@ pages['index'] = {}
 pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('index.md')})
 navs['index'] = render_nav('pinout')
 
-print('Rendering pin pages...')
+'''
+Add the 404 page if 404.md is present.
+'''
+page404 = load_md('404.md')
+if page404 is not None:
+    pages['404'] = {}
+    pages['404']['rendered_html'] = render_overlay_page({'name': '404', 'long_description': page404})
+    navs['404'] = render_nav('pinout')
+
+
+print('\nRendering pin pages...')
 
 for pin in range(1, len(pinout.pins) + 1):
     (pin_url, pin_html, pin_title) = render_pin_page(pin)
@@ -502,13 +554,14 @@ for pin in range(1, len(pinout.pins) + 1):
                                   langcode=lang,
                                   nav_html=nav_html
                                   )
-    print('Outputting page {}'.format(pin_url))
+
+    print('>> pinout/{}.html'.format(pin_url))
 
     with open(os.path.join('output', lang, 'pinout', '{}.html'.format(pin_url)), 'w') as f:
         f.write(pin_html)
 
 
-print('Rendering overlay and index pages...')
+print('\nRendering overlay and index pages...')
 
 for url in pages:
     content = pages[url]['rendered_html']
@@ -545,10 +598,13 @@ for url in pages:
                               langcode=lang,
                               nav_html=nav_html
                               )
-    print('Outputting page {}'.format(url))
 
-    if url != 'index':
+    if url != 'index' and url != '404':
         url = os.path.join('pinout', url)
+
+    print('>> {}.html'.format(url))
 
     with open(os.path.join('output', lang, '{}.html'.format(url)), 'w') as f:
         f.write(html)
+
+print('\nAll done!')

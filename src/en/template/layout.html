@@ -33,20 +33,14 @@
 			<div id="content">
 				<div id="sections">
 					<ul>
-						<li><a href="" title="Add-on boards for Raspberry Pi">Boards</a>
-							<div><ul>
-								{{nav_html_board}}
-							</ul></div>
+						<li class="boards"><a href="" title="Add-on boards for Raspberry Pi">Boards</a>
+							<div class="dropdown">{{nav_html_board}}</div>
 						</li>
-						<li><a href="" title="Raspberry Pi hardware interfaces">Interfaces</a>
-							<div><ul>
-								{{nav_html_interface}}
-							</ul></div>
+						<li class="interfaces"><a href="" title="Raspberry Pi hardware interfaces">Interfaces</a>
+							<div class="dropdown">{{nav_html_interface}}</div>
 						</li>
-						<li><a href="" title="Connection guides for Raspberry Pi GPIO">Guides</a>
-							<div><ul>
-								{{nav_html_guide}}
-							</ul></div>
+						<li class="guides"><a href="" title="Connection guides for Raspberry Pi GPIO">Guides</a>
+							<div class="dropdown">{{nav_html_guide}}</div>
 						</li>
 					</ul>
 				</div>
@@ -71,7 +65,6 @@
 		<script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
     	<script src='{{resource_url}}prettify/lang-ruby.js'></script>
     	<script src='{{resource_url}}prettify/lang-bash.js'></script>
-	<script src='{{resource_url}}gaat.js'></script>
 		<script src='{{resource_url}}pinout.js?v={{v}}'></script>
 </body>
 </html>

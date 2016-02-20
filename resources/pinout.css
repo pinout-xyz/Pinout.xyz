@@ -176,6 +176,10 @@ Drop down nav
 	z-index:1;
 }
 
+#sections ul .boards .dropdown {
+	width:704px;
+}
+
 #sections .dropdown .group, #sections .dropdown .group-nav {
 	padding:10px;
 	box-sizing:border-box;

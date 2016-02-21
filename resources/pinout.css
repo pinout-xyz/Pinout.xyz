@@ -11,6 +11,9 @@ table * {text-align:left;font-size:13px;}
 table.pin-functions {width:100%;}
 table.pin-functions td {width:16.6666%;}
 
+.prettyprint {
+	word-wrap:break-word;
+}
 
 .logo {
 	width:250px;

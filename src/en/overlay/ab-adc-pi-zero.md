@@ -3,6 +3,7 @@
 name: ADC Pi Zero
 class: board
 type: other
+image: 'ab-adc-pi-zero.png'
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-Digital-converter

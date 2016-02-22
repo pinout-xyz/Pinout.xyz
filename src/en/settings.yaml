@@ -24,6 +24,10 @@ strings:
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
+featured:
+- piano-hat
+- propeller-hat
+- ab-adc-pi-zero
 overlays:
 - ground
 - uart

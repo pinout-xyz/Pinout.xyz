@@ -452,7 +452,7 @@ for overlay in overlays:
 
     overlays_html += [link]
 
-    if 'featured' in overlay and 'image' in overlay and len(featured_boards) < 3:
+    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and len(featured_boards) < 3:
         featured_boards.append(overlay)
 
     if 'class' in overlay and 'type' in overlay:

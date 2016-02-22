@@ -1,6 +1,8 @@
 <!--
 ---
 name: RTC Pi Plus
+class: board
+type: other
 manufacturer: AB Electronics UK
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/52/RTC-Pi-Plus
@@ -28,6 +30,4 @@ The RTC Pi Plus is powered through the host Raspberry Pi using the GPIO port and
 
 Unlike most other DS1307 based RTC modules the RTC Pi also includes an I2C logic level converter allowing you to connect other 5V I2C devices to your Raspberry Pi.
 
-We have python 2 and 3 libraries available for this expansion board.  You can download all of the libraries from github at:
-
-[https://github.com/abelectronicsuk/](https://github.com/abelectronicsuk/)
+Python 2 and 3 libraries are available on GitHub.

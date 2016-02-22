@@ -54,3 +54,10 @@ overlays:
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- ab-1-wire-plus
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-io-pi-plus
+- ab-rtc-pi-plus
+- ab-serial-pi-plus

@@ -1,6 +1,8 @@
 <!--
 ---
 name: ADC Pi Zero
+class: board
+type: other
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-Digital-converter
@@ -27,35 +29,22 @@ i2c:
 
 The ADC Pi Zero is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi Zero. The ADC Pi Zero is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-## Features ##
+##Features
 
-  - 8 x 17-bit 0 to 5V Single Ended Inputs
-
-  - Control via the Raspberry Pi I2C port
-
-  - Stack up to 4 ADC Pi Zero boards on a single Raspberry Pi
-
-  - Jumper selectable I2C addresses
-
-  - Buffered 5V I2C port
-
-  - Based on the MCP3424 from Microchip Technologies Inc
-
-  - Single Ended full-scale range of 5.0V
-
-  - On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
-
-  - On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
-
-  - Programmable Data Rate Options:
-
+- 8 x 17-bit 0 to 5V Single Ended Inputs
+- Control via the Raspberry Pi I2C port
+- Stack up to 4 ADC Pi Zero boards on a single Raspberry Pi
+- Jumper selectable I2C addresses
+- Buffered 5V I2C port
+- Based on the MCP3424 from Microchip Technologies Inc
+- Single Ended full-scale range of 5.0V
+- On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
+- On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
+- Programmable Data Rate Options:
    - 3.75 SPS (17 bits)
    - 15 SPS (15 bits)
    - 60 SPS (13 bits)
    - 240 SPS (11 bits)
+- One-Shot or Continuous Conversion Options
 
-  - One-Shot or Continuous Conversion Options
-
-We have Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries available for this expansion board.  You can download all of the libraries from github at:
-
-[https://github.com/abelectronicsuk/](https://github.com/abelectronicsuk/)
+Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.

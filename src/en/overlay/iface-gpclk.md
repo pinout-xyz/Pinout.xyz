@@ -2,7 +2,7 @@
 ---
 class: interface
 type: pinout
-name: SD
+name: GPCLK
 description: Raspberry Pi General Purpose Clock
 pincount: 4
 pin:

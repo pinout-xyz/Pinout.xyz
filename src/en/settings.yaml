@@ -65,3 +65,7 @@ overlays:
 - ab-io-pi-plus
 - ab-rtc-pi-plus
 - ab-serial-pi-plus
+- iface-gpclk
+- iface-dpi
+- iface-pcm
+- iface-sd

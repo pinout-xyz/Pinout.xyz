@@ -6,49 +6,49 @@ name: DPI
 description: Raspberry Pi DPI pins
 pincount: 22
 pin:
-  '0':
+  'bcm0':
     name: CLK
-  '1':
+  'bcm1':
     name: DEN
-  '2':
+  'bcm2':
     name: V-SYNC
-  '3':
+  'bcm3':
     name: H-SYNC
-  '4':
+  'bcm4':
     name: Blue 2
-  '5':
+  'bcm5':
     name: Blue 3
-  '6':
+  'bcm6':
     name: Blue 4
-  '7':
+  'bcm7':
     name: Blue 5
-  '8':
+  'bcm8':
     name: Blue 6
-  '9':
+  'bcm9':
     name: Blue 7
-  '10':
+  'bcm10':
     name: Green 2
-  '11':
+  'bcm11':
     name: Green 3
-  '12':
+  'bcm12':
     name: Green 4
-  '13':
+  'bcm13':
     name: Green 5
-  '14':
+  'bcm14':
     name: Green 6
-  '15':
+  'bcm15':
     name: Green 7
-  '16':
+  'bcm16':
     name: Red 2
-  '17':
+  'bcm17':
     name: Red 3
-  '18':
+  'bcm18':
     name: Red 4
-  '19':
+  'bcm19':
     name: Red 5
-  '20':
+  'bcm20':
     name: Red 6
-  '21':
+  'bcm21':
     name: Red 7
 -->
 #DPI - Display Parallel Interface

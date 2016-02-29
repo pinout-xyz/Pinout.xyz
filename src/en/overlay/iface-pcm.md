@@ -6,13 +6,13 @@ name: PCM
 description: Raspberry Pi PCM pins
 pincount: 4
 pin:
-  '18':
+  'bcm18':
     name: CLK
-  '19':
+  'bcm19':
     name: FS
-  '20':
+  'bcm20':
     name: DIN
-  '21':
+  'bcm21':
     name: DOUT
 -->
 #PCM - Pulse-code Modulation

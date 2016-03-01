@@ -4,7 +4,7 @@ class: interface
 type: pinout
 name: GPCLK
 description: Raspberry Pi General Purpose Clock
-pincount: 4
+pincount: 3
 pin:
   'bcm4':
     name: GPCLK0

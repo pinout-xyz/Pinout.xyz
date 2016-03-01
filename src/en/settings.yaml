@@ -69,3 +69,4 @@ overlays:
 - iface-dpi
 - iface-pcm
 - iface-sd
+- iface-jtag

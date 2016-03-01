@@ -4,7 +4,6 @@ class: interface
 type: pinout
 name: PCM
 description: Raspberry Pi PCM pins
-pincount: 4
 pin:
   'bcm18':
     name: CLK

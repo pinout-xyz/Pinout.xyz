@@ -4,7 +4,6 @@ class: interface
 type: pinout
 name: SD
 description: Raspberry Pi SD0/SD1 pins
-pincount: 6
 pin:
   'bcm22':
     name: CLK

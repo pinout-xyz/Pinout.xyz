@@ -4,7 +4,6 @@ class: interface
 type: pinout
 name: DPI
 description: Raspberry Pi DPI pins
-pincount: 22
 pin:
   'bcm0':
     name: CLK

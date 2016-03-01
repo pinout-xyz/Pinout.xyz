@@ -4,7 +4,6 @@ class: interface
 type: pinout
 name: JTAG
 description: Raspberry Pi JTAG pins
-pincount: 11
 pin:
   'bcm4':
     name: TDI (Alt5)

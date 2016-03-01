@@ -4,7 +4,6 @@ class: interface
 type: pinout
 name: I2C
 description: Raspberry Pi i2c pins
-pincount: 2
 pin:
   '3':
     name: Data

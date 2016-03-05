@@ -1,6 +1,40 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+Feb 7, 2016
+- added espiot-phat.md
+
+Jan 31, 2016
+- major tweaks to sense-hat.md
+
+Dec 29, 2015
+- added drum-hat.md
+
+Dec 16, 2015
+- added phat-dac.md
+
+Dec 3, 2015
+- added explorer-phat.md
+- added scroll-phat.md
+
+Nov 21, 2015
+- added cirruslogicaudiocard.md
+
+Nov 20, 2015
+- added discohat.md
+
+Nov 15, 2015
+- major tweaks to piglow.md
+
+Nov 14, 2015
+- major tweaks to i2c.md and related pins
+
+Nov 12, 2015
+- major tweaks to arduino-spi.md
+
+Nov 9, 2015
+- major tweaks to sense-hat.md
+
 Nov 8, 2015
 - major tweaks to spi.md
 

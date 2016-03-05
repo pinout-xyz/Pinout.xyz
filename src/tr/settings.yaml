@@ -1,0 +1,42 @@
+---
+default_desc: Raspberry Pi, B+ ve Pi 2 için Pin şematiği
+default_title: Raspberry Pi GPIO Pinleri - Pi 1, B+, Pi 2
+title_suffix: " - Raspberry Pi Pinleri"
+base_url: /pinout/
+resource_url: /resources/
+domain: tr.pinout.xyz
+url_suffix: ''
+urls:
+  GND: ground_toprak
+strings:
+- made_by: 'Made by {manufacturer}'
+- type_hat: 'HAT form-factor'
+- type_hat: 'pHAT form-factor'
+- type_classic: 'Classic form-factor'
+- pin_header: '{} pin header'
+- uses_i2c: 'Uses I2C'
+- uses_spi: 'Uses SPI'
+- wiring_pi_pin: 'Wiring Pi pin {}'
+- uses_n_gpio_pins: 'Uses {} GPIO pins'
+- bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
+- physical_pin_n: 'Physical pin {}'
+- more_information: 'More Information'
+- github_repository: 'GitHub Repository'
+- buy_now: 'Buy Now'
+overlays:
+- ground
+- uart
+- i2c
+- spi
+- arduino-spi
+- wiringpi
+- display-o-tron
+- dots
+- explorer-hat
+- explorer-hat-pro
+- piborg-ledborg
+- pibrella
+- piglow
+- rtk-000-001
+- skywriter-hat
+- unicorn-hat

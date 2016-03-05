@@ -1,14 +1,15 @@
-LANG ?= en-GB
+LANG ?= en
 
-LANG := $(subst .UTF-8,,$(LANG))
-LANG := $(subst _,-,$(LANG))
+LANG := $(subst -, ,$(LANG))
+LANG := $(subst _, ,$(LANG))
+LANG := $(firstword $(LANG))
 
 all:
 	./generate-html.py $(LANG)
 	cp -r resources output/$(LANG)/
 
 clean:
-	rm -r output/$(LANG)/*
+	rm -rf output/$(LANG)/*
 
 serve: all
 	./serve.py $(LANG)

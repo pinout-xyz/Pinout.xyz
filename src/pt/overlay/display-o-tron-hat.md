@@ -1,44 +1,52 @@
 <!--
 ---
+class: board
+type: lcd
 name: Display-o-Tron HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with a 6-zone RGB backlight and 6 touch buttons
+url: https://github.com/pimoroni/dot3k
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/display-o-tron-hat
+formfactor: 'HAT'
 pincount: 40
+eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  22:
-    name: LCD CMD/DATA
-    mode: output
-    active: high
-  19:
+  '19':
     mode: spi
-  22:
+  '22':
     name: LCD Register Select
     mode: output
-  23:
+    active: high
+  '23':
     mode: spi
-  24:
+  '24':
     name: LCD Chip Select
     mode: chipselect
     active: high
-  32:
+  '32':
     name: LCD Reset
     mode: output
     active: low
 -->
 #Display-o-Tron HAT
 
-Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and touch. 
+Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and touch.
 However both of these busses can be shared with other devices.
 
-You can use the one-line product installer to get Display-o-Tron HAT set up and ready to go, just:
+To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS get.pimoroni.com/displayotron | bash
 ```
 
 And follow the instructions!

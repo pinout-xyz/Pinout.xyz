@@ -1,11 +1,27 @@
 <!--
 ---
+class: board
+type: led
 name: Unicorn HAT
 manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 blindingly bright RGB LEDs on a single HAT
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
+buy: http://shop.pimoroni.com/products/unicorn-hat
+formfactor: 'HAT'
+pincount: 40
+eeprom: yes
+power:
+  '2':
+ground:
+  '9':
+pin:
+  '12':
+    name: Data
+    direction: output
+    mode: pwm
+    active: high
+    description: WS2812 Data
 install:
   'apt':
     - 'python-dev'
@@ -15,14 +31,6 @@ install:
   'python3':
     - 'unicornhat'
   'examples': 'python/examples/'
-pincount: 40
-pin:
-  '12':
-    name: Data
-    direction: output
-    mode: pwm
-    active: high
-    description: WS2812 Data
 -->
 #Unicorn HAT
 
@@ -32,10 +40,10 @@ from Python make Unicorn HAT PiGlow's bigger, brighter brother.
 Note: Unicorn HAT uses some special PWM trickery, performed with the same hardware that lets you Pi produce sound
 through the audio jack ( analog audio ) so you can't use both at the same time!
 
-Setup is easy, just:
+To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/unicornhat | bash
+curl -sS get.pimoroni.com/unicornhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

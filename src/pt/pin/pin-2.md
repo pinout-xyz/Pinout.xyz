@@ -1,5 +1,6 @@
-###The 5v power pins are connected directly to the Pi's power input and will capably provide the full current of your mains adaptor, less that used by the Pi itself.
+###Os pinos de alimentação 5v estão conectados diretamente à entrada de energia do Pi e consegue fornecer a corrente completa do teu adaptador mains, menos do que é usado pelo Pi.
 
-With a decent power supply, such as the official Pi adaptor, you can expect to pull about 1.5A.
+Com uma fonte de energia decente, como o adaptador Pi oficial, podes esperar conseguir cerca de 1.5A.
 
-Don't be disuaded by what sounds like a measly low voltage. You can do a lot with 5v. Power Arduinos, and even run a small Electroluminescent wire inverter right off the 5v pin!
+Não te deixes dissuadir pelo que parece ser uma fraca voltagem. Consegues fazer bastante com 5v.
+Power Arduinos, e mesmo um pequeno fio inversor Eletroluminiscente logo a partir do pino±

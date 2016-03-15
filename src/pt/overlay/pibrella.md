@@ -1,10 +1,14 @@
 <!--
 ---
+class: board
+type: multi
 name: Pibrella
 manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
 description: An all-in-one light, sound, input and output add-on board.
+url: https://github.com/pimoroni/pibrella
+formfactor: '26-way'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: Green LED
@@ -23,15 +27,15 @@ pin:
     direction: output
     active: high
   '15':
-    name: Output A
+    name: Output E
     direction: output
     active: high
   '16':
-    name: Output B
+    name: Output F
     direction: output
     active: high
   '18':
-    name: Output C
+    name: Output G
     direction: output
     active: high
   '19':
@@ -43,7 +47,7 @@ pin:
     direction: input
     active: high
   '22':
-    name: Output D
+    name: Output H
     direction: output
     active: high
   '23':
@@ -66,8 +70,7 @@ The all-in-one light, sound, input and output add-on board from Pimoroni vs Cynt
 Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install pibrella
+curl -sS get.pimoroni.com/pibrella | bash
 ```
 
 Then import it into your Python script and start tinkering:

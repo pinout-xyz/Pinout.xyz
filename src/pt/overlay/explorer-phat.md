@@ -2,28 +2,20 @@
 ---
 class: board
 type: multi
-name: Explorer HAT
+name: Explorer pHAT
 manufacturer: Pimoroni
-description: An all-in-one light, input, touch and output add-on board.
+description: An all-in-one input, output and motor add-on board.
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
-buy: http://shop.pimoroni.com/products/explorer-hat
-formfactor: 'HAT'
+buy: https://shop.pimoroni.com/products/explorer-phat
+formfactor: 'pHAT'
 pincount: 40
-eeprom: yes
+eeprom: no
 pin:
-  '7':
-    name: LED 1
-    mode: output
-    active: high
-  '11':
-    name: LED 2
-    mode: output
-    active: high
-  '13':
-    name: LED 3
-    mode: output
-    active: high
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '15':
     name: Input 2
     mode: input
@@ -40,10 +32,6 @@ pin:
     name: Input 4
     mode: input
     active: high
-  '29':
-    name: LED 4
-    mode: output
-    active: high
   '31':
     name: Output 1
     mode: output
@@ -56,14 +44,30 @@ pin:
     name: Output 3
     mode: output
     active: high
+  '35':
+    name: Motor 1 +
+    mode: output
+    active: high
   '36':
     name: Output 4
     mode: output
     active: high
+  '37':
+    name: Motor 2 -
+    mode: output
+    active: high
+  '38':
+    name: Motor 1 -
+    mode: output
+    active: high
+  '40':
+    name: Motor 2 +
+    mode: output
+    active: high
 i2c:
-  '0x28':
-    name: Cap Touch
-    device: cap1208
+  '0x48':
+    name: Analog Input
+    device: ads1015
 install:
   'devices':
     - 'i2c'
@@ -78,11 +82,11 @@ install:
     - 'explorerhat'
   'examples': 'examples/'
 -->
-#Explorer HAT
+#Explorer pHAT
 
-5V inputs and outputs, touch pads and LEDs make up the Explorer HAT; a jack of all trades prototyping side-kick for your Raspberry Pi.
+5V inputs and outputs, analog inputs and an H-Bridge motor driver make up the Explorer pHAT; a jack of all trades prototyping side-kick for your Raspberry Pi. Perfect for RPi Zero but works with A+/B+/2 too!
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
 curl -sS get.pimoroni.com/explorerhat | bash
@@ -92,5 +96,4 @@ Then import it into your Python script and start tinkering:
 
 ```bash
 import explorerhat
-explorerhat.light.on()
 ```

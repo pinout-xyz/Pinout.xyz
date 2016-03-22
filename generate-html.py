@@ -448,6 +448,11 @@ as it's used in every single page.
 overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
+    #image = None
+
+    #if 'image' in overlay:
+    #    image = overlay['image']
+    
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
@@ -468,7 +473,7 @@ for overlay in overlays:
         if o_class == 'board' and o_type not in overlay_subnav:
             overlay_subnav.append(o_type)
 
-        nav_html[o_class][o_type] += [link]
+        nav_html[o_class][o_type] += [overlay]
 
 
 
@@ -499,8 +504,26 @@ overlay_subnav = ''.join(map(lambda overlay_type: '<li class="group_{cls}" data-
 for overlay_type in nav_html.keys():
     for overlay_group, items in nav_html[overlay_type].iteritems():
         items.sort()
-        group_items = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), items)))
-        
+        featured = [x for x in items if 'image' in x]
+        regular = [x for x in items if 'image' not in x]
+
+        group_items = ''
+
+        group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></li>'.format(
+            image=x['image'],
+            name=x['name'],
+            page_url=x['page_url'],
+            base_url=base_url,
+            resource_url=resource_url,
+            description=x['description']), featured)))
+
+        group_items_normal = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x['page_url'], x['name']), regular)))
+
+        group_items = group_items_pictures + group_items_normal
+
+        if len(featured) > 0 and len(regular) > 0:
+                group_items = group_items_pictures + '<hr />' + group_items_normal
+
         nav_html[overlay_type][overlay_group] = '<div class="group group_' + overlay_group + '"><ul>' + group_items + '</ul></div>'
     nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
     

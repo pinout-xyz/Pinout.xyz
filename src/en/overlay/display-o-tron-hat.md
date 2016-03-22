@@ -3,6 +3,7 @@
 class: board
 type: lcd
 name: Display-o-Tron HAT
+image: 'display-o-tron-hat.png'
 manufacturer: Pimoroni
 description: A 3-line character LCD with a 6-zone RGB backlight and 6 touch buttons
 url: https://github.com/pimoroni/dot3k

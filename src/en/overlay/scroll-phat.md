@@ -4,6 +4,7 @@ class: board
 type: led
 name: Scroll pHAT
 manufacturer: Pimoroni
+image: 'scroll-phat.png'
 description: A 11 x 5 LED matrix.
 url: https://github.com/pimoroni/scroll-phat
 github: https://github.com/pimoroni/scroll-phat

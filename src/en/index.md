@@ -8,7 +8,7 @@ This GPIO Pinout is designed to be both a quick-reference and a comprehensive gu
 
 * BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO and GPIO Zero
 * WiringPi - Wiring Pi pin number (shown as a tooltip), for Gordon's Wiring Pi library
-* Physical - Number corresponding to the pins physical location on the header
+* Physical - Number corresponding to the pin's physical location on the header
 
 ##Raspberry Pi Zero
 

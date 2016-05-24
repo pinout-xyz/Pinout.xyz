@@ -1,0 +1,1 @@
+Ces broches sont généralement réservées à la communication i2c avec l'EEPROM des 'chapeaux' HAT.

@@ -1,9 +1,15 @@
+LANG ?= en
+
+LANG := $(subst -, ,$(LANG))
+LANG := $(subst _, ,$(LANG))
+LANG := $(firstword $(LANG))
+
 all:
-	./generate-html.py en-GB
-	cp -r resources output/en-GB/
+	./generate-html.py $(LANG)
+	cp -r resources output/$(LANG)/
 
 clean:
-	rm -r output/en-GB/*
+	rm -rf output/$(LANG)/*
 
-serve:
-	./serve.py en-GB
+serve: all
+	./serve.py $(LANG)

@@ -19,6 +19,7 @@ pin:
     mode: i2c
   '7':
     mode: output
+    name: Lights
 i2c:
   '0x29':
     name: Light/Colour Sensor

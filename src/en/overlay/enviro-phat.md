@@ -34,3 +34,15 @@ i2c:
     device: ADS1015
 -->
 #Enviro pHAT
+
+Coupled with a Pi Zero, Enviro pHAT is an affordible mix of sensors, ideal for monitoring server rooms, bedrooms, ballrooms or anything you might want to observe.
+
+It also includes a 4-channel ADC, for adding sensors of your own.
+
+##Features:
+
+- BMP280 temperature/pressure sensor
+- TCS3472 light and RGB colour sensor
+- Two LEDs for illumination
+- LSM303D accelerometer/magnetometer sensor
+- ADS1015 4-channel analog to digital sensor (ADC)

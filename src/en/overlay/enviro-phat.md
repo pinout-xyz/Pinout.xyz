@@ -34,3 +34,25 @@ i2c:
     device: ADS1015
 -->
 #Enviro pHAT
+
+The Enviro pHAT is ideal for monitoring conditions in your house, garage or greenhouse. Set up a web server with Flask and remotely monitor everything from anywhere. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
+
+Features:
+
+BMP280 temperature/pressure sensor (0x77 on the i2c bus)
+TCS3472 light and RGB colour sensor (0x29 on the i2c bus)
+(with two LEDs for illumination)
+LSM303D accelerometer/magnetometer sensor (0x1d on the i2c bus)
+ADS1015 4-channel 3.3v 12-bit ADC (0x48 on the i2c bus)
+
+To get the pHAT set up and ready to go you can use the one-line product installer:
+
+```bash
+curl -sS get.pimoroni.com/envirophat | bash
+```
+
+Then import it into your Python script and start tinkering:
+
+```bash
+from envirophat import light, motion, weather, analog, leds
+```

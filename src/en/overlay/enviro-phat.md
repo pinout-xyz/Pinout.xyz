@@ -36,7 +36,7 @@ i2c:
 -->
 #Enviro pHAT
 
-Coupled with a Pi Zero, Enviro pHAT is an affordible mix of sensors, ideal for monitoring server rooms, bedrooms, ballrooms or anything you might want to observe. It also includes a 4-channel ADC, for adding sensors of your own. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
+Coupled with a Pi Zero, Enviro pHAT is an affordable mix of sensors, ideal for monitoring server rooms, bedrooms, ballrooms or anything you might want to observe. It also includes a 4-channel ADC, for adding sensors of your own. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
 
 Features:
 

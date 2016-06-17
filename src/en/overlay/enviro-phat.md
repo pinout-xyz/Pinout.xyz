@@ -19,6 +19,7 @@ pin:
     mode: i2c
   '7':
     mode: output
+    name: Lights
 i2c:
   '0x29':
     name: Light/Colour Sensor
@@ -35,7 +36,7 @@ i2c:
 -->
 #Enviro pHAT
 
-The Enviro pHAT is ideal for monitoring conditions in your house, garage or greenhouse. Set up a web server with Flask and remotely monitor everything from anywhere. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
+Coupled with a Pi Zero, Enviro pHAT is an affordible mix of sensors, ideal for monitoring server rooms, bedrooms, ballrooms or anything you might want to observe. It also includes a 4-channel ADC, for adding sensors of your own. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
 
 Features:
 

@@ -44,6 +44,7 @@ overlays:
 - explorer-hat
 - explorer-hat-pro
 - explorer-phat
+- enviro-phat
 - phat-dac
 - propeller-hat
 - iqaudio-pi-dac
@@ -65,6 +66,7 @@ overlays:
 - ab-io-pi-plus
 - ab-rtc-pi-plus
 - ab-serial-pi-plus
+- redbear-iot-hat
 - iface-gpclk
 - iface-dpi
 - iface-pcm

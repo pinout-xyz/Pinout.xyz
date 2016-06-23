@@ -25,8 +25,8 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
-- piano-hat
-- propeller-hat
+- drum-hat
+- enviro-phat
 - ab-adc-pi-zero
 overlays:
 - ground
@@ -44,6 +44,7 @@ overlays:
 - explorer-hat
 - explorer-hat-pro
 - explorer-phat
+- blinkt
 - enviro-phat
 - phat-dac
 - propeller-hat

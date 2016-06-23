@@ -3,11 +3,12 @@
 name: Enviro pHAT
 class: board
 type: iot
+image: 'enviro-phat.png'
 manufacturer: Pimoroni
 description: A package of environmental sensors for IoT projects
-url: https://github.com/pimoroni/enviro-phat
+url: https://shop.pimoroni.com/products/enviro-phat
 github: https://github.com/pimoroni/enviro-phat
-buy: https://github.com/pimoroni/enviro-phat
+buy: https://shop.pimoroni.com/products/enviro-phat
 formfactor: Custom
 pincount: 40
 eeprom: no

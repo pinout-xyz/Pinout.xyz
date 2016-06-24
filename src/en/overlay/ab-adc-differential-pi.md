@@ -3,6 +3,7 @@
 name: ADC Differential Pi
 class: board
 type: other
+image: 'ab-adc-differential-pi.png'
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter

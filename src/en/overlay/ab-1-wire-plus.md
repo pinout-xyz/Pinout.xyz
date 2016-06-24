@@ -3,6 +3,7 @@
 name: 1 Wire Pi Plus
 class: board
 type: other
+image: 'ab-1-wire-pi-plus.png'
 manufacturer: AB Electronics UK
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus

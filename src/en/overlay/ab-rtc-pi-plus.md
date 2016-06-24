@@ -3,6 +3,7 @@
 name: RTC Pi Plus
 class: board
 type: other
+image: 'ab-rtc-pi-plus.png'
 manufacturer: AB Electronics UK
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/52/RTC-Pi-Plus

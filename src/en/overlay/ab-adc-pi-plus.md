@@ -3,6 +3,7 @@
 name: ADC Pi Plus
 class: board
 type: other
+image: 'ab-adc-pi-plus.png'
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter

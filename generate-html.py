@@ -412,7 +412,8 @@ base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
 resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
-template = open('src/{}/template/layout.html'.format(lang)).read()
+template_main = open('src/{}/template/layout.html'.format(lang)).read()
+template_boards = open('src/{}/template/boards.html'.format(lang)).read()
 
 pages = {}
 navs = {}
@@ -501,6 +502,8 @@ Generate the new categorised navigation menu
 '''
 overlay_subnav = ''.join(map(lambda overlay_type: '<li class="group_{cls}" data-group="{cls}">{text}</li>'.format(cls=overlay_type,text=strings['group_' + overlay_type]),overlay_subnav))
 
+boards_page = []
+
 for overlay_type in nav_html.keys():
     for overlay_group, items in nav_html[overlay_type].iteritems():
         items.sort()
@@ -508,6 +511,18 @@ for overlay_type in nav_html.keys():
         regular = [x for x in items if 'image' not in x]
 
         group_items = ''
+
+        if overlay_type == 'board':
+            for x in items:
+                image = x['image'] if 'image' in x else ''
+                print(x)
+
+                boards_page.append('<li class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                    image=image,
+                    name=x['name'],
+                    page_url=x['page_url'],
+                    base_url=base_url,
+                    resource_url=resource_url))
 
         group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></li>'.format(
             image=x['image'],
@@ -542,7 +557,10 @@ serve.py will mirror this structure for testing.
 '''
 pages['index'] = {}
 pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('index.md')})
-navs['index'] = render_nav('pinout')
+
+default_nav = render_nav('pinout')
+
+navs['index'] = default_nav
 
 '''
 Add the 404 page if 404.md is present.
@@ -551,8 +569,11 @@ page404 = load_md('404.md')
 if page404 is not None:
     pages['404'] = {}
     pages['404']['rendered_html'] = render_overlay_page({'name': '404', 'long_description': page404})
-    navs['404'] = render_nav('pinout')
+    navs['404'] = default_nav
 
+
+pages['boards'] = {'rendered_html': ''.join(boards_page)}
+navs['boards'] = default_nav
 
 print('\nRendering pin pages...')
 
@@ -565,7 +586,7 @@ for pin in range(1, len(pinout.pins) + 1):
     langlinks = get_lang_urls('pin{}'.format(pin))
 
     pin_nav = render_nav(pin_url)
-    pin_html = pinout.render_html(template,
+    pin_html = pinout.render_html(template_main,
                                   lang_links="\n\t\t".join(langlinks),
                                   hreflang="\n\t\t".join(hreflang),
                                   nav=pin_nav,
@@ -592,9 +613,12 @@ for url in pages:
     hreflang = []
     langlinks = []
 
-    if url == 'index':
-        hreflang = get_hreflang_urls('index')
-        langlinks = get_lang_urls('index')
+    # Select the appropriate template for this page
+    template = template_boards if url == 'boards' else template_main
+
+    if url == 'index' or url == 'boards':
+        hreflang = get_hreflang_urls(url)
+        langlinks = get_lang_urls(url)
 
     if 'src' in pages[url]:
         src = pages[url]['src']
@@ -622,7 +646,7 @@ for url in pages:
                               nav_html=nav_html
                               )
 
-    if url != 'index' and url != '404':
+    if url not in ['index','404','boards']:
         url = os.path.join('pinout', url)
 
     print('>> {}.html'.format(url))

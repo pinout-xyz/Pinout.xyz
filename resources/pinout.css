@@ -247,19 +247,26 @@ Drop down nav
 	width:34%;
 }
 
-#sections .featured {
+#sections .featured, #boards .board {
 	box-sizing:border-box;
 	width:33.3333%;
 	display:block;
 	float:left;
 	text-align:center;
 }
-#sections .featured img {
+#boards .board a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 230px;
+	display:block;
+}
+#sections .featured img, #boards .board img {
 	max-width:100%;
 	height:auto;
 	display:block;
+	margin:0 auto;
 }
-#sections .featured a {
+#sections .featured a, #boards .board a {
 	background:none;
 }
 #sections .boards hr {
@@ -273,7 +280,10 @@ Drop down nav
 #sections .boards .featured a:hover {
 	background: #D33682;
 }
-#sections .featured strong {
+#boards .board a:hover {
+	background: #fdfaf0;
+}
+#sections .featured strong, #boards .board strong {
 	font-size:20px;
 	font-family: 'Avenir', sans-serif;
     font-weight: 500;
@@ -282,7 +292,11 @@ Drop down nav
     padding: 0 5px;
     display:block;
 }
-#sections .featured span {
+#boards .board strong {
+	color:#333333;
+}
+
+#sections .featured span, #boards .board span {
     color: #FFFFFF;
     font-size: 16px;
     font-weight: normal;

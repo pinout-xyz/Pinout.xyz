@@ -1,6 +1,14 @@
 #Overlays History
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+June 24, 2016
+- added unicorn-phat.md
+
+June 23, 2016
+- added blinkt.md, enviro-phat.md and redbear-iot-hat.md
+
+[some other boards here!]
+
 Feb 7, 2016
 - added espiot-phat.md
 

@@ -1,8 +1,8 @@
 <!--
 ---
+name: Display-o-Tron 3000
 class: board
 type: lcd
-name: Display-o-Tron 3000
 image: 'display-o-tron.png'
 manufacturer: Pimoroni
 description: A 3-line character LCD with an RGB backlight and joystick

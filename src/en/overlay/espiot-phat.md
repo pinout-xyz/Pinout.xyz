@@ -1,8 +1,8 @@
 <!--
 ---
+name: ESP IoT pHAT
 class: board
 type: iot
-name: ESP IoT pHAT
 image: 'esp8266-phat.png'
 manufacturer: Pimoroni
 description: ESP8266 module.

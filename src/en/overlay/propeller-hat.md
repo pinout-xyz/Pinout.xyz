@@ -1,8 +1,8 @@
 <!--
 ---
+name: Propeller HAT
 class: board
 type: other
-name: Propeller HAT
 image: 'propeller-hat.png'
 manufacturer: Pimoroni
 description: The 8-core Propeller Microcontroller in HAT form-factor

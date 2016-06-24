@@ -9,7 +9,7 @@ description: A package of environmental sensors for IoT projects
 url: https://shop.pimoroni.com/products/enviro-phat
 github: https://github.com/pimoroni/enviro-phat
 buy: https://shop.pimoroni.com/products/enviro-phat
-formfactor: Custom
+formfactor: 'pHAT'
 pincount: 40
 eeprom: no
 power: 5v

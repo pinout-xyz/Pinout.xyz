@@ -1,8 +1,8 @@
 <!--
 ---
+name: SD
 class: interface
 type: pinout
-name: SD
 description: Raspberry Pi SD0/SD1 pins
 pin:
   'bcm22':

@@ -1,8 +1,8 @@
 <!--
 ---
+name: Arduino SPI
 class: guide
 type: info
-name: Arduino SPI
 description: Program Arduino with Raspberry Pi SPI
 pincount: 4
 pin:

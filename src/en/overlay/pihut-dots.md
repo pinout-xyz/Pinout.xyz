@@ -1,8 +1,8 @@
 <!--
 ---
+name: Raspberry Pi Dots
 class: board
 type: other
-name: Raspberry Pi Dots
 manufacturer: Raspberry Pi Foundation
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/

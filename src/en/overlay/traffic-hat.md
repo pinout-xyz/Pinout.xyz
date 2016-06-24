@@ -1,8 +1,8 @@
 <!--
 ---
+name: Traffic HAT
 class: board
 type: multi
-name: Traffic HAT
 manufacturer: Ryanteck LTD.
 image: 'traffic-hat.png'
 description: A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.

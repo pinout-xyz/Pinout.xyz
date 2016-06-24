@@ -1,8 +1,8 @@
 <!--
 ---
+name: Drum HAT
 class: board
 type: instrument
-name: Drum HAT
 image: 'drum-hat.png'
 manufacturer: Pimoroni
 description: An 8 pad finger Drum HAT for your Raspberry Pi

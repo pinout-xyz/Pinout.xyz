@@ -1,8 +1,8 @@
 <!--
 ---
+name: "Pi-DAC+"
 class: board
 type: audio
-name: "Pi-DAC+"
 image: 'iqaudio-pi-dac.png'
 manufacturer: IQaudIO
 description: An I2S digital to analog audio converter HAT for the Pi

@@ -1,8 +1,8 @@
 <!--
 ---
+name: DPI
 class: interface
 type: pinout
-name: DPI
 description: Raspberry Pi DPI pins
 pin:
   'bcm0':

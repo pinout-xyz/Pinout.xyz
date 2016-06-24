@@ -1,6 +1,9 @@
 <!--
 ---
 name: board name
+class: category
+type: application
+image: board image
 manufacturer: made by
 description: what it is
 url: https://myaddon.com
@@ -27,6 +30,8 @@ The overlay itself uses the following fields, some of which are mandatory, as no
 
 MANDATORY
 name: the board name as it will appear in the board selection menu at pinout.xyz
+class: the class the overlay falls in, 'board' is the most common (use that if in doubt)
+type: the typical application of the board, i.e 'lcd' (use 'other' if in doubt)
 manufacturer: the manufacturer's name
 description: a short description of what the add-on board provides
 url: the main URL for the product providing detailed technical information about the board
@@ -40,5 +45,6 @@ power: the supply logic required by the board. Valid values are 3v3, 5v and 3v3,
 i2c: if the board uses i2c, a list of the bus address(es) and device(s) identification
 
 OPTIONAL
+image: a top-down image of the board as png with transparency (or placeholder) 
 github: github repository address
 buy: URL where the board can be purchased

@@ -1,8 +1,8 @@
 <!--
 ---
+name: UART
 class: interface
 type: pinout
-name: UART
 description: Raspberry Pi UART pins
 pincount: 2
 pin:

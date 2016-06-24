@@ -1,8 +1,8 @@
 <!--
 ---
+name: PCM
 class: interface
 type: pinout
-name: PCM
 description: Raspberry Pi PCM pins
 pin:
   'bcm18':

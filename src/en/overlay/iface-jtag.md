@@ -1,8 +1,8 @@
 <!--
 ---
+name: JTAG
 class: interface
 type: pinout
-name: JTAG
 description: Raspberry Pi JTAG pins
 pin:
   'bcm4':

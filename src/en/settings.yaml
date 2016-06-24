@@ -35,7 +35,7 @@ overlays:
 - spi
 - arduino-spi
 - wiringpi
-- cirruslogicaudiocard
+- cirruslogic-audio-card
 - display-o-tron
 - display-o-tron-hat
 - discohat

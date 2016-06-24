@@ -3,6 +3,7 @@
 class: board
 type: audio
 name: "pHAT DAC"
+image: 'phat-dac.png'
 manufacturer: Pimoroni
 description: An I2S digital to analog audio converter
 buy: https://shop.pimoroni.com/products/phat-dac

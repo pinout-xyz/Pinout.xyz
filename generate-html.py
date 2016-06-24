@@ -524,13 +524,12 @@ for overlay_type in nav_html.keys():
                     base_url=base_url,
                     resource_url=resource_url))
 
-        group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></li>'.format(
+        group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
             image=x['image'],
             name=x['name'],
             page_url=x['page_url'],
             base_url=base_url,
-            resource_url=resource_url,
-            description=x['description']), featured)))
+            resource_url=resource_url), featured)))
 
         group_items_normal = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x['page_url'], x['name']), regular)))
 

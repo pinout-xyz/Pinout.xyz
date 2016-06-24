@@ -195,8 +195,8 @@ Drop down nav
 
 #sections .group li {
 	display:inline-block;
-	margin-right:5px;
 	margin-bottom:5px;
+	margin-right:5px;
 }
 
 #sections .group a {
@@ -253,6 +253,7 @@ Drop down nav
 	display:block;
 	float:left;
 	text-align:center;
+	margin-right:0px;
 }
 #boards .board a {
 	padding-top: 20px;
@@ -298,7 +299,7 @@ Drop down nav
 
 #sections .featured span, #boards .board span {
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     margin: 0;
     padding: 0 5px;

@@ -515,7 +515,7 @@ for overlay_type in nav_html.keys():
 
         if overlay_type == 'board':
             for x in items:
-                image = x['image'] if 'image' in x else ''
+                image = x['image'] if 'image' in x else 'no-image.png'
                 print(x)
 
                 boards_page.append({'name': x['name'], 'html': '<li class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(

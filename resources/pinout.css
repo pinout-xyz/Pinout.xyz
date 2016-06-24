@@ -253,6 +253,8 @@ Drop down nav
 	display:block;
 	float:left;
 	text-align:center;
+}
+#sections .group li.featured {
 	margin-right:0px;
 }
 #boards .board a {
@@ -285,7 +287,7 @@ Drop down nav
 	background: #fdfaf0;
 }
 #sections .featured strong, #boards .board strong {
-	font-size:20px;
+	font-size:17px;
 	font-family: 'Avenir', sans-serif;
     font-weight: 500;
     color:#FFFFFF;
@@ -299,7 +301,7 @@ Drop down nav
 
 #sections .featured span, #boards .board span {
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     margin: 0;
     padding: 0 5px;

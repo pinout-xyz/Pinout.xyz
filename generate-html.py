@@ -506,6 +506,7 @@ boards_page = []
 
 for overlay_type in nav_html.keys():
     for overlay_group, items in nav_html[overlay_type].iteritems():
+        #items = sorted(items, key=lambda k: k['name'])
         items.sort()
         featured = [x for x in items if 'image' in x]
         regular = [x for x in items if 'image' not in x]
@@ -517,12 +518,12 @@ for overlay_type in nav_html.keys():
                 image = x['image'] if 'image' in x else ''
                 print(x)
 
-                boards_page.append('<li class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                boards_page.append({'name': x['name'], 'html': '<li class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=x['name'],
                     page_url=x['page_url'],
                     base_url=base_url,
-                    resource_url=resource_url))
+                    resource_url=resource_url)})
 
         group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
             image=x['image'],
@@ -546,6 +547,8 @@ for overlay_type in nav_html.keys():
 
 
 print(nav_html)
+
+boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
 
 '''
 Manually add the index page as 'pinout', this is due to how the

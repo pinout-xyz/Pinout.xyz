@@ -3,10 +3,12 @@
 name: Raspberry Pi Dots
 class: board
 type: other
-manufacturer: Raspberry Pi Foundation
+image: 'pihut-dots.png'
+manufacturer: The Pi Hut
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+buy: https://thepihut.com/products/raspberry-pi-dots-board
 formfactor: '40-way'
 pincount: 40
 eeprom: no

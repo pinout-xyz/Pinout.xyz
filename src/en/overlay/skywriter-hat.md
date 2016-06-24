@@ -3,8 +3,8 @@
 name: Skywriter HAT
 class: board
 type: gesture
-manufacturer: Pimoroni
 image: 'skywriter-hat.png'
+manufacturer: Pimoroni
 description: A 3D positional and gesture sensor.
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat

@@ -3,6 +3,7 @@
 name: Unicorn pHAT
 class: board
 type: led
+image: 'unicorn-phat.png'
 manufacturer: Pimoroni
 description: 32 blindingly bright RGB LEDs on a single pHAT
 url: http://shop.pimoroni.com/products/unicorn-phat

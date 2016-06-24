@@ -195,7 +195,6 @@ Drop down nav
 
 #sections .group li {
 	display:inline-block;
-	margin-right:5px;
 	margin-bottom:5px;
 }
 
@@ -274,7 +273,7 @@ Drop down nav
 	background: #D33682;
 }
 #sections .featured strong {
-	font-size:20px;
+	font-size:18px;
 	font-family: 'Avenir', sans-serif;
     font-weight: 500;
     color:#FFFFFF;
@@ -284,7 +283,7 @@ Drop down nav
 }
 #sections .featured span {
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     margin: 0;
     padding: 0 5px;

@@ -1,8 +1,9 @@
 <!--
 ---
-name: RedBear PiZero IoT HAT
+name: RedBear IoT HAT
 class: board
 type: iot
+image: 'redbear-iot-hat.png'
 manufacturer: RedBear
 description: A Wi-Fi 802.11n + Bluetooth 4.1 (Dual Mode) add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero

@@ -442,7 +442,10 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
 
 overlays = map(load_overlay, overlays)
 overlay_subnav = ['featured']
-featured_boards = []
+featured_boards_count = 0
+featured_boards_html = ''
+
+boards_page = []
 
 '''
 Build up the navigation between overlays. This needs to be done before rendering pages
@@ -451,111 +454,47 @@ as it's used in every single page.
 overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
-    #image = None
-
-    #if 'image' in overlay:
-    #    image = overlay['image']
     
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
 
-    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and len(featured_boards) < 4:
-        featured_boards.append(overlay)
+    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
+        featured_boards_count += 1
+        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+                image=overlay['image'],
+                name=overlay['name'],
+                page_url=overlay['page_url'],
+                base_url=base_url,
+                resource_url=resource_url,
+                description=overlay['description']
+            )
 
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
         o_type = overlay['type']
 
         if o_class not in nav_html:
-            nav_html[o_class] = {}
+            nav_html[o_class] = ''
 
-        if o_type not in nav_html[o_class]:
-            nav_html[o_class][o_type] = []
+        nav_html[o_class] += '<li><a href="{}{}">{}</a></li>'.format(base_url, overlay['page_url'], overlay['name'])
 
-        if o_class == 'board' and o_type not in overlay_subnav:
-            overlay_subnav.append(o_type)
+        if o_class == 'board':
+            image = overlay['image'] if 'image' in overlay else 'no-image.png'
 
-        nav_html[o_class][o_type] += [overlay]
+            if 'formfactor' not in overlay:
+                print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
+            boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                image=image,
+                name=overlay['name'],
+                page_url=overlay['page_url'],
+                base_url=base_url,
+                type=overlay['type'] if 'type' in overlay else '',
+                formfactor=overlay['formfactor'] if 'formfactor' in overlay else '',
+                manufacturer=overlay['manufacturer'],
+                resource_url=resource_url)})
 
-
-featured_boards_html = ''
-for overlay in featured_boards:
-    featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
-            image=overlay['image'],
-            name=overlay['name'],
-            page_url=overlay['page_url'],
-            base_url=base_url,
-            resource_url=resource_url,
-            description=overlay['description']
-        )
-
-#featured_boards_html = '<div class="group group_featured">' + featured_boards_html + '</div>'
-
-'''
-Generate legacy navigation menu for all overlays in a single drop-down
-'''
-overlays_html.sort()
-overlays_html = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), overlays_html))
-
-'''
-Generate the new categorised navigation menu
-'''
-overlay_subnav = ''.join(map(lambda overlay_type: '<li class="group_{cls}" data-group="{cls}">{text}</li>'.format(cls=overlay_type,text=strings['group_' + overlay_type]),overlay_subnav))
-
-boards_page = []
-
-for overlay_type in nav_html.keys():
-    for overlay_group, items in nav_html[overlay_type].iteritems():
-        #items = sorted(items, key=lambda k: k['name'])
-        items.sort()
-        featured = [x for x in items if 'image' in x]
-        regular = [x for x in items if 'image' not in x]
-
-        group_items = ''
-
-        if overlay_type == 'board':
-            for x in items:
-                image = x['image'] if 'image' in x else 'no-image.png'
-
-                if 'formfactor' not in x:
-                    print('Warning! -> {name} missing formfactor'.format(name=x['name']))
-
-                boards_page.append({'name': x['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                    image=image,
-                    name=x['name'],
-                    page_url=x['page_url'],
-                    base_url=base_url,
-                    type=x['type'] if 'type' in x else '',
-                    formfactor=x['formfactor'] if 'formfactor' in x else '',
-                    manufacturer=x['manufacturer'],
-                    resource_url=resource_url)})
-
-
-        group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-            image=x['image'],
-            name=x['name'],
-            page_url=x['page_url'],
-            base_url=base_url,
-            resource_url=resource_url), featured)))
-
-        group_items_normal = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x['page_url'], x['name']), regular)))
-
-        group_items = group_items_pictures + group_items_normal
-
-        if len(featured) > 0 and len(regular) > 0:
-                group_items = group_items_pictures + '<hr />' + group_items_normal
-
-        nav_html[overlay_type][overlay_group] = '<div class="group group_' + overlay_group + '"><ul>' + group_items + '</ul></div>'
-    
-    nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
-    
-    if overlay_type == 'board':
-        nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + nav_html[overlay_type]
-
-
-#print(nav_html)
 
 boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
 
@@ -566,6 +505,7 @@ and all other pages in /pinout/
 
 serve.py will mirror this structure for testing.
 '''
+
 pages['index'] = {}
 pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('index.md')})
 

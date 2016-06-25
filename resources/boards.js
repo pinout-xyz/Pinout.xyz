@@ -25,20 +25,26 @@ jQuery(document).ready(function(){
 
 					if(facets[key].items.indexOf(val) == -1){
 						facets[key].items.push(val);
-						facets[key].items.sort();
 					}
 				}
 			}
 		}
 	});
 
-	var dom_gpio_nav = $('#gpio ul,#gpio div').hide();
-	var dom_facets = $('<div>').addClass('facets').appendTo('#gpio');
+	var dom_facets = $('.facets');
 
 	for (var facet in facets){
 		var title = facets[facet].title;
 		var items = facets[facet].items;
 		var key = facets[facet].key;
+
+		items.sort(function(a,b) {
+						    a = a.toLowerCase();
+						    b = b.toLowerCase();
+						    if( a == b) return 0;
+						    if( a > b) return 1;
+						    return -1;
+						});
 
 		$('<h4>').text(title).appendTo(dom_facets);
 		var dom_facet = $('<ul>').addClass('facet').appendTo(dom_facets);

@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: multi
+type: io,touch
 image: 'explorer-hat.png'
 manufacturer: Pimoroni
 description: An all-in-one light, input, touch and output add-on board.

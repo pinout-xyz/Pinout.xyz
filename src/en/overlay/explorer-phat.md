@@ -2,7 +2,7 @@
 ---
 name: Explorer pHAT
 class: board
-type: multi
+type: adc,io,motor
 image: 'explorer-phat.png'
 manufacturer: Pimoroni
 description: An all-in-one input, output and motor add-on board.

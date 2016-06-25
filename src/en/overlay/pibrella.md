@@ -2,7 +2,7 @@
 ---
 name: Pibrella
 class: board
-type: multi
+type: led,io
 image: 'pibrella.png'
 manufacturer: Cyntech
 description: An all-in-one light, sound, input and output add-on board.
@@ -66,7 +66,7 @@ pin:
 -->
 #Pibrella
 
-The all-in-one light, sound, input and output add-on board from Pimoroni vs Cyntech uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
+The all-in-one light, sound, input and output add-on board that uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
 
 Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
 

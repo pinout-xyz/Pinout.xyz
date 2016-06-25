@@ -3,6 +3,7 @@
 name: Blinkt
 class: board
 type: led
+image: 'blinkt.png'
 manufacturer: Pimoroni
 description: Slimline board with 8 super-bright RGB LED indicators
 url: https://shop.pimoroni.com/products/blinkt

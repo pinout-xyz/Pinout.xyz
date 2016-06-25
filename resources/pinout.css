@@ -355,6 +355,9 @@ Drop down nav
     top: 90px;
     padding: 4px 15px 15px 15px;
     background: #073642;
+        border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 18px;
 }
 .facets h4 {
 	text-transform: capitalize;

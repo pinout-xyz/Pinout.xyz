@@ -9,7 +9,7 @@ description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
-formfactor: Custom
+formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

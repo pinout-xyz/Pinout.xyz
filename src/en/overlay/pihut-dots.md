@@ -9,7 +9,7 @@ description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 buy: https://thepihut.com/products/raspberry-pi-dots-board
-formfactor: '40-way'
+formfactor: 'HAT'
 pincount: 40
 eeprom: no
 pin:

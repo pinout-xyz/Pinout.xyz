@@ -9,7 +9,7 @@ description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
-formfactor: Custom
+formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

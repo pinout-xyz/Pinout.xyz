@@ -297,7 +297,7 @@ Drop down nav
 	display:block;
 }
 #featured .board a {
-	min-height:170px;
+	min-height:130px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -307,7 +307,7 @@ Drop down nav
 	display:block;
 	margin:0 auto;
 }
-#featured .board img {max-width:70%;}
+#featured .board img {max-width:50%;}
 #sections .featured a, #boards .board a, #featured .board a {
 	background:none;
 }

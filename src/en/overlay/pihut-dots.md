@@ -4,7 +4,7 @@ name: Raspberry Pi Dots
 class: board
 type: other
 image: 'pihut-dots.png'
-manufacturer: The Pi Hut
+manufacturer: 'Raspberry Pi'
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

@@ -351,12 +351,16 @@ Drop down nav
 }
 
 .facets {
-	padding:0 15px;
+	position: relative;
+    top: 90px;
+    padding: 4px 15px 15px 15px;
+    background: #073642;
 }
 .facets h4 {
 	text-transform: capitalize;
     font-size: 18px;
     margin: 10px 0 0 0;
+    color:#ffffff;
 }
 
 .facets ul, .facets li {

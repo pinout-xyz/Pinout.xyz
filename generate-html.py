@@ -645,6 +645,11 @@ for url in pages:
     else:
         pages[url]['name'] = pinout.settings['default_title']
 
+    feat_boards_html = featured_boards_html
+
+    if 'class' in pages[url] and pages[url]['class'] == 'board':
+        feat_boards_html = ''
+
     html = pinout.render_html(template,
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
@@ -654,7 +659,7 @@ for url in pages:
                               resource_url=resource_url,
                               description=pages[url]['description'],
                               title=pages[url]['name'],
-                              featured_boards=featured_boards_html,
+                              featured_boards=feat_boards_html,
                               langcode=lang,
                               nav_html=nav_html
                               )

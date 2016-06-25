@@ -178,7 +178,7 @@ Drop down nav
 #boards .board a, #featured .board a {
 	padding-top: 20px;
 	padding-bottom: 0px;
-	min-height: 175px;
+	min-height: 190px;
 	display:block;
 }
 #featured .board a {

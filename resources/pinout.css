@@ -103,6 +103,9 @@ Content Area
 	position: relative;
 	padding-bottom:50px;
 }
+.boards-page #content {
+	width:698px;
+}
 #content h1 {font-size:30px;}
 #content h2 {font-size:20px;margin-top:20px;}
 #content h1,h2,h3,h4,h5 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
@@ -281,7 +284,7 @@ Drop down nav
 
 #sections .featured, #boards .board, #featured .board  {
 	box-sizing:border-box;
-	width:33.3333%;
+	width:25%;
 	display:block;
 	float:left;
 	text-align:center;
@@ -293,7 +296,7 @@ Drop down nav
 #boards .board a, #featured .board a {
 	padding-top: 20px;
 	padding-bottom: 0px;
-	min-height: 220px;
+	min-height: 175px;
 	display:block;
 }
 #featured .board a {
@@ -421,6 +424,10 @@ Left Column
 	width:500px;
 }
 
+.boards-page #leftcolumn {
+	width:302px;
+}
+
 #interfaces ul, #interfaces li {
 	list-style:none;
 	margin:0;
@@ -470,6 +477,9 @@ nav#gpio {
 	margin-right:208px;
 	border-top-right-radius:46px;
 	border-bottom-right-radius:46px;
+}
+.boards-page nav#gpio {
+	margin-right:0;
 }
 nav#gpio:before, nav#gpio:after {
 	content:'';
@@ -682,5 +692,8 @@ ol.linenums {margin-left:30px;}
 	}
 	#content {
 		width:700px;
+	}
+	.boards-page #content {
+		width:898px;
 	}
 }

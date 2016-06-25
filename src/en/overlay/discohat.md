@@ -10,6 +10,7 @@ url: http://discohat.com
 buy: http://discohat.com/shop
 formfactor: 'HAT'
 pincount: 40
+eeprom: yes
 pin:
   '8':
     name: TXD

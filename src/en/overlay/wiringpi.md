@@ -1,6 +1,6 @@
 <!--
 ---
-name: WiringPi GPIO Pinout
+name: WiringPi
 class: interface
 type: pinout
 url: http://wiringpi.com

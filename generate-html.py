@@ -460,7 +460,7 @@ for overlay in overlays:
 
     overlays_html += [link]
 
-    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and len(featured_boards) < 3:
+    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and len(featured_boards) < 4:
         featured_boards.append(overlay)
 
     if 'class' in overlay and 'type' in overlay:
@@ -482,7 +482,7 @@ for overlay in overlays:
 
 featured_boards_html = ''
 for overlay in featured_boards:
-    featured_boards_html += '<div class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+    featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
             image=overlay['image'],
             name=overlay['name'],
             page_url=overlay['page_url'],
@@ -491,7 +491,7 @@ for overlay in featured_boards:
             description=overlay['description']
         )
 
-featured_boards_html = '<div class="group group_featured">' + featured_boards_html + '</div>'
+#featured_boards_html = '<div class="group group_featured">' + featured_boards_html + '</div>'
 
 '''
 Generate legacy navigation menu for all overlays in a single drop-down
@@ -542,10 +542,11 @@ for overlay_type in nav_html.keys():
                 group_items = group_items_pictures + '<hr />' + group_items_normal
 
         nav_html[overlay_type][overlay_group] = '<div class="group group_' + overlay_group + '"><ul>' + group_items + '</ul></div>'
+    
     nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
     
     if overlay_type == 'board':
-        nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + featured_boards_html + nav_html[overlay_type]
+        nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + nav_html[overlay_type]
 
 
 print(nav_html)
@@ -599,6 +600,7 @@ for pin in range(1, len(pinout.pins) + 1):
                                   overlays=overlays_html,
                                   description=pinout.settings['default_desc'],
                                   title=pin_title + pinout.settings['title_suffix'],
+                                  featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html
                                   )
@@ -646,6 +648,7 @@ for url in pages:
                               resource_url=resource_url,
                               description=pages[url]['description'],
                               title=pages[url]['name'],
+                              featured_boards=featured_boards_html,
                               langcode=lang,
                               nav_html=nav_html
                               )

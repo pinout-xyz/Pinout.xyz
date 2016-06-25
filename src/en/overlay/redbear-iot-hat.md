@@ -5,7 +5,7 @@ class: board
 type: iot
 image: 'redbear-iot-hat.png'
 manufacturer: RedBear
-description: A Wi-Fi 802.11n + Bluetooth 4.1 (Dual Mode) add-on board for the Pi Zero
+description: A Wi-Fi + Bluetooth add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
 github:
 buy: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
@@ -48,6 +48,8 @@ pin:
 #RedBear PiZero IoT HAT
 
 The RedBear IoT HAT brings the BCM43438 used on the Raspberry Pi 3 to HAT format, compatible with the Pi Zero.
+
+The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
 
 * Bluetooth 4.1
 * WiFi

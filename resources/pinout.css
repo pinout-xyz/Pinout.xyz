@@ -48,13 +48,14 @@ img.grayscale {
 
 
 /*
-Very top nav
+Footer language nav
 */
 
 #lang {
 	display:block;
 	overflow:hidden;
 	background:#C7C2AE;
+	margin-top:10px;
 }
 
 .lang-nav {
@@ -97,7 +98,6 @@ Content Area
 	background:#EBE6D3;
 	width:500px;
 	min-height:640px;
-	padding-bottom:20px;
 }
 #content h1 {font-size:30px;}
 #content h2 {font-size:20px;margin-top:20px;}
@@ -247,29 +247,64 @@ Drop down nav
 	width:34%;
 }
 
-#sections .featured, #boards .board {
+#featured {
+	overflow:hidden;
+	background:#C32672;
+}
+
+#featured .more {
+    border: 2px solid #fff;
+    padding: 3px 3px;
+    display: block;
+    color: #FFF;
+    clear: both;
+    margin: 0 auto;
+    white-space: pre;
+    width: 270px;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+}
+#featured .more:hover {
+	background:#D33682;
+}
+#featured ul {
+	overflow: hidden;
+}
+
+#sections .featured, #boards .board, #featured .board  {
 	box-sizing:border-box;
 	width:33.3333%;
 	display:block;
 	float:left;
 	text-align:center;
 }
+#featured .board  {width:25%;}
 #sections .group li.featured {
 	margin-right:0px;
 }
-#boards .board a {
+#boards .board a, #featured .board a {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	min-height: 230px;
 	display:block;
 }
-#sections .featured img, #boards .board img {
+#featured .board a {
+	min-height:170px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#sections .featured img, #boards .board img, #featured .board img {
 	max-width:100%;
 	height:auto;
 	display:block;
 	margin:0 auto;
 }
-#sections .featured a, #boards .board a {
+#featured .board img {max-width:70%;}
+#sections .featured a, #boards .board a, #featured .board a {
 	background:none;
 }
 #sections .boards hr {
@@ -283,11 +318,14 @@ Drop down nav
 #sections .boards .featured a:hover {
 	background: #D33682;
 }
+#featured .board a:hover {
+	background: #D33682;
+}
 #boards .board a:hover {
 	background: #fdfaf0;
 }
-#sections .featured strong, #boards .board strong {
-	font-size:17px;
+#sections .featured strong, #boards .board strong, #featured .board strong  {
+	font-size:16px;
 	font-family: 'Avenir', sans-serif;
     font-weight: 500;
     color:#FFFFFF;
@@ -299,9 +337,9 @@ Drop down nav
 	color:#333333;
 }
 
-#sections .featured span, #boards .board span {
+#sections .featured span, #boards .board span, #featured .board span {
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
     margin: 0;
     padding: 0 5px;
@@ -314,16 +352,62 @@ Footer
 
 .footer a {color:#5F8645;}
 
+
+/*
+Left Column
+*/
+
+#leftcolumn {
+	float:left;
+	width:500px;
+}
+
+#interfaces ul, #interfaces li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#interfaces li{
+	display:inline-block;
+}
+
+#interfaces {
+	background:#6c71c4;
+	padding:4px 6px 6px 6px;
+}
+
+#interfaces li a {
+	display:inline-block;
+	padding:0px 10px 0px 10px;
+	margin-top:2px;
+	margin-right:2px;
+	background:#5c61b4;
+	color:#FFF;
+	font-size: 14px;
+    line-height: 23px;
+    height: 22px;
+}
+#interfaces li a:hover {color: #5c61b4;background:#FFF;}
+
+#interfaces h2 {
+	color:#063541;
+	font-size: 24px;
+    line-height: 23px;
+    font-family:'Avenir', sans-serif;
+    padding:10px 10px 5px 10px;
+}
+
 /*
 GPIO nav
 */
+
 
 nav#gpio {
 	position:relative;
 	width:292px;
 	background:#5F8645;
 	height:662px;
-	float:left;
 	margin-right:208px;
 	border-top-right-radius:46px;
 	border-bottom-right-radius:46px;

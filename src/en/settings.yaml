@@ -25,9 +25,10 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
-- drum-hat
+- explorer-phat
 - enviro-phat
 - ab-adc-pi-zero
+- redbear-iot-hat
 overlays:
 - ground
 - uart

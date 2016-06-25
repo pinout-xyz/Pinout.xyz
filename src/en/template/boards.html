@@ -25,15 +25,19 @@
 	<body>
 		<div id="container">
 			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
+			<div id="leftcolumn">
 			<nav id="gpio">
 				<div id="pinbase"></div>
 				<div id="pinbasebplus"></div>
 				{{nav}}
 			</nav>
+			</div>
 			<div id="content">
-				<div id="sections">
+				<!--<div id="sections">
 					<ul>
-						<li class="boards"><a href="/boards" title="Add-on boards for Raspberry Pi">Boards</a></li>
+						<li class="boards"><a href="" title="Add-on boards for Raspberry Pi">Boards</a>
+							<div class="dropdown">{{nav_html_board}}</div>
+						</li>
 						<li class="interfaces"><a href="" title="Raspberry Pi hardware interfaces">Interfaces</a>
 							<div class="dropdown">{{nav_html_interface}}</div>
 						</li>
@@ -41,15 +45,26 @@
 							<div class="dropdown">{{nav_html_guide}}</div>
 						</li>
 					</ul>
+				</div>-->
+				<div id="featured">
+					<ul>
+					{{featured_boards}}
+					</ul>
+					<a class="more" href="/boards">See more HATs, pHATs and add-ons</a>
 				</div>
-				<div id="lang">
-					<ul class="lang-nav">
-						{{lang_links}}
+				<div id="interfaces">
+					<ul>
+					{{nav_html_interface}}
 					</ul>
 				</div>
 				<div id="pages">
 					<article><h1>Raspberry Pi HATs, pHATs &amp; Add-ons</h1></article>
 					<div id="boards"><ul>{{content}}</ul></div>
+				</div>
+				<div id="lang">
+					<ul class="lang-nav">
+						{{lang_links}}
+					</ul>
 				</div>
 			</div>
 			<div class="footer" style="clear: both;padding: 20px 0px;text-align:center;">

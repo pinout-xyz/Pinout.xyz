@@ -3,6 +3,7 @@
 name: DiscoHAT
 class: board
 type: audio
+image: 'discohat.png'
 manufacturer: Kertatuote
 description: Computer controlled DMX lights, sounds and special effects.
 url: http://discohat.com

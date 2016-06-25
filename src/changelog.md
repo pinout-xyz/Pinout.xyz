@@ -1,13 +1,30 @@
 #Overlays History
+
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
+
+June 25, 2016
+adafruit-cap-mpr121.md
 
 June 24, 2016
 - added unicorn-phat.md
 
 June 23, 2016
-- added blinkt.md, enviro-phat.md and redbear-iot-hat.md
+- added blinkt.md
 
-[some other boards here!]
+June 16, 2016
+- added enviro-phat.md
+
+April 12, 2016
+- added redbear-iot-hat.md
+
+Feb 22, 2016
+- added ab-1-wire-plus.md
+- added ab-adc-differential-pi.md
+- added ab-adc-pi-plus.md
+- added ab-adc-pi-zero.md
+- added ab-io-pi-plus.md
+- added ab-rtc-pi-plus.md
+- added ab-serial-pi-plus.md
 
 Feb 7, 2016
 - added espiot-phat.md

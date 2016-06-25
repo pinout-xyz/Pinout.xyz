@@ -34,8 +34,10 @@ default_strings = {
     'group_lcd': 'LCD',
     'group_other': 'Other',
     'group_motor': 'Motor',
+    'group_adc': 'ADC',
     'group_audio': 'Audio',
     'group_gesture': 'Gesture',
+    'group_touch': 'Touch',
     'group_pinout': 'Pinout',
     'group_info': 'Info',
     'group_featured': 'Featured'

@@ -13,6 +13,10 @@ formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: output

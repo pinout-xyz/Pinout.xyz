@@ -42,6 +42,7 @@ overlays:
 - ab-io-pi-plus
 - ab-rtc-pi-plus
 - ab-serial-pi-plus
+- adafruit-cap-mpr121
 - cirruslogic-audio-card
 - display-o-tron
 - display-o-tron-hat

@@ -2,7 +2,7 @@
 ---
 name: ADC Pi Plus
 class: board
-type: other
+type: adc
 image: 'ab-adc-pi-plus.png'
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter

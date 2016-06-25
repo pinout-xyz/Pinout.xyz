@@ -67,7 +67,7 @@ overlays:
 - piborg-ledborg
 - pibrella
 - piglow
-- pihut-dots
+- rpf-dots
 - redbear-iot-hat
 - rtk-000-001
 - scroll-phat

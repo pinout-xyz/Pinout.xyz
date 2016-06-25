@@ -135,124 +135,6 @@ article ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}
 Drop down nav
 */
 
-#sections {
-	overflow: hidden;
-}
-#sections ul, #sections ul li {
-	list-style: none;
-	margin:0;
-	padding:0;
-}
-#sections > ul {
-	display:block;
-	width:100%;
-	background:#FFF;
-	overflow:hidden;
-	padding-bottom:4px;
-}
-#sections > ul > li {
-	width:33%;
-	box-sizing:border-box;
-	border-left:4px solid #FFF;
-	float:left;
-}
-#sections > ul > li > a {
-	padding:0px 20px;
-	height:46px;
-	line-height:46px;
-	color:#fff;
-	display:block;
-	font-size:20px;
-	position: relative;
-}
-#sections > ul > li > a:after {
-	content: '';
-	border:10px solid transparent;
-	border-top-color:#FFF;
-	display:block;
-	width:0;
-	height:0;
-	position:absolute;
-	right:20px;
-	top:50%;
-	margin-top:-5px;
-}
-#sections ul .dropdown {
-	display:none;
-	position:absolute;
-	right:0px;
-	min-width:500px;
-	max-width:704px;
-	z-index:1;
-}
-
-#sections ul .boards .dropdown {
-	width:704px;
-}
-
-#sections .dropdown .group, #sections .dropdown .group-nav {
-	padding:10px;
-	box-sizing:border-box;
-	display:block;
-}
-
-#sections ul .dropdown .group-nav {
-	padding-right:0;
-}
-
-#sections .group li {
-	display:inline-block;
-	margin-bottom:5px;
-	margin-right:5px;
-}
-
-#sections .group a {
-	color:#FFF;
-	padding:5px 10px;
-	display:block;
-}
-
-#sections .boards .group-nav {
-	width:25%;
-	display:block;
-	float:left;
-}
-
-#sections .boards .group {
-	width:75%;
-	display:block;
-	float:left;
-	min-height:390px;
-}
-
-#sections .boards .group-nav li {
-	display:block;
-	color:#FFFFFF;
-	padding:5px 10px;
-	display:block;
-	margin-bottom:5px;
-	cursor:pointer;
-}
-
-#sections .boards .group-nav li:hover,
-#sections .boards .group-nav li.active {background: #C32672;}
-
-#sections .boards a, #sections .boards .dropdown {background: #D33682;}
-#sections .boards .group {background: #C32672;}
-#sections .boards ul a:hover {color: #D33682;background:#FFF;}
-
-#sections .interfaces a, #sections .interfaces .dropdown {background: #6c71c4;}
-#sections .interfaces ul a {background: #5c61b4;}
-#sections .interfaces ul a:hover {color: #6c71c4;background:#FFF;}
-
-#sections .guides a, #sections .guides .dropdown {background: #268BD2;}
-#sections .guides ul a {background: #167BC2;}
-#sections .guides ul a:hover {color: #268BD2;background:#FFF;}
-
-#sections .boards {
-	border-left:none;
-	width:34%;
-}
 
 #featured {
 	overflow:hidden;
@@ -362,7 +244,7 @@ Drop down nav
     border-bottom-right-radius: 10px;
     margin-right: 18px;
 }
-.facets h4 {
+.facets h4, .boards-page #interfaces h4 {
 	text-transform: capitalize;
     font-size: 18px;
     margin: 10px 0 0 0;
@@ -443,6 +325,13 @@ Left Column
 	padding:4px 6px 6px 6px;
 }
 
+.boards-page #interfaces {
+	background:transparent;
+	padding: 4px 30px 5px 15px;
+    position: relative;
+    top: 100px;
+}
+
 #interfaces li a {
 	display:inline-block;
 	padding:0px 10px 0px 10px;
@@ -520,7 +409,7 @@ nav#gpio ul.bottom {
 }
 
 nav#gpio ul.top li {text-indent:63px;}
-nav#gpio li a {
+nav#gpio ul.top li a, nav#gpio ul.bottom li a {
 	display:block;
 	width:244px;
 	position:relative;
@@ -544,8 +433,10 @@ nav#gpio ul.bottom li a {
 nav#gpio li a small {font-size:11px;}
 
 
-nav#gpio li a:hover,
-nav#gpio li.active a {
+nav#gpio ul.top li a:hover,
+nav#gpio ul.bottom li a:hover,
+nav#gpio ul.top li.active a,
+nav#gpio ul.bottom li.active a {
 	background:#063541;
 	color:#FFFFFF;
 }

@@ -482,7 +482,7 @@ for overlay in overlays:
 
 featured_boards_html = ''
 for overlay in featured_boards:
-    featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+    featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
             image=overlay['image'],
             name=overlay['name'],
             page_url=overlay['page_url'],
@@ -518,14 +518,20 @@ for overlay_type in nav_html.keys():
         if overlay_type == 'board':
             for x in items:
                 image = x['image'] if 'image' in x else 'no-image.png'
-                print(x)
 
-                boards_page.append({'name': x['name'], 'html': '<li class="board"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                if 'formfactor' not in x:
+                    print('Warning! -> {name} missing formfactor'.format(name=x['name']))
+
+                boards_page.append({'name': x['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=x['name'],
                     page_url=x['page_url'],
                     base_url=base_url,
+                    type=x['type'] if 'type' in x else '',
+                    formfactor=x['formfactor'] if 'formfactor' in x else '',
+                    manufacturer=x['manufacturer'],
                     resource_url=resource_url)})
+
 
         group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
             image=x['image'],
@@ -549,7 +555,7 @@ for overlay_type in nav_html.keys():
         nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + nav_html[overlay_type]
 
 
-print(nav_html)
+#print(nav_html)
 
 boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
 

@@ -95,6 +95,32 @@ jQuery(document).ready(function(){
 			{
 				obj.show();
 			}
-		})
+		});
+
+		var hash = [];
+
+		for(var key in filters){
+			var selected = filters[key];
+			if(selected.length > 0){
+				hash.push(key + '=' + filters[key]);
+			}
+		}
+
+		window.location.hash = hash.join(':');
+	}
+
+	var hash = window.location.hash.split(':');
+	if(hash.length > 0){
+		for(var idx in hash){
+			var kv = hash[idx].replace('#','').split('=');
+			if(kv.length == 2 && typeof(filters[kv[0]]) != 'undefined'){
+				filters[kv[0]] = kv[1];
+				$('.item').each(function(idx,obj){
+					obj = $(obj);
+					if(obj.data('key') == kv[0] && obj.data('val') == kv[1]) obj.addClass('selected');
+				});
+			}
+		}
+		update_filters();
 	}
 });

@@ -4,7 +4,7 @@ name: Serial Pi Plus
 class: board
 type: other
 image: 'ab-serial-pi-plus.png'
-manufacturer: AB Electronics UK
+manufacturer: AB Electronics
 description: UART to RS232 Converter
 url: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
 github: https://github.com/abelectronicsuk

@@ -4,7 +4,7 @@ name: Pibrella
 class: board
 type: multi
 image: 'pibrella.png'
-manufacturer: Pimoroni Vs Cyntech
+manufacturer: Cyntech
 description: An all-in-one light, sound, input and output add-on board.
 url: https://github.com/pimoroni/pibrella
 formfactor: '26-way'

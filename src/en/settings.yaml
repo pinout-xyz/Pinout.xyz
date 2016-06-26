@@ -1,7 +1,6 @@
 ---
-default_desc: The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry
-  Pi, B+ and Pi 2
-default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
+default_desc: The comprehensive Add-on boards & GPIO Pinout guide for the Raspberry Pi
+default_title: Raspberry Pi GPIO Pinout
 title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/

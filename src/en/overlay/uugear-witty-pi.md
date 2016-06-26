@@ -5,7 +5,7 @@ class: board
 type: rtc,other
 formfactor: HAT
 image: 'witty-pi.png'
-manufacturer: UUGear s.r.o.
+manufacturer: UUGear
 description: Realtime clock and power management for Raspberry Pi
 url: http://www.uugear.com/product/witty-pi-realtime-clock-and-power-management-for-raspberry-pi/
 github: https://github.com/uugear/Witty-Pi

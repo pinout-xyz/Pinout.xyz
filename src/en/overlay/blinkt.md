@@ -1,6 +1,6 @@
 <!--
 ---
-name: Blinkt
+name: 'Blinkt!'
 class: board
 type: led
 formfactor: Custom
@@ -23,6 +23,6 @@ pin:
     mode: output
     active: high
 -->
-#Blinkt
+#Blinkt!
 
-Blinkt is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.
+Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.

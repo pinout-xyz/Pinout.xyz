@@ -2,7 +2,7 @@
 ---
 name: Pibrella
 class: board
-type: led,io
+type: multi,io
 formfactor: Custom
 image: 'pibrella.png'
 manufacturer: Cyntech

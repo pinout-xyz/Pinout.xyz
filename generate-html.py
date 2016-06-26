@@ -283,7 +283,7 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'bcm' in pin['scheme']:
             bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
-    if overlay is not None and (
+    if overlay is not None and 'pin' in overlay and (
                         pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
 
         if pin_num in overlay['pin']:

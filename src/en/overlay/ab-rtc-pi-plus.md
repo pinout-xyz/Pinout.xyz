@@ -2,7 +2,7 @@
 ---
 name: RTC Pi Plus
 class: board
-type: other
+type: rtc
 formfactor: HAT
 image: 'ab-rtc-pi-plus.png'
 manufacturer: AB Electronics

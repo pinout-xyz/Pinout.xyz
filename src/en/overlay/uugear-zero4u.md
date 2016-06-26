@@ -2,7 +2,7 @@
 ---
 name: Zero4U
 class: board
-type: usb hub
+type: usb
 formfactor: pHAT
 image: 'zero4u.png'
 manufacturer: UUGear s.r.o.

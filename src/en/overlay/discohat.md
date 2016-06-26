@@ -3,12 +3,12 @@
 name: DiscoHAT
 class: board
 type: audio
+formfactor: HAT
 image: 'discohat.png'
 manufacturer: Kertatuote
 description: Computer controlled DMX lights, sounds and special effects.
 url: http://discohat.com
 buy: http://discohat.com/shop
-formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 pin:

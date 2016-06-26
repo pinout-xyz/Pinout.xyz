@@ -3,13 +3,13 @@
 name: MPR121 Cap Touch HAT
 class: board
 type: touch
+formfactor: HAT
 image: 'adafruit-cap-mpr121.png'
 manufacturer: Adafruit
 description: Create electronics that can react to human touch with up to 12 individual sensors.
 url: https://www.adafruit.com/products/2340
 github: https://github.com/adafruit/Adafruit_Python_MPR121
 buy: https://www.adafruit.com/products/2340
-formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 power:

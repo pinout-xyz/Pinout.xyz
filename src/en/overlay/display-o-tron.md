@@ -3,13 +3,13 @@
 name: Display-o-Tron 3000
 class: board
 type: lcd
+formfactor: Custom
 image: 'display-o-tron.png'
 manufacturer: Pimoroni
 description: A 3-line character LCD with an RGB backlight and joystick
 url: https://github.com/pimoroni/dot3k
 github: https://github.com/pimoroni/dot3k
 buy: https://shop.pimoroni.com/products/displayotron-3000
-formfactor: '26-way'
 pincount: 26
 eeprom: no
 power:

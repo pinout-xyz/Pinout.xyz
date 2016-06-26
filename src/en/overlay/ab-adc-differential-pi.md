@@ -3,13 +3,13 @@
 name: ADC Differential Pi
 class: board
 type: adc
+formfactor: HAT
 image: 'ab-adc-differential-pi.png'
 manufacturer: AB Electronics
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
-formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

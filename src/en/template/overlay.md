@@ -3,13 +3,13 @@
 name: board name
 class: category
 type: application
+formfactor: Custom
 image: board image
 manufacturer: made by
 description: what it is
 url: https://myaddon.com
 github: https://github.com/myaddonrepo.com
 buy: http://shopformyaddon.com
-formfactor: Custom
 pincount: 26
 eeprom: no
 power: 3v3,5v
@@ -34,13 +34,13 @@ class: the class the overlay falls in, 'board' is the most common (use that if i
 type: the typical applications of the board, i.e 'lcd' (use 'other' if in doubt).  
 If multiple types apply, use a comma separated list (for example, 'adc,motor').  
 The keywords submitted will be used to filter boards at pinout.xyz so don't include anything but tags that are relevant to the key functionality of the board. 
+formfactor: the board's form factor. Valid values are Custom, HAT and pHAT.  
 manufacturer: the manufacturer's name.  
 description: a short description of what the add-on board provides.  
 url: the main URL for the product providing detailed technical information about the board.  
 pin: an array of the pins used. Do not specify power or EEPROM pins as part of the array!  
 
 DESIRABLE  
-formfactor: the board's form factor. Valid values currently are 26-way, Custom, HAT and pHAT.  
 pincount: the header pin count, typically 26 or 40 but shims/custom boards are acceptable.  
 eeprom: whether the board includes an eeprom (required by 'HAT' specs!).  
 power: the supply logic required by the board. Valid values are 3v3, 5v and 3v3,5v.  

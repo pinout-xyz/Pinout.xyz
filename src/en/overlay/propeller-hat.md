@@ -2,14 +2,14 @@
 ---
 name: Propeller HAT
 class: board
-type: other
+type: mcu,io,motor
+formfactor: HAT
 image: 'propeller-hat.png'
 manufacturer: Pimoroni
 description: The 8-core Propeller Microcontroller in HAT form-factor
 url: http://shop.pimoroni.com/products/propeller-hat
 github: https://github.com/pimoroni/piano-hat
 buy: https://shop.pimoroni.com/products/propeller-hat
-formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 power:

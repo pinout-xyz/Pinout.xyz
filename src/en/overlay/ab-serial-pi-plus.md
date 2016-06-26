@@ -2,14 +2,14 @@
 ---
 name: Serial Pi Plus
 class: board
-type: other
+type: com
+formfactor: HAT
 image: 'ab-serial-pi-plus.png'
 manufacturer: AB Electronics
 description: UART to RS232 Converter
 url: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
-formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3

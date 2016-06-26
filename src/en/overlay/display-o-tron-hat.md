@@ -3,13 +3,13 @@
 name: Display-o-Tron HAT
 class: board
 type: lcd
+formfactor: HAT
 image: 'display-o-tron-hat.png'
 manufacturer: Pimoroni
 description: A 3-line character LCD with a 6-zone RGB backlight and 6 touch buttons
 url: https://github.com/pimoroni/dot3k
 github: https://github.com/pimoroni/dot3k
 buy: https://shop.pimoroni.com/products/display-o-tron-hat
-formfactor: 'HAT'
 pincount: 40
 eeprom: yes
 power:

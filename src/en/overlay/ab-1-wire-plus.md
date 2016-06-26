@@ -2,14 +2,14 @@
 ---
 name: 1 Wire Pi Plus
 class: board
-type: other
+type: com
+formfactor: HAT
 image: 'ab-1-wire-pi-plus.png'
 manufacturer: AB Electronics
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
-formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

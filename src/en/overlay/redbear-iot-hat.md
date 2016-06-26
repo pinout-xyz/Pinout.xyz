@@ -3,13 +3,13 @@
 name: RedBear IoT HAT
 class: board
 type: iot
+formfactor: pHAT
 image: 'redbear-iot-hat.png'
 manufacturer: RedBear
 description: A Wi-Fi + Bluetooth add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
 github:
 buy: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
-formfactor: 'pHAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

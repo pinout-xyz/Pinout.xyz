@@ -2,14 +2,14 @@
 ---
 name: IO Pi Plus
 class: board
-type: other
+type: io
+formfactor: HAT
 image: 'ab-io-pi-plus.png'
 manufacturer: AB Electronics
 description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
-formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

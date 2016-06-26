@@ -3,12 +3,12 @@
 name: PiBorg LEDBorg
 class: board
 type: led
+formfactor: Custom
 image: 'piborg-led-borg.png'
 manufacturer: PiBorg
 description: A single RGB LED for your Raspberry Pi
 url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg
-formfactor: '26-way'
 pincount: 26
 eeprom: no
 pin:

@@ -3,13 +3,13 @@
 name: ADC Pi Plus
 class: board
 type: adc
+formfactor: HAT
 image: 'ab-adc-pi-plus.png'
 manufacturer: AB Electronics
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
-formfactor: 'HAT'
 pincount: 40
 eeprom: no
 power: 3v3,5v

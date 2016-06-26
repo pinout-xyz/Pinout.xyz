@@ -268,6 +268,7 @@ Drop down nav
     line-height: 23px;
     height: 22px;
     cursor:pointer;
+    text-transform:capitalize;
 }
 .facets .facet li:hover, .facets .facet li.selected {
 	color: #859900;

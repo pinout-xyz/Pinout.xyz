@@ -21,7 +21,7 @@ jQuery(document).ready(function(){
 				var vals = obj.data(key).split(',');
 
 				for(var idx in vals){
-					var val = vals[idx];
+					var val = vals[idx].trim();
 
 					if(facets[key].items.indexOf(val) == -1){
 						facets[key].items.push(val);
@@ -51,11 +51,18 @@ jQuery(document).ready(function(){
 
 		for(var idx in items){
 			var val = items[idx];
+
+			var text = val;
+
+			if(text.length <= 3){
+				text = text.toUpperCase();
+			}
+
 			$('<li>')
 				.addClass('item')
 				.data('key',key)
 				.data('val',val)
-				.text(val)
+				.text(text)
 				.appendTo(dom_facet);
 		}
 	}
@@ -88,7 +95,7 @@ jQuery(document).ready(function(){
 				var selected = filters[key];
 
 				if(selected.length > 0){
-					if(obj.data(key).split(',').indexOf(selected) == -1){
+					if(obj.data(key).split(',').map(function(s) { return s.trim() }).indexOf(selected) == -1){
 						hide = true;
 					}
 				}

@@ -1,6 +1,6 @@
 <!--
 ---
-name: RedBear IoT HAT
+name: IoT HAT
 class: board
 type: iot
 formfactor: pHAT

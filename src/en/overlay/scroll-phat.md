@@ -6,7 +6,7 @@ type: led
 formfactor: pHAT
 image: 'scroll-phat.png'
 manufacturer: Pimoroni
-description: A 11 x 5 LED matrix.
+description: A 11 x 5 LED matrix
 url: https://github.com/pimoroni/scroll-phat
 github: https://github.com/pimoroni/scroll-phat
 buy: https://shop.pimoroni.com/products/scroll-phat

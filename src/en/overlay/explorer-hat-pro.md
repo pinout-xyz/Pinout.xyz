@@ -6,7 +6,7 @@ type: adc,io,motor
 formfactor: HAT
 image: 'explorer-hat-pro.png'
 manufacturer: Pimoroni
-description: An all-in-one light, input, motor, touch and output add-on board.
+description: An all-in-one light, input, motor, touch and output add-on board
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat

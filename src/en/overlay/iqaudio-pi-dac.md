@@ -1,6 +1,6 @@
 <!--
 ---
-name: "Pi-DAC+"
+name: Pi-DAC+
 class: board
 type: audio
 formfactor: HAT

@@ -6,7 +6,7 @@ type: touch
 formfactor: HAT
 image: 'adafruit-cap-mpr121.png'
 manufacturer: Adafruit
-description: Create electronics that can react to human touch with up to 12 individual sensors.
+description: Create electronics that can react to human touch with up to 12 individual sensors
 url: https://www.adafruit.com/products/2340
 github: https://github.com/adafruit/Adafruit_Python_MPR121
 buy: https://www.adafruit.com/products/2340

@@ -1,6 +1,6 @@
 <!--
 ---
-name: PiBorg LEDBorg
+name: LEDBorg
 class: board
 type: led
 formfactor: Custom

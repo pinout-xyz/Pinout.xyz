@@ -1,6 +1,6 @@
 <!--
 ---
-name: "pHAT DAC"
+name: pHAT DAC
 class: board
 type: audio
 formfactor: pHAT

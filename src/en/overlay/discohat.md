@@ -6,7 +6,7 @@ type: audio
 formfactor: HAT
 image: 'discohat.png'
 manufacturer: Kertatuote
-description: Computer controlled DMX lights, sounds and special effects.
+description: Computer controlled DMX lights, sounds and special effects
 url: http://discohat.com
 buy: http://discohat.com/shop
 pincount: 40

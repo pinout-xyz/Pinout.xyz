@@ -1,11 +1,11 @@
 <!--
 ---
-name: Raspberry Pi Dots
+name: Dots
 class: board
 type: other
 formfactor: Custom
 image: 'pihut-dots.png'
-manufacturer: 'Raspberry Pi'
+manufacturer: Raspberry Pi
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

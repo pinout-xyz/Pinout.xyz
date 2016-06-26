@@ -115,7 +115,7 @@ jQuery(document).ready(function(){
 		for(var key in filters){
 			var selected = filters[key];
 			if(selected.length > 0){
-				hash.push(key + '=' + filters[key]);
+				hash.push(key + '=' + encodeURIComponent(filters[key]));
 			}
 		}
 
@@ -127,7 +127,7 @@ jQuery(document).ready(function(){
 		for(var idx in hash){
 			var kv = hash[idx].replace('#','').split('=');
 			if(kv.length == 2 && typeof(filters[kv[0]]) != 'undefined'){
-				filters[kv[0]] = kv[1];
+				filters[kv[0]] = decodeURIComponent(kv[1]);
 				$('.item').each(function(idx,obj){
 					obj = $(obj);
 					if(obj.data('key') == kv[0] && obj.data('val') == kv[1]) obj.addClass('selected');

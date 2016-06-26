@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: adc,io,motor,touch
+type: adc,io,motor
 formfactor: HAT
 image: 'explorer-hat-pro.png'
 manufacturer: Pimoroni

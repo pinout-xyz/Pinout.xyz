@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: io,touch
+type: io
 formfactor: HAT
 image: 'explorer-hat.png'
 manufacturer: Pimoroni

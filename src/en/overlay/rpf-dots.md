@@ -1,6 +1,6 @@
 <!--
 ---
-name: Dots
+name: DOTs
 class: board
 type: other
 formfactor: Custom

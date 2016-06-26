@@ -62,6 +62,7 @@ overlays:
 - phat-dac
 - propeller-hat
 - iqaudio-pi-dac
+- iqaudio-pi-digiamp
 - piano-hat
 - piborg-ledborg
 - pibrella

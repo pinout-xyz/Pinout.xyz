@@ -2,7 +2,7 @@
 ---
 name: Enviro pHAT
 class: board
-type: iot
+type: iot,sensor
 image: 'enviro-phat.png'
 manufacturer: Pimoroni
 description: A package of environmental sensors for IoT projects

@@ -9,8 +9,8 @@ tmppng="$dirpng/template.png"
 yamlfile="../src/en/settings.yaml"
 mdlist=$(ls "$draftmd")
 
-cp -R $draftmd/* $dirmd && rm $tmpmd
-cp -R $draftpng/* $dirpng && rm $tmppng
+mv -R $draftmd/* $dirmd && rm $tmpmd
+mv -R $draftpng/* $dirpng && rm $tmppng
 
 for overlay in $mdlist; do
     if [ $overlay != "template.md" ]; then

@@ -24,7 +24,7 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
-- explorer-phat
+- analog-zero
 - enviro-phat
 - ab-adc-pi-zero
 - redbear-iot-hat

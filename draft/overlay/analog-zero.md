@@ -1,27 +1,27 @@
 <!--
 ---
-name: board name
-class: category
-type: application
-formfactor: Custom
-image: board image
-manufacturer: made by
-description: what it is
-url: https://myaddon.com
-github: https://github.com/myaddonrepo.com
-buy: http://shopformyaddon.com
-pincount: 26
+name: RasPiO Analog Zero
+class: Board
+type: ADC
+formfactor: pHAT
+image: http://rasp.io/wp-content/uploads/2016/06/RasPiO-Analog-Zero-graphic-bare.png
+manufacturer: RasPiO
+description: The RasPiO®1 Analog Zero offers a compact, inexpensive, easy way to add eight analog2 channels to your Raspberry Pi. RasPiO Analog Zero uses an MCP3008 analog to digital converter. It's an SPI driven, 10-bit, 8-channel ADC
+url: http://rasp.io/wp-content/uploads/2016/06/RasPiO-Analog-Zero.pdf
+github: https://github.com/raspitv/analogzero
+buy: http://rasp.io/analogzero/
+pincount: 40
 eeprom: no
-power: 3v3,5v
+power: 3v3
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
-i2c:
-  '0x00':
-    name: device display name
-    device: chip name
+  '19':
+    mode: MOSI
+  '21':
+    mode: MISO
+  '23':
+    mode: SCLK
+  '24':
+    mode: SPI0 CE0
 -->
 #my add-on board
 

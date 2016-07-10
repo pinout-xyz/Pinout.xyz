@@ -2,8 +2,15 @@
 
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+July 10, 2016
+- added pi-liter.md
+
+July 9, 2016
+- added analog-zero.md
+- added carberry.md
+
 June 25, 2016
-adafruit-cap-mpr121.md
+- adafruit-cap-mpr121.md
 
 June 24, 2016
 - added unicorn-phat.md

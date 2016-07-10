@@ -1,16 +1,16 @@
 <!--
 ---
-name: board name
-class: category
-type: application
+name: My Add-on Board
+class: board
+type: other
 formfactor: Custom
-image: board image
-manufacturer: made by
-description: what it is
-url: https://myaddon.com
-github: https://github.com/myaddonrepo.com
-buy: http://shopformyaddon.com
-pincount: 26
+image: 'image.png'
+manufacturer: Company
+description: An add-on board for the Raspberry Pi
+url: https://my-addon-board.com
+github: https://github.com/my-addon-board-repo.com
+buy: http://buy-my-addon-board.com
+pincount: 40
 eeprom: no
 power: 3v3,5v
 pin:

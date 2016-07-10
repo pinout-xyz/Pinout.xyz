@@ -3,6 +3,7 @@
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
 July 10, 2016
+- added raspio-duino.md
 - added pi-liter.md
 - added zero-lipo.md
 

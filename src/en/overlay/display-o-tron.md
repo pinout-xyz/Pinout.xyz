@@ -61,7 +61,6 @@ install:
     - 'python3-dev'
   'python':
     - 'dot3k'
-  'examples': 'python/examples/'
 -->
 #Display-o-Tron 3000
 

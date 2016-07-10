@@ -31,7 +31,6 @@ install:
     - 'unicornhat'
   'python3':
     - 'unicornhat'
-  'examples': 'python/examples/'
 -->
 #Unicorn pHAT
 

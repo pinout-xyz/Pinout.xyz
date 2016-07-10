@@ -33,7 +33,6 @@ install:
     - 'python3-dev'
   'python':
     - 'skywriter'
-  'examples': 'python/examples/'
 -->
 #Skywriter HAT
 

@@ -35,7 +35,6 @@ install:
     - 'scrollphat'
   'python3':
     - 'scrollphat'
-  'examples': 'examples/'
 -->
 #Scroll pHAT
 

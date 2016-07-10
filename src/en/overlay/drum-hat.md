@@ -27,7 +27,6 @@ i2c:
   '0x2c':
     name: Cap Touch
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
 #Drum HAT
 

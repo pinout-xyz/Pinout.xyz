@@ -100,7 +100,6 @@ install:
     - 'explorerhat'
   'python3':
     - 'explorerhat'
-  'examples': 'examples/'
 -->
 #Explorer HAT Pro
 

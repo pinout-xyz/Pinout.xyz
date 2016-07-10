@@ -33,11 +33,9 @@ i2c:
   '0x28':
     name: Cap Touch A
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
   '0x2b':
     name: Cap Touch B
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
 #Pimoroni Piano HAT
 

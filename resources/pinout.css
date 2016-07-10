@@ -246,7 +246,7 @@ Drop down nav
 }
 .facets h4, .boards-page #interfaces h4 {
 	text-transform: capitalize;
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0 0 0;
     color:#ffffff;
 }
@@ -264,7 +264,7 @@ Drop down nav
     margin-right: 2px;
     background: #859900;
     color: #FFF;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 23px;
     height: 22px;
     cursor:pointer;

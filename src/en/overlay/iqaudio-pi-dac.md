@@ -40,7 +40,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#IQaudIO Pi-DAC+
+#Pi-DAC+
 
 The Pi-DAC+ takes the digital audio signals (I2S) from the Raspberry Pi and through the
 onboard Texas Instruments PCM5122 DAC delivers variable output (hardware volume

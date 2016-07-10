@@ -45,7 +45,7 @@ pin:
   '38':
     name: 'BT_WAKE'
 -->
-#RedBear PiZero IoT HAT
+#PiZero IoT HAT
 
 The RedBear IoT HAT brings the BCM43438 used on the Raspberry Pi 3 to HAT format, compatible with the Pi Zero.
 

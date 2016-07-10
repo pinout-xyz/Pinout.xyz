@@ -34,7 +34,7 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#Adafruit MPR121 Cap Touch HAT
+#MPR121 Cap Touch HAT
 
 This Raspberry Pi add-on board provides 12 capacitive touch inputs and all the logic to read them over a simple I2C communication bus.
 

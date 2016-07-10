@@ -60,7 +60,7 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#Raspberry Pi WiringPi
+#WiringPi
 
 ###WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 

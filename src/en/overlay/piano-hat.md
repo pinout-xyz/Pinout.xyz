@@ -39,7 +39,7 @@ i2c:
     device: cap1188
     datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
-#Piano HAT
+#Pimoroni Piano HAT
 
 Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave, the rest give you octave up/down and instrument select functionality.
 

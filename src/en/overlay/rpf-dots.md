@@ -98,7 +98,7 @@ pin:
     name: 'Color: Red'
     direction: input
 -->
-#Raspberry Pi Dots
+#Dots Board
 
 ###Dots is a Dot to Dot board for the Raspberry Pi that lets you join-the-dots with BARE Conductive Paint!
 

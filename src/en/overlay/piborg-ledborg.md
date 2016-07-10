@@ -28,9 +28,9 @@ pin:
     active: high
     description: PiBorg Blue LED
 -->
-###The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi.
+#LedBorg
 
-the PiBorg Ledborg has its own driver, so you don't need to drive it manually.
+The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi. It has its own driver, so you don't need to drive it manually.
 
 If you want a much, much wider range of colours, though, you can drive it manually using softPwm in WiringPi. The pin assignments for this are as follows:
 

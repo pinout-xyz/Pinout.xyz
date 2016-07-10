@@ -3,7 +3,7 @@
 name: 7-port USB hub
 class: board
 type: usb
-formfactor: other
+formfactor: USB
 image: 'uugear-7port-usb-hub.png'
 manufacturer: UUGear
 description: 7-port USB hub for Raspberry Pi

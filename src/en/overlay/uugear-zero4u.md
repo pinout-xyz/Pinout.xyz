@@ -3,7 +3,7 @@
 name: Zero4U
 class: board
 type: usb
-formfactor: pHAT
+formfactor: USB
 image: 'zero4u.png'
 manufacturer: UUGear
 description: 4-port USB hub for Raspberry Pi Zero

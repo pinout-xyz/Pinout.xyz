@@ -2,7 +2,7 @@
 ---
 name: Witty Pi
 class: board
-type: rtc,other
+type: power,rtc
 formfactor: HAT
 image: 'witty-pi.png'
 manufacturer: UUGear

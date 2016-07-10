@@ -4,6 +4,7 @@ This document only logs the changes to the overlay files that are relevant for p
 
 July 10, 2016
 - added pi-liter.md
+- added zero-lipo.md
 
 July 9, 2016
 - added analog-zero.md

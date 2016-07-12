@@ -84,3 +84,4 @@ overlays:
 - pi-liter
 - zero-lipo
 - raspio-duino
+- adafruit-servo-hat

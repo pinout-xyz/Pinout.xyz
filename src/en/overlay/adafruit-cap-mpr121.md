@@ -1,6 +1,6 @@
 <!--
 ---
-name: MPR121 Cap Touch HAT
+name: Capacitive Touch HAT
 class: board
 type: touch
 formfactor: HAT
@@ -34,7 +34,7 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#MPR121 Cap Touch HAT
+#Capacitive Touch HAT
 
 This Raspberry Pi add-on board provides 12 capacitive touch inputs and all the logic to read them over a simple I2C communication bus.
 

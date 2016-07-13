@@ -7,7 +7,7 @@ formfactor: HAT
 image: 'piano-hat.png'
 manufacturer: Pimoroni
 description: A tiny Pi piano with 16 touch-sensitive buttons
-url: http://shop.pimoroni.com/products/drum-hat
+url: https://shop.pimoroni.com/products/piano-hat
 github: https://github.com/pimoroni/piano-hat
 buy: https://shop.pimoroni.com/products/piano-hat
 pincount: 40

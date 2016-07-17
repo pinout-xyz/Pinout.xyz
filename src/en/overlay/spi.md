@@ -46,9 +46,10 @@ pin:
     name: SPI1 SCLK
 -->
 #SPI - Serial Peripheral Interface
-
+---
+###SPI0 pins in BCM mode are: 9, 10, 11 + 7/8
 ###SPI0 pins in WiringPi are: 12, 13, 14 + 10/11
-
+---
 Known as the four-wire serial bus, SPI lets you daisy-chain multiple compatible devices off a single set of pins by assigning them different chip-select pins.
 
 A useful example of an SPI peripheral is the MCP23S17 digital IO expander chip ( Note the S in place of the 0 found on the I2C version ). You can also use the SPI port to "Bit-Bang" an ATmega 328, loading Arduino sketches onto it with Gordon Hendersons' modified version of AVRDude.

@@ -4,6 +4,7 @@ name: DPI
 class: interface
 type: pinout
 description: Raspberry Pi DPI pins
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/dpi/
 pin:
   'bcm0':
     name: CLK
@@ -52,6 +53,6 @@ pin:
 -->
 #DPI - Display Parallel Interface
 
-###DPI (Display Parallel Interface) is a 24-bit parallel interface with 28 clock and synchronisation signals. The Pi uses a cut-down, 6-bit, 22 pin version omitting the least significant R, G and B colour bits.
+DPI (Display Parallel Interface) is a 24-bit parallel interface with 28 clock and synchronisation signals. The Pi uses a cut-down, 6-bit, 22 pin version omitting the least significant R, G and B colour bits.
 
 DPI, combined with a simple adaptor consisting of 20 resistors, allows you to add a VGA connector to the Pi which supports resolutions from 640 x 480 up to 1920 x 1024 at 60fps and 6bits per channel.

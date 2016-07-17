@@ -30,10 +30,14 @@ featured:
 - redbear-iot-hat
 overlays:
 - ground
-- uart
+- iface-dpi
+- iface-gpclk
 - i2c
+- iface-jtag
+- iface-pcm
+- iface-sd
 - spi
-- arduino-spi
+- uart
 - wiringpi
 - ab-1-wire-plus
 - ab-adc-differential-pi
@@ -54,11 +58,6 @@ overlays:
 - explorer-phat
 - blinkt
 - enviro-phat
-- iface-gpclk
-- iface-dpi
-- iface-pcm
-- iface-sd
-- iface-jtag
 - phat-dac
 - propeller-hat
 - iqaudio-pi-dac

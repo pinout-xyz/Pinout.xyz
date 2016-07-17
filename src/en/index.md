@@ -1,6 +1,4 @@
-#Pinout!
-
-###The comprehensive GPIO Pinout guide for the Raspberry Pi.
+###Pinout! The comprehensive GPIO Pinout guide for the Raspberry Pi.
 
 This GPIO Pinout is designed to be both a quick-reference and a comprehensive guide to your Raspberry Pi's GPIO pins.
 

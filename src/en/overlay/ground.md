@@ -24,4 +24,4 @@ Generally the one that's most convenient or closest to the rest of your connecti
 and easier, or alternatively the one closest to the supply pin that you use.
 
 For example, it's a good idea to use Physical Pin 17 for 3v3 and Physical Pin 25 for ground when using
-the [SPI](/pinout/iface-spi) connections, as these are right next to the important pins for SPI0.
+the SPI connections, as these are right next to the important pins for SPI0.

@@ -33,7 +33,7 @@ i2c:
 -->
 # Witty-Pi-2
 
-Witty Pi 2 is the second generation of Witty Pi, which adds realtime clock and power management to your Raspberry Pi. You can turn on/off your Raspberry Pi with a single tap on the button on Witty Pi 2, and the power supply for Raspberry Pi and all its USB peripherals will get fully cut after the shutdown. Witty Pi 2 has a CR2032 backed realtime clock (DS3231) on board, and can accurately keep time for Raspberry Pi. The built-in temperature sensor can tell the temperature around your Raspberry Pi too. You can schedule next shutdown/startup of your Pi via the software. Complex ON/OFF sequence for Raspberry Pi can be achieved by applying a user-defined schedule script.
+Witty Pi 2 is the second generation of Witty Pi, which adds realtime clock and power management to your Raspberry Pi. You can turn on/off your Raspberry Pi with a single tap on the button on Witty Pi 2, and the power supply for Raspberry Pi and all its USB peripherals will get fully cut after the shutdown. Witty Pi 2 has a CR2032 backed realtime clock (DS3231) on board, and can accurately keep time for Raspberry Pi. The built-in temperature sensor can tell the temperature around your Raspberry Pi too. You can schedule next shutdown/startup of your Pi via the software. Complex ON/OFF sequence for Raspberry Pi can be achieved by applying a user-defined schedule script. If you are using power bank as power supply, the new dummy load feature can keep power bank alive with low current consumption. The newly added 6-pin female header breaks out some important signals for integration/extension.
 
 You can use the two commands below to install software for Witty Pi 2:
 

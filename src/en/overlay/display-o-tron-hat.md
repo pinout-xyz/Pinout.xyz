@@ -2,7 +2,7 @@
 ---
 name: Display-o-Tron HAT
 class: board
-type: lcd
+type: display
 formfactor: HAT
 image: 'display-o-tron-hat.png'
 manufacturer: Pimoroni

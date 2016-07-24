@@ -2,7 +2,7 @@
 ---
 name: Display-o-Tron 3000
 class: board
-type: lcd
+type: display
 formfactor: Custom
 image: 'display-o-tron.png'
 manufacturer: Pimoroni

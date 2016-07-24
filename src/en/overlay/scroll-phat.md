@@ -2,7 +2,7 @@
 ---
 name: Scroll pHAT
 class: board
-type: led
+type: display, led
 formfactor: pHAT
 image: 'scroll-phat.png'
 manufacturer: Pimoroni

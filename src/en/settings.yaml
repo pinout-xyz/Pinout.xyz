@@ -85,3 +85,4 @@ overlays:
 - raspio-duino
 - adafruit-servo-hat
 - microdot-phat
+- wifi-pants

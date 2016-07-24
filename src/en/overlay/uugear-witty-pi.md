@@ -4,7 +4,7 @@ name: Witty Pi
 class: board
 type: power,rtc
 formfactor: HAT
-image: 'witty-pi.png'
+image: 'uugear-witty-pi.png'
 manufacturer: UUGear
 description: Realtime clock and power management for Raspberry Pi
 url: http://www.uugear.com/product/witty-pi-realtime-clock-and-power-management-for-raspberry-pi/
@@ -34,9 +34,13 @@ i2c:
     name: DS1307
     device: DS1307
 -->
-#Witty-Pi
+#Witty Pi
 
-Witty Pi is an extension board that adds realtime clock and power management to your Raspberry Pi. You can turn on/off your Raspberry Pi with a single tap on the button on Witty Pi, and the power supply for Raspberry Pi and all its USB peripherals will get fully cut after the shutdown. Witty Pi has a CR2032 backed realtime clock (DS1337) on board, and can keep time for Raspberry Pi when it is off. You can schedule next shutdown/startup of your Pi via the software. A user-defined schedule script could be used for complex use case, which requires scheduling multiple shutdowns and startups at different moments.
+Witty Pi is an extension board that adds realtime clock and power management to your Raspberry Pi.
+
+You can turn on/off your Raspberry Pi with a single tap on the button on Witty Pi, and the power supply for Raspberry Pi and all its USB peripherals will get fully cut after the shutdown.
+
+Witty Pi has a CR2032 backed realtime clock (DS1337) on board, and can keep time for Raspberry Pi when it is off. You can schedule next shutdown/startup of your Pi via the software. A user-defined schedule script could be used for complex use case, which requires scheduling multiple shutdowns and startups at different moments.
 
 You can use the two commands below to install software for Witty Pi:
 

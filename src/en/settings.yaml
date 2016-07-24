@@ -25,7 +25,7 @@ strings:
 - buy_now: 'Buy Now'
 featured:
 - analog-zero
-- enviro-phat
+- microdot-phat
 - ab-adc-pi-zero
 - redbear-iot-hat
 overlays:
@@ -84,3 +84,4 @@ overlays:
 - zero-lipo
 - raspio-duino
 - adafruit-servo-hat
+- microdot-phat

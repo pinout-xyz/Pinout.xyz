@@ -2,6 +2,9 @@
 
 This document only logs the changes to the overlay files that are relevant for purposes of translations. See files history for further details!
 
+July 24, 2016
+- added microdot-phat.md
+
 July 12, 2016
 - added adafruit-servo-hat.md
 

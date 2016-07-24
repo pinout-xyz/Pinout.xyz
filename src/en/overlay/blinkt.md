@@ -7,7 +7,7 @@ formfactor: Custom
 image: 'blinkt.png'
 manufacturer: Pimoroni
 description: Slimline board with 8 super-bright RGB LED indicators
-url: https://shop.pimoroni.com/products/blinkt
+url: http://blog.pimoroni.com/blinkt/
 github: https://github.com/pimoroni/blinkt
 buy: https://shop.pimoroni.com/products/blinkt
 pincount: 40

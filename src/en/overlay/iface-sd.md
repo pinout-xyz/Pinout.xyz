@@ -1,6 +1,6 @@
 <!--
 ---
-name: SD
+name: SDIO
 class: interface
 type: pinout
 description: Raspberry Pi SD0/SD1 pins

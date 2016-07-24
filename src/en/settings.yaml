@@ -78,6 +78,7 @@ overlays:
 - uugear-zero4u
 - uugear-7port-usb-hub
 - uugear-witty-pi
+- uugear-witty-pi-2
 - analog-zero
 - carberry
 - pi-liter

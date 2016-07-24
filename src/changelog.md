@@ -5,6 +5,7 @@ This document only logs the changes to the overlay files that are relevant for p
 July 24, 2016
 - added microdot-phat.md
 - added wifi-pants.md
+- added uugear-witty-pi-2.md
 
 July 12, 2016
 - added adafruit-servo-hat.md

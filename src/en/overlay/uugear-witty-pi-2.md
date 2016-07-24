@@ -4,7 +4,7 @@ name: Witty Pi 2
 class: board
 type: power,rtc
 formfactor: HAT
-image: 'witty-pi-2.png'
+image: 'uugear-witty-pi-2.png'
 manufacturer: UUGear
 description: Realtime clock and power management for Raspberry Pi
 url: http://www.uugear.com/product/wittypi2/

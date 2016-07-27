@@ -42,13 +42,12 @@ overlays:
 - iface-sd
 - display-o-tron
 - display-o-tron-hat
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
 - pibrella
 - rtk-000-001
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat

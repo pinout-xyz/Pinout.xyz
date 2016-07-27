@@ -1,15 +1,17 @@
 <!--
 ---
-name: Raspberry Pi Dots
+name: DOTs
 class: board
 type: alle
 formfactor: Andere
 manufacturer: Raspberry Pi
-image: 'image.png'
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+buy: https://thepihut.com/products/raspberry-pi-dots-board
+image: 'rpf-dots.png'
 pincount: 40
+eeprom: no
 pin:
   bcm0:
     name: 'Farbe: Blau'

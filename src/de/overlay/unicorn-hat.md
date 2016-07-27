@@ -5,21 +5,17 @@ class: board
 type: alle
 formfactor: HAT
 manufacturer: Pimoroni
-image: 'image.png'
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 blendend helle RGB LEDs auf einem HAT
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
-install:
-  'apt':
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'unicornhat'
-  'python3':
-    - 'unicornhat'
-  'examples': 'python/examples/'
+buy: http://shop.pimoroni.com/products/unicorn-hat
+image: 'unicorn-hat.png'
 pincount: 40
+eeprom: yes
+power:
+  '2':
+ground:
+  '9':
 pin:
   '12':
     name: Data

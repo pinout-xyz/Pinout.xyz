@@ -5,10 +5,13 @@ class: board
 type: alle
 formfactor: Andere
 manufacturer: Cyntech
-image: 'image.png'
-url: https://github.com/pimoroni/pibrella
 description: eine "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: Green LED

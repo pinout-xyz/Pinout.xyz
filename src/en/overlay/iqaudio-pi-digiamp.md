@@ -4,11 +4,11 @@ name: Pi-DigiAMP+
 class: board
 type: audio
 formfactor: HAT
-image: 'iqaudio-pi-digiamp.png'
 manufacturer: IQaudIO
 description: A combined DAC and 35w amplifier board
 url: http://www.iqaudio.co.uk/home/9-pi-digiamp-0712411999650.html
 buy: http://www.iqaudio.co.uk
+image: 'iqaudio-pi-digiamp.png'
 pincount: 40
 eeprom: yes
 pin:

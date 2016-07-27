@@ -4,12 +4,12 @@ name: Unicorn HAT
 class: board
 type: led
 formfactor: HAT
-image: 'unicorn-hat.png'
 manufacturer: Pimoroni
 description: 64 blindingly bright RGB LEDs on a single HAT
 url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
 buy: http://shop.pimoroni.com/products/unicorn-hat
+image: 'unicorn-hat.png'
 pincount: 40
 eeprom: yes
 power:

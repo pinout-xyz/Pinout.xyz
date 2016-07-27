@@ -4,11 +4,11 @@ name: Pi-DAC+
 class: board
 type: audio
 formfactor: HAT
-image: 'iqaudio-pi-dac.png'
 manufacturer: IQaudIO
 description: An I2S digital to analog audio converter HAT for the Pi
 url: http://www.iqaudio.co.uk/audio/8-pi-dac-0712411999650.html
 buy: http://www.iqaudio.co.uk
+image: 'iqaudio-pi-dac.png'
 pincount: 40
 eeprom: yes
 pin:

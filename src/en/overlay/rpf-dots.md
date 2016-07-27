@@ -4,12 +4,12 @@ name: DOTs
 class: board
 type: other
 formfactor: Custom
-image: 'pihut-dots.png'
 manufacturer: Raspberry Pi
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 buy: https://thepihut.com/products/raspberry-pi-dots-board
+image: 'pihut-dots.png'
 pincount: 40
 eeprom: no
 pin:

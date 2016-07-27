@@ -4,12 +4,12 @@ name: Analog Zero
 class: board
 type: adc
 formfactor: pHAT
-image: 'analog-zero.png'
 manufacturer: RasPiO
 description: A 10-bit 8-channel ADC for Raspberry Pi
 url: http://rasp.io/analogzero/
 github: https://github.com/raspitv/analogzero
 buy: http://rasp.io/analogzero/
+image: 'analog-zero.png'
 pincount: 40
 eeprom: no
 power: 3v3

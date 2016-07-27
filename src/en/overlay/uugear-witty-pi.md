@@ -4,12 +4,12 @@ name: Witty Pi
 class: board
 type: power,rtc
 formfactor: HAT
-image: 'uugear-witty-pi.png'
 manufacturer: UUGear
 description: Realtime clock and power management for Raspberry Pi
 url: http://www.uugear.com/product/witty-pi-realtime-clock-and-power-management-for-raspberry-pi/
 github: https://github.com/uugear/Witty-Pi
 buy: http://www.uugear.com/product/witty-pi-realtime-clock-and-power-management-for-raspberry-pi/
+image: 'uugear-witty-pi.png'
 pincount: 40
 eeprom: no
 power: 5v

@@ -4,12 +4,12 @@ name: Servo/PWM HAT
 class: board
 type: touch
 formfactor: HAT
-image: 'adafruit-servo-hat.png'
 manufacturer: Adafruit
 description: A 16-Channel Servo / PWM HAT for Raspberry Pi
 url: https://www.adafruit.com/product/2327
 github: https://github.com/adafruit/Adafruit_Python_PCA9685
 buy: https://www.adafruit.com/product/2327
+image: 'adafruit-servo-hat.png'
 pincount: 40
 eeprom: no
 power:

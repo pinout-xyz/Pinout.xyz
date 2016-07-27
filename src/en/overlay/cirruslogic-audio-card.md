@@ -4,11 +4,11 @@ name: Cirrus Logic Audio Card
 class: board
 type: audio
 formfactor: HAT
-image: 'cirruslogic-audio-card.png'
 manufacturer: Element14
 description: Audio Card with unprecedented level of features and performance for Raspberry Pi
 url: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
 buy: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
+image: 'cirruslogic-audio-card.png'
 pincount: 40
 pin:
   '3':

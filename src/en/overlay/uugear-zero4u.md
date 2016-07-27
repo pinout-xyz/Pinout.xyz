@@ -4,11 +4,11 @@ name: Zero4U
 class: board
 type: usb
 formfactor: USB
-image: 'uugear-zero4u.png'
 manufacturer: UUGear
 description: 4-port USB hub for Raspberry Pi Zero
 url: http://www.uugear.com/product/zero4u/
 buy: http://www.uugear.com/product/zero4u/
+image: 'uugear-zero4u.png'
 pincount: 40
 eeprom: no
 power: 5v

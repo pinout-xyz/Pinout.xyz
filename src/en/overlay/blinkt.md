@@ -4,12 +4,12 @@ name: 'Blinkt!'
 class: board
 type: led
 formfactor: Custom
-image: 'blinkt.png'
 manufacturer: Pimoroni
 description: Slimline board with 8 super-bright RGB LED indicators
 url: http://blog.pimoroni.com/blinkt/
 github: https://github.com/pimoroni/blinkt
 buy: https://shop.pimoroni.com/products/blinkt
+image: 'blinkt.png'
 pincount: 40
 eeprom: no
 power: 5v

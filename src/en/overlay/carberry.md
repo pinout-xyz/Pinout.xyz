@@ -4,11 +4,11 @@ name: Carberry
 class: board
 type: other
 formfactor: Custom
-image: 'carberry.png'
 manufacturer: Paser
 description: add-on board designed to inteface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/
 buy: http://www.carberry.it
+image: 'carberry.png'
 pincount: 26
 eeprom: no
 power:

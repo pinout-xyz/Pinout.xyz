@@ -4,12 +4,12 @@ name: Piano HAT
 class: board
 type: instrument
 formfactor: HAT
-image: 'piano-hat.png'
 manufacturer: Pimoroni
 description: A tiny Pi piano with 16 touch-sensitive buttons
 url: https://shop.pimoroni.com/products/piano-hat
 github: https://github.com/pimoroni/piano-hat
 buy: https://shop.pimoroni.com/products/piano-hat
+image: 'piano-hat.png'
 pincount: 40
 eeprom: yes
 pin:

@@ -4,10 +4,10 @@ name: Pibrella
 class: board
 type: multi,io
 formfactor: Custom
-image: 'pibrella.png'
 manufacturer: Cyntech
 description: An all-in-one light, sound, input and output add-on board
 url: https://github.com/pimoroni/pibrella
+image: 'pibrella.png'
 pincount: 26
 eeprom: no
 pin:

@@ -4,11 +4,11 @@ name: Pi-LITE-r
 class: board
 type: led
 formfactor: Custom
-image: 'pi-liter.png'
 manufacturer: Ciseco
 description: An 8 LED strip for the Raspberry Pi
 url: http://www.averagemanvsraspberrypi.com/2014/04/how-to-use-pi-liter-from-ciseco.html
 buy: http://cpc.farnell.com/wirelessthings/pi-liter/pi-lite-junior-led-io-board-for/dp/SC13293
+image: 'pi-liter.png'
 pincount: 26
 eeprom: no
 power: 3v3

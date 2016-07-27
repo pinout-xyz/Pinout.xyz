@@ -4,11 +4,11 @@ name: ESP IoT pHAT
 class: board
 type: mcu,io,iot
 formfactor: pHAT
-image: 'esp8266-phat.png'
 manufacturer: Pimoroni
 description: an ESP8266 module programmable from your Pi
 url: https://shop.pimoroni.com/products/esp8266-phat
 buy: https://shop.pimoroni.com/products/esp8266-phat
+image: 'esp8266-phat.png'
 pincount: 40
 eeprom: no
 power:

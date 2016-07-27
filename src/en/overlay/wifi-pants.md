@@ -4,12 +4,12 @@ name: WiFi Pants
 class: board
 type: power, iot
 formfactor: pHAT
-image: 'wifi-pants.png'
 manufacturer: SLNGadget
 description: WiFi and battery power for the Raspberry Pi
 url: https://hackaday.io/project/8678-rpi-wifi
 github: https://github.com/al177/esp_hat
 buy: https://www.tindie.com/products/ajlitt/wifi-power-pants/
+image: 'wifi-pants.png'
 pincount: 40
 eeprom: no
 power: external

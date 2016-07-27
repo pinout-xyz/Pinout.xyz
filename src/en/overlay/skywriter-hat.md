@@ -4,12 +4,12 @@ name: Skywriter HAT
 class: board
 type: 'gesture,touch'
 formfactor: HAT
-image: 'skywriter-hat.png'
 manufacturer: Pimoroni
 description: A 3D positional and gesture sensor
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
+image: 'skywriter-hat.png'
 pincount: 40
 eeprom: yes
 i2c:

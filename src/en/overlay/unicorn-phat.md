@@ -4,12 +4,12 @@ name: Unicorn pHAT
 class: board
 type: led
 formfactor: pHAT
-image: 'unicorn-phat.png'
 manufacturer: Pimoroni
 description: 32 blindingly bright RGB LEDs on a single pHAT
 url: http://shop.pimoroni.com/products/unicorn-phat
 github: https://github.com/pimoroni/unicornhat
 buy: http://shop.pimoroni.com/products/unicorn-phat
+image: 'unicorn-phat.png'
 pincount: 40
 eeprom: yes
 power:

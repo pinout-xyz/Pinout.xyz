@@ -1,6 +1,6 @@
 <!--
 ---
-name: Masse (Ground)
+name: Masse
 class: interface
 type: pinout
 description: Raspberry Pi Masse Pins
@@ -14,7 +14,7 @@ pin:
   '34':
   '39':
 -->
-#Masse (Ground)
+#Masse
 
 Die Masseanschlüsse des Raspberry Pi sind alle miteinander verbunden. Es ist also egal, welchen
 Du verwendets.

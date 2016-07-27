@@ -13,7 +13,9 @@ for overlay in $mdlist; do
         board=$(echo "$overlay" | rev | cut -c 4- | rev)
         for dirmd in ${langlist[@]}; do
             if [ $dirmd != "en" ]; then
-                cp $draftmd/$overlay $srcdir/$dirmd/translate/
+                if ! [ -f $srcdir/$dirmd/overlay/$overlay ]; then
+                    cp $draftmd/$overlay $srcdir/$dirmd/translate/
+                fi
             else
                 cp $draftmd/$overlay $srcdir/$dirmd/overlay/
             fi

@@ -25,48 +25,18 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
-- piano-hat
-- propeller-hat
-- ab-adc-pi-zero
-overlays:
-- ground
-- uart
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
-- cirruslogicaudiocard
-- display-o-tron
-- display-o-tron-hat
-- discohat
-- drum-hat
-- espiot-phat
-- explorer-hat
-- explorer-hat-pro
-- explorer-phat
-- phat-dac
-- propeller-hat
-- iqaudio-pi-dac
-- piano-hat
-- piborg-ledborg
-- pibrella
-- piglow
-- dots
-- rtk-000-001
-- scroll-phat
-- sense-hat
-- skywriter-hat
-- traffic-hat
-- unicorn-hat
-- ab-1-wire-plus
-- ab-adc-differential-pi
-- ab-adc-pi-plus
-- ab-adc-pi-zero
-- ab-io-pi-plus
-- ab-rtc-pi-plus
-- ab-serial-pi-plus
-- iface-gpclk
+overlays:
+- ground
+- i2c
+- spi
+- uart
+- wiringpi
 - iface-dpi
+- iface-gpclk
+- iface-jtag
 - iface-pcm
 - iface-sd
-- iface-jtag

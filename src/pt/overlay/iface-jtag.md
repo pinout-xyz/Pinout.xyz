@@ -1,8 +1,8 @@
 <!--
 ---
+name: JTAG
 class: interface
 type: pinout
-name: JTAG
 description: Raspberry Pi JTAG pins
 pin:
   'bcm4':
@@ -30,4 +30,4 @@ pin:
 -->
 #JTAG - Joint Test Action Group
 
-###JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi
+JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.

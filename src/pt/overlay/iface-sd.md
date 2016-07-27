@@ -1,8 +1,8 @@
 <!--
 ---
+name: SDIO
 class: interface
 type: pinout
-name: SD
 description: Raspberry Pi SD0/SD1 pins
 pin:
   'bcm22':
@@ -20,6 +20,6 @@ pin:
 -->
 #SD - SD Card Interface
 
-###SD is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.
+SD is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.
 
 These pins are "SD host" on Alt0 and "eMMC" on Alt3.

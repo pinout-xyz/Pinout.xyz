@@ -2,8 +2,10 @@
 ---
 name: "Sense HAT"
 class: board
-type: tous
-manufacturer: Raspberry Pi Foundation
+type: Tous
+formfactor: HAT
+manufacturer: Raspberry Pi
+image: 'image.png'
 url: https://www.raspberrypi.org/products/sense-hat/
 description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors 
 install:

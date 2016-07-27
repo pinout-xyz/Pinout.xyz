@@ -2,8 +2,10 @@
 ---
 name: Traffic HAT
 class: board
-type: tous
-manufacturer: Ryanteck LTD.
+type: Tous
+formfactor: HAT
+manufacturer: Ryanteck
+image: 'image.png'
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
 description: carte multi-usage avec buzzer, LED et bouton

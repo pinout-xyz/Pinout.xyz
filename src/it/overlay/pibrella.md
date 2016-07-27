@@ -2,8 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: tutti
-manufacturer: Pimoroni Vs Cyntech
+type: Tutti
+formfactor: Altro
+manufacturer: Cyntech
+image: 'image.png'
 url: https://github.com/pimoroni/pibrella
 description: Una scheda all-in-one per luci, suoni, input ed output.
 pincount: 26

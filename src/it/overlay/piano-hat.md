@@ -2,8 +2,10 @@
 ---
 name: Piano HAT
 class: board
-type: tutti
+type: Tutti
+formfactor: HAT
 manufacturer: Pimoroni
+image: 'image.png'
 url: https://github.com/pimoroni/piano-hat
 description: Un piccolo Pi-piano con 16 tasti touch
 pincount: 40

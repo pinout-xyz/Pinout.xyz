@@ -2,8 +2,10 @@
 ---
 name: Explorer HAT
 class: board
-type: tous
+type: Tous
+formfactor: HAT
 manufacturer: Pimoroni
+image: 'image.png'
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat

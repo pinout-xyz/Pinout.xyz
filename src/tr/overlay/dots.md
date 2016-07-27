@@ -3,10 +3,12 @@
 name: Raspberry Pi Dots
 class: board
 type: hepsi
+formfactor: diğer
+manufacturer: Raspberry Pi
+image: 'image.png'
 description: Noktaları birleştirerek bir devre oluşturun
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
-formfactor: '40-way'
 pincount: 40
 pin:
   bcm0:

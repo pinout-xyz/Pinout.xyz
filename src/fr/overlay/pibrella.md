@@ -2,8 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: tous
+type: Tous
+formfactor: Autre
 manufacturer: Cyntech
+image: 'image.png'
 url: https://github.com/pimoroni/pibrella
 description: carte multi-usage avec son, lumière, entrées et sorties
 pincount: 26

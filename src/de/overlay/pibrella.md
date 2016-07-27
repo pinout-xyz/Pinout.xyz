@@ -3,7 +3,9 @@
 name: Pibrella
 class: board
 type: alle
+formfactor: Andere
 manufacturer: Cyntech
+image: 'image.png'
 url: https://github.com/pimoroni/pibrella
 description: eine "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine.
 pincount: 26

@@ -3,10 +3,12 @@
 name: Raspberry Pi Dots
 class: board
 type: alle
+formfactor: Andere
+manufacturer: Raspberry Pi
+image: 'image.png'
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
-formfactor: '40-way'
 pincount: 40
 pin:
   bcm0:

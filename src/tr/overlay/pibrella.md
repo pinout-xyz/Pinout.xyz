@@ -3,7 +3,9 @@
 name: Pibrella
 class: board
 type: hepsi
-manufacturer: Pimoroni Vs Cyntech
+formfactor: diğer
+manufacturer: Cyntech
+image: 'image.png'
 url: https://github.com/pimoroni/pibrella
 description: Hepsi-bir-arada, hafif, ses, giriş ve çıkış destekleyen eklenti kartı.
 pincount: 26

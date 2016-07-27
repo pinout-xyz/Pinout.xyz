@@ -3,7 +3,9 @@
 name: Pibrella
 class: board
 type: todas
+formfactor: Otro
 manufacturer: Cyntech
+image: 'image.png'
 url: https://github.com/pimoroni/pibrella
 description: Luz, sonido, entradas y salidas en una placa.
 pincount: 26

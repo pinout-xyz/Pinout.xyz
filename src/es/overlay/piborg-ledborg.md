@@ -3,6 +3,9 @@
 name: PiBorg LEDBorg
 class: board
 type: todas
+formfactor: Otro
+manufacturer: PiBorg
+image: 'image.png'
 description: Un único LED RGB para tu Raspberry Pi
 buy: https://www.piborg.org/ledborg
 pincount: 26

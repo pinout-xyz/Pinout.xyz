@@ -3,7 +3,9 @@
 name: Unicorn HAT
 class: board
 type: hepsi
+formfactor: HAT
 manufacturer: Pimoroni
+image: 'image.png'
 url: http://shop.pimoroni.com/products/unicorn-hat
 buy: http://shop.pimoroni.com/products/unicorn-hat
 description: Tek bir HAT kart üzerinde 64 adet programlanabilir parlak led modülü.

@@ -2,8 +2,10 @@
 ---
 name: PiBorg LedBorg
 class: board
-type: tous
+type: Tous
+formfactor: Autre
 manufacturer: PiBorg
+image: 'image.png'
 description: une carte LED RGB pour la Raspberry Pi
 url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg

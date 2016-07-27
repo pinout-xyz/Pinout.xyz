@@ -2,11 +2,13 @@
 ---
 name: Raspberry Pi Dots
 class: board
-type: tous
+type: Tous
+formfactor: Autre
+manufacturer: Raspberry Pi
+image: 'image.png'
 description: créez un circuit avec de la peinture électrique
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
-formfactor: '40-way'
 pincount: 40
 pin:
   bcm0:

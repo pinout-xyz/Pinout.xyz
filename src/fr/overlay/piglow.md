@@ -2,8 +2,10 @@
 ---
 name: PiGlow
 class: board
-type: tous
+type: Tous
+formfactor: Autre
 manufacturer: Pimoroni
+image: 'image.png'
 url: https://github.com/pimoroni/piglow
 github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow

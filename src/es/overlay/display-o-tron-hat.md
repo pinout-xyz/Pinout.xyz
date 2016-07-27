@@ -3,7 +3,9 @@
 name: Display-o-Tron HAT
 class: board
 type: todas
+formfactor: HAT
 manufacturer: Pimoroni
+image: 'image.png'
 url: https://github.com/pimoroni/dot3k
 description: Una pantalla LCD de 3 líneas con luz RGB con 6 zonas y 6 botones táctiles
 pincount: 40

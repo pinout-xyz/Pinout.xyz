@@ -3,10 +3,12 @@
 name: Raspberry Pi Dots
 class: board
 type: todas
+formfactor: Otro
+manufacturer: Raspberry Pi
+image: 'image.png'
 description: Une los puntos para hacer un circuito
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
-formfactor: '40-way'
 pincount: 40
 pin:
   bcm0:

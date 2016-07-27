@@ -3,7 +3,9 @@
 name: Display-o-Tron 3000
 class: board
 type: alle
+formfactor: Andere
 manufacturer: Pimoroni
+image: 'image.png'
 github: https://github.com/pimoroni/dot3k
 url: https://github.com/pimoroni/dot3k
 description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick

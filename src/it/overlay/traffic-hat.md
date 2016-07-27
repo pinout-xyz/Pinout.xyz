@@ -2,8 +2,10 @@
 ---
 name: Traffic HAT
 class: board
-type: tutti
+type: Tutti
+formfactor: HAT
 manufacturer: Ryanteck
+image: 'image.png'
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
 description: Una maniera facile e veloce per imparare le basi del GPIO a basso prezzo. Tutto in un singolo HAT.

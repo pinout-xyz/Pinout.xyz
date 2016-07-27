@@ -3,7 +3,9 @@
 name: "Sense HAT"
 class: board
 type: alle
-manufacturer: Raspberry Pi Foundation
+formfactor: HAT
+manufacturer: Raspberry Pi
+image: 'image.png'
 url: https://www.raspberrypi.org/products/sense-hat/
 description: Erweiterungsmodul mit einer 8×8 RGB LED Matrix, 5-Tasten Joystick sowie jede menge Sensoren (Gyroskop, Beschleunigungsmesser, Magnetometer, Temperatur, Luftdruck und Luftfeuchtigkeit) 
 install:

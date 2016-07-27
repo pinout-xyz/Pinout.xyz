@@ -3,7 +3,9 @@
 name: Skywriter HAT
 class: board
 type: hepsi
+formfactor: HAT
 manufacturer: Pimoroni
+image: 'image.png'
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat

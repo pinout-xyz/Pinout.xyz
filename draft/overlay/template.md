@@ -4,12 +4,12 @@ name: My Add-on Board
 class: board
 type: other
 formfactor: Custom
-image: 'image.png'
 manufacturer: Company
 description: An add-on board for the Raspberry Pi
 url: https://my-addon-board.com
 github: https://github.com/my-addon-board-repo.com
 buy: http://buy-my-addon-board.com
+image: 'image.png'
 pincount: 40
 eeprom: no
 power: 3v3,5v

@@ -5,7 +5,7 @@ dirpng="../resources/boards"
 draftmd="../draft/overlay"
 mdlist=$(ls "$draftmd")
 srcdir="../src"
-langlist=( "de" "en" "es" "fr" "it" "pt" "tr" )
+langlist=$(ls "$srcdir")
 yamlfile="../src/en/settings.yaml"
 
 for overlay in $mdlist; do

@@ -24,23 +24,29 @@ strings:
 - more_information: 'Mehr Informationen'
 - github_repository: 'GitHub Repository'
 - buy_now: 'jetzt kaufen'
-overlays:
-- ground
-- uart
+featured:
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
-- iqaudio-pi-dac
+overlays:
+- ground
+- i2c
+- spi
+- uart
+- wiringpi
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-pcm
+- iface-sd
 - display-o-tron
 - display-o-tron-hat
 - dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
-- piborg-ledborg
 - pibrella
-- piglow
 - rtk-000-001
 - sense-hat
 - skywriter-hat

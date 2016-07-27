@@ -34,6 +34,7 @@ overlays:
 - iface-gpclk
 - i2c
 - iface-jtag
+- iface-1wire
 - iface-pcm
 - iface-sd
 - spi

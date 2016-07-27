@@ -6,7 +6,7 @@ type: pinout
 description: Raspberry Pi One-Wire pins
 url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/dpi/
 pin:
-  'bcm0':
+  'bcm4':
     name: Data
 -->
 # W1-GPIO - One-Wire Interface

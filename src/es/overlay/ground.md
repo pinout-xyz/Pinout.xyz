@@ -1,6 +1,8 @@
 <!--
 ---
 name: Tierra
+class: interface
+type: pinout
 description: Pines de tierra de Raspberry Pi
 pin:
   '6':

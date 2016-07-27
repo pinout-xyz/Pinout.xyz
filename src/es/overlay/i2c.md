@@ -1,6 +1,8 @@
 <!--
 ---
 name: I2C
+class: interface
+type: pinout
 description: Pines de i2c de Rasberry Pi
 pin:
   '3':

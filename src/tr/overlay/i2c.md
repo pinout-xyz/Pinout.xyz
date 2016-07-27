@@ -1,6 +1,8 @@
 <!--
 ---
 name: I2C
+class: interface
+type: pinout
 description: Raspberry Pi i2c pinleri
 pin:
   '3':

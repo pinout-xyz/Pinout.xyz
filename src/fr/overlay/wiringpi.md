@@ -1,6 +1,8 @@
 <!--
 ---
-name: WiringPi GPIO Pinout
+name: WiringPi
+class: interface
+type: pinout
 page_url: wiringpi
 github: https://github.com/WiringPi/WiringPi2-Python
 url: http://wiringpi.com

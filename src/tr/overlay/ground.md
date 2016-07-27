@@ -1,6 +1,8 @@
 <!--
 ---
 name: Ground (Toprak)
+class: interface
+type: pinout
 description: Raspberry Pi Toprak Pinleri
 pin:
   '6': {}

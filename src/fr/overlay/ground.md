@@ -1,6 +1,8 @@
 <!--
 ---
 name: Masse
+class: interface
+type: pinout
 description: broches raccordées à la masse
 pin:
   '6':

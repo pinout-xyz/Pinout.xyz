@@ -1,6 +1,8 @@
 <!--
 ---
 name: I2C
+class: interface
+type: pinout
 description: Raspberry Pi pin i2c
 type: info
 pin:

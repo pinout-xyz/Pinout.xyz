@@ -25,10 +25,10 @@ strings:
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
 featured:
-- i2c
-- spi
-- uart
-- wiringpi
+- display-o-tron
+- piborg-ledborg
+- pibrella
+- rtk-000-001
 overlays:
 - ground
 - i2c

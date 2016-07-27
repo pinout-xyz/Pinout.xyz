@@ -25,10 +25,10 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'jetzt kaufen'
 featured:
-- i2c
-- spi
-- uart
-- wiringpi
+- display-o-tron
+- rpf-dots
+- pibrella
+- rtk-000-001
 overlays:
 - ground
 - i2c

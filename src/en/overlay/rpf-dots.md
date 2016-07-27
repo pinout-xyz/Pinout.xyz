@@ -9,7 +9,7 @@ description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 buy: https://thepihut.com/products/raspberry-pi-dots-board
-image: 'pihut-dots.png'
+image: 'rpf-dots.png'
 pincount: 40
 eeprom: no
 pin:

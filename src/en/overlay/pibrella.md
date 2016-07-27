@@ -6,7 +6,9 @@ type: multi,io
 formfactor: Custom
 manufacturer: Cyntech
 description: An all-in-one light, sound, input and output add-on board
-url: https://github.com/pimoroni/pibrella
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
 image: 'pibrella.png'
 pincount: 26
 eeprom: no

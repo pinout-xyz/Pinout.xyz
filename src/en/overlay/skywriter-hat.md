@@ -6,16 +6,12 @@ type: 'gesture,touch'
 formfactor: HAT
 manufacturer: Pimoroni
 description: A 3D positional and gesture sensor
-url: https://github.com/pimoroni/skywriter-hat
+url: http://shop.pimoroni.com/products/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
 image: 'skywriter-hat.png'
 pincount: 40
 eeprom: yes
-i2c:
-  '0x42':
-    name: Gesture sensor
-    device: MGC3130
 pin:
   '3':
     mode: i2c
@@ -33,6 +29,10 @@ install:
     - 'python3-dev'
   'python':
     - 'skywriter'
+i2c:
+  '0x42':
+    name: Gesture sensor
+    device: MGC3130
 -->
 #Skywriter HAT
 

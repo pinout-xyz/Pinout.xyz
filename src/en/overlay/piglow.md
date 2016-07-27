@@ -6,7 +6,7 @@ type: led
 formfactor: Custom
 manufacturer: Pimoroni
 description: Simply 18 LEDs in a spiral pattern controllable in Python
-url: https://github.com/pimoroni/piglow
+url: http://shop.pimoroni.com/products/piglow
 github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow
 image: 'piglow.png'

@@ -6,7 +6,7 @@ type: display
 formfactor: Custom
 manufacturer: Pimoroni
 description: A 3-line character LCD with an RGB backlight and joystick
-url: https://github.com/pimoroni/dot3k
+url: https://shop.pimoroni.com/products/displayotron-3000
 github: https://github.com/pimoroni/dot3k
 buy: https://shop.pimoroni.com/products/displayotron-3000
 image: 'display-o-tron.png'

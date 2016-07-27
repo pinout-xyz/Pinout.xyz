@@ -6,7 +6,7 @@ type: io
 formfactor: HAT
 manufacturer: Pimoroni
 description: An all-in-one light, input, touch and output add-on board
-url: https://github.com/pimoroni/explorer-hat
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
 image: 'explorer-hat.png'

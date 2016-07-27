@@ -6,7 +6,7 @@ type: adc,io,motor
 formfactor: pHAT
 manufacturer: Pimoroni
 description: An all-in-one input, output and motor add-on board
-url: https://github.com/pimoroni/explorer-hat
+buy: https://shop.pimoroni.com/products/explorer-phat
 github: https://github.com/pimoroni/explorer-hat
 buy: https://shop.pimoroni.com/products/explorer-phat
 image: 'explorer-phat.png'

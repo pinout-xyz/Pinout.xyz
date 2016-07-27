@@ -35,8 +35,14 @@ An unashamedly old school LED matrix display board, with up to 30x7 pixels, usin
 
 The board uses three IS31FL3730 matrix driver chips, each driving two of the matrix displays. The board and supporting software was designed to use these driver chips in an efficient manner, in effect round-robin-ing them and updating them extremely quickly one after the other to drive two displays at once.
 
-Features:
+To get the pHAT set up and ready to go you can use the one-line product installer:
 
-* 3x IS31FL3730 LED matrix driver chips
-* Drives up to 6x LTP-305
-* Up to 30x7 pixels (5x7 per matrix)
+```bash
+curl -sS get.pimoroni.com/microdotphat | bash
+```
+
+Then import it into your Python script and start tinkering:
+
+```bash
+import microdotphat
+```

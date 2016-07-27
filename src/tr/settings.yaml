@@ -40,7 +40,7 @@ overlays:
 - iface-pcm
 - iface-sd
 - display-o-tron
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piborg-ledborg

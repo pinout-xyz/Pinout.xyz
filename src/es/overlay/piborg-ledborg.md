@@ -1,14 +1,16 @@
 <!--
 ---
-name: PiBorg LEDBorg
+name: LEDBorg
 class: board
 type: todas
 formfactor: Otro
 manufacturer: PiBorg
-image: 'image.png'
 description: Un único LED RGB para tu Raspberry Pi
+url: https://www.piborg.org/ledborg-new/install
 buy: https://www.piborg.org/ledborg
+image: 'piborg-led-borg.png'
 pincount: 26
+eeprom: no
 pin:
   '11':
     name: Red LED

@@ -5,11 +5,12 @@ class: board
 type: todas
 formfactor: HAT
 manufacturer: Ryanteck
-image: 'image.png'
+description: Una manera rápida de aprender lo básico del GPIO con un bajo presupuesto. Todo en un bonito HAT.
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
-description: Una manera rápida de aprender lo básico del GPIO con un bajo presupuesto. Todo en un bonito HAT.
+image: 'traffic-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '15':
     name: LED1 / Verde

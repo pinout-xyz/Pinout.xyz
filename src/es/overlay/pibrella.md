@@ -5,10 +5,13 @@ class: board
 type: todas
 formfactor: Otro
 manufacturer: Cyntech
-image: 'image.png'
-url: https://github.com/pimoroni/pibrella
 description: Luz, sonido, entradas y salidas en una placa.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: LED Verde

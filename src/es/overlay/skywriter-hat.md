@@ -5,21 +5,13 @@ class: board
 type: todas
 formfactor: HAT
 manufacturer: Pimoroni
-image: 'image.png'
-url: https://github.com/pimoroni/skywriter-hat
+description: Un sensor posicional y de gestos 3D
+url: http://shop.pimoroni.com/products/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
-description: Un sensor posicional y de gestos 3D
-install:
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'skywriter'
-  'examples': 'python/examples/'
+image: 'skywriter-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c

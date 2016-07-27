@@ -5,21 +5,17 @@ class: board
 type: todas
 formfactor: HAT
 manufacturer: Pimoroni
-image: 'image.png'
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 LEDs RGB cegadores en un único HAT
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
-install:
-  'apt':
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'unicornhat'
-  'python3':
-    - 'unicornhat'
-  'examples': 'python/examples/'
+buy: http://shop.pimoroni.com/products/unicorn-hat
+image: 'unicorn-hat.png'
 pincount: 40
+eeprom: yes
+power:
+  '2':
+ground:
+  '9':
 pin:
   '12':
     name: Datos

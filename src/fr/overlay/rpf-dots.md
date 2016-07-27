@@ -1,15 +1,17 @@
 <!--
 ---
-name: Raspberry Pi Dots
+name: DOTs
 class: board
 type: Tous
 formfactor: Autre
 manufacturer: Raspberry Pi
-image: 'image.png'
 description: créez un circuit avec de la peinture électrique
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+buy: https://thepihut.com/products/raspberry-pi-dots-board
+image: 'rpf-dots.png'
 pincount: 40
+eeprom: no
 pin:
   bcm0:
     name: 'couleur: bleue'

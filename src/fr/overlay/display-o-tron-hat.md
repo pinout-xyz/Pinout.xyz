@@ -5,10 +5,18 @@ class: board
 type: Tous
 formfactor: HAT
 manufacturer: Pimoroni
-image: 'image.png'
-url: https://github.com/pimoroni/dot3k
 description: Un LCD 3x16 avec rétro-éclairage sur 6 zones RGB et buttons tactiles
+url: https://shop.pimoroni.com/products/display-o-tron-hat
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/display-o-tron-hat
+image: 'display-o-tron-hat.png'
 pincount: 40
+eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c

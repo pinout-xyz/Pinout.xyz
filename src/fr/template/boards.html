@@ -22,30 +22,26 @@
 
 		</script>
 	</head>
-	<body>
+	<body class="boards-page">
 		<div id="container">
 			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
 			<div id="leftcolumn">
 			<nav id="gpio">
-				<div id="pinbase"></div>
-				<div id="pinbasebplus"></div>
-				{{nav}}
-			</nav>
-			</div>
-			<div id="content">
-				<div id="featured">
-					<ul>
-					{{featured_boards}}
-					</ul>
-					<a class="more" href="/boards">See more HATs, pHATs and add-ons</a>
-				</div>
+				<div class="facets"></div>
 				<div id="interfaces">
+					<h4>Interfaces</h4>
 					<ul>
 					{{nav_html_interface}}
 					</ul>
 				</div>
+			</nav>
+			</div>
+			<div id="content">
 				<div id="pages">
-					{{content}}
+					<article><h1>Raspberry Pi HATs, pHATs &amp; Add-ons</h1>
+						<h3>Click on a HAT, pHAT or add-on for more details and to see which pins it uses!</h3>
+					</article>
+					<div id="boards"><ul>{{content}}</ul></div>
 				</div>
 				<div id="lang">
 					<ul class="lang-nav">
@@ -66,5 +62,6 @@
     	<script src='{{resource_url}}prettify/lang-ruby.js'></script>
     	<script src='{{resource_url}}prettify/lang-bash.js'></script>
 		<script src='{{resource_url}}pinout.js?v={{v}}'></script>
+		<script src='{{resource_url}}boards.js?v={{v}}'></script>
 </body>
 </html>

@@ -24,13 +24,22 @@ strings:
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
-overlays:
-- ground
-- uart
+featured:
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
+overlays:
+- ground
+- i2c
+- spi
+- uart
+- wiringpi
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-pcm
+- iface-sd
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat

@@ -5,11 +5,12 @@ class: board
 type: Tous
 formfactor: HAT
 manufacturer: Ryanteck
-image: 'image.png'
+description: carte multi-usage avec buzzer, LED et bouton
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
-description: carte multi-usage avec buzzer, LED et bouton
+image: 'traffic-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '15':
     name: LED1 / vert

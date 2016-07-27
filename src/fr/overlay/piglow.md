@@ -5,12 +5,19 @@ class: board
 type: Tous
 formfactor: Autre
 manufacturer: Pimoroni
-image: 'image.png'
-url: https://github.com/pimoroni/piglow
+description: une spirale de LED contrôlable depuis Python.
+url: http://shop.pimoroni.com/products/piglow
 github: https://github.com/pimoroni/piglow
 buy: http://shop.pimoroni.com/products/piglow
-description: une spirale de LED contrôlable depuis Python.
+image: 'piglow.png'
 pincount: 26
+eeprom: no
+power:
+  '1':
+  '2':
+  '17':
+ground:
+  '14':
 pin:
   '3':
     mode: i2c

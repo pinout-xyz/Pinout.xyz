@@ -43,7 +43,7 @@ overlays:
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
@@ -51,7 +51,6 @@ overlays:
 - pibrella
 - piglow
 - rtk-000-001
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat

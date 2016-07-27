@@ -1,6 +1,8 @@
 <!--
 ---
 name: PiBorg LEDBorg
+class: board
+type: tutti
 manufacturer: PiBorg
 description: Un singolo LED RBG per il tuo Raspberry Pi
 url: https://www.piborg.org/ledborg-new/install

@@ -1,6 +1,8 @@
 <!--
 ---
 name: Display-o-Tron HAT
+class: board
+type: alle
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/dot3k
 description: Ein 3-zeiliges LCD mit einer 6-Zonen RGB Hintergrundbeleuchtung und 6 Tasten

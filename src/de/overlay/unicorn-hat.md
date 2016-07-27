@@ -1,6 +1,8 @@
 <!--
 ---
 name: Unicorn HAT
+class: board
+type: alle
 manufacturer: Pimoroni
 url: http://shop.pimoroni.com/products/unicorn-hat
 buy: http://shop.pimoroni.com/products/unicorn-hat

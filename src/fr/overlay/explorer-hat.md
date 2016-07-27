@@ -1,6 +1,8 @@
 <!--
 ---
 name: Explorer HAT
+class: board
+type: tous
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat

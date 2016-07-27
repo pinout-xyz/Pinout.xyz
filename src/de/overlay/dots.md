@@ -1,6 +1,8 @@
 <!--
 ---
 name: Raspberry Pi Dots
+class: board
+type: alle
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

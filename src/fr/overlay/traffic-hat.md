@@ -1,6 +1,8 @@
 <!--
 ---
 name: Traffic HAT
+class: board
+type: tous
 manufacturer: Ryanteck LTD.
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat

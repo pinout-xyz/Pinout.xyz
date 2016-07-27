@@ -1,6 +1,8 @@
 <!--
 ---
 name: "Sense HAT"
+class: board
+type: tutti
 manufacturer: Raspberry Pi Foundation
 url: https://www.raspberrypi.org/products/sense-hat/
 description: Scheda add-on che include una matrice 8×8 LED RBG, un joystick a 5 bottoni, un IMU e sensori ambientali

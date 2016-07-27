@@ -1,6 +1,8 @@
 <!--
 ---
 name: Skywriter HAT
+class: board
+type: hepsi
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat

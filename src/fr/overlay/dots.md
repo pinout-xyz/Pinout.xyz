@@ -1,6 +1,8 @@
 <!--
 ---
 name: Raspberry Pi Dots
+class: board
+type: tous
 description: créez un circuit avec de la peinture électrique
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

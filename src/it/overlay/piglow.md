@@ -1,6 +1,8 @@
 <!--
 ---
 name: PiGlow
+class: board
+type: tutti
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piglow
 github: https://github.com/pimoroni/piglow

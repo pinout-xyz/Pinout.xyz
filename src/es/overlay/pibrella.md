@@ -1,7 +1,9 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
+class: board
+type: todas
+manufacturer: Cyntech
 url: https://github.com/pimoroni/pibrella
 description: Luz, sonido, entradas y salidas en una placa.
 pincount: 26

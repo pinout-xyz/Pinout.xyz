@@ -1,7 +1,9 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
+class: board
+type: tous
+manufacturer: Cyntech
 url: https://github.com/pimoroni/pibrella
 description: carte multi-usage avec son, lumière, entrées et sorties
 pincount: 26

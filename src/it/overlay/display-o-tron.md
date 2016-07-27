@@ -1,6 +1,8 @@
 <!--
 ---
 name: Display-o-Tron 3000
+class: board
+type: tutti
 manufacturer: Pimoroni
 github: https://github.com/pimoroni/dot3k
 url: https://github.com/pimoroni/dot3k

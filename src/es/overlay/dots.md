@@ -1,6 +1,8 @@
 <!--
 ---
 name: Raspberry Pi Dots
+class: board
+type: todas
 description: Une los puntos para hacer un circuito
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

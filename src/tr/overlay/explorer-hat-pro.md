@@ -1,6 +1,8 @@
 <!--
 ---
 name: Explorer HAT Pro
+class: board
+type: hepsi
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat

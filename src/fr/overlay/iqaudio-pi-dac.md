@@ -1,6 +1,8 @@
 <!--
 ---
 name: "Pi-DAC+"
+class: board
+type: tous
 manufacturer: IQaudIO
 buy: http://www.iqaudio.co.uk
 description: Convertisseur numérique-analogique pour la Raspberry Pi

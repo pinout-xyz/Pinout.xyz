@@ -1,6 +1,8 @@
 <!--
 ---
 name: Skywriter HAT
+class: board
+type: tutti
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat

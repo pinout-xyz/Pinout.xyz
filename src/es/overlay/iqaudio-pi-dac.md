@@ -1,6 +1,8 @@
 <!--
 ---
 name: "Pi-DAC+"
+class: board
+type: todas
 manufacturer: IQaudIO
 buy: http://www.iqaudio.co.uk
 description: Un HAT I2S conversor de audio digital a analógico

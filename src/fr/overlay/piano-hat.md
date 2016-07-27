@@ -1,6 +1,8 @@
 <!--
 ---
 name: Piano HAT
+class: board
+type: tous
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piano-hat
 description: Un mini-piano avec 16 touches tactiles

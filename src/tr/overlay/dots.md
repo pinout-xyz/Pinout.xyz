@@ -1,6 +1,8 @@
 <!--
 ---
 name: Raspberry Pi Dots
+class: board
+type: hepsi
 description: Noktaları birleştirerek bir devre oluşturun
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

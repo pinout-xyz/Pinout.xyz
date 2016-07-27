@@ -1,6 +1,8 @@
 <!--
 ---
 name: Piano HAT
+class: board
+type: todas
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piano-hat
 description: Un mini Pi piano con 16 botones capacitivos

@@ -1,7 +1,9 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
+class: board
+type: alle
+manufacturer: Cyntech
 url: https://github.com/pimoroni/pibrella
 description: eine "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine.
 pincount: 26

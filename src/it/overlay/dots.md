@@ -1,6 +1,8 @@
 <!--
 ---
 name: Raspberry Pi Dots
+class: board
+type: tutti
 description: Unisci i puntini e crea un circuito
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots

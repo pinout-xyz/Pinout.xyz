@@ -1,6 +1,8 @@
 <!--
 ---
 name: Piano HAT
+class: board
+type: alle
 manufacturer: Pimoroni
 url: https://github.com/pimoroni/piano-hat
 description: Ein kleines Pi Piano mit 16 berührungsempfindlichen Tasten

@@ -33,7 +33,7 @@ pin:
 
 Read my [complete Pico PiDuino tutorial](http://pi.gadgetoid.com/article/building-the-pico-piduino) to get started for just over &pound;5
 
-You'll need to install [Gordon's modified AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
+You'll need to install [Gordon Henderson's modified AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
 
 Connect 8/CEO to your ATmega's Reset/RST pin, 9/MISO to its MISO pin (D12), 10 to its MOSI pin (D11) and 11/SCLK to its SCLK pin (D13).
 

@@ -30,7 +30,7 @@ pin:
 
 Öncelikle [Pico PiDuino makalesi](http://pi.gadgetoid.com/article/building-the-pico-piduino)'ni takip edin / etmenizi öneririz, bunu sıfırdan uygulamak sadece &pound;5 gibi bir masraf çıkaracak.
 
-Bunun ardından [Gordon'un modifiye AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/)'unu kurmalısınız.
+Bunun ardından [Gordon Henderson'un modifiye AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/)'unu kurmalısınız.
 
 8/CEO'yu ATmega'nuzun Reset/RST pin'ine bağlayın, 9/MISO'yu da ATmega'nın MISO pin'ine (D12) bağlayın, 10'u da onun MOSI pin'ine (D11) bağlayın. Son olarak 11/SCLK'yı da onun SCLK pin'ine (D13) bağlayın.
 

@@ -30,7 +30,7 @@ pin:
 
 Lee mi [tutorial completo de Pico PiDuino (en inglés)](http://pi.gadgetoid.com/article/building-the-pico-piduino), para empezar por solamente un poco más de &pound;5
 
-Necesitarás instalar el [AVRDude modificado de Gordon](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
+Necesitarás instalar el [AVRDude modificado de Gordon Henderson](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/).
 
 Conecta 8/CE0 al pin de Reset/RST de tu ATmega, 9/MISO al pin D12, 10/MOSI al pin D11 y 11/SCLK al pin D13.
 

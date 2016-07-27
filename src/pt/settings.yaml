@@ -35,8 +35,3 @@ overlays:
 - spi
 - uart
 - wiringpi
-- iface-dpi
-- iface-gpclk
-- iface-jtag
-- iface-pcm
-- iface-sd

@@ -5,23 +5,18 @@ class: board
 type: Tutti
 formfactor: Altro
 manufacturer: Pimoroni
-image: 'image.png'
-github: https://github.com/pimoroni/dot3k
-url: https://github.com/pimoroni/dot3k
 description: Un LCD da 3 righe di caratteri, RGB retroilluminato e un joystick
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'dot3k'
-  'examples': 'python/examples/'
+url: https://shop.pimoroni.com/products/displayotron-3000
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/displayotron-3000
+image: 'display-o-tron.png'
 pincount: 26
+eeprom: no
+power:
+  '2':
+  '17':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c

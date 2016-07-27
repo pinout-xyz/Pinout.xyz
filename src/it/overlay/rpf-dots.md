@@ -1,15 +1,17 @@
 <!--
 ---
-name: Raspberry Pi Dots
+name: DOTs
 class: board
 type: Tutti
 formfactor: Altro
 manufacturer: Raspberry Pi
-image: 'image.png'
 description: Unisci i puntini e crea un circuito
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
+buy: https://thepihut.com/products/raspberry-pi-dots-board
+image: 'rpf-dots.png'
 pincount: 40
+eeprom: no
 pin:
   bcm0:
     name: 'Colore: Blu'

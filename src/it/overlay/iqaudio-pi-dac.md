@@ -5,13 +5,12 @@ class: board
 type: Tutti
 formfactor: HAT
 manufacturer: IQaudIO
-image: 'image.png'
-buy: http://www.iqaudio.co.uk
 description: Un convertitore audio I2S da digitale ad analogico per il Raspberry
-install:
-  'devices':
-    - 'i2c'
+url: http://www.iqaudio.co.uk/audio/8-pi-dac-0712411999650.html
+buy: http://www.iqaudio.co.uk
+image: 'iqaudio-pi-dac.png'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c

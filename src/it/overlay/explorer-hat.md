@@ -5,29 +5,13 @@ class: board
 type: Tutti
 formfactor: HAT
 manufacturer: Pimoroni
-image: 'image.png'
-url: https://github.com/pimoroni/explorer-hat
+description: All-in-one luce, input, touch e add-on output board.
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: All-in-one luce, input, touch e add-on output board.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
+image: 'explorer-hat.png'
 pincount: 40
-i2c:
-  '0x28':
-    name: Touch capacitivo
-    device: cap1208
+eeprom: yes
 pin:
   '7':
     name: LED 1
@@ -77,6 +61,10 @@ pin:
     name: Output 4
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Touch capacitivo
+    device: cap1208
 -->
 #Explorer HAT
 

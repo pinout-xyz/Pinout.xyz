@@ -13,5 +13,5 @@ Pinout was originally designed for the old 26-pin Raspberry Pi models, you'll se
 ##What do these numbers mean?
 
 * BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO and GPIO Zero
-* WiringPi - Wiring Pi pin number (shown as a tooltip), for Gordon's Wiring Pi library
+* WiringPi - Wiring Pi pin number (shown as a tooltip), for Gordon Henderson's Wiring Pi library
 * Physical - Number corresponding to the pin's physical location on the header

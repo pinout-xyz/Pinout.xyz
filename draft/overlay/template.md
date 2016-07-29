@@ -18,6 +18,10 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '7':
+    name: Enable
+    mode: output
+    active: high
 i2c:
   '0x00':
     name: device display name

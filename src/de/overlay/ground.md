@@ -1,6 +1,6 @@
 <!--
 ---
-name: Masse
+name: Masse (Ground)
 class: interface
 type: pinout
 description: Raspberry Pi Masse Pins

@@ -11,7 +11,7 @@ import urlmapper
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
+GROUND_PINS = [6,9,14,20,25,30,34,39]
 
 lang = "en"
 default_strings = {
@@ -204,7 +204,8 @@ def render_pin_page(pin_num):
     pin = pinout.pins[str(pin_num)]
     pin_url = pin['name']
 
-    if pin_url == 'Ground':
+    # Exclude pages for ground pins
+    if pin_num in GROUND_PINS:
         return None, None, None
 
     pin_text_name = pin['name']

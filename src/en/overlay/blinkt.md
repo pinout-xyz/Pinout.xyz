@@ -12,7 +12,10 @@ buy: https://shop.pimoroni.com/products/blinkt
 image: 'blinkt.png'
 pincount: 40
 eeprom: no
-power: 5v
+power:
+  '2':
+ground:
+  '6':
 pin:
   '16':
     name: Data

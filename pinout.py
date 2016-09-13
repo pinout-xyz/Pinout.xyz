@@ -1,6 +1,11 @@
 import json
-import yaml
 import time
+
+try:
+    import yaml
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install PyYAML")
+
 
 DB_FILE = 'pi-pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'

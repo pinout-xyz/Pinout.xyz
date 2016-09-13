@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-import unicodedata
-import re
-import sys
-import pinout
-import markjaml
+
 import glob
 import os
+import re
+import sys
+import unicodedata
+
+import markjaml
+import pinout
+
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -91,4 +94,3 @@ def generate_urls(lang="en"):
     for lang in languages:
         urls[lang] = generate_for_lang(lang)
     return urls
-

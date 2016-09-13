@@ -1,12 +1,19 @@
 #!/usr/bin/env python
-import markdown
-import unicodedata
-import re
+
 import os
+import re
 import sys
-import pinout
+import unicodedata
+
+try:
+    import markdown
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+
 import markjaml
+import pinout
 import urlmapper
+
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -42,7 +49,6 @@ default_strings = {
     'group_info': 'Info',
     'group_featured': 'Featured'
 }
-
 
 
 def cssify(value):
@@ -246,17 +252,17 @@ def render_pin_page(pin_num):
             fn_functions.append(function)
 
         pin_functions = '''<table class="pin-functions">
-		<thead>
-			<tr>
-				<th>{headings}</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>{functions}</td>
-			</tr>
-		</tbody>
-		</table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
+        <thead>
+            <tr>
+                <th>{headings}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{functions}</td>
+            </tr>
+        </tbody>
+        </table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
@@ -270,7 +276,7 @@ def render_pin_page(pin_num):
     # if pin_text != None:
     return pin_url, pin_text, pin_text_name  # pages[pin_url] = pin_text
 
-
+    
 def render_pin(pin_num, selected_url, overlay=None):
     pin = pinout.pins[str(pin_num)]
 

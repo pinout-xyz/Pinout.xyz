@@ -1,8 +1,16 @@
 import json
-import markdown
-import yaml
 import re
 import unicodedata
+
+try:
+    import markdown
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+
+try:
+    import yaml
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install PyYAML")
 
 
 def slugify(value):

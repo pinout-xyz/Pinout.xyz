@@ -17,6 +17,8 @@ power:
   '2':
 ground:
   '6':
+  '9':
+  '39':
 pin:
   '3':
     mode: i2c

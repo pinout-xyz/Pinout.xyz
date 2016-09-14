@@ -476,12 +476,10 @@ nav#gpio .top li.overlay-ground a .phys, .bottom li.overlay-ground a .phys {
 	height:26px;
 	border-radius:13px;
 }
-nav#gpio .top li.overlay-ground a .phys {
-	left:-1px;
-}
-nav#gpio .bottom li.overlay-ground a .phys {
-	right:-1px;
-}
+nav#gpio .top li.overlay-ground a .phys {left:-1px;}
+nav#gpio .bottom li.overlay-ground a .phys {right:-1px;}
+
+nav#gpio li.overlay-ground span.pin {background:#073642;}
 
 article .pin-hover {cursor:help;}
 article .pin-hover:hover {color:#880000;}

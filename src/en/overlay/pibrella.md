@@ -12,6 +12,15 @@ buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
 image: 'pibrella.png'
 pincount: 26
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '7':
     name: Green LED

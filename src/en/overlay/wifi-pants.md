@@ -12,7 +12,6 @@ buy: https://www.tindie.com/products/ajlitt/wifi-power-pants/
 image: 'wifi-pants.png'
 pincount: 40
 eeprom: no
-power: external
 pin:
   '13':
     name: ESP GPIO10

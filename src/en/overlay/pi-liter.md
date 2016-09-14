@@ -11,7 +11,14 @@ buy: http://cpc.farnell.com/wirelessthings/pi-liter/pi-lite-junior-led-io-board-
 image: 'pi-liter.png'
 pincount: 26
 eeprom: no
-power: 3v3
+power:
+  '1':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '7':
     name: LED1

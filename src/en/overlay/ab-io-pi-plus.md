@@ -12,7 +12,18 @@ buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 image: 'ab-io-pi-plus.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c

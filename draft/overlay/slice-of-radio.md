@@ -11,7 +11,17 @@ buy: https://www.wirelessthings.net/slice-of-radio-wireless-rf-transciever-for-t
 image: 'slice-of-radio.png'
 pincount: 26
 eeprom: no
-power: 3v3
+power:
+  '1':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '8':
     name: Send

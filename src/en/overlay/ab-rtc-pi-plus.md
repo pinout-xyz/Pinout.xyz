@@ -12,7 +12,18 @@ buy: https://www.abelectronics.co.uk/p/52/RTC-Pi-Plus
 image: 'ab-rtc-pi-plus.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c

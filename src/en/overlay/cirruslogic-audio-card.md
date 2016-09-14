@@ -10,6 +10,18 @@ url: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-acce
 buy: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
 image: 'cirruslogic-audio-card.png'
 pincount: 40
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     name: SDA1

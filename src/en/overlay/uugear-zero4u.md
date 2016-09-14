@@ -11,7 +11,6 @@ buy: http://www.uugear.com/product/zero4u/
 image: 'uugear-zero4u.png'
 pincount: 40
 eeprom: no
-power: 5v
 -->
 #Zero4U
 

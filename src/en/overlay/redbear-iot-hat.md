@@ -1,6 +1,6 @@
 <!--
 ---
-name: IoT HAT
+name: IoT pHAT
 class: board
 type: iot
 formfactor: pHAT
@@ -12,7 +12,18 @@ buy: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-
 image: 'redbear-iot-hat.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '11':
     name: 'RTS'
@@ -45,9 +56,9 @@ pin:
   '38':
     name: 'BT_WAKE'
 -->
-#PiZero IoT HAT
+#PiZero IoT pHAT
 
-The RedBear IoT HAT brings the BCM43438 used on the Raspberry Pi 3 to HAT format, compatible with the Pi Zero.
+The RedBear IoT pHAT brings the BCM43438 used on the Raspberry Pi 3 to pHAT format, compatible with the Pi Zero.
 
 The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
 

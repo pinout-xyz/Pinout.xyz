@@ -12,7 +12,10 @@ buy: https://shop.pimoroni.com/products/enviro-phat
 image: 'enviro-phat.png'
 pincount: 40
 eeprom: no
-power: 5v
+power:
+  '2':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c

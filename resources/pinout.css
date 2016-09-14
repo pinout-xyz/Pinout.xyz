@@ -453,6 +453,11 @@ nav#gpio ul.bottom li.overlay-pin a {
 	color:#063541;
 }
 
+nav#gpio .top li.overlay-power a .phys, .bottom li.overlay-power a .phys {
+	color:#FFFFFF;
+	font-size:0px;
+}
+    
 nav#gpio ul.top li.overlay-power a,
 nav#gpio ul.bottom li.overlay-power a {
 	background:#073642;

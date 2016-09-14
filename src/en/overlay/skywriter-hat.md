@@ -13,8 +13,7 @@ image: 'skywriter-hat.png'
 pincount: 40
 eeprom: yes
 power:
-  '1':
-  '2':
+  '17':
 ground:
   '6':
   '9':

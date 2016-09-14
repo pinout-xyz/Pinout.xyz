@@ -551,10 +551,9 @@ div#pinbase {
 }
 div#pinbasebplus {
 	height:177px;
-	background:#184753;
+	background:#073642;
 	top:404px;
 }
-.pin27, .pin28 {margin-top:12px;}
 
 ul.legend {
 	float:right;

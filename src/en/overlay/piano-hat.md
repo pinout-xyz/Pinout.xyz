@@ -13,8 +13,8 @@ image: 'piano-hat.png'
 pincount: 40
 eeprom: yes
 power:
-  '1':
   '2':
+  '17':
 ground:
   '9':
   '30':

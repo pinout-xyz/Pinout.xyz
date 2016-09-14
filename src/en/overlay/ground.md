@@ -5,7 +5,7 @@ class: interface
 type: pinout
 description: Raspberry Pi Ground Pins
 pincount: 1
-ground:
+pin:
   '6':
   '9':
   '14':

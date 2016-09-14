@@ -15,6 +15,7 @@ strings:
 - type_phat: 'format pHAT'
 - type_classic: 'format Classic'
 - pin_header: '{} broches'
+- uses_eeprom: 'EEPROM'
 - uses_i2c: 'bus I2C'
 - uses_spi: 'bus SPI'
 - wiring_pi_pin: 'broche Wiring Pi {}'

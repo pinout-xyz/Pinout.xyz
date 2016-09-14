@@ -22,11 +22,7 @@ GROUND_PINS = [6,9,14,20,25,30,34,39]
 
 lang = "en"
 default_strings = {
-    'made_by': 'Made by {manufacturer}',
-    'type_hat': 'HAT form-factor',
-    'type_classic': 'Classic form-factor',
     'pin_header': '{} pin header',
-    'uses_i2c': 'Uses I2C',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
@@ -147,6 +143,11 @@ def load_overlay(overlay):
                 if 'mode' in pin_3 and 'mode' in pin_5:
                     if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
                         details.append(strings['uses_i2c'])
+
+        if 'eeprom' in loaded:
+            eeprom = str(loaded['eeprom'])
+            if eeprom == 'yes':
+                details.append(strings['uses_eeprom'])
 
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:

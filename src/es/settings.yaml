@@ -15,6 +15,7 @@ strings:
 - type_phat: 'formato pHAT'
 - type_classic: 'formato clásico'
 - pin_header: '{} pin header'
+- uses_eeprom: 'Usa EEPROM'
 - uses_i2c: 'Usa I2C'
 - uses_spi: 'Usa SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'

@@ -354,10 +354,10 @@ Left Column
     padding:10px 10px 5px 10px;
 }
 
+
 /*
 GPIO nav
 */
-
 
 nav#gpio {
 	position:relative;
@@ -431,40 +431,55 @@ nav#gpio ul.bottom li a {
 	border-bottom-left-radius:0px;
 }
 
-nav#gpio li a small {font-size:11px;}
-
-
 nav#gpio ul.top li a:hover,
 nav#gpio ul.bottom li a:hover,
 nav#gpio ul.top li.active a,
 nav#gpio ul.bottom li.active a {
-	background:#063541;
-	color:#FFFFFF;
-}
-nav#gpio li a:hover .phys, nav#gpio li.active a .phys{
-	color:#FFFFFF;
-}
-
-nav#gpio li.overlay-pin a:hover .phys, nav#gpio li.overlay-pin a .phys {
-	color:#002B36;
+	background:rgb(235, 230, 211);
+	color:#063541;
 }
 
 nav#gpio ul.bottom li a:hover,
 nav#gpio ul.bottom li.active a {
-	background:#063541;
-	color:#FFF;
+	background:rgb(235, 230, 211);
+	color:#063541;
 }
 
+nav#gpio li a small {font-size:11px;}
 
-nav#gpio li.overlay-pin a,
+nav#gpio ul.top li.overlay-pin a,
 nav#gpio ul.bottom li.overlay-pin a {
 	background:rgb(235, 230, 211);
 	color:#063541;
 }
 
+nav#gpio ul.top li.overlay-power a,
+nav#gpio ul.bottom li.overlay-power a {
+	background:#073642;
+	color:#FFFFFF;
+	border-radius:13px;
+}
+
+nav#gpio .top li.overlay-ground a .phys, .bottom li.overlay-ground a .phys {
+	background:#073642;
+	color:#FFFFFF;
+	font-size:0px;
+	opacity:1;
+	position:absolute;
+	top:-2px;
+	width:44px;
+	height:26px;
+	border-radius:13px;
+}
+nav#gpio .top li.overlay-ground a .phys {
+	left:-1px;
+}
+nav#gpio .bottom li.overlay-ground a .phys {
+	right:-1px;
+}
+
 article .pin-hover {cursor:help;}
 article .pin-hover:hover {color:#880000;}
-
 
 nav#gpio ul li.hover-pin a,
 nav#gpio ul.bottom li.hover-pin a {
@@ -515,13 +530,14 @@ nav#gpio ul.top li.legend {
 	padding-left:5px;
 	left:-5px;
 }
+
+nav#gpio li.pin1 span.pin {border-radius:0;}
+nav#gpio li.pow3v3 span.pin {background:#B58900;}
 nav#gpio li.pow5v span.pin {background:#DC322F;}
 nav#gpio li.gpio span.pin {background:#859900;}
-nav#gpio li.uart span.pin {background:#6c71c4;}
-nav#gpio li.pow3v3 span.pin {background:#B58900;}
 nav#gpio li.i2c span.pin {background:#268BD2;}
 nav#gpio li.spi span.pin {background:#D33682;}
-nav#gpio li.pin1 span.pin {border-radius:0;}
+nav#gpio li.uart span.pin {background:#6c71c4;}
 
 div#pinbase, div#pinbasebplus {width:58px;position:absolute;left:216px;}
 

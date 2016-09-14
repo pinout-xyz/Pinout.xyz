@@ -283,9 +283,38 @@ def render_pin(pin_num, selected_url, overlay=None):
     pin_type = list([x.strip() for x in pin['type'].lower().split('/')])
     pin_url = pin['name']
     pin_name = pin['name']
-    pin_used = False
+    pin_ground = False
+    pin_power = False
+    pin_regular = False
     pin_link_title = []
     bcm_pin = None
+
+    if overlay is not None and 'ground' in overlay and (
+                        pin_num in overlay['ground'] or str(pin_num) in overlay['ground']):
+
+        if pin_num in overlay['ground']:
+            overlay_pin = overlay['ground'][pin_num]
+        else:
+            overlay_pin = overlay['ground'][str(pin_num)]
+
+        if overlay_pin is None:
+            overlay_pin = {}
+
+        pin_ground = True
+
+    if overlay is not None and 'power' in overlay and (
+                        pin_num in overlay['power'] or str(pin_num) in overlay['power']):
+
+        if pin_num in overlay['power']:
+            overlay_pin = overlay['power'][pin_num]
+        else:
+            overlay_pin = overlay['power'][str(pin_num)]
+
+        if overlay_pin is None:
+            overlay_pin = {}
+
+        pin_power = True
+
     if 'scheme' in pin:
         if 'bcm' in pin['scheme']:
             bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
@@ -303,7 +332,7 @@ def render_pin(pin_num, selected_url, overlay=None):
         if overlay_pin is None:
             overlay_pin = {}
 
-        pin_used = True
+        pin_regular = True
 
         if 'name' in overlay_pin:
             pin_name = overlay_pin['name']
@@ -333,7 +362,11 @@ def render_pin(pin_num, selected_url, overlay=None):
 
     if base_url + selected_url == pin_url:
         selected = ' active'
-    if pin_used:
+    if pin_ground:
+        selected += ' overlay-ground'
+    if pin_power:
+        selected += ' overlay-power'
+    if pin_regular:
         selected += ' overlay-pin'
 
     pin_url = pin_url + url_suffix

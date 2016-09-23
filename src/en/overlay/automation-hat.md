@@ -29,39 +29,39 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  'bcm13':
-    name: Relay 1
-    mode: output
-    active: high
-  'bcm19':
-    name: Relay 2
-    mode: output
-    active: high
-  'bcm16':
-    name: Relay 3
-    mode: output
-    active: high
-  'bcm5':
+  '29':
     name: Output 1
     mode: output
     active: high
-  'bcm12':
-    name: Output 2
-    mode: output
-    active: high
-  'bcm6':
+  '31':
     name: Output 3
     mode: output
     active: high
-  'bcm26':
+  '32':
+    name: Output 2
+    mode: output
+    active: high
+  '33':
+    name: Relay 1
+    mode: output
+    active: high
+  '35':
+    name: Relay 2
+    mode: output
+    active: high
+  '36':
+    name: Relay 3
+    mode: output
+    active: high
+  '37':
     name: Input 1
     mode: input
     active: high
-  'bcm20':
+  '38':
     name: Input 2
     mode: input
     active: high
-  'bcm21':
+  '40':
     name: Input 3
     mode: input
     active: high
@@ -78,8 +78,6 @@ install:
   'apt':
     - 'python-smbus'
     - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
   'python':
     - 'automationhat'
   'python3':

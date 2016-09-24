@@ -262,8 +262,15 @@ Drop down nav
 #sections .featured a {
 	background:none;
 }
+#sections .boards hr {
+	clear:both;
+	border:none;
+	border-top:3px solid #D33682;
+	margin-bottom:5px;
+	background:none;
+}
 
-#sections .featured a:hover {
+#sections .boards .featured a:hover {
 	background: #D33682;
 }
 #sections .featured strong {

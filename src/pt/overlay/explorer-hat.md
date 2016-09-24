@@ -1,25 +1,16 @@
 <!--
 ---
+class: board
+type: multi
 name: Explorer HAT
 manufacturer: Pimoroni
+description: An all-in-one light, input, touch and output add-on board.
 url: https://github.com/pimoroni/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: An all-in-one light, input, touch and output add-on board.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
+formfactor: 'HAT'
 pincount: 40
+eeprom: yes
 pin:
   '7':
     name: LED 1
@@ -69,14 +60,32 @@ pin:
     name: Output 4
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Cap Touch
+    device: cap1208
+install:
+  'devices':
+    - 'i2c'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'explorerhat'
+  'python3':
+    - 'explorerhat'
+  'examples': 'examples/'
 -->
-#Explorer HAT and Explorer HAT Pro
+#Explorer HAT
 
-5V inputs and outputs, touch pads, LEDs, analog inputs and an H-Bridge motor driver make up the Explorer HAT Pro- a jack of all trades prototyping side-kick for your Raspberry Pi.
+5V inputs and outputs, touch pads and LEDs make up the Explorer HAT; a jack of all trades prototyping side-kick for your Raspberry Pi.
+
+To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-sudo apt-get install python-pip
-sudo pip install explorer-hat
+curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

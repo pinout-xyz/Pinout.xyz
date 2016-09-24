@@ -24,6 +24,10 @@ strings:
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
+featured:
+- piano-hat
+- propeller-hat
+- ab-adc-pi-zero
 overlays:
 - ground
 - uart
@@ -54,3 +58,15 @@ overlays:
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- ab-1-wire-plus
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-io-pi-plus
+- ab-rtc-pi-plus
+- ab-serial-pi-plus
+- iface-gpclk
+- iface-dpi
+- iface-pcm
+- iface-sd
+- iface-jtag

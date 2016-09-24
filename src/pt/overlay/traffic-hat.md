@@ -1,12 +1,15 @@
 <!--
 ---
+class: board
+type: multi
 name: Traffic HAT
 manufacturer: Ryanteck LTD.
+description: A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
 url: http://www.ryanteck.uk/store/traffichat
 buy: http://www.ryanteck.uk/store/traffichat
-description: A quick and easy way to learn the basics of GPIO on a budget. All in
-  a nice HAT.
+formfactor: 'HAT'
 pincount: 40
+eeprom: yes
 pin:
   '15':
     name: LED1 / Green

@@ -1,10 +1,54 @@
 <!--
 ---
+class: board
+type: lcd
 name: Display-o-Tron 3000
 manufacturer: Pimoroni
-github: https://github.com/pimoroni/dot3k
-url: https://github.com/pimoroni/dot3k
 description: A 3-line character LCD with an RGB backlight and joystick
+url: https://github.com/pimoroni/dot3k
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/displayotron-3000
+formfactor: '26-way'
+pincount: 26
+eeprom: no
+power:
+  '2':
+  '17':
+ground:
+  '6':
+pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
+  '7':
+    name: Joystick Button
+    mode: input
+    active: low
+  '11':
+    name: Joystick Left
+    mode: input
+    active: low
+  '13':
+    name: Joystick Up
+    mode: input
+    active: low
+  '15':
+    name: Joystick Right
+    mode: input
+    active: low
+  '19':
+    mode: spi
+  '21':
+    name: Joystick Down
+    mode: input
+    active: low
+  '22':
+    name: LCD CMD/DATA
+    mode: output
+    active: high
+  '23':
+    mode: spi
 install:
   'devices':
     - 'i2c'
@@ -17,47 +61,15 @@ install:
   'python':
     - 'dot3k'
   'examples': 'python/examples/'
-pincount: 26
-pin:
-  3:
-    mode: i2c
-  5:
-    mode: i2c
-  7:
-    name: Joystick Button
-    mode: input
-    active: low
-  11:
-    name: Joystick Left
-    mode: input
-    active: low
-  13:
-    name: Joystick Up
-    mode: input
-    active: low
-  15:
-    name: Joystick Right
-    mode: input
-    active: low
-  19:
-    mode: spi
-  21:
-    name: Joystick Down
-    mode: input
-    active: low
-  22:
-    name: LCD CMD/DATA
-    mode: output
-    active: high
-  23:
-    mode: spi
 -->
 #Display-o-Tron 3000
 
-You can use the one-line product installer to get Display-o-Tron 3000 set up and ready to go, just:
+The Display-o-Tron 3000 is a 3-line character LCD with an RGB backlight and joystick
+
+To get the module set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS get.pimoroni.com/displayotron | bash
 ```
 
 And follow the instructions!

@@ -3,6 +3,7 @@
 class: board
 type: multi
 name: "Sense HAT"
+image: 'sense-hat.png'
 manufacturer: Raspberry Pi Foundation
 description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors
 url: https://www.raspberrypi.org/products/sense-hat/

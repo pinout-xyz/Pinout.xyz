@@ -328,9 +328,7 @@ Left Column
 
 .boards-page #interfaces {
 	background:transparent;
-	padding: 4px 30px 5px 15px;
-    position: relative;
-    top: 100px;
+	padding: 104px 30px 104px 15px;
 }
 
 #interfaces li a {
@@ -363,7 +361,7 @@ nav#gpio {
 	position:relative;
 	width:292px;
 	background:#5F8645;
-	height:662px;
+	min-height:653px;
 	margin-right:208px;
 	border-top-right-radius:46px;
 	border-bottom-right-radius:46px;
@@ -384,7 +382,8 @@ nav#gpio:before, nav#gpio:after {
 	position: absolute;
 }
 nav#gpio:after {
-	top:586px;
+	top:auto;
+	bottom:19px;
 }
 .phys {
 	color:#002B36;
@@ -414,7 +413,7 @@ nav#gpio ul.top li a, nav#gpio ul.bottom li a {
 	display:block;
 	width:244px;
 	position:relative;
-	font-size:14px;
+	font-size:15px;
 	line-height:23px;
 	height:22px;
 	margin-bottom:2px;
@@ -541,17 +540,13 @@ nav#gpio li.i2c span.pin {background:#268BD2;}
 nav#gpio li.spi span.pin {background:#D33682;}
 nav#gpio li.uart span.pin {background:#6c71c4;}
 
-div#pinbase, div#pinbasebplus {width:58px;position:absolute;left:216px;}
-
 div#pinbase {
-	height:324px;
+	width:58px;
+	position:absolute;
+	left:216px;
+	height:493px;
 	background:#073642;
 	top:80px;
-}
-div#pinbasebplus {
-	height:177px;
-	background:#073642;
-	top:404px;
 }
 
 ul.legend {

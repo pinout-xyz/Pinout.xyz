@@ -8,7 +8,7 @@ To celebrate the launch of the Pi Zero, and more recently Raspberry Pi 3, Pinout
 
 ##Note for original Raspberry Pi Model "A" and "B" users
 
-Pinout was originally designed for the old 26-pin Raspberry Pi models, you'll see the outline of this original header displayed on the left in a slightly darker shade. If you click a pin you'll see details of its BCM pin assignment on the original Rev 1 Pi.
+Pinout was originally designed for the old 26-pin Raspberry Pi models. If you click a pin you'll see details of its BCM pin assignment on the original Rev 1 Pi.
 
 ##What do these numbers mean?
 

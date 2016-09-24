@@ -18,4 +18,3 @@ Pour fêter la sortie de la Raspberry Pi 2 et l'engouement qu'elle suscite, Pino
 
 Avec la sortie du modèle B+ de la Raspberry Pi, Pinout maintenant documente les 14 broches supplémentaires qu'elle vous offre.
 
-Veuillez notez que la séparation des 14 broches du B+ dans leur présentation Pinout n'est que visuelle, elle n'existe pas physiquement sur la Raspberry Pi.

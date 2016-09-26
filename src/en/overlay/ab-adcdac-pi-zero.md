@@ -2,7 +2,7 @@
 ---
 name: ADC-DAC Pi Zero
 class: board
-type: multi
+type: adc
 formfactor: pHAT
 manufacturer: AB Electronics
 description: 2 channel Analogue to Digital Converter and 2 channel Digital to Analogue Converter

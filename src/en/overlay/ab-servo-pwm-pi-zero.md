@@ -2,7 +2,7 @@
 ---
 name: Servo PWM Pi Zero
 class: board
-type: io
+type: io,motor
 formfactor: pHAT
 manufacturer: AB Electronics
 description: 16-channel, 12-bit PWM Controller

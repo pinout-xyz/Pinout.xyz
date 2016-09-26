@@ -27,10 +27,12 @@ ground:
 pin:
   '3':
     mode: i2c
-  '4':
-    mode: gpio
   '5':
     mode: i2c
+  '7':
+    name: OE
+    mode: output
+    active: high
 i2c:
   '0x40':
     name: PCA9685

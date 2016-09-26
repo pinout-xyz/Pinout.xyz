@@ -481,6 +481,7 @@ nav#gpio li.overlay-ground span.pin {background:#073642;}
 
 article .pin-hover {cursor:help;}
 article .pin-hover:hover {color:#880000;}
+article img {max-width:100%;}
 
 nav#gpio ul li.hover-pin a,
 nav#gpio ul.bottom li.hover-pin a {

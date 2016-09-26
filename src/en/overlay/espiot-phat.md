@@ -1,19 +1,27 @@
 <!--
 ---
-class: board
-type: iot
 name: ESP IoT pHAT
+class: board
+type: mcu,io,iot
+formfactor: pHAT
 manufacturer: Pimoroni
-description: ESP8266 module.
+description: an ESP8266 module programmable from your Pi
 url: https://shop.pimoroni.com/products/esp8266-phat
 buy: https://shop.pimoroni.com/products/esp8266-phat
-formfactor: 'pHAT'
+image: 'esp8266-phat.png'
 pincount: 40
 eeprom: no
 power:
   '2':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '8':
     name: TXD / Transmit

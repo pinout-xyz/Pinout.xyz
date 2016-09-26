@@ -1,14 +1,28 @@
 <!--
 ---
+name: Pi-DAC+
 class: board
 type: audio
-name: "Pi-DAC+"
+formfactor: HAT
 manufacturer: IQaudIO
 description: An I2S digital to analog audio converter HAT for the Pi
+url: http://www.iqaudio.co.uk/audio/8-pi-dac-0712411999650.html
 buy: http://www.iqaudio.co.uk
-formfactor: 'HAT'
+image: 'iqaudio-pi-dac.png'
 pincount: 40
 eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -38,7 +52,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#IQaudIO Pi-DAC+
+#Pi-DAC+
 
 The Pi-DAC+ takes the digital audio signals (I2S) from the Raspberry Pi and through the
 onboard Texas Instruments PCM5122 DAC delivers variable output (hardware volume

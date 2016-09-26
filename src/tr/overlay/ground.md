@@ -1,6 +1,8 @@
 <!--
 ---
-name: Ground (Toprak)
+name: Toprak
+class: interface
+type: pinout
 description: Raspberry Pi Toprak Pinleri
 pin:
   '6': {}
@@ -12,7 +14,7 @@ pin:
   '34': {}
   '39': {}
 -->
-#Ground (Toprak)
+#Toprak
 
 Raspberry Pi'deki GND pinlerinin hepsi birbiri ile bağlantılıdır, bu yüzden hangi pine toprağı verdiğinizin bir önemi yok.
 

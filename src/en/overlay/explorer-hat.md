@@ -1,17 +1,32 @@
 <!--
 ---
-class: board
-type: multi
 name: Explorer HAT
+class: board
+type: io
+formfactor: HAT
 manufacturer: Pimoroni
-description: An all-in-one light, input, touch and output add-on board.
-url: https://github.com/pimoroni/explorer-hat
+description: An all-in-one light, input, touch and output add-on board
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-formfactor: 'HAT'
+image: 'explorer-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '25':
+  '30':
+  '39':
 pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: output
@@ -76,7 +91,6 @@ install:
     - 'explorerhat'
   'python3':
     - 'explorerhat'
-  'examples': 'examples/'
 -->
 #Explorer HAT
 

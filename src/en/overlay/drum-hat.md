@@ -1,17 +1,24 @@
 <!--
 ---
+name: Drum HAT
 class: board
 type: instrument
-name: Drum HAT
-image: 'drum-hat.png'
+formfactor: HAT
 manufacturer: Pimoroni
 description: An 8 pad finger Drum HAT for your Raspberry Pi
 url: http://shop.pimoroni.com/products/drum-hat
 github: https://github.com/pimoroni/drum-hat
 buy: http://shop.pimoroni.com/products/drum-hat
-formfactor: 'HAT'
+image: 'drum-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -27,7 +34,6 @@ i2c:
   '0x2c':
     name: Cap Touch
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
 #Drum HAT
 

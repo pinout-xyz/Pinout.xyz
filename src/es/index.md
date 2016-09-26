@@ -7,7 +7,7 @@ Esta asignación de pines del GPIO no está pensada para ser impresa, pero es ta
 ##De todos modos, ¿qué significan estos números?
 
 * BCM - Número de pin Broadcom, comúnmente llamado "GPIO", es probablemente el que querrás utilizar con RPi.GPIO
-* WiringPi - Número de pin de WiringPi, para la librería WiringPi de Gordon
+* WiringPi - Número de pin de WiringPi, para la librería WiringPi de Gordon Henderson
 * Físico - Número correspondiente a la posición física del pin
 
 ##Pi 2

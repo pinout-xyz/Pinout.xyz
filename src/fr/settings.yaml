@@ -15,6 +15,7 @@ strings:
 - type_phat: 'format pHAT'
 - type_classic: 'format Classic'
 - pin_header: '{} broches'
+- uses_eeprom: 'EEPROM'
 - uses_i2c: 'bus I2C'
 - uses_spi: 'bus SPI'
 - wiring_pi_pin: 'broche Wiring Pi {}'
@@ -24,17 +25,21 @@ strings:
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
+featured:
+- display-o-tron
+- piborg-ledborg
+- pibrella
+- rtk-000-001
 overlays:
 - ground
-- uart
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
@@ -42,7 +47,6 @@ overlays:
 - pibrella
 - piglow
 - rtk-000-001
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat

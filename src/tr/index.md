@@ -7,7 +7,7 @@ Bu GPIO Pin şematiği çıktı almaya uygun değildir, ama bu mikro site Raspbe
 ##Bu numaralar de neyin nesi?
 
 * BCM - Broadcom pin numarası, daha çok "GPIO" olarak bilinmekte. RPi.GPIO modüllerinde bu pin numaralarını kullanmalısınız.
-* WiringPi - Wiring Pi pin numarası, Arduino kullananlara daha tanıdık gelecek Gordon'un Wiring Pi kütüphanesinde bu numaraları kullanmalısınız.
+* WiringPi - Wiring Pi pin numarası, Arduino kullananlara daha tanıdık gelecek Gordon Henderson'un Wiring Pi kütüphanesinde bu numaraları kullanmalısınız.
 * Physical - Fiziksel pin numaraları. Bu numaralar pinlerin Raspberry Pi üzerindeki fiziksel yerlerini belirtir.
 
 ##Pi 2

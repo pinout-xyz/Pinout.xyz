@@ -1,21 +1,28 @@
 <!--
 ---
-class: board
-type: led
 name: Scroll pHAT
+class: board
+type: display, led
+formfactor: pHAT
 manufacturer: Pimoroni
-image: 'scroll-phat.png'
-description: A 11 x 5 LED matrix.
+description: A 11 x 5 LED matrix
 url: https://github.com/pimoroni/scroll-phat
 github: https://github.com/pimoroni/scroll-phat
 buy: https://shop.pimoroni.com/products/scroll-phat
-formfactor: 'pHAT'
+image: 'scroll-phat.png'
 pincount: 40
 eeprom: no
 power:
   '2':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -35,7 +42,6 @@ install:
     - 'scrollphat'
   'python3':
     - 'scrollphat'
-  'examples': 'examples/'
 -->
 #Scroll pHAT
 

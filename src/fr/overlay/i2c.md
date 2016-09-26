@@ -1,6 +1,8 @@
 <!--
 ---
 name: I2C
+class: interface
+type: pinout
 description: broches i2c de la Raspberry Pi
 pin:
   '3':

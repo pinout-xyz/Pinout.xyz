@@ -1,6 +1,8 @@
 <!--
 ---
 name: UART
+class: interface
+type: pinout
 description: Raspberry Pi UART Anschlüsse
 pin:
   '8':

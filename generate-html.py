@@ -1,25 +1,28 @@
 #!/usr/bin/env python
-import markdown
-import unicodedata
-import re
+
 import os
+import re
 import sys
-import pinout
+import unicodedata
+
+try:
+    import markdown
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+
 import markjaml
+import pinout
 import urlmapper
+
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
+GROUND_PINS = [6,9,14,20,25,30,34,39]
 
 lang = "en"
 default_strings = {
-    'made_by': 'Made by {manufacturer}',
-    'type_hat': 'HAT form-factor',
-    'type_classic': 'Classic form-factor',
     'pin_header': '{} pin header',
-    'uses_i2c': 'Uses I2C',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
@@ -34,13 +37,14 @@ default_strings = {
     'group_lcd': 'LCD',
     'group_other': 'Other',
     'group_motor': 'Motor',
+    'group_adc': 'ADC',
     'group_audio': 'Audio',
     'group_gesture': 'Gesture',
+    'group_touch': 'Touch',
     'group_pinout': 'Pinout',
     'group_info': 'Info',
     'group_featured': 'Featured'
 }
-
 
 
 def cssify(value):
@@ -140,6 +144,11 @@ def load_overlay(overlay):
                     if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
                         details.append(strings['uses_i2c'])
 
+        if 'eeprom' in loaded:
+            eeprom = str(loaded['eeprom'])
+            if eeprom == 'yes':
+                details.append(strings['uses_eeprom'])
+
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:
             details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
@@ -202,7 +211,8 @@ def render_pin_page(pin_num):
     pin = pinout.pins[str(pin_num)]
     pin_url = pin['name']
 
-    if pin_url == 'Ground':
+    # Exclude pages for ground pins
+    if pin_num in GROUND_PINS:
         return None, None, None
 
     pin_text_name = pin['name']
@@ -243,17 +253,17 @@ def render_pin_page(pin_num):
             fn_functions.append(function)
 
         pin_functions = '''<table class="pin-functions">
-		<thead>
-			<tr>
-				<th>{headings}</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>{functions}</td>
-			</tr>
-		</tbody>
-		</table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
+        <thead>
+            <tr>
+                <th>{headings}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{functions}</td>
+            </tr>
+        </tbody>
+        </table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
@@ -267,21 +277,50 @@ def render_pin_page(pin_num):
     # if pin_text != None:
     return pin_url, pin_text, pin_text_name  # pages[pin_url] = pin_text
 
-
+    
 def render_pin(pin_num, selected_url, overlay=None):
     pin = pinout.pins[str(pin_num)]
 
     pin_type = list([x.strip() for x in pin['type'].lower().split('/')])
     pin_url = pin['name']
     pin_name = pin['name']
-    pin_used = False
+    pin_ground = False
+    pin_power = False
+    pin_regular = False
     pin_link_title = []
     bcm_pin = None
+
+    if overlay is not None and 'ground' in overlay and (
+                        pin_num in overlay['ground'] or str(pin_num) in overlay['ground']):
+
+        if pin_num in overlay['ground']:
+            overlay_pin = overlay['ground'][pin_num]
+        else:
+            overlay_pin = overlay['ground'][str(pin_num)]
+
+        if overlay_pin is None:
+            overlay_pin = {}
+
+        pin_ground = True
+
+    if overlay is not None and 'power' in overlay and (
+                        pin_num in overlay['power'] or str(pin_num) in overlay['power']):
+
+        if pin_num in overlay['power']:
+            overlay_pin = overlay['power'][pin_num]
+        else:
+            overlay_pin = overlay['power'][str(pin_num)]
+
+        if overlay_pin is None:
+            overlay_pin = {}
+
+        pin_power = True
+
     if 'scheme' in pin:
         if 'bcm' in pin['scheme']:
             bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
-    if overlay is not None and (
+    if overlay is not None and 'pin' in overlay and (
                         pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
 
         if pin_num in overlay['pin']:
@@ -294,7 +333,7 @@ def render_pin(pin_num, selected_url, overlay=None):
         if overlay_pin is None:
             overlay_pin = {}
 
-        pin_used = True
+        pin_regular = True
 
         if 'name' in overlay_pin:
             pin_name = overlay_pin['name']
@@ -324,7 +363,11 @@ def render_pin(pin_num, selected_url, overlay=None):
 
     if base_url + selected_url == pin_url:
         selected = ' active'
-    if pin_used:
+    if pin_ground:
+        selected += ' overlay-ground'
+    if pin_power:
+        selected += ' overlay-power'
+    if pin_regular:
         selected += ' overlay-pin'
 
     pin_url = pin_url + url_suffix
@@ -412,7 +455,8 @@ base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
 resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
-template = open('src/{}/template/layout.html'.format(lang)).read()
+template_main = open('src/{}/template/layout.html'.format(lang)).read()
+template_boards = open('src/{}/template/boards.html'.format(lang)).read()
 
 pages = {}
 navs = {}
@@ -439,7 +483,10 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
 
 overlays = map(load_overlay, overlays)
 overlay_subnav = ['featured']
-featured_boards = []
+featured_boards_count = 0
+featured_boards_html = ''
+
+boards_page = []
 
 '''
 Build up the navigation between overlays. This needs to be done before rendering pages
@@ -448,90 +495,49 @@ as it's used in every single page.
 overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
-    #image = None
-
-    #if 'image' in overlay:
-    #    image = overlay['image']
     
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
 
-    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and len(featured_boards) < 3:
-        featured_boards.append(overlay)
+    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
+        featured_boards_count += 1
+        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+                image=overlay['image'],
+                name=overlay['name'],
+                page_url=overlay['page_url'],
+                base_url=base_url,
+                resource_url=resource_url,
+                description=overlay['description']
+            )
 
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
         o_type = overlay['type']
 
         if o_class not in nav_html:
-            nav_html[o_class] = {}
+            nav_html[o_class] = ''
 
-        if o_type not in nav_html[o_class]:
-            nav_html[o_class][o_type] = []
+        nav_html[o_class] += '<li><a href="{}{}">{}</a></li>'.format(base_url, overlay['page_url'], overlay['name'])
 
-        if o_class == 'board' and o_type not in overlay_subnav:
-            overlay_subnav.append(o_type)
+        if o_class == 'board':
+            image = overlay['image'] if 'image' in overlay else 'no-image.png'
 
-        nav_html[o_class][o_type] += [overlay]
+            if 'formfactor' not in overlay:
+                print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
-
-
-featured_boards_html = ''
-for overlay in featured_boards:
-    featured_boards_html += '<div class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
-            image=overlay['image'],
-            name=overlay['name'],
-            page_url=overlay['page_url'],
-            base_url=base_url,
-            resource_url=resource_url,
-            description=overlay['description']
-        )
-
-featured_boards_html = '<div class="group group_featured">' + featured_boards_html + '</div>'
-
-'''
-Generate legacy navigation menu for all overlays in a single drop-down
-'''
-overlays_html.sort()
-overlays_html = ''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x[0], x[1]), overlays_html))
-
-'''
-Generate the new categorised navigation menu
-'''
-overlay_subnav = ''.join(map(lambda overlay_type: '<li class="group_{cls}" data-group="{cls}">{text}</li>'.format(cls=overlay_type,text=strings['group_' + overlay_type]),overlay_subnav))
-
-for overlay_type in nav_html.keys():
-    for overlay_group, items in nav_html[overlay_type].iteritems():
-        items.sort()
-        featured = [x for x in items if 'image' in x]
-        regular = [x for x in items if 'image' not in x]
-
-        group_items = ''
-
-        group_items_pictures = (''.join(map(lambda x: '<li class="featured"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></li>'.format(
-            image=x['image'],
-            name=x['name'],
-            page_url=x['page_url'],
-            base_url=base_url,
-            resource_url=resource_url,
-            description=x['description']), featured)))
-
-        group_items_normal = (''.join(map(lambda x: '<li><a href="{}{}">{}</a></li>'.format(base_url, x['page_url'], x['name']), regular)))
-
-        group_items = group_items_pictures + group_items_normal
-
-        if len(featured) > 0 and len(regular) > 0:
-                group_items = group_items_pictures + '<hr />' + group_items_normal
-
-        nav_html[overlay_type][overlay_group] = '<div class="group group_' + overlay_group + '"><ul>' + group_items + '</ul></div>'
-    nav_html[overlay_type] = ''.join(nav_html[overlay_type].values())
-    
-    if overlay_type == 'board':
-        nav_html[overlay_type] = '<div class="group-nav"><ul>' + overlay_subnav + '</ul></div>' + featured_boards_html + nav_html[overlay_type]
+            boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                image=image,
+                name=overlay['name'],
+                page_url=overlay['page_url'],
+                base_url=base_url,
+                type=overlay['type'] if 'type' in overlay else '',
+                formfactor=overlay['formfactor'] if 'formfactor' in overlay else '',
+                manufacturer=overlay['manufacturer'],
+                resource_url=resource_url)})
 
 
-print(nav_html)
+boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -540,9 +546,13 @@ and all other pages in /pinout/
 
 serve.py will mirror this structure for testing.
 '''
+
 pages['index'] = {}
 pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('index.md')})
-navs['index'] = render_nav('pinout')
+
+default_nav = render_nav('pinout')
+
+navs['index'] = default_nav
 
 '''
 Add the 404 page if 404.md is present.
@@ -551,8 +561,11 @@ page404 = load_md('404.md')
 if page404 is not None:
     pages['404'] = {}
     pages['404']['rendered_html'] = render_overlay_page({'name': '404', 'long_description': page404})
-    navs['404'] = render_nav('pinout')
+    navs['404'] = default_nav
 
+
+pages['boards'] = {'rendered_html': ''.join(boards_page)}
+navs['boards'] = default_nav
 
 print('\nRendering pin pages...')
 
@@ -565,7 +578,7 @@ for pin in range(1, len(pinout.pins) + 1):
     langlinks = get_lang_urls('pin{}'.format(pin))
 
     pin_nav = render_nav(pin_url)
-    pin_html = pinout.render_html(template,
+    pin_html = pinout.render_html(template_main,
                                   lang_links="\n\t\t".join(langlinks),
                                   hreflang="\n\t\t".join(hreflang),
                                   nav=pin_nav,
@@ -574,6 +587,7 @@ for pin in range(1, len(pinout.pins) + 1):
                                   overlays=overlays_html,
                                   description=pinout.settings['default_desc'],
                                   title=pin_title + pinout.settings['title_suffix'],
+                                  featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html
                                   )
@@ -592,9 +606,12 @@ for url in pages:
     hreflang = []
     langlinks = []
 
-    if url == 'index':
-        hreflang = get_hreflang_urls('index')
-        langlinks = get_lang_urls('index')
+    # Select the appropriate template for this page
+    template = template_boards if url == 'boards' else template_main
+
+    if url == 'index' or url == 'boards':
+        hreflang = get_hreflang_urls(url)
+        langlinks = get_lang_urls(url)
 
     if 'src' in pages[url]:
         src = pages[url]['src']
@@ -609,6 +626,11 @@ for url in pages:
     else:
         pages[url]['name'] = pinout.settings['default_title']
 
+    feat_boards_html = featured_boards_html
+
+    if 'class' in pages[url] and pages[url]['class'] == 'board':
+        feat_boards_html = ''
+
     html = pinout.render_html(template,
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
@@ -618,11 +640,12 @@ for url in pages:
                               resource_url=resource_url,
                               description=pages[url]['description'],
                               title=pages[url]['name'],
+                              featured_boards=feat_boards_html,
                               langcode=lang,
                               nav_html=nav_html
                               )
 
-    if url != 'index' and url != '404':
+    if url not in ['index','404','boards']:
         url = os.path.join('pinout', url)
 
     print('>> {}.html'.format(url))

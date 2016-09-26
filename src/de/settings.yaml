@@ -15,6 +15,7 @@ strings:
 - type_phat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
+- uses_eeprom: 'benutzt EEPROM'
 - uses_i2c: 'benutzt I2C'
 - uses_spi: 'benutzt SPI'
 - wiring_pi_pin: 'Wiring Pi Anschluss {}'
@@ -24,25 +25,25 @@ strings:
 - more_information: 'Mehr Informationen'
 - github_repository: 'GitHub Repository'
 - buy_now: 'jetzt kaufen'
+featured:
+- display-o-tron
+- rpf-dots
+- pibrella
+- rtk-000-001
 overlays:
 - ground
-- uart
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
-- iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
-- piborg-ledborg
 - pibrella
-- piglow
 - rtk-000-001
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat

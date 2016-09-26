@@ -1,16 +1,29 @@
 <!--
 ---
-class: board
-type: multi
 name: Explorer pHAT
+class: board
+type: adc,io,motor
+formfactor: pHAT
 manufacturer: Pimoroni
-description: An all-in-one input, output and motor add-on board.
-url: https://github.com/pimoroni/explorer-hat
+description: An all-in-one input, output and motor add-on board
+buy: https://shop.pimoroni.com/products/explorer-phat
 github: https://github.com/pimoroni/explorer-hat
 buy: https://shop.pimoroni.com/products/explorer-phat
-formfactor: 'pHAT'
+image: 'explorer-phat.png'
 pincount: 40
 eeprom: no
+power:
+  '2':
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -80,7 +93,6 @@ install:
     - 'explorerhat'
   'python3':
     - 'explorerhat'
-  'examples': 'examples/'
 -->
 #Explorer pHAT
 

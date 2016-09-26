@@ -1,17 +1,24 @@
 <!--
 ---
+name: Piano HAT
 class: board
 type: instrument
-name: Piano HAT
-image: 'piano-hat.png'
+formfactor: HAT
 manufacturer: Pimoroni
 description: A tiny Pi piano with 16 touch-sensitive buttons
-url: http://shop.pimoroni.com/products/drum-hat
+url: https://shop.pimoroni.com/products/piano-hat
 github: https://github.com/pimoroni/piano-hat
 buy: https://shop.pimoroni.com/products/piano-hat
-formfactor: 'HAT'
+image: 'piano-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '9':
+  '30':
+  '34':
 pin:
   '3':
     mode: i2c
@@ -33,13 +40,11 @@ i2c:
   '0x28':
     name: Cap Touch A
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
   '0x2b':
     name: Cap Touch B
     device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
 -->
-#Piano HAT
+#Pimoroni Piano HAT
 
 Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave, the rest give you octave up/down and instrument select functionality.
 

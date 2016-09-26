@@ -7,15 +7,16 @@ resource_url: /resources/
 domain: tr.pinout.xyz
 url_suffix: ''
 urls:
-  GND: ground_toprak
+  GND: toprak
 strings:
 - made_by: 'Made by {manufacturer}'
 - type_hat: 'HAT form-factor'
 - type_hat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
-- uses_i2c: 'Uses I2C'
-- uses_spi: 'Uses SPI'
+- uses_eeprom: 'EEPROM'
+- uses_i2c: 'I2C'
+- uses_spi: 'SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - uses_n_gpio_pins: 'Uses {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
@@ -23,20 +24,23 @@ strings:
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
+featured:
+- display-o-tron
+- piborg-ledborg
+- pibrella
+- rtk-000-001
 overlays:
 - ground
-- uart
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
 - display-o-tron
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piborg-ledborg
 - pibrella
-- piglow
 - rtk-000-001
 - skywriter-hat
 - unicorn-hat

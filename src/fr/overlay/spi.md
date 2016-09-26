@@ -1,6 +1,8 @@
 <!--
 ---
 name: SPI
+class: interface
+type: pinout
 description: Raspberry Pi SPI pins
 pincount: 5
 pin:
@@ -62,7 +64,7 @@ spi.max_speed_hz = 1000000
 spi.xfer([value_8bit])
 ```
 
-You can also use the SPI port to "Bit-Bang" an ATmega 328, loading Arduino sketches onto it with Gordon's modified version of AVRDude.
+You can also use the SPI port to "Bit-Bang" an ATmega 328, loading Arduino sketches onto it with Gordon Henderson's modified version of AVRDude.
 
 Hook up you Pi's SPI port to that of your ATmega, and power the ATmega from the 3.3v pin on the Pi. Make sure you're not running any SPI device drivers, and run "avrdude -p m328p -c gpio" to verify the connection.
 

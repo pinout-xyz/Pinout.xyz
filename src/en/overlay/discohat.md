@@ -1,13 +1,28 @@
 <!--
 ---
+name: DiscoHAT
 class: board
 type: audio
-name: DiscoHAT
+formfactor: HAT
 manufacturer: Kertatuote
-description: Computer controlled DMX lights, sounds and special effects.
+description: Computer controlled DMX lights, sounds and special effects
 url: http://discohat.com
 buy: http://discohat.com/shop
+image: 'discohat.png'
 pincount: 40
+eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '8':
     name: TXD

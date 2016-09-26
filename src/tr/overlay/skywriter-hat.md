@@ -1,12 +1,17 @@
 <!--
 ---
 name: Skywriter HAT
+class: board
+type: hepsi
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/skywriter-hat
+description: 3 Boyutlu pozisyon ve hareket sensörü.
+url: http://shop.pimoroni.com/products/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
-description: 3 Boyutlu pozisyon ve hareket sensörü.
+image: 'skywriter-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c

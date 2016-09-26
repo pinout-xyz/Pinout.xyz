@@ -7,7 +7,7 @@ Este diagrama de pinos GPIO não foi feito com o propósito de ser imprimido mas
 ##O que é que estes números significam, afinal?
 
 * BCM - Número de pino Broadcom (Broadcom pin number), frequentemente chamados "GPIO", estes são os que provavelmente vais querer usar com o RPi.GPIO
-* WiringPi - Número de pino Wiring Pi, para a biblioteca Wiring Pi de Gordon.
+* WiringPi - Número de pino Wiring Pi, para a biblioteca Wiring Pi de Gordon Henderson.
 * Physical - Número correspondente à localização física dos pinos no cabeçalho.
 
 ##Raspberry Pi Zero

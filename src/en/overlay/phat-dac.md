@@ -1,19 +1,26 @@
 <!--
 ---
+name: pHAT DAC
 class: board
 type: audio
-name: "pHAT DAC"
+formfactor: pHAT
 manufacturer: Pimoroni
 description: An I2S digital to analog audio converter
 buy: https://shop.pimoroni.com/products/phat-dac
-formfactor: 'pHAT'
+image: 'phat-dac.png'
 pincount: 40
 eeprom: no
 power:
-  '1':
   '2':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '12':
     name: I2S

@@ -1,7 +1,6 @@
 ---
-default_desc: The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry
-  Pi, B+ and Pi 2
-default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
+default_desc: The comprehensive Add-on boards & GPIO Pinout guide for the Raspberry Pi
+default_title: Raspberry Pi GPIO Pinout
 title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
@@ -15,6 +14,7 @@ strings:
 - type_phat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
 - pin_header: '{} pin header'
+- uses_eeprom: 'Uses EEPROM'
 - uses_i2c: 'Uses I2C'
 - uses_spi: 'Uses SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
@@ -25,17 +25,31 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
-- piano-hat
-- propeller-hat
+- analog-zero
+- microdot-phat
 - ab-adc-pi-zero
+- redbear-iot-hat
 overlays:
 - ground
-- uart
+- iface-dpi
+- iface-gpclk
 - i2c
+- iface-jtag
+- iface-1wire
+- iface-pcm
+- iface-sd
 - spi
-- arduino-spi
+- uart
 - wiringpi
-- cirruslogicaudiocard
+- ab-1-wire-plus
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-io-pi-plus
+- ab-rtc-pi-plus
+- ab-serial-pi-plus
+- adafruit-cap-mpr121
+- cirruslogic-audio-card
 - display-o-tron
 - display-o-tron-hat
 - discohat
@@ -44,29 +58,35 @@ overlays:
 - explorer-hat
 - explorer-hat-pro
 - explorer-phat
+- automation-hat
+- blinkt
+- enviro-phat
 - phat-dac
 - propeller-hat
 - iqaudio-pi-dac
+- iqaudio-pi-digiamp
 - piano-hat
 - piborg-ledborg
 - pibrella
 - piglow
-- dots
+- rpf-dots
+- redbear-iot-hat
 - rtk-000-001
 - scroll-phat
 - sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
-- ab-1-wire-plus
-- ab-adc-differential-pi
-- ab-adc-pi-plus
-- ab-adc-pi-zero
-- ab-io-pi-plus
-- ab-rtc-pi-plus
-- ab-serial-pi-plus
-- iface-gpclk
-- iface-dpi
-- iface-pcm
-- iface-sd
-- iface-jtag
+- unicorn-phat
+- uugear-zero4u
+- uugear-7port-usb-hub
+- uugear-witty-pi
+- uugear-witty-pi-2
+- analog-zero
+- carberry
+- pi-liter
+- zero-lipo
+- raspio-duino
+- adafruit-servo-hat
+- microdot-phat
+- wifi-pants

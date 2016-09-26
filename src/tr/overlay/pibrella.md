@@ -1,10 +1,17 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
+class: board
+type: hepsi
+formfactor: diğer
+manufacturer: Cyntech
 description: Hepsi-bir-arada, hafif, ses, giriş ve çıkış destekleyen eklenti kartı.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: Green LED

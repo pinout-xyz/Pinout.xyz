@@ -1,14 +1,26 @@
 <!--
 ---
-class: board
-type: multi
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-description: An all-in-one light, sound, input and output add-on board.
-url: https://github.com/pimoroni/pibrella
-formfactor: '26-way'
+class: board
+type: multi,io
+formfactor: Custom
+manufacturer: Cyntech
+description: An all-in-one light, sound, input and output add-on board
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '7':
     name: Green LED
@@ -65,7 +77,7 @@ pin:
 -->
 #Pibrella
 
-The all-in-one light, sound, input and output add-on board from Pimoroni vs Cyntech uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
+The all-in-one light, sound, input and output add-on board that uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
 
 Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
 

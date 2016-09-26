@@ -7,7 +7,7 @@ La mappa dei pin GPIO non è pensata per essere stampata, ma resta comunque un'o
 ##Cosa significano questi numeri?
 
 * BCM - Numerazione Broadcom, comunemente detto "GPIO"; sono quelli che probabilmente intendi usare con RPi.GPIO
-* WiringPi - Numerazione Wiring Pi, per la libreria Wiring Pi di Gordon
+* WiringPi - Numerazione Wiring Pi, per la libreria Wiring Pi di Gordon Henderson
 * Physical - Numero che corrisponde alla posizione fisica dei pin
 
 ##Pi 2

@@ -15,6 +15,7 @@ strings:
 - type_phat: 'formato pHAT'
 - type_classic: 'formato clásico'
 - pin_header: '{} pin header'
+- uses_eeprom: 'Usa EEPROM'
 - uses_i2c: 'Usa I2C'
 - uses_spi: 'Usa SPI'
 - wiring_pi_pin: 'Wiring Pi pin {}'
@@ -24,25 +25,27 @@ strings:
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
+featured:
+- display-o-tron
+- piborg-ledborg
+- pibrella
+- rtk-000-001
 overlays:
 - ground
-- uart
 - i2c
 - spi
-- arduino-spi
+- uart
 - wiringpi
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat
-- dots
+- rpf-dots
 - explorer-hat
 - explorer-hat-pro
 - piano-hat
 - piborg-ledborg
 - pibrella
-- piglow
 - rtk-000-001
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat

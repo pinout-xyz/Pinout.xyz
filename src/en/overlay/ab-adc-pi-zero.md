@@ -2,17 +2,28 @@
 ---
 name: ADC Pi Zero
 class: board
-type: other
-image: 'ab-adc-pi-zero.png'
-manufacturer: AB Electronics UK
+type: adc
+formfactor: pHAT
+manufacturer: AB Electronics
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-Digital-converter
-formfactor: Custom
+image: 'ab-adc-pi-zero.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c

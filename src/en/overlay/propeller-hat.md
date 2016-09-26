@@ -1,21 +1,27 @@
 <!--
 ---
-class: board
-type: other
 name: Propeller HAT
-image: 'propeller-hat.png'
+class: board
+type: mcu,io,motor
+formfactor: HAT
 manufacturer: Pimoroni
 description: The 8-core Propeller Microcontroller in HAT form-factor
 url: http://shop.pimoroni.com/products/propeller-hat
 github: https://github.com/pimoroni/piano-hat
 buy: https://shop.pimoroni.com/products/propeller-hat
-formfactor: 'HAT'
+image: 'propeller-hat.png'
 pincount: 40
 eeprom: yes
 power:
   '2':
 ground:
-  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '8':
     name: TXD / Transmit

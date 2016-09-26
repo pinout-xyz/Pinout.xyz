@@ -7,7 +7,7 @@ Diese GPIO Anschlussbelegung ist nicht zum Ausdrucken gedacht, aber sie ist ein 
 ##Welche Bedeutung haben diese Nummern?
 
 * BCM - Broadcom Anschlussnummer, meist als "GPIO" bezeichnet. Dies sind die Pins die Du wahscheinlich mit RPi.GPIO benutzen wirst
-* WiringPi - Wiring Pi Anschlussnummer, für Gordon's Wiring Pi library
+* WiringPi - Wiring Pi Anschlussnummer, für Gordon Henderson's Wiring Pi library
 * Physical - Die Anschlussnummer, die dem physikalischen Pin an der Anschlussleiste des Raspberry Pi entspricht.
 
 ##Pi 2

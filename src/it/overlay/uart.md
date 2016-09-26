@@ -1,6 +1,8 @@
 <!--
 ---
 name: UART
+class: interface
+type: pinout
 description: Pin UART del Raspberry
 pin:
   '8':

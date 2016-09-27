@@ -6,7 +6,11 @@ ul.top a {color:#063541;}
 table {margin:20px 0;border-collapse:collapse;}
 table td, table th {border:1px solid #073642;padding:5px;}
 table th {background:#073642;color:#EBE6D3;}
-table * {text-align:left;font-size:13px;}
+table {text-align:left;font-size:13px;}
+
+table.details {width:100%;}
+table.details td, table.details th {border:none;font-size:16px;vertical-align:top;}
+table.details img {margin-top:54px;}
 
 table.pin-functions {width:100%;}
 table.pin-functions td {width:16.6666%;}

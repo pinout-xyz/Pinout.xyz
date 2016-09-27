@@ -9,6 +9,7 @@ url_suffix:
 urls:
   GND: ground
 strings:
+- details: 'Details'
 - made_by: 'Made by {manufacturer}'
 - type_hat: 'HAT form-factor'
 - type_phat: 'pHAT form-factor'

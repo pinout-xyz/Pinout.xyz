@@ -161,8 +161,16 @@ def load_overlay(overlay):
         if 'buy' in loaded:
             details.append('[{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
 
-        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],
-                                                    markdown.markdown('\n'.join(map(lambda d: '* ' + d, details))))
+        details_html = markdown.markdown('\n'.join(map(lambda d: '* ' + d, details)))
+
+        details_image = ''
+
+        if 'image' in loaded:
+            details_image = "<img src=\"/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
+
+        details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'],details_html,details_image)
+
+        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],details_html)
 
     # Automatically generate a page slug from the name if none is specified
     if 'page_url' not in loaded:

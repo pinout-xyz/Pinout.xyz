@@ -2,7 +2,7 @@
 ---
 name: Enviro pHAT
 class: board
-type: iot,sensor
+type: adc,sensor
 formfactor: pHAT
 manufacturer: Pimoroni
 description: A package of environmental sensors for IoT projects

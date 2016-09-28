@@ -36,7 +36,7 @@ install:
 
 64 blindingly bright LEDs packed into a HAT and driven with an ultra-fast, C library that you can talk to from Python make Unicorn HAT PiGlow's bigger, brighter brother.
 
-Note: Unicorn HAT uses some special PWM trickery, performed with the same hardware that lets you Pi produce sound through the audio jack ( analog audio ) so you can't use both at the same time!
+Note: Unicorn HAT uses some special PWM trickery, performed with the same hardware that lets your Pi produce sound through the audio jack ( analog audio ) so you can't use both at the same time!
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

@@ -24,6 +24,11 @@ lang = "en"
 default_strings = {
     'pin_header': '{} pin header',
     'wiring_pi_pin': 'Wiring Pi pin {}',
+    'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
+    'uses_5v': 'Needs 5v power',
+    'uses_3v3': 'Needs 3v3 power',
+    'uses_i2c': 'Uses I2C',
+    'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
@@ -115,8 +120,12 @@ def load_overlay(overlay):
         loop through them and count how many non-power pins are used
         '''
         if 'pin' in loaded:
+            uses_i2c = False
+            uses_spi = False
+
             uses = 0
             for pin in loaded['pin']:
+                data = loaded['pin'][pin]
                 pin = str(pin)
                 if pin.startswith('bcm'):
                     pin = pinout.bcm_to_physical(pin[3:])
@@ -130,19 +139,44 @@ def load_overlay(overlay):
                     else:
                         uses += 1
 
+                if data is not None and 'mode' in data:
+                    if pin in ['3','5'] and data['mode'] == 'i2c':
+                        uses_i2c = True
+                    if pin in ['19','21','23'] and data['mode'] == 'spi':
+                        uses_spi = True
+
+
+
             if uses > 0:
                 details.append(strings['uses_n_gpio_pins'].format(uses))
 
-            '''
-            If the collection of pins includes pins 3 and 5 in i2c mode, then
-            assume the board uses i2c communication
-            '''
-            if '3' in loaded['pin'] and '5' in loaded['pin']:
-                pin_3 = loaded['pin']['3']
-                pin_5 = loaded['pin']['5']
-                if 'mode' in pin_3 and 'mode' in pin_5:
-                    if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-                        details.append(strings['uses_i2c'])
+            if uses_i2c:
+                details.append(strings['uses_i2c'])
+
+            if uses_spi:
+                details.append(strings['uses_spi'])
+
+        if 'power' in loaded:
+            uses_5v = False
+            uses_3v3 = False
+
+            for pin in loaded['power']:
+                pin = str(pin)
+                if pin.startswith('bcm'):
+                    pin = pinout.bcm_to_physical(pin[3:])
+
+                if pin in ['2','4']:
+                    uses_5v = True
+
+                if pin in ['1','17']:
+                    uses_3v3 = True
+
+            if uses_5v and uses_3v3:
+                details.append(strings['uses_5v_and_3v3'])
+            elif uses_5v:
+                details.append(strings['uses_5v'])
+            elif uses_3v3:
+                details.append(strings['uses_3v3'])
 
         if 'eeprom' in loaded:
             eeprom = str(loaded['eeprom'])
@@ -597,7 +631,8 @@ for pin in range(1, len(pinout.pins) + 1):
                                   title=pin_title + pinout.settings['title_suffix'],
                                   featured_boards=featured_boards_html,
                                   langcode=lang,
-                                  nav_html=nav_html
+                                  nav_html=nav_html,
+                                  body_class='pin'
                                   )
 
     print('>> pinout/{}.html'.format(pin_url))
@@ -636,8 +671,11 @@ for url in pages:
 
     feat_boards_html = featured_boards_html
 
+    body_class = ''
+
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
+        body_class = 'board'
 
     html = pinout.render_html(template,
                               lang_links="\n\t\t".join(langlinks),
@@ -650,7 +688,8 @@ for url in pages:
                               title=pages[url]['name'],
                               featured_boards=feat_boards_html,
                               langcode=lang,
-                              nav_html=nav_html
+                              nav_html=nav_html,
+                              body_class=body_class
                               )
 
     if url not in ['index','404','boards']:

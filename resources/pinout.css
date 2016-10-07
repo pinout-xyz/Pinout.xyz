@@ -31,7 +31,7 @@ table.pin-functions td {width:16.6666%;}
 	font-weight:600;
 }
 .logo a {color:#FFFFFF;}
-.logo img {float:left;margin:0 13px;}
+.logo img {float:left;margin:0 13px;top:8px;}
 .logo a:hover span, .logo a:hover, .logo a:hover span.out {
 	color:#FFFFFF;
 }
@@ -135,8 +135,9 @@ h3 {
 article a {color:#859900;text-decoration:underline;}
 article ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}
 
+
 /*
-Drop down nav
+Featured Boards
 */
 
 
@@ -299,6 +300,8 @@ Drop down nav
 Footer
 */
 
+.footer {clear: both;padding: 20px 0px;text-align:center;}
+
 .footer a {color:#5F8645;}
 
 
@@ -394,7 +397,8 @@ nav#gpio:after {
 	font-size:11px;
 	opacity:0.8;
 	position:absolute;
-	left:-33px;
+	left:31px;
+	text-indent:0;
 }
 .bottom .phys {
 	text-align:right;
@@ -412,7 +416,7 @@ nav#gpio ul.bottom {
 	left:0px;
 }
 
-nav#gpio ul.top li {text-indent:63px;}
+nav#gpio ul.top li {text-indent:56px;}
 nav#gpio ul.top li a, nav#gpio ul.bottom li a {
 	display:block;
 	width:244px;
@@ -448,6 +452,8 @@ nav#gpio ul.bottom li.active a {
 	color:#063541;
 }
 
+nav#gpio ul.bottom li.pin1 a:hover {border-radius:0;}
+
 nav#gpio li a small {font-size:11px;}
 
 nav#gpio ul.top li.overlay-pin a,
@@ -456,9 +462,14 @@ nav#gpio ul.bottom li.overlay-pin a {
 	color:#063541;
 }
 
+nav#gpio ul.top li.overlay-pin a:hover,
+nav#gpio ul.bottom li.overlay-pin a:hover {
+	background:rgb(245, 243, 237);
+	color:#063541;
+}
+
 nav#gpio .top li.overlay-power a .phys, .bottom li.overlay-power a .phys {
 	color:#FFFFFF;
-	font-size:0px;
 }
     
 nav#gpio ul.top li.overlay-power a,
@@ -467,19 +478,37 @@ nav#gpio ul.bottom li.overlay-power a {
 	color:#FFFFFF;
 }
 
-nav#gpio .top li.overlay-ground a .phys, .bottom li.overlay-ground a .phys {
+nav#gpio .top li.overlay-ground a .phys, nav#gpio .bottom li.overlay-ground a .phys {
 	background:#073642;
 	color:#FFFFFF;
-	font-size:0px;
 	opacity:1;
 	position:absolute;
-	top:-2px;
-	width:44px;
-	height:26px;
-	border-radius:13px;
+	top:0px;
+	width:20px;
+	height:22px;
+	border-radius:11px;
+    text-indent: 0px;
+    line-height: 22px;
 }
-nav#gpio .top li.overlay-ground a .phys {left:-1px;}
-nav#gpio .bottom li.overlay-ground a .phys {right:-1px;}
+
+nav#gpio .bottom li.overlay-ground a .phys {
+	padding-right:32px;
+    right:0;
+}
+
+nav#gpio .top li.overlay-ground a .phys {
+	padding-left:32px;
+    left:0;
+}
+
+
+nav#gpio .top li.overlay-power a:hover, nav#gpio .bottom li.overlay-power a:hover {
+	background:#268bd2;
+}
+
+nav#gpio .top li.overlay-ground a:hover .phys, nav#gpio .bottom li.overlay-ground a:hover .phys {
+	background:#268bd2;
+}
 
 nav#gpio li.overlay-ground span.pin {background:#073642;}
 
@@ -536,6 +565,12 @@ nav#gpio ul.top li.legend {
 	padding-left:5px;
 	left:-5px;
 }
+
+body.board ul.bottom a {color:rgba(233, 229, 210, 0.6);}
+body.board ul.top a {color:rgba(6, 53, 65, 0.6);}
+
+body ul.bottom .gnd a {color:rgba(233, 229, 210, 0.5);}
+body ul.top .gnd a {color:rgba(6, 53, 65, 0.5);}
 
 nav#gpio li.pin1 span.pin {border-radius:0;}
 nav#gpio li.pow3v3 span.pin {background:#B58900;}

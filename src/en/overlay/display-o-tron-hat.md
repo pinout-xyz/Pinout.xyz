@@ -40,6 +40,13 @@ pin:
     name: LCD Reset
     mode: output
     active: low
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
+  '0x2c':
+    name: Cap Touch
+    device: cap1166
 -->
 #Display-o-Tron HAT
 

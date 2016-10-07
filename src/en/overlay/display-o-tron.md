@@ -53,17 +53,10 @@ pin:
     active: high
   '23':
     mode: spi
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'dot3k'
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
 -->
 #Display-o-Tron 3000
 

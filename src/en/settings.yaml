@@ -29,9 +29,9 @@ strings:
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
 featured:
+- pijack
 - ab-servo-pwm-pi-zero
 - microdot-phat
-- redbear-iot-hat
 - wifi-pants
 overlays:
 - ground

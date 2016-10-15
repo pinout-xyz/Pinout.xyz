@@ -25,6 +25,7 @@ strings:
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
+- details: 'Details'
 featured:
 - display-o-tron
 - piborg-ledborg

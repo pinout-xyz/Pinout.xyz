@@ -85,6 +85,7 @@ overlays:
 - piborg-zeroborg
 - pibrella
 - piglow
+- pijack
 - propeller-hat
 - raspio-duino
 - redbear-iot-hat

@@ -31,7 +31,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#Sense HAT
+# Sense HAT
 
 The Sense HAT is an add-on board for Raspberry Pi comprising of a 8×8 RGB LED matrix, a five-button joystick and the following sensors: Gyroscope, Accelerometer, Magnetometer, Temperature, Barometric pressure and Humidity.
 
@@ -42,3 +42,32 @@ The sensors themselves also operate over the i2c bus:
 The IMU (Gyroscope, Accelerometer, Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e),0x6a(0x6b), with Interrupts on the ATTINY88.
 
 Environmental sensors are represented by a LPS25H Pressure+Temperature sensor at address 0x5c and by a HTS221 Humidity+Temp sensor at 0x5f on the i2c bus.
+
+## Code
+
+```python
+from sense_hat import SenseHat
+from random import randint
+from time import sleep
+
+sense = SenseHat()
+
+print("Temperature: {}".format(sense.temperature))
+print("Humidity: {}".format(sense.humidity))
+print("Pressure: {}".format(sense.pressure))
+
+sense.show_message("Hello world")
+
+sense.stick.direction_any = sense.clear
+
+while True:
+    x = randint(0, 7)
+    y = randint(0, 7)
+    r = randint(0, 255)
+    g = randint(0, 255)
+    b = randint(0, 255)
+    sense.set_pixel(x, y, r, g, b)
+    sleep(0.01)
+```
+
+[Sense HAT docs](http://pythonhosted.org/sense-hat/api/)

@@ -76,6 +76,7 @@ lite = PiLiter()
 for led in lite:
     led.on()
     sleep(0.1)
+    led.off()
 
 lite.on()
 sleep(5)

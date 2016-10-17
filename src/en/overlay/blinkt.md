@@ -26,6 +26,23 @@ pin:
     mode: output
     active: high
 -->
-#Blinkt!
+# Blinkt!
 
 Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.
+
+## Code
+
+```python
+from blinkt import set_pixel, show
+from random import randint
+from time import sleep
+
+while True:
+    for pixel in range(8):
+        r = randint(255)
+        g = randint(255)
+        b = randint(255)
+        set_pixel(pixel, r, g, b)
+        show()
+        sleep(0.1)
+```

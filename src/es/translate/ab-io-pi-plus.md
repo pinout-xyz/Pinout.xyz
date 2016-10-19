@@ -28,21 +28,21 @@ i2c:
 -->
 #IO Pi Plus
 
-The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 Model B computer platform. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
+IO Pi Plus es una placa de expansión digital de 32 canales diseñada para funcionar con Raspberry Pi A+, B+ y 2 modelo B. La placa está basada en el I/O expander de 16-bit MCP23017 de Microchip Technology Inc.
 
-A pair of MCP23017 expanders are included on the board allowing you to connect up to 32 digital inputs or outputs to the Raspberry Pi.  The IO Pi Plus Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
+La placa incluye un par de MCP23017 que permiten conectar hasta 32 entradas o salidas digitales a Raspberry Pi. IO Pi Plus se alimenta a partir de los puertos GPIO de Raspberry Pi y permite además conectar otras placas.
 
-##Features
+##Especificaciones
 
--  32 Digital Inputs/Outputs
--  Control via the Raspberry Pi I2C port
--  Stack up to 4 IO Pi boards on a single Raspberry Pi
--  Jumper selectable I2C addresses
--  External 5V Input with isolation jumper
--  Based on the MCP23017 from Microchip Technologies Inc
--  Configurable interrupt output pins - Configurable as active-high, active-low or open-drain
--  INTA and INTB can be configured to operate independently or together
--  Configurable interrupt source  - Interrupt-on-change from configured register defaults  or pin changes
--  Polarity Inversion register to configure the polarity of the input port data
+-  32 entradas/salidas digitables
+-  Control mediante el puerto I2C de Raspberry Pi
+-  Acopla hasta cuatro placas en una sola Raspberry Pi
+-  Selección de dirección I2C
+-  Entrada de 5V externa con cable aislante
+-  Basado en MCP23017 de Microchip Technologies Inc
+-  Salidas configurables como active-high, active-low o open-drain
+-  INTA e INTB configurables para trabajar independientemente o en conjunto
+-  Fuente configurable para registrar cambios de pines o de valores predeterminados
+-  Registro de inversión de polaridad para configurar la polaridad del puerto de entrada
 
-Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Librerías Arduino, C, Windows 10 IOT, Python 2 and Python 3 disponibles en GitHub.

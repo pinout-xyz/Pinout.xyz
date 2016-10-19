@@ -28,14 +28,14 @@ install:
 -->
 #Analog Zero
 
-The RasPiO Analog Zero offers a compact, inexpensive, easy way to add eight analog channels to your Raspberry Pi. RasPiO Analog Zero uses an MCP3008 analog to digital converter. It's an SPI driven, 10-bit, 8-channel ADC.
+Analog Zero de RasPiO ofrecce una manera fácil, compacta y barata de añadir ocho canales analógicos a Raspberry Pi. Analog Zero de RasPiO utiliza el conversor analógico a digital MCP3008. Es un ADC de 8  canales, 10-bit controlado por SPI.
 
-With RasPiO Analog Zero you can:
+Con Analog Zero de RasPiO puedes:
 
-* read up to 8 analog inputs at once
-* make a weather station
-* make a digital thermometer
-* make a voltmeter
-* use potentiometer dials for control and display
-* read analog sensors or voltages
-* make your own embedded device with minimal footprint
+* Leer 8 entradas analógicas simultáneamente
+* Hacer una estación meteorológica
+* Hacer un termómetro digital
+* Hacer un potenciómetro
+* Usar los diales del potencómetro para controlar y mostrar
+* Leer sensores analógicos o voltajes
+* Hacer tu propio dispositivo incrustado con el mínimo espacio

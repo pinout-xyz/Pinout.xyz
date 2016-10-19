@@ -25,10 +25,10 @@ i2c:
 -->
 #1 Wire Pi Plus
 
-The 1 Wire Pi Plus from AB Electronics UK is a communication board supporting the 1-Wire® protocol designed for use on the Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 Model B computer platforms.  A 5V buffered I2C port is also provided on the board. 
+1 Wire Pi Plus de AB Electronics UK es una placa de comunicación diseñada para Raspberry Pi A+, B+ y 2 modelo B, compatible con el protocolo 1-Wire®. La placa incluye un puerto I2C de 5V regulable.
 
-The 1-Wire® port on the 1 Wire Pi Plus is based around a DS2482-100 I2C to 1-Wire® bridge device.  The DS2482-100 provides bi-directional protocol conversion between the I2C port on the Raspberry Pi and any attached 1-Wire® slave devices.  An ESD Protection Diode is used to protect the 1 Wire Pi Plus and Raspberry Pi from electrostatic spikes on the 1-Wire® port.  Connections to the 1-Wire® port can be made through the RJ-12 socket or the solder points on the PCB.
+El puerto 1-Wire® en 1 Wire Pi Plus está basado en el componente puente de DS2482-100 I2C a 1-Wire®. El DS2482-100 proporciona una protocolo de conversión bidireccional entre el puerto I2C en Raspberry Pi y cualquier dispositvo esclavo conectado a 1-Wire®. Se utiliza un diodo de protección ESD para proteger 1 Wire Pi Plus y Raspberry Pi de descargas electrostáticas en el puerto 1-Wire®. Las conexiones al puerto 1-Wire® pueden realizarse a través del conector RJ-12 o soldando en el PCB.
 
-The Quick2wire lib from [https://github.com/quick2wire/quick2wire-python-api](https://github.com/quick2wire/quick2wire-python-api) allows easy access to the I2C port via Python.
+La librería Quick2wire  [https://github.com/quick2wire/quick2wire-python-api](https://github.com/quick2wire/quick2wire-python-api) permite un acceso sencillo al puerto I2C mediante Python.
 
 [https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi](https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi "Configuring and using the 1-Wire® port on your Raspberry Pi")

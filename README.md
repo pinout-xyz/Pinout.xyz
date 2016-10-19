@@ -26,7 +26,7 @@ The contents of this GitHub repository are used to build http://pinout.xyz and i
 
 Maintainers: @gadgetoid and @RogueM
 
-GPUI code examples by: @bennuttall
+GPIO Zero code examples by: @bennuttall
 
 Notable contributions:
 

@@ -24,8 +24,13 @@ If you've spotted an error, ommission or have a suggestion then you're welcome t
 
 The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
 
-Current known contributors are:
+Maintainers: @gadgetoid and @RogueM
 
+GPUI code examples by: @bennuttall
+
+Notable contributions:
+
+* en - @lurch and @abelectronicsuk
 * de - @rdmueller and @KojoePi
 * es - @ResonantWave and @IkerGarcia
 * fr - @RogueM

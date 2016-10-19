@@ -27,7 +27,7 @@ The contents of this GitHub repository are used to build http://pinout.xyz and i
 Current known contributors are:
 
 * de - @rdmueller and @KojoePi
-* es - @ResonantWave
+* es - @ResonantWave and @IkerGarcia
 * fr - @RogueM
 * it - @LizardM4 
 * pt - @Maslor

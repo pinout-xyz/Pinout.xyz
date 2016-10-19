@@ -27,7 +27,7 @@ i2c:
 
 1 Wire Pi Plus de AB Electronics UK es una placa de comunicación diseñada para Raspberry Pi A+, B+ y 2 modelo B, compatible con el protocolo 1-Wire®. La placa incluye un puerto I2C de 5V regulable.
 
-El puerto 1-Wire® en 1 Wire Pi Plus está basado en el componente puente de DS2482-100 I2C a 1-Wire®. El DS2482-100 proporciona una protocolo de conversión bidireccional entre el puerto I2C en Raspberry Pi y cualquier dispositvo esclavo conectado a 1-Wire®. Se utiliza un diodo de protección ESD para proteger 1 Wire Pi Plus y Raspberry Pi de descargas electrostáticas en el puerto 1-Wire®. Las conexiones al puerto 1-Wire® pueden realizarse a través del conector RJ-12 o soldando en el PCB.
+El puerto 1-Wire® en 1 Wire Pi Plus está basado en el componente puente de DS2482-100 I2C a 1-Wire®. El DS2482-100 proporciona una protocolo de conversión bidireccional entre el puerto I2C en Raspberry Pi y cualquier dispositvo esclavo conectado a 1-Wire®. Se utiliza un diodo de protección ESD para proteger 1 Wire Pi Plus y Raspberry Pi de descargas electrostáticas en el puerto 1-Wire®. Las conexiones al puerto 1-Wire® se pueden realizar a través del conector RJ-12 o soldando en el PCB.
 
 La librería Quick2wire  [https://github.com/quick2wire/quick2wire-python-api](https://github.com/quick2wire/quick2wire-python-api) permite un acceso sencillo al puerto I2C mediante Python.
 

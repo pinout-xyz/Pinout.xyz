@@ -28,7 +28,7 @@ i2c:
 -->
 #ADC Differential Pi
 
-ADC Differential Pi es un conversor de 18 bit análogos a digital de 8 canales, diseñado para funcionar con Raspberry Pi A+, B+ y 2 modelo B. ADC Differential Pi está basado en dos microchip conversores MCP3424 A/D, cada uno de ellos con 4 entradas analógicas. MCP3424 es un conversor A/D delta-sigma con entradas con bajo ruido diferencial.
+ADC Differential Pi es un conversor de 18 bit analógico a digital de 8 canales, diseñado para funcionar con Raspberry Pi A+, B+ y 2 modelo B. ADC Differential Pi está basado en dos microchip conversores MCP3424 A/D, cada uno de ellos con 4 entradas analógicas. MCP3424 es un conversor A/D delta-sigma con entradas con bajo ruido diferencial.
 
 ##Especificaciones
 

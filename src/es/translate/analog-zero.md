@@ -28,7 +28,7 @@ install:
 -->
 #Analog Zero
 
-Analog Zero de RasPiO ofrecce una manera fácil, compacta y barata de añadir ocho canales analógicos a Raspberry Pi. Analog Zero de RasPiO utiliza el conversor analógico a digital MCP3008. Es un ADC de 8  canales, 10-bit controlado por SPI.
+Analog Zero de RasPiO ofrece una manera fácil, compacta y barata de añadir ocho canales analógicos a Raspberry Pi. Analog Zero de RasPiO utiliza el conversor analógico a digital MCP3008. Es un ADC de 8  canales, 10-bit controlado por SPI.
 
 Con Analog Zero de RasPiO puedes:
 

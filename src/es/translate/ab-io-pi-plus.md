@@ -30,7 +30,7 @@ i2c:
 
 IO Pi Plus es una placa de expansión digital de 32 canales diseñada para funcionar con Raspberry Pi A+, B+ y 2 modelo B. La placa está basada en el I/O expander de 16-bit MCP23017 de Microchip Technology Inc.
 
-La placa incluye un par de MCP23017 que permiten conectar hasta 32 entradas o salidas digitales a Raspberry Pi. IO Pi Plus se alimenta a partir de los puertos GPIO de Raspberry Pi y permite además conectar otras placas.
+La placa incluye dos MCP23017 que permiten conectar hasta 32 entradas o salidas digitales a Raspberry Pi. IO Pi Plus se alimenta a partir de los puertos GPIO de Raspberry Pi y permite además conectar otras placas.
 
 ##Especificaciones
 

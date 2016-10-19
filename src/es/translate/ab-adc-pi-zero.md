@@ -28,14 +28,14 @@ i2c:
 -->
 #ADC Pi Zero
 
-ADC Pi Zero es un conversor de 17 bit análogos a digital de 8 canales, diseñado para funcionar con Raspberry Pi Zero. ADC Differential Pi está basado en dos microchip conversores MCP3424 A/D, cada uno de ellos con 4 entradas analógicas. MCP3424 es un conversor A/D delta-sigma con entradas con bajo ruido diferencial.
+ADC Pi Zero es un conversor de 17 bit analógico a digital de 8 canales, diseñado para funcionar con Raspberry Pi Zero. ADC Differential Pi está basado en dos microchip conversores MCP3424 A/D, cada uno de ellos con 4 entradas analógicas. MCP3424 es un conversor A/D delta-sigma con entradas con bajo ruido diferencial.
 
 ##Especifiaciones
 
 - 8 x 17-bit entradas únicas de 0 a 5 V
 - Control mediante el puerto I2C de Raspberry Pi
 - Acopla hasta cuatro placas en una sola Raspberry Pi
-- Selección de dirección I2C 
+- Selección de dirección I2C
 - Puerto I2C de 5V regulable
 - Basado en MCP3424 de Microchip Technologies Inc
 - Rango único de 5 V

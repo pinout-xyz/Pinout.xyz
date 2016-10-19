@@ -23,7 +23,7 @@ pin:
 
 Serial Pi Plus es un coversor UART a RS232 serie para Raspberry Pi.
 
-El puerto RS232 se conecta al puerto UART de Raspberry Pi utilizando una interfaz MAX2323. MAX3232 IC convierte los 3.2V del puerto UART a voltajes RS232 permitiendo la comunicación con dispositivos compatibles con RS232 mediante un cable serie DB) o con el uso de un cable null-modem que permita elacceso mediante terminal a Raspberry Pi. El puerto RS232 puede accederse a partir del puerto DB9 o soldando en el PCB.
+El puerto RS232 se conecta al puerto UART de Raspberry Pi utilizando una interfaz MAX2323. MAX3232 IC convierte los 3.3V del puerto UART a voltajes RS232 permitiendo la comunicación con dispositivos compatibles con RS232 mediante un cable serie DB) o con el uso de un cable null-modem que permita elacceso mediante terminal a Raspberry Pi. El puerto RS232 puede accederse a partir del puerto DB9 o soldando en el PCB.
 
 ##Especificaciones
 

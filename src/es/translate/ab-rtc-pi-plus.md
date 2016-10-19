@@ -25,7 +25,7 @@ i2c:
 -->
 #RTC Pi Plus
 
-RTC Pi Plus es un módulo de reloj de tiempo real, con batería incluída, diseñado para funcionar con Raspberry Pi A+, B+ y 2 modelo B. Registra el tiempo mientras Raspberry Pi está apagada y permite a Raspberry Pi recuperar la fecha una vez encendida.
+RTC Pi Plus es un módulo de reloj de tiempo real, con batería incluída, diseñado para funcionar con Raspberry Pi A+, B+ y 2 modelo B. Registra el tiempo mientras Raspberry Pi está apagada y permite a Raspberry Pi recuperar la fecha una vez encendida de nuevo.
 
 RTC Pi Plus se alimenta a partir de los pines GPIO de Raspberry Pi y permite añadir otras placas. RTC Pi Plus usa el reloj de tiempo real DS1307 RTC y una batería CR2032 para mantener la fecha cuando la fuente de alimentación principal no está disponible.
 

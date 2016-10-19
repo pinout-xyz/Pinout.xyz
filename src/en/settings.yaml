@@ -32,7 +32,7 @@ strings:
 featured:
 - pijack
 - ab-servo-pwm-pi-zero
-- microdot-phat
+- 4tronix-picon-zero
 - wifi-pants
 overlays:
 - ground
@@ -46,6 +46,7 @@ overlays:
 - spi
 - uart
 - wiringpi
+- 4tronix-picon-zero
 - ab-1-wire-plus
 - ab-1-wire-zero
 - ab-adc-differential-pi

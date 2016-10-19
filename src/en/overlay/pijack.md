@@ -4,7 +4,7 @@ name: PiJack
 class: board
 type: network
 formfactor: pHAT
-manufacturer: Hot Glue Technologies
+manufacturer: Hot Glue Tech
 description: Add Ethernet to your Pi Zero
 url: https://pijack.net
 buy: https://pijack.net
@@ -13,7 +13,6 @@ pincount: 40
 eeprom: yes
 power:
   '2':
-  '4':
 ground:
   '6':
   '9':
@@ -49,7 +48,6 @@ There are a couple of recent improvements to the Ethernet controller driver, so 
 ```bash
 sudo apt-get update
 sudo apt-get dist-upgrade
-sudo rpi-update
 ```
 
 

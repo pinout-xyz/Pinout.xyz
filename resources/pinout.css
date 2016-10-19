@@ -470,6 +470,7 @@ nav#gpio ul.bottom li.overlay-pin a:hover {
 
 nav#gpio .top li.overlay-power a .phys, .bottom li.overlay-power a .phys {
 	color:#FFFFFF;
+	opacity:1;
 }
     
 nav#gpio ul.top li.overlay-power a,

@@ -4,7 +4,7 @@ name: PiJack
 class: board
 type: network
 formfactor: pHAT
-manufacturer: Hot Glue Tech
+manufacturer: Hot Glue
 description: Add Ethernet to your Pi Zero
 url: https://pijack.net
 buy: https://pijack.net

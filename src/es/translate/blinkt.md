@@ -25,4 +25,4 @@ pin:
 -->
 #Blinkt!
 
-Blinkt! es una placa adicional para Raspberry Pi ultradelgada con 8 LEDs APA-102.
+Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.

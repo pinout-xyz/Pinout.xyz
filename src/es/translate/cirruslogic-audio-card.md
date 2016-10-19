@@ -70,11 +70,11 @@ pin:
 -->
 #Cirrus Logic Audio Card
 
-###Ofrece una gran variedad de especificaciones, perfecta para los audiófilos más entusiastas que quieren utilizar su Raspberry Pi para aplicaciones de audio.
+###Offers a wealth of features, perfect for avid audiophiles wanting to use their Raspberry Pi for audio applications.
 
-* Capaz de reproducir audio HD, a 24-bit, 192khz
-* Puerto jack de 4 polos y 3.5 mm para conectar un conjunto de auriculares/micrófono para jugar o VoIP
-* Incluye dos micrófonos DMIC para grabar audio estéreo
-* Jack de 3.5 mm para conectar una entrada estéreo que permita grabar audio de gran calidad
-* Jack de 3.5 mm para conectar una salida estéreo como altavoces o amplificadores
-* Entrada y salida estéreo digital (SPDIF)
+* Capable of rendering HD Audio, at 24-bit, 192kHz
+* 3.5mm 4-pole jack for a headset/boom mic combination for gaming or VoIP applications
+* Two DMIC microphones onboard for stereo recording
+* 3.5mm jack for Stereo Line Input for high quality audio recording or capture
+* 3.5 mm jack Stereo Line Output for connection to devices such as external stereo amplifiers or powered speakers
+* Stereo Digital input and output (SPDIF)

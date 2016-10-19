@@ -28,24 +28,24 @@ i2c:
 -->
 #ADC Differential Pi
 
-ADC Differential Pi es un conversor de 18 bit análogos a digital de 8 canales, diseñado para funcionar con Raspberry Pi A+, B+ y 2 modelo B. ADC Differential Pi está basado en dos microchip conversores MCP3424 A/D, cada uno de ellos con 4 entradas analógicas. MCP3424 es un conversor A/D delta-sigma con entradas con bajo ruido diferencial.
+The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter designed to work with the Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 Model B. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Especificaciones
+##Features
 
-- Entradas diferenciales 8 x 18-bit
-- Control mediante el puerto I2C de Raspberry Pi
-- Acopla hasta cuatro placas en una sola Raspberry Pi
-- Selección de dirección I2C (8 opciones)
-- Puerto I2C de 5V regulable
-- Basado en MCP3424 de Microchip Technologies Inc
-- Rango de entrada ±2.048V
-- Voltaje de refrencia 2.048V (Precisión  ± 0.05%, Desvío: 15 ppm/°C)
-- Amplificador de ganancia programable (PGA): ganancia de 1, 2, 4 or 8
-- Velocidad de datos programable:
+- 8 x 18-bit differential inputs
+- Control via the Raspberry Pi I2C port
+- Stack up to 4 ADC Differential Pi boards on a single Raspberry Pi
+- Jumper selectable I2C addresses (8 choices)
+- Buffered 5V I2C port
+- Based on the MCP3424 from Microchip Technologies Inc
+- Input range of ±2.048V
+- On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
+- On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
+- Programmable Data Rate Options:
     - 3.75 SPS (18 bits)
     - 15 SPS (16 bits)
     - 60 SPS (14 bits)
     - 240 SPS (12 bits)
-- Conversión única o continua
+- One-Shot or Continuous Conversion Options
 
-Librerías Arduino, C, Windows 10 IOT, Python 2 and Python 3 disponibles en GitHub.
+Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries available on GitHub.

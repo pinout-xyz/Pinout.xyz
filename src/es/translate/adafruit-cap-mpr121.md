@@ -36,6 +36,6 @@ install:
 -->
 #Capacitive Touch HAT
 
-Esta placa para Raspberry Pi proporciona 12 entradas táctiles capacitivas y todo el sistema para poder leerlas mediante el puerto I2C.
+This Raspberry Pi add-on board provides 12 capacitive touch inputs and all the logic to read them over a simple I2C communication bus.
 
-Basado en el chip MPR121, este HAT permite crear dispositivos electrónicos que reaccionan al tacto humano, hasta con 12 sensores.
+Baded on the MPR121 chip, this HAT allows you to create electronics that can react to human touch, with up to 12 individual sensors.

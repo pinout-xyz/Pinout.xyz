@@ -29,11 +29,11 @@ pin:
 -->
 #Carberry
 
-Carberry es una placa adicional para Raspberry Pi que puede ser utilizada para hacer interaccionar la electrónica del coche con Raspberry Pi. Permite el desarrollo de aplicaciones como centros multimedia, diagnóstico del vehículo, registro de datos, control de flota, rastreo, cajas negras, alarmas, ordenador de abordo, internet y mucho más.
+Carberry is an add-on board for Raspberry Pi that can be used to inteface between car electronics and your Pi. It allows the development of end-user applications, such as media centers, vehicle diagnostics, data logging, fleet management, tracking, blackboxes, burglar alarms, carputing, internet, and much more.
 
-##Especificaciones
-- Acelerómetro
-- Magnetómetro
+##Features
+- Accelerometer
+- Magnetometer
 - RTCC
 - 2x CAN BUS
 - 2x GMLAN
@@ -43,4 +43,4 @@ Carberry es una placa adicional para Raspberry Pi que puede ser utilizada para h
 - 2x GPO
 - 1x GPIO CMOS
 - 1x IGNITION IN
-- 1x I GNITION OUT
+- 1x IGNITION OUT

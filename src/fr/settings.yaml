@@ -47,6 +47,7 @@ overlays:
 - ab-adc-differential-pi
 - ab-adc-pi-plus
 - ab-adc-pi-zero
+- ab-adcdac-pi-zero
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat

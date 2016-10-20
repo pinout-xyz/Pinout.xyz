@@ -42,6 +42,7 @@ overlays:
 - wiringpi
 - 4tronix-picon-zero
 - ab-1-wire-plus
+- ab-1-wire-zero
 - ab-rtc-pi-zero
 - iqaudio-pi-dac
 - display-o-tron

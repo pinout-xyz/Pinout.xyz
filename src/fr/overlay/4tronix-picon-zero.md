@@ -2,11 +2,11 @@
 ---
 name: Picon Zero
 class: board
-type: motor
+type: Moteur
 formfactor: pHAT
 image: '4tronix-picon-zero.png'
 manufacturer: 4tronix
-description: A robot controller board for the Raspberry Pi
+description: Une carte de contrôle de robot pour le Raspberry Pi
 url: http://4tronix.co.uk/piconzero/
 buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=552
 pincount: 40
@@ -35,6 +35,6 @@ i2c:
 -->
 #Picon Zero
 
-The Picon Zero is an add-on PCB for the Raspberry Pi that is physically the same size as a Raspberry Pi Zero and so is ideal as a pseudo-Hat (pHat) for the Pi Zero. However, it can of course be used on any Raspberry Pi with a 40-pin GPIO connector.
+Le **Picon Zero** est une carte chapeau au format pHat (pseudo-Hat) pour le **Raspberry Pi ZERO**. La carte peut, bien evidemment, être utilisée sur les autres Raspberry pi grâce au connecteur GPIO 40 broches.
 
-As well as 2 full H-Bridge motor drivers, the Picon Zero has a number of Input and Output pins that can be configured in a variety of ways, allowing you to easily add analog inputs or neopixel outputs to your Raspberry Pi without any complicated software and kernel specific drivers. It also provides an interface for an HC-SR04 ultrasonic distance sensor and opens up 5 GPIO pins from the Raspberry Pi for you to use as you see fit.
+En plus de 2 pilotes moteur **H-Bridge**, Le **Picon Zero** a un ensemble d'entrée/sorties entièrement paramétrables, vous permettant facilement de rajouter des entrées analogiques ou sorties neopixel à votre Raspeberry Pi sans logiciels ou kernel compliqués ou spécifiques. La carte propose aussi une interface **HC-SR04** pour capteur de distance ultrasonique et libère aussi 5 port GPIO de votre Raspberry Pi.

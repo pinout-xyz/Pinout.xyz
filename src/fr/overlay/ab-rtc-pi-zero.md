@@ -41,6 +41,6 @@ Le **RTC Pi Zero** est une carte chapeau horloge autonome pour le Raspberry Pi Z
 La carte chapeau **RTC Pi Zero** est alimenté via les ports GPIO du Raspberry Pi, elle étend aussi les connecteurs du GPIO pour permettre de rajouter une carte chapeau supplémentaires. Le **RTC Pi Zero** utilise une horloge **DS1307 RTC** et une batterie **CR2032** pour maintenir la date et l'heure quand l'alimentation principale du système n'est pas disponible.
 
 #todo#
-Unlike most other DS1307 based RTC modules the RTC Pi Zero also includes an I2C logic level converter allowing you to connect other 5V I2C devices to your Raspberry Pi.
+Contrairement aux autres modules basé sur les horloges **DS1307 RTC**, le **RTC Pi Zero** inclu un convertisseur de niveau logique I2C qui vous permet de connecter d'autres cartes I2C 5v à votre Raspberry.
 
 Les librairies **Arduino**, **C**, **Node.js**, **Windows 10 IOT**, **Python 2** et **Python 3** sont disponibles sur GitHub.

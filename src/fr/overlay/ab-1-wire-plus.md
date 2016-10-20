@@ -38,8 +38,8 @@ i2c:
 
 Le **1 Wire Pi Plus** de **AB Electronics UK** est une carte chapeau de communication supportant le protocole **1-Wire®** et conçu pour une utilisation avec le Raspberry Pi. Un port I2C 5v est aussi disponible sur la carte.
 
-The 1-Wire® port on the 1 Wire Pi Plus is based around a DS2482-100 I2C to 1-Wire® bridge device.  The DS2482-100 provides bi-directional protocol conversion between the I2C port on the Raspberry Pi and any attached 1-Wire® slave devices.  An ESD Protection Diode is used to protect the 1 Wire Pi Plus and Raspberry Pi from electrostatic spikes on the 1-Wire® port.  Connections to the 1-Wire® port can be made through the RJ-12 socket or the solder points on the PCB.
+Le port **1-Wire®** sur la carte chapeau **1 Wire Pi Plus** est conçu autour d'un pont **DS2482-100**: **I2C** vers **1-Wire®**. Le **DS2482-100** permet une conversion de protocole bi-directionnel entre le port **I2C** du Raspberry et n'importe quel equipement esclave **1-Wire®** attaché à la carte. Une diode de protection ESD permet de protéger la carte **1 Wire Pi Plus** et le Raspberry Pi de toutes décharges électrostatiques sur le port **1-Wire®**. Les connections sur le port **1-Wire®** se font grâce à une prise **RJ-12** ou sur les points de soudures de la carte.
 
-I2C address select solder jumpers give you the ability to set the I2C address of the 1 Wire Pi Plus allowing the board to be used with other I2C devices on the same bus.
+Le cavalier sur la carte permet de sélectionner l'addresse **I2C** de la carte **1 Wire Pi Plus** permettant ainsi d'utiliser la carte avec d'autres equipements sur le même bus.
 
 [https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi](https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi "Configuring and using the 1-Wire® port on your Raspberry Pi")

@@ -50,6 +50,8 @@ make serve LANG=de
 
 And then open: http://127.0.0.1:5000 in your browser.
 
+*note: if you are facing issues on your preview (card not showing, text update not appearing ...), you can fix it by erasing you browser cache (image and cache file only)*
+
 Please do not attempt to translate the `/resources` folder, this is shared between sites on the server and should be generic.
 
 Feel free to modify the template with links relevant to your country, and / or your Twitter handle, but don't fiddle with the structure!

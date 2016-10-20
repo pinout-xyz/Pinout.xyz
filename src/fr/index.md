@@ -4,17 +4,18 @@
 
 Ce document n'est pas destiné à l'impression, c'est à la fois un outil de référence rapide et un guide complet des broches GPIO de la Raspberry Pi.
 
+##Dernières News de Pinout
+
+Nous avons [ajouté un explorateur de cartes](/boards)! Utilisez le pour trouver le brochage de votre carte chapeau Raspberry Pi, ou en découvrir de nouvelles. Si vous fabriquez des cartes chapeau, nous serions ravis de les ajouter aussi ! [Vous pouvez contribuer sur GitHub](https://github.com/gadgetoid/Pinout2).
+
 ##Mais que veulent dire tous ces numéros?
 
 * BCM - numérotation Broadcom, plus communément apellée "GPIO"; utile pour travailler avec la librarie RPi.GPIO
 * WiringPi - numérotation Wiring Pi; utile pour travailler avec la librarie Wiring Pi
 * Physique - numérotation correspondante à la position physique des broches sur le connecteur GPIO
 
-##Pi 2 (note 1)
+##Représentation graphique du brochage
 
-Pour fêter la sortie de la Raspberry Pi 2 et l'engouement qu'elle suscite, Pinout à été mis à jour et est maintenant plus clair et plus complet. Il sera mis à jour dans le futur avec toute information utile ou autres précisions manquantes.
+Nous avons créé un schema simple du brochage du port GPIO du Raspberry Pi. Soyez libres d'imprimer, intégrer, partager ou référencer cette image mais sans oublier de nous mentionner !
 
-##Model B+ (note 2)
-
-Avec la sortie du modèle B+ de la Raspberry Pi, Pinout maintenant documente les 14 broches supplémentaires qu'elle vous offre.
-
+[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)

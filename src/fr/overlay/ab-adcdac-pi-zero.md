@@ -42,10 +42,10 @@ install:
 
 Le **ADC-DAC Pi Zero** de **AB Electronics** est une carte chapeau de conversion de signaux Analogiques vers Digitaux sur 2 canaux 12 bit et Digitaux vers Analogiques sur 2 canaux 12 bit conçu pour fonctionner avec le Raspberry Pi. Taillé aux dimensions du Raspberry Pi Zero, la carte chapeau **ADC-DAC Pi Zero** est aussi compatible avec les autres modèles de Raspberry Pi.
 
-The ADC-DAC Pi Zero is based on the Microchip MCP3202 A/D converter containing 2 analogue inputs with 12 bit resolution with a Microchip MCP4822 dual channel 12-bit DAC with internal voltage reference.
+Le **ADC-DAC Pi Zero** est basé sur la micro-puce de conversion **MCP3202 A/D** qui comporte 2 entrées analogiques 12 bit et sur une micro-puce **MCP4822 D/A**  qui comporte 2 entrées digitales avec tension de référence interne.
 
-Max ADC Sample Rate: 100 ksamples/sec
+Débit de conversion ADC max: 100 ksamples/sec
 
-Max ADC Sample Rate under Python: 12,000 samples per second.
+Débit de conversion ADC max (sous Python): 12,000 samples per second.
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Les librairies **Arduino**, **C**, **Node.js**, **Windows 10 IOT**, **Python 2** et **Python 3** sont disponibles sur GitHub.

@@ -52,10 +52,10 @@ Le  **ADC Pi Plus** de **AB Electronics** est une carte chapeau de conversion su
 - Tension de référence 2.048V embarquée (Précision ± 0.05%, Glissement: 15 ppm/°C)
 - Amplificateur de Gain programmable embarqué (PGA): Gain de 1, 2, 4 ou 8
 - Débit de données programmable:
-   - 3.75 SPS (17 bits)
-   - 15 SPS (15 bits)
-   - 60 SPS (13 bits)
-   - 240 SPS (11 bits)
+    - 3.75 SPS (17 bits)
+    - 15 SPS (15 bits)
+    - 60 SPS (13 bits)
+    - 240 SPS (11 bits)
 - Convertion unique ou continue
 
 Les librairies **Arduino**, **C**, **Node.js**, **Windows 10 IOT**, **Python 2** et **Python 3** sont disponibles sur GitHub.

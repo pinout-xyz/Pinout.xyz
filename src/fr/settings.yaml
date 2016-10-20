@@ -38,6 +38,7 @@ overlays:
 - uart
 - wiringpi
 - 4tronix-picon-zero
+- ab-1-wire-plus
 - ab-rtc-pi-zero
 - iqaudio-pi-dac
 - display-o-tron

@@ -2,10 +2,10 @@
 ---
 name: ADC Differential Pi
 class: board
-type: adc
+type: ADC
 formfactor: HAT
 manufacturer: AB Electronics
-description: 8 channel Analogue to Digital Converter
+description: 8 canaux Analogiques vers un convertisseur Digital
 url: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
 buy: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
@@ -39,24 +39,24 @@ i2c:
 -->
 #ADC Differential Pi
 
-The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+Le  **ADC Differential Pi** de **AB Electronics** est une carte chapeau de conversion sur 8 canaux 18 bit *Analogique vers Digital* conçu pour fonctionner avec le Raspberry Pi. Le  **ADC Differential Pi** est basé sur deux micro-puce de conversion **MCP3424 A/D** qui comportent chacun quatres entrées analogiques. La micro-puce **MCP3424** est un convertisseur *delta-sigma A/D* avec entrées différentielles à réduction de bruit.
 
-##Features
+##Caractéristiques
 
-- 8 x 18-bit differential inputs
-- Control via the Raspberry Pi I2C port
-- Stack up to 4 ADC Differential Pi boards on a single Raspberry Pi
-- Jumper selectable I2C addresses (8 choices)
-- Buffered 5V I2C port
-- Based on the MCP3424 from Microchip Technologies Inc
-- Input range of ±2.048V
-- On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
-- On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
-- Programmable Data Rate Options:
+- 8 x Entrées 18-bit différentielles
+- Controle via le port **I2C** du Raspberry Pi
+- Superposez jusqu'à 4 cartes chapeau **ADC Differential Pi** sur le même Raspberry Pi
+- Adresses **I2C** sélectionnable par cavaliers (8 choix)
+- Port **I2C** 5V à mémoire tampon
+- Basé sur le **MCP3424** de **Microchip Technologies Inc**
+- Entrée à plage de tension de ±2.048V
+- Tension de référence 2.048V embarquée (Précision ± 0.05%, Glissement: 15 ppm/°C)
+- Amplificateur de Gain programmable embarqué (PGA): Gain de 1, 2, 4 ou 8
+- Débit de données programmable:
     - 3.75 SPS (18 bits)
     - 15 SPS (16 bits)
     - 60 SPS (14 bits)
     - 240 SPS (12 bits)
-- One-Shot or Continuous Conversion Options
+- Convertion unique ou continue
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries available on GitHub.
+Les librairies **Arduino**, **C**, **Node.js**, **Windows 10 IOT**, **Python 2** et **Python 3** sont disponibles sur GitHub.

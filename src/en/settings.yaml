@@ -47,6 +47,8 @@ overlays:
 - uart
 - wiringpi
 - 4tronix-picon-zero
+- 4tronix-pistep2d
+- 4tronix-pistep2q
 - ab-1-wire-plus
 - ab-1-wire-zero
 - ab-adc-differential-pi

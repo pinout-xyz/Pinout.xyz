@@ -1,15 +1,15 @@
 <!--
 ---
-name: PiStep2 Quad
+name: PiStep2 Dual
 class: board
 type: Stepper Motor Driver
 formfactor: pHAT
 manufacturer: 4tronix
-description: A Quad Stepper Motor Driver for 
+description: A Dual Stepper Motor Driver for 
 url: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=554
 github: 
 buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=554
-image: 'pistep2q.png'
+image: '4tronix-pistep2d.png'
 pincount: 40
 eeprom: no
 power:
@@ -44,34 +44,10 @@ pin:
   '7':
     name: B3
     mode: output
-  '33':
-    name: C0
-    mode: output
-  '32':
-    name: C1
-    mode: output
-  '31':
-    name: C2
-    mode: output
-  '29':
-    name: C3
-    mode: output
-  '38':
-    name: D0
-    mode: output
-  '37':
-    name: D1
-    mode: output
-  '36':
-    name: D2
-    mode: output
-  '35':
-    name: D3
-    mode: output
 -->
-# PiStep2 Quad
-Drive 4 uni-polar stepper motors using a single control board.
-Uses ULN2803 Darlington driver chips to drive the motors.
+# PiStep2 Dual
+Drive 2 uni-polar stepper motors using a single control board.
+Uses a ULN2803 Darlington driver chip to drive the motors.
 Ideal for use with 28BYJ48 stepper motors
 Supported in Scratch GPIO as well as in Python
 

@@ -33,7 +33,7 @@ Notable contributions:
 * [en](http://pinout.xyz/) - [@lurch](https://github.com/lurch) and [@abelectronicsuk](https://github.com/abelectronicsuk)
 * [de](http://de.pinout.xyz/) - [@rdmueller](https://github.com/rdmueller) and [@KojoePi](https://github.com/KojoePi)
 * [es](http://es.pinout.xyz/) - [@ResonantWave](https://github.com/ResonantWave) and [@IkerGarcia](https://github.com/IkerGarcia)
-* [fr](http://fr.pinout.xyz/) - [@RogueM](https://github.com/RogueM)
+* [fr](http://fr.pinout.xyz/) - [@RogueM](https://github.com/RogueM) and [@smileyn64](https://github.com/smileyn64)
 * [it](http://it.pinout.xyz/) - [@LizardM4](https://github.com/LizardM4)
 * [pt](http://pt.pinout.xyz/) - [@Maslor](https://github.com/Maslor)
 * [tr](http://tr.pinout.xyz/) - [@Ardakilic](https://github.com/Ardakilic)

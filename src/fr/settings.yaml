@@ -1,6 +1,5 @@
 ---
 default_desc: Le guide complet des broches GPIO de la Raspberry Pi
-  Pi, B+ and Pi 2
 default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
 title_suffix: " Raspberry Pi GPIO Pinout"
 base_url: /pinout/
@@ -10,6 +9,7 @@ url_suffix:
 urls:
   GND: masse
 strings:
+- details: 'Détails'
 - made_by: 'produit {manufacturer}'
 - type_hat: 'format HAT'
 - type_phat: 'format pHAT'
@@ -18,6 +18,9 @@ strings:
 - uses_eeprom: 'EEPROM'
 - uses_i2c: 'bus I2C'
 - uses_spi: 'bus SPI'
+- uses_5v_and_3v3: 'Alim. 5v et 3v3'
+- uses_5v: 'Alim. 5v'
+- uses_3v3: 'Alim. 3v3'
 - wiring_pi_pin: 'broche Wiring Pi {}'
 - uses_n_gpio_pins: '{} broches GPIO actives'
 - bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
@@ -25,7 +28,7 @@ strings:
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
-- details: 'Details'
+- details: 'Détails'
 featured:
 - display-o-tron
 - piborg-ledborg
@@ -37,6 +40,14 @@ overlays:
 - spi
 - uart
 - wiringpi
+- 4tronix-picon-zero
+- ab-1-wire-plus
+- ab-1-wire-zero
+- ab-rtc-pi-zero
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-adcdac-pi-zero
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat

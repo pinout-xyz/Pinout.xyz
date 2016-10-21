@@ -2,7 +2,7 @@
 ---
 name: RTC Pi Zero
 class: board
-type: RTC
+type: rtc
 formfactor: pHAT
 manufacturer: AB Electronics
 description: Module Horloge pour le Raspberry Pi

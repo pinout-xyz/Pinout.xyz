@@ -2,7 +2,7 @@
 ---
 name: ADC Pi Plus
 class: board
-type: ADC
+type: adc
 formfactor: HAT
 manufacturer: AB Electronics
 description: 8 canaux Analogiques vers un convertisseur Digital

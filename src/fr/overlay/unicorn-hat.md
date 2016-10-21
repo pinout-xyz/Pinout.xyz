@@ -2,7 +2,7 @@
 ---
 name: Unicorn HAT
 class: board
-type: Tous
+type: led
 formfactor: HAT
 manufacturer: Pimoroni
 description: une matrice 8x8 de LEDs RGB

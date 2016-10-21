@@ -2,7 +2,7 @@
 ---
 name: Piano HAT
 class: board
-type: Tous
+type: cap
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un mini-piano avec 16 touches tactiles

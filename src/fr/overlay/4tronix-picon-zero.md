@@ -2,7 +2,7 @@
 ---
 name: Picon Zero
 class: board
-type: Moteur
+type: moteur
 formfactor: pHAT
 image: '4tronix-picon-zero.png'
 manufacturer: 4tronix

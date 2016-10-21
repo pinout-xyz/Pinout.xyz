@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: Tous
+type: multi
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un chapeau multi-usage avec entrées et sorties 5V

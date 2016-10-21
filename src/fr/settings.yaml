@@ -30,10 +30,10 @@ strings:
 - buy_now: 'achat'
 - details: 'Détails'
 featured:
-- display-o-tron
+- 4tronix-picon-zero
+- ab-adc-pi-zero
 - piborg-ledborg
 - pibrella
-- rtk-000-001
 overlays:
 - ground
 - i2c

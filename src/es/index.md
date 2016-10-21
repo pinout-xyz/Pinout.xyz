@@ -16,4 +16,4 @@ Hemos añadido un [explorador de placas!](https://github.com/Gadgetoid/Pinout.xy
 ##Diagrama de asignación de pines
 Hemos creado un diagrama de asignación de pines para Raspberry Pi. Siéntete libre de imprimirlo, adjuntarlo, compartirlo o enlazarlo, ¡no te olvides de nombrarnos!
 
-![pinout](https://github.com/Gadgetoid/Pinout.xyz/blob/master/resources/raspberry-pi-pinout.png)
+[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)

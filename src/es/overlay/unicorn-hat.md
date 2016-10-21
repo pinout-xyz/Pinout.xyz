@@ -2,7 +2,7 @@
 ---
 name: Unicorn HAT
 class: board
-type: todas
+type: led
 formfactor: HAT
 manufacturer: Pimoroni
 description: 64 LEDs RGB cegadores en un único HAT

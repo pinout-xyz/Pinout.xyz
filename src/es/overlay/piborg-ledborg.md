@@ -2,7 +2,7 @@
 ---
 name: LEDBorg
 class: board
-type: todas
+type: led
 formfactor: Otro
 manufacturer: PiBorg
 description: Un único LED RGB para tu Raspberry Pi

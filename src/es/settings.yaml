@@ -27,16 +27,29 @@ strings:
 - buy_now: 'Buy Now'
 - details: 'Details'
 featured:
-- display-o-tron
+- ab-adc-pi-zero
+- analog-zero
 - piborg-ledborg
 - pibrella
-- rtk-000-001
 overlays:
 - ground
 - i2c
 - spi
 - uart
 - wiringpi
+- ab-1-wire-plus
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-io-pi-plus
+- ab-rtc-pi-plus
+- ab-serial-pi-plus
+- adafruit-cap-mpr121
+- adafruit-servo-hat
+- analog-zero
+- blinkt
+- carberry
+- cirruslogic-audio-card
 - iqaudio-pi-dac
 - display-o-tron
 - display-o-tron-hat

@@ -2,7 +2,7 @@
 ---
 name: Piano HAT
 class: board
-type: CAP
+type: cap
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un mini Pi piano con 16 botones capacitivos

@@ -2,7 +2,7 @@
 ---
 name: Capacitive Touch HAT
 class: board
-type: CAP
+type: cap
 formfactor: HAT
 manufacturer: Adafruit
 description: Create electronics that can react to human touch with up to 12 individual sensors

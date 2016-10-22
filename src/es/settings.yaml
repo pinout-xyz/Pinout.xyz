@@ -1,6 +1,5 @@
 ---
 default_desc: La guía detallada sobre el pinout del GPIO de Raspberry Pi para Raspberry
-  Pi, B+ y Pi 2
 default_title: Pinout de Raspberry Pi - Pi 1, B+, Pi 2
 title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
@@ -18,6 +17,9 @@ strings:
 - uses_eeprom: 'Usa EEPROM'
 - uses_i2c: 'Usa I2C'
 - uses_spi: 'Usa SPI'
+- uses_5v_and_3v3: 'Alimentación 5v+3v3'
+- uses_5v: 'Alimentación 5v'
+- uses_3v3: 'Alimentación 3v3'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - uses_n_gpio_pins: 'Usa {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
@@ -33,6 +35,12 @@ featured:
 - pibrella
 overlays:
 - ground
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-1wire
+- iface-pcm
+- iface-sd
 - i2c
 - spi
 - uart
@@ -50,12 +58,17 @@ overlays:
 - blinkt
 - carberry
 - cirruslogic-audio-card
-- iqaudio-pi-dac
+- discohat
 - display-o-tron
 - display-o-tron-hat
-- rpf-dots
+- drum-hat
+- enviro-phat
+- espiot-phat
 - explorer-hat
 - explorer-hat-pro
+- explorer-phat
+- iqaudio-pi-dac
+- rpf-dots
 - piano-hat
 - piborg-ledborg
 - pibrella

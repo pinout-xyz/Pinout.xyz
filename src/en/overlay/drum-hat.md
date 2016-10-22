@@ -2,7 +2,7 @@
 ---
 name: Drum HAT
 class: board
-type: instrument
+type: instrument,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: An 8 pad finger Drum HAT for your Raspberry Pi

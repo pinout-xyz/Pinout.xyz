@@ -9,7 +9,6 @@ url_suffix:
 urls:
   GND: masse
 strings:
-- details: 'Détails'
 - made_by: 'produit {manufacturer}'
 - type_hat: 'format HAT'
 - type_phat: 'format pHAT'

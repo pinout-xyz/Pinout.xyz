@@ -9,7 +9,6 @@ url_suffix:
 urls:
   GND: ground
 strings:
-- details: 'Details'
 - made_by: 'Made by {manufacturer}'
 - type_hat: 'HAT form-factor'
 - type_phat: 'pHAT form-factor'
@@ -38,11 +37,11 @@ overlays:
 - ground
 - iface-dpi
 - iface-gpclk
-- i2c
 - iface-jtag
 - iface-1wire
 - iface-pcm
 - iface-sd
+- i2c
 - spi
 - uart
 - wiringpi

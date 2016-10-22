@@ -53,7 +53,7 @@ install:
 -->
 #Pi-DigiAMP+
 
-The Pi-DigiAMP+ is an add-on board that includes a Digital to Analog Converter (DAC) and powerful 35w stereo amplifier. If you want to turn your Raspberry Pi into a working Hi Fi stereo, just add speakers and you're off.
+Pi-DigiAMP+ es una placa adicional que incluye un conversor digital a anlógico (DAC) y un potente amplificador estéreo de 35w. Si quieres convertir tu Raspberry Pi en una minicadena con audio estéreo de Alta Fidelidad, simplemente añade altavoces.
 
-You can use GPIO25 to connect an IR sensor and GPIO23/24 for a rotary encoder. Both of these parts are optional, but are broken out on the Pi-DAC+ for convenient access.
-Note: pins reserved for the rotary encoder and IR sensor can be used for other purposes if those add-ons have not been fitted and enabled by software.
+Puedes utilizar GPIO25 para añadir un sensor infrarrojo y GPIO23/24 para un dial. Estas dos partes son opcionales pero están disponibles en Pi-DAC9 para un acceso fácil.
+Nota: los pines reservados para el dia y el sensor infrarrojo se pueden utilizar para otros propósitos si estos dos componentes no se han añadido y activado mediante software.

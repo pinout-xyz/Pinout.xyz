@@ -2,7 +2,7 @@
 ---
 name: Cirrus Logic Audio Card
 class: board
-type: DAC
+type: audio
 formfactor: HAT
 manufacturer: Element14
 description: Audio Card with unprecedented level of features and performance for Raspberry Pi

@@ -2,7 +2,7 @@
 ---
 name: "Pi-DAC+"
 class: board
-type: DAC
+type: audio
 formfactor: HAT
 manufacturer: IQaudIO
 description: Un HAT I2S conversor de audio digital a analógico

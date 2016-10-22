@@ -53,6 +53,6 @@ pin:
 -->
 #DPI - Display Parallel Interface
 
-DPI (Display Parallel Interface) is a 24-bit parallel interface with 28 clock and synchronisation signals. The Pi uses a cut-down, 6-bit, 22 pin version omitting the least significant R, G and B colour bits.
+DPI (interfaz de muestra paralela) es una interfaz paralela de 24-bit con 28 relojes y señales de sincronización. La Pi utiliza una versión reducidad de 6-bit, 22 pines, omitiendo los bits de color R, G y B menos significantes.
 
-DPI, combined with a simple adaptor consisting of 20 resistors, allows you to add a VGA connector to the Pi which supports resolutions from 640 x 480 up to 1920 x 1024 at 60fps and 6bits per channel.
+DPI, combinada con un simple adaptador formado por 20 resitencias, permite añadir un conector VGA a la Raspberry Pi que soporta resoluciones desde 640 x 480 hasta 1920 x 1024 a 60fps y 6bits por canal.

@@ -30,14 +30,13 @@ i2c:
 -->
 #Drum HAT
 
-Drum HAT is the companion to Piano HAT. It uses the same cap touch sensor to provide 8 finger-sized drum pads. Use it to play music in Python, control software drum synths on your Pi, take control of hardware drum machines, or just build it into an elaborate drum-controlled project.
+Drum HAT es la compañía perfecta para Piano HAT. Utiliza el mismo sensor táctical para crear 8 pads del tamaño de un dedo. Utilízalo para hacer música con Python, controlar software musical en tu Pi, controlar instrumentos o que forme parte de un proyecto mayor.
 
-Features: 8 touch sensitive buttons and 8 LEDs. Works with Piano HAT (it uses a CAP1188 chip with a non-conflicting i2c address at 0x2c).
+Especificaciones: 8 botones sensibles al tacto y 8 LEDs. Funciona con Piano HAT (usa el chip CAP1188 en una dirección i2c no conflictiva en 0x2c)
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/drumhat | bash
 ```
-
-And follow the instructions!
+¡Y sigue las instrucciones!

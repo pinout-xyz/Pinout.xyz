@@ -31,17 +31,17 @@ i2c:
 -->
 #Micro Dot pHAT
 
-An unashamedly old school LED matrix display board, with up to 30x7 pixels, using Lite-On LTP-305 matrices (or any similar matrices). Perfect for building a retro scrolling message display, a tiny 30-band spectrum analyser, or a retro clock.
+Una placa con una matriz LED descarada, de vieja escuela, con hasta 30x7 pixels utilizando las matrices Lite-On LTP-305 (o cualquiera similar). Perfecta para construir un mensaje en movimiento retro, un pequeño analizador de espectro de 30 bandas o un reloj retro.
 
-The board uses three IS31FL3730 matrix driver chips, each driving two of the matrix displays. The board and supporting software was designed to use these driver chips in an efficient manner, in effect round-robin-ing them and updating them extremely quickly one after the other to drive two displays at once.
+La placa utiliza tres chip IS31FL3730 para controlar la matriz, cada  uno controla dos matrices. La placa y el software fuero diseñados para trabajar de manera eficiente, actualizando realmente rápido.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/microdotphat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import microdotphat

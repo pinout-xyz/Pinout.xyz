@@ -28,11 +28,13 @@ install:
 -->
 #pHAT DAC
 
-The pHAT DAC provides a high-quality digital to analog audio converter for the Raspberry Pi: 24-bits at 192KHz via the I2S interface on the 2x20 pin GPIO header. It has a 3.5mm stereo jack pre-assembled and can accommodate an optional RCA phono connector.
+pHAT DAC es un conversor de sonido digital a analógico de alta calidad para Raspberry Pi: 24-bits a 192KHz a través de la interfaz I2S en el conector GPIO de 2x20 pines. Tiene un jack estéreo de 3.5 mm y se puede conectar, opcional, un RCA.
+
+Pese a ser diseñado para Raspberry Pi Zero es compatible con todas las Raspberry Pi de 40 pines (2/B+/A+/Zero)
 
 Though designed to match the format of the Raspberry Pi Zero it is compatible with all 40-pin GPIO Raspberry Pi variants (2/B+/A+/Zero).
 
-To get the pHAT DAC set up and ready to go you can use the one-line product installer:
+Para configurar pHAT DAC puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/phatdac | bash

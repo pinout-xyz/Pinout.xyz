@@ -33,9 +33,9 @@ pin:
 -->
 #ESP IoT pHAT
 
-The ESP IoT pHAT is an ESP8266 based add-on for the Raspberry Pi. It provides some GPIO and one ADC channel, broken out to use alongside a small prototyping area. Perfect for RPi Zero but works with A+/B+/2 too!
+ESP IoT pHAT es una placa adicional para Raspberry Pi basada en ESP8266. Cuenta con varios GPIO y un canal ADC, junto a un pequeño área de prototipado. Perfecto para RPi Zero pero también funciona con A+/B+/2.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/iotphat | bash

@@ -20,6 +20,6 @@ pin:
 -->
 #SDIO - SD Card Interface
 
-SDIO is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.
+SDIO es la interfaz host de SD/eMMC para Raspberry Pi. Las señales SD host normalmente son utilizadas para la tarjeta microSD.
 
-These pins are "SD host" on Alt0 and "eMMC" on Alt3.
+Estos pines son "SD host" en Alt0 y "eMMC" en Alt3.

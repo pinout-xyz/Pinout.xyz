@@ -10,6 +10,18 @@ url: https://www.raspberrypi.org/products/sense-hat/
 image: 'sense-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c

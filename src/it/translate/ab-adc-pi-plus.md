@@ -12,7 +12,18 @@ buy: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-D
 image: 'ab-adc-pi-plus.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -28,7 +39,7 @@ i2c:
 -->
 #ADC Pi Plus
 
-The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 Model B. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
 ##Features
 
@@ -48,4 +59,4 @@ The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to
    - 240 SPS (11 bits)
 - One-Shot or Continuous Conversion Options
 
-Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.

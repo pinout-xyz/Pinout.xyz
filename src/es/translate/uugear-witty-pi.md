@@ -12,7 +12,17 @@ buy: http://www.uugear.com/product/witty-pi-realtime-clock-and-power-management-
 image: 'uugear-witty-pi.png'
 pincount: 40
 eeprom: no
-power: 5v
+power:
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     name: SDA

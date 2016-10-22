@@ -12,6 +12,18 @@ buy: https://shop.pimoroni.com/products/explorer-phat
 image: 'explorer-phat.png'
 pincount: 40
 eeprom: no
+power:
+  '2':
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c

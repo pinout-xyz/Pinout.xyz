@@ -11,7 +11,10 @@ buy: https://shop.pimoroni.com/products/zero-lipo
 image: 'zero-lipo.png'
 pincount: 8
 eeprom: no
-power: external
+power:
+  '2':
+ground:
+  '6':
 pin:
   '7':
     name: Battery Low

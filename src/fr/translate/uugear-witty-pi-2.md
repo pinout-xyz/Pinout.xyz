@@ -12,7 +12,18 @@ buy: http://www.uugear.com/product/wittypi2/
 image: 'uugear-witty-pi-2.png'
 pincount: 40
 eeprom: no
-power: 5v,3v3
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     name: SDA

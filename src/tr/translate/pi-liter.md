@@ -6,12 +6,19 @@ type: led
 formfactor: Custom
 manufacturer: Ciseco
 description: An 8 LED strip for the Raspberry Pi
-url: http://www.averagemanvsraspberrypi.com/2014/04/how-to-use-pi-liter-from-ciseco.html
+url: http://gpiozero.readthedocs.io/en/v1.3.1/api_boards.html#piliter
 buy: http://cpc.farnell.com/wirelessthings/pi-liter/pi-lite-junior-led-io-board-for/dp/SC13293
 image: 'pi-liter.png'
 pincount: 26
 eeprom: no
-power: 3v3
+power:
+  '1':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '7':
     name: LED1
@@ -57,3 +64,22 @@ Applications:
 * Light chaser
 * Activity indicator
 * Lighting effects
+
+## Code
+
+```python
+from gpiozero import PiLiter
+from time import sleep
+
+lite = PiLiter()
+
+for led in lite:
+    led.on()
+    sleep(0.1)
+    led.off()
+
+lite.on()
+sleep(5)
+```
+
+[GPIO Zero docs](http://gpiozero.readthedocs.io/en/v1.3.1/api_boards.html#piliter)

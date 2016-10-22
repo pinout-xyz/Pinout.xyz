@@ -15,7 +15,14 @@ eeprom: yes
 power:
   '2':
 ground:
+  '6':
   '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '12':
     name: Data
@@ -36,7 +43,7 @@ install:
 
 32 blindingly bright LEDs packed into a pHAT and driven with an ultra-fast, C library that you can talk to from Python make Unicorn HAT PiGlow's bigger, brighter brother.
 
-Note: Unicorn pHAT uses some special PWM trickery, performed with the same hardware that lets you Pi produce sound through the audio jack ( analog audio ) so you can't use both at the same time!
+Note: Unicorn pHAT uses some special PWM trickery, performed with the same hardware that lets your Pi produce sound through the audio jack ( analog audio ) so you can't use both at the same time!
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

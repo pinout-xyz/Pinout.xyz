@@ -9,9 +9,8 @@ description: 4-port USB hub for Raspberry Pi Zero
 url: http://www.uugear.com/product/zero4u/
 buy: http://www.uugear.com/product/zero4u/
 image: 'uugear-zero4u.png'
-pincount: 40
+pincount: 4
 eeprom: no
-power: 5v
 -->
 #Zero4U
 

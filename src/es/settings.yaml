@@ -68,10 +68,16 @@ overlays:
 - explorer-hat-pro
 - explorer-phat
 - iqaudio-pi-dac
-- rpf-dots
+- iqaudio-pi-digiamp
+- microdot-phat
+- phat-dac
+- pi-liter
 - piano-hat
 - piborg-ledborg
 - pibrella
+- piglow
+- propeller-hat
+- rpf-dots
 - rtk-000-001
 - skywriter-hat
 - traffic-hat

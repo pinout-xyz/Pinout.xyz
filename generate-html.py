@@ -23,6 +23,7 @@ GROUND_PINS = [6,9,14,20,25,30,34,39]
 lang = "en"
 default_strings = {
     'pin_header': '{} pin header',
+    'form_undefined': 'Undefined',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
     'uses_5v': 'Needs 5v power',
@@ -35,19 +36,21 @@ default_strings = {
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'buy_now': 'Buy Now',
-    'group_multi': 'Multi',
-    'group_led': 'LED',
-    'group_iot': 'IOT',
-    'group_instrument': 'Instrument',
-    'group_lcd': 'LCD',
-    'group_other': 'Other',
-    'group_motor': 'Motor',
+    'translate_msg': 'This page needs translating, can you help?',
     'group_adc': 'ADC',
     'group_audio': 'Audio',
+    'group_cap': 'Cap',
     'group_gesture': 'Gesture',
+    'group_instrument': 'Instrument',
+    'group_led': 'LED',
+    'group_iot': 'IOT',
+    'group_lcd': 'LCD',
+    'group_motor': 'Motor',
+    'group_multi': 'Multi',
+    'group_other': 'Other',
     'group_touch': 'Touch',
-    'group_pinout': 'Pinout',
     'group_info': 'Info',
+    'group_pinout': 'Pinout',
     'group_featured': 'Featured'
 }
 
@@ -74,11 +77,16 @@ def slugify(value):
 def load_overlay(overlay):
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
-
         loaded = data['data']
         loaded['long_description'] = data['html']
     except IOError:
-        return None
+        try:
+            data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
+            loaded = data['data']
+            loaded['long_description'] = strings['translate_msg'] + data['html']
+        except IOError:
+            print 'overlay {} missing in lang {}'.format(overlay, lang)
+            return None
 
     '''
     If this is not an info page, then build a collection of details and append them to long_description
@@ -87,7 +95,7 @@ def load_overlay(overlay):
         details = []
 
         if 'type' not in loaded:
-            loaded['type'] = 'addon'
+            loaded['type'] = strings['group_other']
 
         if 'manufacturer' in loaded:
             details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
@@ -319,7 +327,7 @@ def render_pin_page(pin_num):
     # if pin_text != None:
     return pin_url, pin_text, pin_text_name  # pages[pin_url] = pin_text
 
-    
+
 def render_pin(pin_num, selected_url, overlay=None):
     pin = pinout.pins[str(pin_num)]
 
@@ -537,7 +545,7 @@ as it's used in every single page.
 overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
-    
+
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
@@ -574,7 +582,7 @@ for overlay in overlays:
                 page_url=overlay['page_url'],
                 base_url=base_url,
                 type=overlay['type'] if 'type' in overlay else '',
-                formfactor=overlay['formfactor'] if 'formfactor' in overlay else '',
+                formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
                 manufacturer=overlay['manufacturer'],
                 resource_url=resource_url)})
 

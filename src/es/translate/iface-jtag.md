@@ -30,4 +30,4 @@ pin:
 -->
 #JTAG - Joint Test Action Group
 
-JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.
+JTAG es una interfaz estándar para depurar circuitos integrados que puedes utilizar para depurar tu Raspberry Pi.

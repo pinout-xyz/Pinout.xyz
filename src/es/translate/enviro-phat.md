@@ -37,23 +37,22 @@ i2c:
 -->
 #Enviro pHAT
 
-Coupled with a Pi Zero, Enviro pHAT is an affordable mix of sensors, ideal for monitoring server rooms, bedrooms, ballrooms or anything you might want to observe. It also includes a 4-channel ADC, for adding sensors of your own. It works with all of the 40-pin Raspberry Pi variants - 3/2/B+/A+/Zero.
+Junto con una Pi Zero, Enviro pHAT es un conjunto de sensores asequible, ideal para monitorizar habitáculos de servidores, habitaciones o cualquier cosa que quieras observar. Además incluye una entrada ADC de 4-canales para añadir sensores. Funciona con cualquiera de las versiones de Raspberry Pi de 40 pines - 3/2/B+/A+/Zero.
 
-Features:
+Especificaciones:
 
-BMP280 temperature/pressure sensor (0x77 on the i2c bus)
-TCS3472 light and RGB colour sensor (0x29 on the i2c bus)
-(with two LEDs for illumination)
-LSM303D accelerometer/magnetometer sensor (0x1d on the i2c bus)
-ADS1015 4-channel 3.3v 12-bit ADC (0x48 on the i2c bus)
+Sensor de temperatura/presión BMP280 (0x77 en el bus i2c)
+Sensor de luz y color RGB TCS3472 (0x29 en el bus i2c)
+(con dos LEDs para iluminación)
+Sensor acelerómetro/magnetómetro LSM303D (0x1d en el bus i2c)
+ADC de 12-bit, 4-canales y 3.3v ADS1015 (0x48 en el bus i2c)
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/envirophat | bash
 ```
-
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 from envirophat import light, motion, weather, analog, leds

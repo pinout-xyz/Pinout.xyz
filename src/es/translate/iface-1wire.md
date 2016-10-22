@@ -11,19 +11,19 @@ pin:
 -->
 # W1-GPIO - One-Wire Interface
 
-To enable the one-wire interface you need to add the following line to /boot/config.txt, beofre rebooting your Pi:
+Para habilitar la interaz one-wire necesitas añadir la siguiente línea a /boot/config.txt y después reiniciar tu Pi:
 
 ```
 dtoverlay=w1-gpio
 ```
 
-Alternatively you can enable the one-wire interface on demand using:
+También puedes habilitar la interfaz sobre la marcha, cuando sea necesario:
 
 ```
 sudo modprobe w1-gpio
 ```
 
-once either of the steps above has been performed, you can list the devices your Raspberry Pi can probe via (by default) GPIO4, like so:
+Tras realizar una de las dos acciones anteriores, puedes enumerar los dispositivos conectados al GPIO4 de tu Raspberry Pi (por defecto) con:
 
 ```
 ls /sys/bus/w1/devices/

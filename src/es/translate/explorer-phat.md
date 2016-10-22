@@ -84,15 +84,15 @@ install:
 -->
 #Explorer pHAT
 
-5V inputs and outputs, analog inputs and an H-Bridge motor driver make up the Explorer pHAT; a jack of all trades prototyping side-kick for your Raspberry Pi. Perfect for RPi Zero but works with A+/B+/2 too!
+Entradas y salidas de 5V, entradas analógicas y un controlador de motores H-Bridge forman el Explorer pHAT; un complemento de prototipado multifuncional para Raspberry Pi. Perfecto para RPi Zero pero también funciona con A+/B+/2.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/explorerhat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import explorerhat

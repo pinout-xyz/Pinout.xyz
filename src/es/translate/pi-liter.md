@@ -48,12 +48,12 @@ pin:
 -->
 #Pi-LITE-r
 
-The Pi-LITEr is a fully assembled add on board for the Raspberry Pi. It has 8 ultra-bright white LED's on a board which plugs directly onto the GPIO header. It can be used alongside other I/O projects to give status indication. Lighting all 8 LEDs consumes a tiny amount of current, less than a single standard LED (which is 20ma nominal vs 14.4ma for the Pi-LITEr).
+Pi-LITE-r es una placa adicional completa para Raspberry Pi. Cuenta con 8 LEDs blanco ultra-brillantes y se conecta directamente a los GPIO. Puede utilizarse en proyectos I/O para dar información del estado. Iluminar los 8 LEDs consume poca corriente, menos que un sólo LED (20 mA nominales, 14.4 mA para Pi-LITE-r)
 
-Applications:
+Aplicaciones:
 
-* I/O status indicator
-* Bar graph
-* Light chaser
-* Activity indicator
-* Lighting effects
+* Monitor de estado I/O
+* Gráficos de barras
+* Control de luz
+* Indicador de actividad
+* Efectos de luz

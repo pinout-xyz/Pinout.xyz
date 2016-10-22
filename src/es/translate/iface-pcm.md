@@ -16,4 +16,4 @@ pin:
 -->
 #PCM - Pulse-code Modulation
 
-PCM (Pulse-code Modulation) is a digital representation of sampled analog. On the Raspberry Pi it's a form of digital audio output which can be understood by a DAC for high quality sound.
+PCM (modulación Pulse-code) es la representación digital de una muestra analógica. En la Raspberry Pi es una forma de salida de sonido digital que puede ser leída por DAC para sonido de alta definición.

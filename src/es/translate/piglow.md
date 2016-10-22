@@ -26,14 +26,16 @@ pin:
 -->
 #PiGlow
 
-The PiGlow is a small add-on board for the Raspberry Pi that provides 18 individually controllable LEDs.
+PiGlow es una pequeña placa adicional para Raspberry Pi con 18 LEDs controlables individualmente.
+
+La placa usa el chip de 8-bit y 18-canales PWM SN3218 para controlar los LEDs. La comunicación se realiza mediante I2C a través de los GPIO en el bus con dirección 0x54. Cada LED puede configurarse para un valor de PWM entre 0 y 255.
 
 The board uses the SN3218 8-bit 18-channel PWM chip to drive surface mount LEDs. Communication is done via I2C over the GPIO header with a bus address of 0x54. Each LED can be set to a PWM value of between 0 and 255.
 
-To get the module set up and ready to go you can use the one-line product installer:
+Para configurar el módulo  puedes utilizar el instalador online de una línea:
 
 ```bash
 curl -sS get.pimoroni.com/piglow | bash
 ```
 
-And follow the instructions!
+¡Y sigue las instrucciones!

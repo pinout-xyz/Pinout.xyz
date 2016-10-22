@@ -34,6 +34,6 @@ pin:
 -->
 #Propeller HAT
 
-Propeller HAT brings the 8-core Parallax Propeller microcontroller to HAT form-factor. Program and talk to it over Serial using Propeller IDE and you'll have a powerful, realtime co-processor for your Pi.
+Propeller HAT lleva el microcontrolador de 8-núcleos Parallax Propeler al factort de forma HAT. Comunícate a través del puerto serie utilizando Propeller IDE y siempre tendrás un coprocesador poderoso y de tiempo real para tu Pi.
 
-It's like a little software programming logic device. Great for realtime IO, servo control and even convincingly synthesizing a SID chip.
+Es como un pequeño programador lógico. Muy útil para IO en tiempo real, control de servos o sintetizar un chip SID.

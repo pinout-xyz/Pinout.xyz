@@ -8,6 +8,8 @@ srcdir="../src"
 langlist=$(ls "$srcdir")
 yamlfile="../src/en/settings.yaml"
 
+FORCE=$1
+
 confirm() {
     if [ "$FORCE" == '-y' ]; then
         true

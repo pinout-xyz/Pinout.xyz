@@ -14,6 +14,9 @@ for overlay in $mdlist; do
                 cp $masterdir/$overlay $srcdir/$dirmd/translate/
                 filesync=true
             fi
+        elif ! [ -f $srcdir/$dirmd/overlay/$overlay ]; then
+            cp $masterdir/$overlay $srcdir/$dirmd/translate/
+                filesync=true
         fi
     done
 done

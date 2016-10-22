@@ -35,7 +35,6 @@ Notable contributions:
 * [es](http://es.pinout.xyz/) - [@ResonantWave](https://github.com/ResonantWave) and [@IkerGarcia](https://github.com/IkerGarcia)
 * [fr](http://fr.pinout.xyz/) - [@RogueM](https://github.com/RogueM) and [@smileyn64](https://github.com/smileyn64)
 * [it](http://it.pinout.xyz/) - [@LizardM4](https://github.com/LizardM4)
-* [pt](http://pt.pinout.xyz/) - [@Maslor](https://github.com/Maslor)
 * [tr](http://tr.pinout.xyz/) - [@Ardakilic](https://github.com/Ardakilic)
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate language-code. For example, if you want to create a German translation you would create the folder `src/de`.

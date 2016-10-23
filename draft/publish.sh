@@ -6,7 +6,7 @@ draftmd="../draft/overlay"
 mdlist=$(ls "$draftmd")
 srcdir="../src"
 langlist=$(ls "$srcdir")
-yamlfile="../src/en/settings.yaml"
+yamlfile="settings.yaml"
 
 FORCE=$1
 
@@ -35,13 +35,13 @@ for overlay in $mdlist; do
                 else
                     cp $draftmd/$overlay $srcdir/$dirmd/overlay/
                 fi
+                if ! grep -e $board ../src/$dirmd/$yamlfile &> /dev/null; then
+                    echo "- $board" | tee -a ../src/$dirmd/$yamlfile &> /dev/null
+                fi
             done
             rm $draftmd/$overlay
             if [ -f $draftpng/$board.png ];then
                 mv $draftpng/$board.png $dirpng
-            fi
-            if ! grep -e $board $yamlfile &> /dev/null; then
-                echo "- $board" | tee -a $yamlfile &> /dev/null
             fi
         fi
     fi

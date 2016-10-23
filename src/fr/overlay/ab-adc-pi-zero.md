@@ -2,7 +2,7 @@
 ---
 name: ADC Pi Zero
 class: board
-type: adc
+type: a/n
 formfactor: pHAT
 manufacturer: AB Electronics
 description: 8 canaux Analogiques vers un convertisseur Digital

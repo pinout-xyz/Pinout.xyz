@@ -9,25 +9,27 @@ url_suffix:
 urls:
   GND: masse
 strings:
-- made_by: 'produit {manufacturer}'
+- details: 'Détails'
+- group_other: 'autre'
+- form_undefined: 'Autre'
+- pin_header: '{} broches'
 - type_hat: 'format HAT'
 - type_phat: 'format pHAT'
 - type_classic: 'format Classic'
-- pin_header: '{} broches'
 - uses_eeprom: 'EEPROM'
 - uses_i2c: 'bus I2C'
 - uses_spi: 'bus SPI'
 - uses_5v_and_3v3: 'Alim. 5v et 3v3'
 - uses_5v: 'Alim. 5v'
 - uses_3v3: 'Alim. 3v3'
-- wiring_pi_pin: 'broche Wiring Pi {}'
 - uses_n_gpio_pins: '{} broches GPIO actives'
 - bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
 - physical_pin_n: 'broche physique {}'
+- wiring_pi_pin: 'broche Wiring Pi {}'
+- made_by: 'produit {manufacturer}'
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
 - buy_now: 'achat'
-- details: 'Détails'
 featured:
 - 4tronix-picon-zero
 - ab-adc-pi-zero
@@ -35,30 +37,74 @@ featured:
 - pibrella
 overlays:
 - ground
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-1wire
+- iface-pcm
+- iface-sd
 - i2c
 - spi
 - uart
 - wiringpi
 - 4tronix-picon-zero
+- 4tronix-pistep2d
+- 4tronix-pistep2q
 - ab-1-wire-plus
 - ab-1-wire-zero
-- ab-rtc-pi-zero
 - ab-adc-differential-pi
 - ab-adc-pi-plus
 - ab-adc-pi-zero
 - ab-adcdac-pi-zero
-- iqaudio-pi-dac
+- ab-io-pi-plus
+- ab-io-pi-zero
+- ab-rs485-pi
+- ab-rtc-pi-plus
+- ab-rtc-pi-zero
+- ab-serial-pi-plus
+- ab-serial-pi-zero
+- ab-servo-pwm-pi-zero
+- adafruit-cap-mpr121
+- adafruit-servo-hat
+- analog-zero
+- automation-hat
+- blinkt
+- carberry
+- cirruslogic-audio-card
+- discohat
 - display-o-tron
 - display-o-tron-hat
-- rpf-dots
+- drum-hat
+- enviro-phat
+- espiot-phat
 - explorer-hat
 - explorer-hat-pro
+- explorer-phat
+- iqaudio-pi-dac
+- iqaudio-pi-digiamp
+- microdot-phat
+- phat-dac
+- pi-liter
 - piano-hat
 - piborg-ledborg
+- piborg-zeroborg
 - pibrella
 - piglow
+- pijack
+- propeller-hat
+- raspio-duino
+- redbear-iot-hat
+- rpf-dots
 - rtk-000-001
+- scroll-phat
+- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- unicorn-phat
+- uugear-7port-usb-hub
+- uugear-witty-pi
+- uugear-witty-pi-2
+- uugear-zero4u
+- wifi-pants
 - zero-lipo

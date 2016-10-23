@@ -9,25 +9,27 @@ url_suffix:
 urls:
   GND: ground
 strings:
-- made_by: 'Made by {manufacturer}'
+- details: 'Details'
+- group_other: 'other'
+- form_undefined: 'Undefined'
+- pin_header: '{} pin header'
 - type_hat: 'HAT form-factor'
 - type_phat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
-- pin_header: '{} pin header'
 - uses_eeprom: 'Uses EEPROM'
 - uses_i2c: 'Uses I2C'
 - uses_spi: 'Uses SPI'
 - uses_5v_and_3v3: 'Needs 5v and 3v3 power'
 - uses_5v: 'Needs 5v power'
 - uses_3v3: 'Needs 3v3 power'
-- wiring_pi_pin: 'Wiring Pi pin {}'
 - uses_n_gpio_pins: 'Uses {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
 - physical_pin_n: 'Physical pin {}'
+- wiring_pi_pin: 'Wiring Pi pin {}'
+- made_by: 'Made by {manufacturer}'
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
-- details: 'Details'
 featured:
 - pijack
 - ab-servo-pwm-pi-zero

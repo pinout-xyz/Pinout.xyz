@@ -24,7 +24,7 @@ lang = "en"
 default_strings = {
     'pin_header': '{} pin header',
     'form_undefined': 'Undefined',
-    'wiring_pi_pin': 'Wiring Pi pin {}',
+    'group_other': 'other',
     'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
     'uses_5v': 'Needs 5v power',
     'uses_3v3': 'Needs 3v3 power',
@@ -33,25 +33,11 @@ default_strings = {
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
+    'wiring_pi_pin': 'Wiring Pi pin {}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'buy_now': 'Buy Now',
-    'translate_msg': 'This page needs translating, can you help?',
-    'group_adc': 'ADC',
-    'group_audio': 'Audio',
-    'group_cap': 'Cap',
-    'group_gesture': 'Gesture',
-    'group_instrument': 'Instrument',
-    'group_led': 'LED',
-    'group_iot': 'IOT',
-    'group_lcd': 'LCD',
-    'group_motor': 'Motor',
-    'group_multi': 'Multi',
-    'group_other': 'Other',
-    'group_touch': 'Touch',
-    'group_info': 'Info',
-    'group_pinout': 'Pinout',
-    'group_featured': 'Featured'
+    'translate_msg': '<a href="https://github.com/gadgetoid/Pinout2">This page needs translating, can you help?</a><br><br>',
 }
 
 
@@ -84,6 +70,10 @@ def load_overlay(overlay):
             data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
             loaded = data['data']
             loaded['long_description'] = strings['translate_msg'] + data['html']
+            loaded['type'] = strings['group_other']
+            if 'formfactor' in loaded:
+                if str(loaded['formfactor']) == 'Custom':
+                    loaded['formfactor'] = strings['form_undefined']
         except IOError:
             print 'overlay {} missing in lang {}'.format(overlay, lang)
             return None
@@ -581,7 +571,7 @@ for overlay in overlays:
                 name=overlay['name'],
                 page_url=overlay['page_url'],
                 base_url=base_url,
-                type=overlay['type'] if 'type' in overlay else '',
+                type=overlay['type'] if 'type' in overlay else strings['group_other'],
                 formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
                 manufacturer=overlay['manufacturer'],
                 resource_url=resource_url)})

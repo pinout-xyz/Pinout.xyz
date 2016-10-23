@@ -2,7 +2,7 @@
 ---
 name: 1 Wire Pi Zero
 class: board
-type: com
+type: com.
 formfactor: pHAT
 manufacturer: AB Electronics
 description: 1-Wire vers interface I2C

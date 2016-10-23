@@ -9,25 +9,27 @@ url_suffix:
 urls:
   GND: tierra
 strings:
-- made_by: 'Hecho por {manufacturer}'
+- details: 'Details'
+- group_other: 'otro'
+- form_undefined: 'Otro'
+- pin_header: '{} pin header'
 - type_hat: 'formato HAT'
 - type_phat: 'formato pHAT'
 - type_classic: 'formato clásico'
-- pin_header: '{} pin header'
 - uses_eeprom: 'Usa EEPROM'
 - uses_i2c: 'Usa I2C'
 - uses_spi: 'Usa SPI'
 - uses_5v_and_3v3: 'Alimentación 5v+3v3'
 - uses_5v: 'Alimentación 5v'
 - uses_3v3: 'Alimentación 3v3'
-- wiring_pi_pin: 'Wiring Pi pin {}'
 - uses_n_gpio_pins: 'Usa {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
 - physical_pin_n: 'Physical pin {}'
+- wiring_pi_pin: 'Wiring Pi pin {}'
+- made_by: 'Hecho por {manufacturer}'
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
-- details: 'Details'
 featured:
 - ab-adc-pi-zero
 - analog-zero
@@ -45,16 +47,27 @@ overlays:
 - spi
 - uart
 - wiringpi
+- 4tronix-picon-zero
+- 4tronix-pistep2d
+- 4tronix-pistep2q
 - ab-1-wire-plus
+- ab-1-wire-zero
 - ab-adc-differential-pi
 - ab-adc-pi-plus
 - ab-adc-pi-zero
+- ab-adcdac-pi-zero
 - ab-io-pi-plus
+- ab-io-pi-zero
+- ab-rs485-pi
 - ab-rtc-pi-plus
+- ab-rtc-pi-zero
 - ab-serial-pi-plus
+- ab-serial-pi-zero
+- ab-servo-pwm-pi-zero
 - adafruit-cap-mpr121
 - adafruit-servo-hat
 - analog-zero
+- automation-hat
 - blinkt
 - carberry
 - cirruslogic-audio-card
@@ -74,11 +87,24 @@ overlays:
 - pi-liter
 - piano-hat
 - piborg-ledborg
+- piborg-zeroborg
 - pibrella
 - piglow
+- pijack
 - propeller-hat
+- raspio-duino
+- redbear-iot-hat
 - rpf-dots
 - rtk-000-001
+- scroll-phat
+- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- unicorn-phat
+- uugear-7port-usb-hub
+- uugear-witty-pi
+- uugear-witty-pi-2
+- uugear-zero4u
+- wifi-pants
+- zero-lipo

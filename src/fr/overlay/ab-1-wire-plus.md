@@ -2,7 +2,7 @@
 ---
 name: 1 Wire Pi Plus
 class: board
-type: com
+type: com.
 formfactor: HAT
 manufacturer: AB Electronics
 description: 1-Wire vers interface I2C

@@ -2,7 +2,7 @@
 ---
 name: ADC Differential Pi
 class: board
-type: adc
+type: a/n
 formfactor: HAT
 manufacturer: AB Electronics
 description: 8 canaux Analogiques vers un convertisseur Digital

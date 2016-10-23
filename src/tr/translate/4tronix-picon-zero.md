@@ -12,7 +12,6 @@ buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=552
 pincount: 40
 eeprom: no
 power:
-  '1':
   '2':
 ground:
   '6':
@@ -28,6 +27,9 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '38':
+    name: Ultrasonic
+    mode: input/output
 i2c:
   '0x22':
     name: PiconZero

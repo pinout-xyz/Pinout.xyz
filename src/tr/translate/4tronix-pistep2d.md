@@ -21,28 +21,28 @@ ground:
   '39':
 pin:
   '11':
-    name: A0
+    name: MotorA_0
     mode: output
   '12':
-    name: A1
+    name: MotorA_1
     mode: output
   '13':
-    name: A2
+    name: MotorA_2
     mode: output
   '15':
-    name: A3
+    name: MotorA_3
     mode: output
   '16':
-    name: B0
+    name: MotorB_0
     mode: output
   '18':
-    name: B1
+    name: MotorB_1
     mode: output
   '22':
-    name: B2
+    name: MotorB_2
     mode: output
   '7':
-    name: B3
+    name: MotorB_3
     mode: output
 -->
 # PiStep2 Dual
@@ -52,4 +52,3 @@ Drive 2 uni-polar stepper motors using a single control board with the PiStep2 D
 * Uses a ULN2803 Darlington driver chip to drive the motors
 * Ideal for use with 28BYJ48 stepper motors
 * Supported in Scratch GPIO as well as in Python
-

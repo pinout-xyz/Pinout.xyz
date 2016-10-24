@@ -21,12 +21,12 @@ install:
 -->
 #Sense HAT
 
-The Sense HAT is an add-on board for Raspberry Pi comprising of a 8×8 RGB LED matrix, a five-button joystick and the following sensors: Gyroscope, Accelerometer, Magnetometer, Temperature, Barometric pressure and Humidity.
+Sense HAT es una placa adicional para Raspberry Pi con una matriz led 8x8 RGB, un joystick de 5 botones y los siguientes sensores: giroscopio, acelerómetro, magnetómetro, temperatura, presión barométrica y humedad.
 
-The shift register driving the LED Matrix is a LED2472G connected via an ATTINY88 communicating via i2c at address 0x46 with the Pi. The Multi-Directional SKRHABE010 Switch/Joystick is similarly controlled.
+El controlador de la matriz LED es un LED2472G conectado mediante ATTINY88 y comunicándose mediante i2c en la dirección 0x46 con la Pi. El joystick multidireccional SKRHABE010 switch/joystick se controla de manera similar.
 
-The sensors themselves also operate over the i2c bus:
+Los sensores también funcionan mediante el bus i2c:
 
-The IMU (Gyroscope, Accelerometer, Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e),0x6a(0x6b), with Interrupts on the ATTINY88.
+Los IUM (giroscopio, acelerómetro y magnetómetro) a trabés de LSM9DS1 en las direcciones i2c 0x1c(0x1e),0x6a(0x6b), con interrupciones en el ATTINY88.
 
-Environmental sensors are represented by a LPS25H Pressure+Temperature sensor at address 0x5c and by a HTS221 Humidity+Temp sensor at 0x5f on the i2c bus.
+Los sensores medioambientales son un LPS25H presión+temperatura en la dirección 0x5c y un HTS221 humedad+temperatura en la dirección 0x5f del bus i2c.

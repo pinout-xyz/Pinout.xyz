@@ -30,8 +30,8 @@ install:
 -->
 #Duino
 
-The RasPiO Duino is a small plug-on board for Raspberry Pi. It has similar functionality to an Arduino Uno, with an ATMega 328P-PU at its heart, but is fully programmable from the Raspberry Pi. Once programmed, it can be removed from the Pi and used on its own.
+RasPiO Duino es una pequeña placa adicional para Raspberry Pi. Tiene funciones similares a Arduino Uno, con un ATMega 328P-PU como corazón, pero es completamente programable desde Raspberry Pi. Una vez programado, puede desconectarse de Raspberry Pi y usarse de manera independiente.
 
-Pins on the ATMega are broken out to a cluster of three holes. The ATMega328 features a 6 channel analog to digital converter and 14 digital I/O pins, 6 of which can also be used for PWM. The Pi’s GPIO ports are also broken out on the board as well and there is a 72 point prototyping area, with GND, 3V3 and 5V rails, where you can add your own components.
+Los pines del ATMega están dividido es grupos de tres. El ATMega328 tiene un conversor analógico a digital de 6 canales, y 14 pines digitales I/O, 6 de los cuales pueden utilizarse para PWM. Los puertos GPIO de Raspberry Pi también están disponibles además de un área de prototipado de 72 puntos raíles con tierra, 3V3 ty 5V, en los que puedes añadir tus componentes.
 
-Note: the RasPiO Duino runs on 3v3 at 12 MHz (not 5V at 16 MHz like the Uno).
+Nota: RasPiO Duino funciona a 3v3 y 12 MHz (no 5V y 16 MHz como Uno).

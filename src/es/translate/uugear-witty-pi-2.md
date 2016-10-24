@@ -33,23 +33,23 @@ i2c:
 -->
 # Witty Pi 2
 
-Witty Pi 2 is the second generation of Witty Pi, which adds realtime clock and power management to your Raspberry Pi.
+Witty Pi 2 es la segunda generación de Witty Pi, añade reloj de tiempo real y gestión de alimentación a Raspberry Pi.
 
-You can turn on/off your Raspberry Pi with a single tap on the button on Witty Pi 2, and the power supply for Raspberry Pi and all its USB peripherals will get fully cut after the shutdown.
+Puedes encender/apagar tu Raspberry Pi con un botón de Witty Pi 2, y se desconectarán la fuente de alimentación y los periféricos USB.
 
-Witty Pi 2 has a CR2032 backed realtime clock (DS3231) on board, and can accurately keep time for Raspberry Pi. The built-in temperature sensor can tell the temperature around your Raspberry Pi too.
+Witty Pi 2 tiene un reloj de tiempo real CR2032 (DS3231), que mantiene de manera precisa el tiempo de Raspberry Pi. Además, un sensor de temperatura mide la temperatura alrededor de Raspberry Pi.
 
-You can schedule next shutdown/startup of your Pi via the software. Complex ON/OFF sequence for Raspberry Pi can be achieved by applying a user-defined schedule script.
+Se puede programar el próximo encendido/apagado mediante software, incluso secuencias complejas mediante script.
 
-If you are using power bank as power supply, the new dummy load feature can keep power bank alive with low current consumption. The newly added 6-pin female header breaks out some important signals for integration/extension.
+Si utilizas un power bank como alimentación, puede mantener el power bank con carga debido a un bajo consumo de corriente. Los nuevos 6 pines hembra añaden opciones de integración/extensión.
 
-You can use the two commands below to install software for Witty Pi 2:
+Puedes usar estos dos comandos para instalar sofware para Witty Pi 2:
 
 ```bash
 wget http://www.uugear.com/repo/WittyPi2/installWittyPi.sh
 
 sudo sh installWittyPi.sh
 ```
-After the installation is done, reboot your Raspberry Pi and your Witty Pi 2 is ready to go.
+Una vez realizada la instalación, reinicia tu Raspberry Pi y Witty Pi 2 estará listo.
 
-Witty Pi 2 supports all Raspberry Pi models that have 40-pin header, including A+, B+, 2B, 3B and Zero.
+Witty Pi 2 funciona con todos los modelos de Raspberry Pi de 40 pines A+/B+/2B/3B/Zero.

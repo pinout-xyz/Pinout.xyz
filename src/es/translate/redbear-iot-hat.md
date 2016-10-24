@@ -47,13 +47,13 @@ pin:
 -->
 #PiZero IoT HAT
 
-The RedBear IoT HAT brings the BCM43438 used on the Raspberry Pi 3 to HAT format, compatible with the Pi Zero.
+IoT HAT fabricado por RedBear lleva el BCM43438 usado en Raspberry Pi 3 a formato HAT, compatible con Pi Zero.
 
-The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
+El chip proporciona Wi-Fi 802.11n y Bluetooth 4.1 (Modo Dual).
 
 * Bluetooth 4.1
 * WiFi
-* Low power
-* External antenna support
-* Compatible with the same WiFi/Bluetooth software used on the Pi 3
-* Supports Pi Zero, Model A+, Model B+, Pi 2
+* Bajo consumo
+* Se puede añadir antena externa
+* Compatible con el mismo software WiFi/Bluetooth usado en Raspberry Pi 3
+* Funciona con Pi Zero, A+, B+, Pi 2

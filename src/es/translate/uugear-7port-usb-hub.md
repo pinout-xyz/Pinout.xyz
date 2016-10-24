@@ -15,10 +15,10 @@ power: 5v
 -->
 #7-port USB hub for Raspberry Pi
 
-This is a 7-Port USB hub designed for Raspberry Pi. It extends one USB port on Raspberry Pi to 7 usable USB ports, which allows you to connect much more USB devices to your Raspberry Pi. There is a red LED on board as the power indicator, and seven green LEDs aside the USB ports as transaction indicators.
+Es un hub con 7 puertos USB para Raspberry Pi. Aumenta un puerto USB de Raspberry Pi en 7, lo que permite usar más dispositivos. Cuenta con un LED rojo para indicar la alimentación y 7 LEDs verdes para el tráfico en los puertos USB.
 
-This USB hub is compatible with all versions of Raspberry Pi, including the old A/B model, A+/B+ model, compute module (with development kit), Raspberry Pi 2 (B model), Raspberry Pi Zero and Raspberry Pi 3 (B model). The board size of this USB hub is the same with Raspberry Pi B+ or Raspberry Pi 2/3 (B model). The old Raspberry Pi A and B model also have the same size, except that they don’t have those rounded corners. This USB hub has 6 mounting holes at correct positions and could be mounted under any Raspberry Pi model except the compute module.
+Este hub es compatible con todas las versiones de Raspberry Pi, tiene el tamaño de B+/2B/3B y 6 agujeros para montaje en cualquier Raspberry Pi (excepto compute module).
 
-For different models of Raspberry Pi, this USB hub uses different approaches to (optionally) back-power the Raspberry Pi, which significantly simplifies your wiring and allows you to power both the USB hub and Raspberry Pi with only one power supply.
+Para diferentes modelos de Raspberry Pi usa diferentes métodos para retroalimentar (opcional) la Raspberry Pi, lo que facilita el cableado al alimentar el hub USB y Raspberry Pi con una sola fuente de alimentación.
 
-There are also 7 digital output pins on board, which can tell whether a USB port is in used. These output pins are in 3.3V level and can be directly connected to Raspberry Pi’s GPIO pin, or connected to an external microcontroller.
+La placa cuenta con 7 pines digitales de salida, que pueden decir si un puerto está en uso. Son de 3.3V por lo que se pueden conectar directamente a los GPIO de Raspberry Pi o a un microcontrolador externo.

@@ -31,16 +31,16 @@ pin:
 -->
 #WiFi Pants
 
-WiFi Pants is a WiFi and 5V boost power supply add-on board for your Raspberry Pi based around the ESP-12F.
+WiFi Pants es una placa adicional para Raspberry Pi con WiFi y alimentación de 5V, basada en ESP-12F.
 
-The WiFi Pants board fits the outline of the Pi Zero, with only a small protrusion for the antenna, and only six GPIOs are needed on the Pi's expansion connector.
+Encaja perfectamente con Pi Zero, pese a un pequeño saliente para la antena, y sólo necesita 6 puertos GPIO.
 
-It communicates over the SDIO interface to provide WiFi capability for a direct alternative to a USB WiFi adapter for low-bandwidth applications, sufficient in most embedded projects.
+Se comunica a través de la interfaz SDIO para dar capacidades WiFi como alternativa a los adaptadores WiFi USB. Es útil para proyectos de poco ancho de banda, como la mayoría de los proyectos incrustados.
 
-Most notably, WiFi Pants can add WiFi to a Pi Zero while leaving the USB port free, and boosts any battery from as low as 3V to 5V at up to 2A to power the Pi and any other add-ons.
+Lo más destacable, WiFI Pants añade WiFi a Pi Zero dejando libre el puerto USB y permite usar cualquier batería de hasta 3V ya que la aumenta a 5V y 2A para alimentar la Pi y otros periféricos.
 
-A JST-PH connector compatible with Sparkfun and Adafruit battery packs is included with the board. An undervoltage lock-out prevents batteries from draining below 2.7V. A soft power switch input lets a microcontroller or switch easily turn off or on the power supply.
+Incluye un conector JST-PH compatible con las baterías de Sparkfun y Adafruit. Su mecanismo de seguridad evita la descarga más allá de 2.7V. Un interruptor permite a un microcontrolador encender o apagar la fuente de alimentación.
 
-Along with the soft power switch input, the 5 pin header exposes the Raspberry Pi's serial console, great for IoT projects where there is no screen but shell access is needed for setup. The header fits the 6 pin FTDI USB-to-UART cable.
+Además del interruptor, los 5 pines dan acceso al puerto serie de Raspberry Pi, ideal para proyectos IoT donde no hay pantalla pero es necesario acceso a terminal para la puesta a punto. Estos pines pueden conectarse a un cable FTDI USB-to-UART de 6 pines.
 
-WiFi Pants also works great with the Pi A+, B+, and 2 models.
+WiFi Pants también funciona perfectamente con Pi A+/B+/2.

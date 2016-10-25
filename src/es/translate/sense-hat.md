@@ -9,7 +9,7 @@ description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystic
 url: https://www.raspberrypi.org/products/sense-hat/
 image: 'sense-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: dtb
 power:
   '1':
   '2':

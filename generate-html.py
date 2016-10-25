@@ -30,6 +30,7 @@ default_strings = {
     'uses_3v3': 'Needs 3v3 power',
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
+    'uses_eeprom': 'Uses EEPROM',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
@@ -154,6 +155,11 @@ def load_overlay(overlay):
             if uses_spi:
                 details.append(strings['uses_spi'])
 
+        if 'eeprom' in loaded:
+            eeprom = str(loaded['eeprom'])
+            if eeprom == 'dtb':
+                details.append(strings['uses_eeprom'])
+
         if 'power' in loaded:
             uses_5v = False
             uses_3v3 = False
@@ -175,11 +181,6 @@ def load_overlay(overlay):
                 details.append(strings['uses_5v'])
             elif uses_3v3:
                 details.append(strings['uses_3v3'])
-
-        if 'eeprom' in loaded:
-            eeprom = str(loaded['eeprom'])
-            if eeprom == 'yes':
-                details.append(strings['uses_eeprom'])
 
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:

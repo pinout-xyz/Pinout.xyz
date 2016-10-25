@@ -16,7 +16,7 @@ strings:
 - type_hat: 'format HAT'
 - type_phat: 'format pHAT'
 - type_classic: 'format Classic'
-- uses_eeprom: 'EEPROM'
+- uses_eeprom: 'configuration automatique EEPROM'
 - uses_i2c: 'bus I2C'
 - uses_spi: 'bus SPI'
 - uses_5v_and_3v3: 'Alim. 5v et 3v3'

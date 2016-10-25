@@ -11,7 +11,6 @@ buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=390
 image: '4tronix-pistop.png'
 pincount: 4
 eeprom: no
-power:
 ground:
   '6':
   '9':

@@ -25,13 +25,13 @@ default_strings = {
     'pin_header': '{} pin header',
     'form_undefined': 'Undefined',
     'group_other': 'other',
+    'eeprom_detect': 'Uses VID/PID',
+    'eeprom_setup': 'Uses EEPROM',
     'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
     'uses_5v': 'Needs 5v power',
     'uses_3v3': 'Needs 3v3 power',
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
-    'uses_eeprom': 'Uses EEPROM',
-    'uses_eepvid': 'Uses VID/PID',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
@@ -117,10 +117,10 @@ def load_overlay(overlay):
 
         if 'eeprom' in loaded:
             eeprom = str(loaded['eeprom'])
-            if eeprom == 'True':
-                details.append(strings['uses_eepvid'])
-            if eeprom == 'required':
-                details.append(strings['uses_eeprom'])
+            if eeprom == 'detect' or eeprom == 'True':
+                details.append(strings['eeprom_detect'])
+            if eeprom == 'setup':
+                details.append(strings['eeprom_setup'])
 
         if 'power' in loaded:
             uses_5v = False

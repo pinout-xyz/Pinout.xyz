@@ -31,6 +31,7 @@ default_strings = {
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
     'uses_eeprom': 'Uses EEPROM',
+    'uses_eepvid': 'Uses VID/PID',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
@@ -114,6 +115,35 @@ def load_overlay(overlay):
             else:
                 details.append(strings['pin_header'].format(pincount))
 
+        if 'eeprom' in loaded:
+            eeprom = str(loaded['eeprom'])
+            if eeprom == 'True':
+                details.append(strings['uses_eepvid'])
+            if eeprom == 'required':
+                details.append(strings['uses_eeprom'])
+
+        if 'power' in loaded:
+            uses_5v = False
+            uses_3v3 = False
+
+            for pin in loaded['power']:
+                pin = str(pin)
+                if pin.startswith('bcm'):
+                    pin = pinout.bcm_to_physical(pin[3:])
+
+                if pin in ['2','4']:
+                    uses_5v = True
+
+                if pin in ['1','17']:
+                    uses_3v3 = True
+
+            if uses_5v and uses_3v3:
+                details.append(strings['uses_5v_and_3v3'])
+            elif uses_5v:
+                details.append(strings['uses_5v'])
+            elif uses_3v3:
+                details.append(strings['uses_3v3'])
+
         '''
         If the overlay includes a collection of pins then
         loop through them and count how many non-power pins are used
@@ -144,43 +174,14 @@ def load_overlay(overlay):
                     if pin in ['19','21','23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-
-
-            if uses > 0:
-                details.append(strings['uses_n_gpio_pins'].format(uses))
-
             if uses_i2c:
                 details.append(strings['uses_i2c'])
 
             if uses_spi:
                 details.append(strings['uses_spi'])
 
-        if 'eeprom' in loaded:
-            eeprom = str(loaded['eeprom'])
-            if eeprom == 'dtb':
-                details.append(strings['uses_eeprom'])
-
-        if 'power' in loaded:
-            uses_5v = False
-            uses_3v3 = False
-
-            for pin in loaded['power']:
-                pin = str(pin)
-                if pin.startswith('bcm'):
-                    pin = pinout.bcm_to_physical(pin[3:])
-
-                if pin in ['2','4']:
-                    uses_5v = True
-
-                if pin in ['1','17']:
-                    uses_3v3 = True
-
-            if uses_5v and uses_3v3:
-                details.append(strings['uses_5v_and_3v3'])
-            elif uses_5v:
-                details.append(strings['uses_5v'])
-            elif uses_3v3:
-                details.append(strings['uses_3v3'])
+            if uses > 0:
+                details.append(strings['uses_n_gpio_pins'].format(uses))
 
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:

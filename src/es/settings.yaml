@@ -16,6 +16,7 @@ strings:
 - type_hat: 'formato HAT'
 - type_phat: 'formato pHAT'
 - type_classic: 'formato clásico'
+- uses_eepvid: 'EEPROM ID'
 - uses_eeprom: 'Usa EEPROM'
 - uses_i2c: 'Usa I2C'
 - uses_spi: 'Usa SPI'
@@ -28,7 +29,7 @@ strings:
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - made_by: 'Hecho por {manufacturer}'
 - more_information: 'More Information'
-- github_repository: 'GitHub Repository'
+- github_repository: 'GitHub'
 - buy_now: 'Buy Now'
 featured:
 - ab-adc-pi-zero

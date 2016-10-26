@@ -1,64 +1,43 @@
 <!--
 ---
-name: WiringPi
-class: interface
-type: pinout
-url: http://wiringpi.com
-github: https://github.com/WiringPi/WiringPi2-Python
+name: WiFi Pants
+class: board
+type: power, iot
+formfactor: pHAT
+manufacturer: SLNGadget
+description: WiFi and battery power for the Raspberry Pi
+url: https://hackaday.io/project/8678-rpi-wifi
+github: https://github.com/al177/esp_hat
+buy: https://www.tindie.com/products/ajlitt/wifi-power-pants/
+image: 'wifi-pants.png'
 pincount: 40
+eeprom: no
+power:
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
-  '3':
-    name: WiringPi 8
-  '5':
-    name: WiringPi 9
-  '7':
-    name: WiringPi 7
-  '8':
-    name: WiringPi 15
-  '10':
-    name: WiringPi 16
-  '11':
-    name: WiringPi 0
-  '12':
-    name: WiringPi 1
   '13':
-    name: WiringPi 2
+    name: ESP GPIO10
   '15':
-    name: WiringPi 3
+    name: ESP SCLK
   '16':
-    name: WiringPi 4
+    name: ESP CSO
   '18':
-    name: WiringPi 5
-  '19':
-    name: WiringPi 12
-  '21':
-    name: WiringPi 13
+    name: ESP MISO
   '22':
-    name: WiringPi 6
-  '23':
-    name: WiringPi 14
-  '24':
-    name: WiringPi 10
-  '26':
-    name: WiringPi 11
-  '29':
-    name: WiringPi 21
-  '31':
-    name: WiringPi 22
-  '32':
-    name: WiringPi 26
-  '33':
-    name: WiringPi 23
-  '35':
-    name: WiringPi 24
-  '36':
-    name: WiringPi 27
+    name: ESP MOSI
+  '27':
+    name: ESP CH_PD
   '37':
-    name: WiringPi 25
-  '38':
-    name: WiringPi 28
-  '40':
-    name: WiringPi 29
+    name: ESP GPIO9
 -->
 #WiFi Pants
 

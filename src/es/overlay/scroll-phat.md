@@ -45,15 +45,16 @@ install:
 -->
 #Scroll pHAT
 
-The Scroll pHAT provides a matrix of 55 white LED pixels that is ideal for writing messages, showing graphs, and drawing pictures. Perfect for RPi Zero but works with A+/B+/2 too!
+Scroll pHAT proporciona una matriz de 55 LED blancos en formato píxel que es ideal para escribir mensajes, mostrar gráficas y dibujar. Perfecto para RPi Zero pero también funciona con A+/B+/2.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/scrollphat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import scrollphat

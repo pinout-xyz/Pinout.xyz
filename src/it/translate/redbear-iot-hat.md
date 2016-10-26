@@ -11,7 +11,7 @@ github: https://github.com/redbear/IoT_pHAT
 buy: https://redbear.cc/product/rpi/iot-phat.html
 image: 'redbear-iot-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: required
 power:
   '1':
   '2':

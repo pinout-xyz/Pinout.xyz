@@ -11,6 +11,15 @@ buy: https://www.piborg.org/ledborg
 image: 'piborg-led-borg.png'
 pincount: 26
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '11':
     name: Red LED
@@ -28,28 +37,30 @@ pin:
     active: high
     description: PiBorg Blue LED
 -->
-#LedBorg
+# LedBorg
 
-The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi. It has its own driver, so you don't need to drive it manually.
-
-If you want a much, much wider range of colours, though, you can drive it manually using softPwm in WiringPi. The pin assignments for this are as follows:
-
-WiringPi pin 0: Red LED
-WiringPi pin 2: Green LED
-WiringPi pin 3: Blue LED
-
-This is easy using WiringPi in Python:
+The PiBorg LedBorg is an ultra-bright RGB LED board for the Raspberry Pi.
 
 ```python
-import wiringpi2 as wiringpi
-wiringpi.wiringPiSetup()
+from gpiozero import LedBorg
+from time import sleep
 
-wiringpi.softPwmCreate(0,0,100)
-wiringpi.softPwmCreate(2,0,100)
-wiringpi.softPwmCreate(3,0,100)
+lb = LedBorg()
 
-# Purple!
-wiringpi.softPwmWrite(3,100) # Full Blue
-wiringpi.softPwmWrite(0,100) # Full Red
-wiringpi.softPWMWrite(2,0)	 # No Green
+while True:
+    r, g, b = 0, 0, 0
+    for i in range(100):
+        r = i / 100.0
+        lb.value = (r, g, b)
+        sleep(0.01)
+    for i in range(100):
+        g = i / 100.0
+        sleep(0.01)
+        lb.value = (r, g, b)
+    for i in range(100):
+        b = i / 100.0
+        lb.value = (r, g, b)
+        sleep(0.01)
 ```
+
+[GPIO Zero docs](http://gpiozero.readthedocs.io/en/v1.3.1/api_boards.html#ledborg)

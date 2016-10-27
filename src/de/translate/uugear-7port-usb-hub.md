@@ -9,9 +9,12 @@ description: 7-port USB hub for Raspberry Pi
 url: http://www.uugear.com/product/7-port-usb-hub-for-raspberry-pi/
 buy: http://www.uugear.com/product/7-port-usb-hub-for-raspberry-pi/
 image: 'uugear-7port-usb-hub.png'
-pincount: 40
+pincount: 7
 eeprom: no
-power: 5v
+power:
+  '2':
+ground:
+  '39':
 -->
 #7-port USB hub for Raspberry Pi
 

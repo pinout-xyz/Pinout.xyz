@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: adc,io,motor
+type: adc,io,motor,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: An all-in-one light, input, motor, touch and output add-on board

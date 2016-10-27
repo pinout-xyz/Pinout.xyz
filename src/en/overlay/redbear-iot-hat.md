@@ -7,11 +7,11 @@ formfactor: pHAT
 manufacturer: RedBear
 description: A Wi-Fi + Bluetooth add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
-github:
+github: https://github.com/redbear/IoT_pHAT
 buy: https://redbear.cc/product/rpi/iot-phat.html
 image: 'redbear-iot-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':

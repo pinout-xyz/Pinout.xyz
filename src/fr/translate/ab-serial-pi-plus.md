@@ -12,7 +12,16 @@ buy: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
 image: 'ab-serial-pi-plus.png'
 pincount: 40
 eeprom: no
-power: 3v3
+power:
+  '1':
+ground:
+  '6':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '8':
     mode: UART

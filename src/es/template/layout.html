@@ -1,69 +1,68 @@
 <!doctype html>
 <html lang="{{langcode}}">
-	<head>
-		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>{{title}}</title>
-		<meta name="description" content="{{description}}" />
-		<link href='//fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css' />
-		<link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-		<link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
-		<link href="{{resource_url}}print.css?v={{v}}" rel="stylesheet" media="print">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		{{hreflang}}
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}" />
+        <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css' />
+        <link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
+        <link href="{{resource_url}}print.css?v={{v}}" rel="stylesheet" media="print">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        {{hreflang}}
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-69846516-5', 'auto');
-		  ga('send', 'pageview');
+          ga('create', 'UA-69846516-5', 'auto');
+          ga('send', 'pageview');
 
-		</script>
-	</head>
-	<body>
-		<div id="container">
-			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
-			<div id="leftcolumn">
-			<nav id="gpio">
-				<div id="pinbase"></div>
-				{{nav}}
-			</nav>
-			</div>
-			<div id="content">
-				<div id="featured">
-					<ul>
-					{{featured_boards}}
-					</ul>
-					<a class="more" href="/boards">See more HATs, pHATs and add-ons</a>
-				</div>
-				<div id="interfaces">
-					<ul>
-					{{nav_html_interface}}
-					</ul>
-				</div>
-				<div id="pages">
-					{{content}}
-				</div>
-				<div id="lang">
-					<ul class="lang-nav">
-						{{lang_links}}
-					</ul>
-				</div>
-			</div>
-			<div class="footer" style="clear: both;padding: 20px 0px;text-align:center;">
-				<p>Originally part of <a href="http://pi.gadgetoid.com">pi.gadgetoid.com</a></p>
-				<p>Maintained by <a href="https://twitter.com/gadgetoid"><i class="fa fa-twitter"></i> @Gadgetoid</a> and <a href="https://twitter.com/roguehal13"><i class="fa fa-twitter"></i> @RogueHAL13</a></p>
-				<p>Translation <a href="https://github.com/ResonantWave">@ResonantWave</a></p>
-				</ul>
-			</div>
-		</div>
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" style="top:8px;" /><span>Raspberry Pi</span>n<span class="out">out</span></a></h1>
+            <div id="leftcolumn">
+            <nav id="gpio">
+                <div id="pinbase"></div>
+                {{nav}}
+            </nav>
+            </div>
+            <div id="content">
+                <div id="featured">
+                    <ul>
+                    {{featured_boards}}
+                    </ul>
+                    <a class="more" href="/boards">See more HATs, pHATs and add-ons</a>
+                </div>
+                <div id="interfaces">
+                    <ul>
+                    {{nav_html_interface}}
+                    </ul>
+                </div>
+                <div id="pages">
+                    {{content}}
+                </div>
+                <div id="lang">
+                    <ul class="lang-nav">
+                        {{lang_links}}
+                    </ul>
+                </div>
+            </div>
+            <div class="footer" style="clear: both;padding: 20px 0px;text-align:center;">
+                <p>Webmasters<a href="https://twitter.com/gadgetoid"><i class="fa fa-twitter"></i> @Gadgetoid</a> and <a href="https://twitter.com/roguehal13"><i class="fa fa-twitter"></i> @RogueHAL13</a></p>
+                <p>Traducion <a href="https://github.com/ResonantWave">@ResonantWave</a> y <a href="https://github.com/IkerGarcia">@IkerGarcia</a></p>
+                </ul>
+            </div>
+        </div>
 
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
-    	<script src='{{resource_url}}prettify/lang-ruby.js'></script>
-    	<script src='{{resource_url}}prettify/lang-bash.js'></script>
-		<script src='{{resource_url}}pinout.js?v={{v}}'></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
+        <script src='{{resource_url}}prettify/lang-ruby.js'></script>
+        <script src='{{resource_url}}prettify/lang-bash.js'></script>
+        <script src='{{resource_url}}pinout.js?v={{v}}'></script>
 </body>
 </html>

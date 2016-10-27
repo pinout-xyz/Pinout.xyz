@@ -11,7 +11,7 @@ pin:
 -->
 # W1-GPIO - One-Wire Interface
 
-To enable the one-wire interface you need to add the following line to /boot/config.txt, beofre rebooting your Pi:
+To enable the one-wire interface you need to add the following line to /boot/config.txt, before rebooting your Pi:
 
 ```
 dtoverlay=w1-gpio

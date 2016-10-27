@@ -2,7 +2,7 @@
 ---
 name: Display-o-Tron HAT
 class: board
-type: todas
+type: lcd
 formfactor: HAT
 manufacturer: Pimoroni
 description: Una pantalla LCD de 3 líneas con luz RGB con 6 zonas y 6 botones táctiles

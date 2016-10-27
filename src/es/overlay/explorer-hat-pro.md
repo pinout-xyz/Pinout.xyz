@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: todas
+type: adc,cap,io,motor
 formfactor: HAT
 manufacturer: Pimoroni
 description: Una placa completa, con luz, entradas, entradas táctiles y salidas.

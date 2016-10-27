@@ -2,7 +2,7 @@
 ---
 name: Pibrella
 class: board
-type: todas
+type: io,multi
 formfactor: Otro
 manufacturer: Cyntech
 description: Luz, sonido, entradas y salidas en una placa.

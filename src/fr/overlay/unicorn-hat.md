@@ -2,7 +2,7 @@
 ---
 name: Unicorn HAT
 class: board
-type: Tous
+type: led
 formfactor: HAT
 manufacturer: Pimoroni
 description: une matrice 8x8 de LEDs RGB
@@ -11,7 +11,7 @@ github: https://github.com/pimoroni/unicornhat
 buy: http://shop.pimoroni.com/products/unicorn-hat
 image: 'unicorn-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '2':
 ground:

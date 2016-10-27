@@ -1,53 +1,58 @@
 <!--
 ---
-name: IoT HAT
+name: IoT pHAT
 class: board
 type: iot
 formfactor: pHAT
 manufacturer: RedBear
 description: A Wi-Fi + Bluetooth add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
-github:
-buy: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
+github: https://github.com/redbear/IoT_pHAT
+buy: https://redbear.cc/product/rpi/iot-phat.html
 image: 'redbear-iot-hat.png'
 pincount: 40
-eeprom: no
-power: 3v3,5v
+eeprom: setup
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
-  '11':
-    name: 'RTS'
-  '13':
-    name: 'SDIO_D3'
-  '15':
-    name: 'SDIO_CLK'
-  '29':
-    name: 'BT_RST_N'
-  '31':
-    name: 'WL_REG_ON'
-  '33':
-    name: 'BT_HOST_WAKE'
-  '37':
-    name: 'SDIO_D2'
   '8':
-    name: 'TXD'
+    name: 'BLE TDX'
   '10':
-    name: 'RXD'
+    name: 'BLE RXD'
+  '11':
+    name: 'BLE RTS'
+  '13':
+    name: 'WiFi SDIO_D3'
+  '15':
+    name: 'WiFi SDIO_CLK'
   '16':
-    name: 'SDIO_CMD'
+    name: 'WiFi SDIO_CMD'
   '18':
-    name: 'SDIO_D0'
+    name: 'WiFi SDIO_D0'
   '22':
-    name: 'SDIO_D1'
-  '32':
-    name: 'WL_HOST_WAKE'
+    name: 'WiFi SDIO_D1'
+  '29':
+    name: 'BLE BT_RST_N'
+  '31':
+    name: 'WiFi WL_REG_ON'
   '36':
-    name: 'CTS'
-  '38':
-    name: 'BT_WAKE'
+    name: 'BLE CTS'
+  '37':
+    name: 'WiFi SDIO_D2'
 -->
-#PiZero IoT HAT
+#IoT pHAT
 
-The RedBear IoT HAT brings the BCM43438 used on the Raspberry Pi 3 to HAT format, compatible with the Pi Zero.
+The RedBear IoT pHAT brings the BCM43438 used on the Raspberry Pi 3 to pHAT format, compatible with the Pi Zero.
 
 The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
 

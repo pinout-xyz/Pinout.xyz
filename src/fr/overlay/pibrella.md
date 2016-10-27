@@ -2,7 +2,7 @@
 ---
 name: Pibrella
 class: board
-type: Tous
+type: e/s,multi
 formfactor: Autre
 manufacturer: Cyntech
 description: carte multi-usage avec son, lumière, entrées et sorties

@@ -11,10 +11,16 @@ image: 'phat-dac.png'
 pincount: 40
 eeprom: no
 power:
-  '1':
   '2':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '12':
     name: I2S

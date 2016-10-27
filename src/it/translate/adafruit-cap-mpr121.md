@@ -16,6 +16,13 @@ power:
   '1':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -34,8 +41,27 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#Capacitive Touch HAT
+# Capacitive Touch HAT
 
 This Raspberry Pi add-on board provides 12 capacitive touch inputs and all the logic to read them over a simple I2C communication bus.
 
 Baded on the MPR121 chip, this HAT allows you to create electronics that can react to human touch, with up to 12 individual sensors.
+
+## Code
+
+```python
+from Adafruit_MPR121 import MPR121
+from time import sleep
+
+cap = MPR121.MPR121()
+
+last_touched = cap.touched()
+while True:
+    current_touched = cap.touched()
+    for i in range(12):
+        pin_bit = 1 << i
+        if current_touched & pin_bit and not last_touched & pin_bit:
+            print("{} touched!".format(i))
+    last_touched = current_touched
+    sleep(0.1)
+```

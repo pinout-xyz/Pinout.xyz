@@ -2,7 +2,7 @@
 ---
 name: PiGlow
 class: board
-type: Tous
+type: led
 formfactor: Autre
 manufacturer: Pimoroni
 description: une spirale de LED contrôlable depuis Python.

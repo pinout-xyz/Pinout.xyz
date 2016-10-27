@@ -12,7 +12,14 @@ buy: https://ryanteck.uk/add-ons/58-raspio-duino.html
 image: 'raspio-duino.png'
 pincount: 26
 eeprom: no
-power: 3v3
+power:
+  '1':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '8':
     mode: uart

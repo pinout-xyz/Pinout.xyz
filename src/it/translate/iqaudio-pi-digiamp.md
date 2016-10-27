@@ -11,6 +11,18 @@ buy: http://www.iqaudio.co.uk
 image: 'iqaudio-pi-digiamp.png'
 pincount: 40
 eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -39,7 +51,6 @@ install:
   'devices':
   - 'i2c'
 -->
-
 #Pi-DigiAMP+
 
 The Pi-DigiAMP+ is an add-on board that includes a Digital to Analog Converter (DAC) and powerful 35w stereo amplifier. If you want to turn your Raspberry Pi into a working Hi Fi stereo, just add speakers and you're off.

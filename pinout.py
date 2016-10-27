@@ -4,7 +4,7 @@ import time
 try:
     import yaml
 except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install PyYAML")
+    exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
 
 
 DB_FILE = 'pi-pinout.yaml'

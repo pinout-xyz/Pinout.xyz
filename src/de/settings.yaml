@@ -1,7 +1,6 @@
 ---
 default_desc: The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry
-  Pi, B+ and Pi 2
-default_title: Raspberry Pi GPIO Pinout - Pi 1, B+, Pi 2
+default_title: Raspberry Pi GPIO Pinout
 title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
@@ -10,22 +9,28 @@ url_suffix:
 urls:
   GND: masse_ground
 strings:
-- made_by: 'Hersteller: {manufacturer}'
+- details: 'Details'
+- group_other: 'alle'
+- form_undefined: 'Andere'
+- pin_header: '{} pin header'
 - type_hat: 'HAT form-factor'
 - type_phat: 'pHAT form-factor'
 - type_classic: 'Classic form-factor'
-- pin_header: '{} pin header'
-- uses_eeprom: 'benutzt EEPROM'
+- eeprom_detect: 'EEPROM Hersteller ID'
+- eeprom_setup: 'benutzt EEPROM'
 - uses_i2c: 'benutzt I2C'
 - uses_spi: 'benutzt SPI'
-- wiring_pi_pin: 'Wiring Pi Anschluss {}'
+- uses_5v_and_3v3: '5v und 3v3 Stromversorgung'
+- uses_5v: '5v Stromversorgung'
+- uses_3v3: '3v3 Stromversorgung'
 - uses_n_gpio_pins: 'benutzt {} GPIO Anschlüsse'
 - bcm_pin_rev1_pi: 'BCM Anschluss {} auf dem Rev 1 ( sehr alter ) Pi'
 - physical_pin_n: 'Physical pin {}'
+- wiring_pi_pin: 'Wiring Pi Anschluss {}'
+- made_by: 'Hersteller: {manufacturer}'
 - more_information: 'Mehr Informationen'
-- github_repository: 'GitHub Repository'
+- github_repository: 'GitHub'
 - buy_now: 'jetzt kaufen'
-- details: 'Details'
 featured:
 - display-o-tron
 - rpf-dots
@@ -33,18 +38,74 @@ featured:
 - rtk-000-001
 overlays:
 - ground
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-1wire
+- iface-pcm
+- iface-sd
 - i2c
 - spi
 - uart
 - wiringpi
+- 4tronix-picon-zero
+- 4tronix-pistep2d
+- 4tronix-pistep2q
+- ab-1-wire-plus
+- ab-1-wire-zero
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-adcdac-pi-zero
+- ab-io-pi-plus
+- ab-io-pi-zero
+- ab-rs485-pi
+- ab-rtc-pi-plus
+- ab-rtc-pi-zero
+- ab-serial-pi-plus
+- ab-serial-pi-zero
+- ab-servo-pwm-pi-zero
+- adafruit-cap-mpr121
+- adafruit-servo-hat
+- analog-zero
+- automation-hat
+- blinkt
+- carberry
+- cirruslogic-audio-card
+- discohat
 - display-o-tron
 - display-o-tron-hat
-- rpf-dots
+- drum-hat
+- enviro-phat
+- espiot-phat
 - explorer-hat
 - explorer-hat-pro
+- explorer-phat
+- iqaudio-pi-dac
+- iqaudio-pi-digiamp
+- microdot-phat
+- phat-dac
+- pi-liter
 - piano-hat
+- piborg-ledborg
+- piborg-zeroborg
 - pibrella
+- piglow
+- pijack
+- propeller-hat
+- raspio-duino
+- redbear-iot-hat
+- rpf-dots
 - rtk-000-001
+- scroll-phat
+- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- unicorn-phat
+- uugear-7port-usb-hub
+- uugear-witty-pi
+- uugear-witty-pi-2
+- uugear-zero4u
+- wifi-pants
+- zero-lipo

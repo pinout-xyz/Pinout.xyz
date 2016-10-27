@@ -2,7 +2,7 @@
 ---
 name: LedBorg
 class: board
-type: Tous
+type: led
 formfactor: Autre
 manufacturer: PiBorg
 description: une carte LED RGB pour la Raspberry Pi
@@ -28,28 +28,30 @@ pin:
     active: high
     description: LED bleue de la PiBorg
 -->
-###La carte PiBorg LedBorg ajoute une LED tricolore RGB à votre Raspberry Pi.
+### PiBorg LedBorg
 
-La carte LedBorg prend en charge la gestion de la LED. Cependant, si vous désirez contrôler le gamut de couleurs de manière plus précise, vous pouvez vous tourner vers WiringPi et son softPwn.
-
-Pour ce faire, sachez que les broches WiringPi concernées sont les suivantes:
-
-WiringPi broche 0: LED rouge
-WiringPi broche 2: LED verte
-WiringPi broche 3: LED bleue
-
-Voici un exemple WiringPi sous Python:
+La carte PiBorg LedBorg ajoute une LED tricolore RGB à votre Raspberry Pi.
 
 ```python
-import wiringpi2 as wiringpi
-wiringpi.wiringPiSetup()
+from gpiozero import LedBorg
+from time import sleep
 
-wiringpi.softPwmCreate(0,0,100)
-wiringpi.softPwmCreate(2,0,100)
-wiringpi.softPwmCreate(3,0,100)
+lb = LedBorg()
 
-# Pour du violet:
-wiringpi.softPwmWrite(0,100) # max rouge
-wiringpi.softPwmWrite(3,100) # max bleu
-wiringpi.softPWMWrite(2,0)	 # pas de vert
+while True:
+    r, g, b = 0, 0, 0
+    for i in range(100):
+        r = i / 100
+        lb.value = (r, g, b)
+        sleep(0.01)
+    for i in range(100):
+        g = i / 100
+        sleep(0.01)
+        lb.value = (r, g, b)
+    for i in range(100):
+        b = i / 100
+        lb.value = (r, g, b)
+        sleep(0.01)
 ```
+
+[GPIO Zero docs](http://gpiozero.readthedocs.io/en/v1.3.1/api_boards.html#ledborg)

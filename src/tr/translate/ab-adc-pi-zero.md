@@ -12,7 +12,16 @@ buy: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-D
 image: 'ab-adc-pi-zero.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '14':
+  '20':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -48,4 +57,4 @@ The ADC Pi Zero is an 8 channel 17 bit analogue to digital converter designed to
    - 240 SPS (11 bits)
 - One-Shot or Continuous Conversion Options
 
-Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.

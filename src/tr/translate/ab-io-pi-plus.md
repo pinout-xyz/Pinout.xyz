@@ -12,7 +12,18 @@ buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 image: 'ab-io-pi-plus.png'
 pincount: 40
 eeprom: no
-power: 3v3,5v
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -28,7 +39,7 @@ i2c:
 -->
 #IO Pi Plus
 
-The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 Model B computer platform. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
+The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
 
 A pair of MCP23017 expanders are included on the board allowing you to connect up to 32 digital inputs or outputs to the Raspberry Pi.  The IO Pi Plus Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
 
@@ -45,4 +56,4 @@ A pair of MCP23017 expanders are included on the board allowing you to connect u
 -  Configurable interrupt source  - Interrupt-on-change from configured register defaults  or pin changes
 -  Polarity Inversion register to configure the polarity of the input port data
 
-Arduino, C, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.

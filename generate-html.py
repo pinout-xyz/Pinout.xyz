@@ -63,12 +63,18 @@ def slugify(value):
 def load_overlay(overlay):
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
+
+
         loaded = data['data']
+        loaded['source'] = "src/{}/translate/{}.md".format(lang, overlay)
         loaded['long_description'] = data['html']
     except IOError:
         try:
             data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
+
+
             loaded = data['data']
+            loaded['source'] = "src/{}/translate/{}.md".format(lang, overlay)
             loaded['long_description'] = strings['translate_msg'] + data['html']
             loaded['type'] = strings['group_other']
             if 'formfactor' in loaded:
@@ -77,6 +83,8 @@ def load_overlay(overlay):
         except IOError:
             print 'overlay {} missing in lang {}'.format(overlay, lang)
             return None
+
+    print('>> Rendering: {src}'.format(src=loaded['source']))
 
     '''
     If this is not an info page, then build a collection of details and append them to long_description
@@ -220,21 +228,11 @@ def load_md(filename):
     filename = 'src/{}/{}'.format(lang, filename)
     try:
         html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
-
+        #print(':) Loaded markdown from {}'.format(filename))
         return html
     except IOError:
-        print('!! Unable to load markdown from {}'.format(filename))
+        #print('!! Unable to load markdown from {}'.format(filename))
         return ''
-
-
-def render_pin_text(pin_num, pin_url, pin_name, pin_functions, pin_subtext):
-    return '<article class="{pin_url}"><h1>{pin_name}</h1>{pin_functions}{pin_subtext}{pin_text}</article>'.format(
-        pin_url=pin_url,
-        pin_name=pin_name,
-        pin_functions=pin_functions,
-        pin_subtext=pin_subtext,
-        pin_text=load_md('pin/pin-{}.md'.format(pin_num)))
-
 
 def render_overlay_page(overlay):
     if overlay is None:
@@ -307,13 +305,21 @@ def render_pin_page(pin_num):
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
-    pin_text = render_pin_text(
+    '''pin_text = render_pin_text(
         pin_num,
         pin_url,
         pin_text_name,
         pin_functions,
         '<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext))
-    )
+    )'''
+
+    pin_text = '<article class="{pin_url}"><h1>{pin_name}</h1>{pin_functions}{pin_subtext}{pin_text}</article>'.format(
+        pin_url=pin_url,
+        pin_name=pin_text_name,
+        pin_functions=pin_functions,
+        pin_subtext=pin_subtext,
+        pin_text=load_md('pin/pin-{}.md'.format(pin_num)))
+
     # if pin_text != None:
     return pin_url, pin_text, pin_text_name  # pages[pin_url] = pin_text
 
@@ -521,6 +527,7 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
     except OSError:
         exit('Failed to create output/{}/pinout dir'.format(lang))
 
+print("\nRendering overlay pages...")
 overlays = map(load_overlay, overlays)
 overlay_subnav = ['featured']
 featured_boards_count = 0
@@ -633,13 +640,13 @@ for pin in range(1, len(pinout.pins) + 1):
                                   body_class='pin'
                                   )
 
-    print('>> pinout/{}.html'.format(pin_url))
+    print('>> Saving: pinout/{}.html'.format(pin_url))
 
     with open(os.path.join('output', lang, 'pinout', '{}.html'.format(pin_url)), 'w') as f:
         f.write(pin_html)
 
 
-print('\nRendering overlay and index pages...')
+print('\nSaving overlay and index pages...')
 
 for url in pages:
     content = pages[url]['rendered_html']
@@ -691,10 +698,13 @@ for url in pages:
                               body_class=body_class
                               )
 
+    key = url
+
     if url not in ['index','404','boards']:
         url = os.path.join('pinout', url)
 
-    print('>> {}.html'.format(url))
+    if 'source' in pages[key]:
+        print('>> Saving: {src} => {url}.html'.format(url=url, src=pages[key]['source']))
 
     with open(os.path.join('output', lang, '{}.html'.format(url)), 'w') as f:
         f.write(html)

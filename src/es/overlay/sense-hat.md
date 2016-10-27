@@ -27,6 +27,22 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+i2c:
+  '0x5c':
+    name: Pressure/Temp
+    device: lps25h
+  '0x5f':
+    name: Humidity/Temp
+    device: hts221
+  '0x6a':
+    name: Accelerometer
+    device: lsm9ds1
+  '0x1c':
+    name: Magnetometer
+    device: lsm9ds1
+  '0x46':
+    name: LED Matrix
+    device: led2472g
 install:
   'devices':
     - 'i2c'

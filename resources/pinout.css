@@ -408,10 +408,14 @@ nav:after {
 
 #gpio ul {
 	position:absolute;
-	left:246px;
 	top:87px;
 	list-style:none;
 }
+
+#gpio .top {
+	left:246px;
+}
+
 #gpio .bottom {
 	left:0px;
 }
@@ -420,23 +424,21 @@ nav:after {
 
 #gpio a {
 	display:block;
-	width:244px;
 	position:relative;
 	font-size:15px;
 	line-height:23px;
 	height:22px;
 	margin-bottom:2px;
-	border-top-left-radius:13px;
-	border-bottom-left-radius:13px;
 }
 #gpio .top a {
 	width:250px;
+	border-top-left-radius:13px;
+	border-bottom-left-radius:13px;
 }
 #gpio .bottom a {
+	width:244px;
 	border-top-right-radius:13px;
 	border-bottom-right-radius:13px;
-	border-top-left-radius:0px;
-	border-bottom-left-radius:0px;
 }
 
 #gpio a:hover,
@@ -445,7 +447,7 @@ nav:after {
 	color:#063541;
 }
 
-#gpio .bottom .pin1 a:hover {border-radius:0;}
+#gpio .pin1 a:hover, #gpio .pin1.active a {border-radius:0;}
 
 #gpio li a small {font-size:11px;}
 

@@ -11,21 +11,20 @@ buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=543
 image: 'pzm-shim.png'
 pincount: 6
 eeprom: no
-power:
 ground:
   '39':
 pin:
-  '37':
-    name: MotorA_0
-    mode: output
-  '38':
-    name: MotorA_1
-    mode: output
   '35':
     name: MotorB_0
     mode: output
   '36':
     name: MotorB_1
+    mode: output
+  '37':
+    name: MotorA_0
+    mode: output
+  '38':
+    name: MotorA_1
     mode: output
 -->
 #Pi Zero Motor Shim

@@ -6,8 +6,8 @@ type: Tutti
 formfactor: HAT
 manufacturer: Ryanteck
 description: Una maniera facile e veloce per imparare le basi del GPIO a basso prezzo. Tutto in un singolo HAT.
-url: http://www.ryanteck.uk/store/traffichat
-buy: http://www.ryanteck.uk/store/traffichat
+url: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
+buy: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
 image: 'traffic-hat.png'
 pincount: 40
 eeprom: yes

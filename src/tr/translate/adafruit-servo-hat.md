@@ -11,7 +11,7 @@ github: https://github.com/adafruit/Adafruit_Python_PCA9685
 buy: https://www.adafruit.com/product/2327
 image: 'adafruit-servo-hat.png'
 pincount: 40
-eeprom: no
+eeprom: yes
 power:
   '1':
 ground:

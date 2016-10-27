@@ -7,11 +7,11 @@ formfactor: pHAT
 manufacturer: RedBear
 description: A Wi-Fi + Bluetooth add-on board for the Pi Zero
 url: https://www.kickstarter.com/projects/1991736672/iot-hat-for-raspberry-pi-a-must-have-for-pi-zero
-github:
+github: https://github.com/redbear/IoT_pHAT
 buy: https://redbear.cc/product/rpi/iot-phat.html
 image: 'redbear-iot-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
@@ -52,13 +52,13 @@ pin:
 -->
 #IoT pHAT
 
-The RedBear IoT pHAT brings the BCM43438 used on the Raspberry Pi 3 to pHAT format, compatible with the Pi Zero.
+IoT HAT fabricado por RedBear lleva el BCM43438 usado en Raspberry Pi 3 a formato HAT, compatible con Pi Zero.
 
-The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
+El chip proporciona Wi-Fi 802.11n y Bluetooth 4.1 (Modo Dual).
 
 * Bluetooth 4.1
 * WiFi
-* Low power
-* External antenna support
-* Compatible with the same WiFi/Bluetooth software used on the Pi 3
-* Supports Pi Zero, Model A+, Model B+, Pi 2
+* Bajo consumo
+* Se puede añadir antena externa
+* Compatible con el mismo software WiFi/Bluetooth usado en Raspberry Pi 3
+* Funciona con Pi Zero, A+, B+, Pi 2

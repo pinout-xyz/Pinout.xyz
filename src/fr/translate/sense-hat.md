@@ -9,7 +9,7 @@ description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystic
 url: https://www.raspberrypi.org/products/sense-hat/
 image: 'sense-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
@@ -27,6 +27,22 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+i2c:
+  '0x5c':
+    name: Pressure/Temp
+    device: lps25h
+  '0x5f':
+    name: Humidity/Temp
+    device: hts221
+  '0x6a':
+    name: Accelerometer
+    device: lsm9ds1
+  '0x1c':
+    name: Magnetometer
+    device: lsm9ds1
+  '0x46':
+    name: LED Matrix
+    device: led2472g
 install:
   'devices':
     - 'i2c'
@@ -39,6 +55,6 @@ The shift register driving the LED Matrix is a LED2472G connected via an ATTINY8
 
 The sensors themselves also operate over the i2c bus:
 
-The IMU (Gyroscope, Accelerometer, Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e),0x6a(0x6b), with Interrupts on the ATTINY88.
+The IMU (Accelerometer and Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e) and 0x6a(0x6b), with Interrupts on the ATTINY88.
 
-Environmental sensors are represented by a LPS25H Pressure+Temperature sensor at address 0x5c and by a HTS221 Humidity+Temp sensor at 0x5f on the i2c bus.
+Environmental sensors are represented by a LPS25H Pressure/Temperature sensor at address 0x5c and by a HTS221 Humidity/Temperature sensor at 0x5f on the i2c bus.

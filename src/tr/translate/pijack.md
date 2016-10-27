@@ -10,7 +10,7 @@ url: https://pijack.net
 buy: https://pijack.net
 image: 'pijack.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '2':
 ground:

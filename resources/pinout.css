@@ -364,7 +364,7 @@ Left Column
 GPIO nav
 */
 
-nav#gpio {
+nav {
 	position:relative;
 	width:292px;
 	background:#5F8645;
@@ -373,10 +373,10 @@ nav#gpio {
 	border-top-right-radius:46px;
 	border-bottom-right-radius:46px;
 }
-.boards-page nav#gpio {
+.boards-page nav {
 	margin-right:0;
 }
-nav#gpio:before, nav#gpio:after {
+nav:before, nav:after {
 	content:'';
 	display:block;
 	width:28px;
@@ -388,16 +388,16 @@ nav#gpio:before, nav#gpio:after {
 	top:19px;
 	position: absolute;
 }
-nav#gpio:after {
+nav:after {
 	top:auto;
 	bottom:19px;
 }
 .phys {
 	color:#002B36;
-	font-size:11px;
+	font-size:12px;
 	opacity:0.8;
 	position:absolute;
-	left:31px;
+	left:30px;
 	text-indent:0;
 }
 .bottom .phys {
@@ -406,18 +406,19 @@ nav#gpio:after {
 	right:30px;
 }
 
-nav#gpio ul.top, nav#gpio ul.bottom {
+#gpio ul {
 	position:absolute;
 	left:246px;
 	top:87px;
 	list-style:none;
 }
-nav#gpio ul.bottom {
+#gpio .bottom {
 	left:0px;
 }
 
-nav#gpio ul.top li {text-indent:56px;}
-nav#gpio ul.top li a, nav#gpio ul.bottom li a {
+#gpio .top li {text-indent:56px;}
+
+#gpio a {
 	display:block;
 	width:244px;
 	position:relative;
@@ -428,58 +429,47 @@ nav#gpio ul.top li a, nav#gpio ul.bottom li a {
 	border-top-left-radius:13px;
 	border-bottom-left-radius:13px;
 }
-nav#gpio ul.top a {
+#gpio .top a {
 	width:250px;
 }
-nav#gpio ul.bottom li a {
+#gpio .bottom a {
 	border-top-right-radius:13px;
 	border-bottom-right-radius:13px;
 	border-top-left-radius:0px;
 	border-bottom-left-radius:0px;
 }
 
-nav#gpio ul.top li a:hover,
-nav#gpio ul.bottom li a:hover,
-nav#gpio ul.top li.active a,
-nav#gpio ul.bottom li.active a {
-	background:rgb(235, 230, 211);
-	color:#063541;
-}
-
-nav#gpio ul.bottom li a:hover,
-nav#gpio ul.bottom li.active a {
-	background:rgb(235, 230, 211);
-	color:#063541;
-}
-
-nav#gpio ul.bottom li.pin1 a:hover {border-radius:0;}
-
-nav#gpio li a small {font-size:11px;}
-
-nav#gpio ul.top li.overlay-pin a,
-nav#gpio ul.bottom li.overlay-pin a {
-	background:rgb(235, 230, 211);
-	color:#063541;
-}
-
-nav#gpio ul.top li.overlay-pin a:hover,
-nav#gpio ul.bottom li.overlay-pin a:hover {
+#gpio a:hover,
+#gpio .active a {
 	background:rgb(245, 243, 237);
 	color:#063541;
 }
 
-nav#gpio .top li.overlay-power a .phys, .bottom li.overlay-power a .phys {
+#gpio .bottom .pin1 a:hover {border-radius:0;}
+
+#gpio li a small {font-size:11px;}
+
+#gpio .overlay-pin a {
+	background:rgb(235, 230, 211);
+	color:#063541;
+}
+
+#gpio .overlay-pin a:hover {
+	background:rgb(245, 243, 237);
+	color:#063541;
+}
+
+#gpio .overlay-power .phys {
 	color:#FFFFFF;
 	opacity:1;
 }
     
-nav#gpio ul.top li.overlay-power a,
-nav#gpio ul.bottom li.overlay-power a {
+#gpio .overlay-power a {
 	background:#073642;
 	color:#FFFFFF;
 }
 
-nav#gpio .top li.overlay-ground a .phys, nav#gpio .bottom li.overlay-ground a .phys {
+#gpio .overlay-ground .phys {
 	background:#073642;
 	color:#FFFFFF;
 	opacity:1;
@@ -492,41 +482,41 @@ nav#gpio .top li.overlay-ground a .phys, nav#gpio .bottom li.overlay-ground a .p
     line-height: 22px;
 }
 
-nav#gpio .bottom li.overlay-ground a .phys {
+#gpio .bottom .overlay-ground .phys {
 	padding-right:32px;
     right:0;
 }
 
-nav#gpio .top li.overlay-ground a .phys {
-	padding-left:32px;
+#gpio .top .overlay-ground .phys {
+	padding-left:31px;
     left:0;
 }
 
 
-nav#gpio .top li.overlay-power a:hover, nav#gpio .bottom li.overlay-power a:hover {
+#gpio .overlay-power a:hover {
 	background:#268bd2;
 }
 
-nav#gpio .top li.overlay-ground a:hover .phys, nav#gpio .bottom li.overlay-ground a:hover .phys {
+#gpio .overlay-ground a:hover .phys {
 	background:#268bd2;
 }
 
-nav#gpio li.overlay-ground span.pin {background:#073642;}
+#gpio li.overlay-ground span.pin {background:#073642;}
 
 article .pin-hover {cursor:help;}
 article .pin-hover:hover {color:#880000;}
 article img {max-width:100%;}
 
-nav#gpio ul li.hover-pin a,
-nav#gpio ul.bottom li.hover-pin a {
+#gpio ul li.hover-pin a,
+#gpio ul.bottom li.hover-pin a {
 	color:#FFF;
 	background:rgba(200,0,0,0.6);
 }
 
-nav#gpio ul.bottom a {
+#gpio ul.bottom a {
 	text-indent:10px;
 }
-nav#gpio span.pin {
+#gpio .pin {
 	display:block;
 	border:1px solid transparent;
 	border-radius:50%;
@@ -537,7 +527,7 @@ nav#gpio span.pin {
 	right:2px;
 	top:2px;
 }
-nav#gpio span.pin:after {
+#gpio .pin:after {
 	content:'';
 	display:block;
 	border-radius:100%;
@@ -549,39 +539,24 @@ nav#gpio span.pin:after {
 	height:6px;
 	font-size:7px;
 }
-nav#gpio ul.top span.pin {
+#gpio .top .pin {
 	left:2px;
 	top:2px;
 }
-nav#gpio li.legend a {
-	background:#EBE6D3;
-}
-nav#gpio li.legend a {}
-nav#gpio ul.bottom li.legend a {
-	background:#063541;
-}
-nav#gpio ul.top li.legend {
-	width:177px;
-	position:relative;
-	padding-left:5px;
-	left:-5px;
-}
 
-body.board ul.bottom a {color:rgba(233, 229, 210, 0.6);}
-body.board ul.top a {color:rgba(6, 53, 65, 0.6);}
+.bottom .gnd a {color:rgba(233, 229, 210, 0.5);}
+.bottom .gnd a:hover {color:rgba(6, 53, 65, 0.5);}
+.top .gnd a {color:rgba(6, 53, 65, 0.5);}
 
-body ul.bottom .gnd a {color:rgba(233, 229, 210, 0.5);}
-body ul.top .gnd a {color:rgba(6, 53, 65, 0.5);}
+#gpio .pin1 .pin {border-radius:0;}
+#gpio .pow3v3 .pin {background:#B58900;}
+#gpio .pow5v .pin {background:#DC322F;}
+#gpio .gpio .pin {background:#859900;}
+#gpio .i2c .pin {background:#268BD2;}
+#gpio .spi .pin {background:#D33682;}
+#gpio .uart .pin {background:#6c71c4;}
 
-nav#gpio li.pin1 span.pin {border-radius:0;}
-nav#gpio li.pow3v3 span.pin {background:#B58900;}
-nav#gpio li.pow5v span.pin {background:#DC322F;}
-nav#gpio li.gpio span.pin {background:#859900;}
-nav#gpio li.i2c span.pin {background:#268BD2;}
-nav#gpio li.spi span.pin {background:#D33682;}
-nav#gpio li.uart span.pin {background:#6c71c4;}
-
-div#pinbase {
+#pinbase {
 	width:58px;
 	position:absolute;
 	left:216px;
@@ -590,38 +565,8 @@ div#pinbase {
 	top:80px;
 }
 
-ul.legend {
-	float:right;
-	list-style:none;
-	margin-top:-26px;
-}
-ul.legend.expansion {
-	margin-top:-52px;
-}
-ul.legend li {
-	float:left;
-	line-height:20px;
-	font-size:12px;
-	padding:3px 7px;
-	height:20px;
-}
-ul.legend li a {
-	color:#FDF6E3;
-}
-li.legend_5 {background:#DC322F;}
-li.legend_3 {background:#B58900;}
-li.legend_ground, li.legend_pwm {background:#002B36;}
-li.legend_uart {background:#B58900;}
-li.legend_gpio, li.legend_dot3k {background:#859900;}
-li.legend_spi {background:#D33682;}
-li.legend_i2c, li.legend_atmega, li.legend_pibrella {background:#268BD2;}
-li.legend_ladder {background:#5F8645;}
-li.legend_wiringpi {background:#EBE6D3;}
-ul.legend li.legend_wiringpi a {color:#063541;}
-li.legend_ledborg {background:#000000;}
-ul.legend li.legend_ledborg a {color:#FFFFFF;}
-li.legend_clockatoo {background:#D33682;}
 span.alternate {display:none;}
+
 ol.linenums {margin-left:30px;}
 
 @media (min-width:1200px){

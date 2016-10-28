@@ -30,6 +30,12 @@ pin:
 
 Blinkt! es una placa adicional ultradelgada para Raspberry Pi con 8 LEDs APA-102.
 
+Para configurar puedes utilizar el instalador online de una línea:
+
+```bash
+curl -sS get.pimoroni.com/blinkt | bash
+```
+
 ```python
 from blinkt import set_pixel, show
 from random import randint

@@ -3,19 +3,26 @@
 name: 'Mote pHAT'
 class: board
 type: led
-formfactor: Custom
+formfactor: pHAT
 manufacturer: Pimoroni
 description: 4 channel multiplexed APA102 driver
 url: http://shop.pimoroni.com/products/mote-phat
 github: https://github.com/pimoroni/mote-phat
 buy: https://shop.pimoroni.com/products/mote-phat
-image: 'motephat.png'
+image: 'mote-phat.png'
 pincount: 40
 eeprom: no
 power:
   '2':
 ground:
   '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '19':
     name: Data
@@ -46,3 +53,9 @@ pin:
 # Mote pHAT
 
 Sports four Mote channels with microUSB connectors that can drive up to 64 RGB LEDs using four 16 pixel Mote strips.
+
+To get the pHAT set up and ready to go you can use the one-line product installer:
+
+```bash
+curl -sS get.pimoroni.com/motephat | bash
+```

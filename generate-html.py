@@ -242,11 +242,6 @@ def render_overlay_page(overlay):
     return '<article class="page_{}">{}</article>'.format(slugify(overlay['name']), overlay['long_description'])
 
 
-def render_alternate(handle, name):
-    handle = slugify(handle.lower())
-    return '<span class="alternate legend_{}">{}</span>'.format(handle, name)
-
-
 def render_pin_page(pin_num):
     pin = pinout.pins[str(pin_num)]
     pin_url = pin['name']
@@ -307,19 +302,12 @@ def render_pin_page(pin_num):
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
-    '''pin_text = render_pin_text(
-        pin_num,
-        pin_url,
-        pin_text_name,
-        pin_functions,
-        '<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext))
-    )'''
 
     pin_text = '<article class="{pin_url}"><h1>{pin_name}</h1>{pin_functions}{pin_subtext}{pin_text}</article>'.format(
         pin_url=pin_url,
         pin_name=pin_text_name,
         pin_functions=pin_functions,
-        pin_subtext=pin_subtext,
+        pin_subtext= '<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)),
         pin_text=load_md('pin/pin-{}.md'.format(pin_num)))
 
     # if pin_text != None:

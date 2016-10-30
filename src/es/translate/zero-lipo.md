@@ -23,18 +23,18 @@ pin:
 -->
 #Zero LiPo
 
-The Zero LiPo aims to give you the most compact Raspberry Pi power supply possible.
+El objetivo de Zero LiPo es ser la fuente de alimentación para Raspberry Pi más compacta.
 
-The board includes power on and battery low indicator LEDs as well as a JST connector, to which you can connect a LiPo, LiIon, or other battery with a JST plug. The TPS61232 step-up boost converter from Texas Instruments converts the 3-4.2V input voltage from the LiPos/LiIons to 5V, providing a stable 5V supply perfect for your Pi.
+Esta placa inclute LEDs indicadores de alimentación y bajo nivel de batería, además de un conector JST para conectar una batería LiPo, LiIon o cualquier otra batería compatible con JST. El convertidor TPS61232 step-up de Texas Instruments convierte el voltaje de 3-4.2V de entrada de las LiPo/LiIon en 5V, dando una alimentación de 5V estable perfecta para tu Pi.
 
-Features:
+Especificaciones:
 
-* 0.8mm thick PCB
-* Shaped to sit as low as possible on the Raspberry Pi 3, 2, Zero, A+, B+
-* 2-pole JST connector ideal for most LiPo/LiIon batteries
-* Power and low battery LED indicators
-* Supplies up to 1.5A continuous current
-* Low battery warning at 3.4V (assets GPIO #4 high)
-* Automatic shutdown at 3.0V to protect your battery
-* VBAT+, GND, and EN pins available to break out
-* 15uA quiescent current
+* PCB de 0.8 mm de grosor
+* Perfil lo más bajo posible
+* Conector JST de 2 polos, ideal para la mayoría de baterías LiPo/LiIon
+* LEDs indicadores de alimentación y bajo nivel de batería
+* Proporciona corriente continua de 1.5A
+* Alerta de nivel bajo de batería a 3.4V (configura el GPIO #4 high)
+* Apagado automático a 3.0V para proteger la batería
+* Pines VBAT+, GND y EN accesibles
+* Consumo de corriente en reposo de 15uA

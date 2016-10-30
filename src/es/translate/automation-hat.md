@@ -85,15 +85,15 @@ install:
 -->
 #Automation HAT
 
-Automation HAT is a home monitoring and automation controller for the Raspberry Pi; with relays, analog channels, powered outputs, and buffered inputs. All 24V tolerant.
+Automatian HAT es una placa adicional de domótica para Raspberry Pi; con relés, canales analógicos, salidas alimentadas y entradas regulables. Todos con tolerancia hasta 24V.
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS get.pimoroni.com/automationhat | bash
 ```
 
-Then import it into your Python script and start tinkering:
+Después importalo en tu programa de Python y empieza a experimentar:
 
 ```bash
 import automationhat

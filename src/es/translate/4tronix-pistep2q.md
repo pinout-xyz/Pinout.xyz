@@ -71,8 +71,8 @@ pin:
 -->
 # PiStep2 Quad
 
-Drive 4 uni-polar stepper motors using a single control board with the PiStep2 Quad.
+Controla 4 motores paso a paso unipolares con sólo una placa, gracias a PiStep2 Quad.
 
-* Uses ULN2803 Darlington driver chips to drive the motors
-* Ideal for use with 28BYJ48 stepper motors
-* Supported in Scratch GPIO as well as in Python
+* Utiliza el chip controlador ULN2803 Darlington para controlar los motores
+* Ideal para motores paso a paso 28BYJ48
+* Soporte para Scratch GPIO y Python

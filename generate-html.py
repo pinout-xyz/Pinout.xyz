@@ -98,7 +98,8 @@ def load_overlay(overlay):
             loaded['type'] = strings['group_other']
 
         if 'manufacturer' in loaded:
-            details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
+            manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
+            details.append(strings['made_by'].format(manufacturer=manu_link))
 
         if 'pincount' in loaded:
             '''
@@ -627,7 +628,8 @@ for pin in range(1, len(pinout.pins) + 1):
                                   featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html,
-                                  body_class='pin'
+                                  body_class='pin',
+                                  crumbtrail=''
                                   )
 
     print('>> Saving: pinout/{}.html'.format(pin_url))
@@ -669,9 +671,12 @@ for url in pages:
 
     body_class = ''
 
+    crumbtrail = ''
+
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
+        crumbtrail = '<div id="crumbtrail"><p><a href="/boards">Boards</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(title=pages[url]['name'], manufacturer=pages[url]['manufacturer'])
 
     html = pinout.render_html(template,
                               lang_links="\n\t\t".join(langlinks),
@@ -685,7 +690,8 @@ for url in pages:
                               featured_boards=feat_boards_html,
                               langcode=lang,
                               nav_html=nav_html,
-                              body_class=body_class
+                              body_class=body_class,
+                              crumbtrail=crumbtrail
                               )
 
     key = url

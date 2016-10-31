@@ -249,7 +249,7 @@ Featured Boards
     border-bottom-right-radius: 10px;
     margin-right: 18px;
 }
-.facets h4, .boards-page #interfaces h4 {
+.facets h4 {
 	text-transform: capitalize;
     font-size: 16px;
     margin: 10px 0 0 0;
@@ -318,6 +318,24 @@ Left Column
 	width:302px;
 }
 
+#crumbtrail {
+	background:#6c71c4;
+}
+
+#crumbtrail p {
+	color:#fff;
+	margin:0;
+	padding:5px 15px;
+}
+
+#crumbtrail a, #crumbtrail a:hover, #crumbtrail a:active {
+	color:#fff;
+}
+
+#crumbtrail a:hover {
+	text-decoration: underline;
+}
+
 #interfaces ul, #interfaces li {
 	list-style:none;
 	margin:0;
@@ -330,12 +348,11 @@ Left Column
 
 #interfaces {
 	background:#6c71c4;
-	padding:4px 6px 6px 6px;
-}
-
-.boards-page #interfaces {
-	background:transparent;
-	padding: 104px 30px 104px 15px;
+    padding: 10px;
+    width: 292px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-top-right-radius:23px;
 }
 
 #interfaces li a {
@@ -352,11 +369,11 @@ Left Column
 #interfaces li a:hover {color: #5c61b4;background:#FFF;}
 
 #interfaces h2 {
-	color:#063541;
-	font-size: 24px;
-    line-height: 23px;
-    font-family:'Avenir', sans-serif;
-    padding:10px 10px 5px 10px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 0px 0px 5px 0px;
 }
 
 

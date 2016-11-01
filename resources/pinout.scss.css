@@ -294,7 +294,8 @@ Left Column
   padding: 0px 2px 2px 2px;
   display: block;
   clear: both;
-  line-height: 2px; }
+  line-height: 2px;
+  text-align: right; }
   #interfaces ul, #interfaces li {
     list-style: none;
     margin: 0;

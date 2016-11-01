@@ -36,10 +36,10 @@ i2c:
 -->
 #RTC Pi Zero
 
-The RTC Pi Zero is a battery backed real-time clock module for the Raspberry Pi Zero. It keeps track of the time while the Raspberry Pi is switched off and allows the Raspberry Pi to retrieve the current date and time from the RTC Pi Zero when it is switched back on.
+RTC Pi Zero es una reloj de tiempo real con batería para Raspberry Pi Zero. mantiene el tiempo de Raspberry Pi mientras está apagada y permite recuperar la fecha actual una vez encendida de nuevo
 
-The RTC Pi Zero is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the RTC Pi Zero along with other expansion boards. The RTC Pi Zero uses the DS1307 RTC real time clock and a CR2032 battery to maintain the date and time when the main system power is not available.
+RTC Pi Zero se alimenta a través de los pines GPIO de Raspberry Pi, además permite conectar otros dispositivos. RTC PI Zero utiliza el reloj de tiempo real DS1307 y la batería CR2032 par amanetner la fecha cuando la alimentación no está disponible.
 
-Unlike most other DS1307 based RTC modules the RTC Pi Zero also includes an I2C logic level converter allowing you to connect other 5V I2C devices to your Raspberry Pi.
+A diferencia de otros modulos RTC basados en DS1307, RTC Pi Zero además incluye un conversor I2C lógico que permite conectar otros dispositivos I2C de 5V a Raspberry Pi.
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Librerias Arduino, C, Node.js, Windows 10 IOT, Python 2 y Python 3 librerías disponibles en GitHub.

@@ -36,10 +36,10 @@ i2c:
 -->
 #1 Wire Pi Zero
 
-The 1 Wire Pi Zero from AB Electronics UK is a communication board supporting the 1-Wire® protocol designed for use on the Raspberry Pi Zero.  A 5V buffered I2C port is also provided on the board. 
+1 Wire Pi Zero fabricada por AB Electronics UK es una placa de comunicación que funciona con el protocolo 1-Wire® y ha sido diseñada para Raspberry Pi Zero. Además cuenta con un puerto I2C de 5V regulable.
 
-The 1-Wire® port on the 1 Wire Pi Zero is based around a DS2482-100 I2C to 1-Wire® bridge device.  The DS2482-100 provides bi-directional protocol conversion between the I2C port on the Raspberry Pi and any attached 1-Wire® slave devices.  An ESD Protection Diode is used to protect the 1 Wire Pi Zero and Raspberry Pi from electrostatic spikes on the 1-Wire® port.  Connections to the 1-Wire® port can be made through the RJ-12 socket or the solder points on the PCB.
+El puerto 1-Wire® en 1 Wire Pi Zero está basado en el dispositivo puente DS2482-100 I2C a 1-Wire®. El DS2482-100 proporciona una conversión bidireccional entre el puerto I2C en Raspberry Pi y cualquier dispositivo 1-Wire® conectado como esclavo. Un diodo de protección ESD se utiliza para proteger 1 Wire Pi Zero y Raspberry Pi de descargas electrostáticas en el puerto 1-Wire®. Las conexiones al puerto 1-Wire® se pueden hacer a través del enchufe RJ-12 o soldando puntos en el PCB.
 
-I2C address select solder jumpers give you the ability to set the I2C address of the 1 Wire Pi Zero allowing the board to be used with other I2C devices on the same bus.
+Mediante cables jumper se puede seleccionar la dirección I2C de 1 Wire Pi Zero permitiendo su uso con otros dispositivos I2C en el mismo puerto.
 
 [https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi](https://www.abelectronics.co.uk/kb/article/3/owfs-with-i2c-support-on-raspberry-pi "Configuring and using the 1-Wire® port on your Raspberry Pi")

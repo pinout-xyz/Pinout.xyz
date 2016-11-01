@@ -36,21 +36,21 @@ i2c:
 -->
 #IO Pi Zero
 
-The IO Pi Zero is a 16 channel digital expansion board designed for use on the Raspberry Pi Zero. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
+IO Pi Zero es una placa de expansión digital de 16 canales diseñada para Raspberry Pi Zero. Está basada en el expansor I/o de 16-bit MCP23017 de Microchip Technology Inc.
 
-The IO Pi Zero Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Zero along with other expansion boards.
+IO Pi Zero Expander se alimenta a través del puerto GPIO de Raspberry Pi y además permite usar los puertos GPIO, pudiendo acoplarse con otras placas.
 
-##Features
+##Especificaciones
 
--  16 Digital Inputs/Outputs
--  Control via the Raspberry Pi I2C port
--  Stack up to 8 IO Pi boards on a single Raspberry Pi
--  Jumper selectable I2C addresses
--  External 5V Input with isolation solder bridge
--  Based on the MCP23017 from Microchip Technologies Inc
--  Configurable interrupt output pins - Configurable as active-high, active-low or open-drain
--  INTA and INTB can be configured to operate independently or together
--  Configurable interrupt source  - Interrupt-on-change from configured register defaults  or pin changes
--  Polarity Inversion register to configure the polarity of the input port data
+-  16 entradas/salidas digitales
+-  Control a través del puerto I2C de Raspberry Pi
+-  Permite acoplar hasta 8 placas IO en una sola Raspberry Pi
+-  Dirección I2C seleccionable
+-  Entrada de 5V externa con aislamiento
+-  Basada en MCP23017 de Microchip Technologies Inc
+-  Puertos de salida configurables como active-high, active-low o open-drain
+-  INTA e INTB configurables para trabajar independientemente o juntos
+-  Interrupciones configurables
+-  Registro de inversión de polaridad
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Librerias Arduino, C, Node.js, Windows 10 IOT, Python 2 y Python 3 disponibles GitHub.

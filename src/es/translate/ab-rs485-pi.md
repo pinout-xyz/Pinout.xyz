@@ -31,18 +31,18 @@ pin:
 -->
 #RS485 Pi
 
-The RS485 Pi is a UART to RS485 serial converter for the Raspberry Pi.
+RS485 Pi es un conversor UART a RS485 para Raspberry Pi.
 
-The RS485 port is connected to the UART port on the Raspberry Pi using a SN65HVD72 interface. The SN65HVD72 IC converts the 3.3V UART port to RS485 differential voltages allowing communication with RS485 compatible devices over a twisted pair cable. The RS485 port can be accessed through the DB9 port or the solder points on the PCB.
+El puerto RS485 se conecta al puerto UART de Raspberry Pi usando la interfaz SN65HVD72. La interfaz SN65HVD72 IC convierte los 3.3V del puerto UART a voltages diferenciales RS485 permitiendo la comunicación con dispositivos compatibles con RS485 mediante un cable. El puerto RS485 es accesible mediante el puerto DB9 o soldando en el PCB.
 
-The RS485 Pi contains protection against voltage spikes in the form of a TVS Diode and two 10O, Pulse-Proof Thick-Film Resistors.  A 120O terminator resistor is included with the board.
+RS485 Pi tiene protección contra picos de voltage gracias a un diodo TVS y dos resistencias de 100. La placa también cuenta con una resistencia de 1200.
 
-##Features
+##Especificaciones
 
-- RS-485 Half Duplex Port.
-- Up to 250 kbps transfer rate.
-- Use the Raspberry Pi to control external RS-485 devices.
-- Stackable with other Raspberry Pi accessory boards.
-- Mounting holes for use with the AB Electronics UK mounting kits (sold separately)
+- Puerto RS-485.
+- Tasa de transferencia de hasta 250 kbps.
+- Utiliza la Raspberry Pi para controlar dispositivos RS-485.
+- Acoplable con otras placas adicionales para Raspberry >Pi.
+- Agujeros de montaje para el kit de montaje de AB Electronics UK (vendido por separado)
 
 [Configuring the UART communication on the Raspberry Pi](https://www.abelectronics.co.uk/kb/article/20/raspberry-pi-serial-port-usage)

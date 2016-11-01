@@ -30,6 +30,7 @@ strings:
 - made_by: 'Made by {manufacturer}'
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
+- board_schematic : 'Schematic'
 - buy_now: 'Buy Now'
 featured:
 - pijack

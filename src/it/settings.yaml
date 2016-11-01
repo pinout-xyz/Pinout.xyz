@@ -30,6 +30,7 @@ strings:
 - made_by: 'Prodotto da {manufacturer}'
 - more_information: 'Maggiori informazioni'
 - github_repository: 'GitHub'
+- board_schematic : 'Schematic'
 - buy_now: 'Acquista'
 featured:
 - display-o-tron

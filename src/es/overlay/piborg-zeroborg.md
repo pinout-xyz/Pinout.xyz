@@ -3,7 +3,7 @@
 name: ZeroBorg
 class: board
 type: motor
-formfactor: Custom
+formfactor: Otro
 manufacturer: PiBorg
 description: A PiZero robot controller
 url: https://www.piborg.org/zeroborg

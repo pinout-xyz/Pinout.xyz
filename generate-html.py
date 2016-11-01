@@ -603,7 +603,7 @@ def interfaces_menu(current):
 
     return html
 
-boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
+boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'].lower())]
 pages['boards'] = {'rendered_html':''.join(boards_page)}
 
 '''

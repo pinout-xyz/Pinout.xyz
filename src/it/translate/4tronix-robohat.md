@@ -1,6 +1,6 @@
 <!--
 ---
-name: 4tronix RoboHat
+name: RoboHat
 class: board
 type: io,motor
 formfactor: HAT
@@ -75,5 +75,5 @@ pin:
     name: Ultrasonic
     mode: input/output
 -->
-#RoboHat
+# RoboHat
 The RoboHat is a complete robot controller for small robots. It has 2 full H-bridges using DRV8833 for up to 1.5A per channel, a 5V switch-mode regulator to generate the 5V for the Raspberry Pi, 6 bufferened inputs that can accept 2.5V to 5.5V and convert to 3.3V and 4 outputs driven up to 5V. All the I/O is via GVS (Ground, Volts, Signal) 3-pin terminals so it is easy to plug in 3-pin sensors or small servos directly. There is also a connector plug in an HC-SR04 ultrasonic distance sensor with the necessary circuitry to read the value using a single GPIO pin.

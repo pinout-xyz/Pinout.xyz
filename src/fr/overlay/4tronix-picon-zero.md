@@ -4,11 +4,11 @@ name: Picon Zero
 class: board
 type: moteur
 formfactor: pHAT
-image: '4tronix-picon-zero.png'
 manufacturer: 4tronix
 description: Une carte de contrôle de robot pour le Raspberry Pi
 url: http://4tronix.co.uk/piconzero/
 buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=552
+image: '4tronix-picon-zero.png'
 pincount: 40
 eeprom: no
 power:

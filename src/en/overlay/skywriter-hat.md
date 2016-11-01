@@ -43,7 +43,7 @@ install:
 i2c:
   '0x42':
     name: Gesture sensor
-    device: MGC3130
+    device: mgc3130
 -->
 #Skywriter HAT
 

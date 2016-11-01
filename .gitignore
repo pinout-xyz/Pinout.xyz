@@ -2,4 +2,5 @@ output/
 *.py[cod]
 env/
 .DS_store
+.sass_cache/
 

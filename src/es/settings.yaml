@@ -5,6 +5,7 @@ title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
 domain: es.pinout.xyz
+analytics_id: UA-69846516-5
 url_suffix:
 urls:
   GND: tierra

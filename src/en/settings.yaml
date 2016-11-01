@@ -5,10 +5,13 @@ title_suffix: " at Raspberry Pi GPIO Pinout"
 base_url: /pinout/
 resource_url: /resources/
 domain: pinout.xyz
+analytics_id: UA-69846516-1
 url_suffix:
 urls:
   GND: ground
 strings:
+- home: 'Home'
+- boards: 'Boards'
 - details: 'Details'
 - group_other: 'other'
 - form_undefined: 'Undefined'
@@ -31,6 +34,7 @@ strings:
 - more_information: 'More Information'
 - github_repository: 'GitHub Repository'
 - buy_now: 'Buy Now'
+- browse_addons: 'Browse more HATs, pHATs and add-ons'
 featured:
 - pijack
 - ab-servo-pwm-pi-zero

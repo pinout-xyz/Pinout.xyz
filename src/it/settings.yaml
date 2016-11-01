@@ -5,6 +5,7 @@ title_suffix: " - Assegnazione pin GPIO del Raspberry Pi"
 base_url: /pinout/
 resource_url: /resources/
 domain: it.pinout.xyz
+analytics_id: UA-69846516-6
 url_suffix:
 urls:
   GND: massa

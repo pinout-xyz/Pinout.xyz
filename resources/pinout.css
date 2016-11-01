@@ -169,7 +169,7 @@ Featured Boards
     overflow: hidden;
 }
 
-#sections .featured, #boards .board, #featured .board  {
+#boards .board, #featured .board  {
     box-sizing:border-box;
     width:25%;
     display:block;
@@ -177,9 +177,7 @@ Featured Boards
     text-align:center;
 }
 #featured .board  {width:25%;}
-#sections .group li.featured {
-    margin-right:0px;
-}
+
 #boards .board a, #featured .board a {
     padding-top: 20px;
     padding-bottom: 0px;
@@ -191,34 +189,24 @@ Featured Boards
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#sections .featured img, #boards .board img, #featured .board img {
+#boards .board img, #featured .board img {
     max-width:80%;
     height:auto;
     display:block;
     margin:0 auto;
 }
 #featured .board img {max-width:50%;}
-#sections .featured a, #boards .board a, #featured .board a {
-    background:none;
-}
-#sections .boards hr {
-    clear:both;
-    border:none;
-    border-top:3px solid #D33682;
-    margin-bottom:5px;
+#boards .board a, #featured .board a {
     background:none;
 }
 
-#sections .boards .featured a:hover {
-    background: #D33682;
-}
 #featured .board a:hover {
     background: #D33682;
 }
 #boards .board a:hover {
     background: #fdfaf0;
 }
-#sections .featured strong, #boards .board strong, #featured .board strong  {
+#boards .board strong, #featured .board strong  {
     font-size:16px;
     font-family: 'Avenir', sans-serif;
     font-weight: 500;
@@ -256,7 +244,7 @@ Featured Boards
     top: 5px;
 }
 
-#sections .featured span, #boards .board span, #featured .board span {
+#boards .board span, #featured .board span {
     color: #FFFFFF;
     font-size: 12px;
     font-weight: normal;
@@ -355,6 +343,11 @@ Left Column
 
 #crumbtrail a, #crumbtrail a:hover, #crumbtrail a:active {
     color:#fff;
+}
+
+#crumbtrail a.more {
+	text-align:center;
+	display:block;
 }
 
 #crumbtrail a:hover {
@@ -619,10 +612,6 @@ ol.linenums {margin-left:30px;}
     }
     .board {
         right:1200px;
-    }
-    #sections ul .dropdown {
-        min-width:700px;
-        max-width:700px;
     }
     #content {
         width:700px;

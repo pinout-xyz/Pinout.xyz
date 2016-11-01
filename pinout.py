@@ -13,6 +13,8 @@ SETTINGS_FILE = 'settings.yaml'
 pins = None
 settings = None
 
+master_template = open('common/layout.html').read()
+
 
 def get_setting(setting, default = None):
     if setting in settings and settings[setting] != None:
@@ -21,7 +23,10 @@ def get_setting(setting, default = None):
 
 
 def render_html(*args, **kwargs):
-    html = args[0]
+    html = master_template
+    html = html.replace('{{main_content}}',args[0])
+    html = html.replace('{{footer}}',args[1])
+
     kwargs['v'] = str(int(time.time()))
     for key in kwargs:
         if type(kwargs[key]) == dict:

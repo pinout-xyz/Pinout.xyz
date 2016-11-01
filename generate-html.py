@@ -22,6 +22,8 @@ GROUND_PINS = [6,9,14,20,25,30,34,39]
 
 lang = "en"
 default_strings = {
+    'home': 'Home',
+    'boards': 'Boards',
     'pin_header': '{} pin header',
     'form_undefined': 'Undefined',
     'group_other': 'other',
@@ -40,6 +42,7 @@ default_strings = {
     'github_repository': 'GitHub Repository',
     'buy_now': 'Buy Now',
     'translate_msg': '<a href="https://github.com/gadgetoid/Pinout2">This page needs translating, can you help?</a><br><br>',
+    'browse_addons': 'Browse more HATs, pHATs and add-ons'
 }
 
 
@@ -494,6 +497,7 @@ url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
 template_main = open('src/{}/template/layout.html'.format(lang)).read()
 template_boards = open('src/{}/template/boards.html'.format(lang)).read()
+template_footer = open('src/{}/template/footer.html'.format(lang)).read()
 
 pages = {}
 navs = {}
@@ -524,7 +528,7 @@ overlay_subnav = ['featured']
 featured_boards_count = 0
 featured_boards_html = ''
 
-boards_page = {}
+boards_page = []
 boards_manufacturers = []
 
 '''
@@ -534,6 +538,7 @@ as it's used in every single page.
 overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
+
 
     link = (overlay['page_url'], overlay['name'])
 
@@ -565,11 +570,11 @@ for overlay in overlays:
             if 'formfactor' not in overlay:
                 print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
-            if overlay['manufacturer'] not in boards_page.keys():
+            '''if overlay['manufacturer'] not in boards_page.keys():
                 boards_page[overlay['manufacturer']] = []
-                boards_manufacturers.append(overlay['manufacturer'])
+                boards_manufacturers.append(overlay['manufacturer'])'''
 
-            boards_page[overlay['manufacturer']].append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+            boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                 image=image,
                 name=overlay['name'],
                 page_url=overlay['page_url'],
@@ -580,15 +585,23 @@ for overlay in overlays:
                 resource_url=resource_url)})
 
 
-#boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
-pages['boards'] = {'rendered_html':''}
 
-boards_manufacturers = sorted(boards_manufacturers);
+def interfaces_menu(current):
+    interfaces = [overlay for overlay in overlays if overlay['class'] == 'interface']
 
-for manufacturer in boards_manufacturers:
-    boards_page[manufacturer] = [x['html'] for x in sorted(boards_page[manufacturer], key=lambda k: k['name'])]
-    pages['boards']['rendered_html'] += '<li class="title"><a name="manufacturer=' + manufacturer + '"></a><h2>' + manufacturer + '</h2></li>'
-    pages['boards']['rendered_html'] += ''.join(boards_page[manufacturer])
+    html = ''
+
+    for interface in interfaces:
+        sel = ''
+        if current is not None and 'name' in current and interface['name'] == current['name']:
+            sel = ' class="selected"'
+        
+        html += '<li{}><a href="{}{}">{}</a></li>'.format(sel, base_url, interface['page_url'], interface['name'])
+
+    return html
+
+boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
+pages['boards'] = {'rendered_html':''.join(boards_page)}
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -615,7 +628,7 @@ if page404 is not None:
     navs['404'] = default_nav
 
 
-#pages['boards'] = {'rendered_html': ''.join(boards_page)}
+crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
 navs['boards'] = default_nav
 
@@ -631,6 +644,8 @@ for pin in range(1, len(pinout.pins) + 1):
 
     pin_nav = render_nav(pin_url)
     pin_html = pinout.render_html(template_main,
+                                  template_footer,
+                                  analytics_id=pinout.settings['analytics_id'],
                                   lang_links="\n\t\t".join(langlinks),
                                   hreflang="\n\t\t".join(hreflang),
                                   nav=pin_nav,
@@ -642,8 +657,9 @@ for pin in range(1, len(pinout.pins) + 1):
                                   featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html,
+                                  interfaces=interfaces_menu(None),
                                   body_class='pin',
-                                  crumbtrail=''
+                                  crumbtrail=crumbtrail
                                   )
 
     print('>> Saving: pinout/{}.html'.format(pin_url))
@@ -676,23 +692,33 @@ for url in pages:
     if not 'description' in pages[url]:
         pages[url]['description'] = pinout.settings['default_desc']
 
+    name = pinout.settings['default_title']
+
     if 'name' in pages[url]:
-        pages[url]['name'] = pages[url]['name'] + pinout.settings['title_suffix']
-    else:
-        pages[url]['name'] = pinout.settings['default_title']
+        name = pages[url]['name'] + pinout.settings['title_suffix']
 
     feat_boards_html = featured_boards_html
 
     body_class = ''
 
-    crumbtrail = ''
+    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
-        crumbtrail = '<div id="crumbtrail"><p><a href="/boards">Boards</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(title=pages[url]['name'], manufacturer=pages[url]['manufacturer'])
+        crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
+                title=pages[url]['name'],
+                manufacturer=pages[url]['manufacturer'],
+                home=strings['home'],
+                boards=strings['boards']
+                )
+
+    if url == 'boards':
+        body_class = 'boards-page'
 
     html = pinout.render_html(template,
+                              template_footer,
+                              analytics_id=pinout.settings['analytics_id'],
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
                               nav=nav,
@@ -700,10 +726,11 @@ for url in pages:
                               overlays=overlays_html,
                               resource_url=resource_url,
                               description=pages[url]['description'],
-                              title=pages[url]['name'],
+                              title=name,
                               featured_boards=feat_boards_html,
                               langcode=lang,
                               nav_html=nav_html,
+                              interfaces=interfaces_menu(pages[url]),
                               body_class=body_class,
                               crumbtrail=crumbtrail
                               )

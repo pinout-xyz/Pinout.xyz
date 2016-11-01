@@ -5,6 +5,7 @@ title_suffix: " - Raspberry Pi Pinleri"
 base_url: /pinout/
 resource_url: /resources/
 domain: tr.pinout.xyz
+analytics_id: UA-69846516-2
 url_suffix: ''
 urls:
   GND: toprak

@@ -1,8 +1,7 @@
 jQuery(document).ready(function(){
 	var dom_boards = $('#boards .board');
-	var dom_titles = $('#boards .title');
 
-	dom_titles.hide();
+	if(dom_boards.length == 0) return;
 
 	var facets = {};
 	var filters = {};

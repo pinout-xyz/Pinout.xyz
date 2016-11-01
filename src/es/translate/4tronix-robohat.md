@@ -15,7 +15,6 @@ eeprom: yes
 power:
   '1':
   '2':
-  '4':
 ground:
   '6':
   '9':

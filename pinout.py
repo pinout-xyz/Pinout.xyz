@@ -27,13 +27,27 @@ def render_html(*args, **kwargs):
     html = html.replace('{{main_content}}',args[0])
     html = html.replace('{{footer}}',args[1])
 
+    strings = args[2]
+
+    for key in strings:
+        if type(strings[key]) in [str, unicode]:
+            html = html.replace('{{strings:' + key + '}}', strings[key])
+
+    settings = args[3]
+
+    for key in settings:
+        if type(settings[key]) in [str, unicode]:
+            html = html.replace('{{settings:' + key + '}}', settings[key])
+
     kwargs['v'] = str(int(time.time()))
+
     for key in kwargs:
         if type(kwargs[key]) == dict:
             for d_key, d_value in kwargs[key].iteritems():
                 html = html.replace('{{' + key + '_' + d_key + '}}', d_value)
-        elif type(kwargs[key]) == str:
+        elif type(kwargs[key]) in [str, unicode]:
             html = html.replace('{{' + key + '}}', kwargs[key])
+
     return html
 
 

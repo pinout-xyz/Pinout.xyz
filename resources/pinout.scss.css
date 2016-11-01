@@ -443,10 +443,8 @@ nav:after {
 
 article .pin-hover {
   cursor: help; }
-
 article .pin-hover:hover {
   color: #880000; }
-
 article img {
   max-width: 100%; }
 
@@ -454,10 +452,8 @@ article img {
 #gpio ul.bottom li.hover-pin a {
   color: #FFF;
   background: rgba(200, 0, 0, 0.6); }
-
 #gpio ul.bottom a {
   text-indent: 10px; }
-
 #gpio .pin {
   display: block;
   border: 1px solid transparent;
@@ -468,50 +464,38 @@ article img {
   position: absolute;
   right: 2px;
   top: 2px; }
-
-#gpio .pin:after {
-  content: '';
-  display: block;
-  border-radius: 100%;
-  background: #FDF6E3;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 6px;
-  height: 6px;
-  font-size: 7px; }
-
+  #gpio .pin:after {
+    content: '';
+    display: block;
+    border-radius: 100%;
+    background: #FDF6E3;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    font-size: 7px; }
 #gpio .top .pin {
   left: 2px;
   top: 2px; }
-
-.bottom .gnd a {
+#gpio .bottom .gnd a {
   color: rgba(233, 229, 210, 0.5); }
-
-.bottom .gnd a:hover {
+#gpio .bottom .gnd a:hover {
   color: rgba(6, 53, 65, 0.5); }
-
-.top .gnd a {
+#gpio .top .gnd a {
   color: rgba(6, 53, 65, 0.5); }
-
 #gpio .pin1 .pin {
   border-radius: 0; }
-
 #gpio .pow3v3 .pin {
   background: #B58900; }
-
 #gpio .pow5v .pin {
   background: #DC322F; }
-
 #gpio .gpio .pin {
   background: #859900; }
-
 #gpio .i2c .pin {
   background: #268BD2; }
-
 #gpio .spi .pin {
   background: #D33682; }
-
 #gpio .uart .pin {
   background: #6c71c4; }
 

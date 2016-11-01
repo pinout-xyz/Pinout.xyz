@@ -42,7 +42,10 @@ default_strings = {
     'github_repository': 'GitHub Repository',
     'buy_now': 'Buy Now',
     'translate_msg': '<a href="https://github.com/gadgetoid/Pinout2">This page needs translating, can you help?</a><br><br>',
-    'browse_addons': 'Browse more HATs, pHATs and add-ons'
+    'browse_addons': 'Browse more HATs, pHATs and add-ons',
+    'return_home': 'Return to the Raspberry Pi GPIO Pinout',
+    'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
+    'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
 
 
@@ -495,8 +498,8 @@ base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
 resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
-template_main = open('src/{}/template/layout.html'.format(lang)).read()
-template_boards = open('src/{}/template/boards.html'.format(lang)).read()
+template_main = open('common/page.html'.format(lang)).read()
+template_boards = open('common/boards.html'.format(lang)).read()
 template_footer = open('src/{}/template/footer.html'.format(lang)).read()
 
 pages = {}
@@ -645,7 +648,8 @@ for pin in range(1, len(pinout.pins) + 1):
     pin_nav = render_nav(pin_url)
     pin_html = pinout.render_html(template_main,
                                   template_footer,
-                                  analytics_id=pinout.settings['analytics_id'],
+                                  strings,
+                                  pinout.settings,
                                   lang_links="\n\t\t".join(langlinks),
                                   hreflang="\n\t\t".join(hreflang),
                                   nav=pin_nav,
@@ -718,7 +722,8 @@ for url in pages:
 
     html = pinout.render_html(template,
                               template_footer,
-                              analytics_id=pinout.settings['analytics_id'],
+                              strings,
+                              pinout.settings,
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
                               nav=nav,

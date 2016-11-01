@@ -33,6 +33,10 @@ strings:
 - github_repository: 'lien GitHub'
 - board_schematic : 'Schéma'
 - buy_now: 'achat'
+- browse_addons: 'Browse more HATs, pHATs and add-ons'
+- return_home: 'Return to the Raspberry Pi GPIO Pinout'
+- boards_title: "Cartes d'extension pour la Raspberry Pi"
+- boards_subtitle: "Cliquez sur une carte ci-dessous pour en révéler tous les détails!"
 featured:
 - 4tronix-picon-zero
 - ab-adc-pi-zero

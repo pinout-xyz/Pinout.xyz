@@ -31,6 +31,7 @@ strings:
 - made_by: 'Hecho por {manufacturer}'
 - more_information: 'More Information'
 - github_repository: 'GitHub'
+- board_schematic : 'Schematic'
 - buy_now: 'Buy Now'
 featured:
 - ab-adc-pi-zero
@@ -113,3 +114,4 @@ overlays:
 - mote-phat
 - 4tronix-robohat
 - 4tronix-pistop
+- icubex-pishield

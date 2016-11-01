@@ -31,6 +31,7 @@ strings:
 - made_by: 'produit {manufacturer}'
 - more_information: 'plus d''info'
 - github_repository: 'lien GitHub'
+- board_schematic : 'Schéma'
 - buy_now: 'achat'
 featured:
 - 4tronix-picon-zero
@@ -113,3 +114,4 @@ overlays:
 - mote-phat
 - 4tronix-robohat
 - 4tronix-pistop
+- icubex-pishield

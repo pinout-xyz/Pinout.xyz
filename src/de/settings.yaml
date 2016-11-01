@@ -31,6 +31,7 @@ strings:
 - made_by: 'Hersteller: {manufacturer}'
 - more_information: 'Mehr Informationen'
 - github_repository: 'GitHub'
+- board_schematic : 'Schematic'
 - buy_now: 'jetzt kaufen'
 featured:
 - display-o-tron
@@ -113,3 +114,4 @@ overlays:
 - mote-phat
 - 4tronix-robohat
 - 4tronix-pistop
+- icubex-pishield

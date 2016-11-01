@@ -31,8 +31,8 @@ strings:
 - made_by: 'Yapılan {manufacturer}'
 - more_information: 'Daha fazla bilgi'
 - github_repository: 'GitHub'
+- board_schematic : 'Schematic'
 - buy_now: 'Şimdi satın al'
-- details: 'Ayrıntılar'
 featured:
 - display-o-tron
 - piborg-ledborg
@@ -114,3 +114,4 @@ overlays:
 - mote-phat
 - 4tronix-robohat
 - 4tronix-pistop
+- icubex-pishield

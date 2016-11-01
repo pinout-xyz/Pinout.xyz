@@ -524,7 +524,8 @@ overlay_subnav = ['featured']
 featured_boards_count = 0
 featured_boards_html = ''
 
-boards_page = []
+boards_page = {}
+boards_manufacturers = []
 
 '''
 Build up the navigation between overlays. This needs to be done before rendering pages
@@ -564,7 +565,11 @@ for overlay in overlays:
             if 'formfactor' not in overlay:
                 print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
-            boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+            if overlay['manufacturer'] not in boards_page.keys():
+                boards_page[overlay['manufacturer']] = []
+                boards_manufacturers.append(overlay['manufacturer'])
+
+            boards_page[overlay['manufacturer']].append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                 image=image,
                 name=overlay['name'],
                 page_url=overlay['page_url'],
@@ -575,7 +580,15 @@ for overlay in overlays:
                 resource_url=resource_url)})
 
 
-boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
+#boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'])]
+pages['boards'] = {'rendered_html':''}
+
+boards_manufacturers = sorted(boards_manufacturers);
+
+for manufacturer in boards_manufacturers:
+    boards_page[manufacturer] = [x['html'] for x in sorted(boards_page[manufacturer], key=lambda k: k['name'])]
+    pages['boards']['rendered_html'] += '<li class="title"><a name="manufacturer=' + manufacturer + '"></a><h2>' + manufacturer + '</h2></li>'
+    pages['boards']['rendered_html'] += ''.join(boards_page[manufacturer])
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -602,7 +615,8 @@ if page404 is not None:
     navs['404'] = default_nav
 
 
-pages['boards'] = {'rendered_html': ''.join(boards_page)}
+#pages['boards'] = {'rendered_html': ''.join(boards_page)}
+
 navs['boards'] = default_nav
 
 print('\nRendering pin pages...')

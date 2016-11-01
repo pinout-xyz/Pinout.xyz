@@ -85,6 +85,8 @@ def generate_for_lang(lang="en"):
 
     url_lookup['index'] = '//{}'.format(domain)
 
+    url_lookup['boards'] = '//{}/boards'.format(domain)
+
     return url_lookup
 
 

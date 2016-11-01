@@ -684,7 +684,7 @@ for url in pages:
     template = template_boards if url == 'boards' else template_main
 
     if url == 'index' or url == 'boards':
-        src = 'index'
+        src = url
         hreflang = get_hreflang_urls(src)
         langlinks = get_lang_urls(src)
 

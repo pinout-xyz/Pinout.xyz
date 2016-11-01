@@ -21,6 +21,10 @@ pin:
     name: Reset
   '13':
     name: Transfer
+i2c:
+  '0x42':
+    name: Gesture sensor
+    device: mgc3130
 -->
 #Skywriter HAT
 

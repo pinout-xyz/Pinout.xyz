@@ -31,7 +31,12 @@ def load_overlay_url(overlay, lang):
 
         loaded = data['data']
     except IOError:
-        return None
+        try:
+            data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
+
+            loaded = data['data']
+        except IOError:
+            return None
 
     if not 'page_url' in loaded:
         loaded['page_url'] = url_slugify(loaded['name'])

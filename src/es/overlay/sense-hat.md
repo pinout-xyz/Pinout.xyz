@@ -5,9 +5,12 @@ class: board
 type: led,sensor
 formfactor: HAT
 manufacturer: Raspberry Pi
+image: 'sense-hat.png'
 description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors
 url: https://www.raspberrypi.org/products/sense-hat/
-image: 'sense-hat.png'
+github: https://github.com/RPi-Distro/python-sense-hat
+schematic: https://www.raspberrypi.org/documentation/hardware/sense-hat/images/Sense-HAT-V1_0.pdf
+buy: https://thepihut.com/products/raspberry-pi-sense-hat-astro-pi
 pincount: 40
 eeprom: setup
 power:

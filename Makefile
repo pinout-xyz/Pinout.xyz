@@ -6,13 +6,19 @@ LANG := $(firstword $(LANG))
 
 .PHONY: resources
 
-all:
+all: html resources
+
+css:
 	scss resources/pinout.scss > resources/pinout.scss.css
+
+html:
 	./generate-html.py $(LANG)
-	cp -r resources output/$(LANG)/
 
 resources:
 	cp -r resources output/$(LANG)/
+
+devel: css all resources
+	./serve.py ${LANG}
 
 clean:
 	rm -rf output/$(LANG)/*

@@ -16,7 +16,7 @@ This project aims to build a consistent workflow behind the Pinout.xyz front-end
 
 We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
 
-#Reportting
+#Reporting
 
 If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
@@ -26,7 +26,7 @@ If you have a board you'd like to contribute, the preferred method for submissio
 
 Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/boards/template.png) is expected, although optional. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
 
-If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) instead and we'll consider it!
+If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
 
 #Translating
 
@@ -46,12 +46,12 @@ make serve LANG=de
 
 And then open: http://127.0.0.1:5000 in your browser.
 
-*note 1: you will need several python modules installed to render and serve a local version of the site, run*  
+*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
 *`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
 
-*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only)*
+*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
 
-The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain (this can include any number of boards, it does not have to be the entire line-up).
+The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
 
 If you wish to provide a translation for an existing subdomain, or correct a typo in an existing markdown file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
 

@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/1wirepiplus/1-wire-pi-plus-schematic.png
 buy: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
 image: 'ab-1-wire-pi-plus.png'
 pincount: 40

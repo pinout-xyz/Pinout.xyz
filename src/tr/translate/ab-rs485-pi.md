@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: UART to RS485 Converter
 url: https://www.abelectronics.co.uk/p/77/RS485-Pi
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/rs485pi/rs485pi-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/77/RS485-Pi
 image: 'ab-rs485-pi.png'
 pincount: 40

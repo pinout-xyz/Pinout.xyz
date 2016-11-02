@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 2 channel Analogue to Digital Converter and 2 channel Digital to Analogue Converter
 url: https://www.abelectronics.co.uk/p/74/ADC-DAC-Pi-Zero-Raspberry-Pi-ADC-and-DAC-expansion-board
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcdacpizero/adcdacpizero-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/74/ADC-DAC-Pi-Zero-Raspberry-Pi-ADC-and-DAC-expansion-board
 image: 'ab-adcdac-pi-zero.png'
 pincount: 40

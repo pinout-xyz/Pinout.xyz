@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: Module Horloge pour le Raspberry Pi
 url: https://www.abelectronics.co.uk/p/70/RTC-Pi-Zero
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/rtcpizero/rtcpi-zero-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/70/RTC-Pi-Zero
 image: 'ab-rtc-pi-zero.png'
 pincount: 40

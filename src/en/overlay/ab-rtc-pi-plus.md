@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/52/RTC-Pi-Plus
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/rtcpi/rtcpi-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/52/RTC-Pi-Plus
 image: 'ab-rtc-pi-plus.png'
 pincount: 40

@@ -41,7 +41,7 @@ strings:
 - boards_subtitle: 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 featured:
 - pijack
-- ab-servo-pwm-pi-zero
+- mote-phat
 - 4tronix-picon-zero
 - wifi-pants
 overlays:

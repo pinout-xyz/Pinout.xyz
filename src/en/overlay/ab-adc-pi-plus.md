@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcpiplus/adc-pi-plus-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
 image: 'ab-adc-pi-plus.png'
 pincount: 40

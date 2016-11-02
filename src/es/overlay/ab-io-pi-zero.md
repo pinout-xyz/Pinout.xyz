@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 16 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/71/IO-Pi-Zero
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/iopizero/iopi-zero-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/71/IO-Pi-Zero
 image: 'ab-io-pi-zero.png'
 pincount: 40

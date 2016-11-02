@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: UART to RS232 Converter
 url: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/serialpiplus/schematic.pdf
 buy: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
 image: 'ab-serial-pi-plus.png'
 pincount: 40

@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 8 canaux Analogiques vers un convertisseur Digital
 url: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcdifferentialpi/adc-differential-pi-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
 image: 'ab-adc-differential-pi.png'
 pincount: 40

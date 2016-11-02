@@ -8,6 +8,7 @@ manufacturer: AB Electronics
 description: 16-channel, 12-bit PWM Controller
 url: https://www.abelectronics.co.uk/p/72/Servo-PWM-Pi-Zero
 github: https://github.com/abelectronicsuk
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/servopizero/servopi-zero-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/72/Servo-PWM-Pi-Zero
 image: 'ab-servo-pi-zero.png'
 pincount: 40

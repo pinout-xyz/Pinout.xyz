@@ -32,9 +32,11 @@ If you feel that the requirements for submissions is beyond your current possibi
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate language-code. For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand!), so you can't have `src/fr-CA` ( sorry! ).
 
-The first resources we recommend you translate are the language specific strings found in the `settings.yaml` file and the `footer.html` template, as well as the content of the `/pin` folder. Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphanumerical order). Leave those translations in the `/translate` folder when finished.
+The first resources we recommend you translate are the language specific strings found in the `settings.yaml` file, `pi-pinout.md`, `index.md`, `404.md` and the `footer.html` template, as well as the content of the `/pin` folder, preferably.
 
-Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this paragraph - all files outside your *&lt;languagecode&gt;* directory is shared between the subdomains and should be generic. Feel free to modify the template with links relevant to your country, and / or your Twitter handle however, but don't fiddle with the structure!
+Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphanumerical order). Leave those translations in the `/translate` folder when finished.
+
+Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory is shared between the subdomains and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your Twitter handle however, but don't fiddle with the structure!
 
 Once you've made your translation, you can build and preview it with, for example:
 
@@ -47,12 +49,11 @@ And then open: http://127.0.0.1:5000 in your browser.
 *note 1: you will need several python modules installed to render and serve a local version of the site, run*  
 *`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
 
-*note 2: if you are facing issues on your preview (card not showing, text update not appearing ...), you can fix it by erasing your browser's cache (image and cache file only)*
+*note 2: if you are facing issues with your preview (card not showing, text update not appearing ...), you can fix it by erasing your browser's cache (image and cache file only)*
 
-The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain :)  
-(this can include any number of boards, it does not have to be the entire line-up of boards)
+The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain (this can include any number of boards, it does not have to be the entire line-up).
 
-If you wish to provide a translation for an existing subdomain, or correct a typo in an existing mark down file, just edit the file in place (leaving the files in the `translate` folder for review, if you push a trabslation).
+If you wish to provide a translation for an existing subdomain, or correct a typo in an existing mark down file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
 
 If you have a question about translations, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
 

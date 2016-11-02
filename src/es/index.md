@@ -4,7 +4,7 @@ Esta guía de asignación de pines GPIO está pensada para ser una referencia r�
 
 ##Últimas noticias de asignación de pines
 
-Hemos añadido un [explorador de placas!](https://github.com/Gadgetoid/Pinout.xyz/blob/master/boards) utilízalo para encontrar el diagrama de asignación de pines para una placa o descubrir placas nuevas. Si fabricas placas, nos encantaría añadir las tuyas también. [Puedes contribuir en GitHub](https://github.com/gadgetoid/Pinout2)
+Hemos añadido un [explorador de placas!](https://github.com/Gadgetoid/Pinout.xyz/blob/master/boards) utilízalo para encontrar el diagrama de asignación de pines para una placa o descubrir placas nuevas. Si fabricas placas, nos encantaría añadir las tuyas también. [Puedes contribuir en GitHub](https://github.com/gadgetoid/Pinout.xyz)
 
 ##De todos modos, ¿qué significan estos números?
 

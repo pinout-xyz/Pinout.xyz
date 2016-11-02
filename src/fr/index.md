@@ -6,7 +6,7 @@ Ce document n'est pas destiné à l'impression, c'est à la fois un outil de ré
 
 ##Dernières News de Pinout
 
-Nous avons [ajouté un explorateur de cartes](/boards)! Utilisez le pour trouver le brochage de votre carte chapeau Raspberry Pi, ou en découvrir de nouvelles. Si vous fabriquez des cartes chapeau, nous serions ravis de les ajouter aussi ! [Vous pouvez contribuer sur GitHub](https://github.com/gadgetoid/Pinout2).
+Nous avons [ajouté un explorateur de cartes](/boards)! Utilisez le pour trouver le brochage de votre carte chapeau Raspberry Pi, ou en découvrir de nouvelles. Si vous fabriquez des cartes chapeau, nous serions ravis de les ajouter aussi ! [Vous pouvez contribuer sur GitHub](https://github.com/gadgetoid/Pinout.xyz).
 
 ##Mais que veulent dire tous ces numéros?
 

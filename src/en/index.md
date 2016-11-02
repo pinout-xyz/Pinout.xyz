@@ -6,7 +6,7 @@ This GPIO Pinout is designed to be both a quick, interactive reference to the Ra
 
 ##Latest Pinout news
 
-We've [added a board explorer](/boards)! Use it to find the pinout for a Raspberry Pi add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/gadgetoid/Pinout2).
+We've [added a board explorer](/boards)! Use it to find the pinout for a Raspberry Pi add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/gadgetoid/Pinout.xyz).
 
 ##What do these numbers mean?
 

@@ -41,7 +41,7 @@ default_strings = {
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'buy_now': 'Buy Now',
-    'translate_msg': '<a href="https://github.com/gadgetoid/Pinout2">This page needs translating, can you help?</a><br><br>',
+    'translate_msg': '<a href="https://github.com/gadgetoid/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
     'browse_addons': 'Browse more HATs, pHATs and add-ons',
     'return_home': 'Return to the Raspberry Pi GPIO Pinout',
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
@@ -598,7 +598,7 @@ def interfaces_menu(current):
         sel = ''
         if current is not None and 'name' in current and interface['name'] == current['name']:
             sel = ' class="selected"'
-        
+
         html += '<li{}><a href="{}{}">{}</a></li>'.format(sel, base_url, interface['page_url'], interface['name'])
 
     return html

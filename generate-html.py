@@ -460,7 +460,7 @@ def get_lang_urls(src):
                 img_css = ' class="grayscale"'
             url = alternate_urls[url_lang][src]
             urls.append(
-                '<li><a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" /></a>'.format(
+                '<a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" /></a>'.format(
                     lang=url_lang,
                     url=url,
                     resource_url=resource_url,

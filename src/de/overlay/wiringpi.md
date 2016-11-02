@@ -3,7 +3,7 @@
 name: WiringPi
 class: interface
 type: pinout
-url: http://wiringpi.com/
+url: http://wiringpi.com
 page_url: wiringpi
 pin:
   '3':

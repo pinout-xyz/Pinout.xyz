@@ -4,6 +4,7 @@ name: SPI
 class: interface
 type: pinout
 description: Pin SPI del Raspberry
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/
 pincount: 5
 pin:
   '11':

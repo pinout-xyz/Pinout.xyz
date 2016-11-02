@@ -4,6 +4,7 @@ name: SPI
 class: interface
 type: pinout
 description: Raspberry Pi SPI pinleri
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/
 pincount: 5
 pin:
   '11':
@@ -61,8 +62,8 @@ wiringpi.mcp23S17Setup(PIN_BASE,SPI_ADDR)
 # 16 pins including the starting pin
 mcp23S17pins = range(PIN_BASE,PIN_BASE+15)
 for pin in mcp23S17pins:
-	wiringpi.pinMode(pin,OUTPUT)
-	wiringpi.digitalWrite(pin,HIGH)
+    wiringpi.pinMode(pin,OUTPUT)
+    wiringpi.digitalWrite(pin,HIGH)
 ```
 
 SPI portunuz ayrıca Gordon Henderson'un modifiye AVRDude'una Arduino skeçleri yükleyerek ATmega 328'ye "[bit banging](http://en.wikipedia.org/wiki/Bit_banging)" de yapabilirsiniz.

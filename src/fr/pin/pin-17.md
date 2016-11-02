@@ -1,1 +1,1 @@
-/Users/rogue/Desktop/Pinout2/src/fr-FR/pin/pin-1.md
+pin-1.md

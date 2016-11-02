@@ -40,6 +40,7 @@ default_strings = {
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
+    'board_schematic': 'Schematic',
     'buy_now': 'Buy Now',
     'translate_msg': '<a href="https://github.com/gadgetoid/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
     'browse_addons': 'Browse more HATs, pHATs and add-ons',
@@ -205,6 +206,10 @@ def load_overlay(overlay):
         # Should only ever be a URL to the github repository with code supporting the product
         if 'github' in loaded:
             details.append('[{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
+
+        # A URL referencing the add-on board schematic
+        if 'schematic' in loaded:
+            details.append('[{text}]({url})'.format(text=strings['board_schematic'], url=loaded['schematic']))
 
         # A URL to a preferred place to buy the add-on board
         if 'buy' in loaded:

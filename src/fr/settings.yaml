@@ -10,6 +10,8 @@ url_suffix:
 urls:
   GND: masse
 strings:
+- home: 'Accueil'
+- boards: 'Cartes'
 - details: 'Détails'
 - group_other: 'autre'
 - form_undefined: 'Autre'

@@ -34,8 +34,9 @@ pin:
   '11':
     name: Reset
     active: low
+flash:
   '29':
-    name: EEPROM WP
+    mode: flash
     active: low
 -->
 #Propeller HAT

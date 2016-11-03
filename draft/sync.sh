@@ -5,6 +5,7 @@ mdlist=$(ls "$masterdir")
 srcdir="../src"
 langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
+urllist=( "url" "github" "buy" )
 filesync=false
 urlfix=false
 
@@ -41,16 +42,18 @@ for overlay in $mdlist; do
         fi
 
         if [ -f "$srcdir/$dirmd/overlay/$overlay" ]; then
-            besturl=$(grep "^url: http" "$masterdir/$overlay")
-            langurl=$(grep "^url: http" "$srcdir/$dirmd/overlay/$overlay")
-            if [ "$besturl" != "$langurl" ]; then
-                echo "url in en $overlay is $besturl"
-                echo "url in $dirmd $overlay is $langurl"
-                if confirm "would you like to fix this discrepancy?"; then
-                    sed -i "s|^url.*$|$besturl|" "$srcdir/$dirmd/overlay/$overlay"
-                    echo "external link was fixed" && urlfix=true
+            for urltype in ${urllist[@]}; do
+                besturl=$(grep "^$urltype" "$masterdir/$overlay")
+                langurl=$(grep "^$urltype" "$srcdir/$dirmd/overlay/$overlay")
+                if [ "$besturl" != "$langurl" ]; then
+                    echo "$urltype in en $overlay is $besturl"
+                    echo "$urltype in $dirmd $overlay is $langurl"
+                    if confirm "would you like to fix this discrepancy?"; then
+                        sed -i "s|^url.*$|$besturl|" "$srcdir/$dirmd/overlay/$overlay"
+                        echo "external link was fixed" && urlfix=true
+                    fi
                 fi
-            fi
+            done
         fi
     done
 done

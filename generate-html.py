@@ -24,9 +24,13 @@ lang = "en"
 default_strings = {
     'home': 'Home',
     'boards': 'Boards',
+    'details': 'Details',
     'pin_header': '{} pin header',
     'form_undefined': 'Undefined',
     'group_other': 'other',
+    'type_hat': 'HAT form-factor',
+    'type_phat': 'pHAT form-factor',
+    'type_classic': 'Classic form-factor',
     'eeprom_detect': 'Uses VID/PID',
     'eeprom_setup': 'Uses EEPROM',
     'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
@@ -38,6 +42,7 @@ default_strings = {
     'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
     'wiring_pi_pin': 'Wiring Pi pin {}',
+    'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'board_schematic': 'Schematic',
@@ -487,7 +492,7 @@ pinout.load(lang)
 
 overlays = pinout.settings['overlays']
 
-strings = pinout.get_setting('strings', {})
+strings = pinout.get_string('strings', {})
 
 if type(strings) == list:
     _strings = {}
@@ -662,8 +667,8 @@ for pin in range(1, len(pinout.pins) + 1):
                                   content=pin_html,
                                   resource_url=resource_url,
                                   overlays=overlays_html,
-                                  description=pinout.settings['default_desc'],
-                                  title=pin_title + pinout.settings['title_suffix'],
+                                  description=strings['default_desc'],
+                                  title=pin_title + strings['title_suffix'],
                                   featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html,
@@ -700,12 +705,12 @@ for url in pages:
         langlinks = get_lang_urls(src)
 
     if not 'description' in pages[url]:
-        pages[url]['description'] = pinout.settings['default_desc']
+        pages[url]['description'] = strings['default_desc']
 
-    name = pinout.settings['default_title']
+    name = strings['default_title']
 
     if 'name' in pages[url]:
-        name = pages[url]['name'] + pinout.settings['title_suffix']
+        name = pages[url]['name'] + strings['title_suffix']
 
     feat_boards_html = featured_boards_html
 

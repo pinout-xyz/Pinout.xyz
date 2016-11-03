@@ -1,44 +1,10 @@
----
-default_desc: The comprehensive Add-on boards & GPIO Pinout guide for the Raspberry Pi
-default_title: Raspberry Pi GPIO Pinout
-title_suffix: " at Raspberry Pi GPIO Pinout"
-base_url: /pinout/
-resource_url: /resources/
 domain: pinout.xyz
 analytics_id: UA-69846516-1
+base_url: /pinout/
+resource_url: /resources/
 url_suffix:
 urls:
   GND: ground
-strings:
-- home: 'Home'
-- boards: 'Boards'
-- details: 'Details'
-- group_other: 'other'
-- form_undefined: 'Undefined'
-- pin_header: '{} pin header'
-- type_hat: 'HAT form-factor'
-- type_phat: 'pHAT form-factor'
-- type_classic: 'Classic form-factor'
-- eeprom_detect: 'EEPROM product ID'
-- eeprom_setup: 'EEPROM auto configuration'
-- uses_i2c: 'Communication over I2C'
-- uses_spi: 'Communication over SPI'
-- uses_5v_and_3v3: 'Needs 5v and 3v3 power'
-- uses_5v: 'Needs 5v power'
-- uses_3v3: 'Needs 3v3 power'
-- uses_n_gpio_pins: 'Uses {} GPIO pins'
-- bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
-- physical_pin_n: 'Physical pin {}'
-- wiring_pi_pin: 'Wiring Pi pin {}'
-- made_by: 'Made by {manufacturer}'
-- more_information: 'More Information'
-- github_repository: 'GitHub Repository'
-- board_schematic : 'Schematic'
-- buy_now: 'Buy Now'
-- browse_addons: 'Browse more HATs, pHATs and add-ons'
-- return_home: 'Return to the Raspberry Pi GPIO Pinout'
-- boards_title: 'Raspberry Pi HATs, pHATs &amp; Add-ons'
-- boards_subtitle: 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 featured:
 - pijack
 - mote-phat

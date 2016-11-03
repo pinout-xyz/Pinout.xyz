@@ -1,38 +1,10 @@
----
-default_desc: The comprehensive Raspberry Pi GPIO Pinout guide for the original Raspberry
-default_title: Raspberry Pi GPIO Pinout
-title_suffix: " at Raspberry Pi GPIO Pinout"
-base_url: /pinout/
-resource_url: /resources/
 domain: de.pinout.xyz
 analytics_id: UA-69846516-4
+base_url: /pinout/
+resource_url: /resources/
 url_suffix:
 urls:
   GND: masse_ground
-strings:
-- details: 'Details'
-- group_other: 'alle'
-- form_undefined: 'Andere'
-- pin_header: '{} pin header'
-- type_hat: 'HAT form-factor'
-- type_phat: 'pHAT form-factor'
-- type_classic: 'Classic form-factor'
-- eeprom_detect: 'EEPROM Hersteller ID'
-- eeprom_setup: 'benutzt EEPROM'
-- uses_i2c: 'benutzt I2C'
-- uses_spi: 'benutzt SPI'
-- uses_5v_and_3v3: '5v und 3v3 Stromversorgung'
-- uses_5v: '5v Stromversorgung'
-- uses_3v3: '3v3 Stromversorgung'
-- uses_n_gpio_pins: 'benutzt {} GPIO Anschlüsse'
-- bcm_pin_rev1_pi: 'BCM Anschluss {} auf dem Rev 1 ( sehr alter ) Pi'
-- physical_pin_n: 'Physical pin {}'
-- wiring_pi_pin: 'Wiring Pi Anschluss {}'
-- made_by: 'Hersteller: {manufacturer}'
-- more_information: 'Mehr Informationen'
-- github_repository: 'GitHub'
-- board_schematic : 'Schematic'
-- buy_now: 'jetzt kaufen'
 featured:
 - display-o-tron
 - rpf-dots

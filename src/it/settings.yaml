@@ -1,44 +1,10 @@
----
-default_desc: La guida completa ai pin GPIO del Raspberry Pi originale
-default_title: Assegnazione pin GPIO del Raspberry Pi - Pi 1, B+, Pi 2
-title_suffix: " - Assegnazione pin GPIO del Raspberry Pi"
-base_url: /pinout/
-resource_url: /resources/
 domain: it.pinout.xyz
 analytics_id: UA-69846516-6
+base_url: /pinout/
+resource_url: /resources/
 url_suffix:
 urls:
   GND: massa
-strings:
-- home: 'Home'
-- boards: 'Boards'
-- details: 'Details'
-- group_other: 'Tutti'
-- form_undefined: 'Altro'
-- pin_header: '{} pin header'
-- type_hat: 'Fattore di forma HAT'
-- type_phat: 'Fattore di forma pHAT'
-- type_classic: 'Fattore di forma classico'
-- eeprom_detect: 'Prodotto ID EEPROM'
-- eeprom_setup: 'Utilizza EEPROM'
-- uses_i2c: 'Utilizza I2C'
-- uses_spi: 'Utilizza SPI'
-- uses_5v_and_3v3: 'Alimentazione a 5v+3.3V'
-- uses_5v: 'Alimentazione a 5V'
-- uses_3v3: 'Alimentazione a 3.3V'
-- uses_n_gpio_pins: 'Utilizza {} GPIO pins'
-- bcm_pin_rev1_pi: 'BCM pin {} su Raspberry Rev 1 (le prime edizioni)'
-- physical_pin_n: 'Pin fisico {}'
-- wiring_pi_pin: 'Wiring Pi pin {}'
-- made_by: 'Prodotto da {manufacturer}'
-- more_information: 'Maggiori informazioni'
-- github_repository: 'GitHub'
-- board_schematic : 'Schematic'
-- buy_now: 'Acquista'
-- browse_addons: 'Browse more HATs, pHATs and add-ons'
-- return_home: 'Return to the Raspberry Pi GPIO Pinout'
-- boards_title: 'Raspberry Pi HATs, pHATs &amp; Add-ons'
-- boards_subtitle: 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 featured:
 - display-o-tron
 - piborg-ledborg

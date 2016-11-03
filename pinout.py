@@ -7,8 +7,9 @@ except ImportError:
     exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
 
 
-DB_FILE = 'pi-pinout.yaml'
+PINOUT_FILE = 'pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'
+STRINGS_FILE = 'localised.yaml'
 
 pins = None
 settings = None
@@ -19,6 +20,11 @@ master_template = open('common/layout.html').read()
 def get_setting(setting, default = None):
     if setting in settings and settings[setting] != None:
         return settings[setting]
+    return default
+
+def get_string(string, default = None):
+    if string in strings and strings[string] != None:
+        return strings[string]
     return default
 
 
@@ -93,15 +99,17 @@ def physical_to(pin, scheme='bcm'):
 
 
 def load(lang='en'):
-    global pins, settings
-    if DB_FILE.endswith('.yaml'):
-        db = yaml.load(open('src/{}/{}'.format(lang, DB_FILE)).read())
-    else:
-        db = json.load(open('src/{}/{}'.format(lang, DB_FILE)))
+    global pins, settings, strings
     if SETTINGS_FILE.endswith('.yaml'):
         settings = yaml.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)).read())
     else:
         settings = json.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)))
-    pins = db['pins']
-
-
+    if STRINGS_FILE.endswith('.yaml'):
+        strings = yaml.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)).read())
+    else:
+        strings = json.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)))
+    if PINOUT_FILE.endswith('.yaml'):
+        pinout = yaml.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)).read())
+    else:
+        pinout = json.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)))
+    pins = pinout['pins']

@@ -8,7 +8,7 @@ manufacturer: AB Electronics
 description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/iopiplus/schematic.pdf
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/iopiplus/IOPiplus-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
 image: 'ab-io-pi-plus.png'
 pincount: 40

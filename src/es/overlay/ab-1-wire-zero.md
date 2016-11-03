@@ -8,7 +8,7 @@ manufacturer: AB Electronics
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/76/1-Wire-Pi-Zero
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/1wirepizero/1wirepizero-schematic.png
+schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/1wirepizero/1wirepizero-schematic.pdf
 buy: https://www.abelectronics.co.uk/p/76/1-Wire-Pi-Zero
 image: 'ab-1-wire-pi-zero.png'
 pincount: 40

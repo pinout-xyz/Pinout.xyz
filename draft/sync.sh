@@ -5,7 +5,7 @@ mdlist=$(ls "$masterdir")
 srcdir="../src"
 langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
-urllist=( "url" "github" "buy" )
+urllist=( "url" "github" "buy" "schematic" )
 filesync=false
 urlfix=false
 
@@ -22,6 +22,7 @@ confirm() {
     fi
 }
 
+echo "syncing lang directories..."
 for overlay in $mdlist; do
     board=$(echo "$overlay" | rev | cut -c 4- | rev)
     for dirmd in ${langlist[@]}; do
@@ -49,7 +50,7 @@ for overlay in $mdlist; do
                     echo "$urltype in en $overlay is $besturl"
                     echo "$urltype in $dirmd $overlay is $langurl"
                     if confirm "would you like to fix this discrepancy?"; then
-                        sed -i "s|^url.*$|$besturl|" "$srcdir/$dirmd/overlay/$overlay"
+                        sed -i "s|^$urltype.*$|$besturl|" "$srcdir/$dirmd/overlay/$overlay"
                         echo "external link was fixed" && urlfix=true
                     fi
                 fi

@@ -506,6 +506,7 @@ url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 template_main = open('common/page.html'.format(lang)).read()
 template_boards = open('common/boards.html'.format(lang)).read()
 template_footer = open('src/{}/template/footer.html'.format(lang)).read()
+template_footer = open('src/{}/template/footer.html'.format(lang)).read()
 
 pages = {}
 navs = {}
@@ -620,7 +621,7 @@ serve.py will mirror this structure for testing.
 '''
 
 pages['index'] = {}
-pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('index.md')})
+pages['index']['rendered_html'] = render_overlay_page({'name': 'Index', 'long_description': load_md('/template/index.md')})
 
 default_nav = render_nav('pinout')
 
@@ -629,7 +630,7 @@ navs['index'] = default_nav
 '''
 Add the 404 page if 404.md is present.
 '''
-page404 = load_md('404.md')
+page404 = load_md('/template/404.md')
 if page404 is not None:
     pages['404'] = {}
     pages['404']['rendered_html'] = render_overlay_page({'name': '404', 'long_description': page404})

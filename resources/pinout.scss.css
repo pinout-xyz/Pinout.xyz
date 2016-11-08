@@ -5,13 +5,14 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {
 
 body {
   font-family: 'Avenir', sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  font-size: 16px; }
 
 table {
   margin: 20px 0;
   border-collapse: collapse;
   text-align: left;
-  font-size: 13px; }
+  font-size: 0.8em; }
   table td, table th {
     border: 1px solid #073642;
     padding: 5px; }
@@ -36,7 +37,7 @@ table {
 
 .logo {
   width: 250px;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 23px;
   cursor: pointer;
   position: absolute;
@@ -98,19 +99,19 @@ Content Area
     background: none;
     border-top: 2px solid #dbd2b0; }
   #content h1 {
-    font-size: 30px; }
+    font-size: 1.8em; }
   #content h2 {
-    font-size: 20px;
+    font-size: 1.2em;
     margin-top: 20px; }
   #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
   #content p, #content pre {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 150%; }
   #content h3 {
     color: #D33682;
-    font-size: 22px;
+    font-size: 1.4em;
     font-weight: bold; }
   #content article {
     padding: 15px; }
@@ -151,7 +152,7 @@ Boards Page
     display: block;
     margin: 0 auto; }
   #boards .board strong, #featured .board strong {
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'Avenir', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
@@ -160,7 +161,7 @@ Boards Page
     display: block; }
   #boards .board span, #featured .board span {
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: normal;
     margin: 0;
     padding: 0 5px;
@@ -181,7 +182,7 @@ Boards Page
   margin-right: 18px; }
   .facets h4 {
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 1em;
     margin: 10px 0 0 0;
     color: #ffffff; }
   .facets ul, .facets li {
@@ -195,7 +196,7 @@ Boards Page
     margin-right: 2px;
     background: #859900;
     color: #FFF;
-    font-size: 13px;
+    font-size: 0.8em;
     line-height: 23px;
     height: 22px;
     cursor: pointer;
@@ -284,9 +285,8 @@ Left Column
       margin-right: 2px;
       background: #5a5fbd;
       color: #FFF;
-      font-size: 14px;
-      line-height: 23px;
-      height: 22px; }
+      font-size: 0.9em;
+      line-height: 1.45em; }
       #interfaces li a:hover {
         color: #5a5fbd;
         background: #e2e3f3; }
@@ -328,13 +328,13 @@ nav {
 #gpio a {
   display: block;
   position: relative;
-  font-size: 15px;
+  font-size: 1em;
   line-height: 23px;
   height: 22px;
   margin-bottom: 2px; }
 #gpio .phys {
-  color: #002B36;
-  font-size: 12px;
+  color: #073642;
+  font-size: 0.8em;
   opacity: 0.8;
   position: absolute;
   left: 30px;
@@ -358,8 +358,7 @@ nav {
     left: 5px;
     top: 5px;
     width: 6px;
-    height: 6px;
-    font-size: 7px; }
+    height: 6px; }
 #gpio .top {
   left: 246px; }
   #gpio .top li {
@@ -401,21 +400,23 @@ nav {
   background: #f5f3ed;
   color: #063541; }
 #gpio li a small {
-  font-size: 11px; }
+  font-size: 0.7em; }
 #gpio .overlay-pin a {
   background: #ebe6d3;
   color: #063541; }
   #gpio .overlay-pin a:hover {
     background: #f5f3ed;
     color: #063541; }
+#gpio .overlay-pin.gnd a {
+  color: rgba(6, 53, 65, 0.5); }
 #gpio .overlay-power .phys {
   color: #FFFFFF;
   opacity: 1; }
 #gpio .overlay-power a {
   background: #073642;
   color: #FFFFFF; }
-  #gpio .overlay-power a::hover {
-    background: #268bd2; }
+  #gpio .overlay-power a:hover {
+    background: #268BD2; }
 #gpio .overlay-ground .phys {
   background: #073642;
   color: #FFFFFF;
@@ -428,7 +429,7 @@ nav {
   text-indent: 0px;
   line-height: 22px; }
 #gpio .overlay-ground a:hover .phys {
-  background: #268bd2; }
+  background: #268BD2; }
 #gpio .overlay-ground span.pin {
   background: #073642; }
 #gpio ul li.hover-pin a,

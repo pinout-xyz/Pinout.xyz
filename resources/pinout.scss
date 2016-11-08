@@ -1,3 +1,5 @@
+$base-font-size: 16px;
+
 $color-purple: #6c71c4;
 $color-pink: #D33682;
 $color-green: #859900;
@@ -9,13 +11,27 @@ $color-dark: #073642;
 
 $color-content-bg: #EBE6D3;
 
+$nav-bg: #5F8645;
+
+$overlay-pin-bg: rgb(235, 230, 211);
+$overlay-pin-fg: #063541;
+
+$overlay-pin-bg-hover: rgb(245, 243, 237);
+$overlay-pin-fg-hover: $overlay-pin-fg;
+
 ul, li, a, body, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;text-decoration:none;}
 
-body {font-family:'Avenir', sans-serif;font-weight:500;}
+body {
+    font-family:'Avenir', sans-serif;
+    font-weight:500;
+    font-size:$base-font-size;
+}
 
 table {
-    margin:20px 0;border-collapse:collapse;
-    text-align:left;font-size:13px;
+    margin:20px 0;
+    border-collapse:collapse;
+    text-align:left;
+    font-size:0.8em;
 
     td, th {border:1px solid $color-dark;padding:5px;}
     th {background:$color-dark;color:$color-content-bg;}
@@ -43,7 +59,7 @@ table {
 
 .logo {
     width:250px;
-    font-size:24px;
+    font-size:1.5em;
     line-height:23px;
     cursor:pointer;
     position: absolute;
@@ -114,20 +130,23 @@ Content Area
         border-top:2px solid darken($color-content-bg,10%);
     }
 
-    h1 {font-size:30px;}
+    h1 {font-size:1.8em;}
 
-    h2 {font-size:20px;margin-top:20px;}
+    h2 {
+        font-size:1.2em;
+        margin-top:20px;
+    }
 
     h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
     p, pre {
         margin-top:10px;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 150%;
     }
     h3 {
         color:$color-pink;
-        font-size:22px;
+        font-size:1.4em;
         font-weight:bold;
     }
 
@@ -173,7 +192,7 @@ Boards Page
     }
 
     strong  {
-        font-size:16px;
+        font-size:1em;
         font-family: 'Avenir', sans-serif;
         font-weight: 500;
         color:#FFFFFF;
@@ -184,7 +203,7 @@ Boards Page
 
     span {
         color: #FFFFFF;
-        font-size: 12px;
+        font-size: 0.75em;
         font-weight: normal;
         margin: 0;
         padding: 0 5px;
@@ -212,7 +231,7 @@ Boards Page
 
     h4 {
         text-transform: capitalize;
-        font-size: 16px;
+        font-size: 1em;
         margin: 10px 0 0 0;
         color:#ffffff;
     }
@@ -228,35 +247,35 @@ Boards Page
         padding: 0px 10px 0px 10px;
         margin-top: 2px;
         margin-right: 2px;
-        background: #859900;
+        background: $color-green;
         color: #FFF;
-        font-size: 13px;
+        font-size: 0.8em;
         line-height: 23px;
         height: 22px;
         cursor:pointer;
         text-transform:capitalize;
 
         &:hover, &.selected {
-            color: #859900;
+            color: $color-green;
             background: #FFF;
         }
     }
 
     .facet:nth-of-type(2) li {
-        background: #D33682;
+        background: $color-pink;
     }
 
     .facet:nth-of-type(2) li:hover, .facet:nth-of-type(2) li.selected {
-        color: #D33682;
+        color: $color-pink;
         background: #FFF;
     }
 
     .facet:nth-of-type(1) li {
-        background: #268BD2;
+        background: $color-blue;
     }
 
     .facet:nth-of-type(1) li:hover, .facet:nth-of-type(1) li.selected {
-        color: #268BD2;
+        color: $color-blue;
         background: #FFF;
     }
 }
@@ -284,7 +303,7 @@ Featured Boards
             padding-bottom: 10px;
 
             &:hover {
-                background: #D33682;
+                background: $color-pink;
             }
         }
 
@@ -357,9 +376,8 @@ Left Column
             margin-right:2px;
             background:darken($color-purple,5%);
             color:#FFF;
-            font-size: 14px;
-            line-height: 23px;
-            height: 22px; 
+            font-size: 0.9em;
+            line-height: 1.45em;
 
             &:hover {color: darken($color-purple,5%);background:mix($color-purple,#FFF,20%);}
         }
@@ -380,7 +398,7 @@ GPIO nav
 nav {
     position:relative;
     width:292px;
-    background:#5F8645;
+    background:$nav-bg;
     min-height:653px;
     margin-right:208px;
     border-top-right-radius:46px;
@@ -414,15 +432,15 @@ nav {
     a {
         display:block;
         position:relative;
-        font-size:15px;
+        font-size:1em;
         line-height:23px;
         height:22px;
         margin-bottom:2px;
     }
 
     .phys {
-        color:#002B36;
-        font-size:12px;
+        color:$color-dark;
+        font-size:0.8em;
         opacity:0.8;
         position:absolute;
         left:30px;
@@ -450,7 +468,6 @@ nav {
             top:5px;
             width:6px;
             height:6px;
-            font-size:7px;
         }
     }
 
@@ -506,15 +523,20 @@ nav {
         color:#063541;
     }
 
-    li a small {font-size:11px;}
+    li a small {font-size:0.7em;}
 
-    .overlay-pin a {
-        background:rgb(235, 230, 211);
-        color:#063541;
+    .overlay-pin {
+        a {
+            background:$overlay-pin-bg;
+            color:$overlay-pin-fg;
 
-        &:hover {
-            background:rgb(245, 243, 237);
-            color:#063541;
+            &:hover {
+                background:$overlay-pin-bg-hover;
+                color:$overlay-pin-fg-hover;
+            }
+        }
+        &.gnd a {
+            color:rgba(6, 53, 65, 0.5);
         }
     }
 
@@ -527,8 +549,8 @@ nav {
             background:$color-dark;
             color:#FFFFFF;
 
-            &::hover {
-                background:#268bd2;
+            &:hover {
+                background:$color-blue;
             }
         }
     }
@@ -547,7 +569,7 @@ nav {
             line-height: 22px;
         }
         a:hover .phys {
-            background:#268bd2;
+            background:$color-blue;
         }
         span.pin {background:$color-dark;}
     }

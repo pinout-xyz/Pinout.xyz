@@ -25,44 +25,60 @@ ground:
   '34':
   '39':
 pin:
-  '12':
-    name: I2S
-  '35':
-    name: I2S
-  '40':
-    name: I2S
   '7':
     name: Shutdown
+    mode: output
   '11':
     name: Power
+    mode: output
+  '12':
+    name: I2S Clock
   '13':
     name: Enter
+    mode: input
   '15':
     name: Escape
+    mode: input
   '16':
     name: Coin
+    mode: input
   '18':
     name: Start
-  '29':
-    name: 'Button 1'
-  '23':
-    name: 'Button 2'
-  '24':
-    name: 'Button 3'
-  '22':
-    name: 'Button 4'
-  '21':
-    name: 'Button 5'
+    mode: input
   '19':
     name: 'Button 6'
-  '32':
-    name: Up
+    mode: input
+  '21':
+    name: 'Button 5'
+    mode: input
+  '22':
+    name: 'Button 4'
+    mode: input
+  '23':
+    name: 'Button 2'
+    mode: input
+  '24':
+    name: 'Button 3'
+    mode: input
+  '29':
+    name: 'Button 1'
+    mode: input
   '31':
     name: Down
-  '38':
-    name: Left
+    mode: input
+  '32':
+    name: Up
+    mode: input
+  '35':
+    name: I2S WS
   '36':
     name: Right
+    mode: input
+  '38':
+    name: Left
+    mode: input
+  '40':
+    name: I2S Data
 install:
   'devices':
   - 'i2s'

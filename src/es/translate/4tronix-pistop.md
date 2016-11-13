@@ -29,6 +29,6 @@ pin:
 -->
 #Pi Stop Traffic Lights
 
-The PiStop is placed vertically into the GPIO connectors and can be fitted into several positions in the board. It can be fitted into 26-pin headers as well as 40-pin headers.
+PiStop se conecta verticalmente a los pines GPIO y puede y puede colocarse en distintas posiciones. Sirve tanto para 26 pines como para 40.
 
-PiStop only uses 3 GPIO pins plus ground, but you can fit multiple PiStops into one header, although not all positions are possible simultaneously as some pins are shared across the options. Note that only one position is illustrated in the pinout, but any succession of 3 GPIO next to a ground pin is suitable.
+PiStop sólo utiliza 3 pines GPIO, además de tierra, por lo que puedes conectar varios PiStops simultáneamente aunque no en cualquier posición ya que algunos pines se solaparían. Pese a que en el diagrama sólo se muestra una opción, cualquier sucesión de 3 pines GPIO cerca de tierra es susceptible de ser válida.  

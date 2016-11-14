@@ -52,6 +52,6 @@ pin:
 
 The PiTFT+ features a 3.5" display with 480x320 16-bit color pixels and a resistive touch overlay and is engineered specifically to work with the Raspberry Pi 3, 2 and the Model A+/B+.
 
-The display uses the hardware SPI pins (SCK, MOSI, MISO, CE0, CE1) as well as GPIO #25 and #24. GPIO #18 can be used to PWM dim the backlight if you like. All other GPIO are unused. There's a 2x16 'classic Pi' connection GPIO header on the bottom, you can connect a 26-pin Pi GPIO cable to it to use any of the other pins as you like. The other GPIO are broken out into solder pads at the bottom, in case you want to use more of the GPIO.
+The display uses the hardware SPI pins as well as GPIO #25 and #24. GPIO #18 can be used to PWM dim the backlight. A 2x13 'classic' GPIO header on the bottom, with additional GPIO pins broken out into solder pads, allows you to use more of the GPIO.
 
-Best of all, it comes fully assembled and ready to plug into your Pi! You can use this as a display for running the X interface, or pygame. You can also have an HDMI display seperately connected. There's four mounting ears that can be used to attach the display & Pi to a bezel, or snap them off with pliers (they're perforated) for a slick exactly-the-same-size-as-a-Pi look.
+The PiTFT+ can be used as a display for running the X interface, or the console. You can also have an HDMI display separately connected to complement the setup, keeping in mind that there can only be one X session running (so you'll need to choose where X should be output, on the HDMI or the PiTFT+).

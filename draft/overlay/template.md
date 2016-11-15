@@ -1,18 +1,18 @@
 <!--
 ---
-name: My Add-on Board
+name: PaPiRus
 class: board
-type: other
-formfactor: Custom
-manufacturer: Company
-description: An add-on board for the Raspberry Pi
-url: https://my-addon-board.com
-github: https://github.com/my-addon-board-repo.com
-schematic: https://my-addon-board-schematic.com
-buy: http://buy-my-addon-board.com
-image: 'image.png'
+type: display
+formfactor: HAT
+manufacturer: Pi Supply
+description: PaPiRus is an ePaper / eInk screen HAT module for the Raspberry Pi
+url: https://www.kickstarter.com/projects/pisupply/papirus-the-epaper-screen-hat-for-your-raspberry-p
+github: https://github.com/PiSupply/PaPiRus
+schematic:
+buy: https://www.pi-supply.com/product/papirus-epaper-eink-screen-hat-for-raspberry-pi/
+image: 'pisupply-papirus.png'
 pincount: 40
-eeprom: no
+eeprom: yes
 power:
   '1':
   '2':
@@ -30,38 +30,68 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  '7':
-    name: Enable
-    mode: output
-    active: high
-i2c:
-  '0x00':
-    name: device display name
-    device: chip name
+  '8':
+    name: Border Control
+  '10':
+    name: Discharge
+  '11':
+    name: Temp Sens          
+  '12':
+    name: ePaper PWM
+  '13':
+    name: RTC
+  '16':
+    name: Panel On
+  '18':
+    name: Reset COG (Chip On Glass) 
+  '19':
+    mode: spi
+  '21':
+    mode: spi
+  '22':
+    name: Busy COG (Chip On Glass)
+  '23':
+    mode: spi
+  '24':
+    mode: spi
+  '26':
+    mode: spi
+  '27':
+    mode: i2c
+  '28':
+    mode: i2c
+  '36':
+    name: Button 1
+    mode: input
+    active: low
+  '37':
+    name: Button 2
+    mode: input
+    active: low  
+  '38':
+    name: Button 3
+    mode: input
+    active: low
+  '40':
+    name: Button 4
+    mode: input
+    active: low
 -->
-#my add-on board
+#PaPiRus ePaper eInk display
+*Raspberry Pi HAT compliant design
+*Interchangeable screen sizes (1.44", 2.0" or 2.7")
+*32MBit Flash Memory
+*Battery Backed Real Time Clock (CR2032 battery included)
+*Easy plug and play operation with onboard EEPROM
+*Digital temperature sensor and thermal watchdog
+*GPIO breakout connector and solder pads
+*Optional reset pin header (for wake on alarm with RTC)
+*4 x optional slimline switches on top
 
-Use this section to provide additional information such as features, technical parts, install requirements, etc. Please keep this section to the point and avoid copy/paste of marketing blurb - the board's extended description should be primarily neutral and technical.
+Before using PaPiRus, do not forget to enable the SPI interface!
 
-The overlay itself uses the following fields, some of which are mandatory, as noted below:
+To get the HAT set up and ready to go you can use the one-line product installer:
 
-MANDATORY
-* name: the board name as it will appear at pinout.xyz
-* class: the class the overlay falls in, 'board' is the most common (use that if in doubt).
-* type: the typical applications of the board, i.e 'lcd' (use 'other' if in doubt). If multiple types apply, use a comma separated list (for example, 'adc,motor'). The keywords submitted will be used to filter boards on the site so don't include anything but tags that are relevant to the key functionality of the board.
-* formfactor: the board's form factor. Valid values are Custom, HAT and pHAT. Note that an EEPROM is required for HAT specs, use Custom if that is not the case.
-* manufacturer: the manufacturer's name.
-* description: a description of what the add-on board provides.
-* url: the main URL for the product providing detailed technical information about the board.
-* pin: an array of the pins used. Do not specify power or EEPROM pins as part of the array!
-
-DESIRABLE
-* pincount: the header pin count, typically 26 or 40 but shims/custom boards are acceptable.
-* eeprom: whether the board includes an eeprom (required by 'HAT' specs!).
-* power: the supply logic required by the board. Valid values are 'external', '3v3', '5v' and '3v3,5v'.
-* i2c: if the board uses i2c, a list of the bus address(es) and device(s) identification.
-
-OPTIONAL
-* image: a top-down image of the board as png with transparency or appropriate placeholder (see image template in board directory).
-* github: github repository address.
-* buy: URL where the board can be purchased.
+```bash
+curl -sSL https://goo.gl/i1Imel | sudo bash
+```

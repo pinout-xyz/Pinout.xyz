@@ -7,7 +7,7 @@ urls:
   GND: ground
 featured:
 - pijack
-- mote-phat
+- pantilt-hat
 - 4tronix-picon-zero
 - wifi-pants
 overlays:
@@ -88,3 +88,4 @@ overlays:
 - 4tronix-pistop
 - icubex-pishield
 - adafruit-pitft-35-plus
+- pantilt-hat

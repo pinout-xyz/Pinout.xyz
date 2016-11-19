@@ -41,5 +41,5 @@ Though designed to match the format of the Raspberry Pi Zero it is compatible wi
 To get the pHAT DAC set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/phatdac | bash
+curl -sS https://get.pimoroni.com/phatdac | bash
 ```

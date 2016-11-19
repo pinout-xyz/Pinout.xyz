@@ -50,7 +50,7 @@ Entrambi questi bus possono essere comunque condivisi con altre periferiche.
 Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 &hellip;e seguire le istruzioni!

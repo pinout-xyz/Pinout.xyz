@@ -51,7 +51,7 @@ Scroll pHAT proporciona una matriz de 55 LED blancos en formato píxel que es id
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/scrollphat | bash
+curl -sS https://get.pimoroni.com/scrollphat | bash
 ```
 
 Luego impórtalo en tu script Python y empieza a realizar proyectos:

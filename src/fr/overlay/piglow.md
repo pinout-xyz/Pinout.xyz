@@ -33,5 +33,5 @@ Le circuit intégré responsable de la gestion des LEDs est le SN3218, un microc
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/piglow | bash
+curl -sS https://get.pimoroni.com/piglow | bash
 ```

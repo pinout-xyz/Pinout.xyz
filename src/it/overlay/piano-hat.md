@@ -47,7 +47,7 @@ Utilizza due Microchip CAP1188 con indirizzi i2c 0x28 e 0x2b.
 Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```
 
 &hellip;e seguire le istruzioni!

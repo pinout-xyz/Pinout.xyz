@@ -33,7 +33,7 @@ Important: l'opération de l'Unicorn au travers de la broche PWM n'est pas compa
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Puis, sous Python, en guise de test que tout fonctionne bien:

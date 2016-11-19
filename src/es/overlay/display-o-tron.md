@@ -56,7 +56,7 @@ pin:
 Puedes usar la siguiente línea para instalar, preparar y dejar listo para el uso el Display-o-Tron 3000:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 ¡Y sigue las instrucciones!

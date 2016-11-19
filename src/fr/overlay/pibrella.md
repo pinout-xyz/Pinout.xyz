@@ -73,7 +73,7 @@ La Pibrella est une carte à usage multiple avec son, lumière, entrées et sort
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Puis, sous Python, en guise de test que tout fonctionne bien:

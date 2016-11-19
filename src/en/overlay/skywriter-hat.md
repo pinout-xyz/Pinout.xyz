@@ -55,7 +55,7 @@ It also recognises gestures, including swipes and more.
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```
 
 And follow the instructions!

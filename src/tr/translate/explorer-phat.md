@@ -101,7 +101,7 @@ install:
 To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

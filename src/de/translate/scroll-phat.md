@@ -50,7 +50,7 @@ The Scroll pHAT provides a matrix of 55 white LED pixels that is ideal for writi
 To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/scrollphat | bash
+curl -sS https://get.pimoroni.com/scrollphat | bash
 ```
 
 Then import it into your Python script and start tinkering:

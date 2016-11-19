@@ -65,7 +65,7 @@ The Display-o-Tron 3000 is a 3-line character LCD with an RGB backlight and joys
 To get the module set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/displayotron | bash
+curl -sS https://get.pimoroni.com/displayotron | bash
 ```
 
 And follow the instructions!

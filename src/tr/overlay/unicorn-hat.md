@@ -33,7 +33,7 @@ Not: Unicorn HAT bazı PWM kurnazlıkları kullanmakta. Bunun içnde analog ses 
 Kurulumu çok basit, sadece aşağıdaki komutu çalıştırın:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Ardından Python scriptinize modülü ekleyip kurcalamaya başlayabilirsiniz:

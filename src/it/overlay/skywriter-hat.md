@@ -36,7 +36,7 @@ che puoi usare nei tuoi script Python.
 Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```
 
 &hellip;e seguire le istruzioni!

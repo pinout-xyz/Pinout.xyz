@@ -73,7 +73,7 @@ Pibrella Pimoroni tarafından hazırlanmış hepsi-bir-arada, hafif, ses, giriş
 Pibrella'yı kullanmak çok kolay. Öncelikle terminalden aşağıdaki komutları çalıştırıp kurulumu gerçekleştirin:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Ardından Python kodunuzda aşağıdaki gibi modülü ekleyip kurcalamaya başlayabilirsiniz:

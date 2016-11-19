@@ -41,5 +41,5 @@ Pese a ser diseñado para Raspberry Pi Zero es compatible con todas las Raspberr
 Para configurar pHAT DAC puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/phatdac | bash
+curl -sS https://get.pimoroni.com/phatdac | bash
 ```

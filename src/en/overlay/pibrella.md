@@ -82,7 +82,7 @@ The all-in-one light, sound, input and output add-on board that uses lots of IO 
 Pibrella is easy to use, first you should install the module using LXTerminal/Command Line:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Then import it into your Python script and start tinkering:

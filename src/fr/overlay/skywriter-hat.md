@@ -35,5 +35,5 @@ En analysant ces données dans le temps il est aussi possible de reconnaître to
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```

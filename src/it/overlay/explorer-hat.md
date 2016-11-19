@@ -73,7 +73,7 @@ Input ed output a 5V, touch pad, LED sono le caratteristiche dell'Explorer HAT P
 Per preparare e impostare il modulo puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Importalo poi nel tuo script Python e inizia a smanettare:

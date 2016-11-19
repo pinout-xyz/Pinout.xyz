@@ -42,7 +42,7 @@ The board uses three IS31FL3730 matrix driver chips, each driving two of the mat
 To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/microdotphat | bash
+curl -sS https://get.pimoroni.com/microdotphat | bash
 ```
 
 Then import it into your Python script and start tinkering:

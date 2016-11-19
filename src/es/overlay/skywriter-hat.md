@@ -36,7 +36,7 @@ También reconoce gestos, incluyendo swipes y más.
 Para instalar este HAT y dejarlo preparado para el uso, ejecuta:
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```
 
 ¡Y sigue las instrucciones!

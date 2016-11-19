@@ -57,5 +57,5 @@ Sports four Mote channels with microUSB connectors that can drive up to 64 RGB L
 To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/motephat | bash
+curl -sS https://get.pimoroni.com/motephat | bash
 ```

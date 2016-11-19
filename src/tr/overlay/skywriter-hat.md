@@ -33,5 +33,5 @@ Skywriter HAT X, Y ve Z ekseninde parmağınızın pozisyonunu algılamanızı, 
 Ayrıca kaydırma (tıpkı telefonlardaki "swipe" hareketi gibi) gibi hareketleri de algılama yeteneğine sahiptir.
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```

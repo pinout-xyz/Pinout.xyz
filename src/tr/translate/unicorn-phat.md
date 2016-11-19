@@ -48,7 +48,7 @@ Note: Unicorn pHAT uses some special PWM trickery, performed with the same hardw
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

@@ -48,7 +48,7 @@ Nota: Unicorn pHAT usa un truco PWM, la misma técnica que hace que tu Pi pueda 
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Luego impórtalo en tu script Python y empieza a realizar proyectos:

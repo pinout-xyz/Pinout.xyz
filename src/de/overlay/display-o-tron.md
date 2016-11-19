@@ -56,7 +56,7 @@ pin:
 Mit diesem Einzeiler installierst Du das Display-o-Tron 3000:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 ...den Rest findest Du in der Anleitung auf Github :-)

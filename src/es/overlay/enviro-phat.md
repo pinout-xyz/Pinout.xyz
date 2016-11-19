@@ -60,7 +60,7 @@ ADC de 12-bit, 4-canales y 3.3v ADS1015 (0x48 en el bus i2c)
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/envirophat | bash
+curl -sS https://get.pimoroni.com/envirophat | bash
 ```
 Luego impórtalo en tu script Python y empieza a realizar proyectos:
 

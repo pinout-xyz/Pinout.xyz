@@ -35,7 +35,7 @@ producir sonido a través del jack de audio ( audio analógico ), así que no pu
 La instalación es fácil, únicamente:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 Después importa el módulo en tu programa de Python y empieza a experimentar:
 

@@ -55,7 +55,7 @@ Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/displayotron | bash
+curl -sS https://get.pimoroni.com/displayotron | bash
 ```
 
 And follow the instructions!

@@ -33,7 +33,7 @@ The board uses the SN3218 8-bit 18-channel PWM chip to drive surface mount LEDs.
 To get the module set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/piglow | bash
+curl -sS https://get.pimoroni.com/piglow | bash
 ```
 
 And follow the instructions!

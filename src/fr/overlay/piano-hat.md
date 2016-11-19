@@ -46,5 +46,5 @@ Les microchips responsables de la gestion des touches tactiles sont deux CAP1188
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```

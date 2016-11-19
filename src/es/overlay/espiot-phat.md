@@ -45,5 +45,5 @@ ESP IoT pHAT es una placa adicional para Raspberry Pi basada en ESP8266. Cuenta 
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/iotphat | bash
+curl -sS https://get.pimoroni.com/iotphat | bash
 ```

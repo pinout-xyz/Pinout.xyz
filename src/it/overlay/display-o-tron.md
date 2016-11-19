@@ -58,7 +58,7 @@ Il Display-o-Tron 3000 è un LCD da 3 righe di caratteri retroilluminato RGB e c
 Per preparare e impostare il modulo puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 &hellip;e seguire le istruzioni!

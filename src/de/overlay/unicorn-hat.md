@@ -35,7 +35,7 @@ analogen Audio-Ausgang erzeugen kann. Somit kannst Du nicht beides gleichzeitig 
 Die Einrichtung des HATs ist einfach:
 
 ```bash
-curl get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Dann musst Du die Library nur noch in Dein Python-Skript importieren und kannst anfangen zu experimentieren:

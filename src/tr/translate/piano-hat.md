@@ -53,7 +53,7 @@ It uses two Microchip CAP1188 chips with the i2c addresses 0x28 and 0x2b.
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```
 
 And follow the instructions!

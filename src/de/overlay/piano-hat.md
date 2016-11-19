@@ -46,7 +46,7 @@ Der HAT benutzt zwei Microchip CAP1188 ICs mit den I2C Adressen 0x28 und 0x2b.
 Mit folgendem Einzeiler installierst Du die nötige Software:
 
 ```bash
-curl get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```
 
 Den Rest findest Du in der Anleitung!

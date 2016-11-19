@@ -50,7 +50,7 @@ Beide Busse können aber weiterhin noch mit anderen Komponenten genutzt werden.
 Mit diesem Einzeiler installierst Du den Display-o-Tron HAT:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 ...den Rest findest Du in der Anleitung auf Github :-)

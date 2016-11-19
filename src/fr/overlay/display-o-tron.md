@@ -58,5 +58,5 @@ Le Display-o-Tron 3000 est un écran LCD avec 3 lignes, rétro-éclairage et joy
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```

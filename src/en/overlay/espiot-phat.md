@@ -45,5 +45,5 @@ The ESP IoT pHAT is an ESP8266 based add-on for the Raspberry Pi. It provides so
 To get the pHAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/iotphat | bash
+curl -sS https://get.pimoroni.com/iotphat | bash
 ```

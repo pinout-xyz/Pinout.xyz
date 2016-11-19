@@ -35,7 +35,7 @@ suoni tramite il jack audio (analogico), per cui non puoi usare entrambi allo st
 Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Importalo poi nel tuo script Python e inizia a smanettare:

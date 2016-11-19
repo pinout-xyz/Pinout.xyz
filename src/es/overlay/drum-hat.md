@@ -44,6 +44,6 @@ Especificaciones: 8 botones sensibles al tacto y 8 LEDs. Funciona con Piano HAT 
 Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/drumhat | bash
+curl -sS https://get.pimoroni.com/drumhat | bash
 ```
 ¡Y sigue las instrucciones!

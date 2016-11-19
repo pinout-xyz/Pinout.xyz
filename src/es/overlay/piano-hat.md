@@ -46,7 +46,7 @@ Usa dos CAP1188 chips de Microchip, con las direcciones i2c 0x28 y 0x2b
 Puedes usar la siguiente línea para instalar y preparar el Piano HAT:
 
 ```bash
-curl -sS get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```
 
 ¡Y sigue las instrucciones!

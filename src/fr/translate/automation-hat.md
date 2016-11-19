@@ -90,7 +90,7 @@ Automation HAT is a home monitoring and automation controller for the Raspberry 
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/automationhat | bash
+curl -sS https://get.pimoroni.com/automationhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

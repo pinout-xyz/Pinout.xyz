@@ -101,7 +101,7 @@ Entradas y salidas de 5V, entradas analógicas y un controlador de motores H-Bri
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Luego impórtalo en tu script Python y empieza a realizar proyectos:

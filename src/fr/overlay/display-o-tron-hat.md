@@ -49,5 +49,5 @@ Le chapeau Display-o-Tron est un LCD 3x16 caractères avec rétro-éclairage sur
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```

@@ -44,7 +44,7 @@ Features: 8 touch sensitive buttons and 8 LEDs. Works with Piano HAT (it uses a 
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/drumhat | bash
+curl -sS https://get.pimoroni.com/drumhat | bash
 ```
 
 And follow the instructions!

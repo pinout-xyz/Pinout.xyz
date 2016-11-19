@@ -43,7 +43,7 @@ Pan Tilt HAT uses a PIC16F1503 with custom firmware, and talks over i2c.
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/pantilthat | bash
+curl -sS https://get.pimoroni.com/pantilthat | bash
 ```
 
 Then import it into your Python script and start tinkering:

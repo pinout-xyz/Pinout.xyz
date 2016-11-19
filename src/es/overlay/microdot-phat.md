@@ -42,7 +42,7 @@ La placa utiliza tres chip IS31FL3730 para controlar la matriz, cada  uno contro
 Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/microdotphat | bash
+curl -sS https://get.pimoroni.com/microdotphat | bash
 ```
 
 Luego impórtalo en tu script Python y empieza a realizar proyectos:

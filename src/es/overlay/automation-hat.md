@@ -90,7 +90,7 @@ Automatian HAT es una placa adicional de domótica para Raspberry Pi; con relés
 Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sS get.pimoroni.com/automationhat | bash
+curl -sS https://get.pimoroni.com/automationhat | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

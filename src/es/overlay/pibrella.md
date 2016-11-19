@@ -73,7 +73,7 @@ La placa todo en uno con luz, sonido, entradas y salidas de Pimoroni vs Cyntech 
 Pibrella es fácil de usar, primero debes instalar el módulo usando LXTerminal/línea de comandos:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

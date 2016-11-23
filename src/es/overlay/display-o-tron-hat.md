@@ -1,10 +1,22 @@
 <!--
 ---
 name: Display-o-Tron HAT
+class: board
+type: lcd
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/dot3k
 description: Una pantalla LCD de 3 líneas con luz RGB con 6 zonas y 6 botones táctiles
+url: https://shop.pimoroni.com/products/display-o-tron-hat
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/display-o-tron-hat
+image: 'display-o-tron-hat.png'
 pincount: 40
+eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c
@@ -38,7 +50,7 @@ Aún así ambos buses pueden ser compartidos con otros dispositivos
 Puedes usar la siguiente línea para instalar, preparar y dejar listo para el uso el Display-o-Tron 3000:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 ¡Y sigue las instrucciones!

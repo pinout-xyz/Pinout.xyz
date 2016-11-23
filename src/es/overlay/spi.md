@@ -1,7 +1,10 @@
 <!--
 ---
 name: SPI
+class: interface
+type: pinout
 description: Pines SPI Raspberry Pi
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/
 pincount: 5
 pin:
   '11':
@@ -59,7 +62,7 @@ spi.max_speed_hz = 1000000
 spi.xfer([value_8bit])
 ```
 
-También puedes usar el puerto SPI para cargar programas en un ATmega328 (Arduino), con el AVRDude modificado de Gordon.
+También puedes usar el puerto SPI para cargar programas en un ATmega328 (Arduino), con el AVRDude modificado de Gordon Henderson.
 
 Conecta el puerto SPI de la Pi al del ATmega, y alimenta el ATmega desde el pin de 3.3v de la Pi. Asegúrate de que ningún controlador SPI está en ejecución, y ejecuta "avrdude -p m328p -c gpio" para verificar la conexión.
 

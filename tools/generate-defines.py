@@ -1,11 +1,17 @@
 #!/usr/bin/env python
+
 import json
-import markdown
-import unicodedata
-import re
 import os
-import time
+import re
 import sys
+import time
+import unicodedata
+
+try:
+    import markdown
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+
 
 lang = 'en'
 

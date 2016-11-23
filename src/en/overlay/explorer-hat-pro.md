@@ -2,16 +2,26 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: adc,io,motor
+type: adc,io,motor,touch
 formfactor: HAT
-image: 'explorer-hat-pro.png'
 manufacturer: Pimoroni
 description: An all-in-one light, input, motor, touch and output add-on board
-url: https://github.com/pimoroni/explorer-hat
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
+image: 'explorer-hat-pro.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '25':
+  '30':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -100,7 +110,6 @@ install:
     - 'explorerhat'
   'python3':
     - 'explorerhat'
-  'examples': 'examples/'
 -->
 #Explorer HAT Pro
 
@@ -109,7 +118,7 @@ install:
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Then import it into your Python script and start tinkering:

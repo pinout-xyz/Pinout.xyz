@@ -1,6 +1,8 @@
 <!--
 ---
 name: Massa
+class: interface
+type: pinout
 description: Pin a massa del Raspberry Pi
 pin:
   '6':

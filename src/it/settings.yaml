@@ -1,48 +1,91 @@
----
-default_desc: La guida completa ai pin GPIO del Raspberry Pi originale, del Modello
-  B+ e del Raspberry Pi 2
-default_title: Assegnazione pin GPIO del Raspberry Pi - Pi 1, B+, Pi 2
-title_suffix: " - Assegnazione pin GPIO del Raspberry Pi"
+domain: it.pinout.xyz
+analytics_id: UA-69846516-6
 base_url: /pinout/
 resource_url: /resources/
-domain: it.pinout.xyz
 url_suffix:
 urls:
   GND: massa
-strings:
-- made_by: 'Prodotto da {manufacturer}'
-- type_hat: 'Fattore di forma HAT'
-- type_phat: 'Fattore di forma pHAT'
-- type_classic: 'Fattore di forma classico'
-- pin_header: '{} pin header'
-- uses_i2c: 'Utilizza I2C'
-- uses_spi: 'Utilizza SPI'
-- wiring_pi_pin: 'Wiring Pi pin {}'
-- uses_n_gpio_pins: 'Utilizza {} GPIO pins'
-- bcm_pin_rev1_pi: 'BCM pin {} su Raspberry Rev 1 (le prime edizioni)'
-- physical_pin_n: 'Pin fisico {}'
-- more_information: 'Maggiori informazioni'
-- github_repository: 'GitHub Repository'
-- buy_now: 'Acquista'
-overlays:
-- ground
-- uart
-- i2c
-- spi
-- arduino-spi
-- wiringpi
-- iqaudio-pi-dac
+featured:
 - display-o-tron
-- display-o-tron-hat
-- dots
-- explorer-hat
-- explorer-hat-pro
-- piano-hat
 - piborg-ledborg
 - pibrella
-- piglow
 - rtk-000-001
+overlays:
+- ground
+- iface-dpi
+- iface-gpclk
+- iface-jtag
+- iface-1wire
+- iface-pcm
+- iface-sd
+- i2c
+- spi
+- uart
+- wiringpi
+- 4tronix-picon-zero
+- 4tronix-pistep2d
+- 4tronix-pistep2q
+- ab-1-wire-plus
+- ab-1-wire-zero
+- ab-adc-differential-pi
+- ab-adc-pi-plus
+- ab-adc-pi-zero
+- ab-adcdac-pi-zero
+- ab-io-pi-plus
+- ab-io-pi-zero
+- ab-rs485-pi
+- ab-rtc-pi-plus
+- ab-rtc-pi-zero
+- ab-serial-pi-plus
+- ab-serial-pi-zero
+- ab-servo-pwm-pi-zero
+- adafruit-cap-mpr121
+- adafruit-servo-hat
+- analog-zero
+- automation-hat
+- blinkt
+- carberry
+- cirruslogic-audio-card
+- discohat
+- display-o-tron
+- display-o-tron-hat
+- drum-hat
+- enviro-phat
+- espiot-phat
+- explorer-hat
+- explorer-hat-pro
+- explorer-phat
+- iqaudio-pi-dac
+- iqaudio-pi-digiamp
+- microdot-phat
+- phat-dac
+- pi-liter
+- piano-hat
+- piborg-ledborg
+- piborg-zeroborg
+- pibrella
+- piglow
+- pijack
+- propeller-hat
+- raspio-duino
+- redbear-iot-hat
+- rpf-dots
+- rtk-000-001
+- scroll-phat
 - sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
+- unicorn-phat
+- uugear-7port-usb-hub
+- uugear-witty-pi
+- uugear-witty-pi-2
+- uugear-zero4u
+- wifi-pants
+- zero-lipo
+- mote-phat
+- 4tronix-robohat
+- 4tronix-pistop
+- icubex-pishield
+- adafruit-pitft-35-plus
+- pantilt-hat

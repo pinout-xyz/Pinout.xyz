@@ -1,12 +1,20 @@
 import json
-import yaml
 import time
 
-DB_FILE = 'pi-pinout.yaml'
+try:
+    import yaml
+except ImportError:
+    exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
+
+
+PINOUT_FILE = 'pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'
+STRINGS_FILE = 'localised.yaml'
 
 pins = None
 settings = None
+
+master_template = open('common/layout.html').read()
 
 
 def get_setting(setting, default = None):
@@ -14,16 +22,38 @@ def get_setting(setting, default = None):
         return settings[setting]
     return default
 
+def get_string(string, default = None):
+    if string in strings and strings[string] != None:
+        return strings[string]
+    return default
+
 
 def render_html(*args, **kwargs):
-    html = args[0]
+    html = master_template
+    html = html.replace('{{main_content}}',args[0])
+    html = html.replace('{{footer}}',args[1])
+
+    strings = args[2]
+
+    for key in strings:
+        if type(strings[key]) in [str, unicode]:
+            html = html.replace('{{strings:' + key + '}}', strings[key])
+
+    settings = args[3]
+
+    for key in settings:
+        if type(settings[key]) in [str, unicode]:
+            html = html.replace('{{settings:' + key + '}}', settings[key])
+
     kwargs['v'] = str(int(time.time()))
+
     for key in kwargs:
         if type(kwargs[key]) == dict:
             for d_key, d_value in kwargs[key].iteritems():
                 html = html.replace('{{' + key + '_' + d_key + '}}', d_value)
-        elif type(kwargs[key]) == str:
+        elif type(kwargs[key]) in [str, unicode]:
             html = html.replace('{{' + key + '}}', kwargs[key])
+
     return html
 
 
@@ -69,15 +99,17 @@ def physical_to(pin, scheme='bcm'):
 
 
 def load(lang='en'):
-    global pins, settings
-    if DB_FILE.endswith('.yaml'):
-        db = yaml.load(open('src/{}/{}'.format(lang, DB_FILE)).read())
-    else:
-        db = json.load(open('src/{}/{}'.format(lang, DB_FILE)))
+    global pins, settings, strings
     if SETTINGS_FILE.endswith('.yaml'):
         settings = yaml.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)).read())
     else:
         settings = json.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)))
-    pins = db['pins']
-
-
+    if STRINGS_FILE.endswith('.yaml'):
+        strings = yaml.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)).read())
+    else:
+        strings = json.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)))
+    if PINOUT_FILE.endswith('.yaml'):
+        pinout = yaml.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)).read())
+    else:
+        pinout = json.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)))
+    pins = pinout['pins']

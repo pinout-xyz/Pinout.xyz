@@ -1,21 +1,21 @@
 <!--
 ---
 name: Unicorn HAT
+class: board
+type: led
+formfactor: HAT
 manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: 64 LEDs RGB cegadores en un único HAT
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
-install:
-  'apt':
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'unicornhat'
-  'python3':
-    - 'unicornhat'
-  'examples': 'python/examples/'
+buy: http://shop.pimoroni.com/products/unicorn-hat
+image: 'unicorn-hat.png'
 pincount: 40
+eeprom: detect
+power:
+  '2':
+ground:
+  '9':
 pin:
   '12':
     name: Datos
@@ -35,7 +35,7 @@ producir sonido a través del jack de audio ( audio analógico ), así que no pu
 La instalación es fácil, únicamente:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 Después importa el módulo en tu programa de Python y empieza a experimentar:
 

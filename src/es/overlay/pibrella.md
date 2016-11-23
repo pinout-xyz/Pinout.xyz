@@ -1,10 +1,17 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
+class: board
+type: io,multi
+formfactor: Otro
+manufacturer: Cyntech
 description: Luz, sonido, entradas y salidas en una placa.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: LED Verde
@@ -66,7 +73,7 @@ La placa todo en uno con luz, sonido, entradas y salidas de Pimoroni vs Cyntech 
 Pibrella es fácil de usar, primero debes instalar el módulo usando LXTerminal/línea de comandos:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

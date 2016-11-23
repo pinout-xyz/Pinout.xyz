@@ -1,42 +1,44 @@
-#Pinout 2
+#Pinout.xyz
 
-Pinout 2 is the successor to the popular Pi pinout website http://pi.gadgetoid.com/pinout
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
-To support translation efforts, and allow people to build tools with the data in this repository, Pinout 2 is
-provided under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+[Pinout.xyz](http://pinout.xyz/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
 
-This project aims to build a consistent workflow behind the Pinout front-end, and invite board manufacturers
-to produce their own "overlay" files which describe which pins their Pi add-ons use.
+To support translation efforts, and allow people to build tools with the data in this repository, Pinout.xyz is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-I hope that by making this project open and extensible I will invite not only contributions of board pinouts,
-but translations too.
+This license excludes the 'pinout-graphic-horizontal' files located in the `graphics` directory, which are provided under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) to permit commercial use; specifically publication in books and magazines with appropriate attribution.
 
-I'm also looking for feedback about the structure of the JSON files, what information needs to be contained in
-them, how they can better support translation and any other suggestions you might have.
-
-#Contributing
-
-If you have a board you'd like to contribute, raise an issue and we'll consider it!
-
-#Translating
+#About this project
 
 The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
 
-Current known contributors are:
+This project aims to build a consistent workflow behind the Pinout.xyz front-end, gather useful information about the Raspberry Pi GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their Pi add-ons use.
 
-* de - @rdmueller and @KojoePi
-* es - @ResonantWave
-* fr - @RogueM
-* it - @LizardM4 
-* pt - @Maslor
-* tr - @Ardakilic
+We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
 
-If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the
-appropriate culture. For example if you want to create a German translation you would create the folder `src/de`.
+#Reporting
 
-There are no plans to support cultures, so you can't have `src/fr-CA` ( sorry! ).
+If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
-Once you've made your translation, build and preview it with, for example:
+#Contributing
+
+If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
+
+Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/boards/template.png) is expected, although optional. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
+
+If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
+
+#Translating
+
+If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).
+
+The first resources we recommend you translate are the language-specific strings found in the `settings.yaml` file, `pi-pinout.md`, `index.md`, `404.md` and the `footer.html` template, as well as the content of the `/pin` folder, preferably.
+
+Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphabetical order). Leave those translations in the `/translate` folder when finished.
+
+Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the subdomains and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your Twitter handle however, but don't fiddle with the structure!
+
+Once you've made your translation, you can build and preview it with, for example:
 
 ```bash
 make serve LANG=de
@@ -44,17 +46,36 @@ make serve LANG=de
 
 And then open: http://127.0.0.1:5000 in your browser.
 
-Please do not attempt to translate the `/resources` folder, this is shared between sites on the server and should be generic.
+*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
+*`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
 
-Feel free to modify the template with links relevent to your country, and your Twitter handle but don't fiddle with the structure!
+*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
 
-Submit your finished translation as a pull request and I'll get it live on pinout.xyz.
+The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
 
-#Roadmap
+If you wish to provide a translation for an existing subdomain, or correct a typo in an existing markdown file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
 
-* Redesign UI to support browsing a wider variety of boards and viewing their pinouts ( partially done with drop down )
-* Replace top tabs with some sort of search functionality or easy categorised UI for finding boards
-* Allow for slightly longer descriptions of Pin functions ( baloons? ), current width is very restrictive
-* Does X board work with Y board
-* What extra functions does this pin have ( mostly done with ALT functions tables, but needs descriptions )
+If you have a question about translations, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
+
+
+#Roadmap &amp; wishlist
+
+* Redesign HTML generation and unify HTML templates into a single, translatable file
+* Add functionality to compare two or more boards, to visualise pin compatibility
 * Tool to convert WiringPi to GPIO to BCM and back
+* Add as many [boards](http://pinout.xyz/boards) as possible!
+
+#Acknowledgement
+
+Maintainers: [@Gadgetoid](https://github.com/Gadgetoid) and [@RogueM](https://github.com/RogueM)
+
+GPIO Zero code examples by: [@bennuttall](https://github.com/bennuttall)
+
+Notable contributions:
+
+* [en](http://pinout.xyz/) - [@lurch](https://github.com/lurch) and [@abelectronicsuk](https://github.com/abelectronicsuk)
+* [de](http://de.pinout.xyz/) - [@rdmueller](https://github.com/rdmueller) and [@KojoePi](https://github.com/KojoePi)
+* [es](http://es.pinout.xyz/) - [@ResonantWave](https://github.com/ResonantWave) and [@IkerGarcia](https://github.com/IkerGarcia)
+* [fr](http://fr.pinout.xyz/) - [@RogueM](https://github.com/RogueM) and [@smileyn64](https://github.com/smileyn64)
+* [it](http://it.pinout.xyz/) - [@LizardM4](https://github.com/LizardM4)
+* [tr](http://tr.pinout.xyz/) - [@Ardakilic](https://github.com/Ardakilic)

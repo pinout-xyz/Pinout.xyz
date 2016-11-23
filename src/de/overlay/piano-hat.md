@@ -1,19 +1,17 @@
 <!--
 ---
 name: Piano HAT
+class: board
+type: alle
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/piano-hat
 description: Ein kleines Pi Piano mit 16 berührungsempfindlichen Tasten
+url: https://shop.pimoroni.com/products/piano-hat
+github: https://github.com/pimoroni/piano-hat
+buy: https://shop.pimoroni.com/products/piano-hat
+image: 'piano-hat.png'
 pincount: 40
-i2c:
-  '0x28':
-    name: Cap Touch A
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
-  '0x2b':
-    name: Cap Touch B
-    device: cap1188
-    datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/CAP1188%20.pdf
+eeprom: yes
 pin:
   3:
     mode: i2c
@@ -31,6 +29,13 @@ pin:
   15:
     name: Reset B
     mode: output
+i2c:
+  '0x28':
+    name: Cap Touch A
+    device: cap1188
+  '0x2b':
+    name: Cap Touch B
+    device: cap1188
 -->
 #Piano HAT
 
@@ -41,7 +46,7 @@ Der HAT benutzt zwei Microchip CAP1188 ICs mit den I2C Adressen 0x28 und 0x2b.
 Mit folgendem Einzeiler installierst Du die nötige Software:
 
 ```bash
-curl get.pimoroni.com/pianohat | bash
+curl -sS https://get.pimoroni.com/pianohat | bash
 ```
 
 Den Rest findest Du in der Anleitung!

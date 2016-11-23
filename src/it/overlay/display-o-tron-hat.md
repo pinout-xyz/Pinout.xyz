@@ -1,10 +1,22 @@
 <!--
 ---
 name: Display-o-Tron HAT
+class: board
+type: Tutti
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/dot3k
 description: Un LCD da 3 righe di caratteri, RGB retroilluminato a 6 zone con 6 bottoni touch
+url: https://shop.pimoroni.com/products/display-o-tron-hat
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/display-o-tron-hat
+image: 'display-o-tron-hat.png'
 pincount: 40
+eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
 pin:
   '3':
     mode: i2c
@@ -38,7 +50,7 @@ Entrambi questi bus possono essere comunque condivisi con altre periferiche.
 Per preparare e impostare l'HAT puoi utilizzare l'installer fornito:
 
 ```bash
-curl -sS get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 &hellip;e seguire le istruzioni!

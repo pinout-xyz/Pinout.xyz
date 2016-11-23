@@ -1,4 +1,6 @@
-import json, sys
+import json
+import sys
+
 
 db = json.load(open('pi-pinout.db'))
 
@@ -27,4 +29,3 @@ if len(sys.argv) > 2:
     mode = sys.argv[2]
 
 print("Pin {} is {}: {}".format(pin, mode.upper(), from_phys(pin, mode)))
-

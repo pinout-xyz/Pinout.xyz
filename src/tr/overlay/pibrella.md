@@ -1,10 +1,17 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
+class: board
+type: hepsi
+formfactor: diğer
+manufacturer: Cyntech
 description: Hepsi-bir-arada, hafif, ses, giriş ve çıkış destekleyen eklenti kartı.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: Green LED
@@ -66,7 +73,7 @@ Pibrella Pimoroni tarafından hazırlanmış hepsi-bir-arada, hafif, ses, giriş
 Pibrella'yı kullanmak çok kolay. Öncelikle terminalden aşağıdaki komutları çalıştırıp kurulumu gerçekleştirin:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Ardından Python kodunuzda aşağıdaki gibi modülü ekleyip kurcalamaya başlayabilirsiniz:

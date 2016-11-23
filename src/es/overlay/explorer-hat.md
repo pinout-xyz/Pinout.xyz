@@ -1,25 +1,17 @@
 <!--
 ---
 name: Explorer HAT
+class: board
+type: cap,io,multi
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
+description: Una placa completa, con luz, entradas, entradas táctiles y salidas.
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: Una placa completa, con luz, entradas, entradas táctiles y salidas.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
+image: 'explorer-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '7':
     name: LED 1
@@ -77,7 +69,7 @@ Entradas y salidas de 5V, paneles táctiles y LEDs componen el Explorer HAT.
 Para preparar e instalar el HAT utiliza la siguiente línea:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

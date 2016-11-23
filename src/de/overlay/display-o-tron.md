@@ -1,23 +1,22 @@
 <!--
 ---
 name: Display-o-Tron 3000
+class: board
+type: alle
+formfactor: Andere
 manufacturer: Pimoroni
-github: https://github.com/pimoroni/dot3k
-url: https://github.com/pimoroni/dot3k
 description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'dot3k'
-  'examples': 'python/examples/'
+url: https://shop.pimoroni.com/products/displayotron-3000
+github: https://github.com/pimoroni/dot3k
+buy: https://shop.pimoroni.com/products/displayotron-3000
+image: 'display-o-tron.png'
 pincount: 26
+eeprom: no
+power:
+  '2':
+  '17':
+ground:
+  '6':
 pin:
   3:
     mode: i2c
@@ -57,7 +56,7 @@ pin:
 Mit diesem Einzeiler installierst Du das Display-o-Tron 3000:
 
 ```bash
-curl get.pimoroni.com/dot3k | bash
+curl -sS https://get.pimoroni.com/dot3k | bash
 ```
 
 ...den Rest findest Du in der Anleitung auf Github :-)

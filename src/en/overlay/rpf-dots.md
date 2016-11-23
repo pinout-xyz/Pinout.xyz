@@ -4,14 +4,26 @@ name: DOTs
 class: board
 type: other
 formfactor: Custom
-image: 'pihut-dots.png'
 manufacturer: Raspberry Pi
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/
 github: https://github.com/raspberrypilearning/dots
 buy: https://thepihut.com/products/raspberry-pi-dots-board
+image: 'rpf-dots.png'
 pincount: 40
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   bcm0:
     name: 'Color: Blue'
@@ -98,7 +110,7 @@ pin:
     name: 'Color: Red'
     direction: input
 -->
-#Raspberry Pi Dots
+#Dots Board
 
 ###Dots is a Dot to Dot board for the Raspberry Pi that lets you join-the-dots with BARE Conductive Paint!
 

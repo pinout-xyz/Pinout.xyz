@@ -1,11 +1,16 @@
 <!--
 ---
 name: Traffic HAT
-manufacturer: Ryanteck LTD.
-url: http://www.ryanteck.uk/store/traffichat
-buy: http://www.ryanteck.uk/store/traffichat
+class: board
+type: multi
+formfactor: HAT
+manufacturer: Ryanteck
 description: carte multi-usage avec buzzer, LED et bouton
+url: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
+buy: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
+image: 'traffic-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '15':
     name: LED1 / vert
@@ -30,7 +35,7 @@ pin:
 -->
 #Traffic HAT
 
-###Contrôler les broches GPIO du Traffic HAT depuis votre Raspberry Pi est aisé: 
+###Contrôler les broches GPIO du Traffic HAT depuis votre Raspberry Pi est aisé:
 
 ```python
 import RPi.GPIO as GPIO

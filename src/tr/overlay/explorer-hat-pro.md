@@ -1,33 +1,18 @@
 <!--
 ---
 name: Explorer HAT Pro
+class: board
+type: hepsi
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
-github: https://github.com/pimoroni/explorer-hat
-buy: http://shop.pimoroni.com/products/explorer-hat
 description: Hepsi-bir-arada, hafif, hızlı, dokunma, giriş ve çıkış destekleyen eklenti
   kartı.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
+url: http://shop.pimoroni.com/products/explorer-hat
+github: https://github.com/pimoroni/explorer-hat
+buy: http://shop.pimoroni.com/products/explorer-hat
+image: 'explorer-hat-pro.png'
 pincount: 40
-i2c:
-  '0x28':
-    name: Cap Touch
-    device: cap1208
-  '0x48':
-    name: Analog Input
-    device: ads1015
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -97,13 +82,20 @@ pin:
     name: Motor 2 +
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Cap Touch
+    device: cap1208
+  '0x48':
+    name: Analog Input
+    device: ads1015
  -->
 #Explorer HAT Pro
 
 5V giriş ve çıkışları, dokunmatik paneli, LEDler, analog girişler ve bir H-Bridge motor ile Explorer HAT Pro, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Ardından Python scriptinize aşağıdaki kodları ekleyip prototipinizi kurcalamaya başlayabilirsiniz:

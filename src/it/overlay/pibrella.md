@@ -1,10 +1,17 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
+class: board
+type: Tutti
+formfactor: Altro
+manufacturer: Cyntech
 description: Una scheda all-in-one per luci, suoni, input ed output.
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: LED verde
@@ -67,7 +74,7 @@ del Raspberry, ma la seriale e l'I2C restano liberi, lasciando molto spazio alla
 Pibrella è facile da usare; innanzitutto devi installare il modulo usando un terminale (LXTerminal):
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 E poi lo importi nel tuo script Python per smanettare:

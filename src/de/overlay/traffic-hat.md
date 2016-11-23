@@ -1,11 +1,16 @@
 <!--
 ---
 name: Traffic HAT
-manufacturer: Ryanteck LTD.
-url: http://www.ryanteck.uk/store/traffichat
-buy: http://www.ryanteck.uk/store/traffichat
+class: board
+type: alle
+formfactor: HAT
+manufacturer: Ryanteck
 description: Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
+url: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
+buy: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
+image: 'traffic-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '15':
     name: LED1 / Grün

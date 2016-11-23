@@ -1,28 +1,17 @@
 <!--
 ---
 name: Explorer HAT Pro
+class: board
+type: alle
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
+description: Eine Platine mit LEDs, Ein- und Ausgängen, Motorsteuerung, Sensor-Tasten und Steckbrett.
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: Eine Platine mit LEDs, Ein- und Ausgängen, Motorsteuerung, Sensor-Tasten und Steckbrett.
-install:
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'examples': 'examples/'
+image: 'explorer-hat-pro.png'
 pincount: 40
-i2c:
-  '0x28':
-    name: Cap Touch
-    device: cap1208
-  '0x48':
-    name: Analog Input
-    device: ads1015
+eeprom: yes
 pin:
   '3': {}
   '5': {}
@@ -97,6 +86,13 @@ pin:
     name: Motor 2 +
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Cap Touch
+    device: cap1208
+  '0x48':
+    name: Analog Input
+    device: ads1015
 -->
 #Explorer HAT und Explorer HAT Pro
 

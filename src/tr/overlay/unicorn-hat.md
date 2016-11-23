@@ -1,12 +1,21 @@
 <!--
 ---
 name: Unicorn HAT
+class: board
+type: hepsi
+formfactor: HAT
 manufacturer: Pimoroni
-url: http://shop.pimoroni.com/products/unicorn-hat
-buy: http://shop.pimoroni.com/products/unicorn-hat
 description: Tek bir HAT kart üzerinde 64 adet programlanabilir parlak led modülü.
+url: http://shop.pimoroni.com/products/unicorn-hat
 github: https://github.com/pimoroni/unicornhat
+buy: http://shop.pimoroni.com/products/unicorn-hat
+image: 'unicorn-hat.png'
 pincount: 40
+eeprom: detect
+power:
+  '2':
+ground:
+  '9':
 pin:
   '12':
     name: Data
@@ -24,7 +33,7 @@ Not: Unicorn HAT bazı PWM kurnazlıkları kullanmakta. Bunun içnde analog ses 
 Kurulumu çok basit, sadece aşağıdaki komutu çalıştırın:
 
 ```bash
-curl -sS get.pimoroni.com/unicornhat | bash
+curl -sS https://get.pimoroni.com/unicornhat | bash
 ```
 
 Ardından Python scriptinize modülü ekleyip kurcalamaya başlayabilirsiniz:

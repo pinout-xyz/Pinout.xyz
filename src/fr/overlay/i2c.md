@@ -1,7 +1,10 @@
 <!--
 ---
 name: I2C
+class: interface
+type: pinout
 description: broches i2c de la Raspberry Pi
+url: http://www.raspberry-projects.com/pi/programming-in-python/i2c-programming-in-python/using-the-i2c-interface-2
 pin:
   '3':
     name: Données

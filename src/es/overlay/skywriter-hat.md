@@ -1,21 +1,17 @@
 <!--
 ---
 name: Skywriter HAT
+class: board
+type: gestos
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/skywriter-hat
+description: Un sensor posicional y de gestos 3D
+url: http://shop.pimoroni.com/products/skywriter-hat
 github: https://github.com/pimoroni/skywriter-hat
 buy: http://shop.pimoroni.com/products/skywriter-hat
-description: Un sensor posicional y de gestos 3D
-install:
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'skywriter'
-  'examples': 'python/examples/'
+image: 'skywriter-hat.png'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -25,6 +21,10 @@ pin:
     name: Reset
   '13':
     name: Transferencia
+i2c:
+  '0x42':
+    name: Gesture sensor
+    device: mgc3130
 -->
 #Skywriter HAT
 
@@ -36,7 +36,7 @@ También reconoce gestos, incluyendo swipes y más.
 Para instalar este HAT y dejarlo preparado para el uso, ejecuta:
 
 ```bash
-curl -sS get.pimoroni.com/skywriter | bash
+curl -sS https://get.pimoroni.com/skywriter | bash
 ```
 
 ¡Y sigue las instrucciones!

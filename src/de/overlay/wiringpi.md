@@ -1,8 +1,11 @@
 <!--
 ---
-name: WiringPi Anschlussbelegung
-url: http://wiringpi.com/
+name: WiringPi
+class: interface
+type: pinout
 page_url: wiringpi
+url: http://wiringpi.com
+github: https://github.com/WiringPi/WiringPi2-Python
 pin:
   '3':
     name: WiringPi 8

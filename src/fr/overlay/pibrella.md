@@ -1,10 +1,17 @@
 <!--
 ---
 name: Pibrella
-manufacturer: Pimoroni Vs Cyntech
-url: https://github.com/pimoroni/pibrella
+class: board
+type: e/s,multi
+formfactor: Autre
+manufacturer: Cyntech
 description: carte multi-usage avec son, lumière, entrées et sorties
+url: http://pibrella.com
+github: https://github.com/pimoroni/pibrella
+buy: https://shop.cyntech.co.uk/products/pibrella?variant=581387897
+image: 'pibrella.png'
 pincount: 26
+eeprom: no
 pin:
   '7':
     name: LED verte
@@ -66,7 +73,7 @@ La Pibrella est une carte à usage multiple avec son, lumière, entrées et sort
 Pour l'installation et mise en route exécutez simplement les commandes ci-dessous et suivez les instructions présentées à l'écran:
 
 ```bash
-curl -sS get.pimoroni.com/pibrella | bash
+curl -sS https://get.pimoroni.com/pibrella | bash
 ```
 
 Puis, sous Python, en guise de test que tout fonctionne bien:

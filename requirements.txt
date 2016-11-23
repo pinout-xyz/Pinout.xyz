@@ -1,0 +1,8 @@
+click
+Flask
+itsdangerous
+Jinja2
+Markdown
+MarkupSafe
+PyYAML
+Werkzeug

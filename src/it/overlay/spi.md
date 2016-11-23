@@ -1,7 +1,10 @@
 <!--
 ---
 name: SPI
+class: interface
+type: pinout
 description: Pin SPI del Raspberry
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/
 pincount: 5
 pin:
   '11':
@@ -60,7 +63,7 @@ spi.xfer([value_8bit])
 ```
 
 Puoi utilizzare anche le porte SPI per fare "Bit-Bang" su un ATmega 328, caricando i progetti di Arduino tramite la versione modificata 
-dell'AVRDude di Gordon.
+dell'AVRDude di Gordon Henderson.
 
 Collega la porta SPI del Raspberry a quella dell'ATmega, ed alimenta l'ATmega dal pin a 3.3V sul Raspberry. 
 Assicurati di non avere alcun driver SPI in esecuzione, ed esegui "avrdude -p m328p -c gpio" per verificare la connessione.

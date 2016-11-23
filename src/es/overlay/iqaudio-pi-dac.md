@@ -1,13 +1,16 @@
 <!--
 ---
 name: "Pi-DAC+"
+class: board
+type: audio
+formfactor: HAT
 manufacturer: IQaudIO
-buy: http://www.iqaudio.co.uk
 description: Un HAT I2S conversor de audio digital a analógico
-install:
-  'devices':
-    - 'i2c'
+url: http://www.iqaudio.co.uk/audio/8-pi-dac-0712411999650.html
+buy: http://www.iqaudio.co.uk
+image: 'iqaudio-pi-dac.png'
 pincount: 40
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -17,16 +20,16 @@ pin:
     name: I2S
   '15':
     name: Mutear/Desmutear
-    description: Solo Pi-AMP+ (opcional) 
+    description: Solo Pi-AMP+ (opcional)
   '16':
     name: Codificador rotatorio
-    description: (opcional) 
+    description: (opcional)
   '18':
     name: Codificador rotatorio
-    description: (opcional) 
+    description: (opcional)
   '22':
     name: Sensor de infrarrojos
-    description: (opcional) 
+    description: (opcional)
   '35':
     name: I2S
   '38':

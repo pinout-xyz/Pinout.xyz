@@ -1,7 +1,10 @@
 <!--
 ---
 name: UART
+class: interface
+type: pinout
 description: Pines de UART de la Raspberry Pi
+url: http://elinux.org/RPi_Serial_Connection
 pin:
   '8':
     name: TXD / Transmitir

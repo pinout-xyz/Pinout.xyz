@@ -1,11 +1,18 @@
 #!/usr/bin/env python
+
 import json
-import markdown
-import unicodedata
 import re
 import sys
-import pinout
+import unicodedata
+
+try:
+    import markdown
+except ImportError:
+    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+
 import markjaml
+import pinout
+
 
 reload(sys)
 sys.setdefaultencoding('utf8')

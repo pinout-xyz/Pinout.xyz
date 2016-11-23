@@ -1,47 +1,63 @@
 <!--
 ---
-name: "Sense HAT"
-manufacturer: Raspberry Pi Foundation
+name: Sense HAT
+class: board
+type: led,sensor
+formfactor: HAT
+manufacturer: Raspberry Pi
+description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors
 url: https://www.raspberrypi.org/products/sense-hat/
-description: Placa que incluye una matriz LED RGB de 8x8, joystick de 5 botones, un IMU y sensonres ambientales
-install:
-  'devices':
-    - 'i2c'
-    - 'spi'    
+github: https://github.com/RPi-Distro/python-sense-hat
+schematic: https://www.raspberrypi.org/documentation/hardware/sense-hat/images/Sense-HAT-V1_0.pdf
+buy: https://thepihut.com/products/raspberry-pi-sense-hat-astro-pi
+image: 'sense-hat.png'
 pincount: 40
+eeprom: setup
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
   '5':
     mode: i2c
-  '16':
-    name: Joystick
-    mode: entrada
-  '18':
-    name: Joystick
-    mode: entrada
-  '19':
-    mode: spi
-  '21':
-    mode: spi
-  '22':
-    name: Joystick
-    mode: entrada
-  '23':
-    mode: spi
-  '24':
-    mode: spi
+i2c:
+  '0x5c':
+    name: Pressure/Temp
+    device: lps25h
+  '0x5f':
+    name: Humidity/Temp
+    device: hts221
+  '0x6a':
+    name: Accelerometer
+    device: lsm9ds1
+  '0x1c':
+    name: Magnetometer
+    device: lsm9ds1
+  '0x46':
+    name: LED Matrix
+    device: led2472g
+install:
+  'devices':
+    - 'i2c'
 -->
 #Sense HAT
 
-El Sense HAT es una placa para la Raspberry Pi que incluye una matrix RGB LED de 8x8, un joystick de 5 botones y los siguientes sensores:
+Sense HAT es una placa adicional para Raspberry Pi con una matriz led 8x8 RGB, un joystick de 5 botones y los siguientes sensores: giroscopio, acelerómetro, magnetómetro, temperatura, presión barométrica y humedad.
 
-Giroscopio, Acelerómetro, Magnetómetro, Termómetro, Barómetro, Presión e Higrómetro.
+El controlador de la matriz LED es un LED2472G conectado mediante ATTINY88 y comunicándose mediante i2c en la dirección 0x46 con la Pi. El joystick multidireccional SKRHABE010 switch/joystick se controla de manera similar.
 
-El controlador de la matriz LED es un LED2472G conectado vía un ATtiny88 al bus SPI de la Pi. El multidireccional botón/joystick SKRHABE010 está similarmente conectado al bus SPI.
+Los sensores también funcionan mediante el bus i2c:
 
-Los sensores en si operan (mayoritariamente) a través del bus i2c:
+Los IUM (giroscopio, acelerómetro y magnetómetro) a trabés de LSM9DS1 en las direcciones i2c 0x1c(0x1e),0x6a(0x6b), con interrupciones en el ATTINY88.
 
-El IMU (Giroscopio, Acelerómetro, Magnetómetro) a través de un LSM9DS1, en la dirección i2c 0x1c(0x1e), 0x6a(0x6b), con Interrups en el ATtiny88.
-
-Los sensores ambientales están representados por un LPS25H, que incluye sensor de presión y temperatura, en la dirección 0x5c, y un HTS221, que incluye humedad y temperatura en la dirección 0x5f.
+Los sensores medioambientales son un LPS25H presión+temperatura en la dirección 0x5c y un HTS221 humedad+temperatura en la dirección 0x5f del bus i2c.

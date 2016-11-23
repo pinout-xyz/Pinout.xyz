@@ -1,32 +1,17 @@
 <!--
 ---
 name: Explorer HAT Pro
+class: board
+type: adc,cap,io,motor
+formfactor: HAT
 manufacturer: Pimoroni
-url: https://github.com/pimoroni/explorer-hat
+description: Una placa completa, con luz, entradas, entradas táctiles y salidas.
+url: http://shop.pimoroni.com/products/explorer-hat
 github: https://github.com/pimoroni/explorer-hat
 buy: http://shop.pimoroni.com/products/explorer-hat
-description: Una placa completa, con luz, entradas, entradas táctiles y salidas.
-install:
-  'devices':
-    - 'i2c'
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'explorerhat'
-  'python3':
-    - 'explorerhat'
-  'examples': 'examples/'
+image: 'explorer-hat-pro.png'
 pincount: 40
-i2c:
-  '0x28':
-    name: Sensor capacitivo
-    device: cap1208
-  '0x48':
-    name: Entrada Analógica
-    device: ads1015
+eeprom: yes
 pin:
   '3':
     mode: i2c
@@ -96,6 +81,13 @@ pin:
     name: Motor 2 +
     mode: salida
     active: alto (encendido)
+i2c:
+  '0x28':
+    name: Sensor capacitivo
+    device: cap1208
+  '0x48':
+    name: Entrada Analógica
+    device: ads1015
 -->
 #Explorer HAT Pro
 
@@ -104,7 +96,7 @@ Entradas y salidas de 5V, paneles táctiles, LEDs, entradas analógicas y un Pue
 Para preparar e instalar el HAT utiliza la siguiente línea:
 
 ```bash
-curl -sS get.pimoroni.com/explorerhat | bash
+curl -sS https://get.pimoroni.com/explorerhat | bash
 ```
 
 Después importalo en tu programa de Python y empieza a experimentar:

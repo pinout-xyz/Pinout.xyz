@@ -1,7 +1,10 @@
 <!--
 ---
 name: SPI
+class: interface
+type: pinout
 description: Raspberry Pi SPI Anschlüsse
+url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/
 pincount: 5
 pin:
   '11':

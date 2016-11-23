@@ -89,3 +89,5 @@ overlays:
 - icubex-pishield
 - adafruit-pitft-35-plus
 - pantilt-hat
+- PaPiRus-Hat
+- automation-phat

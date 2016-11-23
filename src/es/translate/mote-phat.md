@@ -52,9 +52,9 @@ pin:
 
 # Mote pHAT
 
-Sports four Mote channels with microUSB connectors that can drive up to 64 RGB LEDs using four 16 pixel Mote strips.
+Cuenta con cuatro canales Mote con conectores USB, para controlar hasta 64 LEDs RGB utilizando cuatro bandas Mote de 16 pixel.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS https://get.pimoroni.com/motephat | bash

@@ -1,6 +1,6 @@
 <!--
 ---
-name: PaPiRus
+name: PaPiRus HAT
 class: board
 type: display
 formfactor: HAT

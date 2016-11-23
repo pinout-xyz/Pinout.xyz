@@ -78,15 +78,15 @@ pin:
     active: low
 -->
 #PaPiRus ePaper eInk display
-*Raspberry Pi HAT compliant design
-*Interchangeable screen sizes (1.44", 2.0" or 2.7")
-*32MBit Flash Memory
-*Battery Backed Real Time Clock (CR2032 battery included)
-*Easy plug and play operation with onboard EEPROM
-*Digital temperature sensor and thermal watchdog
-*GPIO breakout connector and solder pads
-*Optional reset pin header (for wake on alarm with RTC)
-*4 x optional slimline switches on top
+* Raspberry Pi HAT compliant design
+* Interchangeable screen sizes (1.44", 2.0" or 2.7")
+* 32MBit Flash Memory
+* Battery Backed Real Time Clock (CR2032 battery included)
+* Easy plug and play operation with onboard EEPROM
+* Digital temperature sensor and thermal watchdog
+* GPIO breakout connector and solder pads
+* Optional reset pin header (for wake on alarm with RTC)
+* 4 x optional slimline switches on top
 
 Before using PaPiRus, do not forget to enable the SPI interface!
 

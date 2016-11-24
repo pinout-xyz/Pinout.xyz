@@ -89,7 +89,7 @@ pin:
 * 4 x optional slimline switches on top
 
 Before using PaPiRus, do not forget to enable the SPI interface!
-Also make sure to enable I2C for the RTC clock and the temperature sensor
+Also make sure to enable I2C for the RTC clock and the temperature sensor.
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

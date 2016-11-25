@@ -48,10 +48,6 @@ pin:
     name: Button
     mode: input
     active: low
-  '27':
-    mode: i2c
-  '28':
-    mode: i2c
   '29':
     name: Relay
   '31':

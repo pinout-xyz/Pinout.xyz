@@ -5,7 +5,7 @@ strings:
 - home: 'Inicio'
 - boards: 'Placas'
 - details: 'Detalles'
-- group_other: 'Otro'
+- group_other: 'otro'
 - form_undefined: 'Otro'
 - pin_header: '{} conector de pines'
 - type_hat: 'formato HAT'

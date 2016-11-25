@@ -94,4 +94,4 @@ To get the HAT set up and ready to go you can use the one-line product installer
 curl -sSL https://goo.gl/i1Imel | sudo bash
 ```
 
-Before using PaPiRus, do not forget to enable the SPI interface!
+Before using PaPiRus, do not forget to enable the SPI and I2C interfaces!

@@ -1,16 +1,16 @@
 <!--
 ---
-name: JustBoom DAC HAT
+name: JustBoom DAC pHAT
 class: board
 type: audio
-formfactor: HAT
+formfactor: pHAT
 manufacturer: JustBoom
-description: The JustBoom DAC HAT is a plug and play, high resolution, digital-to-analog converter for the Raspberry Pi.
+description: The JustBoom DAC pHAT is a plug and play, high resolution, digital-to-analog converter for the Raspberry Pi.
 url: https://www.justboom.co/product/justboom-dac-hat/
 github:
 schematic:
 buy: https://www.pi-supply.com/product/justboom-dac-hat/?utm_source=JustBoom+Site&utm_medium=Link&utm_campaign=JustBoom+Referrals&utm_content=DAC_HAT_Product_Link
-image: 'justboom-dac-hat.png'
+image: 'justboom-dac-phat.png'
 pincount: 40
 eeprom: yes
 power:
@@ -50,7 +50,7 @@ pin:
     name: DOUT
     mode: i2s
 -->
-#JustBoom DAC HAT
+#JustBoom DAC pHAT
 * Full high quality audio – 384kHz / 32bit
 * Includes both a DAC and headphone amplifier
 * Line-level RCA (optional) and headphone amplified 3.5mm jack outputs

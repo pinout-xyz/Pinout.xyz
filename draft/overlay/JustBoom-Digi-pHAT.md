@@ -1,16 +1,16 @@
 <!--
 ---
-name: JustBoom Digi HAT
+name: JustBoom Digi pHAT
 class: board
 type: audio
-formfactor: HAT
+formfactor: pHAT
 manufacturer: JustBoom
-description: The JustBoom Digi HAT is a high resolution digital audio output add on board for the Raspberry Pi.
+description: The JustBoom Digi pHAT is a high resolution digital audio output add on board for the Raspberry Pi.
 url: https://www.justboom.co/product/justboom-digi-hat/
 github:
 schematic:
 buy: https://www.pi-supply.com/product/justboom-digi-hat/?utm_source=JustBoom+Site&utm_medium=Link&utm_campaign=JustBoom+Referrals&utm_content=Digi_HAT_Product_Link
-image: 'justboom-digi-hat.png'
+image: 'justboom-digi-phat.png'
 pincount: 40
 eeprom: yes
 power:
@@ -46,7 +46,7 @@ pin:
     name: DOUT
     mode: i2s
 -->
-#JustBoom Digi HAT
+#JustBoom Digi pHAT
 * Dedicated S/PDIF output interface chip supports up to 192kHz / 24bit
 * Digital audio output over either optical (TOSLINK) or coaxial (RCA electrical) connectors
 * Low jitter, bit perfect digital output

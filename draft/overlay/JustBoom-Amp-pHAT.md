@@ -1,16 +1,16 @@
 <!--
 ---
-name: JustBoom Amp HAT
+name: JustBoom Amp pHAT
 class: board
 type: audio
-formfactor: HAT
+formfactor: pHAT
 manufacturer: JustBoom
-description: The JustBoom Amp HAT is a high quality audio amplifier designed specifically for the Raspberry Pi.
+description: The JustBoom Amp pHAT is a high quality audio amplifier designed specifically for the Raspberry Pi.
 url: https://www.justboom.co/product/justboom-amp-hat/
 github:
 schematic:
 buy: https://www.pi-supply.com/product/justboom-amp-hat/?utm_source=JustBoom+Site&utm_medium=Link&utm_campaign=JustBoom+Referrals&utm_content=AMP_HAT_Product_Link
-image: 'justboom-amp-hat.png'
+image: 'justboom-amp-phat.png'
 pincount: 40
 eeprom: yes
 power:
@@ -52,7 +52,7 @@ pin:
     name: DOUT
     mode: i2s
 -->
-#JustBoom Amp HAT
+#JustBoom Amp pHAT
 * Full high quality audio – 192kHz / 32bit
 * 2 x 40 Watt peak output at 4 ohms (2 x 20 Watt RMS)
 * Includes both a DAC and power amplifier

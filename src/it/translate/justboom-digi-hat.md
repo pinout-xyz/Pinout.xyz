@@ -37,10 +37,6 @@ pin:
     name: Rotary Encoder
   '24':
     name: Rotary Encoder
-  '27':
-    mode: i2c
-  '28':
-    mode: i2c
   '35':
     name: LRCK (Left/Right Clock)
     mode: i2s

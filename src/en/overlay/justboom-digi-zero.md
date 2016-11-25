@@ -1,18 +1,16 @@
 <!--
 ---
-name: JustBoom Digi HAT
+name: Digi Zero
 class: board
 type: audio
-formfactor: HAT
+formfactor: pHAT
 manufacturer: JustBoom
-description: The JustBoom Digi HAT is a high resolution digital audio output add on board for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-digi-hat/
-github:
-schematic:
-buy: https://www.pi-supply.com/product/justboom-digi-hat/?utm_source=JustBoom+Site&utm_medium=Link&utm_campaign=JustBoom+Referrals&utm_content=Digi_HAT_Product_Link
-image: 'justboom-digi-hat.png'
+description: The JustBoom Digi Zero is a high resolution digital audio output add on board for the Raspberry Pi.
+url: https://www.justboom.co/product/justboom-digi-zero-phat/
+buy: https://www.justboom.co/product/justboom-digi-zero-phat/
+image: 'justboom-digi-zero.png'
 pincount: 40
-eeprom: yes
+eeprom: no
 power:
   '1':
   '2':
@@ -39,10 +37,6 @@ pin:
     name: Rotary Encoder
   '24':
     name: Rotary Encoder
-  '27':
-    mode: i2c
-  '28':
-    mode: i2c
   '35':
     name: LRCK (Left/Right Clock)
     mode: i2s
@@ -50,7 +44,8 @@ pin:
     name: DOUT
     mode: i2s
 -->
-#JustBoom Digi HAT
+#Digi Zero
+
 * Dedicated S/PDIF output interface chip supports up to 192kHz / 24bit
 * Digital audio output over either optical (TOSLINK) or coaxial (RCA electrical) connectors
 * Low jitter, bit perfect digital output
@@ -58,4 +53,4 @@ pin:
 * Software volume control from your Raspberry Pi
 * Powered by the Raspberry Pi GPIO header
 * Optional IR receiver via GPIO25
-* All Raspberry Pi GPIO pins still accessible via 40pin unpopulated 
+* Unused GPIO pins still accessible via unpopulated extension header

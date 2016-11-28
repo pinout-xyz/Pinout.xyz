@@ -271,7 +271,6 @@ pins:
       alt0: I2C0 SCL
       alt1: SMI SA4
       alt2: DPI DEN
-      alt2: LCD VSYNC
       alt3: AVEOUT DSYNC
       alt4: AVEIN DSYNC
   '29':

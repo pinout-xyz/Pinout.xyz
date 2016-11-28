@@ -41,6 +41,10 @@ pin:
     name: WiringPi 10
   '26':
     name: WiringPi 11
+  '27':
+    name: WiringPi 30
+  '28':
+    name: WiringPi 31
   '29':
     name: WiringPi 21
   '31':

@@ -18,7 +18,9 @@ pins:
     functions:
       alt0: I2C1 SDA
       alt1: SMI SA3
-      alt2: DPI V-Sync
+      alt2: DPI VSYNC
+      alt3: AVEOUT VSYNC
+      alt4: AVEIN VSYNC
   '4':
     name: 5v Power
     type: "+5v"
@@ -33,7 +35,9 @@ pins:
     functions:
       alt0: I2C1 SCL
       alt1: SMI SA2
-      alt2: DPI H-Sync
+      alt2: DPI HSYNC
+      alt3: AVEOUT HSYNC
+      alt4: AVEIN HSYNC
   '6':
     name: Ground
     type: GND
@@ -46,7 +50,9 @@ pins:
     functions:
       alt0: GPCLK0
       alt1: SMI SA1
-      alt: Blue 2
+      alt2: DPI D0
+      alt3: AVEOUT VID0
+      alt4: AVEIN VID0
       alt5: JTAG TDI
   '8':
     name: TXD
@@ -58,7 +64,9 @@ pins:
     functions:
       alt0: UART0 TXD
       alt1: SMI SD6
-      alt2: DSI Green 6
+      alt2: DSI D10
+      alt3: AVEOUT VID10
+      alt4: AVEIN VID10
       alt5: UART1 TXD
   '9':
     name: Ground
@@ -73,7 +81,9 @@ pins:
     functions:
       alt0: UART0 RXD
       alt1: SMI SD7
-      alt2: DPI Green 7
+      alt2: DPI D11
+      alt3: AVEOUT VID11
+      alt4: AVEIN VID11
       alt5: UART1 RXD
   '11':
     name: ''
@@ -82,9 +92,9 @@ pins:
       wiringpi: 0
       bcm: 17
     functions:
-      alt0: Reserved
+      alt0: FL1
       alt1: SMI SD9
-      alt2: DPI Red 3
+      alt2: DPI D13
       alt3: UART0 RTS
       alt4: SPI1 CE1
       alt5: UART1 RTS
@@ -98,8 +108,8 @@ pins:
     functions:
       alt0: PCM CLK
       alt1: SMI SD10
-      alt2: DPI Red 4
-      alt3: BSCSL SDA / MOSI
+      alt2: DPI D14
+      alt3: I2CSL SDA / MOSI
       alt4: SPI1 CE0
       alt5: PWM0
   '13':
@@ -111,8 +121,8 @@ pins:
       bcmAlt: 21
     functions:
       alt0: SD0 DAT3
-      alt1: Reserved
-      alt2: Reserved
+      alt1: TE1
+      alt2: DPI D23
       alt3: SD1 DAT3
       alt4: JTAG TMS
   '14':
@@ -127,7 +137,7 @@ pins:
     functions:
       alt0: SD0 CLK
       alt1: SMI SD14
-      alt2: Reserved
+      alt2: DPI D18
       alt3: SD1 CLK
       alt4: JTAG TRST
   '16':
@@ -139,7 +149,7 @@ pins:
     functions:
       alt0: SD0 CMD
       alt1: SMI SD15
-      alt2: Reserved
+      alt2: DPI D19
       alt3: SD1 CMD
       alt4: JTAG RTCK
   '17':
@@ -154,7 +164,7 @@ pins:
     functions:
       alt0: SD0 DAT0
       alt1: SMI SD16
-      alt2: Reserved
+      alt2: DPI D20
       alt3: SD1 DAT0
       alt4: JTAG TDO
   '19':
@@ -166,7 +176,9 @@ pins:
     functions:
       alt0: SPI0 MOSI
       alt1: SMI SD2
-      alt2: DPI Green 2
+      alt2: DPI D6
+      alt3: AVEOUT VID6
+      alt4: AVEIN VID6
   '20':
     name: Ground
     type: GND
@@ -179,7 +191,9 @@ pins:
     functions:
       alt0: SPI0 MISO
       alt1: SMI SD1
-      alt2: DPI Blue 7
+      alt2: DPI D5
+      alt3: AVEOUT VID5
+      alt4: AVEIN VID5
   '22':
     name: ''
     type: GPIO
@@ -189,7 +203,7 @@ pins:
     functions:
       alt0: SD0 DAT1
       alt1: SMI SD17
-      alt2: Reserved
+      alt2: DPI D21
       alt3: SD1 DAT1
       alt4: JTAG TCK
   '23':
@@ -201,7 +215,9 @@ pins:
     functions:
       alt0: SPI0 SCLK
       alt1: SMI SD3
-      alt2: DPI Green 3
+      alt2: DPI D7
+      alt3: AVEOUT VID7
+      alt4: AVEIN VID7
   '24':
     name: CE0
     description: SPI Chip Select 0
@@ -212,7 +228,9 @@ pins:
     functions:
       alt0: SPI0 CE0
       alt1: SMI SD0
-      alt2: DPI Blue 6
+      alt2: DPI D4
+      alt3: AVEOUT VID4
+      alt4: AVEIN VID4
   '25':
     name: Ground
     type: GND
@@ -226,7 +244,9 @@ pins:
     functions:
       alt0: SPI0 CE1
       alt1: SMI SWE_N / SRW_N
-      alt2: DPI Blue 5
+      alt2: DPI D3
+      alt3: AVEOUT VID3
+      alt4: AVEIN VID3
   '27':
     name: ID_SD
     description: HAT EEPROM i2c Data
@@ -238,6 +258,8 @@ pins:
       alt0: I2C0 SDA
       alt1: SMI SA5
       alt2: DPI CLK
+      alt3: AVEOUT VCLK
+      alt4: AVEIN VCLK
   '28':
     name: ID_SC
     description: HAT EEPROM i2c Clock
@@ -249,6 +271,9 @@ pins:
       alt0: I2C0 SCL
       alt1: SMI SA4
       alt2: DPI DEN
+      alt2: LCD VSYNC
+      alt3: AVEOUT DSYNC
+      alt4: AVEIN DSYNC
   '29':
     name: ''
     type: GPIO
@@ -258,7 +283,9 @@ pins:
     functions:
       alt0: GPCLK1
       alt1: SMI SA0
-      alt2: DPI Blue 3
+      alt2: DPI D1
+      alt3: AVEOUT VID1
+      alt4: AVEIN VID1
       alt5: JTAG TDO
   '30':
     name: Ground
@@ -272,7 +299,9 @@ pins:
     functions:
       alt0: GPCLK2
       alt1: SMI SOE_N / SE
-      alt2: DPI Blue 4
+      alt2: DPI D2
+      alt3: AVEOUT VID2
+      alt4: AVEIN VID2
       alt5: JTAG RTCK
   '32':
     name: PWM0
@@ -283,7 +312,9 @@ pins:
     functions:
       alt0: PWM0
       alt1: SMI SD4
-      alt2: DPI Green 4
+      alt2: DPI D8
+      alt3: AVEOUT VID8
+      alt4: AVEIN VID8
       alt5: JTAG TMS
   '33':
     name: PWM1
@@ -294,7 +325,9 @@ pins:
     functions:
       alt0: PWM1
       alt1: SMI SD5
-      alt2: DPI Green 5
+      alt2: DPI D9
+      alt3: AVEOUT VID9
+      alt4: AVEIN VID9
       alt5: JTAG TCK
   '34':
     name: Ground
@@ -309,8 +342,8 @@ pins:
     functions:
       alt0: PCM FS
       alt1: SMI SD11
-      alt2: DPI Red 5
-      alt3: BSCSL SCL / SCLK
+      alt2: DPI D15
+      alt3: I2CSL SCL / SCLK
       alt4: SPI1 MISO
       alt5: PWM1
   '36':
@@ -320,9 +353,9 @@ pins:
       wiringpi: 27
       bcm: 16
     functions:
-      alt0: Reserved
+      alt0: FL0
       alt1: SMI SD8
-      alt2: DPI Red 2
+      alt2: DPI D12
       alt3: UART0 CTS
       alt4: SPI1 CE2
       alt5: UART1 CTS
@@ -334,8 +367,8 @@ pins:
       bcm: 26
     functions:
       alt0: SD0 DAT2
-      alt1: Reserved
-      alt2: Reserved
+      alt1: TE0
+      alt2: DPI D22
       alt3: SD1 DAT2
       alt4: JTAG TDI
   '38':
@@ -348,10 +381,10 @@ pins:
     functions:
       alt0: PCM DIN
       alt1: SMI SD12
-      alt2: DPI Red 6
-      alt3: BSCSL MISO
+      alt2: DPI D16
+      alt3: I2CSL MISO
       alt4: SPI1 MOSI
-      alt5: CPCLK0
+      alt5: GPCLK0
   '39':
     name: Ground
     type: GND
@@ -365,7 +398,7 @@ pins:
     functions:
       alt0: PCM DOUT
       alt1: SMI SD13
-      alt2: DPI Red 7
-      alt3: BSCSL CE
+      alt2: DPI D17
+      alt3: I2CSL CE
       alt4: SPI1 SCLK
       alt5: GPCLK1

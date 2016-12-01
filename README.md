@@ -73,7 +73,7 @@ GPIO Zero code examples by: [@bennuttall](https://github.com/bennuttall)
 
 Notable contributions:
 
-* [en](http://pinout.xyz/) - [@lurch](https://github.com/lurch) and [@abelectronicsuk](https://github.com/abelectronicsuk)
+* [en](http://pinout.xyz/) - [@lurch](https://github.com/lurch), [@abelectronicsuk](https://github.com/abelectronicsuk) and [@francesco-vannini](https://github.com/francesco-vannini)
 * [de](http://de.pinout.xyz/) - [@rdmueller](https://github.com/rdmueller) and [@KojoePi](https://github.com/KojoePi)
 * [es](http://es.pinout.xyz/) - [@ResonantWave](https://github.com/ResonantWave) and [@IkerGarcia](https://github.com/IkerGarcia)
 * [fr](http://fr.pinout.xyz/) - [@RogueM](https://github.com/RogueM) and [@smileyn64](https://github.com/smileyn64)

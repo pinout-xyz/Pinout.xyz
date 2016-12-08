@@ -46,11 +46,11 @@ pin:
 -->
 #Digi Zero
 
-* Dedicated S/PDIF output interface chip supports up to 192kHz / 24bit
-* Digital audio output over either optical (TOSLINK) or coaxial (RCA electrical) connectors
-* Low jitter, bit perfect digital output
-* Output transformer for galvanic isolation
-* Software volume control from your Raspberry Pi
-* Powered by the Raspberry Pi GPIO header
-* Optional IR receiver via GPIO25
-* Unused GPIO pins still accessible via unpopulated extension header
+* Interfaz S/PDIF de salida dedicada, compatible con 192kHz / 24bit
+* Salida de sonido digital mediante conector óptico (TOSLINK) o coaxial (RCA electrical)
+* Pocas variaciones, salida digital bit perfecta
+* Transformador a la salida para aislamiento galvánico
+* Control de volumen mediante hardware y software con Raspberry Pi
+* Alimentado mediante el pin GPIO de Raspberry Pi
+* Receptor infrarrojo opcional con GPIO25
+* Los pones GPIO que no se usen son accesibles

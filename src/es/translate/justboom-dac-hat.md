@@ -46,11 +46,11 @@ pin:
 -->
 #DAC HAT
 
-* Full high quality audio – 384kHz / 32bit
-* Includes both a DAC and headphone amplifier
-* Line-level RCA and headphone amplified 3.5mm jack outputs
-* Hardware and software volume control from your Raspberry Pi
-* Powered by the Raspberry Pi GPIO header
-* Optional IR receiver via GPIO25
-* Compatible with the JustBoom Amp which can easily stack on top of the DAC HAT
-* All Raspberry Pi GPIO pins still accessible via 40pin unpopulated
+* Audio de alta calidad – 348kHz / 32bit
+* Incluye DAC y amplificador
+* Salidas RCA y jack de 3.5mm
+* Control de volumen mediante hardware y software con Raspberry Pi
+* Alimentado mediante el pin GPIO de Raspberry Pi
+* Receptor infrarrojo opcional con GPIO25
+* Compatible con  JustBoom Amp que se puede fácilmente incorporar encima
+* Los pones GPIO que no se usen son accesibles

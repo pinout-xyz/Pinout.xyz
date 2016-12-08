@@ -74,20 +74,20 @@ pin:
 -->
 #PaPiRus Zero
 
-The PaPiRus Zero is a versatile ePaper display for the Raspberry Pi Zero with screens ranging from 1.44" to 2.0" in size.
+PaPiRus Zero es una pantalla ePaper versátil para Raspberry Pi, con tamaños desde 1.44" a 2.0".
 
-Unlike conventional displays, ePaper reflects light, and is capable of holding text and images indefinitely, even without electricity. The display does not require any power to keep the image and will stay 'on' without any power connection for many days before slowly fading. It's also daylight readable and is very high contrast.
+A diferencia de las pantallas convencionales, refleja la luz y puede mantener imagen y textos por tiempo indefinido, hasta sin electricidad. Esta pantalla no requiere electricidad para mantener la imagen y durará varios días hasta desaparecer. Se puede leer a la luz del día y tiene un gran contraste.
 
-* Interchangeable screen sizes (1.44" or 2.0")
-* 32MBit Flash Memory
-* Digital temperature sensor and thermal watchdog
-* GPIO breakout solder pads
-* 5 x optional slimline switches on top
+* Tamaños de pantalla intercambiables (1.44" o 2.0")
+* Memoria Flash de 32MBit
+* Control de temperatura digital
+* Pines GPIO accesibles
+* Cuenta con 6 interruptores opcionales
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sSL https://goo.gl/i1Imel | sudo bash
 ```
 
-Before using PaPiRus, do not forget to enable the SPI and I2C interfaces!
+Antes de utilizar PaPiRus activa las interfaces SPI e I2C

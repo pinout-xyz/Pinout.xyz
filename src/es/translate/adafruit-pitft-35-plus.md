@@ -50,8 +50,8 @@ pin:
 -->
 #PiTFT Plus 3.5"
 
-The PiTFT+ features a 3.5" display with 480x320 16-bit color pixels and a resistive touch overlay and is engineered specifically to work with the Raspberry Pi 3, 2 and the Model A+/B+.
+PiTFT+ cuenta con una pantalla de 3.5" y 480x320, pixel de colores de 16-bit e interfaz resistiva, creada específicamente para la Raspberry Pi 3, 2 y A+/B+.
 
-The display uses the hardware SPI pins as well as GPIO #25 and #24. GPIO #18 can be used to PWM dim the backlight. A 2x13 'classic' GPIO header on the bottom, with additional GPIO pins broken out into solder pads, allows you to use more of the GPIO.
+La pantalla usa los pines SPI además de los GPIO #25 y #24, GPIO #18 puede ser utilizado para controlar la iluminación mediante PWM. Un conector GPIO clásico de 2x13 permite utilizar el resto de pines.
 
-The PiTFT+ can be used as a display for running the X interface, or the console. You can also have an HDMI display separately connected to complement the setup, keeping in mind that there can only be one X session running (so you'll need to choose where X should be output, on the HDMI or the PiTFT+).
+PiTFT+ puede utilizarse como pantalla para la interfaz X o el terminal. Además, permite conectar otra pantalla HDMI teniendo en cuenta que sólo una sesión X puede utilizarse de manera simultánea por lo que tendrás que elegir en qué pantalla. 

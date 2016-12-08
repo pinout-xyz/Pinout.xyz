@@ -36,17 +36,16 @@ i2c:
 -->
 #Pan Tilt HAT
 
-Pan Tilt HAT is a two-channel servo driver designed to control a tiny servo-powered Pan/Tilt assembly. It also controls either PWM-dimmed lights or WS2812 pixels; up to 24 RGB or 18 RGBW.
+Pan Tilt HAT es un controlador servo de dos canales diseñado para controlar un pequeño montaje Pan/Tilt controlado por un servo. Además controla luces por PWM o píxels WS2812; hasta 24 RGB o 18 RGBW.
 
-Pan Tilt HAT uses a PIC16F1503 with custom firmware, and talks over i2c.
+Pan Tilt HAT usa un PIC16F1503 con un firmware personalizado, funciona con i2c.
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS https://get.pimoroni.com/pantilthat | bash
 ```
-
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import pantilthat

@@ -46,10 +46,10 @@ pin:
 -->
 #DAC Zero
 
-* Full high quality audio – 384kHz / 32bit
-* Includes both a DAC and headphone amplifier
-* Line-level RCA (optional) and headphone amplified 3.5mm jack outputs
-* Hardware and software volume control from your Raspberry Pi
-* Powered by the Raspberry Pi GPIO header
-* Optional IR receiver via GPIO25
-* Unused GPIO pins still accessible via unpopulated extension header
+* Audio de alta calidad – 348kHz / 32bit
+* Incluye DAC y amplificador
+* Salidas RCA (opcional) y jack de 3.5mm
+* Control de volumen mediante hardware y software con Raspberry Pi
+* Alimentado mediante el pin GPIO de Raspberry Pi
+* Receptor infrarrojo opcional con GPIO25
+* Los pones GPIO que no se usen son accesibles

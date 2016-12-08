@@ -74,24 +74,24 @@ pin:
 -->
 #PaPiRus HAT
 
-The PaPiRus HAT is a versatile ePaper display for the Raspberry Pi with screens ranging from 1.44" to 2.7" in size.
+PaPiRus HAT es una pantalla ePaper versátil para Raspberry Pi, con tamaños desde 1.44" a 2.7".
 
-Unlike conventional displays, ePaper reflects light, and is capable of holding text and images indefinitely, even without electricity. The display does not require any power to keep the image and will stay 'on' without any power connection for many days before slowly fading. It's also daylight readable and is very high contrast. 
+A diferencia de las pantallas convencionales, refleja la luz y puede mantener imagen y textos por tiempo indefinido, hasta sin electricidad. Esta pantalla no requiere electricidad para mantener la imagen y durará varios días hasta desaparecer. Se puede leer a la luz del día y tiene un gran contraste.
 
-* Raspberry Pi HAT compliant design
-* Interchangeable screen sizes (1.44", 2.0" or 2.7")
-* 32MBit Flash Memory
-* Battery Backed Real Time Clock (CR2032 battery included)
-* Easy plug and play operation with onboard EEPROM
-* Digital temperature sensor and thermal watchdog
-* GPIO breakout connector and solder pads
-* Optional reset pin header (for wake on alarm with RTC)
-* 4 x optional slimline switches on top
+* El diseño cumple el estándar HAT
+* Tamaños de pantalla intercambiables (1.44", 2.0" o 2.7")
+* Memoria Flash de 32MBit
+* Cuenta con un reloj de tiempo real alimentado por batería (batería CR2032 incluída)
+* Formato plug and play con EEPROM
+* Control de temperatura digital
+* Pines GPIO accesibles
+* Pin de reset opcional
+* Cuenta con 4 interruptores opcionales
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sSL https://goo.gl/i1Imel | sudo bash
 ```
 
-Before using PaPiRus, do not forget to enable the SPI and I2C interfaces!
+Antes de utilizar PaPiRus activa las interfaces SPI e I2C

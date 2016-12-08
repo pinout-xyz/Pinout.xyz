@@ -74,15 +74,14 @@ install:
 -->
 #Automation pHAT
 
-Automation pHAT is a home monitoring and automation controller for the Raspberry Pi; with relays, analog channels, powered outputs, and buffered inputs. All 24V tolerant.
+Automation pHAT sirva para monitorizar y domotizar el hogar con Raspberry Pi; cuenta con relés, canales analógicos, salidas con alimentación y entradas regulables. Todo capaz de funcionar con 24V.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT puedes utilizar el instalador online de una línea.
 
 ```bash
 curl -sS https://get.pimoroni.com/automationhat | bash
 ```
-
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import automationhat

@@ -6,10 +6,10 @@ url_suffix:
 urls:
   GND: ground
 featured:
+- rainbow-hat
 - pijack
 - pantilt-hat
 - 4tronix-picon-zero
-- wifi-pants
 overlays:
 - ground
 - iface-dpi
@@ -99,3 +99,4 @@ overlays:
 - wifi-pants
 - zero-lipo
 - rabbitmax-flex
+- rainbow-hat

@@ -36,27 +36,27 @@ pin:
     mode: spi
   '33':
     mode: pwm
-  '31'
+  '31':
     name: Red/Left LED
     mode: output
     active: high
-  '35'
+  '35':
     name: Green/Middle LED
     mode: output
     active: high
-  '37'
+  '37':
     name: Blue/Right LED
     mode: output
     active: high
-  '40'
+  '40':
     name: Touch A
     mode: input
     active: low
-  '38'
+  '38':
     name: Touch B
     mode: input
     active: low
-  '36'
+  '36':
     name: Touch C
     mode: input
     active: low

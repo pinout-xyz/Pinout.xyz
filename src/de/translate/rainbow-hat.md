@@ -1,11 +1,11 @@
 <!--
 ---
-name: Android Things Rainbow HAT
+name: Rainbow HAT
 class: board
 type: multi
 formfactor: HAT
 manufacturer: Pimoroni
-description: An array of sensors, inputs and outputs to explore Android Things
+description: Sensors and IO for Android Things
 url: http://blog.pimoroni.com/android-things-launch/
 github: https://github.com/pimoroni/rainbow-hat
 buy: https://shop.pimoroni.com/products/rainbow-hat-for-android-things
@@ -35,6 +35,7 @@ pin:
   '24':
     mode: spi
   '33':
+    name: Buzzer
     mode: pwm
   '31':
     name: Red/Left LED
@@ -68,9 +69,9 @@ i2c:
     name: Matrix Driver
     device: HT16K33
 -->
-#AndroidThings: Rainbow HAT
+#Rainbow HAT for Android Things™
 
-Rainbow HAT has a buffet of sensors, inputs and displays to explore Android Things. Use it as a weather station, a clock, a timer or stopwatch, a mood light, or endless other things.
+Rainbow HAT has a buffet of sensors, inputs and displays to explore Android Things™. Use it as a weather station, a clock, a timer or stopwatch, a mood light, or endless other things.
 
 * Seven APA102 multicolour LEDs
 * Four 14-segment alphanumeric displays (green LEDs)
@@ -81,3 +82,11 @@ Rainbow HAT has a buffet of sensors, inputs and displays to explore Android Thin
 * BMP280 temperature and pressure sensor
 * Piezo buzzer
 * Breakout pins for servo, I2C, SPI, and UART (all 3v3)
+
+To get the HAT set up and ready to go you can use the one-line product installer:
+
+```bash
+curl -sS https://get.pimoroni.com/rainbowhat | bash
+```
+
+And follow the instructions!

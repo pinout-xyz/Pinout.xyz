@@ -32,6 +32,7 @@ def load(file):
     Returns an object that includes the JSON data, and the parsed HTML.
     '''
     markson = open(file).read()
+    markson = markson.replace('\r','')
 
     _data = re.search(re.compile(r'<!--(JSON:|\n---\n)(.*)-->', re.DOTALL), markson)
 

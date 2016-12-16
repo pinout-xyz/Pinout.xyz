@@ -5,7 +5,7 @@ import sys
 try:
     from flask import Flask, send_from_directory
 except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Flask")
+    exit("This script requires the Flask module\nInstall with: sudo pip install Flask")
 
 
 app = Flask(__name__)

@@ -5,9 +5,10 @@ class: board
 type: input
 formfactor: HAT
 manufacturer: Pimoroni
-description: Arcade control inputs plus mono I2S digital audio
-buy: https://shop.pimoroni.com/
-image: 'picade-hat.png'
+description: Arcade inputs & digital amp
+buy: https://shop.pimoroni.com/products/picade-hat
+github: https://github.com/pimoroni/picade-hat
+image: 'pimoroni-picade-hat.png'
 pincount: 40
 eeprom: yes
 power:
@@ -28,44 +29,57 @@ pin:
   '7':
     name: Shutdown
     mode: output
+    active: low
   '11':
-    name: Power
-    mode: output
+    name: Power Button
+    mode: input
+    active: low
   '12':
     name: I2S Clock
   '13':
     name: Enter
     mode: input
+    active: low
   '15':
     name: Escape
     mode: input
+    active: low
   '16':
     name: Coin
     mode: input
+    active: low
   '18':
     name: Start
     mode: input
+    active: low
   '19':
     name: 'Button 6'
     mode: input
+    active: low
   '21':
     name: 'Button 5'
     mode: input
+    active: low
   '22':
     name: 'Button 4'
     mode: input
+    active: low
   '23':
     name: 'Button 2'
     mode: input
+    active: low
   '24':
     name: 'Button 3'
     mode: input
+    active: low
   '29':
     name: 'Button 1'
     mode: input
+    active: low
   '31':
     name: Down
     mode: input
+    active: low
   '32':
     name: Up
     mode: input
@@ -74,9 +88,11 @@ pin:
   '36':
     name: Right
     mode: input
+    active: low
   '38':
     name: Left
     mode: input
+    active: low
   '40':
     name: I2S Data
 install:
@@ -89,6 +105,7 @@ Picade HAT provides screw terminals for 10 arcade buttons and a joystick. It als
 
 All button inputs should be configured with their corresponding internal pull-ups. Buttons should be wired between an input and ground.
 
-* 14 button terminals
+* 10 button terminals
+* 4 terminals for joystick
 * Stereo audio combined for a single speaker
 * Support for an external power button and safe power shutdown

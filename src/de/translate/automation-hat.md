@@ -2,7 +2,7 @@
 ---
 name: Automation HAT
 class: board
-type: adc,io,motor
+type: adc,io,motor,relay
 formfactor: HAT
 manufacturer: Pimoroni
 description: An all-in-one home automation and control board

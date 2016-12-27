@@ -2,7 +2,7 @@
 ---
 name: Automation pHAT
 class: board
-type: adc,io,motor
+type: adc,io,motor,relay
 formfactor: pHAT
 manufacturer: Pimoroni
 description: An all-in-one home automation and control board

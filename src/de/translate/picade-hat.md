@@ -2,20 +2,18 @@
 ---
 name: Picade HAT
 class: board
-type: input
+type: io
 formfactor: HAT
 manufacturer: Pimoroni
 description: Arcade inputs & digital amp
 buy: https://shop.pimoroni.com/products/picade-hat
 github: https://github.com/pimoroni/picade-hat
-image: 'pimoroni-picade-hat.png'
+image: 'picade-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
-  '4':
-  '17':
 ground:
   '6':
   '9':
@@ -83,6 +81,7 @@ pin:
   '32':
     name: Up
     mode: input
+    active: low
   '35':
     name: I2S WS
   '36':
@@ -109,3 +108,9 @@ All button inputs should be configured with their corresponding internal pull-up
 * 4 terminals for joystick
 * Stereo audio combined for a single speaker
 * Support for an external power button and safe power shutdown
+
+To get the HAT set up and ready to go you can use the one-line product installer:
+
+```bash
+curl -sS https://get.pimoroni.com/picadehat | bash
+```

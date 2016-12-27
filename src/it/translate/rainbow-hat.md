@@ -2,14 +2,14 @@
 ---
 name: Rainbow HAT
 class: board
-type: multi
+type: display,led,multi,sensor,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Sensors and IO for Android Things
 url: http://blog.pimoroni.com/android-things-launch/
 github: https://github.com/pimoroni/rainbow-hat
 buy: https://shop.pimoroni.com/products/rainbow-hat-for-android-things
-image: 'pimoroni-rainbow-hat.png'
+image: 'rainbow-hat.png'
 pincount: 40
 eeprom: yes
 power:
@@ -88,5 +88,3 @@ To get the HAT set up and ready to go you can use the one-line product installer
 ```bash
 curl -sS https://get.pimoroni.com/rainbowhat | bash
 ```
-
-And follow the instructions!

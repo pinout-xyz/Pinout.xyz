@@ -24,7 +24,7 @@ ground:
   '34':
   '39':
 pin:
-  '4':
+  '7':
     name: PPS
   '8':
     mode: UART

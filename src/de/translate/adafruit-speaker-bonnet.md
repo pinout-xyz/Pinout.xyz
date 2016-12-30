@@ -7,7 +7,6 @@ formfactor: pHAT
 manufacturer: Adafruit
 description: 3W Stereo Amplifier Bonnet for Raspberry Pi
 url: https://learn.adafruit.com/adafruit-speaker-bonnet-for-raspberry-pi
-buy: https://www.adafruit.com/products/3346
 schematic: https://learn.adafruit.com/assets/37882
 buy: https://www.adafruit.com/products/3346
 image: 'adafruit-speaker-bonnet.png'
@@ -34,5 +33,6 @@ Once soldered just plug in any 4Ω to 8Ω speakers through the terminal blocks o
 
 To install:
 ```bash
-curl -sS https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash
+curl -sS https://raw.githubusercontent.com/adafruit/\
+Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash
 ```

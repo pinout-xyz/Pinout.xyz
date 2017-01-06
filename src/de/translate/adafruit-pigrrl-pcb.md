@@ -11,9 +11,6 @@ buy: https://www.adafruit.com/product/3015
 image: 'adafruit-pigrrl-pcb.png'
 pincount: 40
 eeprom: no
-power:
-  '1':
-  '2':
 ground:
   '6':
   '9':

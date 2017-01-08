@@ -35,8 +35,8 @@ for overlay in $mdlist; do
                 else
                     cp $draftmd/$overlay $srcdir/$dirmd/overlay/
                 fi
-                if ! grep -e $board ../src/$dirmd/$yamlfile &> /dev/null; then
-                    echo "- $board" | tee -a ../src/$dirmd/$yamlfile &> /dev/null
+                if ! grep -e $board $srcdir/$dirmd/$yamlfile &> /dev/null; then
+                    echo "- $board" | tee -a $srcdir/$dirmd/$yamlfile &> /dev/null
                 fi
             done
             rm $draftmd/$overlay

@@ -4,7 +4,7 @@ name: 1-WIRE
 class: interface
 type: pinout
 description: Raspberry Pi One-Wire pins
-url: https://www.raspberrypi.org/documentation/hardware/raspberrypi/dpi/
+url: https://www.kernel.org/doc/Documentation/w1/w1.generic
 pin:
   'bcm4':
     name: Data
@@ -23,7 +23,7 @@ También puedes habilitar la interfaz sobre la marcha, cuando sea necesario:
 sudo modprobe w1-gpio
 ```
 
-Tras realizar una de las dos acciones anteriores, puedes enumerar los dispositivos conectados al GPIO4 de tu Raspberry Pi (por defecto) con:
+Tras realizar una de las dos acciones anteriores, puedes enumerar los dispositivos conectados al BCM4 de tu Raspberry Pi (por defecto) con:
 
 ```
 ls /sys/bus/w1/devices/

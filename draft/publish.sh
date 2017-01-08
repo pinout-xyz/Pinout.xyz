@@ -3,48 +3,33 @@
 draftpng="../draft/boards"
 dirpng="../resources/boards"
 draftmd="../draft/overlay"
-mdlist=$(ls "$draftmd")
 srcdir="../src"
 langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
 
-FORCE=$1
+if [ "$#" -eq 0 ]; then
+    echo "please specify a board to publish!" && exit 1
+fi
 
-confirm() {
-    if [ "$FORCE" == '-y' ]; then
-        true
+board=$1
+
+for dirmd in ${langlist[@]}; do
+    if [ $dirmd != "en" ]; then
+        if ! [ -f $srcdir/$dirmd/overlay/$board.md ]; then
+            cp $draftmd/$board.md $srcdir/$dirmd/translate/
+        fi
     else
-        read -r -p "$1 [y/N] " response < /dev/tty
-        if [[ $response =~ ^(yes|y|Y)$ ]]; then
-            true
-        else
-            false
-        fi
+        cp $draftmd/$board.md $srcdir/$dirmd/overlay/
     fi
-}
-
-for overlay in $mdlist; do
-    if [ $overlay != "template.md" ]; then
-        board=$(echo "$overlay" | rev | cut -c 4- | rev)
-        if confirm "Would you like to publish $board?"; then
-            for dirmd in ${langlist[@]}; do
-                if [ $dirmd != "en" ]; then
-                    if ! [ -f $srcdir/$dirmd/overlay/$overlay ]; then
-                        cp $draftmd/$overlay $srcdir/$dirmd/translate/
-                    fi
-                else
-                    cp $draftmd/$overlay $srcdir/$dirmd/overlay/
-                fi
-                if ! grep -e $board $srcdir/$dirmd/$yamlfile &> /dev/null; then
-                    echo "- $board" | tee -a $srcdir/$dirmd/$yamlfile &> /dev/null
-                fi
-            done
-            rm $draftmd/$overlay
-            if [ -f $draftpng/$board.png ];then
-                mv $draftpng/$board.png $dirpng
-            fi
-        fi
+    if ! grep -e $board $srcdir/$dirmd/$yamlfile &> /dev/null; then
+        echo "- $board" | tee -a $srcdir/$dirmd/$yamlfile &> /dev/null
     fi
 done
+
+rm $draftmd/$board.md
+
+if [ -f $draftpng/$board.png ];then
+    mv $draftpng/$board.png $dirpng
+fi
 
 exit 0

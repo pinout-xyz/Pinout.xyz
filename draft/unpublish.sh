@@ -3,13 +3,12 @@
 draftpng="../draft/boards"
 dirpng="../resources/boards"
 draftmd="../draft/overlay"
-mdlist=$(ls "$draftmd")
 srcdir="../src"
 langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
 
 if [ "$#" -eq 0 ]; then
-    warning "please specify a board to unpublish!" && exit 1
+    echo "please specify a board to unpublish!" && exit 1
 fi
 
 board=$1

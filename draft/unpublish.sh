@@ -15,12 +15,12 @@ board=$1
 
 for dirmd in ${langlist[@]}; do
     if [ $dirmd != "en" ]; then
-        rm $srcdir/$dirmd/translate/$board.md
+        rm $srcdir/$dirmd/translate/$board.md &> /dev/null
     else
         mv $srcdir/$dirmd/overlay/$board.md $draftmd
     fi
-    if grep -e $board $srcdir/$dirmd/$yamlfile &> /dev/null; then
-        sed -i "|- $board|d" $yamlfile &> /dev/null
+    if grep -e $board $srcdir/$dirmd/$yamlfile; then
+        sed -i "/$board/d" $srcdir/$dirmd/$yamlfile
     fi
 done
 

@@ -31,12 +31,12 @@ pin:
   '12':
     name: BCKL (Bit Clock)
     mode: i2s
+  '16':
+    name: Rotary Encoder
+  '18':
+    name: Rotary Encoder
   '22':
     name: IR Receiver
-  '23':
-    name: Rotary Encoder
-  '24':
-    name: Rotary Encoder
   '35':
     name: LRCK (Left/Right Clock)
     mode: i2s

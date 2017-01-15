@@ -42,7 +42,7 @@ def load_overlay_url(overlay, lang):
 
     if loaded is None:
         print("Fatal: Invalid overlay formatting.")
-        sys.exit(0)
+        sys.exit(1)
 
     if not 'page_url' in loaded:
         loaded['page_url'] = url_slugify(loaded['name'])

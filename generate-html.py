@@ -185,7 +185,7 @@ def load_overlay(overlay):
 
                     if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
                         raise Exception(
-                            "{} includes a reference to a {} pin, which isn't allowed".format(overlay, actual_pin['type']))
+                            "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
                         uses += 1
 

@@ -8,7 +8,7 @@ import unicodedata
 try:
     import markdown
 except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+    exit("This script requires the Markdown module\nInstall with: sudo pip install Markdown")
 
 import markjaml
 import pinout
@@ -95,7 +95,7 @@ def load_overlay(overlay):
                 if str(loaded['formfactor']) == 'Custom':
                     loaded['formfactor'] = strings['form_undefined']
         except IOError:
-            print 'overlay {} missing in lang {}'.format(overlay, lang)
+            print('overlay {} missing in lang {}'.format(overlay, lang))
             return None
 
     print('>> Rendering: {src}'.format(src=loaded['source']))

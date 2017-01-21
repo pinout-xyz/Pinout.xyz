@@ -5,12 +5,12 @@ import unicodedata
 try:
     import markdown
 except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+    exit("This script requires the Markdown module\nInstall with: sudo pip install Markdown")
 
 try:
     import yaml
 except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install PyYAML")
+    exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
 
 
 def slugify(value):

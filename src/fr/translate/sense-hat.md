@@ -5,7 +5,7 @@ class: board
 type: led,sensor
 formfactor: HAT
 manufacturer: Raspberry Pi
-description: Add-on board that includes an 8×8 RGB LED matrix, 5-button joystick as well as IMU and environmental sensors
+description: Carte d'extension incluant une metrice LED 8×8 en RGB, un joystick 5 boutons ainsi qu'un capteur IMU, de température et de pression.
 url: https://www.raspberrypi.org/products/sense-hat/
 github: https://github.com/RPi-Distro/python-sense-hat
 schematic: https://www.raspberrypi.org/documentation/hardware/sense-hat/images/Sense-HAT-V1_0.pdf
@@ -32,19 +32,19 @@ pin:
     mode: i2c
 i2c:
   '0x5c':
-    name: Pressure/Temp
+    name: Pression/Temp
     device: lps25h
   '0x5f':
-    name: Humidity/Temp
+    name: Humidité/Temp
     device: hts221
   '0x6a':
-    name: Accelerometer
+    name: Accéléromètre
     device: lsm9ds1
   '0x1c':
-    name: Magnetometer
+    name: Magnétomèter
     device: lsm9ds1
   '0x46':
-    name: LED Matrix
+    name: Matrice LED
     device: led2472g
 install:
   'devices':
@@ -52,12 +52,12 @@ install:
 -->
 #Sense HAT
 
-The Sense HAT is an add-on board for Raspberry Pi comprising of a 8×8 RGB LED matrix, a five-button joystick and the following sensors: Gyroscope, Accelerometer, Magnetometer, Temperature, Barometric pressure and Humidity.
+Sense HAT est une carte d'extension pour Raspberry Pi composé d'une matrice LED 8x8 en RGB (rouge, vert, bleu), d'un joystick 5 boutons (directions+appui), et ainsi qu'un capteur IMU, de température, d'humidité et de pression.
 
-The shift register driving the LED Matrix is a LED2472G connected via an ATTINY88 communicating via i2c at address 0x46 with the Pi. The Multi-Directional SKRHABE010 Switch/Joystick is similarly controlled.
+Le registre à décalage (shift register) utilisé pour la matrice de LED est un LED2472G connecté par un microcontrôleur ATTINY88 acessible en i2c à l'adresse 0x46 (70) du Pi. Le switch/Joystick multidirectionnel SKRHABE010 est aussi piloté par le ATTINY88.
 
-The sensors themselves also operate over the i2c bus:
+Les capteurs eux-mêmes sont pilotés par le bus i2c:
 
-The IMU (Accelerometer and Magnetometer) through a LSM9DS1 found at i2c address 0x1c(0x1e) and 0x6a(0x6b), with Interrupts on the ATTINY88.
-
-Environmental sensors are represented by a LPS25H Pressure/Temperature sensor at address 0x5c and by a HTS221 Humidity/Temperature sensor at 0x5f on the i2c bus.
+* le capteur IMU via un LSM9DS1 trouvable à l'adresse i2c 0x1c-0x1e (28-30) et 0x6a-0x6b (106-107), avec interruption par le ATTINY88,
+* Le capteurs de pression/température est un LPS25H disponible à l'adresse i2c 0x5c (92),
+* le capteurs d'humidité/températeur HTS221 est lui accessible à l'adresse i2c 0x5f (104).

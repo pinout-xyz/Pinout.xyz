@@ -87,7 +87,6 @@ overlays:
 - rpf-dots
 - rtk-000-001
 - scroll-phat
-- sense-hat
 - skywriter-hat
 - traffic-hat
 - unicorn-hat
@@ -100,10 +99,11 @@ overlays:
 - zero-lipo
 - rabbitmax-flex
 - rainbow-hat
-- picade-hat
 - adafruit-speaker-bonnet
 - adafruit-gps-hat
 - uugear-zero2go
 - adafruit-pigrrl-pcb
 - adafruit-animated-eyes-bonnet
 - waveshare-adda-board
+- sense-hat
+- picade-hat

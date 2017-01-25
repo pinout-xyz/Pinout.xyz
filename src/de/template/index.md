@@ -1,6 +1,6 @@
 #Pinout!
 
-###Der umfassende Letifaden zur Raspberry Pi GPIO Anschlussbelegung - jetzt auch zum Raspberry Pi Model B+ und Raspberry Pi 2
+###Der umfassende Leitfaden zur Raspberry Pi GPIO Anschlussbelegung - jetzt auch zum Raspberry Pi Model B+ und Raspberry Pi 2
 
 Diese GPIO Anschlussbelegung ist nicht zum Ausdrucken gedacht, aber sie ist ein umfassender Leitfaden und eine tolles Nachschlagewerk für die GPIO-Pins Deines Raspberry Pi's.
 

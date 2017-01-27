@@ -30,6 +30,20 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '16':
+    name: IMU Interrupt
+    mode: output
+  '18':
+    name: IMU Interrupt
+    mode: output
+  '22':
+    name: Atmel Prog Reset
+    mode: output
+    active: high
+  '24':
+    name: Atmel Chip Select
+    mode: chipselect
+    active: high
 i2c:
   '0x5c':
     name: Pressure/Temp

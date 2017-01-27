@@ -23,6 +23,13 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+install:
+  'devices':
+  - 'i2c'
+i2c:
+  '0x54':
+    name: LED driver
+    device: sn3218
 -->
 #PiGlow
 

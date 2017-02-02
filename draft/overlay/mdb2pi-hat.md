@@ -41,7 +41,7 @@ i2c:
 -->
 #MDB2Pi HAT
 
-The MDB2Pi HAT can serve as an MDB master or as a peripheral MDB Device for Vending Machines (VMC). It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol.
+The MDB2Pi HAT can serve as a MDB master or as a peripheral MDB Device for Vending Machines (VMC). It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol.
 The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A@5V. Thus no separate power supply is required for the pi.
 
 ##Configuration
@@ -51,13 +51,14 @@ enable_uart=1
 dtparam=i2c_vc=on
 ```
 
-2. disable serial console output by editing :
+2. disable serial console output:
 ```bash
 sudo nano /boot/cmdline.txt
 ```
 --> remove the "console=..." parameter
 
 ##MDB Master and Cashless Device Demo:
+Prerequisites:
 1. Install mono runtime:
 ```bash
 sudo apt-get install mono-runtime

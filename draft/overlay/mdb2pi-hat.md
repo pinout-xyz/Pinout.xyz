@@ -45,26 +45,25 @@ The MDB2Pi HAT can serve as a MDB master or as a peripheral MDB Device for Vendi
 The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A@5V. Thus no separate power supply is required for the pi.
 
 ##Configuration
-1. Enable UART and HAT detection by adding the following lines to /boot/config.txt:
+Enable UART and HAT detection by adding the following lines to /boot/config.txt:
 ```bash
 enable_uart=1
 dtparam=i2c_vc=on
 ```
 
-2. disable serial console output:
+disable serial console output:
 ```bash
 sudo nano /boot/cmdline.txt
 ```
 --> remove the "console=..." parameter
 
 ##MDB Master and Cashless Device Demo:
-Prerequisites:
-1. Install mono runtime:
+Install mono runtime:
 ```bash
 sudo apt-get install mono-runtime
 ```
 
-2. Get the Demo code:
+Get the Demo code:
 ```bash
 wget https://secure.abrantix.com/downloads/MDBConverter/MDBConverter.zip
 unzip MDBConverter.zip

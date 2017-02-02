@@ -57,7 +57,7 @@ sudo nano /boot/cmdline.txt
 ```
 --> remove the "console=..." parameter
 
-##MDB Master Demo:
+##MDB Master and Cashless Device Demo:
 1. Install mono runtime:
 ```bash
 sudo apt-get install mono-runtime
@@ -65,15 +65,22 @@ sudo apt-get install mono-runtime
 
 2. Get the Demo code:
 ```bash
-wget https://secure.abrantix.com/downloads/MDBConverter/MasterSimulatorConsole.zip
-unzip MasterSimulatorConsole.zip
+wget https://secure.abrantix.com/downloads/MDBConverter/MDBConverter.zip
+unzip MDBConverter.zip
 ```
 
-3. Run the Demo:
+How to run the Master Demo:
 ```bash
-cd MasterSimulatorConsole
+cd MDBConverter
 mono MDBMasterSimulatorConsole.exe /dev/serial0 115200
 ```
+
+How to run the Cashless Device Demo:
+```bash
+cd MDBConverter
+mono MDBCashlessDeviceSimulatorConsole.exe /dev/serial0 115200
+```
+
 Hint: On newer raspbian releases, the serial port is available as /dev/serial0 - older releases may use dev/ttyAMA0.
 
 

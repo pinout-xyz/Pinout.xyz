@@ -70,18 +70,19 @@ unzip MDBConverter.zip
 ```
 
 How to run the Master Demo:
--> Please make sure to set the DIP Switch to ON-OFF-OFF-ON-ON
+
 ```bash
 cd MDBConverter
 mono MDBMasterSimulatorConsole.exe /dev/serial0 115200
 ```
+-> Please make sure to set the DIP Switch to ON-OFF-OFF-ON-ON
 
 How to run the Cashless Device Demo:
--> Please make sure to set the DIP Switch to OFF-ON-ON-OFF-OFF
 ```bash
 cd MDBConverter
 mono MDBCashlessDeviceSimulatorConsole.exe /dev/serial0 115200
 ```
+-> Please make sure to set the DIP Switch to OFF-ON-ON-OFF-OFF
 
 Hint: On newer raspbian releases, the serial port is available as /dev/serial0 - older releases may use dev/ttyAMA0.
 

@@ -31,30 +31,30 @@ pin:
     name: Button
     mode: input
     active: low
-  '11'
+  '11':
     name: IRQ
     mode: input
     active: low
-  '29'
+  '29':
     name: Green LED
     mode: output
     active: low
-  '31'
+  '31':
     name: Red LED
     mode: output
     active: low
-  '32'
+  '32':
     name: PWM0
     mode: output
     active: high
-  '33'
+  '33':
     name: PWM1
     mode: output
     active: high
-  '37' 
+  '37':
     name: Blue LED
     mode: output
-    active:low
+    active: low
 i2c:
   '0x5C':
     name: MPR121

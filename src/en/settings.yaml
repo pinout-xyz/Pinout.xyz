@@ -6,9 +6,9 @@ url_suffix:
 urls:
   GND: ground
 featured:
+- picade-hat
 - speaker-phat
-- pijack
-- papirus-zero
+- pi-cap
 - 4tronix-picon-zero
 overlays:
 - ground
@@ -108,3 +108,4 @@ overlays:
 - sense-hat
 - picade-hat
 - speaker-phat
+- pi-cap

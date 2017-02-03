@@ -70,12 +70,14 @@ unzip MDBConverter.zip
 ```
 
 How to run the Master Demo:
+-> Please make sure to set the DIP Switch to ON-OFF-OFF-ON-ON
 ```bash
 cd MDBConverter
 mono MDBMasterSimulatorConsole.exe /dev/serial0 115200
 ```
 
 How to run the Cashless Device Demo:
+-> Please make sure to set the DIP Switch to OFF-ON-ON-OFF-OFF
 ```bash
 cd MDBConverter
 mono MDBCashlessDeviceSimulatorConsole.exe /dev/serial0 115200

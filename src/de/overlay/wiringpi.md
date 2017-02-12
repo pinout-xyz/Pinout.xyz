@@ -66,10 +66,10 @@ pin:
 -->
 #WiringPi Bibliothek
 
-###WiringPi is der Versuch die Einfachheit der VErdrahtung des Arduino auf den Raspberry Pi zu bringen.
+###WiringPi is der Versuch die Einfachheit der Verdrahtung des Arduino auf den Raspberry Pi zu bringen.
 
 Das Ziel dieser Bibliothek ist es, eine einzige gemeinsame Plattform und Programmierschnistelle für den Zugriff auf die
-GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur VErfügung zu stellen.
+GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur Verfügung zu stellen.
 Im Kern ist WiringPi eine C-Bibliothek, aber sie steht auch in Ruby und Python per "gem install wiringpi" bzw. "pip install wiringpi2" zur Verfügung.
 
 Bei Python muss man auf die "2" am Ende achten - das ist die WiringPi2-Python Bibliothek, die momentan die aktuelle Version ist.

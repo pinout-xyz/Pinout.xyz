@@ -12,7 +12,7 @@ schematic: https://learn.adafruit.com/assets/26348
 buy: https://www.adafruit.com/products/2441
 image: 'adafruit-pitft-35-plus.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':

@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 ---
 name: Ultimate GPS HAT
 class: board
@@ -33,16 +33,16 @@ pin:
 -->
 #Ultimate GPS HAT
 
-The Ultimate GPS HAT from Adafruit adds precision time and location to your Raspberry Pi.
+Ultimate GPS HAT (Sombrero definitivo de GPS) de Adafruit le proporciona a tu Raspberry Pi una ubicación y tiempo precisos.
 
-Features:
+Características:
 
-* 165 dBm sensitivity, 10 Hz updates, 66 channels
-* Only 20mA current draw
-* Built in Real Time Clock (RTC)
-* PPS output on fix
-* Works up to ~32Km altitude
-* Internal patch antenna + u.FL connector for external active antenna
-* Fix status LED blinks when the GPS has determined the current coordinates
-* break-outs for all the Raspberry Pi's extra pins
-* Prototyping area for adding LEDs, sensors, and more
+* Sensibilidad: 165 dBm, Tasa de refresco: 10 Hz, Canales: 66 
+* Consumo de potencia de sólo 20mA 
+* Reloj de tiempo real integrado (RTC)
+* Señal PPS al obtener la ubicación
+* Funciona hasta una altitud de ~32Km
+* Antena de conexión interna + conexión U.FL para una antena exterior activa
+* LED que indica cuando el GPS obtiene la ubicación actual
+* Conexiones para todos los pins extra del Raspberry Pi
+* Área para prototipos que permite agregar LEDs, sensores y más

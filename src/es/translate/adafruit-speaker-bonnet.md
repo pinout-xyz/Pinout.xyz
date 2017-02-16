@@ -34,11 +34,12 @@ pin:
 -->
 #Speaker Bonnet
 
-The Speaker Bonnet is a 3W stereo amplifier add-on for the Raspberry Pi. It uses I2S, so you get really crisp audio. The digital data goes right into the amplifier so there's no static like you hear from the headphone jack. It works with any and all Raspberry Pi computers with a 2x20 connector - A+, B+, Zero, Pi 2, Pi 3.
+El Speaker Bonnet (Gorro parlante) es un amplificador estéreo que se adapta al Raspberry Pi. Utiliza un bus I2S para mayor claridad en el sonido. Los datos digitales entran directo al amplificador por lo que no hay estática como con un enchufe de audífonos. Funciona con cualquier Raspberry Pi con conector 2x20 - A+, B+, Zero, Pi 2, Pi 3.
 
-Once soldered just plug in any 4Ω to 8Ω speakers through the terminal blocks or Adafruit’s speaker set through the JST.
+Una vez soldado, solo conecte un parlante entre 4Ω y 8Ω a los bloques terminal o unos parlantes Adafruit al conector JST.
 
-To install:
+Para instalar:
+
 ```bash
 curl -sS https://raw.githubusercontent.com/adafruit/\
 Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash

@@ -40,7 +40,8 @@ i2c:
     name: DS1307
     device: DS1307
  -->
- # Adafruit RGB Matrix HAT + RTC
+#Adafruit RGB Matrix HAT + RTC
+ 
  
 This HAT plugs into your Pi and makes it super easy to control RGB matrices such as those you see in the likes of Times square enabling you to create a colorful scrolling display or mini LED wall with ease. A 5V power supply is also required, not included, for powering the matrix itself. The Pi cannot do it due to the high currents. To calculate the max current of your matrix set up, multiply the width of all the chained matrix by 0.12 : A 32 pixel wide matrix needs 32*0.12 = 3.85A so pick up a 5V 4A power supply. Please note: this HAT is only for use with HUB75 type RGB Matrices. Not for use with NeoPixel, DotStar, or other 'addressable' LEDs.
 

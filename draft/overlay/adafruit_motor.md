@@ -8,7 +8,7 @@
  description: Drive 4 DC Motors or 2 Stepper Motors with a raspberry pi.
  url: https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi
  buy: https://www.adafruit.com/products/2348
- image: motor.png
+ image: adafruit_motor.png
  pincount: 40
  eeprom: yes
  power:

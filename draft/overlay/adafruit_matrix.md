@@ -8,7 +8,7 @@
  description: Run large HUB75 matrices of a Raspberry Pi
  url: https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi
  buy: https://www.adafruit.com/products/2345
- image: adafruit_rgb_matrix.png 
+ image: adafruit_matrix.png 
  pincount: 40
  eeprom: yes
  power:

@@ -29,7 +29,10 @@
      mode:SDA
    ’5’:
      mode:SCL
-    
+ i2c:
+  '0x20':
+    name: TB6612
+    device: TB6612 
    
  -->
 #Adafruit DC & Stepper Motor HAT 

@@ -109,3 +109,9 @@ overlays:
 - picade-hat
 - speaker-phat
 - pi-cap
+- adafruit-rgb-matrix-hat
+- adafruit-16x2-lcd
+- adafruit-arcade-bonnet
+- adafruit-motor-hat
+- adafruit-pi-rtc
+- adafruit-tft-kippah

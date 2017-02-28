@@ -115,3 +115,5 @@ overlays:
 - adafruit-motor-hat
 - adafruit-pi-rtc
 - adafruit-tft-kippah
+- scroll-phat-hd
+- phat-beat

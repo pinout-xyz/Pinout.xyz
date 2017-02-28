@@ -3,7 +3,7 @@
 name: PiTFT Plus 3.5"
 class: board
 type: display
-formfactor: Custom
+formfactor: Otro
 manufacturer: Adafruit
 description: A TFT Display for the Raspberry Pi
 url: https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi

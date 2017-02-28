@@ -3,7 +3,7 @@
 name: PiGRRL Gamepad
 class: board
 type: io
-formfactor: Custom
+formfactor: Otro
 manufacturer: Adafruit
 description: An add-on board for the Raspberry Pi
 url: https://learn.adafruit.com/pigrrl-2

@@ -2,20 +2,18 @@
 ---
 name: Adafruit Arcade Bonnet
 class: board
-type: IO
-formfactor: PHAT
+type: io
+formfactor: pHAT
 manufacturer: Adafruit
-description: Connect joystick,buttons and speakers to your pi
+description: Connect joystick,buttons and speakers to your Pi
 url: https://learn.adafruit.com/adafruit-arcade-bonnet-for-raspberry-pi
 buy: https://www.adafruit.com/products/3422
 image: adafruit-arcade-bonnet.png
 pincount: 40
 eeprom: no
 power:
-  '2':
   '1':
-  '4':
-  '17':     
+  '2':
 ground:
   '6':
   '9':
@@ -43,7 +41,7 @@ i2c:
 -->
 #Adafruit Arcade Bonnet
 
-This Adafruit Arcade Bonnet is designed to make small emulator projects a little easier to build. Here is some features!: 
+This Adafruit Arcade Bonnet is designed to make small emulator projects a little easier to build. Here are the board's features: 
 
 It is the same size as a Pi Zero, so for really compact builds, this is super small. You can use it with a Pi 2, 3, B+ or any 2x20 connector Pi.
 

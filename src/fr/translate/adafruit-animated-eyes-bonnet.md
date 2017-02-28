@@ -2,8 +2,8 @@
 ---
 name: Animated Eyes Bonnet
 class: board
-type: Display
-formfactor: PHAT
+type: display
+formfactor: pHAT
 manufacturer: Adafruit
 description: Two 128x128 pixel OLED or TFT LCD for the Raspberry Pi
 url: https://learn.adafruit.com/animated-snake-eyes-bonnet-for-raspberry-pi/
@@ -12,9 +12,7 @@ image: adafruit-animated-eyes-bonnet.png
 pincount: 40
 eeprom: no
 power:
-  '17':
   '1':
-  '4':
   '2':
 ground:
   '9':

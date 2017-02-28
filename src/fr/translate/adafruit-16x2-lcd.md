@@ -2,7 +2,7 @@
 ---
 name: Adafruit 16x2 Character LCD
 class: board
-type: Display
+type: display
 formfactor: Custom
 manufacturer: Adafruit
 description: 16x2 Character LCD and Keypad

@@ -2,7 +2,7 @@
 ---
 name: Adafruit DPI TFT Kippah
 class: board
-type: Display
+type: display
 formfactor: HAT
 manufacturer: Adafruit
 description: Run 40 pin TFT's of a Raspberry Pi
@@ -14,8 +14,6 @@ eeprom: no
 power:
   '1':
   '2':
-  '4':
-  '17':
 ground:
   '9':
   '25':

@@ -2,10 +2,10 @@
 ---
 name: Adafruit DC & Stepper Motor HAT 
 class: board
-type: Motor
+type: motor
 formfactor: HAT
 manufacturer: Adafruit
-description: Drive 4 DC Motors or 2 Stepper Motors with a raspberry pi.
+description: Drive 4 DC Motors or 2 Stepper Motors with a Raspberry Pi
 url: https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi
 buy: https://www.adafruit.com/products/2348
 image: adafruit-motor-hat.png

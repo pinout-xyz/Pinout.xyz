@@ -2,10 +2,10 @@
 ---
 name: Adafruit PiRTC 
 class: board
-type: RTC
+type: rtc
 formfactor: Custom
 manufacturer: Adafruit
-description: Add a simple RTC to your pi
+description: Add a simple RTC to your Pi
 url: https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-up-and-test-i2c
 buy: https://www.adafruit.com/products/3386
 image: adafruit-pi-rtc.png

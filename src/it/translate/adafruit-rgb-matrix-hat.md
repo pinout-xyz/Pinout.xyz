@@ -2,7 +2,7 @@
 ---
 name: Adafruit RGB Matrix HAT + RTC
 class: board
-type: LED
+type: led,rtc
 formfactor: HAT
 manufacturer: Adafruit
 description: Run large HUB75 matrices of a Raspberry Pi
@@ -14,8 +14,6 @@ eeprom: yes
 power:
   '1':
   '2':
-  '4':
-  '17':
 ground:
   '9':
   '25':

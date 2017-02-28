@@ -5,7 +5,7 @@ class: board
 type: gps,rtc
 formfactor: HAT
 manufacturer: Adafruit
-description: Add precision time and location to your Raspberry Pi!
+description: Add precision time and location to your Raspberry Pi
 url: https://learn.adafruit.com/adafruit-ultimate-gps-hat-for-raspberry-pi
 schematic: https://learn.adafruit.com/assets/21938
 buy: https://www.adafruit.com/products/2324

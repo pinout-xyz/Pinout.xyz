@@ -24,10 +24,6 @@ ground:
   '34':
   '39':
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
   '12':
     name: I2S
   '35':
@@ -45,11 +41,6 @@ pin:
 install:
   'devices':
   - 'i2s'
-  - 'i2c'
-i2c:
-  '0x54':
-    name: LED driver
-    device: sn3218
 -->
 #pHAT BEAT
 

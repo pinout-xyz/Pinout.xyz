@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 ---
 name: Animated Eyes Bonnet
 class: board
@@ -57,13 +57,13 @@ pin:
   '24':
     mode: spi
 -->
-The Snake Eyes Bonnet is a Raspberry Pi accessory for driving two 128x128 pixel OLED or TFT LCD displays, and also provides four analog inputs for sensors.
+Snake Eyes Bonnet (Gorro ojos de serpiente) es un accesorio para Raspberry Pi que permite controlar dos pantallas OLED o TFT LCD de 128x128 píxeles y cuenta con cuatro entradas analógicas para sensores.
 
-It's perfect for making cosplay masks, props, spooky sculptures for halloween, animatronics, robots...anything where you want to add a pair of animated eyes!
+Es perfecto para hacer máscaras de cosplay, utilería, esculturas escalofriantes en halloween, animatrónicos, robots... ¡Cualquier cosa que necesite un par de ojos animados!
 
-It's a follow-on of sorts to another project: Electronic Animated Eyes Using Teensy 3.2. The Teensy 3.2 is a very capable microcontroller, and the code for that project squeezed every bit of space and performance from it. So why not convert over to a Pi?
+Surgió como la continuación de otro proyecto: Ojos Animados Electrónicos Usando Teensy 3.2. El Teensy 3.2 es un microcontrolador bastante capaz y el código de ese proyecto le exprimió cada gota de espacio y desempeño. Así que, ¿por qué no convertirlo al Pi?
 
-To install:
+Para instalar:
 
 ```bash
 curl -O https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/pi-eyes.sh

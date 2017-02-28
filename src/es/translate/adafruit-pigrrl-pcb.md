@@ -72,6 +72,6 @@ pin:
 -->
 #PiGRRL Gamepad
 
-The PiGRRL Gamepad PCB is designed for use in portable gaming projects like the PiGRRL 2 but it's basically a set of buttons wired between ground and select GPIO.
+La placa PiGRRL Gamepad se diseñó para el uso en proyectos de videojuegos portátiles como el PiGRRL 2 aunque es en esencia un conjunto de botones conectados entre tierra y un pin GPIO.
 
-All button inputs should be configured with their corresponding internal pull-ups. Note that there are no protection circuitry, so be sure not to drive the GPIO high and short them to ground via button actions!
+Todas las entradas de los botones deben ser configurados con su correspondiente resistencia elevadora (Pull-Up) interna. Nótese que no hay circuitos de protección, !asegúrese de nunca poner el pin GPIO en alto y hacer corto con tierra presionando algún botón!

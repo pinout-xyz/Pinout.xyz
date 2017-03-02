@@ -26,10 +26,6 @@ ground:
 pin:
   '12':
     name: I2S
-  '35':
-    name: I2S
-  '40':
-    name: I2S
   '16':
     name: Data
     mode: output
@@ -38,6 +34,34 @@ pin:
     name: Clock
     mode: output
     active: high
+  '29':
+    name: Fast Forward
+    mode: input
+    active: low
+  '31':
+    name: Play/Pause
+    mode: input
+    active: low
+  '32':
+    name: On/Off
+    mode: input
+    active: low
+  '33':
+    name: Rewind
+    mode: input
+    active: low
+  '35':
+    name: I2S
+  '36':
+    name: Volume Up
+    mode: input
+    active: low
+  '37':
+    name: Volume Down
+    mode: input
+    active: low
+  '40':
+    name: I2S
 install:
   'devices':
   - 'i2s'

@@ -56,19 +56,19 @@ pin:
   '26':
     mode: spi
   '36':
-    name: Button 1
+    name: SW1
     mode: input
     active: low
   '37':
-    name: Button 2
+    name: SW2
     mode: input
     active: low  
   '38':
-    name: Button 3
+    name: SW3
     mode: input
     active: low
   '40':
-    name: Button 4
+    name: SW4
     mode: input
     active: low
 -->

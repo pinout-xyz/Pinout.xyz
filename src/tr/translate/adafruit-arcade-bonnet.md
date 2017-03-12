@@ -1,6 +1,6 @@
 <!--
 ---
-name: Adafruit Arcade Bonnet
+name: Arcade Bonnet
 class: board
 type: io
 formfactor: pHAT
@@ -39,7 +39,7 @@ i2c:
     name: MCP23017
     device: MCP23017   
 -->
-#Adafruit Arcade Bonnet
+#Arcade Bonnet
 
 This Adafruit Arcade Bonnet is designed to make small emulator projects a little easier to build. Here are the board's features: 
 

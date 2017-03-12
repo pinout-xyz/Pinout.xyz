@@ -1,6 +1,6 @@
 ﻿<!--
 ---
-name: Animated Eyes Bonnet
+name: Snake Eyes Bonnet
 class: board
 type: display
 formfactor: pHAT
@@ -56,7 +56,12 @@ pin:
     mode: spi
   '24':
     mode: spi
+i2c:
+  '0x48':
+    name: Analog Input
+    device: ads1015
 -->
+#Snake Eyes Bonnet
 Snake Eyes Bonnet (Gorro ojos de serpiente) es un accesorio para Raspberry Pi que permite controlar dos pantallas OLED o TFT LCD de 128x128 píxeles y cuenta con cuatro entradas analógicas para sensores.
 
 Es perfecto para hacer máscaras de cosplay, utilería, esculturas escalofriantes en halloween, animatrónicos, robots... ¡Cualquier cosa que necesite un par de ojos animados!

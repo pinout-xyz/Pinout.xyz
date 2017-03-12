@@ -1,6 +1,6 @@
 <!--
 ---
-name: Adafruit PiRTC 
+name: PiRTC 
 class: board
 type: rtc
 formfactor: Custom
@@ -25,7 +25,7 @@ i2c:
     name: PCF8523
     device: PCF8523 
 -->
-#Adafruit PiRTC
+#PiRTC
 
 This is a great battery-backed real time clock (RTC) that allows your Raspberry Pi project to keep track of time if the power is lost. Perfect for data-logging, clock-building, time-stamping, timers and alarms, etc. Equipped with PCF8523 RTC, it works great with the Raspberry Pi and has native kernel support.
 

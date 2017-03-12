@@ -208,8 +208,9 @@ def load_overlay(overlay):
             for addr in loaded['i2c']:
                 data = loaded['i2c'][addr]
                 addr = str(addr)
+                dev=data['device'].upper()
                 if data is not None and 'device' in data:
-                    details.append('{address}: {dev}'.format(address=addr, dev=data['device']))
+                    details.append('{address}: {device}'.format(address=addr, device=dev))
 
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:

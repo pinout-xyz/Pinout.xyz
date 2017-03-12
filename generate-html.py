@@ -195,14 +195,21 @@ def load_overlay(overlay):
                     if pin in ['19','21','23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-            if uses_i2c:
-                details.append(strings['uses_i2c'])
-
             if uses_spi:
                 details.append(strings['uses_spi'])
 
             if uses > 0:
                 details.append(strings['uses_n_gpio_pins'].format(uses))
+
+            if uses_i2c:
+                details.append(strings['uses_i2c'])
+
+        if 'i2c' in loaded:
+            for addr in loaded['i2c']:
+                data = loaded['i2c'][addr]
+                addr = str(addr)
+                if data is not None and 'device' in data:
+                    details.append('{address}: {dev}'.format(address=addr, dev=data['device']))
 
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:

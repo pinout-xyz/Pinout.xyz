@@ -79,6 +79,10 @@ pin:
     name: PCM_DOUT
     mode: input
     description: WM5102 AIF PCM - DOUT
+i2c:
+  '0x1a':
+    name: S/PDIF transceiver
+    device: WM8804
 -->
 #Cirrus Logic Audio Card
 

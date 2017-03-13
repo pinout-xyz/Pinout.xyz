@@ -34,7 +34,7 @@ pin:
   '10':
     name: Discharge
   '11':
-    name: Temp Sens          
+    name: Temp Sens
   '12':
     name: ePaper PWM
   '13':
@@ -71,15 +71,13 @@ pin:
     name: SW4
     mode: input
     active: low
-   i2c:
-    '0x4B':
-      name: Temperature Sensor
-      device: LM75BD
-    '0x6F':
-      name: Real Time Clock
-      device: MCP7940N
-
-
+i2c:
+  '0x4B':
+    name: Temperature Sensor
+    device: LM75BD
+  '0x6F':
+    name: Real Time Clock
+    device: MCP7940N
 -->
 #PaPiRus HAT
 

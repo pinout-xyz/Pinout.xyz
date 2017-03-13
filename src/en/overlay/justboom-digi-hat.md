@@ -10,7 +10,7 @@ url: https://www.justboom.co/product/justboom-digi-hat/
 buy: https://www.justboom.co/product/justboom-digi-hat/
 image: 'justboom-digi-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
@@ -43,6 +43,10 @@ pin:
   '40':
     name: DOUT
     mode: i2s
+  i2c:
+    '0x3B':
+      name: Digital Interface Transceiver
+      device: WM8804G
 -->
 #Digi HAT
 

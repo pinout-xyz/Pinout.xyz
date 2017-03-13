@@ -43,6 +43,10 @@ pin:
   '40':
     name: DOUT
     mode: i2s
+  i2c:
+    '0x4D':
+      name: DAC
+      device: PCM5121
 -->
 #DAC Zero
 

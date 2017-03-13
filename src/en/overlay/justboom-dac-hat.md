@@ -10,7 +10,7 @@ url: https://www.justboom.co/product/justboom-dac-hat/
 buy: https://www.justboom.co/product/justboom-dac-hat/
 image: 'justboom-dac-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
@@ -43,6 +43,10 @@ pin:
   '40':
     name: DOUT
     mode: i2s
+  i2c:
+    '0x4D':
+      name: DAC
+      device: PCM5122
 -->
 #DAC HAT
 

@@ -10,7 +10,7 @@ url: https://www.justboom.co/product/justboom-amp-hat/
 buy: https://www.justboom.co/product/justboom-amp-hat/
 image: 'justboom-amp-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':
@@ -49,7 +49,6 @@ pin:
     '0x4D':
       name: Amplifier
       device: TAS5756M
-
 -->
 #Amp HAT
 

@@ -10,7 +10,7 @@ url: https://www.justboom.co/product/justboom-dac-hat/
 buy: https://www.justboom.co/product/justboom-dac-hat/
 image: 'justboom-dac-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':

@@ -10,7 +10,7 @@ url: https://www.justboom.co/product/justboom-digi-hat/
 buy: https://www.justboom.co/product/justboom-digi-hat/
 image: 'justboom-digi-hat.png'
 pincount: 40
-eeprom: yes
+eeprom: setup
 power:
   '1':
   '2':

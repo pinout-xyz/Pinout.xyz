@@ -43,6 +43,10 @@ pin:
   '40':
     name: DOUT
     mode: i2s
+  i2c:
+    '0x3B':
+      name: Digital Interface Transceiver
+      device: WM8804G
 -->
 #Digi Zero
 

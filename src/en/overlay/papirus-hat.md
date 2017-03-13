@@ -11,7 +11,7 @@ github: https://github.com/PiSupply/PaPiRus
 buy: https://www.pi-supply.com/product/papirus-epaper-eink-screen-hat-for-raspberry-pi/
 image: 'papirus-hat.png'
 pincount: 40
-eeprom: setup
+eeprom: yes
 power:
   '1':
   '2':
@@ -71,6 +71,15 @@ pin:
     name: SW4
     mode: input
     active: low
+   i2c:
+    '0x4B':
+      name: Temperature Sensor
+      device: LM75BD
+    '0x6F':
+      name: Real Time Clock
+      device: MCP7940N
+
+
 -->
 #PaPiRus HAT
 

@@ -71,6 +71,10 @@ pin:
     name: SW1
     mode: input
     active: low
+  i2c:
+    '0x4B':
+      name: Temperature Sensor
+      device: LM75BD
 -->
 #PaPiRus Zero
 

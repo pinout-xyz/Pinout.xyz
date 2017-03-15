@@ -41,21 +41,17 @@ i2c:
 -->
 #Arcade Bonnet
 
-This Adafruit Arcade Bonnet is designed to make small emulator projects a little easier to build. Here are the board's features: 
+Arcade Bonnet de Adafruit está diseñado para facilitar la construcción de pequeños emuladores. Estas son sus especificaciones:
 
-It is the same size as a Pi Zero, so for really compact builds, this is super small. You can use it with a Pi 2, 3, B+ or any 2x20 connector Pi.
+Tiene una toma JST para conectar 6 botones de arcade fácilmente.
 
-It has JST sockets so you can plug in six arcade buttons easily.
+Permite utilizar distintos tipos de joysticks, tipo "clicky", analógicos o con potenciómetros.
 
-Header breakouts for use with both clicky-type switched joysticks and...
+Tiene una salida de altavoces de 3W para conectar altavoces de 4-8  ohm mientras se usa la salida de TV, HDMI o PiTFT.
 
-Header breakout and converter for using analog-type joysticks or thumbsticks with potentiometers inside
+Los pulsadores se manejan con el conversor I2C-GPIO, muy rápido y libera todos los pines para poder utilizar Arcade Bonnet con cualquier otro dispositivo que utilice muchos  pines.
 
-A 3W speaker output that can drive 4-8 ohm speakers for when using with a TV output, HDMI display or PiTFT.
-
-Switches are all managed with an I2C-GPIO converter with interrupt out. The converter is very fast and frees up all the pins so you can use this Bonnet with a PiTFT or any other accessory/device that uses a lot of pins!
-
-To install:
+Para instalar:
 
 ```bash
 curl -O https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/arcade-bonnet.sh

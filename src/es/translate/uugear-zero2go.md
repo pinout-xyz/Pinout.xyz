@@ -29,14 +29,15 @@ pin:
 -->
 # Zero2Go
 
-Zero2Go is a Pi-Zero sized power supply that accepts DC 5~26V and output DC 5V/2.6A max. It allows you to turn on/off your Raspberry Pi (Zero or other models) with a single tap.
+Zero2Go es una fuente de alimentación de tamaño de Pi Zero que acepta entrada DC 5~26V y salida de 5V/2.6A máximo. Permite encender/apagar tu Raspberry Pi (Zero u otros modelos) con un solo toque.
 
-Zero2Go can connect to a Raspberry Pi Zero without soldering via pogo pins. It also supports other Raspberry Pi models with 40-pin header, including A+, B+, 2B, 3B.
+Puede conectarse a Raspberry Pi Zero sin soldaduras, gracias a los pines pogo. Además, puede utilizarse con cualquier Raspberry Pi de 40 pines, incluyendo A+, B+, 2B y 3B.
 
-You can use the two commands below to install software for Zero2Go:
+Puedes utilizar estos dos comandos para instalar el software para Zero2Go:
 
 ```bash
 wget http://www.uugear.com/repo/Zero2Go/installZero2Go.sh
 sudo sh installZero2Go.sh
 ```
-After the installation is done, reboot your Raspberry Pi and your Zero2Go is ready to go.
+
+Tras la instalación, reinicia tu Raspberry Pi y tu Zero2Go estará listo.

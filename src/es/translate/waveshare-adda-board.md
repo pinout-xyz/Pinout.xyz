@@ -56,18 +56,18 @@ pin:
 -->
 #High-Precision AD/DA Board
 
-The High-Precision AD/DA Board allows you to add high-precision analog to digital and digital to analog functions to the Raspberry Pi.
+La placa High-Precision AD/DA proporciona funciones de conversión analógica a digital y viceversa de gran precisión a Raspberry Pi.
 
-##Features
+##Características
 
-- Onboard ADS1256, 8ch 24bit high-precision ADC (4ch differential input), 30ksps sampling rate
-- Onboard DAC8532, 2ch 16bit high-precision DAC
-- Onboard input interface via pinheaders, for connecting analog signal
-    - the pinout is compatible with Waveshare sensor interface standard, easy to connect various analog sensor modules
-- Onboard input/output interface via screw terminals, for connecting analog/digital signal
-- Features AD/DA detect circuit, easy for signal demonstration
+- ADS1256, 8 canales 24 bit alta precisión ADC (4 canales de salida diferencial), 30ksps velocidad de sampleo
+- DAC8532, 2 canales 16 bit alta precisión DAC8532
+- Interfaz a través de los pines para conectar señal analógica
+    - Los pines son compatibles con la interfaz estándar Waveshare, para conectar fácilmente distintos sensores
+- Interfaz de entrada/salida a través de las conexiones analógica/digital
+- Circuito de detección AD/DA para demostraciones sencillas
 
-##Getting Started
+##Comienzo
 
-- [Official Wiki page getting started on Linux](http://www.waveshare.com/wiki/High-Precision_AD/DA_Board)
-- [Raspberry Pi AD/DA Board Library for Window 10 IoT Core](https://www.hackster.io/laserbrain/raspberry-pi-ad-da-board-library-for-window-10-iot-core-c8cc34 "www.hackster.io")
+- [Wiki oficial](http://www.waveshare.com/wiki/High-Precision_AD/DA_Board)
+- [Libería Raspberry Pi AD/DA Board para Windows 10 IoT Core](https://www.hackster.io/laserbrain/raspberry-pi-ad-da-board-library-for-window-10-iot-core-c8cc34 "www.hackster.io")

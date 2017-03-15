@@ -43,11 +43,11 @@ i2c:
 -->
 #Speaker pHAT
 
-Speaker pHAT crams an I2S DAC and mono amplifier, a tiny 8Ω 2W speaker, and a 10 LED bar graph all on a board no bigger than a Pi zero.
+Speaker pHAT cuenta con I2S DAC, amplificador mono, un pequeño altavoz de 8Ω y 2W además de unas barras de 10 LED, todo en una placa del mismo tamaño que una Pi Zero.
 
-Though designed to match the format of the Raspberry Pi Zero it is compatible with all 40-pin GPIO Raspberry Pi variants (2/3/B+/A+/Zero).
+Pese a ser diseñado para ser utilizado con Raspberry Pi Zero, es compatible con todas las Raspberry Pi de 40 pines GPIO (2/3/B+/A+/Zero)
 
-To get the Speaker pHAT set up and ready to go you can use the one-line product installer:
+Para poner el pHAT en funcionamiento, puedes utilizar nuestro instalador de una línea.
 
 ```bash
 curl -sS https://get.pimoroni.com/speakerphat | bash

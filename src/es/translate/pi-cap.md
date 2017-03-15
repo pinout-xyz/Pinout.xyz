@@ -60,20 +60,22 @@ i2c:
     name: MPR121
     device: MPR121
 -->
-# Pi-Cap
+# Pi Cap
 
-The Pi Cap adds precise capacitive touch, distance sensing and high quality audio to any Raspberry Pi with a 40 pin GPIO connector. The 12 electrodes can be connected to anything conductive to create a touch or proximity interface. Additionally the Pi Cap includes a user-programmable RGB LED and a multi-function button.
+Pi Cap añade botones capacitivos precisos, sensores de distancia y sonido de gran calidad a cualquier Raspberry Pi con un conector de 40 pines GPIO. Los 12 electrodos pueden ser conectados a cualquier cosa que conduzca electricidad para crear una interfaz táctil o de proximidad. Además, Pi Cap incluye un LED RGB programable y un botón multifunción.
 
-The Pi Cap software is in the official Raspbian repository, so to install the software simply enter:
+El software de Pi Cap está en repositorio oficial de Raspbian, por lo tanto para instalarlo simplemente:
+
 ```bash
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
 
-Reboot the Raspberry Pi and enter:
+Reinicia la Raspberry Pi y:
 ```bash
 sudo apt-get install picap
 picap-setup
 ```
 
-The Pi Cap provides 7 digital I/O pins, brought out from the 40-way Raspberry Pi GPIO connector – pins 12, 13, 15, 16, 18, 22, 36. The Pi Cap package contains plenty of code examples written in C++, Python and Node.js that are supported by the Pi Cap library.
+Pi Cap proporciona 7 pines digitales I/O, en el conector de 40 pines de Raspberry Pi. Los pines: 12, 13, 15, 16, 18, 22, 36.
+El paquete de Pi Cap contiene muchos ejemplos de código escritos en: C++, Python y Node.js.

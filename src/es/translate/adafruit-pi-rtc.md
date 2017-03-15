@@ -1,6 +1,6 @@
 <!--
 ---
-name: PiRTC 
+name: PiRTC
 class: board
 type: rtc
 formfactor: Custom
@@ -23,10 +23,10 @@ pin:
 i2c:
   '0x68':
     name: PCF8523
-    device: PCF8523 
+    device: PCF8523
 -->
 #PiRTC
 
-This is a great battery-backed real time clock (RTC) that allows your Raspberry Pi project to keep track of time if the power is lost. Perfect for data-logging, clock-building, time-stamping, timers and alarms, etc. Equipped with PCF8523 RTC, it works great with the Raspberry Pi and has native kernel support.
+Es un gran reloj de tiempo real (RTC) respaldado por batería que permite mantener la hora de Raspberry Pi incluso sin corriente, para muestreo de datos, construir relojes, etc. Equipado con el RTC PCF8523, funciona bien con Raspberry Pi y tiene soporte nativo a nivel de kernel.
 
-This RTC will keep the time for about 5 years. The PCF8523 is simple and inexpensive but not a high precision device. It may lose or gain a second or two per day.
+Mantendrá la hora durante unos 5 años. PCF8523 es simple y barato, pero no tiene gran precisión. Puede perder un segundo o dos por día.

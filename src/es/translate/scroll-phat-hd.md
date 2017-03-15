@@ -35,15 +35,14 @@ i2c:
 -->
 #Scroll pHAT HD
 
-Scroll pHAT HD provides a matrix of 119 white LED pixels that is ideal for writing messages, showing graphs, and drawing pictures. Perfect for RPi Zero but works with A+/B+/2 too!
+Scroll pHAT HD proporciona una matriz de 119 píxeles LED blancos, ideal para escribir mensajes, mostrar gráficas o hacer dibujos. Es perfecto para RPi Zero pero también funciona con A+/B+/2.
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para poner el pHAT en funcionamiento puedes utilizar nuestro código de una línea:
 
 ```bash
 curl -sS https://get.pimoroni.com/scrollphathd | bash
 ```
-
-Then import it into your Python script and start tinkering:
+Luego impórtalo en tu script Python y comienza a desarrollar:
 
 ```bash
 import scrollphathd

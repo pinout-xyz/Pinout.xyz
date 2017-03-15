@@ -62,20 +62,20 @@ pin:
 -->
 #RabbitMax Flex
 
-Flexible HAT for Raspberry Pi suitable for do it yourself (DIY) weather station, automated desk assistant or prototyping Internet of Things (IoT).
+HAT flexible para Raspberry Pi, útil para proyectos tipo hazlo tú mismo (DIY): estación meteorológica, asistente de escritorio o prototipos de IoT.
 
-RabbitMax Flex Raspberry Pi HAT includes:
+Incluye:
 
-* Relay
-* IR LED
-* IR photo sensor
-* Buzzer
-* Button
-* RGB LED
-* Slot for modular LCD character display
-* Slots for up to 5 plug and play I2C sensors
+* Relé
+* LED infrarrojo
+* Fotosensor infrarrojo
+* Zumbador
+* Botón
+* LED RGB
+* Espacio para módulo LCD
+* Espacio para hasta 5 sensores I2C plug and play
 
-Some useful resources how to get started with RabbitMax Flex Raspberry Pi HAT:
+Información útil:
 
-* User's manual: [http://rabbitmax.com/files/rabbitmax-flex.pdf](http://rabbitmax.com/files/rabbitmax-flex.pdf)
-* Open source sample applications in Python and C: [https://github.com/RabbitMax/rabbitmax-examples](http://rabbitmax.com/files/rabbitmax-flex.pdf)
+* Manual: [http://rabbitmax.com/files/rabbitmax-flex.pdf](http://rabbitmax.com/files/rabbitmax-flex.pdf)
+* Ejemplos de código abierto en Python y C: [https://github.com/RabbitMax/rabbitmax-examples](http://rabbitmax.com/files/rabbitmax-flex.pdf)

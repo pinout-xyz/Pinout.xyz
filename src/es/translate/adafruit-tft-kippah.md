@@ -8,7 +8,7 @@ manufacturer: Adafruit
 description: Run 40 pin TFT's of a Raspberry Pi
 url: https://learn.adafruit.com/adafruit-dpi-display-kippah-ttl-tft
 buy: https://www.adafruit.com/products/2453
-image: adafruit-tft-kippah.png 
+image: adafruit-tft-kippah.png
 pincount: 40
 eeprom: no
 power:
@@ -22,18 +22,18 @@ ground:
   '30':
   '20':
   '14':
-  '6': 
+  '6':
 pin:
   '3':
   '5':
-  '7': 
+  '7':
   '29':
   '31':
   '26':
   '24':
   '21':
   '19':
-  '23': 
+  '23':
   '32':
   '33':
   '8':
@@ -46,15 +46,15 @@ pin:
   '40':
 -->
 #DPI TFT Kippah
- 
-A TFT panel connected to a Raspberry Pi without the use of an HDMI decoder? What is this sorcery??? It's the DPI Kippah from Adafruit! This HAT-like* board snaps onto a Raspberry Pi B+, A+, Pi 2, Pi 3 or Zero and with a little software configuration, allows you to have what normally would go out the HDMI port come up on a nice little flat screen.
 
-The catch is this add on board uses nearly every pin available on the Raspberry Pi and those pins are hardcoded, they cannot be moved or rearranged. The pins used are GPIO 2 through 21 inclusive. That means you don't get the UART RX/TX pins (no console cable) and you don't get the standard user I2C pins, the EEPROM I2C pins, or hardware SPI pins. You do get to use pins #22, #23, #24, #25, #26 and #27, and the USB ports are fine to use too.
+Esta placa parecida a un HAT permite, con una mínima configuración, conectar una pantalla TFT.
 
-The other catch is that this display replaces the HDMI/NTSC output, so you can't have the DPI HAT and HDMI working at once, nor can you 'flip' between the two.
+Lo negativo es que esta placa utiliza la mayoría de pines GPIO, del 2 al 21 incluidos. Por lo tanto, no podrás usar UART RX/TX (cable consola), I2C, I2C EEPROM o SPI hardware. Puedes usar los pines #22, #23, #24, #25, #26 and #27 y los puertos USB.
 
-Also, there's no PWM's available so you can't have precision backlight control unless you somehow rig up an external PWM generator with a 555 or something.
+Otra desventaja es que sustituye la salida HDMI/NTSC, por lo que no podrás tener DPI y la salida HDMI al mismo tiempo, ni puedes cambiar entre ambas.
 
-Please note it is the same pinout for the touchscreen and none touchscreen version of the board.
- 
-For installation instructions please follow Asdafruits tutorial linked below
+Además, PWM tampoco está disponible por lo que no tendrás un control preciso de la retroiluminación de la pantalla a menos que utilices un generador PWM externo con un 555 o algo similar.
+
+Es el mismo diagrama de pines para la versión táctil y la no-táctil.
+
+Para instalar sigue el tutorial de Adafruit.

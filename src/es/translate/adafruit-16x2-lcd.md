@@ -25,15 +25,15 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#16x2 Character LCD
+#LCD 16x2 caracteres
 
-This plate makes it easy to use a 16x2 Character LCD. Most character LCDs use lots of GPIO pins, but since this uses I2C you only need two pins. 
+Esta placa hace sencillo utilizar una pantalla LCD de 16x2 caracteres. La mayoría de LCDs utilizan muchos pines GPIO, pero como esta utiliza I2C sólo necesita dos pines.
 
-The keypad gives you buttons to input to the display and it comes with a  python library to make it super easy to program.
+El teclado permite introducir datos a la pantalla y viene con una librería Python que hace que sea muy fácil de programar.
 
-Note that the same pinout applies to both positive, negative and normal LCD.
+El mismo diagrama de pines se aplica para LCD positivo, negativo y normal.
 
-To install:
+Para instalar:
 
 ```bash
 sudo apt-get update

@@ -100,16 +100,16 @@ install:
 -->
 #Picade HAT
 
-Picade HAT provides screw terminals for 10 arcade buttons and a joystick. It also includes a digital to analog audio converter and amplifier which outputs to a single speaker terminal.
+Picade HAT proporciona conexión para 10 botones arcade y un joystick. Además incluye un conversor de audio digital a analógico y un amplificador con salida hacia un altavoz. p
 
-All button inputs should be configured with their corresponding internal pull-ups. Buttons should be wired between an input and ground.
+Todos los botones deben ser configurados con su pull-up interno. Los botones deben ser conectados en entrada y tierra.
 
-* 10 button terminals
-* 4 terminals for joystick
-* Stereo audio combined for a single speaker
-* Support for an external power button and safe power shutdown
+* Conexión para 10 botones
+* 4 entradas para un joystick
+* Sonido estéreo en un solo altavoz
+* Soporte para un botón externo
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para poner el HAT en funcionamiento, puedes utilizar nuestro de una línea:
 
 ```bash
 curl -sS https://get.pimoroni.com/picadehat | bash

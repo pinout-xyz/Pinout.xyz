@@ -35,21 +35,22 @@ pin:
     name: LED Yellow/Green
 -->
 #Pi PoE Switch HAT
-The Pi PoE Switch HAT is an add on board for the Raspberry Pi that brings the Pi Supply Switch technology together with PoE all in one fantastic package!
 
-You can now power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable. Perfect for removing the clutter of wires and for reliable use in remote locations.
+El Pi PoE Switch HAT es una placa añadida para Raspberry Pi que lleva la tecnología Switch de Pi Supply junto a PoE.
 
-* Fully 802.3af (mode A and B) compliant active power over Ethernet
-* Contains physical layer power negotiation circuitry, presenting itself as a Class 0 device
-* Fully isolated switched mode power supply (SMPS) - 1500V isolation input to output
-* Overload and short circuit protection
-* Over temperature protection
-* High efficiency (up to 87%) regulated output
-* Input voltage 36-56V, output voltage 5V, output current 10-1300mA, max output power 6.5W
-* Onboard ATtiny 13A microcontroller for power management functionality
-* Leaves all unused GPIO free for use with other add on boards
+Ahora puedes alimentar tu Raspberry Pi y proporcionar una conexión Ethernet en cualquier lugar con un solo cable. Perfecto para eliminar el amasijo de cables y para poder utilizar en localizaciones remotas.
 
-The onboard optional jumper toggles the power functionality:
-* Jumper on. The Pi PoE will power on after holding the power button for two seconds
-* Jumper off. The Pi PoE will power on as soon as you apply power from your injector
+* PoE 802.3af (A y B) completo
+* Circuito de regulación de corriente físico, presentándose como Class 0 device
+* Modo de alimentación switch completamente aislado (SMPS) - aislamiento entrada a salida de 1500V
+* Protección contra sobrecarga y cortocircuito
+* Protección contra sobretemperatura
+* Alta eficiencia (hasta 87 %) de salida regulada
+* Voltaje de entrada de 36-56V, salida de 5V, corriente de salida 10-1300mA, potencia de salida máxima 6.5W
+* Microcontrolador ATtiny 13A para controlar la alimentación
+* Deja todos los GPIO sin utilizar disponibles para otras placas
 
+El cable jumper opcional proporciona los siguientes modos:
+
+* Conectado. Pi PoE se encenderá tras apretar el botón durante dos segundos
+* Desconectado: Pi PoE se encenderá tan pronto como conectes la alimentación

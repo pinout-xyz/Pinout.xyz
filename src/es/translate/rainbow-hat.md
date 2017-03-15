@@ -69,21 +69,21 @@ i2c:
     name: Matrix Driver
     device: HT16K33
 -->
-#Rainbow HAT for Android Things™
+#Rainbow HAT para Android Things™
 
-Rainbow HAT has a buffet of sensors, inputs and displays to explore Android Things™. Use it as a weather station, a clock, a timer or stopwatch, a mood light, or endless other things.
+Rainbow HAT tiene varios sensores, entradas y displays para explorar Android Things™. Utilízalo como estación meteorológica, reloj, cronómetro, efectos de luz o muchas otras cosas.
 
-* Seven APA102 multicolour LEDs
-* Four 14-segment alphanumeric displays (green LEDs)
-* HT16K33 display driver chip
-* Three capacitive touch buttons
-* Atmel QT1070 capacitive touch driver chip
-* Blue, green and red LEDs
-* BMP280 temperature and pressure sensor
-* Piezo buzzer
-* Breakout pins for servo, I2C, SPI, and UART (all 3v3)
+* Siete LEDs APA102 multicolor
++ Cuatro displays de 14 segmentos alfanuméricos (LEDs verdes)
+* Controlador HT16K33 para los displays
+* Tres botones táctiles capacitivos
+* Controlador capacitivo Atmel QT1070
+* LEDs azul, verde y rojo
+* Sensor de temperatura y presión BMP280
+* Piezo zumbador
+* Pines para servo, I2C, SPI y UART (todos 3v3)
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para poner el HAT en funcionamiento puedes utilizar nuestro instalador de una línea:
 
 ```bash
 curl -sS https://get.pimoroni.com/rainbowhat | bash

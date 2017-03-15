@@ -68,7 +68,7 @@ install:
 -->
 #pHAT BEAT
 
-To get the pHAT BEAT set up and ready to go you can use the one-line product installer:
+Para hacer funcionar el pHAT BEAT puedes utilizar nuestro instalador de una línea:
 
 ```bash
 curl -sS https://get.pimoroni.com/phatbeat | bash

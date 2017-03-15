@@ -2,8 +2,8 @@
 ---
 name: Pi Cap
 class: board
-type: touch, capacitive, audio
-formfactor: Custom
+type: audio,cap,io,multi
+formfactor: Otro
 manufacturer: Bare Conductive
 description: Add capacitive touch, distance sensing and high quality audio to the Raspberry Pi
 url: https://www.bareconductive.com/shop/pi-cap/

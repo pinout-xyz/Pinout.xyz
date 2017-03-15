@@ -2,7 +2,7 @@
 ---
 name: Pi Cap
 class: board
-type: touch, capacitive, audio
+type: audio,io,multi,touch
 formfactor: Custom
 manufacturer: Bare Conductive
 description: Add capacitive touch, distance sensing and high quality audio to the Raspberry Pi
@@ -60,7 +60,7 @@ i2c:
     name: MPR121
     device: MPR121
 -->
-# Pi-Cap
+# Pi Cap
 
 The Pi Cap adds precise capacitive touch, distance sensing and high quality audio to any Raspberry Pi with a 40 pin GPIO connector. The 12 electrodes can be connected to anything conductive to create a touch or proximity interface. Additionally the Pi Cap includes a user-programmable RGB LED and a multi-function button.
 

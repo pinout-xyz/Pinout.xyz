@@ -50,6 +50,6 @@ You can now power your Raspberry Pi and provide an Ethernet connection in any lo
 * Leaves all unused GPIO free for use with other add on boards
 
 The onboard optional jumper toggles the power functionality:
+
 * Jumper on. The Pi PoE will power on after holding the power button for two seconds
 * Jumper off. The Pi PoE will power on as soon as you apply power from your injector
-

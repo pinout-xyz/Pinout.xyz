@@ -2,7 +2,7 @@
 ---
 name: Picade HAT
 class: board
-type: io
+type: io,power
 formfactor: HAT
 manufacturer: Pimoroni
 description: Arcade inputs & digital amp

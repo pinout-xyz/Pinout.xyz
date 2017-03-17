@@ -143,7 +143,7 @@ def load_overlay(overlay):
             if eeprom == 'setup':
                 details.append(strings['eeprom_setup'])
 
-        if 'power' in loaded:
+        if 'power' not in loaded['type'] and 'power' in loaded:
             uses_5v = False
             uses_3v3 = False
 

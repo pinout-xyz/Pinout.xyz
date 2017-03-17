@@ -63,28 +63,29 @@ pin:
     active: low
 i2c:
   '0x70':
-    name: Barometer
-    device: BMP280
-  '0x77':
     name: Matrix Driver
     device: HT16K33
+  '0x77':
+    name: Barometer
+    device: BMP280
 -->
 #Rainbow HAT for Android Things™
 
 Rainbow HAT has a buffet of sensors, inputs and displays to explore Android Things™. Use it as a weather station, a clock, a timer or stopwatch, a mood light, or endless other things.
 
+Features:
+
 * Seven APA102 multicolour LEDs
-* Four 14-segment alphanumeric displays (green LEDs)
+* Four 14-segment alphanumeric displays
 * HT16K33 display driver chip
 * Three capacitive touch buttons
 * Atmel QT1070 capacitive touch driver chip
-* Blue, green and red LEDs
 * BMP280 temperature and pressure sensor
+* Blue, green and red LEDs
 * Piezo buzzer
-* Breakout pins for servo, I2C, SPI, and UART (all 3v3)
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sS https://get.pimoroni.com/rainbowhat | bash
+curl https://get.pimoroni.com/rainbowhat | bash
 ```

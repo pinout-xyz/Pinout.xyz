@@ -13,13 +13,16 @@ image: 'rainbow-hat.png'
 pincount: 40
 eeprom: yes
 power:
-  '1':
-  '2':
+  '4':
   '17':
 ground:
+  '6':
   '9':
+  '14':
+  '20':
   '25':
   '30':
+  '34':
   '39':
 pin:
   '3':

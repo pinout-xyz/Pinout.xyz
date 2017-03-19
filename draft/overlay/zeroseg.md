@@ -38,7 +38,7 @@ pin:
 
 
 -->
-#ZeroSeg
+# ZeroSeg
 
 The ZeroSeg is an easy to use 8-character 7-segment display add-on board for your Raspberry Pi Zero or any other 40-pin Raspberry Pi model.
 

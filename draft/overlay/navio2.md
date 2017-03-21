@@ -65,21 +65,21 @@ For accurate knowledge of position and orientation Navio2 is equipped with doubl
 
 Features:
 
-*MPU9250 9DOF IMU
-*LSM9DS1 9DOF IMU
-*MS5611 Barometer
-*U­blox M8N Glonass/GPS/Beidou
-*RGB LED
+* MPU9250 9DOF IMU
+* LSM9DS1 9DOF IMU
+* MS5611 Barometer
+* Ublox M8N Glonass/GPS/Beidou
+* RGB LED
 
 Specifications:
 
-*14 PWM servo outputs
-*PPM/S.Bus input
-*Triple redundant power supply
-*Power module connector
-*UART, I2C, ADC for extensions
-*Size: 55x65mm
-*Weight: 23gr
+* 14 PWM servo outputs
+* PPM/S.Bus input
+* Triple redundant power supply
+* Power module connector
+* UART, I2C, ADC for extensions
+* Size: 55x65mm
+* Weight: 23gr
 
 click on the url above to find out more information about the Navio2
 

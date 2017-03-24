@@ -70,15 +70,10 @@ To install:
 
 
 
-bash```
+bash ```
 
 curl -O https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/joy-bonnet.sh
 
 sudo bash joy-bonnet.sh
 
 ```
-
-
-
-
-

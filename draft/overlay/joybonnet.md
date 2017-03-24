@@ -67,8 +67,7 @@ don't require more than 1GHz speeds will work OK too, e.g. a N64 emulator won't 
 
 
 To install:
-
-bash```
+```bash
 curl -O https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/joy-bonnet.sh
 sudo bash joy-bonnet.sh
 ```

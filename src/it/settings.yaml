@@ -121,3 +121,5 @@ overlays:
 - touch-phat
 - sheepwalk-rpi2
 - fourletter-phat
+- zeroseg
+- motozero

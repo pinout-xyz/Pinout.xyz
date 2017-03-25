@@ -3,7 +3,7 @@
 name: Joy Bonnet
 class: board
 type: io
-formfactor: phat
+formfactor: pHAT
 manufacturer: Adafruit
 description: Handheld Arcade Controller for Raspberry Pi
 url: https://learn.adafruit.com/adafruit-joy-bonnet-for-raspberry-pi
@@ -28,43 +28,37 @@ ground:
   '39':
 pin:
   '3'
-    mode: i2c    
-  '5': 
-    mode:i2c   
-  '38': 
-    name: Select 
-  '37': 
-    name: Start 
+    mode: i2c
+  '5':
+    mode:i2c
   '15':
     name: Player1
-  '16':   
-    name: Player2 
-  '32':  
+  '16':
+    name: Player2
+  '31':
+    name: B
+  '32':
     name: A
   '33':
     name: Y
   '36':
     name: X
-  '31':
-    name: B 
-  
-    
+  '37':
+    name: Start
+  '38':
+    name: Select
 i2c:
-  
   '0x48':
     name: ADC
     device: ADS1015
 -->
 # Joy Bonnet
 
-
-This add on board fits perfectly on top of your Raspberry Pi Zero (any kind) and gives you hand-held arcade controls. 
+This add on board fits perfectly on top of your Raspberry Pi Zero (any kind) and gives you hand-held arcade controls.
 Once you install our script onto your Pi, the controls will act like a keyboard, for easy use with any emulator or media player.
 
-
-The Joy Bonnet works best with RetroPie/EmulationStation. On a Pi Zero you can emulate NES and MAME game but other emulators that 
+The Joy Bonnet works best with RetroPie/EmulationStation. On a Pi Zero you can emulate NES and MAME game but other emulators that
 don't require more than 1GHz speeds will work OK too, e.g. a N64 emulator won't work, it needs way more power!
-
 
 To install:
 ```bash

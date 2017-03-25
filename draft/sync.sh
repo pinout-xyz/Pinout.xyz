@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname $0)
+
 masterdir="../src/en/overlay"
 mdlist=$(ls "$masterdir")
 srcdir="../src"

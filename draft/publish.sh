@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname $0)
+
 draftpng="../draft/boards"
 dirpng="../resources/boards"
 draftmd="../draft/overlay"

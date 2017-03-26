@@ -1,15 +1,16 @@
 <!--
 ---
-name: RabbitMax Flex
+name: Anavi Flex
 class: board
 type: io,led,multi,relay,sensor
 formfactor: HAT
 manufacturer: Anavi
+collected: Other
 description: RabbitMax Flex is a Raspberry Pi HAT board for IoT with an IR transmitter and receiver, relay, button, buzzer, RGB LED,  5x cable slots for I2C sensors, and a slot for 16x2 LCD display module.
 url: http://rabbitmax.com/
 github: https://github.com/RabbitMax
 buy: https://www.indiegogo.com/projects/rabbitmax-flex-raspberry-pi-hat-for-iot
-image: 'rabbitmax-flex.png'
+image: 'anavi-flex.png'
 pincount: 40
 eeprom: yes
 power:
@@ -60,7 +61,7 @@ pin:
   '40':
     name: LCD Display (E)
 -->
-#RabbitMax Flex
+# Flex
 
 HAT flexible para Raspberry Pi, útil para proyectos tipo hazlo tú mismo (DIY): estación meteorológica, asistente de escritorio o prototipos de IoT.
 
@@ -74,8 +75,3 @@ Incluye:
 * LED RGB
 * Espacio para módulo LCD
 * Espacio para hasta 5 sensores I2C plug and play
-
-Información útil:
-
-* Manual: [http://rabbitmax.com/files/rabbitmax-flex.pdf](http://rabbitmax.com/files/rabbitmax-flex.pdf)
-* Ejemplos de código abierto en Python y C: [https://github.com/RabbitMax/rabbitmax-examples](http://rabbitmax.com/files/rabbitmax-flex.pdf)

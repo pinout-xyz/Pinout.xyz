@@ -109,9 +109,11 @@ def load_overlay(overlay):
         if 'type' not in loaded:
             loaded['type'] = strings['group_other']
 
-        if 'manufacturer' in loaded:
+        if 'manufacturer' in loaded and 'collected' not in loaded:
             manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
             details.append(strings['made_by'].format(manufacturer=manu_link))
+        elif 'manufacturer' in loaded and 'collected' in loaded:
+            details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
 
         if 'pincount' in loaded:
             '''
@@ -561,7 +563,6 @@ overlays_html is generated with all types for legacy reasons
 '''
 for overlay in overlays:
 
-
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
@@ -592,19 +593,26 @@ for overlay in overlays:
             if 'formfactor' not in overlay:
                 print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
-            '''if overlay['manufacturer'] not in boards_page.keys():
-                boards_page[overlay['manufacturer']] = []
-                boards_manufacturers.append(overlay['manufacturer'])'''
-
-            boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                image=image,
-                name=overlay['name'],
-                page_url=overlay['page_url'],
-                base_url=base_url,
-                type=overlay['type'] if 'type' in overlay else strings['group_other'],
-                formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
-                manufacturer=overlay['manufacturer'],
-                resource_url=resource_url)})
+            if 'collected' not in overlay:
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                    image=image,
+                    name=overlay['name'],
+                    page_url=overlay['page_url'],
+                    base_url=base_url,
+                    type=overlay['type'] if 'type' in overlay else strings['group_other'],
+                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    manufacturer=overlay['manufacturer'],
+                    resource_url=resource_url)})
+            else:
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                    image=image,
+                    name=overlay['name'],
+                    page_url=overlay['page_url'],
+                    base_url=base_url,
+                    type=overlay['type'] if 'type' in overlay else strings['group_other'],
+                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    manufacturer=overlay['collected'],
+                    resource_url=resource_url)})
 
 
 
@@ -729,12 +737,20 @@ for url in pages:
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
-        crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
-                title=pages[url]['name'],
-                manufacturer=pages[url]['manufacturer'],
-                home=strings['home'],
-                boards=strings['boards']
-                )
+        if not 'collected' in pages[url]:
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
+                    title=pages[url]['name'],
+                    manufacturer=pages[url]['manufacturer'],
+                    home=strings['home'],
+                    boards=strings['boards']
+                    )
+        else:
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
+                    title=pages[url]['name'],
+                    manufacturer=pages[url]['collected'],
+                    home=strings['home'],
+                    boards=strings['boards']
+                    )
 
     if url == 'boards':
         body_class = 'boards-page'

@@ -4,7 +4,8 @@ name: GPIO Button Adapter
 class: board
 type: io
 formfactor: Custom
-manufacturer: Indie
+manufacturer: Frederick Vandenbosch
+collected: Other
 description: A simple way to add input button to your Raspberry Pi
 url: http://frederickvandenbosch.be/?p=2462
 image: 'vandenbosch-gpio-input.png'
@@ -34,7 +35,7 @@ pin:
 -->
 # GPIO Button Adapter
 
-The GPIO Button Adapter by Frederick Vandenbosch is a clean and easy way to add buttons to a Pi Zero alongside a pHAT (or HAT).
+The GPIO Button Adapter is a clean and easy way to add buttons to a Pi Zero alongside a pHAT (or HAT).
 
 When a button is pressed, the GPIO gets connected to ground. The internal pull-up resistors on the Pi should be used so that the GPIO are HIGH when idle, LOW when the button is pressed.
 

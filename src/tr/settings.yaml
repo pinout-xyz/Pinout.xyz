@@ -125,3 +125,4 @@ overlays:
 - motozero
 - adafruit-joybonnet
 - vandenbosch-gpio-input
+- anavi-flex

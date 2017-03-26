@@ -1,16 +1,15 @@
 <!--
 ---
-name: Fe-Pi Audio Z
+name: Audio Z
 class: board
 type: audio
 formfactor: pHAT
 manufacturer: Fe-Pi
-description: The Fe-Pi Audio Z is a complete low cost audio solution for the Raspberry Pi
+collected: Other
+description: A complete low cost audio solution for the Raspberry Pi
 url: http://fe-pi.com/products/fe-pi-audio-z-v1
-github:
-schematic:
 buy: http://fe-pi.com/products/fe-pi-audio-z-v1
-image: 'fe-pi audio z.png'
+image: 'fepi-audio-z.png'
 pincount: 40
 eeprom: no
 power:
@@ -47,18 +46,18 @@ i2c:
     name: SGTL5000
     device: SGTL5000XNAA3/R2
 -->
-#Fe-Pi Audio Z
+#Audio Z
 
 The Fe-Pi Audio Z is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, and headphone-out/mic-in.
 
 ## Features ##
 
- - Small Raspberry Pi Zero PCB footprint.
- - 3.5 mm, 4 contact, jack for Headphone/MIC (black).
- - 3.5 mm jack for stereo Line Out (green), and stereo Line In (pink).
- - ADC > 90 dB SNR and -72 dB THD+N.
- - Line-Out > 100 dB SNR and -85 dB THD+N.
- - HP Output > 100 dB SNR and -80 dB THD+N, 62.5 mW max into 16 ohm.
- - Hardware level controls for Headphone Volume, Line In, Line Out. ALSA support.
- - 2x20pin 2.54mm female header and 40pin male breakable header included!
+* Small Raspberry Pi Zero PCB footprint
+* 3.5 mm, 4 contact, jack for Headphone/MIC (black)
+* 3.5 mm jack for stereo Line Out (green), and stereo Line In (pink)
+* ADC > 90 dB SNR and -72 dB THD+N
+* Line-Out > 100 dB SNR and -85 dB THD+N
+* HP Output > 100 dB SNR and -80 dB THD+N, 62.5 mW max into 16 ohm
+* Hardware level controls for Headphone Volume, Line In, Line Out. ALSA support
+* 2x20pin 2.54mm female header and 40pin male breakable header included
  

@@ -3,7 +3,7 @@
 name: 16x2 Character LCD
 class: board
 type: display
-formfactor: Custom
+formfactor: Otro
 manufacturer: Adafruit
 description: 16x2 Character LCD and Keypad
 url: https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi

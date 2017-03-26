@@ -3,7 +3,7 @@
 name: Pi PoE Switch HAT
 class: board
 type: power
-formfactor: Custom
+formfactor: Otro
 manufacturer: Pi Supply
 description: The Pi PoE Switch HAT is a power over ethernet add-on board for the Raspberry Pi
 url: https://www.kickstarter.com/projects/pisupply/pi-poe-switch-hat-power-over-ethernet-for-raspberr

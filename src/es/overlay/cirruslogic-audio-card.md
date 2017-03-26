@@ -5,7 +5,7 @@ class: board
 type: audio
 formfactor: HAT
 manufacturer: Element14
-collected: Other
+collected: Otro
 description: Audio Card with unprecedented level of features and performance for Raspberry Pi
 url: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card
 buy: http://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card

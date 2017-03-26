@@ -3,7 +3,7 @@
 name: PiRTC
 class: board
 type: rtc
-formfactor: Custom
+formfactor: Otro
 manufacturer: Adafruit
 description: Add a simple RTC to your Pi
 url: https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-up-and-test-i2c

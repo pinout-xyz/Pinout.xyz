@@ -5,7 +5,7 @@ class: board
 type: io,led,multi,relay,sensor
 formfactor: HAT
 manufacturer: Anavi
-collected: Other
+collected: Otro
 description: RabbitMax Flex is a Raspberry Pi HAT board for IoT with an IR transmitter and receiver, relay, button, buzzer, RGB LED,  5x cable slots for I2C sensors, and a slot for 16x2 LCD display module.
 url: http://rabbitmax.com/
 github: https://github.com/RabbitMax

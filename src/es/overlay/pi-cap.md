@@ -5,6 +5,7 @@ class: board
 type: audio,cap,io,multi
 formfactor: Otro
 manufacturer: Bare Conductive
+collected: Otro
 description: Add capacitive touch, distance sensing and high quality audio to the Raspberry Pi
 url: https://www.bareconductive.com/shop/pi-cap/
 buy: https://www.bareconductive.com/shop/pi-cap/

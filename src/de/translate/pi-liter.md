@@ -5,6 +5,7 @@ class: board
 type: led
 formfactor: Custom
 manufacturer: Ciseco
+collected: Other
 description: An 8 LED strip for the Raspberry Pi
 url: http://gpiozero.readthedocs.io/en/v1.3.1/api_boards.html#piliter
 image: 'pi-liter.png'

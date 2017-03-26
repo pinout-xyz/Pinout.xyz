@@ -5,6 +5,7 @@ class: board
 type: otro
 formfactor: Otro
 manufacturer: Paser
+collected: Otro
 description: add-on board designed to inteface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/
 buy: http://www.carberry.it

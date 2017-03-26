@@ -5,6 +5,7 @@ class: board
 type: com
 formfactor: Custom
 manufacturer: Sheepwalk
+collected: Other
 description: I2C to 1-Wire host adapter
 url: http://www.sheepwalkelectronics.co.uk/RPI2.php
 buy: http://www.sheepwalkelectronics.co.uk/product_info.php?products_id=30
@@ -28,7 +29,7 @@ i2c:
 -->
 # RPI2 1-Wire Host Adapter
 
-This module provides a way to connect 1-Wire devices to your Raspberry Pi without using up one of the USB ports. It is based around the DS2482-100 I2C to 1-Wire IC. 
+This module provides a way to connect 1-Wire devices to your Raspberry Pi without using up one of the USB ports. It is based around the DS2482-100 I2C to 1-Wire IC.
 
 Connection to your 1-Wire network is either by the RJ45 socket or the screw terminals. The RJ45 socket allows the assembly of a network using standard ethernet cables.
 

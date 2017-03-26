@@ -5,6 +5,7 @@ class: board
 type: adc
 formfactor: HAT
 manufacturer: Waveshare
+collected: Other
 description: 8 channel Analogue to Digital Converter & 2 channel Digital to Analogue Converter
 url: http://www.waveshare.com/High-Precision-AD-DA-Board.htm
 schematic: http://www.waveshare.com/wiki/File:High-Precision-AD-DA--Schematic.pdf

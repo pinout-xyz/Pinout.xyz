@@ -5,6 +5,7 @@ class: board
 type: io,multi
 formfactor: Otro
 manufacturer: Cyntech
+collected: Otro
 description: Luz, sonido, entradas y salidas en una placa.
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

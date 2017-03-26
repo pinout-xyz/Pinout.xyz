@@ -5,6 +5,7 @@ class: board
 type: other
 formfactor: Custom
 manufacturer: Paser
+collected: Other
 description: add-on board designed to inteface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/
 buy: http://www.carberry.it

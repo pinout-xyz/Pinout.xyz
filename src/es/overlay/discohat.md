@@ -5,6 +5,7 @@ class: board
 type: audio
 formfactor: HAT
 manufacturer: Kertatuote
+collected: Otro
 description: Computer controlled DMX lights, sounds and special effects
 url: http://discohat.com
 buy: http://discohat.com/shop

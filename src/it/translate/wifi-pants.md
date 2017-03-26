@@ -5,6 +5,7 @@ class: board
 type: power, iot
 formfactor: pHAT
 manufacturer: SLNGadget
+collected: Other
 description: WiFi and battery power for the Raspberry Pi
 url: https://hackaday.io/project/8678-rpi-wifi
 github: https://github.com/al177/esp_hat

@@ -126,3 +126,4 @@ overlays:
 - adafruit-joybonnet
 - vandenbosch-gpio-input
 
+- fepi-audio-z

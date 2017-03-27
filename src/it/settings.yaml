@@ -127,3 +127,4 @@ overlays:
 - vandenbosch-gpio-input
 
 - fepi-audio-z
+- energenie-pi-mote

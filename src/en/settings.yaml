@@ -6,10 +6,10 @@ url_suffix:
 urls:
   GND: ground
 featured:
-- scroll-phat-hd
-- phat-beat
-- pi-cap
-- 4tronix-picon-zero
+- touch-phat
+- adafruit-arcade-bonnet
+- fepi-audio-z
+- zeroseg
 overlays:
 - ground
 - iface-dpi

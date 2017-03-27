@@ -5,7 +5,7 @@ class: board
 type: io
 formfactor: pHAT
 manufacturer: Adafruit
-description: Connect joystick,buttons and speakers to your Pi
+description: Connect joystick, buttons and speakers to your Pi
 url: https://learn.adafruit.com/adafruit-arcade-bonnet-for-raspberry-pi
 buy: https://www.adafruit.com/products/3422
 image: adafruit-arcade-bonnet.png

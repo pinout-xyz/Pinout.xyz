@@ -51,6 +51,8 @@ i2c:
 The MDB2Pi HAT can serve as a MDB master or as a peripheral MDB Device for Vending Machines (VMC). It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol.
 The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A at 5V. Thus no separate power supply is required for the pi. Furthermore, the MDB2Pi HAT contains a Real Time Clock (RTC), buffered by a super capacitor.
 
+A housing for the MDB2Pi HAT is available under http://www.thingiverse.com/thing:2209661
+
 ## Configuration
 Enable UART and RTC by adding the following lines to /boot/config.txt:
 ```bash

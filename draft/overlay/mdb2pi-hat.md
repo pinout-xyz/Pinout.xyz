@@ -26,6 +26,10 @@ ground:
   '34':
   '39':
 pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '8':
     mode: UART
   '10':
@@ -36,15 +40,18 @@ pin:
     mode: i2c
 i2c:
   '0x50':
-    name: HAT EEPROM
+    name: HAT EEPROM on I2C0
     device: 24C32
+  '0x51':
+    name: RTC on I2C1
+    device: PCF8563
 -->
 #MDB2Pi HAT
 
 The MDB2Pi HAT can serve as a MDB master or as a peripheral MDB Device for Vending Machines (VMC). It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol.
-The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A@5V. Thus no separate power supply is required for the pi. Furthermore, the MDB2Pi HAT contains a Real Time Clock (RTC), buffered by a super capacitor.
+The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A at 5V. Thus no separate power supply is required for the pi. Furthermore, the MDB2Pi HAT contains a Real Time Clock (RTC), buffered by a super capacitor.
 
-##Configuration
+#Configuration
 Enable UART and RTC by adding the following lines to /boot/config.txt:
 ```bash
 enable_uart=1
@@ -57,7 +64,7 @@ sudo nano /boot/cmdline.txt
 ```
 --> remove the "console=..." parameter
 
-##MDB Master and Cashless Device Demo:
+#MDB Master and Cashless Device Demo:
 Install mono runtime:
 ```bash
 sudo apt-get install mono-runtime

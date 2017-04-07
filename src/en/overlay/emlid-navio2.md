@@ -5,6 +5,7 @@ class: board
 type: gps,motor,sensor
 formfactor: HAT
 manufacturer: Emlid
+collected: Other
 description: Full drone controller for Raspberry Pi
 url: https://docs.emlid.com/navio2/
 github: https://github.com/emlid/Navio2

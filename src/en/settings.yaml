@@ -130,3 +130,4 @@ overlays:
 - sixfab-cellular-shield
 - sixfab-gps-shield
 - sixfab-xbee-shield
+- emlid-navio2

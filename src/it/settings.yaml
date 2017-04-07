@@ -128,3 +128,6 @@ overlays:
 
 - fepi-audio-z
 - energenie-pi-mote
+- sixfab-cellular-shield
+- sixfab-gps-shield
+- sixfab-xbee-shield

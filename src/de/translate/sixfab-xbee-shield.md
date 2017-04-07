@@ -23,8 +23,6 @@ ground:
   '34':
   '39':
 pin:
-  '7':
-    name: 1-Wire Pin
   '8':
     mode: uart
   '10':
@@ -43,5 +41,6 @@ Some features include:
 * Headers fit most XBee modules
 * Up to 28 miles range
 * Point to point communication
-* Communication LED's
+* Communication LED
+* 1-Wire sensor breakout (bcm4)
 * Programable from Linux, Windows and Android

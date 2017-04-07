@@ -23,8 +23,6 @@ ground:
   '34':
   '39':
 pin:
-  '7':
-    name: 1-Wire Pin
   '8':
     mode: uart
   '10':
@@ -41,6 +39,6 @@ The sixfab GSP Shield  is an easy way to add GPS to your Raspberry Pi.
 Some features include:
 
 * Location, Time, Speed all on the same NMEA Protocol
-* Built in 1-Wire support
-* Built in antenna
-* Also programmable from Linux, MacOS, Windows, Android
+* Built-in antenna
+* 1-Wire sensor breakout (bcm4)
+* Programmable from Linux, MacOS, Windows, Android

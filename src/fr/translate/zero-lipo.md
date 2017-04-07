@@ -21,11 +21,17 @@ pin:
     mode: input
     active: high
 -->
-#Zero LiPo
+# Zero LiPo
 
 The Zero LiPo aims to give you the most compact Raspberry Pi power supply possible.
 
 The board includes power on and battery low indicator LEDs as well as a JST connector, to which you can connect a LiPo, LiIon, or other battery with a JST plug. The TPS61232 step-up boost converter from Texas Instruments converts the 3-4.2V input voltage from the LiPos/LiIons to 5V, providing a stable 5V supply perfect for your Pi.
+
+To setup the monitoring of the Battery and trigger a clean shutdown when the voltage drop below 3.4V, simply run:
+
+```bash
+curl https://get.pimoroni.com/zerolipo | bash
+```
 
 Features:
 

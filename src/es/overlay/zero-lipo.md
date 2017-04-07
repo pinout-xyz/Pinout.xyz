@@ -21,11 +21,15 @@ pin:
     mode: input
     active: high
 -->
-#Zero LiPo
+# Zero LiPo
 
 El objetivo de Zero LiPo es ser la fuente de alimentación para Raspberry Pi más compacta.
 
 Esta placa inclute LEDs indicadores de alimentación y bajo nivel de batería, además de un conector JST para conectar una batería LiPo, LiIon o cualquier otra batería compatible con JST. El convertidor TPS61232 step-up de Texas Instruments convierte el voltaje de 3-4.2V de entrada de las LiPo/LiIon en 5V, dando una alimentación de 5V estable perfecta para tu Pi.
+
+```bash
+curl https://get.pimoroni.com/zerolipo | bash
+```
 
 Especificaciones:
 

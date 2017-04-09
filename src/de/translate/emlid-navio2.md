@@ -99,7 +99,7 @@ The Navio2 Autopilot is designed both for your own custom robotic projects and a
 
 Navio2 eliminates the need for multiple on-board controllers making development easier and increasing robustness. It extends connectivity and allows control of all kinds of moving robots: cars, boats, multirotors, planes.
 
-For accurate knowledge of position and orientation Navio2 is equipped with double IMU and GPS/Glonass/Beidou receiver. PWM, ADC, SBUS and PPM are integrated in Linux sysfs via the on-board RC I/O co-processor (communicating over SPI1 bus), allowing easy access from any programming language.
+For accurate knowledge of position and orientation Navio2 is equipped with double IMU and GPS/Glonass/Beidou receiver. PWM, ADC, SBUS and PPM are integrated in Linux sysfs via the on-board RC I/O co-processor, allowing easy access from any programming language.
 
 Features:
 
@@ -107,9 +107,9 @@ Features:
 * MPU9250 9DOF IMU (SPI0)
 * LSM9DS1 9DOF IMU (SPI0)
 * Ublox M8N Glonass/GPS/Beidou (SPI0)
-* 14 PWM servo outputs (RCIO)
-* PPM/S.Bus input (RCIO)
-* 6-channel ADC (RCIO)
+* 14 PWM servo outputs (RCIO/SPI1)
+* PPM/S.Bus input (RCIO/SPI1)
+* 6-channel ADC (RCIO/SPI1)
 * Integrated RGB LED
 * UART, I2C terminals for extensions
 * Power module connector

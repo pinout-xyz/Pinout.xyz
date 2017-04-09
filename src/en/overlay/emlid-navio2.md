@@ -41,7 +41,7 @@ pin:
     mode: output
     active: high
   '15':
-    name: LSM9DS1 Chip Select
+    name: LSM9DS1 Magneto CS
     mode: chipselect
     active: high
   '16':
@@ -55,7 +55,7 @@ pin:
   '21':
     mode: spi
   '22':
-    name: LSM9DS1 Chip Select
+    name: LSM9DS1 Accel/Gyro CS
     mode: chipselect
     active: high
   '23':

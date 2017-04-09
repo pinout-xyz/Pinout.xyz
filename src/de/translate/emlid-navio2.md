@@ -5,6 +5,7 @@ class: board
 type: gps,motor,sensor
 formfactor: HAT
 manufacturer: Emlid
+collected: Other
 description: Full drone controller for Raspberry Pi
 url: https://docs.emlid.com/navio2/
 github: https://github.com/emlid/Navio2
@@ -40,7 +41,7 @@ pin:
     mode: output
     active: high
   '15':
-    name: LSM9DS1 Chip Select
+    name: LSM9DS1 Magneto CS
     mode: chipselect
     active: high
   '16':
@@ -54,7 +55,7 @@ pin:
   '21':
     mode: spi
   '22':
-    name: LSM9DS1 Chip Select
+    name: LSM9DS1 Accel/Gyro CS
     mode: chipselect
     active: high
   '23':

@@ -197,11 +197,11 @@ def load_overlay(overlay):
                     if pin in ['19','21','23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-            if uses_spi:
-                details.append(strings['uses_spi'])
-
             if uses > 0:
                 details.append(strings['uses_n_gpio_pins'].format(uses))
+
+            if uses_spi:
+                details.append(strings['uses_spi'])
 
             if uses_i2c:
                 details.append(strings['uses_i2c'])

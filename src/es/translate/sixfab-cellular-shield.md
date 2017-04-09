@@ -3,7 +3,7 @@
 name: 3G/4G/LTE Base Shield
 class: board
 type: com
-formfactor: custom
+formfactor: Custom
 manufacturer: Sixfab
 description: Connect from anywhere to the internet on a Raspberry Pi
 url: http://sixfab.com/product/3g-4glte-base-shield/

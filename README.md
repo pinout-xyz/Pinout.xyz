@@ -1,4 +1,4 @@
-#Pinout.xyz
+# Pinout.xyz
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
@@ -8,7 +8,7 @@ To support translation efforts, and allow people to build tools with the data in
 
 This license excludes the 'pinout-graphic-horizontal' files located in the `graphics` directory, which are provided under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) to permit commercial use; specifically publication in books and magazines with appropriate attribution.
 
-#About this project
+# About this project
 
 The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
 
@@ -16,11 +16,11 @@ This project aims to build a consistent workflow behind the Pinout.xyz front-end
 
 We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
 
-#Reporting
+# Reporting Issues & Making Suggestions
 
 If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
-#Contributing
+# Contributing
 
 If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
 
@@ -28,7 +28,7 @@ Note that as part of the submission, a top-down view of the board in the form of
 
 If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
 
-#Translating
+# Translating
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).
 
@@ -58,14 +58,14 @@ If you wish to provide a translation for an existing subdomain, or correct a typ
 If you have a question about translations, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
 
 
-#Roadmap &amp; wishlist
+# Roadmap &amp; wishlist
 
 * Redesign HTML generation and unify HTML templates into a single, translatable file
 * Add functionality to compare two or more boards, to visualise pin compatibility
 * Tool to convert WiringPi to GPIO to BCM and back
 * Add as many [boards](http://pinout.xyz/boards) as possible!
 
-#Acknowledgement
+# Acknowledgement
 
 Maintainers: [@Gadgetoid](https://github.com/Gadgetoid) and [@RogueM](https://github.com/RogueM)
 

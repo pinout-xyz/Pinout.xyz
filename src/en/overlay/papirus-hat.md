@@ -72,7 +72,7 @@ pin:
     mode: input
     active: low
 i2c:
-  '0x4B':
+  '0x48':
     name: Temperature Sensor
     device: LM75BD
   '0x6F':
@@ -98,7 +98,5 @@ Unlike conventional displays, ePaper reflects light, and is capable of holding t
 To get the HAT set up and ready to go you can use the one-line product installer:
 
 ```bash
-curl -sSL https://goo.gl/i1Imel | sudo bash
+curl -sSL https://pisupp.ly/papiruscode | sudo bash
 ```
-
-Before using PaPiRus, do not forget to enable the SPI and I2C interfaces!

@@ -72,7 +72,7 @@ pin:
     mode: input
     active: low
   i2c:
-    '0x4B':
+    '0x48':
       name: Temperature Sensor
       device: LM75BD
 -->

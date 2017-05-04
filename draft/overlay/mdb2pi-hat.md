@@ -95,5 +95,46 @@ mono MDBCashlessDeviceSimulatorConsole.exe /dev/serial0 115200
 
 Hint: On newer raspbian releases, the serial port is available as /dev/serial0 - older releases may use dev/ttyAMA0.
 
+## RTC
+A PCF8563 I2C chip in conjunction with a SuperCapacitor is used for Real-Time-Clock capability (no battery required). This allows buffering of the time up to 7 days when fully charged (or even more, depending on temperature environment and chip/capacitor variance).
 
+Read the RTC:
+```bash
+pi@raspberrypi:~ $ sudo hwclock -r
+Thu 04 May 2017 06:22:13 UTC  -0.310218 seconds
+```
+Write the RTC:
+```bash
+pi@raspberrypi:~ $ sudo hwclock -w
+```
+RTC Troubleshooting:
+Check if the chip responds over I2C:
+```bash
+pi@raspberrypi:~ $ sudo i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- UU -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+```
+Check dmesg for RTC
+```bash
+pi@raspberrypi:~ $ dmesg | grep rtc
+[    2.937443] rtc-pcf8563 1-0051: chip found, driver version 0.4.4
+[    2.943665] rtc-pcf8563 1-0051: rtc core: registered rtc-pcf8563 as rtc0
+```
 
+Hint: In case that the SuperCap has fully discharged, the daemon might be unable to talk to the RTC at first startup:
+
+```bash
+pi@raspberrypi:~ $ dmesg | grep rtc
+[    2.900119] rtc-pcf8563 1-0051: chip found, driver version 0.4.4
+[    2.900403] rtc-pcf8563 1-0051: pcf8563_write_block_data: err=-5 addr=0e, data=03
+[    2.900428] rtc-pcf8563 1-0051: pcf8563_probe: write error
+[    2.900459] rtc-pcf8563: probe of 1-0051 failed with error -5
+```
+In this case, please wait a few minutes to let the SuperCap being charged; then restart your pi to let the rtc daemon detect the chip again.

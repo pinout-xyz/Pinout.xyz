@@ -62,7 +62,7 @@ pin:
   '37':
     name: SW2
     mode: input
-    active: low  
+    active: low
   '38':
     name: SW3
     mode: input
@@ -72,7 +72,7 @@ pin:
     mode: input
     active: low
 i2c:
-  '0x4B':
+  '0x48':
     name: Temperature Sensor
     device: LM75BD
   '0x6F':
@@ -98,7 +98,5 @@ A diferencia de las pantallas convencionales, refleja la luz y puede mantener im
 Para configurar el HAT puedes utilizar el instalador online de una línea.
 
 ```bash
-curl -sSL https://goo.gl/i1Imel | sudo bash
+curl -sSL https://pisupp.ly/papiruscode | sudo bash
 ```
-
-Antes de utilizar PaPiRus activa las interfaces SPI e I2C

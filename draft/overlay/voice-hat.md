@@ -26,29 +26,39 @@ ground:
   '39':
 pin:
   '7':
-    name: Driver 0 breakout
+    name: Driver 0 Breakout
   '11':
-    name: Driver 1 breakout
+    name: Driver 1 Breakout
   '12':
     name: I2S Clock
   '13':
-    name: Driver 2 breakout
+    name: Driver 2 Breakout
   '15':
-    name: Driver 3 breakout
+    name: Driver 3 Breakout
+  '16':
+    name: Button
+    mode: input
+    active: low
   '18':
-    name: Servo 5 breakout
+    name: Servo 5 Breakout
+  '22':
+    name: LED
+    mode: output
+    active: high
   '29':
-    name: Servo 3 breakout
+    name: Servo 3 Breakout
   '31':
-    name: Servo 1 breakout
+    name: Servo 1 Breakout
   '32':
-    name: Servo 4 breakout
+    name: Servo 4 Breakout
   '33':
-    name: Servo 2 breakout
+    name: Servo 2 Breakout
   '35':
     name: I2S WS
+  '36':
+    name: Amp Shutdown
   '37':
-    name: Servo 0 breakout
+    name: Servo 0 Breakout
   '40':
     name: I2S Data
 install:

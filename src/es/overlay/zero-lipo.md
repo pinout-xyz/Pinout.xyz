@@ -12,6 +12,7 @@ image: 'zero-lipo.png'
 pincount: 8
 eeprom: no
 power:
+  '1':
   '2':
 ground:
   '6':

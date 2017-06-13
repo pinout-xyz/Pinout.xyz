@@ -100,7 +100,7 @@ Dimensions: 56.5x86x10mm (WxHxD, depth includes header and display).
 To get the display set up, you can use the one-line product installer:
 
 ```bash
-curl -sS https://get.pimoroni.com/hyperpixel | bash
+curl https://get.pimoroni.com/hyperpixel | bash
 ```
 
 And follow the instructions!

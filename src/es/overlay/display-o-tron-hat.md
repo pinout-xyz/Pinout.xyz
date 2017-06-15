@@ -7,7 +7,7 @@ formfactor: HAT
 manufacturer: Pimoroni
 description: Una pantalla LCD de 3 líneas con luz RGB con 6 zonas y 6 botones táctiles
 url: https://shop.pimoroni.com/products/display-o-tron-hat
-github: https://github.com/pimoroni/dot3k
+github: https://github.com/pimoroni/displayotron
 buy: https://shop.pimoroni.com/products/display-o-tron-hat
 image: 'display-o-tron-hat.png'
 pincount: 40

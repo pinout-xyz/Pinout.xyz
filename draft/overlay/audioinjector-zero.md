@@ -45,7 +45,7 @@ pin:
     name: DataOut
     mode: i2s
 -->
-#Audio Injector
+#Audio Injector Zero
 
 * Microphone: Optional inbuilt electret microphone with mixer controls. Allowing voice control or other applications.
 

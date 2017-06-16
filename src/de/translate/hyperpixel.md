@@ -82,10 +82,10 @@ pin:
     name: Backlight Control
     mode: output
   'bcm26':
-    name: LCD Program
+    name: LCD Program Data
     mode: output
   'bcm27':
-    name: LCD Program
+    name: LCD Program Clock
     mode: output
 -->
 # HyperPixel

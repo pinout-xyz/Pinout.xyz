@@ -1,6 +1,6 @@
 <!--
 ---
-name: Audio Injector
+name: Audio Injector Zero
 class: board
 type: audio
 formfactor: pHAT

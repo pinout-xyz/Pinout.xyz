@@ -30,12 +30,12 @@ i2c:
 -->
 # PiOLED
 
-*PiOLED is a small 128x32 in a small formfactor board designed to sit on top of just the first six pins of the Pi’s Header
-*It uses I2c which therefore means there are plenty of spare pins for buttons LED’s and sensors.
-*The OLED display has a very high contrast ratio leading to clear and crisp text and images.
-*As the display produces it’s own light this also means the PiOLED is super low power.
-*The SSD1306 chipset is easily controlled using a simple python library.
-*The display is about 1”diagonal and allows for 30FPS updates rates allowing for simple animations
+* PiOLED is a small 128x32 in a small formfactor board designed to sit on top of just the first six pins of the Pi’s Header
+* It uses I2c which therefore means there are plenty of spare pins for buttons LED’s and sensors.
+* The OLED display has a very high contrast ratio leading to clear and crisp text and images.
+* As the display produces it’s own light this also means the PiOLED is super low power.
+* The SSD1306 chipset is easily controlled using a simple python library.
+* The display is about 1”diagonal and allows for 30FPS updates rates allowing for simple animations
 
 To Install:
 ```bash

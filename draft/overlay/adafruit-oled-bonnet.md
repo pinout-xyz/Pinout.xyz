@@ -59,7 +59,7 @@ To install the necessary software, use the following commands:
 
 ```bash
 sudo apt-get install git python-imaging python-smbus
-git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306
 cd Adafruit_Python_SSD1306
 sudo python setup.py install
 ```

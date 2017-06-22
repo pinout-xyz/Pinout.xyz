@@ -33,13 +33,13 @@ The PiOLED is a small 128x32 OLED display designed to sit on top of just the fir
 
 The OLED display has a very high contrast ratio leading to clear and crisp text and images and as the display produces it’s own light this also means the PiOLED is extremely low power.
 
-The display is about 1”diagonal and allows for 30FPS updates rates allowing for simple animations and the SSD1306 chipset is easily controlled using a simple python library.
+The display is about 1” in diagonal and allows for 30FPS updates rates allowing for simple animations and the SSD1306 chipset is easily controlled using a simple python library.
 
 To install the necessary software, use the following commands:
 
 ```bash
 sudo apt-get install git python-imaging python-smbus
-git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306
 cd Adafruit_Python_SSD1306
 sudo python setup.py install
 ```

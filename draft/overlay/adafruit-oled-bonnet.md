@@ -30,19 +30,19 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  '27':
-    name: Joystick left
-  '23':
-    name: Joystick right
-  '4':
+  '7':
     name: Joystick center
-  '17':
+  '13':
+    name: Joystick left
+  '16':
+    name: Joystick right
+  '11':
     name: Joystick up
-  '22':
+  '15':
     name: Joystick down
-  '5':
+  '29':
     name: Button A
-  '6':
+  '31':
     name: Button B
 i2c:
   '0x3c':

@@ -76,7 +76,7 @@ pin:
     name: Touch Clock
     mode: i2c
   'bcm18':
-    name: Touch Interrupt
+    name: LCD Chip Select
     mode: output
   'bcm19':
     name: Backlight Control
@@ -85,7 +85,7 @@ pin:
     name: LCD Program Data
     mode: output
   'bcm27':
-    name: LCD Program Clock
+    name: Touch Interrupt
     mode: output
 -->
 # HyperPixel

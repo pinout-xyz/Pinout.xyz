@@ -47,7 +47,9 @@ pin:
 -->
 # Inky pHAT
 
-TBA
+Inky pHAT is a low-energy, red/black/white electronic paper display for the Raspberry Pi. Multi-colour EPD displays, like the one on Inky pHAT, use ingenious electrophoresis to pull coloured particles up and down on the display. The coloured particles reflect light, unlike most display types, so they're visible under bright lights.
+
+The unit comes fully-assembled, with the display securely stuck down to the Inky pHAT PCB and connected via a ribbon cable. The Inky pHAT is compatible with all 40-way Raspberry Pis.
 
 To get the pHAT up and running, you can use the one-line product installer:
 

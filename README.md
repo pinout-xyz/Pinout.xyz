@@ -24,7 +24,23 @@ If you've spotted an error, ommission or have a suggestion, raise an [issue](htt
 
 If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
 
-Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/boards/template.png) is expected, although optional. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
+Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/boards/template.png) is expected. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
+
+Once your draft has been made, before filing a pull request, you should try to render the page and make sure it build and appears as intended. To do so:
+
+```bash
+./draft/publish myboard
+make serve LANG=en
+```
+
+And then open: http://127.0.0.1:5000 in your browser.
+
+Once you are happy with the result, 
+
+```bash
+./draft/unpublish myboard
+```
+(this will file the overlay back into the draft folder, ready for review)
 
 If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
 

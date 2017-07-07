@@ -30,7 +30,6 @@ Once your draft has been made, before filing a pull request, you should try to r
 
 ```bash
 ./draft/publish myboard
-sudo pip install -r ./requirements.txt
 make serve LANG=en
 ```
 
@@ -42,6 +41,11 @@ Once you are happy with the result,
 ./draft/unpublish myboard
 ```
 (this will file the overlay back into the draft folder, ready for review)
+
+*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
+*`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
+
+*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
 
 If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
 
@@ -62,11 +66,6 @@ make serve LANG=de
 ```
 
 And then open: http://127.0.0.1:5000 in your browser.
-
-*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
-*`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
-
-*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
 
 The last step will be to submit your finished translation as a [pull request](https://github.com/Gadgetoid/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
 

@@ -30,6 +30,7 @@ Once your draft has been made, before filing a pull request, you should try to r
 
 ```bash
 ./draft/publish myboard
+sudo pip install -r ./requirements.txt
 make serve LANG=en
 ```
 

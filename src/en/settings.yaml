@@ -96,6 +96,7 @@ overlays:
 - phat-dac
 - pi-cap
 - pi-liter
+- pi-top-pulse
 - piano-hat
 - piborg-ledborg
 - piborg-zeroborg

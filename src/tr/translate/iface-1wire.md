@@ -31,8 +31,18 @@ Alternatively you can enable the one-wire interface on demand using raspi-config
 sudo modprobe w1-gpio
 ```
 
-once either of the steps above has been performed, you can list the devices your Raspberry Pi can probe via (by default) BCM4, like so:
+Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire busses to be used at the same time:
+
+```
+sudo dtoverlay w1-gpio gpiopin=4 pullup=0  # header pin 7
+sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
+sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
+```
+
+once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default BCM4), like so:
 
 ```
 ls /sys/bus/w1/devices/
 ```
+
+n.b. Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17).  Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.

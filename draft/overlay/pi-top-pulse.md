@@ -11,7 +11,7 @@ github: https://github.com/pi-top/pi-topPULSE
 buy: http://pi-top.com/products/pulse
 image: 'pi-top-pulse.png'
 pincount: 40
-eeprom: setup
+eeprom: yes
 power:
   '1':
   '2':

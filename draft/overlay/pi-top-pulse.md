@@ -2,7 +2,7 @@
 ---
 name: pi-topPULSE
 class: board
-type: audio,io,led,sensor
+type: audio,io,led,sensor,multi
 formfactor: HAT
 manufacturer: pi-top
 description: 7×7 RGB LED matrix, speaker and microphone

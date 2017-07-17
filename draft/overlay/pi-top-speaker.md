@@ -3,7 +3,7 @@
 name: pi-topSPEAKER
 class: board
 type: audio
-formfactor: custom
+formfactor: Custom
 manufacturer: pi-top
 description: pi-top/pi-topCEED compatible speaker add-on board
 url: http://pi-top.com/products/speaker

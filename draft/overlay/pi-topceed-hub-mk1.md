@@ -5,13 +5,22 @@ class: board
 type: power, display, other
 formfactor: Custom
 manufacturer: pi-top
-description: The pi-top's central board
+description: The pi-topCEED's central board
 url: https://pi-top.com/products/ceed
 buy: https://pi-top.com/products/ceed
 image: 'pi-topceed-hub-mk1.png'
 pincount: 40
 eeprom: no
 pin:
+  '19':
+    name: MOSI
+    mode: spi
+  '21':
+    name: MISO
+    mode: spi
+  '23':
+    name: SCLK
+    mode: spi
   '26':
     name: CE1
     mode: spi

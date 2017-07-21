@@ -18,6 +18,15 @@ pin:
   '5':
     name: SCL
     mode: i2c
+  '19':
+    name: MOSI
+    mode: spi
+  '21':
+    name: MISO
+    mode: spi
+  '23':
+    name: SCLK
+    mode: spi
   '26':
     name: CE1
     mode: spi

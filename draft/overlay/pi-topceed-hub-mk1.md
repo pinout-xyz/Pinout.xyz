@@ -21,13 +21,8 @@ pin:
   '26':
     name: CE1
     mode: spi
-i2c:
-  '0x0b':
-    name: Smart Battery Management System
-    device: bq40z60
 install:
   'devices':
-    - 'i2c'
     - 'spi'
   'apt':
     - 'pt-hub-controller'

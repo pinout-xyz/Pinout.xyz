@@ -12,12 +12,6 @@ image: 'pi-topceed-hub-mk1.png'
 pincount: 40
 eeprom: no
 pin:
-  '3':
-    name: SDA
-    mode: i2c
-  '5':
-    name: SCL
-    mode: i2c
   '26':
     name: CE1
     mode: spi

@@ -4,7 +4,7 @@ base_url: /pinout/
 resource_url: /resources/
 url_suffix:
 urls:
-  GND: tierra
+  GND: masa
 featured:
 - ab-adc-pi-zero
 - analog-zero
@@ -125,7 +125,6 @@ overlays:
 - motozero
 - adafruit-joybonnet
 - vandenbosch-gpio-input
-
 - fepi-audio-z
 - energenie-pi-mote
 - sixfab-cellular-shield

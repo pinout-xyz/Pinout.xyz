@@ -39,7 +39,7 @@ pins:
       alt3: AVEOUT HSYNC
       alt4: AVEIN HSYNC
   '6':
-    name: Tierra
+    name: Masa
     type: GND
   '7':
     name: GPCLK0
@@ -69,7 +69,7 @@ pins:
       alt4: AVEIN VID10
       alt5: UART1 TXD
   '9':
-    name: Tierra
+    name: Masa
     type: GND
   '10':
     name: RXD
@@ -126,7 +126,7 @@ pins:
       alt3: SD1 DAT3
       alt4: JTAG TMS
   '14':
-    name: Tierra
+    name: Masa
     type: GND
   '15':
     name: ''
@@ -180,7 +180,7 @@ pins:
       alt3: AVEOUT VID6
       alt4: AVEIN VID6
   '20':
-    name: Tierra
+    name: Masa
     type: GND
   '21':
     name: MISO
@@ -232,7 +232,7 @@ pins:
       alt3: AVEOUT VID4
       alt4: AVEIN VID4
   '25':
-    name: Tierra
+    name: Masa
     type: GND
   '26':
     name: CE1
@@ -287,7 +287,7 @@ pins:
       alt4: AVEIN VID1
       alt5: JTAG TDO
   '30':
-    name: Tierra
+    name: Masa
     type: GND
   '31':
     name: ''
@@ -329,7 +329,7 @@ pins:
       alt4: AVEIN VID9
       alt5: JTAG TCK
   '34':
-    name: Tierra
+    name: Masa
     type: GND
   '35':
     name: MISO
@@ -385,7 +385,7 @@ pins:
       alt4: SPI1 MOSI
       alt5: GPCLK0
   '39':
-    name: Tierra
+    name: Masa
     type: GND
   '40':
     name: SCLK

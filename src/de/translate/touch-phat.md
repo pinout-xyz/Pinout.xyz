@@ -34,7 +34,7 @@ i2c:
     name: Cap Touch
     device: cap1166
 -->
-#Touch HAT
+#Touch pHAT
 
 Touch pHAT has six capacitive touch buttons, each with a bright white LED, designed to be completely agnostic about what they're used for. It uses the CAP1166 capacitive touch and LED driver chip.
 

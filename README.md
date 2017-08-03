@@ -29,7 +29,7 @@ Note that as part of the submission, a top-down view of the board in the form of
 Once your draft has been made, before filing a pull request, you should try to render the page and make sure it build and appears as intended. To do so:
 
 ```bash
-./draft/publish myboard
+./draft/publish.sh myboard
 make serve LANG=en
 ```
 
@@ -38,7 +38,7 @@ And then open: http://127.0.0.1:5000 in your browser.
 Once you are happy with the result, 
 
 ```bash
-./draft/unpublish myboard
+./draft/unpublish.sh myboard
 ```
 (this will file the overlay back into the draft folder, ready for review)
 

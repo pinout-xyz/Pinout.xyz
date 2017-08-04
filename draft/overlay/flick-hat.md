@@ -12,7 +12,7 @@ buy: https://www.pi-supply.com/product/flick-hat-3d-tracking-gesture-hat-raspber
 image: 'flick-hat.png'
 pincount: 40
 eeprom: setup
-power: 3v3
+power:
   '1':
   '2':
 ground:

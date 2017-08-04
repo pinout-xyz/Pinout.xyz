@@ -11,7 +11,7 @@ github: https://github.com/PiSupply/PiPoE
 buy: https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/
 image: 'pi-poe.png'
 pincount: 40
-eeprom: setup
+eeprom: yes
 power:
   '1':
   '2':

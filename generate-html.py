@@ -404,6 +404,10 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'description' in overlay_pin:
             pin_link_title.append(overlay_pin['description'])
 
+        if 'mode' in overlay_pin:
+            if overlay_pin['mode'] == "EEPROM_WP":
+                pin_name = "EEPROM WP"
+
     if 'scheme' in pin:
         if 'bcm' in pin['scheme']:
             bcm = pin['scheme']['bcm']

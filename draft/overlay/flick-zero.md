@@ -1,6 +1,6 @@
 <!--
 ---
-name: My Add-on Board
+name: Flick Zero
 class: board
 type: gesture
 formfactor: pHAT

@@ -8,7 +8,7 @@ manufacturer: Raspihats
 description: 6 isolated digital input channels and 6 relay output channels add-on board for the Raspberry Pi 
 url: http://raspihats.com/product/di6acdq6rly-i2c-hat
 buy: http://raspihats.com/product/di6acdq6rly-i2c-hat
-image: 'raspihats-di6acdq6rly-i2c-hat.png'
+image: 'raspihats-i2c-hat-di6acdq6rly.png'
 pincount: 40
 eeprom: no
 power:

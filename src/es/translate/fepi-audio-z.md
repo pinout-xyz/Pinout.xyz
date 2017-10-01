@@ -48,16 +48,15 @@ i2c:
 -->
 #Audio Z
 
-The Fe-Pi Audio Z is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, and headphone-out/mic-in.
+Fe-Pi Audio Z está diseñado para ser una solución completa de sonido y bajo coste para Raspberry Pi 2, 3 y Zero, proporciona entrada y salida de línea, salida de auriculares/entrada de micrófono.
 
-## Features ##
+## Especificaciones ##
 
-* Small Raspberry Pi Zero PCB footprint
-* 3.5 mm, 4 contact, jack for Headphone/MIC (black)
-* 3.5 mm jack for stereo Line Out (green), and stereo Line In (pink)
-* ADC > 90 dB SNR and -72 dB THD+N
-* Line-Out > 100 dB SNR and -85 dB THD+N
-* HP Output > 100 dB SNR and -80 dB THD+N, 62.5 mW max into 16 ohm
-* Hardware level controls for Headphone Volume, Line In, Line Out. ALSA support
-* 2x20pin 2.54mm female header and 40pin male breakable header included
- 
+* Tamaño pequeño, como Raspberry Pi Zero
+* Jack para auricuales/micrófono de 3.5 mm y 4 contactos (negro)
+* Jack para salida de línea estéreo de 3.5 mm (verde) y entrada estéreo (rosa)
+* ADC > 90 dB SNR y -72 dB THD+N
+* Salida de línea > 100 dB SNR y-85 dB THD+N
+* Salida HP > 100 dB SNR y -80 dB THD+N, 62.5 mW máximo en 16 ohm
+* Controles de hardware para el  volúmen de auriculares, líneas de entrada y salida, soporte ALSA
+* Conector femenino de 2.54mm y 2x20 pines, conector masculino de 40 pines incluido

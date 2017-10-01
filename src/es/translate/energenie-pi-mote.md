@@ -9,7 +9,7 @@ collected: Other
 description: Add-on that allows control of Energenie smart plugs from a Raspberry Pi
 url: https://energenie4u.co.uk/res/pdfs/ENER314%20UM.pdf
 buy: https://energenie4u.co.uk/catalogue/product/ENER314
-image: 'energenie-pi-mote.png' 
+image: 'energenie-pi-mote.png'
 pincount: 26
 eeprom: no
 power:
@@ -45,6 +45,6 @@ pin:
 -->
 # Pi-mote
 
-The Pi-mote is a RF transmitter add-on board that allows control of up to 4 Energenie radio controlled sockets independently using Python.
+Pi-Mote es una placa transmisora de RF que permite controlar hasta 4 zócalos Energenie de manera independiente utilizando Python.
 
-With it you will be able to control your electrical sockets within a range of up to 30 metres, through doors, walls and ceilings.
+Además, serás capaz de controlar tus zócalos eléctricos en un rango de 30 metros, a través de puertas, muros y techos.

@@ -69,6 +69,6 @@ pin:
 -->
 # GertVGA 666
 
-The Gert VGA 666 (6 bits per colour channel, hence 666) is a breakout/add on board for the Raspberry Pi. It is an open source hardware design released publicly by Gert van Loo.
+Gert VGA 666 (6 bits por canal de color, por lo tanto 666) es una placa añadida para Raspberry Pi. El diseño es abierto, publicado por Gert van Loo.
 
-It is a neat and very useful solution for using a VGA screen/monitor with your Raspberry Pi and is far cheaper than an HDMI to VGA adapter or similar. The VGA connection is driven natively in hardware over the GPIO pins (using a parallel interface) and uses around the same CPU load as the HDMI connection on board. It is capable of displaying 1080p60 VGA video with no CPU load.
+Es una solución para utilizar una pantalla VGA con tu Raspberry Pi y es bastante más barata  que un adaptador HDMI a VGA. La conexión VGA es controlada de manera nativa a través de los pines GPIO (interfaz paralela) y utiliza aproximadamente la misma carga de CPU que la conexión HDMI de Raspberry Pi. Es capaz de mostrar video 1080p60 sin carga de CPU. 

@@ -143,3 +143,4 @@ overlays:
 - raspihats-i2c-hat-di6acdq6rly
 - flick-zero
 - flick-hat
+- mearm-pi

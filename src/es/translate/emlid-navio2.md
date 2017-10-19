@@ -95,22 +95,22 @@ i2c:
 -->
 # Navio2 Autopilot
 
-The Navio2 Autopilot is designed both for your own custom robotic projects and as a platform for Linux version of APM (ArduPilot).
+Navio2 Autopilot está diseñado tanto para tus propios proyectos de robótica como para la versión Linux de AMP (ArduPilot).
 
-Navio2 eliminates the need for multiple on-board controllers making development easier and increasing robustness. It extends connectivity and allows control of all kinds of moving robots: cars, boats, multirotors, planes.
+Navio2 elimina la necesidad de múltiples controladores para hacer más sencillo el desarrollo y aumentar la robustez del proyecto. Aumenta la conectividad y permite controlar todo tipo de robots que se desplacen: coches, barcos, multirrotores, aviones.
 
-For accurate knowledge of position and orientation Navio2 is equipped with double IMU and GPS/Glonass/Beidou receiver. PWM, ADC, SBUS and PPM are integrated in Linux sysfs via the on-board RC I/O co-processor, allowing easy access from any programming language.
+Para un conocimiento preciso de la posición y la orientación Navio2 está equipado con doble IMU y receptor GPS/Glonass/Beidou. PWM, ADC, SBUS y PPM están integrados en Linux sysfs gracias al coprocesador RC I/O incluído en la placa, permitiendo acceder fácilmente con cualquier lenguaje de programación.
 
-Features:
+Especificaciones:
 
-* MS5611 Barometer (I2C1)
+* MS5611 barómetro (I2C1)
 * MPU9250 9DOF IMU (SPI0)
 * LSM9DS1 9DOF IMU (SPI0)
 * Ublox M8N Glonass/GPS/Beidou (SPI0)
-* 14 PWM servo outputs (RCIO/SPI1)
-* PPM/S.Bus input (RCIO/SPI1)
-* 6-channel ADC (RCIO/SPI1)
-* Integrated RGB LED
-* UART, I2C terminals for extensions
-* Power module connector
-* Triple redundant power supply
+* 14 PWM salidas servo (RCIO/SPI1)
+* PPM/S.Bus entrada (RCIO/SPI1)
+* 6-canales ADC (RCIO/SPI1)
+* Integrado RGB LED
+* UART, I2C terminales para conexiones
+* Conector de corriente
+* Fuente de alimentación triple 

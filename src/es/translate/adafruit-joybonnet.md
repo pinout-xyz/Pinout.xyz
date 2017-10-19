@@ -52,12 +52,11 @@ i2c:
 -->
 # Joy Bonnet
 
-This add on board fits perfectly on top of your Raspberry Pi Zero (any kind) and gives you hand-held arcade controls.
-The controls will act like a keyboard, for easy-to-use operation within any emulator or media player.
+Esta placa encaja perfectamente en la parte superior de tu Raspberry Pi Zero (cualquier modelo) proporcinando controles arcade portátiles.
 
-The Joy Bonnet works best with RetroPie/EmulationStation. You can emulate NES and MAME game controllers easily, but any emulator should work.
+Esto controles funcionan como un teclado, para poder utilizarlos fácilmente con cualquiere emulador o reproductor multimedia.
 
-To install:
+Para instalar:
 ```bash
 curl -O https://raw.githubusercontent.com/adafruit/\
 Raspberry-Pi-Installer-Scripts/master/joy-bonnet.sh

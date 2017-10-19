@@ -140,3 +140,5 @@ overlays:
 - pitop-pulse
 - button-shim
 - raspihats-i2c-hat-di6acdq6rly
+- flick-zero
+- flick-hat

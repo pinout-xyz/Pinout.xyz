@@ -1,6 +1,6 @@
 <!--
 ---
-name: My Add-on Board
+name: Flick HAT
 class: board
 type: gesture
 formfactor: HAT

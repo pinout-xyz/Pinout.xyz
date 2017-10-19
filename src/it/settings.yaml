@@ -140,3 +140,4 @@ overlays:
 - gertvga-666
 - pitop-pulse
 - button-shim
+- raspihats-i2c-hat-di6acdq6rly

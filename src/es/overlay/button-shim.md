@@ -24,16 +24,16 @@ pin:
 -->
 # Button SHIM
 
-Button SHIM is designed to add 5 tactile push buttons and a single RGB indicator LED to your Raspberry Pi project. Designed to be soldered right onto the GPIO pins of your Pi, it's great for adding buttons to a project using Scroll pHAT or another display add-on.
+Button SHIM está diseñado para añadir 5 botones táctiles y un indicador LED RGB a tu proyecto con Raspberry Pi. Diseñado para ser soldado encima de los pines GPIO de tu Pi, es genial para añadir botones a un proyecto que use el Scroll pHAT o cualquier otro complemento de visualización.
 
-To install the library, run the one-line installer like so:
+Para instalar, ejecuta el instalador de una línea:
 
 ```bash
 curl https://get.pimoroni.com/buttonshim | bash
 ```
 
-Features:
+Especificaciones:
 
-* 5 tactile push buttons
-* can be soldered right onto the Pi header
-* RGB status LED
+* 5 botones táctiles
+* Puede ser soldado directamente sobre los pines GPIO de Raspberry Pi
+* LED de estado RGB

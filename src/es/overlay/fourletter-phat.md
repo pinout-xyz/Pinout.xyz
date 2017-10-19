@@ -36,15 +36,15 @@ i2c:
 -->
 # Four Letter pHAT
 
-Four Letter pHAT is a four 14-segment display that can be used to display text, numbers, and a host of other characters. Its Matrices are a retro-style green, similar to old digital alarm clock and are driven by the HT16K33 chip over I2C.
+For Letter pHAT es una pantalla formada por 4 módulos de 14 segmentos que se puede utilizar para mostrar texto, números y otros caracteres. Sus matrices son de estilo retro vede, similares a la de los viejos despertadores digitales y son controladas por el chip HT16K33 vía I2C.
 
-Features:
+Especificaciones:
 
-* Four 14-segment displays
-* HT16K33 driver chip
-* Compatible with Raspberry Pi A+/B+, 2, 3 and Zero/Zero W
+* Cuatro matrices de 14 segmentos
+* Chip controlador HT16K33
+* Compatible con Raspberry Pi A+/B+, 2, 3 y Zero/Zero W
 
-To get the pHAT set up and ready to go you can use the one-line product installer:
+Para configurar el pHAT y dejarlo listo para su funcionamiento puedes utilizar el instalador de una línea:
 
 ```bash
 curl https://get.pimoroni.com/fourletterphat | bash

@@ -139,3 +139,5 @@ overlays:
 - gertvga-666
 - pitop-pulse
 - button-shim
+- flick-zero
+- flick-hat

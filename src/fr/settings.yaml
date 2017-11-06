@@ -117,7 +117,6 @@ overlays:
 - adafruit-tft-kippah
 - scroll-phat-hd
 - phat-beat
-- pisupply-pi-poe
 - touch-phat
 - sheepwalk-rpi2
 - fourletter-phat
@@ -144,3 +143,4 @@ overlays:
 - flick-zero
 - flick-hat
 - mearm-pi
+- pi-poe

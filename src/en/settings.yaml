@@ -103,7 +103,6 @@ overlays:
 - picade-hat
 - piglow
 - pijack
-- pisupply-pi-poe
 - propeller-hat
 - rainbow-hat
 - raspio-duino
@@ -143,3 +142,4 @@ overlays:
 - flick-zero
 - flick-hat
 - mearm-pi
+- pi-poe

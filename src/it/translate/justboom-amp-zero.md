@@ -31,8 +31,6 @@ pin:
   '12':
     name: BCKL (Bit Clock)
     mode: i2s
-  '15':
-    name: Soft Mute
   '16':
     name: Rotary Encoder
   '18':

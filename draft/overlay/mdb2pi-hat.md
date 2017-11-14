@@ -48,10 +48,11 @@ i2c:
 -->
 # MDB2Pi HAT
 
-The MDB2Pi HAT can serve as a MDB master or as a peripheral MDB Device for Vending Machines (VMC). It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol.
-The MDB2Pi HAT is powered from the MDB bus (10...42V regulated or unregulated supply) and backpowers the Raspberry Pi with up to 2.5A at 5V. Thus no separate power supply is required for the pi. Furthermore, the MDB2Pi HAT contains a Real Time Clock (RTC), buffered by a super capacitor.
+The MDB2Pi is a Raspberry Pi HAT which can serve as a MDB master (VMC), as MDB cashless peripheral, or as tracer for MDB Vending Machines. It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol. The MDB2Pi is powered through the MDB bus (10...42V regulated or unregulated supply) and back-powers the Raspberry Pi with up to 2.5A at 5V. Therefore, no separate power supply is required. Furthermore, the MDB2Pi contains a Real Time Clock (RTC), buffered by a super capacitor.
 
-A housing for the MDB2Pi HAT is available under http://www.thingiverse.com/thing:2209661
+A housing for the MDB2Pi (and the MDB2Pi itself) is available at the Abrantix Web Shop: http://blog.abrantix.com/webshop/product/mdb-to-raspberrypi/. Alternatively, you can download a free 3D model here: http://www.thingiverse.com/thing:2209661
+
+
 
 ## Configuration
 Enable UART and RTC by adding the following lines to /boot/config.txt:
@@ -96,7 +97,7 @@ mono MDBCashlessDeviceSimulatorConsole.exe /dev/serial0 115200
 Hint: On newer raspbian releases, the serial port is available as /dev/serial0 - older releases may use dev/ttyAMA0.
 
 ## RTC
-A PCF8563 I2C chip in conjunction with a SuperCapacitor is used for Real-Time-Clock capability (no battery required). This allows buffering of the time up to 7 days when fully charged (or even more, depending on temperature environment and chip/capacitor variance).
+A PCF8563 I2C chip in conjunction with a SuperCapacitor is used for Real-Time-Clock capability (no battery required). This allows buffering of the time up to 7 days when fully charged (or even more, depending on environment temperature and chip/capacitor variance).
 
 Read the RTC:
 ```bash
@@ -137,4 +138,4 @@ pi@raspberrypi:~ $ dmesg | grep rtc
 [    2.900428] rtc-pcf8563 1-0051: pcf8563_probe: write error
 [    2.900459] rtc-pcf8563: probe of 1-0051 failed with error -5
 ```
-In this case, please wait a few minutes to let the SuperCap being charged; then restart your pi to let the rtc daemon detect the chip again.
+In this case, please wait a few minutes to let the SuperCap recharge, then restart your pi so the RTC daemon can detect the chip again.

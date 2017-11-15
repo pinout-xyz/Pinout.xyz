@@ -25,6 +25,10 @@ ground:
   '34':
   '39':
 pin:
+  '3':
+    name: i2c SDA Breakout
+  '5':
+    name: i2c Clock Breakout
   '7':
     name: Driver 0 Breakout
   '11':

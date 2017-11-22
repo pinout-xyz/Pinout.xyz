@@ -144,3 +144,7 @@ overlays:
 - mearm-pi
 - pi-poe
 - nadhat_v1
+- uputronics-hx1
+- uputronics-lora
+- uputronics-gps-hat
+- uputronics-pits

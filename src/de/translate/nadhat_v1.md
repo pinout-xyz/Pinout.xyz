@@ -38,9 +38,9 @@ pin:
 -->
 # NadHAT v1
 
-NadHAT v1 is a GSM/GPRS modem pHAT for the Raspberry pi based on Simcom SIM800C standard module, gammu and pppd compatible for SMS and DATA exchange.
+NadHAT v1 is a GSM/GPRS modem pHAT for the Raspberry Pi, based on the Simcom SIM800C standard module. It's Gammu and pppd compatible for SMS and DATA exchange.
 
-It have a timekeeper with CR1225 coin cell, one 10 bits ADC channel, 2 status LEDS and an efficient switched mode DC/DC converter. It needs a micro sim card line suscriber to work with it.
+It has a timekeeper with CR1225 coin cell, one 10bit ADC channel, 2 status LEDS and an efficient switched-mode DC/DC converter. It needs a micro sim card line subscriber to work with it.
 
 To install the necessary software, use the following commands:
 

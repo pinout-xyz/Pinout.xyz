@@ -5,11 +5,11 @@ class: board
 type: IOT,ADC
 formfactor: pHAT
 manufacturer: Garatronic
-description: An GSM/GPRS add-on board for the Raspberry Pi
+description: Carte d'extension GSM/GPRS pour le Raspberry Pi
 url: https://www.garatronic.fr
 github: https://github.com/garatronic/nadhat
 schematic: https://github.com/garatronic/nadhat/tree/master/hardware/nadhat_v1_schematics.pdf
-buy: https://www.amazon.co.uk/NadHAT-GPRS-expansion-board-Raspberry/dp/B076M83F38
+buy: https://www.amazon.fr/NadHAT-GPRS-expansion-board-Raspberry/dp/B076M83F38
 image: 'nadhat_v1.png'
 pincount: 40
 eeprom: no
@@ -38,11 +38,11 @@ pin:
 -->
 # NadHAT v1
 
-NadHAT v1 is a GSM/GPRS modem pHAT for the Raspberry Pi, based on the Simcom SIM800C standard module. It's Gammu and pppd compatible for SMS and DATA exchange.
+NadHAT v1 est un modem GSM/GPRS au format pHAT pour le Raspberry Pi, basé sur le module Simcom SIM800C. L'ensemble supporte gammu et pppd pour l'échange de SMS et de données.
 
-It has a timekeeper with CR1225 coin cell, one 10bit ADC channel, 2 status LEDS and an efficient switched-mode DC/DC converter. It needs a micro sim card line subscriber to work with it.
+Il dispose d'une horloge sauvegardée par pile bouton CR1225, d'un convertisseur analogique/numérique 10 bits, de 2 LEDs d'état et d'une alimentation à découpage à haut rendement. Il nécessite un abonnement téléphonique et d'une carte micro SIM pour son utilisation
 
-To install the necessary software, use the following commands:
+Pour installer le logiciel nécessaire, utilisez les commandes suivantes:
 
 ```bash
 sudo apt-get install minicom python-dev python-setuptools

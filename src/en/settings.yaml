@@ -6,10 +6,10 @@ url_suffix:
 urls:
   GND: ground
 featured:
+- scorezero
 - motozero
 - adafruit-arcade-bonnet
 - sixfab-xbee-shield
-- fourletter-phat
 overlays:
 - ground
 - iface-dpi
@@ -148,3 +148,4 @@ overlays:
 - uputronics-lora
 - uputronics-gps-hat
 - uputronics-pits
+- scorezero

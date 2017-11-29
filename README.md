@@ -4,6 +4,8 @@
 
 [Pinout.xyz](http://pinout.xyz/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
 
+Have an idea? Want a particular board added? [Join us on Discord to discuss Pinout.xyz](https://discord.gg/Wh4Cxe6)
+
 To support translation efforts, and allow people to build tools with the data in this repository, Pinout.xyz is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 This license excludes the 'pinout-graphic-horizontal' files located in the `graphics` directory, which are provided under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) to permit commercial use; specifically publication in books and magazines with appropriate attribution.

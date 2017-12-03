@@ -37,17 +37,35 @@ i2c:
   '0x69':
     name: MCP3424
     device: MCP3424
+  '0x6A':
+    name: MCP3424
+    device: MCP3424
+  '0x6B':
+    name: MCP3424
+    device: MCP3424
+  '0x6C':
+    name: MCP3424
+    device: MCP3424
+  '0x6D':
+    name: MCP3424
+    device: MCP3424
+  '0x6E':
+    name: MCP3424
+    device: MCP3424
+  '0x6F':
+    name: MCP3424
+    device: MCP3424
 -->
 #ADC Pi Plus
 
-The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs. The board is stackable allowing you to use up to four ADC Pi Plus boards on a Raspberry Pi. 
 
 ##Features
 
 - 8 x 17-bit 0 to 5V Single Ended Inputs
 - Control via the Raspberry Pi I2C port
 - Stack up to 4 ADC Pi Plus boards on a single Raspberry Pi
-- Jumper selectable I2C addresses
+- Jumper selectable I2C addresses (0x68 to 0x6F)
 - Buffered 5V I2C port
 - Based on the MCP3424 from Microchip Technologies Inc
 - Single Ended full-scale range of 5.0V

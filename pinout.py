@@ -15,6 +15,7 @@ pins = None
 settings = None
 
 master_template = open('common/layout.html').read()
+twitter_template = open('common/twittercard.html').read()
 
 
 def get_setting(setting, default = None):
@@ -25,13 +26,18 @@ def get_setting(setting, default = None):
 def get_string(string, default = None):
     if string in strings and strings[string] != None:
         return strings[string]
-    return default
-
+    return default    
 
 def render_html(*args, **kwargs):
     html = master_template
     html = html.replace('{{main_content}}',args[0])
     html = html.replace('{{footer}}',args[1])
+
+    if "twittercard" in kwargs:
+        if kwargs["twittercard"]:
+            html = html.replace('{{twittercard}}', twitter_template)
+    
+    html = html.replace('{{twittercard}}', "")
 
     strings = args[2]
 

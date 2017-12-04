@@ -763,6 +763,7 @@ for url in pages:
                               template_footer,
                               strings,
                               pinout.settings,
+                              twittercard=True,
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
                               nav=nav,
@@ -776,7 +777,8 @@ for url in pages:
                               nav_html=nav_html,
                               interfaces=interfaces_menu(pages[url]),
                               body_class=body_class,
-                              crumbtrail=crumbtrail
+                              crumbtrail=crumbtrail,
+                              api_image="https://api.pinout.xyz/v1/img/{url}.png".format(url=url)
                               )
 
     key = url

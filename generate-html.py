@@ -18,6 +18,7 @@ import urlmapper
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+DEBUG_LEVEL = 1
 GROUND_PINS = [6,9,14,20,25,30,34,39]
 
 lang = "en"
@@ -54,9 +55,15 @@ default_strings = {
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
 
+def debug(level, string):
+    if level < DEBUG_LEVEL:
+        return
+
+    level_text = ['Notice', 'Warning', 'Error'][level]
+    print("[{}] {}".format(level_text, string))
 
 def cssify(value):
-    value = slugify(value);
+    value = slugify(value)
     if value[0] == '3' or value[0] == '5':
         value = 'pow' + value
 
@@ -78,9 +85,8 @@ def load_overlay(overlay):
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
 
-
         loaded = data['data']
-        loaded['source'] = "src/{}/translate/{}.md".format(lang, overlay)
+        loaded['source'] = "src/{}/overlay/{}.md".format(lang, overlay)
         loaded['long_description'] = data['html']
     except IOError:
         try:
@@ -98,7 +104,7 @@ def load_overlay(overlay):
             print('overlay {} missing in lang {}'.format(overlay, lang))
             return None
 
-    print('>> Rendering: {src}'.format(src=loaded['source']))
+    debug(0, '>> Rendering: {src}'.format(src=loaded['source']))
 
     '''
     If this is not an info page, then build a collection of details and append them to long_description
@@ -214,6 +220,8 @@ def load_overlay(overlay):
                 if data is not None and 'device' in data:
                     details.append('{address}: {device}'.format(address=addr, device=dev))
 
+        links = {}
+
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:
             details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
@@ -224,7 +232,10 @@ def load_overlay(overlay):
 
         # A URL referencing the add-on board schematic
         if 'schematic' in loaded:
-            details.append('[{text}]({url})'.format(text=strings['board_schematic'], url=loaded['schematic']))
+            if loaded['schematic'] is not None:
+                details.append('[{text}]({url})'.format(text=strings['board_schematic'], url=loaded['schematic']))
+            else:
+                debug(1, "schematic defined in {}, but missing a value.".format(loaded['source']))
 
         # A URL to a preferred place to buy the add-on board
         if 'buy' in loaded:
@@ -697,7 +708,7 @@ for pin in range(1, len(pinout.pins) + 1):
                                   crumbtrail=crumbtrail
                                   )
 
-    print('>> Saving: pinout/{}.html'.format(pin_url))
+    debug(0, '>> Saving: pinout/{}.html'.format(pin_url))
 
     with open(os.path.join('output', lang, 'pinout', '{}.html'.format(pin_url)), 'w') as f:
         f.write(pin_html)
@@ -787,7 +798,7 @@ for url in pages:
         url = os.path.join('pinout', url)
 
     if 'source' in pages[key]:
-        print('>> Saving: {src} => {url}.html'.format(url=url, src=pages[key]['source']))
+        debug(0, '>> Saving: {src} => {url}.html'.format(url=url, src=pages[key]['source']))
 
     with open(os.path.join('output', lang, '{}.html'.format(url)), 'w') as f:
         f.write(html)

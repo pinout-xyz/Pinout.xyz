@@ -24,17 +24,17 @@ ground:
   '34':
   '39':
 pin:
-  '8':
+  '24':
     mode: uart
-  '10':
+  '19':
     mode: uart
-  '16':
+  '36':
     name: M66 CTS
-  '22':
+  '15':
     name: PWR Key
-  '3':
+  '5':
     name: LED
-  '4':
+  '7':
     name: 1Wire
   
 -->

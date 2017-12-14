@@ -66,7 +66,7 @@ pin:
 -->
 #WiringPi Bibliothek
 
-###WiringPi is der Versuch die Einfachheit der Verdrahtung des Arduino auf den Raspberry Pi zu bringen.
+###WiringPi ist der Versuch die Einfachheit der Verdrahtung des Arduino auf den Raspberry Pi zu bringen.
 
 Das Ziel dieser Bibliothek ist es, eine einzige gemeinsame Plattform und Programmierschnistelle für den Zugriff auf die
 GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur Verfügung zu stellen.

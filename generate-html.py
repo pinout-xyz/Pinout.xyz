@@ -155,6 +155,9 @@ def load_overlay(overlay):
             uses_5v = False
             uses_3v3 = False
 
+            if loaded['power'] is None:
+                loaded['power'] = {}
+
             for pin in loaded['power']:
                 pin = str(pin)
                 if pin.startswith('bcm'):

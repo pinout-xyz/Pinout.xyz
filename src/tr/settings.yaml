@@ -153,3 +153,4 @@ overlays:
 - mdb2pi-hat
 - sixfab-gsmgprs-shield
 - pololu-dual-g2-motor-driver
+- respeaker-2-mics-phat

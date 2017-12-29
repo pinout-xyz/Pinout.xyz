@@ -410,6 +410,12 @@ def render_pin(pin_num, selected_url, overlay=None):
         if overlay_pin is None:
             overlay_pin = {}
 
+        if isinstance(overlay_pin, str):
+            source = ''
+            if 'source' in overlay:
+                source = overlay['source']
+            debug(1, "{}: Overlay pin '{}' for pin {} is a string! Should be dict".format(overlay['source'], overlay_pin, pin_num))
+
         pin_regular = True
 
         if 'name' in overlay_pin:

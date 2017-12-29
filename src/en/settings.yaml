@@ -151,3 +151,4 @@ overlays:
 - scorezero
 - mdb2pi-hat
 - sixfab-gsmgprs-shield
+- pololu-dual-g2-motor-driver

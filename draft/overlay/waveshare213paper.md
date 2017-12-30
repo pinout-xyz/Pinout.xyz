@@ -22,13 +22,11 @@ pin:
     name: DIN
    '23':
     name: CLK
-    '23':
-    name: CLK
-    '18':
+   '18':
     name: BUSY
-    '22':
+   '22':
     name: DC
-    '24':
+   '24':
     name: CS
 
 -->

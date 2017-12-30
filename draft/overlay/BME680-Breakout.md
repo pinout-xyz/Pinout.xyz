@@ -30,6 +30,6 @@ i2c:
     name: BME680
     device: BME680
 -->
-#BME680 Breakout
+# BME680 Breakout
 
 Use this breakout to monitor every aspect of your indoor environment. Its gas resistance readings will react to changes in volatile organic compounds and can be combined with humidity readings to give a measure of indoor air quality.

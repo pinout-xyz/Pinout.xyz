@@ -9,7 +9,7 @@ description: Use this breakout to monitor every aspect of your indoor environmen
 url: https://shop.pimoroni.com/products/bme680
 github: https://github.com/pimoroni/bme680
 buy: https://shop.pimoroni.com/products/bme680
-image: 'bme680.png'
+image: 'bme680-breakout.png'
 pincount: 5
 eeprom: no
 power:

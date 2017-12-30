@@ -1,6 +1,6 @@
 <!--
 ---
-name: waveshare213paper
+name: 2.13 Inch E-Paper pHAT
 class: board
 type: display
 formfactor: pHAT

@@ -28,7 +28,6 @@ pin:
     name: DC
   '24':
     name: CS
-
 -->
 #2.13 Inch E-Ink Display pHAT
 

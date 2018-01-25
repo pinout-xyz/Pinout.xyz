@@ -157,3 +157,5 @@ overlays:
 - sparkfun-pi-servo-hat
 - adafruit-oled-bonnet
 - adafruit-pi-oled
+- waveshare-rgb-led-phat-4x8
+- waveshare-rgb-led-hat-8x8

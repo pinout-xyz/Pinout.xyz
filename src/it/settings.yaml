@@ -155,3 +155,4 @@ overlays:
 - pololu-dual-g2-motor-driver
 - respeaker-2-mics-phat
 - sparkfun-pi-servo-hat
+- adafruit-oled-bonnet

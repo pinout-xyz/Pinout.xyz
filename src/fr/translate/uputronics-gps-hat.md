@@ -54,4 +54,4 @@ Features:
 
 I2C is connected but uses clock stretching.
 
-Command reference guide: <a href="https://www.u-blox.com/sites/default/files/products/documents/u-blox8-M8_ReceiverDescrProtSpec_(UBX-13003221)_Public.pdf">U-Blox M8 Reciever Description</a>
+Command reference guide: <a href="https://www.u-blox.com/sites/default/files/products/documents/u-blox8-M8_ReceiverDescrProtSpec_(UBX-13003221)_Public.pdf">U-Blox M8 Receiver Description</a>

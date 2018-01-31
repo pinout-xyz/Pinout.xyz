@@ -4,7 +4,7 @@ name: Monarco HAT
 class: board
 type: adc, dac, io, led, com, rtc, power, motor
 formfactor: HAT
-manufacturer: Monarco Solutions Group / REX Controls s.r.o.
+manufacturer: Monarco
 description: Industrial I/O for the Raspberry Pi
 url: https://monarco.io
 github: https://github.com/monarco
@@ -65,7 +65,7 @@ i2c:
 -->
 #Monarco HAT
 
-The Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
+Manufacturered by Monarco Solutions Group / REX Controls s.r.o., the Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
 
 All the inputs and outputs are designed to directly interface standard industrial sensors and devices, eliminating the need for additional hardware. 
 

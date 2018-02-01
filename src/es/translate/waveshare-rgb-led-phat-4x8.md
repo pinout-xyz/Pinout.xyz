@@ -5,7 +5,7 @@ class: board
 type: led
 formfactor: pHAT
 manufacturer: Waveshare
-description: True color RGB LED HAT with 4x8 pixels
+description: True color RGB LED pHAT with 4x8 pixels
 url: http://www.waveshare.com/wiki/RGB_LED_HAT
 buy: https://www.waveshare.com/product/mini-pc/raspberry-pi/hats/rgb-led-hat.htm
 schematic: https://www.waveshare.com/w/upload/b/bf/RGB_LED_HAT_Schematic_.pdf

@@ -3,7 +3,7 @@
 name: Uputronics GPS Expansion Board
 class: board
 type: gps
-formfactor: Custom
+formfactor: HAT
 manufacturer: Uputronics
 description: Provides position and PPS Time Reference for Raspberry Pi
 url: https://store.uputronics.com

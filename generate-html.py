@@ -604,7 +604,33 @@ for overlay in overlays:
 
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
+
         o_type = overlay['type']
+
+        def sanitize_type(t):
+            allowed_types = {'adc': 'ADC', 'audio': 'Audio', 'com': 'COM', 'dac': 'DAC', 'display': 'Display', 'gesture': 'Gesture', 'gps': 'GPS', 'instrument': 'Instrument',
+            'io': 'IO', 'iot': 'IOT', 'led': 'LED', 'mcu': 'MCU', 'motor': 'Motor', 'multi': 'Multi', 'network': 'Network', 'other': 'Other', 'power': 'Power', 'radio': 'Radio',
+            'relay': 'Relay', 'rtc': 'RTC', 'sensor': 'Sensor', 'touch': 'Touch', 'usb': 'USB', 'pinout': 'pinout'}
+            remapped_types = {'iot': 'radio'}
+            t = t.strip()
+            t_handle = t.lower()
+            if t_handle in allowed_types:
+                return allowed_types[t_handle]
+
+            for remap_src, remap_target in remapped_types.iteritems():
+                if t_handle == remap_src:
+                    return allowed_types[remap_target]
+
+            print("Rejecting unsupported type: {} in overlay: {}".format(t, overlay['name']))
+            return None
+
+
+        o_types = [sanitize_type(t) for t in o_type.split(',') if sanitize_type(t) is not None]
+
+        if len(o_types) > 1 and 'Multi' not in o_types:
+            o_types.append('Multi')
+
+        o_type = ','.join(o_types)
 
         if o_class not in nav_html:
             nav_html[o_class] = ''
@@ -617,14 +643,27 @@ for overlay in overlays:
             if 'formfactor' not in overlay:
                 print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
+            o_formfactor = strings['form_undefined']
+
+            allowed_formfactors = {'custom': 'Custom', 'hat': 'HAT', 'phat': 'PHAT', 'usb': 'USB'}
+
+            if 'formfactor' in overlay:
+                o_formfactor = overlay['formfactor']
+
+                if o_formfactor.lower() in allowed_formfactors:
+                    o_formfactor = allowed_formfactors[o_formfactor.lower()]
+                else:
+                    o_formfactor = strings['form_undefined']
+
+
             if 'collected' not in overlay:
                 boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],
                     base_url=base_url,
-                    type=overlay['type'] if 'type' in overlay else strings['group_other'],
-                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    type=o_type,
+                    formfactor=o_formfactor,
                     manufacturer=overlay['manufacturer'],
                     resource_url=resource_url)})
             else:
@@ -633,8 +672,8 @@ for overlay in overlays:
                     name=overlay['name'],
                     page_url=overlay['page_url'],
                     base_url=base_url,
-                    type=overlay['type'] if 'type' in overlay else strings['group_other'],
-                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    type=o_type,
+                    formfactor=o_formfactor,
                     manufacturer=overlay['collected'],
                     resource_url=resource_url)})
 

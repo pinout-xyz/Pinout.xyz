@@ -3,7 +3,7 @@
 name: True Color RGB LED HAT
 class: board
 type: led
-formfactor: pHAT
+formfactor: HAT
 manufacturer: Waveshare
 description: True color RGB LED HAT with 8x8 pixels
 url: http://www.waveshare.com/wiki/RGB_LED_HAT

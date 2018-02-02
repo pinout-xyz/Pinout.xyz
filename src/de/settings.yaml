@@ -125,7 +125,6 @@ overlays:
 - adafruit-joybonnet
 - vandenbosch-gpio-input
 
-- fepi-audio-z
 - energenie-pi-mote
 - sixfab-cellular-shield
 - sixfab-gps-shield
@@ -160,3 +159,4 @@ overlays:
 - waveshare-rgb-led-phat-4x8
 - waveshare-rgb-led-hat-8x8
 - monarco-hat
+- fepi-audio

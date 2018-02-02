@@ -73,7 +73,6 @@ overlays:
 - explorer-hat
 - explorer-hat-pro
 - explorer-phat
-- fepi-audio-z
 - fourletter-phat
 - hyperpixel
 - icubex-pishield
@@ -159,3 +158,4 @@ overlays:
 - waveshare-rgb-led-phat-4x8
 - waveshare-rgb-led-hat-8x8
 - monarco-hat
+- fepi-audio

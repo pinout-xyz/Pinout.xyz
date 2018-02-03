@@ -5,7 +5,7 @@ class: board
 type: audio
 formfactor: pHAT
 manufacturer: Pimoroni
-description: EIN I2S digital ZU analog audio Konverter
+description: Ein I2S digital zu analog audio Konverter
 buy: https://shop.pimoroni.com/products/phat-dac
 image: 'phat-dac.png'
 pincount: 40
@@ -34,7 +34,7 @@ install:
 -->
 #pHAT DAC
 
-DER pHAT DAC verfügt über einen high-quality digital nach analog audio Konverter für den Raspberry Pi: 24-bits bei 192KHz über das I2S Interface mit dem 2x20 pin GPIO header. Er hat einen a 3.5mm stereo Klinkenstecker vormontiert. Optional kann ein RCA Klinkenstecker angelötet werden.
+Der pHAT DAC verfügt über einen high-quality digital nach analog audio Konverter für den Raspberry Pi: 24-bits bei 192KHz über das I2S Interface mit dem 2x20 pin GPIO header. Er hat einen a 3.5mm stereo Klinkenstecker vormontiert. Optional kann ein RCA Klinkenstecker angelötet werden.
 
 Obwohl der Formfaktor des pHAT dem des Raspberry Pi Zero entspricht ist er kompatible mit allen 40-pin GPIO Raspberry-Pi-Varianten (2/B+/A+/Zero).
 

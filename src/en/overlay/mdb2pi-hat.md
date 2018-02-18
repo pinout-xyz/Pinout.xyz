@@ -5,6 +5,7 @@ class: board
 type: IO,Power
 formfactor: HAT
 manufacturer: Abrantix
+collected: Other
 description: Multi-Drop-Bus MDB Converter Board for the Raspberry Pi
 url: http://blog.abrantix.com/webshop/mdb-converter/
 buy: http://blog.abrantix.com/webshop/product/mdb-to-raspberrypi

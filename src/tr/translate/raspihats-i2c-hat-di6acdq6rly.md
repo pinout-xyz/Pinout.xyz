@@ -5,6 +5,7 @@ class: board
 type: io, relay
 formfactor: Custom
 manufacturer: Raspihats
+collected: Other
 description: 6 isolated digital input channels and 6 relay output channels add-on board for the Raspberry Pi 
 url: http://raspihats.com/product/di6acdq6rly-i2c-hat
 buy: http://raspihats.com/product/di6acdq6rly-i2c-hat

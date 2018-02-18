@@ -160,4 +160,6 @@ overlays:
 - waveshare-rgb-led-hat-8x8
 - monarco-hat
 - fepi-audio
+- fepi-audio-z
 - adafruit_matrix_bonnet
+- fepi-audio-z-V2

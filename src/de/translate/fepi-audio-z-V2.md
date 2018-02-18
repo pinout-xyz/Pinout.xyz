@@ -5,7 +5,6 @@ class: board
 type: audio
 formfactor: pHAT
 manufacturer: Fe-Pi
-collected: Other
 description: A complete audio solution for the Raspberry Pi
 url: https://fe-pi.com/products/fe-pi-audio-z-v2
 buy: https://fe-pi.com/products/fe-pi-audio-z-v2

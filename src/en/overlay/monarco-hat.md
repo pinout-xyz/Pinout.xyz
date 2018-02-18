@@ -5,6 +5,7 @@ class: board
 type: adc, dac, io, led, com, rtc, power, motor
 formfactor: HAT
 manufacturer: Monarco
+collected: Other
 description: Industrial I/O for the Raspberry Pi
 url: https://monarco.io
 github: https://github.com/monarco

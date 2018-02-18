@@ -5,6 +5,7 @@ class: board
 type: IOT,ADC
 formfactor: pHAT
 manufacturer: Garatronic
+collected: Other
 description: Carte d'extension GSM/GPRS pour le Raspberry Pi
 url: https://www.garatronic.fr
 github: https://github.com/garatronic/nadhat

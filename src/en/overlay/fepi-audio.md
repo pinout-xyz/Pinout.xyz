@@ -4,7 +4,7 @@ name: Fe-Pi Audio Card
 class: board
 type: audio
 formfactor: HAT
-manufacturer: FePi
+manufacturer: Fe-Pi
 description: A complete audio solution for the Raspberry Pi
 url: https://fe-pi.com/products/fe-pi-audio-v1
 buy: https://fe-pi.com/products/fe-pi-audio-v1

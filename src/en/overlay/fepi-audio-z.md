@@ -1,11 +1,10 @@
 <!--
 ---
-name: Audio Z
+name: Fe-Pi Audio Z
 class: board
 type: audio
 formfactor: pHAT
 manufacturer: Fe-Pi
-collected: Other
 description: A complete audio solution for the Raspberry Pi
 url: http://fe-pi.com/products/fe-pi-audio-z-v1
 buy: http://fe-pi.com/products/fe-pi-audio-z-v1

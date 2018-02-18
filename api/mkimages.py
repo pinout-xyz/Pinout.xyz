@@ -7,13 +7,17 @@ import os
 import unicodedata
 from PIL import Image, ImageFont, ImageDraw
 
+
+sys.path.insert(0,"../")
+BASE_DIR = "../"
+
 SOL_BLUE = (38, 139, 210)
 SOL_PINK = (195, 38, 114)
 SOL_PURPLE = (108, 113, 196)
 SOL_YELLOW = (181, 137, 0)
 SOL_GREEN = (133, 153, 0)
 SOL_RED = (220, 50, 47)
-SOL_BG = (7, 54, 66)
+SOL_BG = (0xcc, 0xcc, 0xcc) #586e75
 
 SOL_BG = tuple([int(x * 1.2) for x in SOL_BG])
 
@@ -44,7 +48,7 @@ except ImportError:
 import markjaml
 import pinout
 
-output_dir = "api/img"
+output_dir = "img"
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -82,7 +86,7 @@ def slugify(value):
 
 def load_overlay(overlay):
     try:
-        data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))['data']
+        data = markjaml.load('{}/src/{}/overlay/{}.md'.format(BASE_DIR, lang, overlay))['data']
         slug = slugify(data['name'])
         data['slug'] = slug
 
@@ -93,6 +97,7 @@ def load_overlay(overlay):
 
         return data
     except IOError:
+        print('Not found: {}/src/{}/overlay/{}.md'.format(BASE_DIR, lang, overlay))
         return None
 
 
@@ -147,8 +152,11 @@ for overlay in overlays:
         y = 1 - ((pin_number-1) % 2)
         x = (pin_number-1) // 2
         
-        if pin_number in [6, 9, 14, 20, 25, 30, 34, 39] and str(pin_number) in ground:
-            img.putpixel((x, y), (0, 0, 0, 255))
+        if pin_number in [6, 9, 14, 20, 25, 30, 34, 39]:
+            if str(pin_number) in ground:
+                img.putpixel((x, y), (0, 0, 0, 255))
+            else:
+                img.putpixel((x, y), (196, 196, 128, 255))
 
         elif pin_number in [1, 17] and str(pin_number) in power: # 3v3
             img.putpixel((x, y), SOL_YELLOW)

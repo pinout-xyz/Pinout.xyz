@@ -47,6 +47,7 @@ def slugify(value):
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
 
+product_map = {}
 
 def load_overlay(overlay):
     try:
@@ -60,6 +61,11 @@ def load_overlay(overlay):
     details = []
 
     if 'manufacturer' in loaded:
+        if loaded['manufacturer'] == "Pimoroni":
+            if 'buy' in loaded:
+                product_slug = loaded['buy'].split('/')[-1]
+                product_map[product_slug] = slugify(loaded['name'])
+
         details.append('* Made by ' + loaded['manufacturer'])
 
     if 'pincount' in loaded:
@@ -99,9 +105,10 @@ def load_overlay(overlay):
         if '3' in loaded['pin'] and '5' in loaded['pin']:
             pin_3 = loaded['pin']['3']
             pin_5 = loaded['pin']['5']
-            if 'mode' in pin_3 and 'mode' in pin_5:
-                if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-                    details.append('* Uses I2C')
+            if pin_3 is not None and pin_5 is not None:
+                if 'mode' in pin_3 and 'mode' in pin_5:
+                    if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
+                        details.append('* Uses I2C')
 
     if 'url' in loaded:
         details.append('* [More Information]({url})'.format(url=loaded['url']))
@@ -132,4 +139,5 @@ def load_md(filename):
 
 overlays = map(load_overlay, overlays)
 
-print(json.dumps(overlays))
+#print(json.dumps(overlays))
+print(json.dumps(product_map))

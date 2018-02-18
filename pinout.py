@@ -1,5 +1,8 @@
 import json
 import time
+import os
+
+print(__file__)
 
 try:
     import yaml
@@ -11,11 +14,13 @@ PINOUT_FILE = 'pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'
 STRINGS_FILE = 'localised.yaml'
 
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+
 pins = None
 settings = None
 
-master_template = open('common/layout.html').read()
-twitter_template = open('common/twittercard.html').read()
+master_template = open(os.path.join(BASE_DIR,'common/layout.html')).read()
+twitter_template = open(os.path.join(BASE_DIR,'common/twittercard.html')).read()
 
 
 def get_setting(setting, default = None):
@@ -106,16 +111,24 @@ def physical_to(pin, scheme='bcm'):
 
 def load(lang='en'):
     global pins, settings, strings
+
+    settings_path = os.path.join(BASE_DIR,'src/{}/{}'.format(lang, SETTINGS_FILE))
+    strings_path = os.path.join(BASE_DIR,'src/{}/template/{}'.format(lang, STRINGS_FILE))
+    pinout_path = os.path.join(BASE_DIR,'src/{}/template/{}'.format(lang, PINOUT_FILE))
+
     if SETTINGS_FILE.endswith('.yaml'):
-        settings = yaml.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)).read())
+        settings = yaml.load(open(settings_path).read())
     else:
-        settings = json.load(open('src/{}/{}'.format(lang, SETTINGS_FILE)))
+        settings = json.load(open(settings_path))
+
     if STRINGS_FILE.endswith('.yaml'):
-        strings = yaml.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)).read())
+        strings = yaml.load(open(strings_path).read())
     else:
-        strings = json.load(open('src/{}/template/{}'.format(lang, STRINGS_FILE)))
+        strings = json.load(open(strings_path))
+
     if PINOUT_FILE.endswith('.yaml'):
-        pinout = yaml.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)).read())
+        pinout = yaml.load(open(pinout_path).read())
     else:
-        pinout = json.load(open('src/{}/template/{}'.format(lang, PINOUT_FILE)))
+        pinout = json.load(open(pinout_path))
+
     pins = pinout['pins']

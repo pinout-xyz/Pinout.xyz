@@ -29,7 +29,7 @@ pin:
   '24':
     name: CS
 -->
-#2.13 Inch E-Ink Display pHAT
+# 2.13 Inch E-Ink Display pHAT
 
 This is an E-Ink display HAT for Raspberry Pi, 2.13inch, 250x122 resolution, with embedded controller, communicating via SPI interface, supports partial refresh.
 

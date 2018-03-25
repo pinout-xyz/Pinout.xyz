@@ -3,12 +3,13 @@
 name: Cananka
 class: board
 type: other
+collected: Other
 formfactor: HAT
 manufacturer: Josip Medved
 description: Cananka is Raspberry Pi HAT allowing for CAN bus communication.
 url: https://medo64.com/cananka/
 github: https://github.com/medo64/cananka/
-image: 'cananka.png'
+image: 'medo64-cananka.png'
 pincount: 40
 eeprom: yes
 power:

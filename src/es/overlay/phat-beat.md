@@ -13,11 +13,9 @@ image: 'phat-beat.png'
 pincount: 40
 eeprom: no
 power:
+  '1':
   '2':
 ground:
-  '6':
-  '9':
-  '14':
   '20':
   '25':
   '30':

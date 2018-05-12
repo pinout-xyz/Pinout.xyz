@@ -34,38 +34,42 @@ install:
 -->
 #Audio +
 
- RaspiAudio enables your Raspberry Pi ( Pi 3, 2, B+, A+, and Zero) with a state of the art audio DAC at a reasonable price.
+RaspiAudio enables your Raspberry Pi ( Pi 3, 2, B+, A+, and Zero) with a state of the art audio DAC.
 
-Great for home audio sound sytem, internet radio, or any project with audio at a price that makes sense.
+Great for home audio sound sytems, an internet radio, or any project with audio.
 
-1- DAC I2s 24-bit 96KHz audio with studio sampling quality
+##Features
 
-2- Included dual RCA phono connector line out stereo (soldering required)
+1. DAC I2s 24-bit 96KHz audio with studio sampling quality
 
-3- Line out stereo jack 3.5mm
+2. Included dual RCA phono connector line out stereo (soldering required)
 
-4- Female header 2x20 (soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
+3. Line out stereo jack 3.5mm
 
+4. Female header 2x20 (soldering required)
 
--Insert your Rapsberry Pi Audio Shield in your Raspberry pI then turn it on
+5. Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
 
--Make sure your audio jack is plugged in to your amplifier
+##INSTALLATION for Raspian users:
 
--Open a terminal (yes the black windows thing) and type:
+* Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
 
+* Make sure your audio jack is plugged in to your amplifier
+
+* Open a terminal and type:
 
 ```bash
 sudo wget -O - script.raspiaudio.com | bash
 ```
--say yes for the reboot
--If everything went fine you should here a test sound when tryping this command:
+
+* Answer yes to reboot
+* If everything went fine you should hear a test sound when typing this command:
 
 ```bash
 sudo speaker-test -l5 -c2 -t wav
 ```
 
-
--NEW! : On the next reboot you will be able to control the volume from your desktop or by using the line command tool alsamixer
+* NEW! : On the next reboot you will be able to control the volume from your desktop or by using the command-line tool `alsamixer`
 
 
 

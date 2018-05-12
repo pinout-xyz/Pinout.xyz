@@ -5,11 +5,9 @@ class: board
 type: audio,io
 formfactor: HAT ZERO FORMAT
 manufacturer: RASPIAUDIO
-collected: Other
 description: An I2S digital to analog audio converter with 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 buy: https://raspiaudio.com
 image: 'audioplus_speakerplus.png'
-
 pincount: 40
 eeprom: no
 power:
@@ -25,7 +23,6 @@ ground:
   '34':
   '39':
 pin:
-
   '12':
     name: I2S Clock
   '16':
@@ -45,55 +42,48 @@ install:
   - 'i2s'
 -->
 #Audio+ Speaker+ 
-2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
+##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
--Any portable radio project where you need built in speaker
+* Great for any portable radio project where you need built in speaker
 
--Power directly your old speaker
+* Power your old speaker directly
 
--No extra power supply required
+* No extra power supply required
 
+##Features:
 
+(There is no microphone on this board, for a microphone see our other model MIC+)
 
-INSTALLATION for Raspian users:
+1. 2x5w Stereo Amplification 2 onboard speaker included
 
--Insert your Rapsberry Pi Shield in your Raspberry pI then turn it on
+2. DAC I2s 24-bit audio with studio sampling quality
 
--Open a terminal (yes the black window thing) and type this to download the bash file and run it:
+3. Line out stereo 3.5mm jack
+
+4. Onboard red button, 1 status led
+
+5. Extention screw terminal for external speakers (2 to 8 ohm)
+
+6. Extention screw terminal for external push button, external led.
+
+7. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
+
+##INSTALLATION for Raspian users:
+
+* Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
+
+* Open a terminal and type the following to download and run the installer:
 
 ```bash
 sudo wget -O - script.raspiaudio.com | bash
 ```
 
--Say yes for the reboot
+* Say yes TO the reboot
 
--On the next reboot you  have to run the test to finish the installation (it is an ALSA oddness):
+* On the next reboot you have to run the test to finish the installation (it is an ALSA oddness):
 
 ```bash
 sudo speaker-test -l5 -c2 -t wav
 ```
 
-On the next reboot you will be able to control the volume from your desktop or by using the line command tool alsamixer 
-
-
-
-Features:
-
-(There is no microphone on this board, for microphone see our other model MIC+)
-
-2. 2x5w Stereo Amplification 2 onboard speaker included
-
-3. DAC I2s 24-bit audio with studio sampling quality
-
-4. Line out stereo 3.5mm jack
-
-5. Onboard red button, 1 status led
-
-6. Extention screw terminal for external speakers (2 to 8 ohm)
-
-7. Extention screw terminal for external push button, external led.
-
-8. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
-
-
-
+* Reboot again and you will be able to control the volume from your desktop or by using the command-line tool `alsamixer` 

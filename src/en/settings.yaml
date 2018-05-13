@@ -164,3 +164,6 @@ overlays:
 - fepi-audio-z-V2
 - medo64-cananka
 - waveshare213paper
+- audioplus
+- audioplus_speakerplus
+- audioplus_speakerplus_micplus

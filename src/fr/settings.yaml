@@ -168,3 +168,4 @@ overlays:
 - audioplus
 - audioplus_speakerplus
 - audioplus_speakerplus_micplus
+- pimoroni-led-shim

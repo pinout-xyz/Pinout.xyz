@@ -26,7 +26,7 @@ pins:
     type: "+5v"
   '5':
     name: SCL
-    description: I2C Tackt (Clock)
+    description: I2C Takt (Clock)
     type: GPIO/I2C
     scheme:
       wiringpi: 9
@@ -262,7 +262,7 @@ pins:
       alt4: AVEIN VCLK
   '28':
     name: ID_SC
-    description: HAT EEPROM i2c Tackt (Clock)
+    description: HAT EEPROM i2c Takt (Clock)
     type: GPIO/I2C
     scheme:
       wiringpi: 31

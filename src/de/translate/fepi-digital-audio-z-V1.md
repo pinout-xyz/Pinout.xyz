@@ -5,7 +5,6 @@ class: board
 type: audio
 formfactor: pHAT
 manufacturer: Fe-Pi
-collected: Other
 description: S/PDIF audio solution for the Raspberry Pi
 url: https://fe-pi.com/products/fe-pi-digital-audio-z-v1
 buy: https://fe-pi.com/products/fe-pi-digital-audio-z-v1

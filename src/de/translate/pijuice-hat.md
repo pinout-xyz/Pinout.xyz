@@ -2,7 +2,7 @@
 ---
 name: PiJuice
 class: board
-type: ups
+type: power
 formfactor: HAT
 manufacturer: Pi Supply
 description: PiJuice uninterruptible power supply for the Raspberry Pi.
@@ -29,6 +29,10 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+i2c:
+  '0x14':
+    name: Control
+    device: STM32F030CCT6
 -->
 #PiJuice
 
@@ -38,21 +42,13 @@ The tri-coloured RGB LEDs will allow you to keep track of the battery charge lev
 
 The board has a Raspberry Pi HAT compatible layout, with onboard EEPROM (you can disable the EEPROM if you want also). It has been designed for the Raspberry Pi A+, B+, 2B, 3B and 3B+ but it is also electrically compatible with the Raspberry Pi Zero v1.3 and Zero W v1.1 or any other Pi.
 
-* Onboard 1820 mAh off the shelf Lipo / LiIon battery for ~4 to 6 hours in constant use! (with support for larger Lipo Battery of 5000 or 10,000 mAH+ to last up to 24 hrs +)
-* A Full Uninterrupted / Uninterruptable Power Supply solution.
+* Onboard 1820 mAh off the shelf Lipo / LiIon battery for ~4 to 6 hours in constant use (with support for larger Lipo Battery of 5000 or 10,000 mAH+ to last up to 24 hrs +)
+* A Full Uninterruptable Power Supply solution
 * Designed for the Raspberry Pi A+, B+, 2B, 3B and 3B+ but also compatible with Raspberry Pi Zero v1.3 and Raspberry Pi Zero Wireless.
 * Integrated Real Time Clock
 * Onboard intelligent on/off switch
 * Low power deep-sleep state with wake on interrupt/calendar event
 * Programmable multi-colored RGB led (x2) and buttons (x3) with super simple user-configurable options
 * Hardware watchdog timer to keep your Raspberry Pi on and working in mission-critical remote applications
-* Our revolutionary PiAnywhere technology ? the best way to take your Pi off the grid!
 * Full power management API available to Raspberry Pi OS with auto shutdown capability when running low on batteries
-* Raspberry Pi HAT compatible layout, with onboard EEPROM for easy plug and play operation
-* Low profile design to fit inside lots of existing Raspberry Pi cases!
-* Enhanced graphical user interface (GUI) available for easy install (via APT)
-* Customisable scripts for enhanced flexibility and full report of battery status
-* All GPIOs available via stackable header for ease of expandability and connectivity
-* Charge via on-board micro USB or via the Raspberry Pi micro USB (or from onboard pin headers)
-* Batteries can be charged from different type of sources and voltages
-* Replace the battery without downtime. Compatible with any single cell LiPo or LiIon battery
+* Low profile design to fit inside many existing Raspberry Pi cases

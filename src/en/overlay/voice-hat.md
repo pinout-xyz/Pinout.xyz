@@ -2,12 +2,11 @@
 ---
 name: Voice HAT
 class: board
-type: audio,io
+type: audio,sensor,io
 formfactor: HAT
 manufacturer: Google
-collected: Other
-description: A voice kit made for Google Assistant
-url: https://aiyprojects.withgoogle.com/voice
+description: A natural language processor that connects your Raspberri Pi to the Google Assistant
+url: https://aiyprojects.withgoogle.com/voice-v1
 github: https://github.com/google/aiyprojects-raspbian
 image: 'voice-hat.png'
 pincount: 40
@@ -67,6 +66,8 @@ install:
 -->
 # Voice HAT
 
-The Voice HAT connects the Raspberry Pi to the Google Assistant and is part of Google's AIY Voice Kit. It was created with the Raspberry Pi 3 Model B in mind but may be used with any Raspberry Pi featuring a 40-way header, such as the Raspberry Pi Zero.
+The Voice HAT connects the Raspberry Pi to the Google Assistant and is part of Google's AIY Voice Kit V1. It was created with the Raspberry Pi 3 Model B in mind but may be used with any Raspberry Pi featuring a 40-way header, such as the Raspberry Pi Zero.
 
 The HAT includes on-board hardware to facilitate audio capture and playback, connectors for the dual mic daughter board and speaker, GPIO breakouts to connect low-voltage components like micro-servos and sensors, and an optional barrel connector for dedicated power supply.
+
+This is the Voice HAT for the AIY Voice Kit V1. If you have AIY Voice Kit V2, instead see the [Voice Bonnet](/pinout/voice_bonnet).

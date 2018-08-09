@@ -70,4 +70,4 @@ The AIY Voice HAT connects the Raspberry Pi to the Google Assistant and is part 
 
 The HAT includes on-board hardware to facilitate audio capture and playback, connectors for the dual mic daughter board and speaker, GPIO breakouts to connect low-voltage components like micro-servos and sensors, and an optional barrel connector for dedicated power supply.
 
-This is the Voice HAT for the AIY Voice Kit V1. If you have AIY Voice Kit V2, instead see the [Voice Bonnet](/pinout/voice_bonnet).
+This is the Voice HAT for the AIY Voice Kit V1. If you have AIY Voice Kit V2, instead see the [Voice Bonnet](/pinout/aiy_voice_bonnet).

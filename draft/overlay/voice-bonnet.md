@@ -1,6 +1,6 @@
 <!--
 ---
-name: Voice Bonnet
+name: AIY Voice Bonnet
 class: board
 type: audio,sensor
 formfactor: pHAT
@@ -50,9 +50,9 @@ pin:
     mode: i2s
     name: I2S SDOUT
 -->
-# Voice Bonnet
+# AIY Voice Bonnet
 
-The Voice Bonnet comes with the AIY Voice Kit (V2) by Google—a do-it-yourself intelligent speaker. The Voice Bonnet connects to a Raspberry Pi Zero to create a natural language processor that can connect to the Google Assistant.
+The AIY Voice Bonnet comes with the AIY Voice Kit (V2) by Google—a do-it-yourself intelligent speaker. The Voice Bonnet connects to a Raspberry Pi Zero to create a natural language processor that can connect to the Google Assistant.
 
 The bonnet includes on-board hardware to facilitate audio capture and playback, stereo speaker terminals, a headphone jack, an 8-pin button connector, UART breakout pins, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
 

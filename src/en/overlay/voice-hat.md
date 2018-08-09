@@ -1,6 +1,6 @@
 <!--
 ---
-name: Voice HAT
+name: AIY Voice HAT
 class: board
 type: audio,sensor,io
 formfactor: HAT
@@ -64,9 +64,9 @@ install:
   'devices':
   - 'i2s'
 -->
-# Voice HAT
+# AIY Voice HAT
 
-The Voice HAT connects the Raspberry Pi to the Google Assistant and is part of Google's AIY Voice Kit V1. It was created with the Raspberry Pi 3 Model B in mind but may be used with any Raspberry Pi featuring a 40-way header, such as the Raspberry Pi Zero.
+The AIY Voice HAT connects the Raspberry Pi to the Google Assistant and is part of Google's AIY Voice Kit V1. It was created with the Raspberry Pi 3 Model B in mind but may be used with any Raspberry Pi featuring a 40-way header, such as the Raspberry Pi Zero.
 
 The HAT includes on-board hardware to facilitate audio capture and playback, connectors for the dual mic daughter board and speaker, GPIO breakouts to connect low-voltage components like micro-servos and sensors, and an optional barrel connector for dedicated power supply.
 

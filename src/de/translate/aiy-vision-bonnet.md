@@ -8,7 +8,7 @@ manufacturer: Google
 description: A pHAT that helps you build an intelligent camera that can see and recognize objects using machine learning
 url: https://aiyprojects.withgoogle.com/vision
 github: https://github.com/google/aiyprojects-raspbian
-image: 'vision-bonnet.png'
+image: 'aiy-vision-bonnet.png'
 pincount: 40
 eeprom: yes
 power:

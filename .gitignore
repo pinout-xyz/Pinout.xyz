@@ -3,4 +3,4 @@ output/
 env/
 .DS_store
 .sass-cache/
-
+venv/

@@ -53,7 +53,7 @@ pin:
 -->
 # AIY Vision Bonnet
 
-The AIY Vision Bonnet comes with the AIY Vision Kit by Google—a do-it-yourself intelligent camera. The Vision Bonnet connects to a Raspberry Pi Zero to create an intelligent camera that can see and recognize objects using machine learning (ML).
+The AIY Vision Bonnet comes with the AIY Vision Kit by Google—a do-it-yourself intelligent camera. The Vision Bonnet connects to your Raspberry Pi to create an intelligent camera that can see and recognize objects using on-device machine learning (ML) models.
 
-The bonnet includes on-board hardware to accelerate vision-based ML models, a connector for the Raspberry Pi Camera v2, a 10-pin button connector, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
+The bonnet includes hardware to accelerate vision-based ML models, a connector for the Raspberry Pi Camera v2, a 10-pin button connector, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
 

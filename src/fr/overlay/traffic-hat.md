@@ -6,8 +6,6 @@ type: multi
 formfactor: HAT
 manufacturer: Ryanteck
 description: carte multi-usage avec buzzer, LED et bouton
-url: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
-buy: https://ryanteck.uk/hats/1-traffichat-0635648607122.html
 image: 'traffic-hat.png'
 pincount: 40
 eeprom: yes

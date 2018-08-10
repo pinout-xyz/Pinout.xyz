@@ -171,3 +171,6 @@ overlays:
 - pimoroni-led-shim
 - fepi-digital-audio-z-V1
 - pijuice-hat
+- respeaker-4-mic-array
+- respeaker-6-mic-array
+- respeaker-4-mic-linear-array

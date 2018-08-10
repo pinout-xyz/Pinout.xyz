@@ -1,6 +1,7 @@
 <!--
 ---
 name: AIY Voice HAT
+page_url: voice_hat
 class: board
 type: audio,sensor,io
 formfactor: HAT

@@ -56,4 +56,4 @@ The AIY Voice Bonnet comes with the AIY Voice Kit (V2) by Google—a do-it-yours
 
 The bonnet includes on-board hardware to facilitate audio capture and playback, stereo speaker terminals, a headphone jack, an 8-pin button connector, UART breakout pins, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
 
-If you have the V1 Voice Kit (full size HAT for Raspberry Pi 3), instead see the [Voice Hat](/pinout/aiy_voice_hat).
+**Note:** If you have the AIY Voice Kit V1, instead see the [Voice Hat](/pinout/aiy_voice_hat), which is the full-size HAT version of this board.

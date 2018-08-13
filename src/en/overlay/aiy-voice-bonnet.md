@@ -40,7 +40,7 @@ pin:
   '16':
     mode: gpio
     name: Button
-  '33':
+  '35':
     mode: i2s
     name: I2S LRCLK
   '38':

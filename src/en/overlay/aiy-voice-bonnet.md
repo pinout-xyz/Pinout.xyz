@@ -40,7 +40,7 @@ pin:
   '16':
     mode: gpio
     name: Button
-  '33':
+  '35':
     mode: i2s
     name: I2S LRCLK
   '38':
@@ -56,4 +56,4 @@ The AIY Voice Bonnet comes with the AIY Voice Kit V2 by Google—a do-it-yoursel
 
 The bonnet includes hardware to facilitate audio capture and playback, stereo speaker terminals, a headphone jack, an 8-pin button connector, UART breakout pins, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
 
-**Note:** If you have the AIY Voice Kit V1, instead see the [Voice Hat](/pinout/aiy_voice_hat), which is the full-size HAT version of this board.
+**Note:** If you have the AIY Voice Kit V1, instead see the [Voice Hat](/pinout/voice_hat), which is the full-size HAT version of this board.

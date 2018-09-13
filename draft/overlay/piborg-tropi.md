@@ -20,12 +20,12 @@ ground:
 pin:
   '16':
     name: Clock
-	mode: output
-	active: low
+    mode: output
+    active: low
   '18':
-	name: Data
-	mode: output
-	active: low
+    name: Data
+    mode: output
+    active: low
 -->
 #TroPi
 

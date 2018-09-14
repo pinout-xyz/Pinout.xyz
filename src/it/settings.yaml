@@ -183,3 +183,5 @@ overlays:
 - picade-x-hat
 - sixfab-cellular-shield-v2
 - sixfab-cellular-iot-application-hat
+- pi-supply-iot-lora-gateway-hat
+- pi-supply-iot-lora-node-phat

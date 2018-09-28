@@ -24,21 +24,25 @@ ground:
   '34':
   '39':
 pin:
-  '24':
-    mode: uart
-  '19':
-    mode: uart
-  '36':
-    name: M66 CTS
-  '15':
-    name: PWR Key
-  '5':
-    name: LED
   '7':
-    name: 1Wire
+    mode: 1-wire
+    name: 1-wire
+  '8':
+    mode: uart
+  '10':
+    mode: uart
+  '15':
+    mode: output
+    name: User Led
+  '35':
+    mode: input
+    name: Vdd Ext
+  '37':
+    mode: output
+    name: Power Key
   
 -->
-# Sixfab GSM/GPRS Shield
+# Sixfab GSM/GPRS Shield V1.5
 
 The Sixfab GSM/GPRS Shield allows you to connect to the internet anywhere there is a signal and with 85.6 kbps up and down 
 you are able to make voice calls, SMS and it can also do bluetooth.

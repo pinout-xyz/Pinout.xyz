@@ -1,6 +1,7 @@
 <!--
 ---
 name: Sixfab GSM/GPRS Shield V1.5
+page_url: gsmgprs_shield
 class: board
 type: com
 formfactor: pHAT
@@ -43,6 +44,8 @@ pin:
   
 -->
 # Sixfab GSM/GPRS Shield V1.5
+
+* This page is for the newer V1.5 GSM/GRPS shield. For the older version with a diffrent pinout please see: [GSM/GRPS Shield [Retired Version]](/pinout/gsmgprs_shield_retired_version)
 
 The Sixfab GSM/GPRS Shield allows you to connect to the internet anywhere there is a signal and with 85.6 kbps up and down 
 you are able to make voice calls, SMS and it can also do bluetooth.

@@ -1,6 +1,6 @@
 <!--
 ---
-name: GSM/GPRS Shield
+name: GSM/GPRS Shield [ Retired Version]
 class: board
 type: com
 formfactor: pHAT
@@ -24,21 +24,23 @@ ground:
   '34':
   '39':
 pin:
-  '24':
-    mode: uart
-  '19':
-    mode: uart
-  '36':
-    name: M66 CTS
-  '15':
-    name: PWR Key
-  '5':
-    name: LED
   '7':
     name: 1Wire
+  '8':
+    mode: uart
+  '10':
+    mode: uart
+  '16':
+    name: M66 CTS
+    mode: output
+  '22':
+    name: PWR Key
+    mode: output
   
 -->
 # GSM/GPRS Shield
+
+* This page is for the older, retired GSM/GPRS shield. For the newer V1.5 GSM/GRPS shield with a diffrent pinout please see: [GSM/GRPS Shield V1.5](/pinout/gsmgprs_shield)
 
 The Sixfab GSM/GPRS Shield allows you to connect to the internet anywhere there is a signal and with 85.6 kbps up and down 
 you are able to make voice calls, SMS and it can also do bluetooth.

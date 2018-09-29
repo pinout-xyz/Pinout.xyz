@@ -28,12 +28,16 @@ pin:
   '10':
     mode: uart
   '31':
-    mode: RI
+    mode: output
+    name: RI
   '33':
+    mode: input
     name: DTR
   '35':
+    mode: input
     name: W_Disable
   '37':
+    mode: input
     name: Perst
 -->
 # 3G/4G/LTE Base Shield V2

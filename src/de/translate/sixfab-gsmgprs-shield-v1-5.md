@@ -1,6 +1,6 @@
 <!--
 ---
-name: GSM/GPRS Shield [ Retired Version]
+name: Sixfab GSM/GPRS Shield V1.5
 class: board
 type: com
 formfactor: pHAT
@@ -8,7 +8,7 @@ manufacturer: Sixfab
 description: Connect from anywhere to the internet on a Raspberry Pi
 url: http://sixfab.com/product/gsmgprs-shield/
 buy: http://sixfab.com/product/gsmgprs-shield/
-image: 'sixfab-gsmgprs-shield.png'
+image: 'sixfab-gsmgprs-shield-v1-5.png'
 pincount: 40
 eeprom: no
 power:
@@ -25,20 +25,24 @@ ground:
   '39':
 pin:
   '7':
-    name: 1Wire
+    mode: 1-wire
+    name: 1-wire
   '8':
     mode: uart
   '10':
     mode: uart
-  '16':
-    name: M66 CTS
+  '15':
     mode: output
-  '22':
-    name: PWR Key
+    name: User Led
+  '35':
+    mode: input
+    name: Vdd Ext
+  '37':
     mode: output
+    name: Power Key
   
 -->
-# GSM/GPRS Shield
+# Sixfab GSM/GPRS Shield V1.5
 
 The Sixfab GSM/GPRS Shield allows you to connect to the internet anywhere there is a signal and with 85.6 kbps up and down 
 you are able to make voice calls, SMS and it can also do bluetooth.

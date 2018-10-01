@@ -41,49 +41,50 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+ 
+#Audio+ Speaker+
 ##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
-* Great for any portable radio project where you need built in speaker
 
-* Power your old speaker directly
+* Ideal para cualquier proyecto de radio portátil donde necesite un altavoz integrado
 
-* No extra power supply required
+* Potencia tu antiguo altavoz directamente
 
-##Features:
+* No requiere fuente de alimentación adicional
 
-(There is no microphone on this board, for a microphone see our other model MIC+)
+##Especificaciones:
 
-1. 2x5w Stereo Amplification 2 onboard speaker included
 
-2. DAC I2s 24-bit audio with studio sampling quality
+(No hay micrófono en esta placa, para un micrófono vea nuestro otro modelo MIC +)
 
-3. Line out stereo 3.5mm jack
+1. Altavoz a bordo 2x5w Stereo Amplification 2 incluido
 
-4. Onboard red button, 1 status led
+2. Audio DAC I2s de 24 bits con calidad de muestreo de estudio
 
-5. Extention screw terminal for external speakers (2 to 8 ohm)
+3. Salida de línea estéreo de 3,5 mm
 
-6. Extention screw terminal for external push button, external led.
+4. Botón rojo a bordo, 1 estado llevado
 
-7. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
+5. Terminal de tornillo de extensión para altavoces externos (2 a 8 ohmios)
 
-##INSTALLATION for Raspian users:
+6. Terminal de tornillo de extensión para pulsador externo, led externo.
 
-* Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
+7. Cabezal hembra larga soldada 2x20 (no se requiere soldadura) Compatible con Raspberry Pi 3, 2, B +, A + y Zero
 
-* Open a terminal and type the following to download and run the installer:
+##Instalación para usuarios de Raspbian:
+
+* Abre terminal y ejecuta los siguientes comandos:
 
 ```bash
 sudo wget -O - script.raspiaudio.com | bash
 ```
 
-* Say yes TO the reboot
 
-* On the next reboot you have to run the test to finish the installation (it is an ALSA oddness):
+* Di sí al reinicio
+
+* En el próximo reinicio tienes que ejecutar la prueba para finalizar la instalación (es una rareza de ALSA):
 
 ```bash
 sudo speaker-test -l5 -c2 -t wav
 ```
 
-* Reboot again and you will be able to control the volume from your desktop or by using the command-line tool `alsamixer` 
+* Reinicie nuevamente y podrá controlar el volumen desde su escritorio o mediante la herramienta de línea de comandos `alsamixer`

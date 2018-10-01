@@ -62,21 +62,21 @@ pin:
 -->
 #RGB Matrix Bonnet
 
-This HAT plugs into your Pi and makes it super easy to control RGB matrices, such as those you see in the likes of Times square, enabling you to create a colorful scrolling display or mini LED wall.
+Este HAT se conecta a tu Pi y hace muy sencillo controlar matrices RGB, como las que ves en Times Square, permitiendo crear una pantalla en movimiento llena de color o un mini muro LED.
 
-* A 5V power supply is also required for powering the matrix itself.
-* To calculate the max current of your matrix set up, multiply the width of all the chained matrix by 0.12 : A 32 pixel wide matrix needs 32*0.12 = 3.85A so pick up a 5V 4A power supply.
-* This HAT is only for use with HUB75 type RGB Matrices. Not for use with NeoPixel, DotStar, or other 'addressable' LEDs.
+* Se necesita una fuente de 5V para alimentar la matriz.
+* Para calcular la corriente máxima, multiplica el ancho de la matriz encendida por 0.12. Una matriz de 32 pixel necesita 32-0.12 = 3.85A así que elige una fuente de 5V y 4A.
+* Este HAT sólo se puede utilizar con matrices tipo HUB75 RGB. No se puede usar con NeoPixel, DotStar u otras matrices de LEDs direccionables.
 
-Features:
+Especificaciones:
 
-* Simple design - plug in power, plug in IDC cable, code.
-* Power protection circuitry - you can plug a 5V 4A wall adapter into the HAT and it will automatically protect against negative, over or under-voltages.
-* Onboard level shifters - these convert the RasPi's 3.3V to 5.0V logic for clean and glitch free matrix driving
+* Diseño simple. Conecta la corriente, el cable IDC y programa.
+* Circuito de protección de corriente. Puedes conectar una fuente de 5V 4A y el HAT se protegerá ante sobre o bajo voltajes.
+* Convertidores de nivel en la placa. Estos convierten los 3.3V de Raspberry Pi a 5.0V para funcionar con menos fallos.
 
-This bonnet is compatible with any Pi that has a 2x20 header.
+Es compatible con cualquier Pi con el conector de 2x20.
 
-To install:
+Para instalar:
 
 ```bash
 curl -O https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh

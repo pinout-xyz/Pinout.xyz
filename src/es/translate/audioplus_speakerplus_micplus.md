@@ -41,52 +41,51 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+ Microphone+ 
+#Audio+ Speaker+ Microphone+
 ##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
-* Experiment with the Google AIY assistant (100% pin to pin compatible).
- 
-* Use open source assistants such as ADRIAN, SNIPS project and others
+* Experimenta con el asistente AIY de Google (compatible 100% pin a pin).
 
-* Voice changer
+* Utiliza asistentes de código abierto como ADRIAN, proyecto SNIPS y otros
 
-* Great for any portable radio project where you need a built in speaker
+* Cambiador de voz
 
-* Power your old speaker directly
+* Ideal para cualquier proyecto de radio portátil en el que necesite un altavoz integrado
 
-* No extra power supply required
+* Enciende tu antiguo altavoz directamente
 
-##Features:
+* No se requiere suministro de energía adicional
 
-1. Microphone I2S High sensitivity on board (can be separate from the main boad using the included cable)
+##Especificaciones:
 
-2. 2x5w Stereo Amplification anf 2 onboard speaker included
 
-3. DAC I2s 24-bit audio with studio sampling quality
+1. Micrófono I2S Alta sensibilidad a bordo (se puede separar de la boad principal con el cable incluido)
 
-4. Line out stereo 3.5mm jack
+2. Amplificador estéreo 2x5w y 2 altavoces integrados incluidos
 
-5. Onboard red button, 1 status led
+3. Audio DAC I2 de 24 bits con calidad de muestreo de estudio
 
-6. Extention screw terminal for external speakers (2 to 8 ohm)
+4. Conector de línea de 3,5 mm estéreo
 
-7. Extention screw terminal for external push button and external led.
+5. Botón rojo incorporado, 1 estado led
 
-8. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
+6. Terminal de tornillo de extensión para altavoces externos (2 a 8 ohmios)
 
-##INSTALLATION:
+7. Terminal de tornillo de extensión para pulsador externo y led externo.
 
-* Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
+8. Cabezal hembra largo soldado 2x20 (NO se requiere soldadura) Compatible con Raspberry Pi 3, 2, B +, A + y Zero.
 
-* Open a terminal and type the following to download and run the installer:
+##Instalación:
+
+Abre terminal y ejecuta los siguientes comandos:
 
 ```bash
 sudo wget -O mic mic.raspiaudio.com
 
 sudo bash mic
 ```
-* Say yes to reboot
-* On the next reboot you must run the test to finish the installation (it is an ALSA oddness):
+* Di sí para reiniciar
+* En el próximo reinicio, debe ejecutar la prueba para finalizar la instalación (es una rareza de ALSA):
 
 ```bash
 sudo wget -O test test.raspiaudio.com
@@ -94,12 +93,11 @@ sudo wget -O test test.raspiaudio.com
 sudo bash test
 ```
 
-* Push the onboard button, you should hear "Front Left" "Front Right" then the recorded sequence by the microphone. 
 
-* If the volume is too low you can adjust the gain of the microphone by rebooting and typing the following into a terminal:
+* Presione el botón de a bordo, debe escuchar "Delantero izquierdo" "Delantero derecho" luego la secuencia grabada por el micrófono.
+
+* Si el volumen es demasiado bajo, puede ajustar la ganancia del micrófono reiniciando y escribiendo lo siguiente en un terminal:
 
 ```bash
 alsamixer
 ```
-
-

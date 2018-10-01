@@ -29,13 +29,13 @@ i2c:
 -->
 # PiOLED
 
-The PiOLED is a small 128x32 OLED display designed to sit on top of just the first six pins of the Pi’s Header. It uses I2c to communicate which means there are plenty of spare pins for buttons, LED’s and sensors.
+PiOLED es una pequeña pantalla OLED de 128x32 diseñada para colocarse en los seis primeros pines de Raspberry Pi. usa comunicación I2C por lo que quedan pines libres para botones, LEDs y sensores.
 
-The OLED display has a very high contrast ratio leading to clear and crisp text and images and as the display produces it’s own light this also means the PiOLED is extremely low power.
+La pantalla OLED tiene un contraste muy alto por lo que da lugar a imágenes y texto nítidos, además al producir su propia luz consume muy poca energía.
 
-The display is about 1” in diagonal and allows for 30FPS updates rates allowing for simple animations and the SSD1306 chipset is easily controlled using a simple python library.
+La pantalla tiene una diagonal de 1" y se actualiza a 30FPS, permitiendo crear animaciones simples. Además, el chipset SSD1306 es fácil de controlar con un simple librería Python.
 
-To install the necessary software, use the following commands:
+Para instalar usa los siguientes comandos:
 
 ```bash
 sudo apt-get install git python-imaging python-smbus

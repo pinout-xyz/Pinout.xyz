@@ -7,6 +7,7 @@ formfactor: Custom
 manufacturer: PiBorg
 description: A five LED add on board.
 url: https://www.piborg.org/tropi
+github: https://www.github.com/piborg/tropi
 buy: https://www.piborg.org/tropi
 image: 'piborg-tropi.png'
 pincount: 40

@@ -30,4 +30,4 @@ pin:
 -->
 #TroPi
 
-The TroPi is an RGB LED board with 5 WS2812B LEDs which are individually controllable from a Raspberry Pi.
+The TroPi is an RGB LED board with 5 APA102C LEDs which are individually controllable from a Raspberry Pi.

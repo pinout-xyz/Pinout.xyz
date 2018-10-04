@@ -1,6 +1,6 @@
 <!--
 ---
-name: Raspberry Pi Cellular IoT Application HAT – LTE-M & NB-IoT & eGPRS
+name: Cellular IoT Application HAT – LTE-M & NB-IoT & eGPRS
 class: board
 type: com
 formfactor: HAT

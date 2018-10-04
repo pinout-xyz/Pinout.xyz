@@ -3,7 +3,7 @@
 name: RASPIAUDIO AUDIO+ SPEAKERS+
 class: board
 type: audio,io
-formfactor: HAT ZERO FORMAT
+formfactor: phat
 manufacturer: RASPIAUDIO
 description: An I2S digital to analog audio converter with 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 buy: https://raspiaudio.com

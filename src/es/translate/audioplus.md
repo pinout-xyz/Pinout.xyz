@@ -1,4 +1,4 @@
-<!--
+ <!--
 ---
 name: RASPIAUDIO AUDIO+
 class: board
@@ -34,42 +34,39 @@ install:
 -->
 #Audio +
 
-RaspiAudio enables your Raspberry Pi ( Pi 3, 2, B+, A+, and Zero) with a state of the art audio DAC.
 
-Great for home audio sound sytems, an internet radio, or any project with audio.
+RaspiAudio habilita tu Raspberry Pi (Pi 3, 2, B +, A + y Zero) con un DAC de audio de vanguardia.
 
-##Features
+Ideal para sistemas de sonido de audio para el hogar, una radio por Internet o cualquier proyecto con audio.
 
-1. DAC I2s 24-bit 96KHz audio with studio sampling quality
+##Especificaciones:
 
-2. Included dual RCA phono connector line out stereo (soldering required)
 
-3. Line out stereo jack 3.5mm
+1. Audio DAC I2 de 24 bits a 96 kHz con calidad de muestreo de estudio
 
-4. Female header 2x20 (soldering required)
+2. Incluye conector estéreo RCA dual con salida de línea estéreo (se requiere soldadura)
 
-5. Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
+3. Salida de línea estéreo jack 3.5mm
 
-##INSTALLATION for Raspian users:
+4. Cabezal hembra 2x20 (requiere soldadura)
 
-* Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
+5. Compatible con Raspberry Pi 3, 2, B +, A + y Zero
 
-* Make sure your audio jack is plugged in to your amplifier
+##Instalación para usuarios de Raspbian:
 
-* Open a terminal and type:
+* Asegúrate que el conector jack está conectado al amplificador:
+
+* Abre terminal y ejecuta:
 
 ```bash
 sudo wget -O - script.raspiaudio.com | bash
 ```
 
-* Answer yes to reboot
-* If everything went fine you should hear a test sound when typing this command:
+* Responda que sí para reiniciar
+* Si todo fue bien, debería escuchar un sonido de prueba al escribir este comando:
 
 ```bash
 sudo speaker-test -l5 -c2 -t wav
 ```
 
-* NEW! : On the next reboot you will be able to control the volume from your desktop or by using the command-line tool `alsamixer`
-
-
-
+* ¡NUEVO! : En el próximo reinicio, podrá controlar el volumen desde su escritorio o mediante la herramienta de línea de comandos `alsamixer`

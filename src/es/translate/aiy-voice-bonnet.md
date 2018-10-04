@@ -52,8 +52,8 @@ pin:
 -->
 # AIY Voice Bonnet
 
-The AIY Voice Bonnet comes with the AIY Voice Kit V2 by Google—a do-it-yourself intelligent speaker. The Voice Bonnet connects to your Raspberry Pi to create a natural language processor that can respond to your voice and connect to the Google Assistant.
+El AIY Voice Bonnet biene con el kit de voz AIY V2 de Google para hacer un altavoz inteligente al conectarse a la Raspberry Pi. Puede crearse un procesar de lenguaje natural que responda a tu voz y se conecte al Asistente de Google.
 
-The bonnet includes hardware to facilitate audio capture and playback, stereo speaker terminals, a headphone jack, an 8-pin button connector, UART breakout pins, and 4 unique GPIO pins called `PIN_A`, `PIN_B`, `PIN_C`, and `PIN_D`.
+El bonnet incluye hardware para facilitar la captura y reproducción de audio, conexiones de audio estéreo, un conector de auriculares jack, un conector de botones de 8 pines, pines UART y 4 GPIO únicos llamados `PIN_A`, `PIN_B`, `PIN_C`, y `PIN_D`.
 
-**Note:** If you have the AIY Voice Kit V1, instead see the [Voice Hat](/pinout/voice_hat), which is the full-size HAT version of this board.
+**Nota:** si tienes la versión V1 ve: [Voice Hat](/pinout/voice_hat), que es la versión de tamaño completo.

@@ -27,7 +27,6 @@ pin:
 -->
 # cube:bit Base
 
-Base for your Cube:Bit allowing easy connection of power and signal and directly able to plug in a Raspberry Pi Zero.
+Basse para tu Cube:Bit permitiendo una conexión fácil de corriente y señal, que se puede conectar directamente a tu Raspberry Pi Zero.
 
-There is a 40pin GPIO header that you can plug a Raspberry Pi Zero into and it will be powered from the 5V and connect on GPIO 12 (pin 18) to the neopixel array. This is the standard pin for driving neopixels on the Raspberry Pi. Note that there isn't room to fit a full-size Raspberry Pi (though with a GPIO cable you could do that as well)
-
+Tiene un conector de 40 pines GPIO al que se le puede conectar una Raspberry Pi que será alimentada por los 5V y conectada en el GPIO 12 (pin 18) al array neopixel. Este es el pin estándar para controlar neopixels en Raspberry Pi. No hay espacio para conectar una Raspberry Pi de tamaño completo, pero podría hacerse con un cable.

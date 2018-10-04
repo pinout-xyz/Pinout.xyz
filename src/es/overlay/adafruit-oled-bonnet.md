@@ -51,11 +51,11 @@ i2c:
 -->
 # OLED Bonnet
 
-The OLED Bonnet is a simple 128x64 display for the Raspberry pi with a 5-way joystick and 2 push buttons.
+El bonnet OLED es una simple pantalla de 128x64 para Raspberry Pi con un joystick de 5 direcciones y 2 botones.
 
-The 1.3" screen is made of a 128x64 individual white OLED pixels and because the display makes its own light, no backlight is required. This reduces the power required to run the OLED and is why the display has such high contrast.
+La pantalla de 1.3"  está formada por pixels OLED blancos individuales, creando su propia luz por lo que no necesita iluminación trasera. Esto reduce la cantidad de energía necesaria y le da un alto contraste.
 
-To install the necessary software, use the following commands:
+Para instalar usa los siguientes comandos:
 
 ```bash
 sudo apt-get install git python-imaging python-smbus

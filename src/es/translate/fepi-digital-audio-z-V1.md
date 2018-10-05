@@ -47,11 +47,11 @@ i2c:
 -->
 #Fe-Pi Digital Audio Z V1
 
-The Fe-Pi Digital Audio Z V1 is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing S/PDIF output.
+Fe-Pi Digital Audio Z V1 está diseñado para proporcionar una solución de audio completa de bajo costo para Raspberry Pi 2, 3 y Zero, que necesita una salida S / PDIF.
 
-## Features ##
+## Caracteristicas ##
 
-* Small Raspberry Pi Zero PCB footprint.
-* Cirrus Logic WM8804 S/PDIF Digital Interface Transceiver.
-* RCA and optical TOSLINK Output jacks.
-* 2x20pin 2.54mm female header and 40pin male breakable header included!
+* Tamaño Raspberry Pi Zero.
+* Cirrus Logic WM8804 Transceptor de interfaz digital S / PDIF.
+* Tomas de salida RCA y TOSLINK ópticas.
+* Incluye 2x20pin 2.54mm macho y hembra.

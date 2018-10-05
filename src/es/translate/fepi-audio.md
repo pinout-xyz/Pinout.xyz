@@ -47,20 +47,20 @@ i2c:
 -->
 #Audio Z
 
-The Fe-Pi Audio is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, headphone-out/mic-in, and stereo speakers.
+Fe-Pi Audio está diseñado para proporcionar una solución de audio completa de bajo costo para Raspberry Pi 2, 3 y Zero, que necesitan altavoces de entrada de línea, salida de línea, salida de auriculares / entrada de micrófono y estéreo.
 
-## Features ##
+## Características ##
 
-* SPI, UART, and I2C 2.54mm(.100) breakout pads are available for external use. 
-* Raspberry Pi 2, 3 PCB footprint.
-* SGTL5000 low power stereo codec.
-* 3.5 mm, 4 contact, jack for Headphone/MIC (black).
-* RCA jacks for stereo Line In, and Line Out.
-* 4 pin screw terminal for Speaker Out.
-* At minimum, 3 Amp power supply is recommended for the Raspberry Pi, if speakers are used! 
-* ADC > 90 dB SNR and -72 dB THD+N
-* Line-Out > 100 dB SNR and -85 dB THD+N
-* HP Output > 100 dB SNR and -80 dB THD+N, 62.5 mW max into 16 ohm.
-* Speaker Output > 1.4W per channel, into 8 ohms.
-* Hardware level controls for Headphone Volume, Line In, Line Out. ALSA support.
-* 2x20pin 2.54mm female header included!
+* Los pads SPI, UART e I2C de 2.54 mm (.100) están disponibles para uso externo.
+* Tamaño Raspberry Pi 2, 3.
+* Codec estéreo de baja potencia SGTL5000.
+* 3.5 mm, 4 contactos, conector para auriculares / micrófono (negro).
+* Conectores RCA para entrada de línea estéreo y salida de línea.
+* Terminal de tornillo de 4 pines para salida de altavoz.
+* Como mínimo, se recomienda una fuente de alimentación de 3 amperios para la Raspberry Pi, si se utilizan altavoces.
+* ADC> 90 dB SNR y -72 dB THD + N
+* Salida de línea> 100 dB SNR y -85 dB THD + N
+* Salida de HP> 100 dB SNR y -80 dB THD + N, 62.5 mW máx. A 16 ohmios.
+* Salida de altavoz> 1.4W por canal, en 8 ohms.
+* Controles de nivel de hardware para volumen de auriculares, entrada de línea, salida de línea. Apoyo ALSA.
+* 2x20pin 2.54mm conector hembra incluído.

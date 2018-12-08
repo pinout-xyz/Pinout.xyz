@@ -83,14 +83,14 @@ i2c:
     name: accelerometers, gyroscopes
     device: RPISpark
 -->
-#RPi-Spark
+# RPi-Spark
 
 RPi-Spark pHAT and SDK let you quickly and easily bulid the application of the Raspberry Pi GPIO.
 For example: games, remote control car, balance car, sports pedometer, server monitor and other applications.
 
 ### Key Features
 
-####Hardware
+#### Hardware
 * 128x64 monochrome OLED
 * Accelerometers
 * Gyroscopes
@@ -101,14 +101,14 @@ For example: games, remote control car, balance car, sports pedometer, server mo
 * 1W speaker
 * 19 extended GPIOs
 
-####SDK
+#### SDK
 * Drives - RPi-Spark hardware driver library, You can use them directly to build applications and be used with other open source libraries
 * Skeletons - Let you can easy and fast development
 * CLI interface - Let you can use your favorite languages, like Bash Script, Node.js, Java, PHP, C/C++, Pascal, Basic and so all.
 
 
 
-###Supported
+### Supported
 * Raspberry Pi 2/3/3+/Zero/Zero W
 
 

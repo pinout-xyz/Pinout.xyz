@@ -29,7 +29,7 @@ pin:
   '5':
     mode: i2c
 i2c:
-  'dyniamic':
+  'dynamic':
     name: Atlas Scientific EZO
     device: multiple
 install:

@@ -189,3 +189,4 @@ overlays:
 - letstrust-tpm
 - sparkfun-avr-programmer-hat
 - whitebox-tentacle-t3
+- rpi-spark

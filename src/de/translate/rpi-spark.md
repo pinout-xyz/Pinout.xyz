@@ -2,15 +2,15 @@
 ---
 name: RPi-Spark
 class: board
-type: other, display, audio, multi, sensor, IO
+type: display, audio, multi, sensor, IO
 formfactor: pHAT
 manufacturer: mobiNRG
-description: RPi-Spark pHAT and SDK let you quickly and easily bulid the application of the Raspberry Pi GPIO.
+description: RPi-Spark pHAT and SDK lets you quickly build Pi GPIO projects.
 url: https://www.mobinrg.com
 github: https://github.com/mobinrg/rpi_spark_foundations
 buy: https://www.mobinrg.com/pages/products/rpi_spark
 image: 'rpi-spark.png'
-pincount: 19
+pincount: 40
 eeprom: no
 power:
   '1':
@@ -80,20 +80,21 @@ pin:
     mode: output
 i2c:
   '0x68':
-    name: accelerometers, gyroscopes
+    name: accelerometer, gyroscope
     device: RPISpark
 -->
 # RPi-Spark
 
-RPi-Spark pHAT and SDK let you quickly and easily bulid the application of the Raspberry Pi GPIO.
+RPi-Spark pHAT and SDK let you quickly and easily build Raspberry Pi GPIO projects.
+
 For example: games, remote control car, balance car, sports pedometer, server monitor and other applications.
 
 ### Key Features
 
 #### Hardware
 * 128x64 monochrome OLED
-* Accelerometers
-* Gyroscopes
+* Accelerometer
+* Gyroscope
 * Temperature
 * 5-way joystick
 * 2 action buttons
@@ -102,18 +103,15 @@ For example: games, remote control car, balance car, sports pedometer, server mo
 * 19 extended GPIOs
 
 #### SDK
-* Drives - RPi-Spark hardware driver library, You can use them directly to build applications and be used with other open source libraries
-* Skeletons - Let you can easy and fast development
-* CLI interface - Let you can use your favorite languages, like Bash Script, Node.js, Java, PHP, C/C++, Pascal, Basic and so all.
-
+* Drives - RPi-Spark hardware driver library - build applications directly or combine with other open-source libraries
+* Skeletons - For quick and easy development
+* CLI interface - Lets you use your preferred language: Bash Script, Node.js, Java, PHP, C/C++, Pascal, Basic, etc.
 
 
 ### Supported
 * Raspberry Pi 2/3/3+/Zero/Zero W
 
-
-
-#### Requirements:
+#### Requirements
 
 * Raspbian Linux
 * Python 2.7 or Python 3.x

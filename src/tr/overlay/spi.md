@@ -49,10 +49,10 @@ pin:
 
 ###four-wire serial bus olarak da bilinen SPI, bir pin setinden birden fazla adresteki birden fazla uygun cihazı [papatya zinciri](https://tr.wikipedia.org/wiki/Papatya_zinciri) yapıp yönetmenizi sağlar.
 
-Buna örnek olarak MCP23S17 digital IO expander çipini verebiliriz. 0 yerine S'in bulunduğu versiyon I2C versiyonudur. WiringPi2 ile çok kolay bir şekilde kullanlabilir:
+Buna örnek olarak MCP23S17 digital IO expander çipini verebiliriz. 0 yerine S'in bulunduğu versiyon I2C versiyonudur. WiringPi ile çok kolay bir şekilde kullanlabilir:
 
 ```python
-import wiringpi2 as wiringpi
+import wiringpi
 HIGH = 1
 OUTPUT = 1
 PIN_BASE = 65

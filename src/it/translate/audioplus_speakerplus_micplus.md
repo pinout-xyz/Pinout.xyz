@@ -68,9 +68,9 @@ install:
 
 5. Onboard red button, 1 status led
 
-6. Extention screw terminal for external speakers (2 to 8 ohm)
+6. Extension screw terminal for external speakers (2 to 8 ohm)
 
-7. Extention screw terminal for external push button and external led.
+7. Extension screw terminal for external push button and external led.
 
 8. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
 

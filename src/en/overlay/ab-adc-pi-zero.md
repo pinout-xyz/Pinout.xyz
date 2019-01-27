@@ -30,9 +30,11 @@ pin:
     mode: i2c
 i2c:
   '0x68':
+    alternate: [ '0x69', '0x6A', '0x6B', '0x6C', '0x6D', '0x6E', '0x6F' ]
     name: MCP3424
     device: MCP3424
   '0x69':
+    alternate: [ '0x68', '0x6A', '0x6B', '0x6C', '0x6D', '0x6E', '0x6F' ]
     name: MCP3424
     device: MCP3424
 -->
@@ -45,7 +47,7 @@ The ADC Pi Zero is an 8 channel 17 bit analogue to digital converter designed to
 - 8 x 17-bit 0 to 5V Single Ended Inputs
 - Control via the Raspberry Pi I2C port
 - Stack up to 4 ADC Pi Zero boards on a single Raspberry Pi
-- Jumper selectable I2C addresses
+- Jumper selectable I2C addresses (0x68 to 0x6F)
 - Buffered 5V I2C port
 - Based on the MCP3424 from Microchip Technologies Inc
 - Single Ended full-scale range of 5.0V

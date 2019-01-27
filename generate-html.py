@@ -219,9 +219,19 @@ def load_overlay(overlay):
             for addr in loaded['i2c']:
                 data = loaded['i2c'][addr]
                 addr = str(addr)
-                dev=data['device'].upper()
+                dev = data['device'].upper()
+                alt = None
+                try:
+                    alt = data['alternate']
+                    if type(alt) is list:
+                        alt = ", ".join(alt)
+                except KeyError:
+                    pass
                 if data is not None and 'device' in data:
-                    details.append('{address}: {device}'.format(address=addr, device=dev))
+                    if alt is not None:
+                        details.append('{address}: {device} (Alt: {alt})'.format(address=addr, device=dev, alt=alt))
+                    else:
+                        details.append('{address}: {device}'.format(address=addr, device=dev))
 
         links = {}
 

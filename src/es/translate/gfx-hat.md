@@ -50,12 +50,12 @@ i2c:
 -->
 #GFX HAT
 
-GFX HAT uses both SPI and I2c to drive the LCD display, backlight and touch. However both of these busses can be shared with other devices.
+GFX HAT usa SPI e I2c para controlar una pantalla LCD, luz trasera y toque. Sin embargo, estos buses pueden compartirse con otros dispositivos.
 
-To get the HAT set up and ready to go you can use the one-line product installer:
+Para configurar el HAT puedes utilizar el instalador de una línea:
 
 ```bash
 curl -sS https://get.pimoroni.com/gfxhat | bash
 ```
 
-And follow the instructions!
+¡y sigue las instrucciones!

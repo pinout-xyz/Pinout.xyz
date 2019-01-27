@@ -47,17 +47,17 @@ i2c:
 -->
 #Fe-Pi Audio Z V2
 
-The Fe-Pi Audio Z V2 is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, headphone-out/mic-in, and stereo speakers.
+Fe-Pi Audio Z V2 está diseñado para proporcionar una solución de audio completa de bajo coste para Raspberry Pi 2, 3 y Zero, que necesitan altavoces de entrada de línea, salida de línea, salida de auriculares / entrada de micrófono y estéreo.
 
-## Features ##
+## Características ##
 
-* Small Raspberry Pi Zero PCB footprint.
-* SGTL5000 low power stereo codec.
-* 3.5 mm, 4 contact, jack for Headphone/MIC (black).
-* 3.5 mm jack for stereo Line Out (green), and stereo Line In (pink).
-* ADC > 90 dB SNR and -72 dB THD+N
-* Line-Out > 100 dB SNR and -85 dB THD+N
-* HP Output > 100 dB SNR and -80 dB THD+N, 62.5 mW max into 16 ohm.
-* Hardware level controls for Headphone Volume, Line In, Line Out. ALSA support.
-* 2x20pin 2.54mm female header and 40pin male breakable header included!
-* Optional RCA jack for Composite Video output when used with Raspberry Pi Zero.
+* Tamaño Raspberry Pi Zero
+* Codec estéreo de baja potencia SGTL5000.
+* 3.5 mm, 4 contactos, conector para auriculares / micrófono (negro).
+* Jack de 3.5 mm para Line Out estéreo (verde), y Line Line estéreo (rosa).
+* ADC> 90 dB SNR y -72 dB THD + N
+* Salida de línea> 100 dB SNR y -85 dB THD + N
+* Salida de HP> 100 dB SNR y -80 dB THD + N, 62.5 mW máx. A 16 ohmios.
+* Controles de nivel de hardware para volumen de auriculares, entrada de línea, salida de línea. Apoyo ALSA.
+* Incluye 2x20pin 2.54mm de cabecera hembra y 40pin de cabeza rompible masculina.
+* Conexión RCA opcional para salida de video compuesto cuando se usa con Raspberry Pi Zero.

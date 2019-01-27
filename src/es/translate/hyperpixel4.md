@@ -90,26 +90,20 @@ pin:
 -->
 # HyperPixel 4
 
-HyperPixel 4 is a 4" TFT display for the Raspberry Pi. Using a high-speed DPI interface, it boosts a 60 FPS frame rate and a resolution of approximately 270 pixels per inch (800x480).
+HyperPixel 4 es una pantalla TFT de 4" para Raspberry Pi. Usa una interfaz DPI de alta velocidad que da lugar a una tasa de 60 FPS a una resolución de 270 píxeles por pulgada (800x480)
 
-The display is capable of displaying 18-bits of colour (6 bits per colour, DPI mode 6 - RGB666), and provides capacitive multi-touch capabilities, more sensitive and responsive to touch than a resistive touch display.
+La pantalla es capaz de mostrar color de 18-bits (6 bits por color, modo DPI 6 - RGB666) y cuenta con capacidad multi-toque capacitiva, más sensible y con mejor respuesta que una pantalla resistiva.
 
-HyperPixel 4 is compatible with any 40-pin version of the Pi, including Pi Zero and Pi Zero W.
+HyperPixel 4 es compatible con cualquier version de Raspberry Pi de 40 pines, incluidas Pi Zero y Pi Zero W.
 
-HyperPixel 4 is larger than a standard HAT to accomodate the
-display and will overhang both the USB ports and over the
-other end of the Pi. It requires an extension header (supplied)
-to connect.
+HyperPixel 4 es más grande que cualquier HAT estándar para que quepa la pantalla, por lo sobresaldrá por ambos lados de Raspberry Pi. Requiere una conector de extensión de GPIO (incluido) para conectarse.
 
-Because HyperPixel 4 uses every Raspberry Pi pin it's difficult
-to use it in conjunction with other devices, but it does break
-out the software I2C bus (i2c 3) which you can share with the
-touchscreen controller.
+Debido a que HyperPixel 4 utiliza todos los pines de Raspberry Pi es complicado utilizarlo con otros dispositivos, sin embargo permite utilizar el bus de software I2C (i2c 3) que puedes compartir con el controlador táctil de la pantalla.
 
-To get the display set up, you can use the one-line product installer:
+Para configurar la pantalla puedes utilizar el instalador de una línea:
 
 ```bash
 curl https://get.pimoroni.com/hyperpixel4 | bash
 ```
 
-And follow the instructions!
+¡y sigue las instrucciones!

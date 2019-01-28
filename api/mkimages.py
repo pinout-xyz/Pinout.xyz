@@ -135,7 +135,7 @@ for overlay in overlays:
     ground = []
     i2c = ""
 
-    if "power" in overlay:
+    if "power" in overlay and overlay["power"] is not None:
         power = overlay["power"]
 
     if "ground" in overlay:

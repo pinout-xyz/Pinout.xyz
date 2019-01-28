@@ -5,6 +5,8 @@ import re
 import sys
 import unicodedata
 
+sys.path.insert(0, "../")
+
 try:
     import markdown
 except ImportError:
@@ -62,7 +64,7 @@ def pimoroni_get_shop_handle(slug):
 
 def load_overlay(overlay):
     try:
-        data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))['data']
+        data = markjaml.load('../src/{}/overlay/{}.md'.format(lang, overlay))['data']
         slug = slugify(data['name'])
         return {
             'name': data['name'],
@@ -76,7 +78,7 @@ def load_overlay(overlay):
 
 
 def load_md(filename):
-    filename = 'src/{}/{}'.format(lang, filename)
+    filename = '../src/{}/{}'.format(lang, filename)
     try:
         html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
 

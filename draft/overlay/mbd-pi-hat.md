@@ -5,7 +5,7 @@ class: board
 type: io
 formfactor: HAT
 manufacturer: Qibixx
-description: Multi-Drop-Bus MDB Bus Interface and Sniffer for the Raspberry Pi
+description: MDB (Machine Data Bus) Bus Interface and Sniffer for the Raspberry Pi
 url: https://qibixx.com
 buy: https://qiba.pt/
 image: 'mbd-pi-hat.png'

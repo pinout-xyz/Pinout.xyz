@@ -65,8 +65,9 @@ pin:
 -->
 #Jam Hat
 
-An LED, button and buzzer hat ideal for Raspberry Jams and people learning the basics of GPIO.
+An LED, button and buzzer hat ideal for Raspberry Jams, Jam Makers and people learning the basics of GPIO.
 
+The Hat has 6 LEDs, 2 buttons and a tonal buzzer allowing for lots of hardware experimentation using the GPIO Zero library for ease of use.
 ```
 from gpiozero import JamHat
 from time import sleep
@@ -93,3 +94,5 @@ jh.button_1.when_released = jh.lights_1.off
 jh.button_2.when_pressed = jh.lights_2.on
 jh.button_2.when_released = jh.lights_2.off
 ```
+
+Full getting started guides are available on the [ModMyPi website](https://www.modmypi.com/blog/getting-started-with-the-jamhat

@@ -1,4 +1,4 @@
-<!--
+https://github.com/modmypi/Jam-HAT<!--
 ---
 name: JamHat
 class: board
@@ -95,4 +95,4 @@ jh.button_2.when_pressed = jh.lights_2.on
 jh.button_2.when_released = jh.lights_2.off
 ```
 
-Full getting started guides are available on the [ModMyPi website](https://www.modmypi.com/blog/getting-started-with-the-jamhat
+Full getting started guides are available on the [ModMyPi website](https://www.modmypi.com/blog/getting-started-with-the-jamhat)

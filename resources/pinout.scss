@@ -591,6 +591,58 @@ nav {
     .uart .pin {background:$color-purple;}
 }
 
+#legend {
+    h2 {
+        margin-top:20px;
+        margin-bottom:5px;
+        font-size:16px;
+    }
+    ul, li {
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    li {
+        position:relative;
+        padding-left:25px;
+        line-height:20px;
+        small {
+            font-size:10px;
+        }
+    }
+
+    .pow3v3 .pin {background:$color-yellow;}
+    .pow5v .pin {background:$color-red;}
+    .gpio .pin {background:$color-green;}
+    .i2c .pin {background:$color-blue;}
+    .spi .pin {background:$color-pink;}
+    .uart .pin {background:$color-purple;}
+
+    .pin {
+        display:block;
+        border:1px solid transparent;
+        border-radius:50%;
+        width:16px;
+        height:16px;
+        background:#002B36;
+        position:absolute;
+        left:2px;
+        top:2px;
+
+        &:after {
+            content:'';
+            display:block;
+            border-radius:100%;
+            background:#FDF6E3;
+            position:absolute;
+            left:5px;
+            top:5px;
+            width:6px;
+            height:6px;
+        }
+    }
+}
+
 #pinbase {
     width:58px;
     position:absolute;

@@ -451,6 +451,53 @@ nav {
 #gpio .uart .pin {
   background: #6c71c4; }
 
+#legend h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 16px; }
+#legend ul, #legend li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+#legend li {
+  position: relative;
+  padding-left: 25px;
+  line-height: 20px; }
+  #legend li small {
+    font-size: 10px; }
+#legend .pow3v3 .pin {
+  background: #B58900; }
+#legend .pow5v .pin {
+  background: #DC322F; }
+#legend .gpio .pin {
+  background: #859900; }
+#legend .i2c .pin {
+  background: #268BD2; }
+#legend .spi .pin {
+  background: #D33682; }
+#legend .uart .pin {
+  background: #6c71c4; }
+#legend .pin {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #002B36;
+  position: absolute;
+  left: 2px;
+  top: 2px; }
+  #legend .pin:after {
+    content: '';
+    display: block;
+    border-radius: 100%;
+    background: #FDF6E3;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 6px;
+    height: 6px; }
+
 #pinbase {
   width: 58px;
   position: absolute;

@@ -192,3 +192,4 @@ overlays:
 - rpi-spark
 - juiceboxzero
 - modmypi-jamhat
+- mdb-pi-hat

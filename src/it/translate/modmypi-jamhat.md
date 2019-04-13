@@ -1,4 +1,4 @@
-https://github.com/modmypi/Jam-HAT<!--
+<!--
 ---
 name: JamHat
 class: board

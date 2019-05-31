@@ -1,12 +1,12 @@
 <!--
 ---
-name: ModMyPi Christmas Tree Star
+name: Christmas Tree Star
 class: board
 type: LED
 formfactor: Custom
 manufacturer: ModMyPi
 description: A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper.
-url: https://www.modmypi.com/blog/christmas-tree-star-guide
+url: https://www.modmypi.com/raspberry-pi-christmas-tree-star
 github: https://github.com/modmypi/Programmable-Christmas-Star
 buy: https://www.modmypi.com/raspberry-pi-christmas-tree-star
 image: 'modmypi-star.png'
@@ -129,10 +129,17 @@ pin:
     mode: output
     active: high
 -->
-#ModMyPi Christmas Tree Star
+# Christmas Tree Star
 
 The ModMy Pi Christmas Tree Star is an LED add-on board for the Raspberry Pi designed to go on top of your Christmas tree. There are 30 white LEDs controllable through a Python library which extends GPIO Zero and is available on GitHub.
 
+## Features
+- 30 white LEDs
+- GPIO Zero compatible library.
+- Mounting points for Raspberry Pi Zero.
+- [Christmas Tree build guide](https://www.modmypi.com/blog/christmas-tree-star-guide)
+
+## Sample Code
 ```
 from star import Star
 from time import sleep

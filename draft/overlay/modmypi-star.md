@@ -13,7 +13,6 @@ image: 'modmypi-star.png'
 pincount: 40
 eeprom: no
 power:
-  '1':
   '2':
 ground:
   '6':

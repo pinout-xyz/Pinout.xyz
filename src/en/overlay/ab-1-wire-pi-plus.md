@@ -3,13 +3,13 @@
 name: 1 Wire Pi Plus
 class: board
 type: com
-formfactor: HAT
-manufacturer: AB Electronics
+formfactor: Custom
+manufacturer: AB Electronics UK
 description: 1-Wire to I2C host interface
-url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
+url: https://www.abelectronics.co.uk/p/60/1-wire-pi-plus
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/1wirepiplus/1-wire-pi-plus-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-1-wire-pi-plus-v2.pdf
+buy: https://www.abelectronics.co.uk/p/60/1-wire-pi-plus
 image: 'ab-1-wire-pi-plus.png'
 pincount: 40
 eeprom: no
@@ -32,6 +32,7 @@ pin:
     mode: i2c
 i2c:
   '0x18':
+    alternate: ['0x19', '0x1A', '0x1B']
     name: DS2482
     device: DS2482-100
 -->

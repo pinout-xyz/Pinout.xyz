@@ -3,13 +3,13 @@
 name: IO Pi Plus
 class: board
 type: io
-formfactor: HAT
-manufacturer: AB Electronics
+formfactor: Custom
+manufacturer: AB Electronics UK
 description: 32 Channel Digital Expansion Board
-url: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
+url: https://www.abelectronics.co.uk/p/54/io-pi-plus
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/iopiplus/IOPiplus-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/54/IO-Pi-Plus
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-iopiplus-2-1.pdf
+buy: https://www.abelectronics.co.uk/p/54/io-pi-plus
 image: 'ab-io-pi-plus.png'
 pincount: 40
 eeprom: no
@@ -32,9 +32,11 @@ pin:
     mode: i2c
 i2c:
   '0x20':
+    alternate: [ '0x21', '0x22', '0x23', '0x24', '0x25', '0x26', '0x27' ]
     name: MCP23017
     device: MCP23017
   '0x21':
+    alternate: [ '0x20', '0x22', '0x23', '0x24', '0x25', '0x26', '0x27' ]
     name: MCP23017
     device: MCP23017
 -->
@@ -57,4 +59,4 @@ A pair of MCP23017 expanders are included on the board allowing you to connect u
 -  Configurable interrupt source  - Interrupt-on-change from configured register defaults  or pin changes
 -  Polarity Inversion register to configure the polarity of the input port data
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

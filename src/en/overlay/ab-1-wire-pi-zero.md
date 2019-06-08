@@ -4,12 +4,12 @@ name: 1 Wire Pi Zero
 class: board
 type: com
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: 1-Wire to I2C host interface
-url: https://www.abelectronics.co.uk/p/76/1-Wire-Pi-Zero
+url: https://www.abelectronics.co.uk/p/76/1-wire-pi-zero
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/1wirepizero/1wirepizero-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/76/1-Wire-Pi-Zero
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-1-wire-pi-zero.pdf
+buy: https://www.abelectronics.co.uk/p/76/1-wire-pi-zero
 image: 'ab-1-wire-pi-zero.png'
 pincount: 40
 eeprom: no
@@ -32,6 +32,7 @@ pin:
     mode: i2c
 i2c:
   '0x18':
+    alternate: ['0x19', '0x1A', '0x1B']
     name: DS2482
     device: DS2482-100
 -->

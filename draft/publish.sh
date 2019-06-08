@@ -10,10 +10,16 @@ langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
 
 if [ "$#" -eq 0 ]; then
-    echo "please specify a board to publish!" && exit 1
+    echo "please specify a board to publish!"
+    exit 1
 fi
 
 board=$1
+
+if ! [ -f $draftmd/$board.md ]; then
+    echo "Draft file $draftmd/$board.md does not exist!"
+    exit 1
+fi
 
 for dirmd in ${langlist[@]}; do
     if [ $dirmd != "en" ]; then
@@ -22,9 +28,6 @@ for dirmd in ${langlist[@]}; do
         fi
     else
         cp $draftmd/$board.md $srcdir/$dirmd/overlay/
-    fi
-    if ! grep -e $board $srcdir/$dirmd/$yamlfile &> /dev/null; then
-        echo "- $board" | tee -a $srcdir/$dirmd/$yamlfile &> /dev/null
     fi
 done
 

@@ -38,7 +38,7 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Pi Plus
+#ADC Pi Plus (Discontinued)
 
 The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 

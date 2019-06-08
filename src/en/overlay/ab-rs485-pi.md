@@ -4,12 +4,12 @@ name: RS485 Pi
 class: board
 type: com
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: UART to RS485 Converter
-url: https://www.abelectronics.co.uk/p/77/RS485-Pi
+url: https://www.abelectronics.co.uk/p/77/rs485-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/rs485pi/rs485pi-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/77/RS485-Pi
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-rs485pi.pdf
+buy: https://www.abelectronics.co.uk/p/77/rs485-pi
 image: 'ab-rs485-pi.png'
 pincount: 40
 eeprom: no

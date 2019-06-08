@@ -4,12 +4,12 @@ name: Serial Pi Zero
 class: board
 type: com
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: UART to RS232 Converter
-url: https://www.abelectronics.co.uk/p/75/Serial-Pi-Zero
+url: https://www.abelectronics.co.uk/p/75/serial-pi-zero
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/serialpizero/serialpizero-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/75/Serial-Pi-Zero
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-serialpizero.pdf
+buy: https://www.abelectronics.co.uk/p/75/serial-pi-zero
 image: 'ab-serial-pi-zero.png'
 pincount: 40
 eeprom: no

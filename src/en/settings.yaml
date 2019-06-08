@@ -27,17 +27,11 @@ overlays:
 - 4tronix-pistep2q
 - 4tronix-pistop
 - 4tronix-robohat
-- ab-1-wire-plus
-- ab-1-wire-zero
 - ab-adc-differential-pi
-- ab-adc-pi-plus
-- ab-adc-pi-zero
 - ab-adcdac-pi-zero
 - ab-io-pi-plus
 - ab-io-pi-zero
 - ab-rs485-pi
-- ab-rtc-pi-plus
-- ab-rtc-pi-zero
 - ab-serial-pi-plus
 - ab-serial-pi-zero
 - ab-servo-pwm-pi-zero
@@ -193,3 +187,6 @@ overlays:
 - juiceboxzero
 - modmypi-jamhat
 - mdb-pi-hat
+- ab-1-wire-pi-plus
+- ab-1-wire-pi-zero
+- ab-expander-pi

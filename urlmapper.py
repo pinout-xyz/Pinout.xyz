@@ -70,7 +70,8 @@ def generate_for_lang(lang="en"):
 
     pinout.load(lang)
 
-    overlays = pinout.settings['overlays']
+    overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
+    overlays = [overlay.split("/")[-1].replace(".md", "") for overlay in overlays]
 
     base_url = pinout.get_setting('base_url', '/pinout/')
 

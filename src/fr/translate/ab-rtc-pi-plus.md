@@ -4,7 +4,7 @@ name: RTC Pi Plus
 class: board
 type: rtc
 formfactor: HAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/70/rtc-pi
 github: https://github.com/abelectronicsuk

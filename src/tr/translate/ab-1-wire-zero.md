@@ -4,7 +4,7 @@ name: 1 Wire Pi Zero
 class: board
 type: com
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/76/1-Wire-Pi-Zero
 github: https://github.com/abelectronicsuk

@@ -25,107 +25,107 @@ ground:
   '39':
 pin:
   '3':
-    name: LED Inner
+    name: Inner
     mode: output
     active: high
   '5':
-    name: LED S
+    name: S
     mode: output
     active: high
   '7':
-    name: LED R
+    name: R
     mode: output
     active: high
   '8':
-    name: LED T
+    name: T
     mode: output
     active: high
   '10':
-    name: LED W
+    name: W
     mode: output
     active: high
   '11':
-    name: LED Q
+    name: Q
     mode: output
     active: high
   '12':
-    name: LED V
+    name: V
     mode: output
     active: high
   '13':
-    name: LED P
+    name: P
     mode: output
     active: high
   '15':
-    name: LED O
+    name: O
     mode: output
     active: high
   '16':
-    name: LED U
+    name: U
     mode: output
     active: high
   '18':
-    name: LED X
+    name: X
     mode: output
     active: high
   '19':
-    name: LED N
+    name: N
     mode: output
     active: high
   '21':
-    name: LED M
+    name: M
     mode: output
     active: high
   '22':
-    name: LED Y
+    name: Y
     mode: output
     active: high
   '23':
-    name: LED L
+    name: L
     mode: output
     active: high
   '24':
-    name: LED B
+    name: B
     mode: output
     active: high
   '26':
-    name: LED A
+    name: A
     mode: output
     active: high
   '29':
-    name: LED K
+    name: K
     mode: output
     active: high
   '31':
-    name: LED J
+    name: J
     mode: output
     active: high
   '32':
-    name: LED C
+    name: C
     mode: output
     active: high
   '33':
-    name: LED I
+    name: I
     mode: output
     active: high
   '35':
-    name: LED H
+    name: H
     mode: output
     active: high
   '36':
-    name: LED F
+    name: F
     mode: output
     active: high
   '37':
-    name: LED G
+    name: G
     mode: output
     active: high
   '38':
-    name: LED E
+    name: E
     mode: output
     active: high
   '40':
-    name: LED D
+    name: D
     mode: output
     active: high
 -->

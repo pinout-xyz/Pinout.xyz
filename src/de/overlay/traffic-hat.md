@@ -2,7 +2,7 @@
 ---
 name: Traffic HAT
 class: board
-type: alle
+type: multi
 formfactor: HAT
 manufacturer: Ryanteck
 description: Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.

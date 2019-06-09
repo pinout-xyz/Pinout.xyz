@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: alle
+type: adc,io,motor,multi,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Eine Platine mit LEDs, Ein- und Ausgängen, Motorsteuerung, Sensor-Tasten und Steckbrett.

@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: alle
+type: io,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Eine Platine mit LEDs, Ein- und Ausgängen, Sensor-Tasten und Steckbrett.

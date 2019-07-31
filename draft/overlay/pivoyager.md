@@ -45,7 +45,7 @@ i2c:
 The **PiVoyager** is uninterruptible power supply (UPS) for the Raspberry Pi designed to work with standard Li-Ion or LiPo batteries, featuring a programmable watchdog, automatic restart, and a real-time calendar. 
 The **PiVoyager** is designed as a Pi Zero pHAT, but works on any Raspberry-Pi with a 40 pin header, including the Raspberry Pi 3B+ and 4. 
 
-When the **PiVoyager** is plugged to a USB power source (USB micro-B) and a Li-Ion/LiPo battery, it will both power your Raspberry Pi and charge the battery if needed, with a selectable charge current of 1000mA (default) or 500mA. If USB power is removed, the **PiMaster** automatically switches to the battery and continues to power the Raspberry Pi at 5V (2.1A max), thanks to a boost converter.
+When the **PiVoyager** is plugged to a USB power source (USB micro-B) and a Li-Ion/LiPo battery, it will both power your Raspberry Pi and charge the battery if needed, with a selectable charge current of 1000mA (default) or 500mA. If USB power is removed, the **PiVoyager** automatically switches to the battery and continues to power the Raspberry Pi at 5V (2.1A max), thanks to a boost converter.
 
 The **PiVoyager** features a Real-Time Calendar (RTC), which can be configured to store the current date and time. The content of the RTC will be maintained for as long as there is a power source connected, even if the Raspberry Pi is powered down. 
 

@@ -43,4 +43,4 @@ pin:
 -->
 #IoT LoRa Gateway HAT
 
-Use this section to provide additional information such as features, technical parts, install requirements, etc. Please keep this section to the point and avoid copy/paste of marketing blurb - the board's extended description should be primarily neutral and technical.
+Our IoT LoRa Gateway HAT allows you to create an inexpensive LoRa gateway, compatible with The Things Network, in conjunction with a Raspberry Pi or other single board computers. The HAT allows you to set up your IoT LoRa gateway in minutes rather than hours for a third of the price of traditional gateways.

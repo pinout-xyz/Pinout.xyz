@@ -6,9 +6,9 @@ type: IOT, Radio, LoRa
 formfactor: HAT
 manufacturer: Pi Supply
 description: The IoT LoRa Gateway HAT Turns your Raspberry Pi into a LoRaWan Gateway
-url: https://github.com/PiSupply/iot-lora-gateway
+url: https://learn.pi-supply.com/make/iot-lora-gateway-sd-card-image-setup/
 github: https://github.com/PiSupply/iot-lora-gateway
-buy: https://uk.pi-supply.com
+buy: https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?_pos=10&_sid=d0f4d4101&_ss=r
 image: 'pi-supply-iot-lora-gateway-hat.png'
 pincount: 40
 eeprom: yes

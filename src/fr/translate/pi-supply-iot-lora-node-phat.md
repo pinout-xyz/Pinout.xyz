@@ -6,9 +6,9 @@ type: IOT, Radio, LoRa
 formfactor: pHAT
 manufacturer: Pi Supply
 description: A LoRa Node pHAT providing LoRaWAN funcionality for your Raspberry Pi
-url: https://github.com/PiSupply/iot-lora-gateway
-github: https://github.com/PiSupply/rak811-python
-buy: https://uk.pi-supply.com
+url: https://learn.pi-supply.com/make/getting-started-with-the-raspberry-pi-lora-node-phat/
+github: https://github.com/PiSupply/IoTLoRaRange/tree/master/IoT%20LoRa%20Raspberry%20Pi%20Node%20pHAT
+buy: https://uk.pi-supply.com/products/iot-lora-node-phat-for-raspberry-pi?_pos=11&_sid=d0f4d4101&_ss=r
 image: 'pi-supply-iot-lora-node-phat.png'
 pincount: 40
 eeprom: yes

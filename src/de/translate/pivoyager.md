@@ -58,6 +58,6 @@ Thanks to provided software the user can fully control and monitor the **PiVoyag
 - Power up the Raspberry Pi after a certain delay following a shutdown. 
 - Update the firmware through I2C thanks to a built-in bootloader.
 
-For more details, including software download instructions, see our documentation [here](https://www.omzlo.com/articles/pivoyager-installation-and-tutorial).
+For more details, including software download instructions, [see our documentation](https://www.omzlo.com/articles/pivoyager-installation-and-tutorial).
 
 The **PiVoyager** is open-source/open-hardware.

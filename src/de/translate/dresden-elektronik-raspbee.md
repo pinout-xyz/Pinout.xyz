@@ -5,6 +5,7 @@ class: board
 type: iot,radio
 formfactor: Custom
 manufacturer: dresden elektronik
+collected: Other
 description: A Zigbee add-on board for the Raspberry Pi
 url: https://phoscon.de/raspbee
 github: https://github.com/dresden-elektronik/deconz-rest-plugin

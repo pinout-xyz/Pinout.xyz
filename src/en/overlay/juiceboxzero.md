@@ -5,6 +5,7 @@ class: board
 type: power
 formfactor: HAT
 manufacturer: JuiceBox Zero
+collected: Other
 description: JuiceBox Zero uninterruptible power supply for the Raspberry Pi Zero and Zero W.
 url: https://juiceboxzero.com/
 github: https://github.com/JuiceBoxZero

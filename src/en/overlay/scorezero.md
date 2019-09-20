@@ -5,6 +5,7 @@ class: board
 type: io,other
 formfactor: pHAT
 manufacturer: The Wonky Resistor Co
+collected: Other
 description: A super-simple and stylish soldering kit - makes an NES-style games controller when assembled.
 url: http://wonkyresistor.com/scorezero
 github: https://github.com/wonkyresistor/scorezero

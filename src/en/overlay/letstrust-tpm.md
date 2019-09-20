@@ -5,6 +5,7 @@ class: board
 type: other
 formfactor: Custom
 manufacturer: pi3g
+collected: Other
 description: Infineon SLB9670 TPM2.0 daughter board for the Raspberry PI
 url: https://buyzero.de/products/letstrust-hardware-tpm-trusted-platform-module
 schematic: http://www.letstrust.de/uploads/letstrust-v2.0.schematic.pdf

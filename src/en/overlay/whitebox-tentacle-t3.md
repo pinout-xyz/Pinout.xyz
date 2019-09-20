@@ -4,6 +4,7 @@ name: Tentacle T3 for Raspberry Pi
 class: board
 type: sensor
 formfactor: Custom
+collected: Other
 manufacturer: Whitebox Labs
 description: A stackable add-on board to host up to 5 Atlas Scientific EZO device to measure PH, Dissolved Oxygen, Electric Conductivity (E.C.), Oxidation-Reduction Potential (ORP) temperature (RTD) and control dosing pumps (EZO-PMP).
 url: https://www.whiteboxes.ch/docs/tentacle/t3

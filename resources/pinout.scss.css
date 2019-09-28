@@ -461,10 +461,14 @@ nav {
   padding: 0; }
 #legend li {
   position: relative;
-  padding-left: 25px;
+  margin-bottom: 2px;
   line-height: 20px; }
   #legend li small {
     font-size: 10px; }
+#legend a {
+  padding: 0 12px 0 30px; }
+#legend li, #legend a {
+  color: #063541; }
 #legend .pow3v3 .pin {
   background: #B58900; }
 #legend .pow5v .pin {

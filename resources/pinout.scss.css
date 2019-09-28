@@ -134,11 +134,23 @@ Content Area
 /*
 Boards Page
 */
+#boards > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
 #boards .board, #featured .board {
   box-sizing: border-box;
   width: 25%;
   display: block;
-  float: left;
   text-align: center; }
   #boards .board a, #featured .board a {
     padding-top: 20px;

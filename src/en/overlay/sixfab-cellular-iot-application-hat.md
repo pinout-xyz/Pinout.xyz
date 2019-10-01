@@ -1,6 +1,6 @@
 <!--
 ---
-name: Cellular IoT Application HAT – LTE-M & NB-IoT & eGPRS
+name: Cellular IoT Application HAT
 class: board
 type: com
 formfactor: HAT
@@ -65,7 +65,7 @@ pin:
     mode: input
     name: Status
 -->
-# Raspberry Pi Cellular IoT Application HAT – LTE-M & NB-IoT & eGPRS
+# Raspberry Pi Cellular IoT Application HAT
 
 This is a hat that has combined LTE technologies Cat.M1, Cat.NB1 (NB-IoT) and eGPRS for Raspberry Pi, based on Quectel’s BG96 module. The hat has the power of new IoT phenomenon LPWA (Low Power Wide Area) with Cat.M1 and NB-IoT connection functionalities. Besides, it also provides the function of eGPRS that be enhanced version of classical GPRS.
 

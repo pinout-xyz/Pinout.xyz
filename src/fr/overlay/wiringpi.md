@@ -5,7 +5,7 @@ class: interface
 type: pinout
 page_url: wiringpi
 url: http://wiringpi.com
-github: https://github.com/WiringPi/WiringPi2-Python
+github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
     name: WiringPi 8
@@ -70,7 +70,7 @@ pin:
 
 Le but avoué est de définir une librairie unique ainsi qu'un set de fonctions permettant l'accès au GPIO de la Raspberry Pi à partir de plusieurs languages de programmation.
 
-En effet, bien que WiringPi soit une bibliothèque en C au départ, elle est aussi disponible en Ruby et Python. Pour l'installer, un simple "gem install wiringpi" ou "pip install wiringpi2" fera l'affaire, pour l'environnement Ruby et Python respectivement.
+En effet, bien que WiringPi soit une bibliothèque en C au départ, elle est aussi disponible en Ruby et Python. Pour l'installer, un simple "gem install wiringpi" ou "pip install WiringPi" fera l'affaire, pour l'environnement Ruby et Python respectivement.
 
 Pour les usagers Python, noter bien le '2' suivant le 'wiringpi', cette nouvelle version est basée sur WiringPi 2 et incorpore la majorité des fonctionnalités de la version C.
 
@@ -81,7 +81,7 @@ WiringPi présente son propre système de numérotation des broches GPIO, visibl
 Installez la librairie sous Python est particulièrement simple:
 
 ```bash
-sudo pip install wiringpi2
+sudo pip install WiringPi
 ```
 
 Pour toute information supplémentaire, visitez le site officiel de WiringPi!

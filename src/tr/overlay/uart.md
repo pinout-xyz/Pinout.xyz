@@ -23,10 +23,10 @@ UART Arduino, veya bootload edilmiş bir ATmega ile kolayca iletişim kurmanız�
 
 Örneğin Arduino bootload edilmiş ATmega 328 devresini breadboard'a kurup bir akım regülatörü ile Raspberry Pi'nin 5v yolunu 3.3 v'a dönüştürebilirsiniz. Bu sayede 3.3v logic'ine sahip bir Arduino klonunuz olacak.
 
-WiringPi2-Python modülünü yükledikten sonra, Aşağıdaki Python örneği ile Raspberry Pi'nin UART'ını 9600baud'da açabilir ve 'merhaba dunya' yazabilirsiniz.
+WiringPi-Python modülünü yükledikten sonra, Aşağıdaki Python örneği ile Raspberry Pi'nin UART'ını 9600baud'da açabilir ve 'merhaba dunya' yazabilirsiniz.
 
 ```python
-import wiringpi2 as wiringpi
+import wiringpi
 wiringpi.wiringPiSetup()
 serial = wiringpi.serialOpen('/dev/ttyAMA0',9600)
 wiringpi.serialPuts(serial,'merhaba dunya')

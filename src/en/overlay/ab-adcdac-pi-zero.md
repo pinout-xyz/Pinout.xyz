@@ -4,12 +4,12 @@ name: ADC-DAC Pi Zero
 class: board
 type: adc
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: 2 channel Analogue to Digital Converter and 2 channel Digital to Analogue Converter
-url: https://www.abelectronics.co.uk/p/74/ADC-DAC-Pi-Zero-Raspberry-Pi-ADC-and-DAC-expansion-board
+url: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero-raspberry-pi-adc-and-dac-expansion-board
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcdacpizero/adcdacpizero-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/74/ADC-DAC-Pi-Zero-Raspberry-Pi-ADC-and-DAC-expansion-board
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-dac-pi-zero.pdf
+buy: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero-raspberry-pi-adc-and-dac-expansion-board
 image: 'ab-adcdac-pi-zero.png'
 pincount: 40
 eeprom: no
@@ -49,4 +49,4 @@ Max ADC Sample Rate: 100 ksamples/sec
 
 Max ADC Sample Rate under Python: 12,000 samples per second.
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.
+Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

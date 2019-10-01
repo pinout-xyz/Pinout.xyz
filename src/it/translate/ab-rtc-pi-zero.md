@@ -4,7 +4,7 @@ name: RTC Pi Zero
 class: board
 type: rtc
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/70/RTC-Pi-Zero
 github: https://github.com/abelectronicsuk

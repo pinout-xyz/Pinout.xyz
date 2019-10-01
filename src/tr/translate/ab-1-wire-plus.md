@@ -4,7 +4,7 @@ name: 1 Wire Pi Plus
 class: board
 type: com
 formfactor: HAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: 1-Wire to I2C host interface
 url: https://www.abelectronics.co.uk/p/60/1-Wire-Pi-Plus
 github: https://github.com/abelectronicsuk

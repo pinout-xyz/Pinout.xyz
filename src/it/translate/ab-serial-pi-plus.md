@@ -3,13 +3,13 @@
 name: Serial Pi Plus
 class: board
 type: com
-formfactor: HAT
-manufacturer: AB Electronics
+formfactor: Custom
+manufacturer: AB Electronics UK
 description: UART to RS232 Converter
-url: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
+url: https://www.abelectronics.co.uk/p/51/serial-pi-plus
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/serialpiplus/schematic.pdf
-buy: https://www.abelectronics.co.uk/p/51/Serial-Pi-Plus
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-serial-pi-plus.pdf
+buy: https://www.abelectronics.co.uk/p/51/serial-pi-plus
 image: 'ab-serial-pi-plus.png'
 pincount: 40
 eeprom: no
@@ -39,7 +39,7 @@ The RS232 port is connected to the UART port on the Raspberry Pi using a MAX3232
 
 - RS232 Master Port.
 - Control the Raspberry Pi over RS232 or connect to external serial accessories.
-- Stackable with other Raspberry Pi A+, Raspberry Pi B+ and Raspberry Pi 2 and Raspberry Pi accessory boards.
+- Stackable with other Raspberry Pi accessory boards.
 - Mounting holes for use with the AB Electronics UK mounting kits (sold separately)
 
 [Configuring the RS232 communication on the Raspberry Pi](https://www.abelectronics.co.uk/kb/article/20/raspberry-pi-serial-port-usage)

@@ -5,7 +5,7 @@ class: interface
 type: pinout
 page_url: wiringpi
 url: http://wiringpi.com
-github: https://github.com/WiringPi/WiringPi2-Python
+github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
     name: WiringPi 8
@@ -70,9 +70,9 @@ pin:
 
 Das Ziel dieser Bibliothek ist es, eine einzige gemeinsame Plattform und Programmierschnistelle für den Zugriff auf die
 GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur Verfügung zu stellen.
-Im Kern ist WiringPi eine C-Bibliothek, aber sie steht auch in Ruby und Python per "gem install wiringpi" bzw. "pip install wiringpi2" zur Verfügung.
+Im Kern ist WiringPi eine C-Bibliothek, aber sie steht auch in Ruby und Python per "gem install wiringpi" bzw. "pip install WiringPi" zur Verfügung.
 
-Bei Python muss man auf die "2" am Ende achten - das ist die WiringPi2-Python Bibliothek, die momentan die aktuelle Version ist.
+Bei Python muss man auf die "2" am Ende achten - das ist die WiringPi-Python Bibliothek, die momentan die aktuelle Version ist.
 
 Mehr Informationen findest Du auf der offiziellen WiringPi-Webseite.
 

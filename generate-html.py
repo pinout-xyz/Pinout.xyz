@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import unicodedata
+import glob
 
 try:
     import markdown
@@ -82,6 +83,13 @@ def slugify(value):
 
 
 def load_overlay(overlay):
+    data = markjaml.load(overlay)
+
+    loaded = data['data']
+    loaded['source'] = overlay
+    loaded['long_description'] = data['html']
+
+    """
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
 
@@ -103,6 +111,7 @@ def load_overlay(overlay):
         except IOError:
             print('overlay {} missing in lang {}'.format(overlay, lang))
             return None
+    """
 
     debug(0, '>> Rendering: {src}'.format(src=loaded['source']))
 
@@ -194,7 +203,7 @@ def load_overlay(overlay):
                 if pin in pinout.pins:
                     actual_pin = pinout.pins[pin]
 
-                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
+                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and 'ground.md' not in overlay:
                         raise Exception(
                             "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
@@ -219,9 +228,19 @@ def load_overlay(overlay):
             for addr in loaded['i2c']:
                 data = loaded['i2c'][addr]
                 addr = str(addr)
-                dev=data['device'].upper()
+                dev = data['device'].upper()
+                alt = None
+                try:
+                    alt = data['alternate']
+                    if type(alt) is list:
+                        alt = ", ".join(alt)
+                except KeyError:
+                    pass
                 if data is not None and 'device' in data:
-                    details.append('{address}: {device}'.format(address=addr, device=dev))
+                    if alt is not None:
+                        details.append('{address}: {device} (Alt: {alt})'.format(address=addr, device=dev, alt=alt))
+                    else:
+                        details.append('{address}: {device}'.format(address=addr, device=dev))
 
         links = {}
 
@@ -524,7 +543,7 @@ alternate_urls = urlmapper.generate_urls(lang)
 
 pinout.load(lang)
 
-overlays = pinout.settings['overlays']
+overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
 
 strings = pinout.get_string('strings', {})
 
@@ -629,6 +648,10 @@ for overlay in overlays:
 
         if len(o_types) > 1 and 'Multi' not in o_types:
             o_types.append('Multi')
+
+        if len(o_types) == 0:
+            print(" No type(s) found in overlay: {}".format(t, overlay['name']))
+            o_types = [strings['group_other']]
 
         o_type = ','.join(o_types)
 

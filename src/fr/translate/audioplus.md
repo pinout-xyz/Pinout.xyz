@@ -11,7 +11,7 @@ image: 'audioplus.png'
 pincount: 40
 eeprom: no
 power:
-  '2':
+  '1':
 ground:
   '6':
   '9':

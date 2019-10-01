@@ -4,12 +4,8 @@ import json
 import re
 import sys
 import unicodedata
-
-try:
-    import markdown
-except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
-
+import markdown
+import glob
 import markjaml
 import pinout
 
@@ -20,17 +16,19 @@ sys.setdefaultencoding('utf8')
 lang = "en"
 
 if len(sys.argv) > 1:
-    lang  = sys.argv[1]
+    lang = sys.argv[1]
 
 pinout.load(lang)
 
-overlays = pinout.settings['overlays']
+overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
+overlays = [overlay.split("/")[-1].replace(".md", "") for overlay in overlays]
 
 pages = {}
+product_map = {}
 
 
 def cssify(value):
-    value = slugify(value);
+    value = slugify(value)
     if value[0] == '3' or value[0] == '5':
         value = 'pow' + value
 
@@ -47,7 +45,6 @@ def slugify(value):
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
 
-product_map = {}
 
 def load_overlay(overlay):
     try:
@@ -56,7 +53,6 @@ def load_overlay(overlay):
         loaded = data['data']
     except IOError:
         return None
-
 
     details = []
 
@@ -139,5 +135,5 @@ def load_md(filename):
 
 overlays = map(load_overlay, overlays)
 
-#print(json.dumps(overlays))
-print(json.dumps(product_map))
+print(json.dumps(overlays))
+#print(json.dumps(product_map))

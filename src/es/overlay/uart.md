@@ -23,10 +23,10 @@ El UART es una útil y directa manera de comunicar un Arduino ( o un ATmega con 
 
 Personalmente prefiero colocar en una placa de pruebas un ATmega 328 con el bootloader de Arduino, con un regulador de voltaje que tome de entrada la línea de 5v de la Pi y que saque 3.3v. El ATmega 328 parece bastante feliz a 3.3v y usando un cristal de 16Mhz, y además tendrás un clon de un Arduino con lógica de 3.3v.
 
-Asumiendo que tengas WiringPi2-Python instalado, el siguiente ejemplo de Python utiliza el UART de la Pi a 9600 baudios y manda 'hello world'
+Asumiendo que tengas WiringPi-Python instalado, el siguiente ejemplo de Python utiliza el UART de la Pi a 9600 baudios y manda 'hello world'
 
 ```python
-import wiringpi2 as wiringpi
+import wiringpi
 wiringpi.wiringPiSetup()
 serial = wiringpi.serialOpen('/dev/ttyAMA0',9600)
 wiringpi.serialPuts(serial,'hello world!')

@@ -42,21 +42,21 @@ i2c:
 -->
 #IO Pi Plus
 
-The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
+IO Pi Plus es una placa de expansión digital de 32 canales diseñada para su uso en Raspberry Pi. La placa se basa en el expansor de E / S de 16 bits MCP23017 de Microchip Technology Inc.
 
-A pair of MCP23017 expanders are included on the board allowing you to connect up to 32 digital inputs or outputs to the Raspberry Pi.  The IO Pi Plus Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
+Se incluyen un par de expansores MCP23017 en la placa que le permiten conectar hasta 32 entradas o salidas digitales a la Raspberry Pi. IO Pi Plus Expander se alimenta a través de Raspberry Pi utilizando el puerto GPIO y los pines extendidos en el conector GPIO le permiten combinar IO Pi Plus junto con otras placas de expansión.
 
-##Features
+##Características
 
--  32 Digital Inputs/Outputs
--  Control via the Raspberry Pi I2C port
--  Stack up to 4 IO Pi boards on a single Raspberry Pi
--  Jumper selectable I2C addresses
--  External 5V Input with isolation jumper
--  Based on the MCP23017 from Microchip Technologies Inc
--  Configurable interrupt output pins - Configurable as active-high, active-low or open-drain
--  INTA and INTB can be configured to operate independently or together
--  Configurable interrupt source  - Interrupt-on-change from configured register defaults  or pin changes
--  Polarity Inversion register to configure the polarity of the input port data
+- 32 entradas / salidas digitales
+- Control a través del puerto Raspberry Pi I2C
+- Combina hasta 4 placas IO Pi en una sola Raspberry Pi
+- Direcciones I2C seleccionables por puente
+- Entrada externa de 5 V con puente de aislamiento
+- Basado en el MCP23017 de Microchip Technologies Inc
+- Pines de salida de interrupción configurables - Configurable como activo-alto, activo-bajo o drenaje abierto
+- INTA e INTB se pueden configurar para operar de manera independiente o en conjunto
+- Fuente de interrupción configurable - Interrupción al cambiar desde valores predeterminados de registro configurados o cambios de pin
+- Registro de inversión de polaridad para configurar la polaridad de los datos del puerto de entrada
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.

@@ -54,13 +54,13 @@ i2c:
 -->
 #Expander Pi
 
-Expander Pi is a versatile digital and analogue expansion board.  It allows you to connect your Raspberry Pi to switches, lights, sensors, and many other devices giving you a way to communicate with the outside world.
+Expander Pi es una placa de expansión digital y analógica versátil. Le permite conectar su Raspberry Pi a interruptores, luces, sensores y muchos otros dispositivos, lo que le permite comunicarse con el mundo exterior.
 
-##Features  
+##Características
 
-8 channel MCP3208 12-bit ADC with a maximum sample rate of 100 ksps and includes a 4.096 volt precision voltage reference.  
-2 channel MCP4822 12-bit DAC with an internal voltage reference.  
-16 digital I/O channels, using an MCP23017 16-bit I/O expander with a maximum input of 5 volts on each channel.
-A Real Time Clock using a DS1307 RTC and a CR2032 battery to maintain the date and time when the main system power is not available.
+ADC de 8 bits MCP3208 de 12 bits con una frecuencia de muestreo máxima de 100 ksps e incluye una referencia de voltaje de precisión de 4.096 voltios.
+2 canales MCP4822 DAC de 12 bits con una referencia de voltaje interno.
+16 canales de E / S digitales, utilizando un expansor de E / S de 16 bits MCP23017 con una entrada máxima de 5 voltios en cada canal.
+Un reloj de tiempo real que utiliza un RTC DS1307 y una batería CR2032 para mantener la fecha y la hora cuando la alimentación del sistema principal no está disponible.
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.

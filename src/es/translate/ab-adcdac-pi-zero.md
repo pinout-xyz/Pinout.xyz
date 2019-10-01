@@ -41,12 +41,12 @@ install:
 -->
 #ADC-DAC Pi Zero
 
-The ADC-DAC Pi Zero is a 2 channel 12 bit analogue to digital converter and 2 channel 12 bit digital to analogue converter designed to work with the Raspberry Pi.   Designed for the same footprint as the Raspberry Pi Zero the ADC-DAC Pi Zero is also compatible with full size Raspberry Pi models.
+ADC-DAC Pi Zero es un convertidor analógico a digital de 2 canales y 12 bits y un convertidor digital a analógico de 2 canales y 12 bits diseñado para funcionar con la Raspberry Pi. Diseñado para la mismo tamaño que la Raspberry Pi Zero, ADC-DAC Pi Zero también es compatible con los modelos Raspberry Pi de tamaño completo.
 
-The ADC-DAC Pi Zero is based on the Microchip MCP3202 A/D converter containing 2 analogue inputs with 12 bit resolution with a Microchip MCP4822 dual channel 12-bit DAC with internal voltage reference.
+ADC-DAC Pi Zero se basa en el convertidor A / D Microchip MCP3202 que contiene 2 entradas analógicas con resolución de 12 bits con un DAC de 12 bits Microchip MCP4822 de doble canal con referencia de voltaje interno.
 
-Max ADC Sample Rate: 100 ksamples/sec
+Velocidad máxima de muestreo de ADC: 100 k muestras / seg.
 
-Max ADC Sample Rate under Python: 12,000 samples per second.
+Velocidad máxima de muestra de ADC en Python: 12,000 muestras por segundo.
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.

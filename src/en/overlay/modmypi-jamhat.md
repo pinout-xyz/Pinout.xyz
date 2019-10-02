@@ -6,9 +6,9 @@ type: multi
 formfactor: HAT
 manufacturer: ModMyPi
 description: A Jam friendly board with 6 LEDs, 2 buttons and a buzzer.
-url: https://www.modmypi.com/jam-hat
+url: https://thepihut.com/products/jam-hat
 github: https://github.com/modmypi/Jam-HAT
-buy: http://www.modmypi.com/jam-hat
+buy: https://thepihut.com/products/jam-hat
 image: 'modmypi-jamhat.png'
 pincount: 40
 eeprom: no

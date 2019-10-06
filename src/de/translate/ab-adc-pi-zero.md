@@ -4,7 +4,7 @@ name: ADC Pi Zero
 class: board
 type: adc
 formfactor: pHAT
-manufacturer: AB Electronics
+manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/69/ADC-Pi-Zero-Raspberry-Pi-Analogue-to-Digital-converter
 github: https://github.com/abelectronicsuk

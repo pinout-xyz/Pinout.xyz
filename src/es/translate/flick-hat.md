@@ -39,13 +39,13 @@ i2c:
     device: MGC3130
 -->
 #Flick HAT
-Integrate Flick into your I2C project to give you multiple ways of controlling it. Using the near field gesture technology, you’re able to hide your project behind non conductive material (wood/acrylic) and still use Flick.
+Integra Flick en tu proyecto I2C para  múltiples formas de controlarlo. Con la tecnología de gestos de campo cercano, puedes ocultar tu proyecto detrás de material no conductor (madera / acrílico) y seguir utilizando Flick.
 
-* 3D tracking
-* Gesture sensing up to 15cm
-* Touch and Tap sensing
-* Communicates with the Raspberry Pi via I2C
-* No soldering required
-* Level shifting chip to enable board to work with 3V3 or 5V0 power and logic
-* One line installer
-* Fully CE and FCC tested and approved
+* Seguimiento 3D
+* Gesto de detección hasta 15cm.
+* Reconoce toque y pulsación
+* Se comunica con la Raspberry Pi a través de I2C.
+* No requiere soldadura
+* Chip regulador para permitir que la placa funcione con 3V3 o 5V de potencia
+* Instalador de una línea
+* Totalmente CE y FCC probado y aprobado

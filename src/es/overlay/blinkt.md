@@ -13,7 +13,7 @@ image: 'blinkt.png'
 pincount: 40
 eeprom: no
 power:
-  '2':
+  '4':
 ground:
   '6':
 pin:
@@ -43,9 +43,9 @@ from time import sleep
 
 while True:
     for pixel in range(8):
-        r = randint(255)
-        g = randint(255)
-        b = randint(255)
+        r = randint(0, 255)
+        g = randint(0, 255)
+        b = randint(0, 255)
         set_pixel(pixel, r, g, b)
         show()
         sleep(0.1)

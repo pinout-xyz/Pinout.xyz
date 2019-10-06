@@ -12,6 +12,7 @@ image: 'onoff-shim.png'
 pincount: 12
 eeprom: no
 power:
+  '1':
   '2':
 ground:
   '6':

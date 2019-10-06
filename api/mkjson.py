@@ -4,11 +4,9 @@ import json
 import re
 import sys
 import unicodedata
+import markdown
 
-try:
-    import markdown
-except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
+sys.path.insert(0, "../")
 
 import markjaml
 import pinout
@@ -50,26 +48,34 @@ def slugify(value):
 
 def load_overlay(overlay):
     try:
-        data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
+        data = markjaml.load('../src/{}/overlay/{}.md'.format(lang, overlay)) 
+        slug = slugify(data['data']['name'])
 
-        loaded = data['data']
+        filename = 'v1/detail/{}.json'.format(slug)
+        web_url = "https://pinout.xyz/pinout/{}".format(slug),
+
+        data['api_output_file'] = filename
+        data['data']['pinout_url'] = web_url
+
+        loaded = data
     except IOError:
         return None
 
     return loaded
 
-
-def load_md(filename):
-    filename = 'src/{}/{}'.format(lang, filename)
-    try:
-        html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
-
-        return html
-    except IOError:
-        print('Unable to load markdown from {}'.format(filename))
-        return ''
-
-
 overlays = map(load_overlay, overlays)
 
-print(json.dumps(overlays, sort_keys=True))
+for overlay in overlays:
+    for t in ['power', 'ground']:
+        try:
+            overlay['data'][t] = overlay['data'][t].keys()
+        except (KeyError, AttributeError):
+            pass
+    filename = overlay['api_output_file']
+    data = json.dumps(overlay['data'], sort_keys=True)
+    
+    #print("Writing: {}".format(filename))
+    #print(data)
+    f = open(filename, 'w')
+    f.write(data)
+    f.close()

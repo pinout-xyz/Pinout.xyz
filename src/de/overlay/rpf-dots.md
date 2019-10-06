@@ -2,8 +2,8 @@
 ---
 name: DOTs
 class: board
-type: alle
-formfactor: Andere
+type: other
+formfactor: Custom
 manufacturer: Raspberry Pi
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/

@@ -1,7 +1,7 @@
 SCL Raspberry Pi'deki I2C pinlerinden biri. [I2c hakkında detaylı bilgi](/pinout/i2c).
 
 ```python
-require 'wiringpi2'
+require 'WiringPi'
 HIGH = 1
 LOW = 0
 OUTPUT = 1

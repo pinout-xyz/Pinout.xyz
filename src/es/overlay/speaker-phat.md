@@ -12,6 +12,7 @@ pincount: 40
 eeprom: no
 power:
   '2':
+  '17':
 ground:
   '6':
   '9':

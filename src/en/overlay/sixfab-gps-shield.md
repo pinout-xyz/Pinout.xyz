@@ -6,13 +6,15 @@ type: gps
 formfactor: pHAT
 manufacturer: Sixfab
 description: A GPS add-on board for Raspberry Pi
-url: http://sixfab.com/product/gsm-shields/
-buy: http://sixfab.com/product/gsm-shields/
+url: https://sixfab.com/product/gps-shield/
+buy: https://sixfab.com/product/gps-shield/
 image: 'sixfab-gps-shield.png'
 pincount: 40
 eeprom: no
 power:
+  '1':
   '2':
+  '4':
 ground:
   '6':
   '9':
@@ -23,14 +25,20 @@ ground:
   '34':
   '39':
 pin:
+  '7':
+    mode: 1-wire
   '8':
     mode: uart
   '10':
     mode: uart
   '12':
-    name: LED
+    name: 
+  '18':
+    name: 1-PPS    
   '22':
     name: Reset
+  '40':
+    name: User Led
 -->
 # GPS Shield
 

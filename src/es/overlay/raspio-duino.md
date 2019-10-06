@@ -8,7 +8,7 @@ manufacturer: RasPiO
 description: Arduino Programming on the Raspberry Pi
 url: http://rasp.io/duino/
 github: https://github.com/raspitv/raspio_duino
-buy: https://ryanteck.uk/add-ons/58-raspio-duino.html
+buy: https://shop.rasp.io/collections/raspio-collection/products/raspio-duino-low-cost-easy-way-into-arduino-programming-on-the-raspberry-pi
 image: 'raspio-duino.png'
 pincount: 26
 eeprom: no

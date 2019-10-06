@@ -3,13 +3,13 @@
 name: ADC Differential Pi
 class: board
 type: adc
-formfactor: HAT
-manufacturer: AB Electronics
+formfactor: pHAT
+manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
+url: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcdifferentialpi/adc-differential-pi-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/65/ADC-Differential-Pi-Raspberry-Pi-Analogue-to-Digital-converter
+schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-differential-pi.pdf
+buy: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
 image: 'ab-adc-differential-pi.png'
 pincount: 40
 eeprom: no
@@ -32,9 +32,11 @@ pin:
     mode: i2c
 i2c:
   '0x68':
+    alternate: [ '0x69', '0x6A', '0x6B', '0x6C', '0x6D', '0x6E', '0x6F' ]
     name: MCP3424
     device: MCP3424
   '0x69':
+    alternate: [ '0x68', '0x6A', '0x6B', '0x6C', '0x6D', '0x6E', '0x6F' ]
     name: MCP3424
     device: MCP3424
 -->
@@ -60,4 +62,4 @@ The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter des
     - 240 SPS (12 bits)
 - One-Shot or Continuous Conversion Options
 
-Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries available on GitHub.
+Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

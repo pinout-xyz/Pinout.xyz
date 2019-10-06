@@ -27,21 +27,21 @@ def url_slugify(value):
 
 def load_overlay_url(overlay, lang):
     loaded = None
-    print("Info: Trying {}".format('src/{}/overlay/{}.md'.format(lang, overlay)))
+    #print("Info: Trying {}".format('src/{}/overlay/{}.md'.format(lang, overlay)))
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
 
         loaded = data['data']
     except IOError:
         try:
-            print("Warning: Falling back to {}".format('src/{}/translate/{}.md'.format(lang, overlay)))
+            #print("Warning: Falling back to {}".format('src/{}/translate/{}.md'.format(lang, overlay)))
             data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
             loaded = data['data']
         except IOError:
             return None
 
     if loaded is None:
-        print("Fatal: Invalid overlay formatting.")
+        print("Fatal: Invalid overlay formatting:: {}.md".format(overlay))
         sys.exit(1)
 
     if not 'page_url' in loaded:
@@ -70,7 +70,8 @@ def generate_for_lang(lang="en"):
 
     pinout.load(lang)
 
-    overlays = pinout.settings['overlays']
+    overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
+    overlays = [overlay.split("/")[-1].replace(".md", "") for overlay in overlays]
 
     base_url = pinout.get_setting('base_url', '/pinout/')
 

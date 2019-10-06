@@ -13,7 +13,7 @@ image: 'blinkt.png'
 pincount: 40
 eeprom: no
 power:
-  '2':
+  '4':
 ground:
   '6':
 pin:
@@ -30,6 +30,8 @@ pin:
 
 Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.
 
+Note: First run Blinkt! boards use physical pin #2 for the 5V power supply. If your Blinkt! doesn't work with this pinout, try swapping over.
+
 To get started you can use the one-line product installer:
 
 ```bash
@@ -45,9 +47,9 @@ from time import sleep
 
 while True:
     for pixel in range(8):
-        r = randint(255)
-        g = randint(255)
-        b = randint(255)
+        r = randint(0, 255)
+        g = randint(0, 255)
+        b = randint(0, 255)
         set_pixel(pixel, r, g, b)
         show()
         sleep(0.1)

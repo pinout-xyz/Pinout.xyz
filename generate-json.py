@@ -4,12 +4,8 @@ import json
 import re
 import sys
 import unicodedata
-
-try:
-    import markdown
-except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
-
+import markdown
+import glob
 import markjaml
 import pinout
 
@@ -20,17 +16,19 @@ sys.setdefaultencoding('utf8')
 lang = "en"
 
 if len(sys.argv) > 1:
-    lang  = sys.argv[1]
+    lang = sys.argv[1]
 
 pinout.load(lang)
 
-overlays = pinout.settings['overlays']
+overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
+overlays = [overlay.split("/")[-1].replace(".md", "") for overlay in overlays]
 
 pages = {}
+product_map = {}
 
 
 def cssify(value):
-    value = slugify(value);
+    value = slugify(value)
     if value[0] == '3' or value[0] == '5':
         value = 'pow' + value
 
@@ -56,10 +54,14 @@ def load_overlay(overlay):
     except IOError:
         return None
 
-
     details = []
 
     if 'manufacturer' in loaded:
+        if loaded['manufacturer'] == "Pimoroni":
+            if 'buy' in loaded:
+                product_slug = loaded['buy'].split('/')[-1]
+                product_map[product_slug] = slugify(loaded['name'])
+
         details.append('* Made by ' + loaded['manufacturer'])
 
     if 'pincount' in loaded:
@@ -99,9 +101,10 @@ def load_overlay(overlay):
         if '3' in loaded['pin'] and '5' in loaded['pin']:
             pin_3 = loaded['pin']['3']
             pin_5 = loaded['pin']['5']
-            if 'mode' in pin_3 and 'mode' in pin_5:
-                if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
-                    details.append('* Uses I2C')
+            if pin_3 is not None and pin_5 is not None:
+                if 'mode' in pin_3 and 'mode' in pin_5:
+                    if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
+                        details.append('* Uses I2C')
 
     if 'url' in loaded:
         details.append('* [More Information]({url})'.format(url=loaded['url']))
@@ -133,3 +136,4 @@ def load_md(filename):
 overlays = map(load_overlay, overlays)
 
 print(json.dumps(overlays))
+#print(json.dumps(product_map))

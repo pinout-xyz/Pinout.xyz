@@ -3,7 +3,7 @@
 name: Uputronics GPS Expansion Board
 class: board
 type: gps
-formfactor: Custom
+formfactor: HAT
 manufacturer: Uputronics
 description: Provides position and PPS Time Reference for Raspberry Pi
 url: https://store.uputronics.com
@@ -54,4 +54,4 @@ Features:
 
 I2C is connected but uses clock stretching.
 
-Command reference guide: <a href="https://www.u-blox.com/sites/default/files/products/documents/u-blox8-M8_ReceiverDescrProtSpec_(UBX-13003221)_Public.pdf">U-Blox M8 Reciever Description</a>
+Command reference guide: <a href="https://www.u-blox.com/sites/default/files/products/documents/u-blox8-M8_ReceiverDescrProtSpec_(UBX-13003221)_Public.pdf">U-Blox M8 Receiver Description</a>

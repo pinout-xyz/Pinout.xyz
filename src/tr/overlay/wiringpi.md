@@ -5,7 +5,7 @@ class: interface
 type: pinout
 page_url: wiringpi
 url: http://wiringpi.com
-github: https://github.com/WiringPi/WiringPi2-Python
+github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
     name: WiringPi 8
@@ -68,9 +68,9 @@ pin:
 
 ###WiringPi, Arduino benzeri bir kablolama basitliğini Raspberry Pi'ye getirmeyi amaçlayan bir projedir.
 
-WiringPi, Arduino kullanmış olanların hiç yabancılık çekmeyeceği, Arduino benzeri bir pinleme/klablolama sistemini Raspberry Pi'ye getirmeyi amaçlamış üçüncü parti bir kütüphanedir. Bu kütüphanenin amacı benzer ve ortak bir platform oluşturmak, ve de Raspberry Pi GPIO pinlerini farklı diller ile yönetebilmektir. WiringPi özünde C dili ile yazılmıştır, fakat hem Ruby hem de Python türevleri mevcuttur. Bunları sıra ile Ruby için "gem install wiringpi" veya Python için "pip install wiringpi2" diyerek kurabilirsiniz.
+WiringPi, Arduino kullanmış olanların hiç yabancılık çekmeyeceği, Arduino benzeri bir pinleme/klablolama sistemini Raspberry Pi'ye getirmeyi amaçlamış üçüncü parti bir kütüphanedir. Bu kütüphanenin amacı benzer ve ortak bir platform oluşturmak, ve de Raspberry Pi GPIO pinlerini farklı diller ile yönetebilmektir. WiringPi özünde C dili ile yazılmıştır, fakat hem Ruby hem de Python türevleri mevcuttur. Bunları sıra ile Ruby için "gem install wiringpi" veya Python için "pip install WiringPi" diyerek kurabilirsiniz.
 
-Python kullanıcıları kütüphanenin adının sonundaki 2'ye dikkat etmiş olabilirler. Bu aslında WiringPi2-Python kütüphanesidir. Bu kütüphane sonunda mevcut WiringPi kütüğhanesindeki özellikleri ve esnekliği Raspberry Pi'ye Python dilinde getirmeyi başarmış bir kütüphanedir.
+Python kullanıcıları kütüphanenin adının sonundaki 2'ye dikkat etmiş olabilirler. Bu aslında WiringPi-Python kütüphanesidir. Bu kütüphane sonunda mevcut WiringPi kütüğhanesindeki özellikleri ve esnekliği Raspberry Pi'ye Python dilinde getirmeyi başarmış bir kütüphanedir.
 
 ##WiringPi'ye başlangıç
 
@@ -79,7 +79,7 @@ WiringPi [kendi pin numaralama şematiğini kullanıyor](http://wiringpi.com/pin
 Python'a kurmak saniyelerinizi alacak:
 
 ```bash
-sudo pip install wiringpi2
+sudo pip install WiringPi
 ```
 
 Daha fazla bilgi için WiringPi resmi web sitesi ni ziyaret edebilirsiniz.

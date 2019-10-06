@@ -2,8 +2,8 @@
 ---
 name: Display-o-Tron 3000
 class: board
-type: alle
-formfactor: Andere
+type: display
+formfactor: Custom
 manufacturer: Pimoroni
 description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick
 url: https://shop.pimoroni.com/products/displayotron-3000

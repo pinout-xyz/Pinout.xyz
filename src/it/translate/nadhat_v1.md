@@ -5,6 +5,7 @@ class: board
 type: IOT,ADC
 formfactor: pHAT
 manufacturer: Garatronic
+collected: Other
 description: An GSM/GPRS add-on board for the Raspberry Pi
 url: https://www.garatronic.fr
 github: https://github.com/garatronic/nadhat

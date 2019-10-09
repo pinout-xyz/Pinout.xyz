@@ -6,9 +6,9 @@ type: LED
 formfactor: Custom
 manufacturer: ModMyPi
 description: A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper.
-url: https://www.modmypi.com/raspberry-pi-christmas-tree-star
+url: https://thepihut.com/products/raspberry-pi-christmas-tree-star
 github: https://github.com/modmypi/Programmable-Christmas-Star
-buy: https://www.modmypi.com/raspberry-pi-christmas-tree-star
+buy: https://thepihut.com/products/raspberry-pi-christmas-tree-star
 image: 'modmypi-star.png'
 pincount: 40
 eeprom: no

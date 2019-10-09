@@ -136,11 +136,12 @@ def load_overlay(overlay):
         if 'type' not in loaded:
             loaded['type'] = strings['group_other']
 
-        if 'manufacturer' in loaded and 'collected' not in loaded:
-            manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
-            details.append(strings['made_by'].format(manufacturer=manu_link))
-        elif 'manufacturer' in loaded and 'collected' in loaded:
-            details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
+        if 'manufacturer' in loaded:
+            if 'collected' in loaded:
+                details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
+            else:
+                manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
+                details.append(strings['made_by'].format(manufacturer=manu_link))
 
         if 'pincount' in loaded:
             '''

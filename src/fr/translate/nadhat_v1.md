@@ -10,7 +10,7 @@ description: Carte d'extension GSM/GPRS pour le Raspberry Pi
 url: https://www.garatronic.fr
 github: https://github.com/garatronic/nadhat
 schematic: https://github.com/garatronic/nadhat/tree/master/hardware/nadhat_v1_schematics.pdf
-buy: https://www.amazon.fr/NadHAT-GPRS-expansion-board-Raspberry/dp/B076M83F38
+buy: https://shop.mchobby.be/fr/pi-hats/1654-nadhat-gsmgprs-sim800c-v1-3232100016545-garatronic.html
 image: 'nadhat_v1.png'
 pincount: 40
 eeprom: no

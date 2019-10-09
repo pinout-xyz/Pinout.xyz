@@ -9,9 +9,16 @@ import unicodedata
 import markjaml
 import pinout
 
+try:
+    reload(sys)
+except NameError:
+    from importlib import reload
+    reload(sys)
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+try:
+    sys.setdefaultencoding('utf8')
+except AttributeError:  # Does not work in Python 3
+    unicode = str
 
 
 def url_slugify(value):
@@ -86,13 +93,15 @@ def generate_for_lang(lang="en"):
         if pin_url is None:
             continue
 
-        url_lookup['pin{}'.format(pin)] = '//{domain}{base_url}{url}'.format(domain=domain, base_url=base_url, url=pin_url)
+        url_lookup['pin{}'.format(pin)] = '//{domain}{base_url}{url}'.format(
+            domain=domain, base_url=base_url, url=pin_url)
 
     for url in overlays:
         if url is None:
             continue
 
-        url_lookup['{}'.format(url[0])] = '//{domain}{base_url}{url}'.format(domain=domain, base_url=base_url, url=url[1])
+        url_lookup['{}'.format(url[0])] = '//{domain}{base_url}{url}'.format(
+            domain=domain, base_url=base_url, url=url[1])
 
 
     url_lookup['index'] = '//{}'.format(domain)
@@ -103,7 +112,7 @@ def generate_for_lang(lang="en"):
 
 
 def generate_urls(lang="en"):
-    languages = [l.replace('src/', '') for l in glob.glob('src/??') if os.path.isdir(l)] #  if not l == 'src/'+lang
+    languages = [l.replace('src/', '') for l in glob.glob('src/??') if os.path.isdir(l)]  #  if not l == 'src/'+lang
     urls = {}
     for lang in languages:
         urls[lang] = generate_for_lang(lang)

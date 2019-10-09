@@ -32,7 +32,7 @@ def load(file):
     Returns an object that includes the JSON data, and the parsed HTML.
     '''
     markson = open(file).read()
-    markson = markson.replace('\r','')
+    markson = markson.replace('\r', '')
 
     _data = re.search(re.compile(r'<!--(JSON:|\n---\n)(.*)-->', re.DOTALL), markson)
 
@@ -43,10 +43,10 @@ def load(file):
     # to be the first string starting with a single hash/pound ( # ) sign
     _title = re.search(re.compile(r'^#[^\#](.*)$', re.MULTILINE), markson)
 
-    if _title != None:
+    if _title is not None:
         _title = _title.group(0).replace('#', '').strip()
 
-    if _data != None:
+    if _data is not None:
         _type = _data.group(0)[4:8].upper().strip()
 
         if _type == 'JSON':
@@ -60,7 +60,7 @@ def load(file):
 
         _data['title'] = _title
 
-    elif _title != None:
-        _data = {'title':_title}
+    elif _title is not None:
+        _data = {'title': _title}
 
-    return {'data':_data, 'html':_html}
+    return {'data': _data, 'html': _html}

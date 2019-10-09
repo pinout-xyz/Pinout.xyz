@@ -15,9 +15,17 @@ import markjaml
 import pinout
 import urlmapper
 
+try:
+    reload(sys)
+except NameError:
+    from importlib import reload
+    reload(sys)
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+try:
+    sys.setdefaultencoding('utf8')
+except AttributeError:  # Does not work in Python 3
+    unicode = str
+
 
 DEBUG_LEVEL = 1
 GROUND_PINS = [6,9,14,20,25,30,34,39]
@@ -550,7 +558,7 @@ strings = pinout.get_string('strings', {})
 if type(strings) == list:
     _strings = {}
     for item in strings:
-        _strings[item.keys()[0]] = item.values()[0]
+        _strings[list(item.keys())[0]] = list(item.values())[0]
     strings = _strings
 
 for key, val in default_strings.items():
@@ -590,7 +598,7 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
         exit('Failed to create output/{}/pinout dir'.format(lang))
 
 print("\nRendering overlay pages...")
-overlays = map(load_overlay, overlays)
+overlays = list(map(load_overlay, overlays))
 overlay_subnav = ['featured']
 featured_boards_count = 0
 featured_boards_html = ''
@@ -762,6 +770,8 @@ navs['boards'] = default_nav
 
 print('\nRendering pin pages...')
 
+interfaces = interfaces_menu(None)
+
 for pin in range(1, len(pinout.pins) + 1):
     (pin_url, pin_html, pin_title) = render_pin_page(pin)
     if pin_url is None:
@@ -786,7 +796,7 @@ for pin in range(1, len(pinout.pins) + 1):
                                   featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html,
-                                  interfaces=interfaces_menu(None),
+                                  interfaces=interfaces,
                                   body_class='pin',
                                   crumbtrail=crumbtrail
                                   )

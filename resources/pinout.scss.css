@@ -121,6 +121,8 @@ Content Area
       color: #880000; }
     #content article img {
       max-width: 100%; }
+      #content article .details img {
+        min-width: 200px; }
     #content article a {
       color: #859900;
       text-decoration: underline; }

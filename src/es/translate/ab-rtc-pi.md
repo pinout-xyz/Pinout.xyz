@@ -37,10 +37,10 @@ i2c:
 -->
 #RTC Pi
 
-The RTC Pi is a battery backed real-time clock module for the Raspberry Pi. It keeps track of the time while the Raspberry Pi is switched off and allows the Raspberry Pi to retrieve the current date and time from the RTC Pi when it is switched back on.
+RTC Pi es un módulo de reloj en tiempo real respaldado por batería para Raspberry Pi. Realiza un seguimiento de la hora mientras Raspberry Pi está apagado y permite que Raspberry Pi recupere la fecha y hora actuales del RTC Pi cuando se vuelve a encender.
 
-The RTC Pi is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the RTC Pi along with other expansion boards. The RTC Pi uses the DS1307 RTC real time clock and a CR2032 battery to maintain the date and time when the main system power is not available.
+RTC Pi se alimenta a través de Raspberry Pi utilizando el puerto GPIO y los pines extendidos en el conector GPIO le permiten combinar RTC Pi junto con otras placas de expansión. RTC Pi utiliza el reloj de tiempo real RTC DS1307 y una batería CR2032 para mantener la fecha y la hora cuando la alimentación del sistema principal no está disponible.
 
-Unlike most other DS1307 based RTC modules the RTC Pi also includes an I2C logic level converter allowing you to connect other 5V I2C devices to your Raspberry Pi.
+A diferencia de la mayoría de los otros módulos RTC basados en DS1307, RTC Pi también incluye un convertidor de nivel lógico I2C que le permite conectar otros dispositivos I2C de 5V a su Raspberry Pi.
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.

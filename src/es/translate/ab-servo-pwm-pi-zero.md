@@ -39,8 +39,8 @@ i2c:
 -->
 #Servo PWM Pi Zero
 
-The Servo PWM Pi Zero is a 16-channel, 12-bit PWM controller for the Raspberry Pi, suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with 12 bit (4096 steps) duty cycle from 0%  to 100%.
+Servo PWM Pi Zero es un controlador PWM de 16 canales y 12 bits para Raspberry Pi, adecuado para controlar LED y servos de control de radio. La placa se basa en el IC del controlador LED PCA9685 PWM I2C de NXT y puede controlar cada una de las 16 salidas con un ciclo de trabajo de 12 bits (4096 pasos) del 0% al 100%.
 
-The output frequency is programmable from a typical 40Hz to 1000Hz. Each output driver is programmed to be either open-drain with a 22 mA current sink capability at 5 V or totem pole with a 22 mA sink, 10 mA source capability at 5 V. 220R current limiting resistors are used on each channel allowing you to connect servos or LEDs directly to the outputs.
+La frecuencia de salida es programable desde un típico valor de 40Hz a 1000Hz. Cada controlador de salida está programado para ser de drenaje abierto con una capacidad de sumidero de corriente de 22 mA a 5 V o tótem con un sumidero de 22 mA, capacidad de fuente de 10 mA a 5 V. Las resistencias limitadoras de corriente 220R se utilizan en cada canal, lo que le permite conecte servos o LED directamente a las salidas.
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.

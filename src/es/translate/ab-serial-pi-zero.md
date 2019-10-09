@@ -31,15 +31,13 @@ pin:
 -->
 #Serial Pi Zero
 
-The Serial Pi Zero is a UART to RS232 serial converter for the Raspberry Pi Zero.
+Serial Pi Zero es un convertidor en serie UART a RS232 para el Raspberry Pi Zero.
 
-The RS232 port is connected to the UART port on the Raspberry Pi using a MAX3232 interface. The MAX3232 IC converts the 3.3V UART port to RS232 voltages allowing communication with RS232 compatible devices over a DB9 serial cable or with the use of a null-modem cable the board allows terminal access with linux on the Raspberry Pi using a terminal application. The RS232 port can be accessed through the DB9 port or the solder points on the PCB.
+El puerto RS232 está conectado al puerto UART en la Raspberry Pi usando una interfaz MAX3232. El MAX3232 IC convierte el puerto UART de 3.3V a voltajes RS232 permitiendo la comunicación con dispositivos compatibles con RS232 a través de un cable serial DB9 o con el uso de un cable de módem nulo, la placa permite el acceso a la terminal con Linux en Raspberry Pi usando una aplicación de terminal. Se puede acceder al puerto RS232 a través del puerto DB9 o los puntos de soldadura en la PCB.
 
-##Features
+##Características
 
-- RS232 Master Port.
-- Control the Raspberry Pi over RS232 or connect to external serial accessories.
-- Stackable with other Raspberry Pi accessory boards.
-- Mounting holes for use with the AB Electronics UK mounting kits (sold separately)
-
-[Configuring the RS232 communication on the Raspberry Pi](https://www.abelectronics.co.uk/kb/article/20/raspberry-pi-serial-port-usage)
+- Puerto maestro RS232.
+- Controle Raspberry Pi a través de RS232 o conéctese a accesorios seriales externos.
+- Combinable con otras placas accesorias Raspberry Pi.
+- Orificios de montaje para usar con los kits de montaje de AB Electronics UK (se venden por separado)[Configuring the RS232 communication on the Raspberry Pi](https://www.abelectronics.co.uk/kb/article/20/raspberry-pi-serial-port-usage)

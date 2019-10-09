@@ -604,11 +604,19 @@ nav {
     }
     li {
         position:relative;
-        padding-left:25px;
+        margin-bottom:2px;
         line-height:20px;
         small {
             font-size:10px;
         }
+    }
+
+    a {
+        padding: 0 12px 0 30px;
+    }
+
+    li, a {
+        color:$overlay-pin-fg;
     }
 
     .pow3v3 .pin {background:$color-yellow;}

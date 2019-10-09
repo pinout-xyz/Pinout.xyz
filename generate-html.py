@@ -629,7 +629,19 @@ for overlay in overlays:
         def sanitize_type(t):
             allowed_types = {'adc': 'ADC', 'audio': 'Audio', 'com': 'COM', 'dac': 'DAC', 'display': 'Display', 'gesture': 'Gesture', 'gps': 'GPS', 'instrument': 'Instrument',
             'io': 'IO', 'iot': 'IOT', 'led': 'LED', 'mcu': 'MCU', 'motor': 'Motor', 'multi': 'Multi', 'network': 'Network', 'other': 'Other', 'power': 'Power', 'radio': 'Radio',
-            'relay': 'Relay', 'rtc': 'RTC', 'sensor': 'Sensor', 'touch': 'Touch', 'usb': 'USB', 'pinout': 'pinout'}
+            'relay': 'Relay', 'rtc': 'RTC', 'sensor': 'Sensor', 'touch': 'Touch', 'usb': 'USB', 'pinout': 'pinout',
+            
+            'lora': 'LoRa',
+            'otro': 'Otro',
+            'gestos': 'Gestos',
+            'cap': 'Cap',
+            'lcd': 'LCD'}
+
+            # TODO: maybe find a better way to handle type translations
+            if lang == 'es':
+                allowed_types['gesture'] = 'Gestos'
+                allowed_types['other'] = 'Otro'
+
             remapped_types = {'iot': 'radio'}
             t = t.strip()
             t_handle = t.lower()

@@ -54,7 +54,7 @@ def load(file):
             _data = json.loads(_data)
         elif _type == '---':
             _data = re.search('\n(.*)\n', _data.group(0), re.DOTALL).group(0)
-            _data = yaml.load(_data)
+            _data = yaml.safe_load(_data)
         else:
             data = {}
 

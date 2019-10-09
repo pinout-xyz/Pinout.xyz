@@ -117,17 +117,17 @@ def load(lang='en'):
     pinout_path = os.path.join(BASE_DIR,'src/{}/template/{}'.format(lang, PINOUT_FILE))
 
     if SETTINGS_FILE.endswith('.yaml'):
-        settings = yaml.load(open(settings_path).read())
+        settings = yaml.safe_load(open(settings_path).read())
     else:
         settings = json.load(open(settings_path))
 
     if STRINGS_FILE.endswith('.yaml'):
-        strings = yaml.load(open(strings_path).read())
+        strings = yaml.safe_load(open(strings_path).read())
     else:
         strings = json.load(open(strings_path))
 
     if PINOUT_FILE.endswith('.yaml'):
-        pinout = yaml.load(open(pinout_path).read())
+        pinout = yaml.safe_load(open(pinout_path).read())
     else:
         pinout = json.load(open(pinout_path))
 

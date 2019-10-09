@@ -34,14 +34,14 @@ def url_slugify(value):
 
 def load_overlay_url(overlay, lang):
     loaded = None
-    #print("Info: Trying {}".format('src/{}/overlay/{}.md'.format(lang, overlay)))
+    # print("Info: Trying {}".format('src/{}/overlay/{}.md'.format(lang, overlay)))
     try:
         data = markjaml.load('src/{}/overlay/{}.md'.format(lang, overlay))
 
         loaded = data['data']
     except IOError:
         try:
-            #print("Warning: Falling back to {}".format('src/{}/translate/{}.md'.format(lang, overlay)))
+            # print("Warning: Falling back to {}".format('src/{}/translate/{}.md'.format(lang, overlay)))
             data = markjaml.load('src/{}/translate/{}.md'.format(lang, overlay))
             loaded = data['data']
         except IOError:
@@ -51,7 +51,7 @@ def load_overlay_url(overlay, lang):
         print("Fatal: Invalid overlay formatting:: {}.md".format(overlay))
         sys.exit(1)
 
-    if not 'page_url' in loaded:
+    if 'page_url' not in loaded:
         loaded['page_url'] = url_slugify(loaded['name'])
 
     return overlay, loaded['page_url']

@@ -90,7 +90,7 @@ def physical_from(pin, scheme='bcm'):
             if 'scheme' in compare_pin:
                 if scheme in compare_pin['scheme']:
                     if compare_pin['scheme'][scheme] == int(pin):
-                        #print("Mapping {}{} to {}".format(scheme, pin, str(idx)))
+                        # print("Mapping {}{} to {}".format(scheme, pin, str(idx)))
                         return str(idx)
     elif scheme == 'physical':
         return pin

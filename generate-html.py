@@ -28,7 +28,9 @@ except AttributeError:  # Does not work in Python 3
 
 
 DEBUG_LEVEL = 1
-GROUND_PINS = [6,9,14,20,25,30,34,39]
+
+# TODO: Why is this here and not loaded from pinout.yaml
+GROUND_PINS = [6, 9, 14, 20, 25, 30, 34, 39]
 
 lang = "en"
 default_strings = {
@@ -64,12 +66,14 @@ default_strings = {
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
 
+
 def debug(level, string):
     if level < DEBUG_LEVEL:
         return
 
     level_text = ['Notice', 'Warning', 'Error'][level]
     print("[{}] {}".format(level_text, string))
+
 
 def cssify(value):
     value = slugify(value)
@@ -180,10 +184,10 @@ def load_overlay(overlay):
                 if pin.startswith('bcm'):
                     pin = pinout.bcm_to_physical(pin[3:])
 
-                if pin in ['2','4']:
+                if pin in ['2', '4']:
                     uses_5v = True
 
-                if pin in ['1','17']:
+                if pin in ['1', '17']:
                     uses_3v3 = True
 
             if uses_5v and uses_3v3:
@@ -218,9 +222,9 @@ def load_overlay(overlay):
                         uses += 1
 
                 if data is not None and 'mode' in data:
-                    if pin in ['3','5'] and data['mode'] == 'i2c':
+                    if pin in ['3', '5'] and data['mode'] == 'i2c':
                         uses_i2c = True
-                    if pin in ['19','21','23'] and data['mode'] == 'spi':
+                    if pin in ['19', '21', '23'] and data['mode'] == 'spi':
                         uses_spi = True
 
             if uses > 0:
@@ -250,8 +254,6 @@ def load_overlay(overlay):
                     else:
                         details.append('{address}: {device}'.format(address=addr, device=dev))
 
-        links = {}
-
         # A URL to more information about the add-on board, could be a GitHub readme or an about page
         if 'url' in loaded:
             details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
@@ -276,11 +278,11 @@ def load_overlay(overlay):
         details_image = ''
 
         if 'image' in loaded:
-            details_image = "<img src=\"/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
+            details_image = "<img src=\"/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'], loaded['name'])
 
-        details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'],details_html,details_image)
+        details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'], details_html, details_image)
 
-        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'],details_html)
+        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], details_html)
 
     # Automatically generate a page slug from the name if none is specified
     if 'page_url' not in loaded:
@@ -298,11 +300,12 @@ def load_md(filename):
     filename = 'src/{}/{}'.format(lang, filename)
     try:
         html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
-        #print(':) Loaded markdown from {}'.format(filename))
+        # print(':) Loaded markdown from {}'.format(filename))
         return html
     except IOError:
-        #print('!! Unable to load markdown from {}'.format(filename))
+        # print('!! Unable to load markdown from {}'.format(filename))
         return ''
+
 
 def render_overlay_page(overlay):
     if overlay is None:
@@ -370,12 +373,11 @@ def render_pin_page(pin_num):
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
-
     pin_text = '<article class="{pin_url}"><h1>{pin_name}</h1>{pin_functions}{pin_subtext}{pin_text}</article>'.format(
         pin_url=pin_url,
         pin_name=pin_text_name,
         pin_functions=pin_functions,
-        pin_subtext= '<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)),
+        pin_subtext='<ul><li>{}</li></ul>'.format('</li><li>'.join(pin_subtext)),
         pin_text=load_md('pin/pin-{}.md'.format(pin_num)))
 
     # if pin_text != None:
@@ -386,73 +388,53 @@ def render_pin(pin_num, selected_url, overlay=None):
     pin = pinout.pins[str(pin_num)]
 
     pin_type = list([x.strip() for x in pin['type'].lower().split('/')])
-    pin_url = pin['name']
     pin_name = pin['name']
+    pin_url = pin_name
     pin_ground = False
     pin_power = False
     pin_regular = False
     pin_link_title = []
     bcm_pin = None
-
-    if overlay is not None and 'ground' in overlay and (
-                        pin_num in overlay['ground'] or str(pin_num) in overlay['ground']):
-
-        if pin_num in overlay['ground']:
-            overlay_pin = overlay['ground'][pin_num]
-        else:
-            overlay_pin = overlay['ground'][str(pin_num)]
-
-        if overlay_pin is None:
-            overlay_pin = {}
-
-        pin_ground = True
-
-    if overlay is not None and 'power' in overlay and (
-                        pin_num in overlay['power'] or str(pin_num) in overlay['power']):
-
-        if pin_num in overlay['power']:
-            overlay_pin = overlay['power'][pin_num]
-        else:
-            overlay_pin = overlay['power'][str(pin_num)]
-
-        if overlay_pin is None:
-            overlay_pin = {}
-
-        pin_power = True
+    overlay_pin = {}
 
     if 'scheme' in pin:
         if 'bcm' in pin['scheme']:
             bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
-    if overlay is not None and 'pin' in overlay and (
-                        pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
+    valid_pins = (pin_num, str(pin_num), bcm_pin)
 
-        if pin_num in overlay['pin']:
-            overlay_pin = overlay['pin'][pin_num]
-        elif str(pin_num) in overlay['pin']:
-            overlay_pin = overlay['pin'][str(pin_num)]
-        else:
-            overlay_pin = overlay['pin'][bcm_pin]
+    if overlay is not None:
+        for try_pin in valid_pins:
+            if try_pin in overlay.get('ground', {}):
+                overlay_pin = overlay['ground'][try_pin]
+                pin_ground = True
+                break
+            if try_pin in overlay.get('power', {}):
+                overlay_pin = overlay['power'][try_pin]
+                pin_power = True
+                break
+            if try_pin in overlay.get('pin', {}):
+                overlay_pin = overlay['pin'][try_pin]
+                pin_regular = True
+                break
+
+        if isinstance(overlay_pin, str):
+            # source = ''
+            # if 'source' in overlay:
+            #     source = overlay['source']
+            # TODO: What is this?
+            debug(1, "{}: Overlay pin '{}' for pin {} is a string! Should be dict".format(overlay['source'], overlay_pin, pin_num))
 
         if overlay_pin is None:
             overlay_pin = {}
 
-        if isinstance(overlay_pin, str):
-            source = ''
-            if 'source' in overlay:
-                source = overlay['source']
-            debug(1, "{}: Overlay pin '{}' for pin {} is a string! Should be dict".format(overlay['source'], overlay_pin, pin_num))
+        if pin_regular:
+            pin_name = overlay_pin.get('name', pin_name)
 
-        pin_regular = True
+            if 'description' in overlay_pin:
+                pin_link_title.append(overlay_pin['description'])
 
-        if 'name' in overlay_pin:
-            pin_name = overlay_pin['name']
-
-        if 'description' in overlay_pin:
-            pin_link_title.append(overlay_pin['description'])
-
-        if 'mode' in overlay_pin:
-            if overlay_pin['mode'] == "EEPROM_WP":
+            if overlay_pin.get('mode') == "EEPROM_WP":
                 pin_name = "EEPROM WP"
 
     if 'scheme' in pin:
@@ -464,6 +446,7 @@ def render_pin(pin_num, selected_url, overlay=None):
             if pin_name != '':
                 pin_subname = '<small>({})</small>'.format(pin_name)
             pin_name = 'BCM {} {}'.format(bcm, pin_subname)
+
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
             pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
@@ -565,9 +548,9 @@ for key, val in default_strings.items():
     if key not in strings:
         strings[key] = val
 
-base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
-resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
-url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
+base_url = pinout.get_setting('base_url', '/pinout/')             # eg: '/pinout-tr/pinout/'
+resource_url = pinout.get_setting('resource_url', '/resources/')  # eg: '/pinout-tr/resources/'
+url_suffix = pinout.get_setting('url_suffix', '')                 # eg: '.html'
 
 template_main = open('common/page.html'.format(lang)).read()
 template_boards = open('common/boards.html'.format(lang)).read()
@@ -621,13 +604,13 @@ for overlay in overlays:
     if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
         featured_boards_count += 1
         featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
-                image=overlay['image'],
-                name=overlay['name'],
-                page_url=overlay['page_url'],
-                base_url=base_url,
-                resource_url=resource_url,
-                description=overlay['description']
-            )
+            image=overlay['image'],
+            name=overlay['name'],
+            page_url=overlay['page_url'],
+            base_url=base_url,
+            resource_url=resource_url,
+            description=overlay['description']
+        )
 
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
@@ -635,15 +618,16 @@ for overlay in overlays:
         o_type = overlay['type']
 
         def sanitize_type(t):
-            allowed_types = {'adc': 'ADC', 'audio': 'Audio', 'com': 'COM', 'dac': 'DAC', 'display': 'Display', 'gesture': 'Gesture', 'gps': 'GPS', 'instrument': 'Instrument',
-            'io': 'IO', 'iot': 'IOT', 'led': 'LED', 'mcu': 'MCU', 'motor': 'Motor', 'multi': 'Multi', 'network': 'Network', 'other': 'Other', 'power': 'Power', 'radio': 'Radio',
-            'relay': 'Relay', 'rtc': 'RTC', 'sensor': 'Sensor', 'touch': 'Touch', 'usb': 'USB', 'pinout': 'pinout',
-            
-            'lora': 'LoRa',
-            'otro': 'Otro',
-            'gestos': 'Gestos',
-            'cap': 'Cap',
-            'lcd': 'LCD'}
+            allowed_types = {
+                'adc': 'ADC', 'audio': 'Audio', 'com': 'COM', 'dac': 'DAC', 'display': 'Display', 'gesture': 'Gesture', 'gps': 'GPS', 'instrument': 'Instrument',
+                'io': 'IO', 'iot': 'IOT', 'led': 'LED', 'mcu': 'MCU', 'motor': 'Motor', 'multi': 'Multi', 'network': 'Network', 'other': 'Other', 'power': 'Power', 'radio': 'Radio',
+                'relay': 'Relay', 'rtc': 'RTC', 'sensor': 'Sensor', 'touch': 'Touch', 'usb': 'USB', 'pinout': 'pinout',
+
+                'lora': 'LoRa',
+                'otro': 'Otro',
+                'gestos': 'Gestos',
+                'cap': 'Cap',
+                'lcd': 'LCD'}
 
             # TODO: maybe find a better way to handle type translations
             if lang == 'es':
@@ -663,14 +647,13 @@ for overlay in overlays:
             print("Rejecting unsupported type: {} in overlay: {}".format(t, overlay['name']))
             return None
 
-
         o_types = [sanitize_type(t) for t in o_type.split(',') if sanitize_type(t) is not None]
 
         if len(o_types) > 1 and 'Multi' not in o_types:
             o_types.append('Multi')
 
         if len(o_types) == 0:
-            print(" No type(s) found in overlay: {}".format(t, overlay['name']))
+            print(" No type(s) found in overlay: {}".format(overlay['name']))
             o_types = [strings['group_other']]
 
         o_type = ','.join(o_types)
@@ -698,28 +681,32 @@ for overlay in overlays:
                 else:
                     o_formfactor = strings['form_undefined']
 
-
             if 'collected' not in overlay:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                    image=image,
-                    name=overlay['name'],
-                    page_url=overlay['page_url'],
-                    base_url=base_url,
-                    type=o_type,
-                    formfactor=o_formfactor,
-                    manufacturer=overlay['manufacturer'],
-                    resource_url=resource_url)})
+                boards_page.append({
+                    'name': overlay['name'],
+                    'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                        image=image,
+                        name=overlay['name'],
+                        page_url=overlay['page_url'],
+                        base_url=base_url,
+                        type=o_type,
+                        formfactor=o_formfactor,
+                        manufacturer=overlay['manufacturer'],
+                        resource_url=resource_url)
+                })
             else:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                    image=image,
-                    name=overlay['name'],
-                    page_url=overlay['page_url'],
-                    base_url=base_url,
-                    type=o_type,
-                    formfactor=o_formfactor,
-                    manufacturer=overlay['collected'],
-                    resource_url=resource_url)})
-
+                boards_page.append({
+                    'name': overlay['name'],
+                    'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                        image=image,
+                        name=overlay['name'],
+                        page_url=overlay['page_url'],
+                        base_url=base_url,
+                        type=o_type,
+                        formfactor=o_formfactor,
+                        manufacturer=overlay['collected'],
+                        resource_url=resource_url)
+                })
 
 
 def interfaces_menu(current):
@@ -736,8 +723,9 @@ def interfaces_menu(current):
 
     return html
 
+
 boards_page = [x['html'] for x in sorted(boards_page, key=lambda k: k['name'].lower())]
-pages['boards'] = {'rendered_html':''.join(boards_page)}
+pages['boards'] = {'rendered_html': ''.join(boards_page)}
 
 '''
 Manually add the index page as 'pinout', this is due to how the
@@ -828,7 +816,7 @@ for url in pages:
         hreflang = get_hreflang_urls(src)
         langlinks = get_lang_urls(src)
 
-    if not 'description' in pages[url]:
+    if 'description' not in pages[url]:
         pages[url]['description'] = strings['default_desc']
 
     name = strings['default_title']
@@ -845,20 +833,20 @@ for url in pages:
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
-        if not 'collected' in pages[url]:
+        if 'collected' not in pages[url]:
             crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
-                    title=pages[url]['name'],
-                    manufacturer=pages[url]['manufacturer'],
-                    home=strings['home'],
-                    boards=strings['boards']
-                    )
+                title=pages[url]['name'],
+                manufacturer=pages[url]['manufacturer'],
+                home=strings['home'],
+                boards=strings['boards']
+            )
         else:
             crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
-                    title=pages[url]['name'],
-                    manufacturer=pages[url]['collected'],
-                    home=strings['home'],
-                    boards=strings['boards']
-                    )
+                title=pages[url]['name'],
+                manufacturer=pages[url]['collected'],
+                home=strings['home'],
+                boards=strings['boards']
+            )
 
     if url == 'boards':
         body_class = 'boards-page'
@@ -887,7 +875,7 @@ for url in pages:
 
     key = url
 
-    if url not in ['index','404','boards']:
+    if url not in ['index', '404', 'boards']:
         url = os.path.join('pinout', url)
 
     if 'source' in pages[key]:

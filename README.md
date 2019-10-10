@@ -51,6 +51,23 @@ Once you are happy with the result,
 
 If you feel that the requirements for submissions is beyond your current possibilities, you may raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues) requesting the addition of a specific board instead and we'll consider it!
 
+
+## Running in Docker
+
+The webserver can also be run in a Docker container. To do this, you first need to build the Docker image:
+
+```bash
+docker build -t pinout.xyz .
+```
+
+Next, you can start the containerized webserver:
+
+```bash
+docker run -p 5000:5000 -e PINOUT_LANG=en pinout.xyz
+```
+
+Now you can access the webserver at http://127.0.0.1:5000.
+
 # Translating
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).

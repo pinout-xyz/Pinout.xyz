@@ -1,6 +1,6 @@
 <!--
 ---
-name: Pirate AUdio Line Out
+name: Pirate Audio Line Out
 class: board
 type: audio
 formfactor: pHAT

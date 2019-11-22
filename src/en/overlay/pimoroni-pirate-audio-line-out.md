@@ -1,14 +1,14 @@
 <!--
 ---
-name: Pirate Audio Speaker
+name: Pirate Audio Line Out
 class: board
 type: audio
 formfactor: pHAT
 manufacturer: Pimoroni
-description: I2S digital audio to onboard speaker
-buy: https://shop.pimoroni.com/products/pirate-audio-speaker
+description: I2S digital audio to amplified headphone output
+buy: https://shop.pimoroni.com/products/pirate-audio-line-out
 github: https://github.com/pimoroni/pirate-audio
-image: 'pimoroni-pirate-audio-speaker.png'
+image: 'pimoroni-pirate-audio-line-out.png'
 pincount: 40
 eeprom: no
 power:
@@ -51,11 +51,11 @@ install:
   'devices':
   - 'i2s'
 -->
-# Pirate Audio: Speaker
+# Pirate Audio: Line-out
 
 Fully supported by Mopidy plugins to create an album-art-displaying digital audio player based on the Raspberry Pi.
 
 * I2C DAC
-* Onboard Speaker
-* 240x240 SPI LCD
+* Line-level 3.5mm output
+* 240x240 LCD
 * 4 Playback control buttons

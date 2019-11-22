@@ -8,7 +8,7 @@ manufacturer: Pimoroni
 description: I2S digital audio to onboard speaker
 buy: https://shop.pimoroni.com/products/pirate-audio-mini-speaker
 github: https://github.com/pimoroni/pirate-audio
-image: 'pimoroni-pirate-audio-mini-speaker.png'
+image: 'pimoroni-pirate-audio-speaker.png'
 pincount: 40
 eeprom: no
 power:

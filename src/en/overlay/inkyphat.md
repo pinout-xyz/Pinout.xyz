@@ -38,6 +38,8 @@ pin:
     active: high
   '19':
     mode: spi
+  '21':
+    mode: spi
   '23':
     mode: spi
   '24':

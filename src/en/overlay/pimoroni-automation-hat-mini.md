@@ -29,6 +29,9 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '7':
+    mode: input
+    name: I2C Int
   '19':
     mode: spi
   '21':
@@ -38,6 +41,9 @@ pin:
     name: Backlight
     mode: output
   '23':
+    mode: spi
+  '26':
+    name: LCD CS
     mode: spi
   '29':
     name: Output 1

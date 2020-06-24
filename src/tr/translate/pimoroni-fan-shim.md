@@ -11,8 +11,12 @@ buy: https://shop.pimoroni.com/products/fan-shim
 image: 'pimoroni-fan-shim.png'
 pincount: 12
 eeprom: no
+power:
+  '2':
+  '4':
 ground:
-  '39':
+  '6':
+  '9':
 pin:
   '5':
     name: Wake

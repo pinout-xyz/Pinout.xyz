@@ -44,7 +44,7 @@ pin:
   '23':
     name: LCD SPI SCLK
     mode: SPI
-  '24':
+  '26':
     name: LCD SPI CS
     mode: SPI
 install:

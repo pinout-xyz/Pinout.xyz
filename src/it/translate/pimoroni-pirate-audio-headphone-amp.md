@@ -39,7 +39,7 @@ pin:
   '21':
     name: LCD Data/Command
   '19':
-    name: LCD SPI MOSI
+    name: LCD SPI SDO
     mode: SPI
   '23':
     name: LCD SPI SCLK

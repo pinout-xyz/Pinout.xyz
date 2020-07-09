@@ -49,13 +49,13 @@ pin:
     mode: input
     description: WM8804 Control I/F Config
   '19':
-    name: SPI_MOSI
+    name: SPI_SDO
     mode: spi
-    description: WM5102 SPI - MOSI
+    description: WM5102 SPI - SDO
   '21':
-    name: SPI_MISO
+    name: SPI_SDI
     mode: spi
-    description: WM5102 SPI - MISO
+    description: WM5102 SPI - SDI
   '23':
     name: SPI_SCLK
     mode: spi

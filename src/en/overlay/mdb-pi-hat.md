@@ -36,13 +36,13 @@ pin:
     mode: UART
     description: Serial RX < MDB Controller
   '19':
-    name: SPI_MOSI
+    name: SPI_SDO
     mode: spi
-    description: MDB Controller - MOSI
+    description: MDB Controller - SDO
   '21':
-    name: SPI_MISO
+    name: SPI_SDI
     mode: spi
-    description: MDB Controller – MISO
+    description: MDB Controller – SDI
   '23':
     name: SPI_SCLK
     mode: spi

@@ -4,20 +4,20 @@ name: Arduino SPI
 description: Raspberry Pi SPI ile Arduino programlama
 pin:
   '19':
-    name: MOSI
+    name: SDO
     direction: output
     active: high
-    description: Master Out / Slave In
+    description: Serial Data Out
   '21':
-    name: MISO
+    name: SDI
     direction: input
     active: high
-    description: Master In / Slave Out
+    description: Serial Data In
   '23':
-    name: SCKL
+    name: SCK
     direction: output
     active: high
-    description: Clock
+    description: Serial Clock
   '24':
     name: CE0
     direction: output
@@ -32,7 +32,7 @@ pin:
 
 Bunun ardından [Gordon Henderson'un modifiye AVRDude](https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/)'unu kurmalısınız.
 
-8/CEO'yu ATmega'nuzun Reset/RST pin'ine bağlayın, 9/MISO'yu da ATmega'nın MISO pin'ine (D12) bağlayın, 10'u da onun MOSI pin'ine (D11) bağlayın. Son olarak 11/SCLK'yı da onun SCLK pin'ine (D13) bağlayın.
+8/CEO'yu ATmega'nuzun Reset/RST pin'ine bağlayın, 9/SDI'yu da ATmega'nın SDI pin'ine (D12) bağlayın, 10'u da onun SDO pin'ine (D11) bağlayın. Son olarak 11/SCLK'yı da onun SCLK pin'ine (D13) bağlayın.
 
 ATmega'nızı Raspberry Pi'den aldığınız 3.3v ile besleyin, GND Pinini de Pi'ye bağlayarak düzeneği tamamlayın ve de cihazı açın.
 

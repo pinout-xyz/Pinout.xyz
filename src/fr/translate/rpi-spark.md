@@ -30,7 +30,7 @@ pin:
   '5':
     mode: i2c
   '19':
-    name: DSP_MOSI
+    name: DSP_SDO
     mode: spi
   '21':
     name: DSP_DC

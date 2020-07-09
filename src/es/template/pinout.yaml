@@ -109,7 +109,7 @@ pins:
       alt0: PCM CLK
       alt1: SMI SD10
       alt2: DPI D14
-      alt3: I2CSL SDA / MOSI
+      alt3: I2CSL SDA / SDO
       alt4: SPI1 CE0
       alt5: PWM0
   '13':
@@ -168,13 +168,13 @@ pins:
       alt3: SD1 DAT0
       alt4: JTAG TDO
   '19':
-    name: MOSI
+    name: SDO
     type: GPIO/SPI
     scheme:
       wiringpi: 12
       bcm: 10
     functions:
-      alt0: SPI0 MOSI
+      alt0: SPI0 SDO
       alt1: SMI SD2
       alt2: DPI D6
       alt3: AVEOUT VID6
@@ -183,13 +183,13 @@ pins:
     name: Masa
     type: GND
   '21':
-    name: MISO
+    name: SDI
     type: GPIO/SPI
     scheme:
       wiringpi: 13
       bcm: 9
     functions:
-      alt0: SPI0 MISO
+      alt0: SPI0 SDI
       alt1: SMI SD1
       alt2: DPI D5
       alt3: AVEOUT VID5
@@ -332,7 +332,7 @@ pins:
     name: Masa
     type: GND
   '35':
-    name: MISO
+    name: SDI
     description: SPI Master-In
     type: GPIO/SPI
     scheme:
@@ -343,7 +343,7 @@ pins:
       alt1: SMI SD11
       alt2: DPI D15
       alt3: I2CSL SCL / SCLK
-      alt4: SPI1 MISO
+      alt4: SPI1 SDI
       alt5: PWM1
   '36':
     name: ''
@@ -371,7 +371,7 @@ pins:
       alt3: SD1 DAT2
       alt4: JTAG TDI
   '38':
-    name: MOSI
+    name: SDO
     description: SPI Master-Out
     type: GPIO/SPI
     scheme:
@@ -381,8 +381,8 @@ pins:
       alt0: PCM DIN
       alt1: SMI SD12
       alt2: DPI D16
-      alt3: I2CSL MISO
-      alt4: SPI1 MOSI
+      alt3: I2CSL SDI
+      alt4: SPI1 SDO
       alt5: GPCLK0
   '39':
     name: Masa

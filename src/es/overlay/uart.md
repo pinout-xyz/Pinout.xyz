@@ -15,7 +15,7 @@ pin:
     direction: entrada
     active: alto (encendido)
 -->
-#UART - Universal Asynchronous Receiver/Transmitter (Receptor/Transmisor Universal Asíncrono)
+#UART - Universal Asynchronous Receiver/Transmitter (Receptor/TransSDIr Universal Asíncrono)
 
 ###Los 2 pines de UART en WiringPi son: 15, 16
 

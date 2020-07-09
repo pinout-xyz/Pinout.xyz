@@ -76,14 +76,14 @@ pin:
   '33':
     name: RCIO Data
   '35':
-    name: RCIO MISO
+    name: RCIO SDI
     mode: spi
   '36':
     name: RCIO Chip Select
     mode: chipselect
     active: high
   '38':
-    name: RCIO MOSI
+    name: RCIO SDO
     mode: spi
   '40':
     name: RCIO SCLK

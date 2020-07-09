@@ -32,9 +32,9 @@ pin:
   '16':
     name: ESP CSO
   '18':
-    name: ESP MISO
+    name: ESP SDI
   '22':
-    name: ESP MOSI
+    name: ESP SDO
   '27':
     name: ESP CH_PD
   '37':

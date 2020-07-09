@@ -40,9 +40,9 @@ pin:
   '40':
     name: CE1/DATA LED
   '19':
-    name: MOSI
+    name: SDO
   '21':
-    name: MISO
+    name: SDI
   '23':
     name: SCLK
   '29':

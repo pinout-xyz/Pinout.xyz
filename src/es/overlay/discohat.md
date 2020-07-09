@@ -71,7 +71,7 @@ pin:
     mode: input
     description: Button 8
   '19':
-    name: MOSI
+    name: SDO
     mode: spi
     description: LED strip data
   '23':

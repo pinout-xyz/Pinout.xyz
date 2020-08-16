@@ -23,6 +23,10 @@ We've [added a board explorer](/boards)! Use it to find the pinout for a Raspber
 * Physical - Number corresponding to the pin's physical location on the header
 * Rev 1 Pi - Alternate BCM numbers for the original, 26-pin model "A" and "B" Pi
 
+## What's the orientation of this pinout?
+
+This graphic has pin 1 in the top left corner. Pin 1 can be identified on your board as the only pin with a square solder pad, which may only be visible on the underside of your device. If you orient your Pi such that you are looking at the top with the GPIO on the right, your orientation will match this graphic.
+
 ##Graphical Pinout
 
 We've whipped up a simple graphical Raspberry Pi GPIO Pinout. Feel free to print, embed, share or hotlink this image and don't forget to credit us!

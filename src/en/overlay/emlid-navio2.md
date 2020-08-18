@@ -101,7 +101,7 @@ Navio2 eliminates the need for multiple on-board controllers making development 
 
 For accurate knowledge of position and orientation Navio2 is equipped with double IMU and GPS/Glonass/Beidou receiver. PWM, ADC, SBUS and PPM are integrated in Linux sysfs via the on-board RC I/O co-processor, allowing easy access from any programming language.
 
-Features:
+## Features
 
 * MS5611 Barometer (I2C1)
 * MPU9250 9DOF IMU (SPI0)

@@ -92,7 +92,7 @@ install:
   'python3':
     - 'explorerhat'
 -->
-#Explorer HAT
+# Explorer HAT
 
 5V inputs and outputs, touch pads and LEDs make up the Explorer HAT; a jack of all trades prototyping side-kick for your Raspberry Pi.
 

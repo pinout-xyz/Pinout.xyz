@@ -48,7 +48,7 @@ pin:
 The MotoZero is a simple Raspberry Pi motor controller add-on board that lets you control up to 4 motors independently.
 With simple GPIO control and its very own GPIO Zero library entry, it's one of the easiest ways to control lots of motors on your Raspberry Pi.
 
-Features:
+## Features
 
 * Control 4 motors independently in both forwards and reverse
 * Control with basic GPIO 'on/off' code, or using GPIO Zero library

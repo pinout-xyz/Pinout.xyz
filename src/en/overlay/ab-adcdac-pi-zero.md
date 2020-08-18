@@ -39,7 +39,7 @@ install:
   'devices':
     - 'spi'
 -->
-#ADC-DAC Pi Zero
+# ADC-DAC Pi Zero
 
 The ADC-DAC Pi Zero is a 2 channel 12 bit analogue to digital converter and 2 channel 12 bit digital to analogue converter designed to work with the Raspberry Pi.   Designed for the same footprint as the Raspberry Pi Zero the ADC-DAC Pi Zero is also compatible with full size Raspberry Pi models.
 

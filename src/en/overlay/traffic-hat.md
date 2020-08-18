@@ -43,9 +43,9 @@ pin:
     direction: output
     active: high
 -->
-#Traffic HAT
+# Traffic HAT
 
-###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
+A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
 
 ```python
 from gpiozero import TrafficHat

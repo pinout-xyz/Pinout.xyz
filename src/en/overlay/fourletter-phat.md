@@ -38,7 +38,7 @@ i2c:
 
 Four Letter pHAT is a four 14-segment display that can be used to display text, numbers, and a host of other characters. Its Matrices are a retro-style green, similar to old digital alarm clock and are driven by the HT16K33 chip over I2C.
 
-Features:
+## Features
 
 * Four 14-segment displays
 * HT16K33 driver chip

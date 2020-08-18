@@ -31,7 +31,7 @@ pin:
   '22':
     name: Alternate Low Battery
 -->
-#JuiceBox Zero
+# JuiceBox Zero
 
 JuiceBox Zero is designed specifically for the Raspberry Pi Zero to let you power it from a battery. It’s the simplest way to properly power your Pi Zero with a battery. It is the only battery management board in this form factor that requires no code. With JuiceBox Zero, you get the best solution for instant Pi Zero portability. It comes with an on/off switch, status indicator LED and Pi Zero Camera mount built right in!
 
@@ -44,6 +44,6 @@ Battery and Raspberry Pi Zero not included. All you need to get started is your 
 * Compatible with both Raspberry Pi Zero and Pi Zero W models. Possibly suitable for powering other Pi models (depends on application)
 * Integrated on/off switch
 * Charge/power status indicator LEDs
-* No programming neecessary
+* No programming necessary
 * Low power deep-sleep state with wake on interrupt/calendar event
-* Compatible with any single cell LiPo or LiIon battery witha JST, PH connector (check out Adafruit's batteries!)
+* Compatible with any single cell LiPo or LiIon battery with a JST, PH connector (check out Adafruit's batteries!)

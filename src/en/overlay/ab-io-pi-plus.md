@@ -40,13 +40,13 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#IO Pi Plus
+# IO Pi Plus
 
 The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
 
 A pair of MCP23017 expanders are included on the board allowing you to connect up to 32 digital inputs or outputs to the Raspberry Pi.  The IO Pi Plus Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
 
-##Features
+## Features
 
 -  32 Digital Inputs/Outputs
 -  Control via the Raspberry Pi I2C port

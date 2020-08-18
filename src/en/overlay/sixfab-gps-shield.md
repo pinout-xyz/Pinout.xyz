@@ -44,7 +44,7 @@ pin:
 
 The sixfab GSP Shield  is an easy way to add GPS to your Raspberry Pi.
 
-Some features include:
+## Features include
 
 * Location, Time, Speed all on the same NMEA Protocol
 * Built-in antenna

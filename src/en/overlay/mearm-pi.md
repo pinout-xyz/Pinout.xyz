@@ -72,11 +72,11 @@ i2c:
     name: Joysticks
     device: PCF8591 ADC
 -->
-#MeArm Pi HAT
+# MeArm Pi HAT
 
-###The MeArm Pi HAT is a joystick controller board for the MeArm Pi Robotic Arm Kit
+The MeArm Pi HAT is a joystick controller board for the MeArm Pi Robotic Arm Kit
 
-The MeArm Pi HAT provides the following:
+## Features
 
  * An 8 bit I2C ADC (address 0x48) connected to two analogue joysticks
  * Access to the push buttons of the joysticks on GPIO

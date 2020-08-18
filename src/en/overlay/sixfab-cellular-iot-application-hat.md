@@ -75,7 +75,7 @@ The design has a built-in temperature, humidity, light sensors, 3-axis accelerom
 
 Also using the USB connector you can use the shield with Linux, Windows and Android.
 
-##Features
+## Features
 
 - BG96 Cat.M1 / Cat.NB1 (NB-IoT) / eGPRS (EDGE, GPRS)
 - Supported Bands : Global – B1/ B2/ B3/ B4/ B5/ B8/ B12/ B13/ B18/ B19/ B20/ B26/ B28 and B39 ( for Cat M1 only )
@@ -83,8 +83,8 @@ Also using the USB connector you can use the shield with Linux, Windows and Andr
 - Embedded GNSS Functionality (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS)
 - Optional standalone use via USB interface
 - ADS1015 12 Bit 4 Channel ADC
-- Relay with optocoupler protection (24V DC, 120-220V AC Switching)
-- Optocoupler (3-12 V DC switching)
+- Relay with opto-coupler protection (24V DC, 120-220V AC Switching)
+- Opto-coupler (3-12 V DC switching)
 - Built-in 3 axis accelerometer (MMA8452Q)
 - Built-In HDC1080 temperature sensor (-40 +125 C)
 - Built-In HDC1080 humidity sensor (0 100%)

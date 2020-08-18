@@ -96,7 +96,7 @@ The display is capable of displaying 18-bits of colour (6 bits per colour, DPI m
 
 HyperPixel 4 is compatible with any 40-pin version of the Pi, including Pi Zero and Pi Zero W.
 
-HyperPixel 4 is larger than a standard HAT to accomodate the
+HyperPixel 4 is larger than a standard HAT to accommodate the
 display and will overhang both the USB ports and over the
 other end of the Pi. It requires an extension header (supplied)
 to connect.
@@ -104,7 +104,7 @@ to connect.
 Because HyperPixel 4 uses every Raspberry Pi pin it's difficult
 to use it in conjunction with other devices, but it does break
 out the software I2C bus (i2c 3) which you can share with the
-touchscreen controller.
+touch-screen controller.
 
 To get the display set up, you can use the one-line product installer:
 

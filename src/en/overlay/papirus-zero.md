@@ -76,11 +76,13 @@ i2c:
     name: Temperature Sensor
     device: LM75BD
 -->
-#PaPiRus Zero
+# PaPiRus Zero
 
 The PaPiRus Zero is a versatile ePaper display for the Raspberry Pi Zero with screens ranging from 1.44" to 2.0" in size.
 
 Unlike conventional displays, ePaper reflects light, and is capable of holding text and images indefinitely, even without electricity. The display does not require any power to keep the image and will stay 'on' without any power connection for many days before slowly fading. It's also daylight readable and is very high contrast.
+
+## Features
 
 * Interchangeable screen sizes (1.44" or 2.0")
 * 32MBit Flash Memory

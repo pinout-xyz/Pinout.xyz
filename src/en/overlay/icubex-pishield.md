@@ -39,7 +39,7 @@ install:
 
 The I-CubeX PiShield is a 5V sensor interface board that supports 8 channels of 10-bit ADC input via SPI as well as providing landings for 5V I2C devices. Level conversion to/from 5V is provided for both analog as well as digital sensors.
 
-Features:
+## Features
 
 - Designed for [I-CubeX Sensors](http://infusionsystems.com/catalog/index.php/cPath/24), but works with any 5V analog sensor via a standard 3-pin header (VCC, SIG, GND)
 - ADC performed using MCP3008 chip, and works with existing libraries and applications (including wiringPi)

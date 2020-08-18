@@ -35,9 +35,9 @@ pin:
   '13':
     name: Shutdown
 -->
-#Carberry
+# Carberry
 
-Carberry is an add-on board for Raspberry Pi that can be used to inteface between car electronics and your Pi. It allows the development of end-user applications, such as media centers, vehicle diagnostics, data logging, fleet management, tracking, blackboxes, burglar alarms, carputing, internet, and much more.
+Carberry is an add-on board for Raspberry Pi that can be used to interface between car electronics and your Pi. It allows the development of end-user applications, such as media centers, vehicle diagnostics, data logging, fleet management, tracking, black-boxes, burglar alarms, carputing, internet, and much more.
 
 ##Features
 - Accelerometer

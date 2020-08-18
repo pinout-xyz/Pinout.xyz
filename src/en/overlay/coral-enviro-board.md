@@ -93,17 +93,17 @@ i2c:
     device: BMP280
 
 -->
-#Coral Environmental Sensor Board
+# Coral Environmental Sensor Board
 
-The Coral Environmental Sensor Board adds multiple environmental sensors and Grove connectors for external devices. It works with all 40-pin Rasperry Pi variants as well as the Coral Dev Board.
+The Coral Environmental Sensor Board adds multiple environmental sensors and Grove connectors for external devices. It works with all 40-pin Raspberry Pi variants as well as the Coral Dev Board.
 
-Features:
+## Features
 
 * 128x32 OLED Display (SSD1306-based SPI interface)  
 * Ambient light sensor (OPT3002, 0x45 on i2c bus)  
 * Barometric pressure sensor (BMP280, 0x76 on i2c bus)  
 * Humidity / temperature sensor (HDC2010, 0x40 on i2c bus)  
-* Cryptoprocessor with Google keys (ECC608, 0x30 on i2c bus)  
+* Crypto-processor with Google keys (ECC608, 0x30 on i2c bus)  
 * Four Grove connectors:  
     1x UART  
     1x I2C  

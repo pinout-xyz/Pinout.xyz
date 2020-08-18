@@ -79,17 +79,19 @@ i2c:
     name: Real Time Clock
     device: MCP7940N
 -->
-#PaPiRus HAT
+# PaPiRus HAT
 
 The PaPiRus HAT is a versatile ePaper display for the Raspberry Pi with screens ranging from 1.44" to 2.7" in size.
 
 Unlike conventional displays, ePaper reflects light, and is capable of holding text and images indefinitely, even without electricity. The display does not require any power to keep the image and will stay 'on' without any power connection for many days before slowly fading. It's also daylight readable and is very high contrast. 
 
+## Features
+
 * Raspberry Pi HAT compliant design
 * Interchangeable screen sizes (1.44", 2.0" or 2.7")
 * 32MBit Flash Memory
 * Battery Backed Real Time Clock (CR2032 battery included)
-* Easy plug and play operation with onboard EEPROM
+* Easy plug and play operation with on-board EEPROM
 * Digital temperature sensor and thermal watchdog
 * GPIO breakout connector and solder pads
 * Optional reset pin header (for wake on alarm with RTC)

@@ -37,15 +37,15 @@ pin:
   '24':
     mode: spi
 -->
-#PiJack
+# PiJack
 
-The easiest way to add Ethernet to your Rasberry Pi Zero. Simply plug the PiJack board on to your Pi and boot the latest Raspbian. PiJack will be autodetected by the Linux kernel, the correct driver will be loaded and the Ethernet interface will be ready to use.
+The easiest way to add Ethernet to your Raspberry Pi Zero. Simply plug the PiJack board on to your Pi and boot the latest Raspbian. PiJack will be auto-detected by the Linux kernel, the correct driver will be loaded and the Ethernet interface will be ready to use.
 
 By default, Raspbian will automatically configure the interface for DHCP so as soon as you connect PiJack to your network your Pi will request an address and be ready to go online!
 
 Each PiJack board is programmed with a unique and persistent MAC address so each time your Pi boots the MAC address will remain the same. This allows you to set up your router to hand out the same IP address each time.
 
-There are a couple of recent improvements to the Ethernet controller driver, so if you're not running the latest version of Raspbian on your Pi, either download it and reflash your microSD card again, or run
+There are a couple of recent improvements to the Ethernet controller driver, so if you're not running the latest version of Raspbian on your Pi, either download it and re-flash your microSD card again, or run
 ```bash
 sudo apt-get update
 sudo apt-get dist-upgrade

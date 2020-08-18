@@ -36,13 +36,13 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#IO Pi Zero
+# IO Pi Zero
 
 The IO Pi Zero is a 16 channel digital expansion board designed for use on the Raspberry Pi Zero. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
 
 The IO Pi Zero Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Zero along with other expansion boards.
 
-##Features
+## Features
 
 -  16 Digital Inputs/Outputs
 -  Control via the Raspberry Pi I2C port

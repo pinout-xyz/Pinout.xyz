@@ -85,13 +85,13 @@ i2c:
     name: S/PDIF transceiver
     device: WM8804
 -->
-#Cirrus Logic Audio Card
+# Cirrus Logic Audio Card
 
-###Offers a wealth of features, perfect for avid audiophiles wanting to use their Raspberry Pi for audio applications.
+Offers a wealth of features, perfect for avid audiophiles wanting to use their Raspberry Pi for audio applications.
 
 * Capable of rendering HD Audio, at 24-bit, 192kHz
 * 3.5mm 4-pole jack for a headset/boom mic combination for gaming or VoIP applications
-* Two DMIC microphones onboard for stereo recording
+* Two DMIC microphones on-board for stereo recording
 * 3.5mm jack for Stereo Line Input for high quality audio recording or capture
 * 3.5 mm jack Stereo Line Output for connection to devices such as external stereo amplifiers or powered speakers
 * Stereo Digital input and output (SPDIF)

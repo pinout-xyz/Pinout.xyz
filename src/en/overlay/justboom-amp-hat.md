@@ -50,14 +50,14 @@ i2c:
     name: Amplifier
     device: TAS5756M
 -->
-#Amp HAT
+# Amp HAT
 
 * Full high quality audio – 192kHz / 32bit
 * 2 x 55 Watt peak output at 8 ohms (2 x 30 Watt RMS)
 * Includes both a DAC and power amplifier
 * Back-powers the Raspberry Pi at 2.5A so only one power supply required
 * Hardware and software volume control from your Raspberry Pi
-* Onboard gain control using jumper J5
+* On-board gain control using jumper J5
 * Mute/enable with GPIO22 (override by using jumper J4)
 * Optional IR receiver via GPIO25
 * Unused GPIO pins still accessible via unpopulated extension header

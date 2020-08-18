@@ -51,11 +51,13 @@ pin:
   '37':
     name: 'WiFi SDIO_D2'
 -->
-#IoT pHAT
+# IoT pHAT
 
 The RedBear IoT pHAT brings the BCM43438 used on the Raspberry Pi 3 to pHAT format, compatible with the Pi Zero.
 
 The chip supports Wi-Fi 802.11n and Bluetooth 4.1 (Dual Mode).
+
+## Features
 
 * Bluetooth 4.1
 * WiFi

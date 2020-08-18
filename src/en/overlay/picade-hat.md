@@ -98,11 +98,13 @@ install:
   'devices':
   - 'i2s'
 -->
-#Picade HAT
+# Picade HAT
 
 Picade HAT provides screw terminals for 10 arcade buttons and a joystick. It also includes a digital to analog audio converter and amplifier which outputs to a single speaker terminal.
 
 All button inputs should be configured with their corresponding internal pull-ups. Buttons should be wired between an input and ground.
+
+## Features
 
 * 10 button terminals
 * 4 terminals for joystick

@@ -36,11 +36,13 @@ pin:
   26:
     mode: spi
 -->
-#LetsTrust-TPM
+# LetsTrust-TPM
 
-LetsTrust-TPM is a TPM2.0 daughter board for the Raspberry Pi platform based on an Infineon SLB9670 chip.  
+LetsTrust-TPM is a TPM2.0 daughter board for the Raspberry Pi platform based on an Infineon SLB9670 chip.
+
 It is compatible with all Raspberry Pi models and probably the smallest available addon board on the market.
-The TPM can be used e.g. as a secure keystore or as an hwrng.
+
+The TPM can be used e.g. as a secure keystore or as an hardware random number generator.
 
 In order to use it your kernel must have the following options enabled:
 ```kernelconfig
@@ -62,7 +64,7 @@ and a suitable device tree overlay:
   };
 ```
 
-Per default CE1 is used as chip select, CE0 can also be used by resoldering a 0-ohm resistor.
+Per default CE1 is used as chip select, CE0 can also be used by re-soldering a 0-ohm resistor.
 
 A full dts overlay is available <a href="https://www.letstrust.de/uploads/letstrust-tpm-overlay.dts">here</a>,
-or you can also find a precompiled image with TPM support and the complete build-instructions at <a href=https://www.letstrust.de>letstrust.de</a>.
+or you can also find a pre-compiled image with TPM support and the complete build-instructions at <a href=https://www.letstrust.de>letstrust.de</a>.

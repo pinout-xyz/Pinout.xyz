@@ -45,11 +45,11 @@ i2c:
     name: SGTL5000
     device: SGTL5000XNAA3/R2
 -->
-#Fe-Pi Audio Z V2
+# Fe-Pi Audio Z V2
 
 The Fe-Pi Audio Z V2 is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, headphone-out/mic-in, and stereo speakers.
 
-## Features ##
+## Features
 
 * Small Raspberry Pi Zero PCB footprint.
 * SGTL5000 low power stereo codec.

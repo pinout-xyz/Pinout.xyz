@@ -34,9 +34,11 @@ pin:
     name: RGB LED Clock
     mode: output
 -->
-#Fan SHIM
+# Fan SHIM
 
 Add a 30mm fan to your Pi 4 keeping it around 20 degrees cooler. Fan SHIM uses a friction-fit header so it can be pushed into place.
+
+## Features
 
 * Surprisingly quiet
 * 4,200 RPM fan

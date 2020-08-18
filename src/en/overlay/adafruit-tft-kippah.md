@@ -45,7 +45,7 @@ pin:
   '38':
   '40':
 -->
-#DPI TFT Kippah
+# DPI TFT Kippah
  
 A TFT panel connected to a Raspberry Pi without the use of an HDMI decoder? What is this sorcery??? It's the DPI Kippah from Adafruit! This HAT-like* board snaps onto a Raspberry Pi B+, A+, Pi 2, Pi 3 or Zero and with a little software configuration, allows you to have what normally would go out the HDMI port come up on a nice little flat screen.
 
@@ -57,4 +57,4 @@ Also, there's no PWM's available so you can't have precision backlight control u
 
 Please note it is the same pinout for the touchscreen and none touchscreen version of the board.
  
-For installation instructions please follow Asdafruits tutorial linked below
+For installation instructions please follow Adafruit's tutorial linked below

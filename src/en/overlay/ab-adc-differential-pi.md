@@ -40,11 +40,11 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Differential Pi
+# ADC Differential Pi
 
 The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Features
+## Features
 
 - 8 x 18-bit differential inputs
 - Control via the Raspberry Pi I2C port

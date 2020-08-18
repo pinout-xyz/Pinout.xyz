@@ -38,11 +38,11 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Pi
+# ADC Pi
 
 The ADC Pi is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Features
+## Features
 
 - 8 x 17-bit 0 to 5V Single Ended Inputs
 - Control via the Raspberry Pi I2C port

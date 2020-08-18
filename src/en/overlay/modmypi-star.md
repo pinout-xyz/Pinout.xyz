@@ -134,6 +134,7 @@ pin:
 The ModMy Pi Christmas Tree Star is an LED add-on board for the Raspberry Pi designed to go on top of your Christmas tree. There are 30 white LEDs controllable through a Python library which extends GPIO Zero and is available on GitHub.
 
 ## Features
+
 - 30 white LEDs
 - GPIO Zero compatible library.
 - Mounting points for Raspberry Pi Zero.

@@ -38,7 +38,7 @@ i2c:
     name: Controller
     device: STM32F030C6T6
 -->
-#PiVoyager UPS
+# PiVoyager UPS
 
 **The PiVoyager is a UPS with a programmable watchdog, wake-up and a real-time calendar for the Raspberry-Pi.**
 
@@ -56,7 +56,7 @@ Thanks to provided software the user can fully control and monitor the **PiVoyag
 - Act as a watchdog, powering down the Raspberry Pi if it becomes inactive,
 - Power up the Raspberry Pi at a certain date/time (alarm),
 - Power up the Raspberry Pi after a certain delay following a shutdown. 
-- Update the firmware through I2C thanks to a built-in bootloader.
+- Update the firmware through I2C thanks to a built-in boot-loader.
 
 For more details, including software download instructions, [see our documentation](https://www.omzlo.com/articles/pivoyager-installation-and-tutorial).
 

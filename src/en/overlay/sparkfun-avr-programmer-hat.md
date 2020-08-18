@@ -77,4 +77,4 @@ The SparkFun AVR Programmer HAT lets you program AVR microcontrollers (the chips
 
 It was originally an in-house solution for production programming, but has been tidied up into a programming tool for anyone.
 
-It's fully open source and hackable, works directly with AVRDude and provides ISP programming which is great for deployment since it doesn't require a bootloader, uploads code faster and allows you to set protection fuse bits. It's useful if you're programming many AVR chips either for hobby projects or small yield production.
+It's fully open source and hackable, works directly with AVRDude and provides ISP programming which is great for deployment since it doesn't require a boot-loader, uploads code faster and allows you to set protection fuse bits. It's useful if you're programming many AVR chips either for hobby projects or small yield production.

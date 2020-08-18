@@ -45,11 +45,11 @@ i2c:
     name: S/PDIF Digital Interface Transceiver
     device: WM8804G
 -->
-#Fe-Pi Digital Audio Z V1
+# Fe-Pi Digital Audio Z V1
 
 The Fe-Pi Digital Audio Z V1 is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing S/PDIF output.
 
-## Features ##
+## Features
 
 * Small Raspberry Pi Zero PCB footprint.
 * Cirrus Logic WM8804 S/PDIF Digital Interface Transceiver.

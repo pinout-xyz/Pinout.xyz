@@ -60,9 +60,9 @@ pin:
 
 
 -->
-#RGB Matrix Bonnet
+# RGB Matrix Bonnet
 
-This HAT plugs into your Pi and makes it super easy to control RGB matrices, such as those you see in the likes of Times square, enabling you to create a colorful scrolling display or mini LED wall.
+This HAT plugs into your Pi and makes it super easy to control RGB matrices, such as those you see in the likes of Times square, enabling you to create a colourful scrolling display or mini LED wall.
 
 * A 5V power supply is also required for powering the matrix itself.
 * To calculate the max current of your matrix set up, multiply the width of all the chained matrix by 0.12 : A 32 pixel wide matrix needs 32*0.12 = 3.85A so pick up a 5V 4A power supply.
@@ -72,7 +72,7 @@ Features:
 
 * Simple design - plug in power, plug in IDC cable, code.
 * Power protection circuitry - you can plug a 5V 4A wall adapter into the HAT and it will automatically protect against negative, over or under-voltages.
-* Onboard level shifters - these convert the RasPi's 3.3V to 5.0V logic for clean and glitch free matrix driving
+* On-board level shifters - these convert the Raspberry Pi's 3.3V to 5.0V logic for clean and glitch free matrix driving
 
 This bonnet is compatible with any Pi that has a 2x20 header.
 

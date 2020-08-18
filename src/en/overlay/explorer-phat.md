@@ -94,7 +94,7 @@ install:
   'python3':
     - 'explorerhat'
 -->
-#Explorer pHAT
+# Explorer pHAT
 
 5V inputs and outputs, analog inputs and an H-Bridge motor driver make up the Explorer pHAT; a jack of all trades prototyping side-kick for your Raspberry Pi. Perfect for RPi Zero but works with A+/B+/2 too!
 

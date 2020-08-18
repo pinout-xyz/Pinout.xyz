@@ -64,13 +64,13 @@ i2c:
     name: 1-Wire Interface Controller
     device: DS2482-100
 -->
-#Monarco HAT
+# Monarco HAT
 
-Manufacturered by Monarco Solutions Group / REX Controls s.r.o., the Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
+Manufactured by Monarco Solutions Group / REX Controls s.r.o., the Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
 
 All the inputs and outputs are designed to directly interface standard industrial sensors and devices, eliminating the need for additional hardware. 
 
-##Features
+## Features
 
 - **Power supply: 10-30 VDC**, powers also the Raspberry Pi
 - **4x digital IN, 3.5-30 VDC**, optical isolation, common GND
@@ -81,7 +81,7 @@ All the inputs and outputs are designed to directly interface standard industria
     - Short-circuit protection (continuous)
 - **2x analog IN**, 0-10 V / 0-20 mA, 12-bit
     - Electronic switching of voltage/current sensing mode
-    - Protected against overvoltage and reverse polarity
+    - Protected against over-voltage and reverse polarity
     - 500 Hz bandwidth, configurable filter
 - **2x analog OUT**, 0-10 V, 0.5 ms settling time, 12-bit
 - **1x RS-485 bus** with ESD protection
@@ -90,5 +90,5 @@ All the inputs and outputs are designed to directly interface standard industria
 - **High quality push-in terminals**, detachable connector
 - **Battery-backed RTC chip** for keeping the track of time
 - **Hardware watchdog** for power-cycling the Raspberry Pi in case of failure
-- Compatible with the **Raspberry Pi 7“ official touchscreen** (onboard connector for powering the display)
+- Compatible with the **Raspberry Pi 7“ official touchscreen** (on-board connector for powering the display)
 - **EMC tested, CE marked**

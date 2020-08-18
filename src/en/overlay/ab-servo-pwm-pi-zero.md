@@ -37,7 +37,7 @@ i2c:
     name: PCA9685
     device: PCA9685
 -->
-#Servo PWM Pi Zero
+# Servo PWM Pi Zero
 
 The Servo PWM Pi Zero is a 16-channel, 12-bit PWM controller for the Raspberry Pi, suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with 12 bit (4096 steps) duty cycle from 0%  to 100%.
 

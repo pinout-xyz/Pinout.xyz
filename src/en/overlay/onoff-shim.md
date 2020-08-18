@@ -37,7 +37,7 @@ To setup the daemon responsible to initiate the clean shutdown, simply run:
 curl https://get.pimoroni.com/onoffshim | bash
 ```
 
-Features:
+## Features
 
 * 1mm thick PCB
 * can be soldered right onto the Pi header

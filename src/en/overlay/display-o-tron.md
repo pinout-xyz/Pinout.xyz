@@ -58,9 +58,9 @@ i2c:
     name: Backlight
     device: sn3218
 -->
-#Display-o-Tron 3000
+# Display-o-Tron 3000
 
-The Display-o-Tron 3000 is a 3-line character LCD with an RGB backlight and joystick
+The Display-o-Tron 3000 is a 3-line character LCD with an RGB back-light and joystick
 
 To get the module set up and ready to go you can use the one-line product installer:
 

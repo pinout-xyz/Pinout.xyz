@@ -44,7 +44,7 @@ i2c:
     name: Cap Touch B
     device: cap1188
 -->
-#Piano HAT
+# Piano HAT
 
 Piano HAT has 16 touch-sensitive buttons. 13 of these are a single Piano octave, the rest give you octave up/down and instrument select functionality.
 

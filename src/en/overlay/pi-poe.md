@@ -34,7 +34,8 @@ pin:
   '18':
     name: LED Yellow/Green
 -->
-#Pi PoE Switch HAT
+# Pi PoE Switch HAT
+
 The Pi PoE Switch HAT is an add on board for the Raspberry Pi that brings the Pi Supply Switch technology together with PoE all in one fantastic package!
 
 You can now power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable. Perfect for removing the clutter of wires and for reliable use in remote locations.
@@ -46,10 +47,10 @@ You can now power your Raspberry Pi and provide an Ethernet connection in any lo
 * Over temperature protection
 * High efficiency (up to 87%) regulated output
 * Input voltage 36-56V, output voltage 5V, output current 10-1300mA, max output power 6.5W
-* Onboard ATtiny 13A microcontroller for power management functionality
+* On-board ATtiny 13A microcontroller for power management functionality
 * Leaves all unused GPIO free for use with other add on boards
 
-The onboard optional jumper toggles the power functionality:
+The on-board optional jumper toggles the power functionality:
 
 * Jumper on. The Pi PoE will power on after holding the power button for two seconds
 * Jumper off. The Pi PoE will power on as soon as you apply power from your injector

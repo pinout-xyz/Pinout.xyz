@@ -110,13 +110,15 @@ install:
   'devices':
   - 'i2s'
 -->
-#Picade X HAT
+# Picade X HAT
 
 Picade X HAT supercedes Picade HAT, providing push-in headers for 10 arcade buttons and a joystick.
 
 It also includes a digital to analog audio converter and amplifier which outputs to a single push-fit speaker terminal.
 
 All button inputs should be configured with their corresponding internal pull-ups. Buttons should be wired between an input and ground.
+
+## Features
 
 * 10 button terminals
 * 4 terminals for joystick

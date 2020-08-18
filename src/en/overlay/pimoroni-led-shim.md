@@ -27,9 +27,9 @@ i2c:
     name: Matrix LED driver
     device: IS31FL3731
 -->
-#LED SHIM
+# LED SHIM
 
-LED SHIM packs 28 RGB LEDs into a tiiiinnny SHIM. It uses i2c and a friction-fit header so you can stuff it under most HATs or pHATs to add LED status indicators without any need to solder.
+LED SHIM packs 28 RGB LEDs into a tiny SHIM. It uses i2c and a friction-fit header so you can stuff it under most HATs or pHATs to add LED status indicators without any need to solder.
 
 To get the pHAT set up and ready to go you can use the one-line product installer:
 

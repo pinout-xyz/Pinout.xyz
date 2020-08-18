@@ -35,11 +35,15 @@ i2c:
     name: Cap Touch
     device: cap1188
 -->
-#Drum HAT
+# Drum HAT
 
 Drum HAT is the companion to Piano HAT. It uses the same cap touch sensor to provide 8 finger-sized drum pads. Use it to play music in Python, control software drum synths on your Pi, take control of hardware drum machines, or just build it into an elaborate drum-controlled project.
 
-Features: 8 touch sensitive buttons and 8 LEDs. Works with Piano HAT (it uses a CAP1188 chip with a non-conflicting i2c address at 0x2c).
+## Features
+
+* 8 touch sensitive buttons
+* 8 LED
+* Works with Piano HAT (it uses a CAP1188 chip with a non-conflicting i2c address at 0x2c).
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

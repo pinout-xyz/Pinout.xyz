@@ -42,9 +42,11 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#Tentacle T3 for Raspberry Pi
+# Tentacle T3 for Raspberry Pi
 
 This Raspberry Pi add-on board is stackable. Each Tentacle T3 can host up to 5 EZO-class devices from Atlas Scientific to measure PH, Dissolved Oxygen, Electric Conductivity (E.C.), Oxidation-Reduction Potential (ORP) temperature (RTD) and control dosing pumps (EZO-PMP). The EZO devices must be in I2C mode. All I2C addresses can be set dynamically.
+
+## Features
 
 - 2 fully isolated channels for Atlas Scientific EZO Circuits
 - 1 non-isolated channel Atlas Scientific EZO RTD Circuit

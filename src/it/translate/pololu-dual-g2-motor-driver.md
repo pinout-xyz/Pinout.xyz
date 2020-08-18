@@ -57,9 +57,9 @@ pin:
     name: Motor 2 Direction
     mode: output
 -->
-#Pololu Dual G2 High-Power Motor Driver
+# Pololu Dual G2 High-Power Motor Driver
 
-The Pololu Dual G2 Motor Driver is designed to drive two larged brushed DC motors, and is availale in 24v14, 18v18 and 18v22 versions.
+The Pololu Dual G2 Motor Driver is designed to drive two large brushed DC motors, and is available in 24v14, 18v18 and 18v22 versions.
 
 * Dual discrete MOSFET H-bridges
 * PWM operation up to 100 kHz
@@ -70,5 +70,5 @@ The Pololu Dual G2 Motor Driver is designed to drive two larged brushed DC motor
 * Minimum 6.5V input voltage
 * Does not include ID EEPROM (optional footprint available)
 * Reverse-voltage protection
-* Undervoltage shutdown
+* Under-voltage shutdown
 * Short circuit protection

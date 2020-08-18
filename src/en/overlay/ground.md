@@ -15,7 +15,7 @@ pin:
   '34':
   '39':
 -->
-#Ground
+# Ground
 
 The Ground pins on the Raspberry Pi are all electrically connected, so it doesn't matter
 which one you use if you're wiring up a voltage supply.

@@ -1,4 +1,4 @@
-$base-font-size: 16px;
+$base-font-size: 1.2em;
 
 $color-purple: #6c71c4;
 $color-pink: #D33682;
@@ -25,13 +25,15 @@ body {
     font-family:'Avenir', sans-serif;
     font-weight:500;
     font-size:$base-font-size;
+    background:#ffffff;
+    color:$color-dark;
 }
 
 table {
     margin:20px 0;
     border-collapse:collapse;
     text-align:left;
-    font-size:0.8em;
+    font-size:$base-font-size * 0.7;
 
     td, th {border:1px solid $color-dark;padding:5px;}
     th {background:$color-dark;color:$color-content-bg;}
@@ -40,7 +42,7 @@ table {
         width:100%;
 
         td, th {
-            border:none;font-size:16px;vertical-align:top;
+            border:none;vertical-align:top;
         }
 
         img {margin-top:54px;}
@@ -58,22 +60,24 @@ table {
 }
 
 .logo {
-    width:250px;
-    font-size:1.5em;
+    font-family:'Avenir', sans-serif;
+    width:200px;
+    font-size:$base-font-size;
     line-height:23px;
     cursor:pointer;
     position: absolute;
     left:0px;
-    top:28px;
+    top:5px;
     z-index:1;
     font-weight:600;
+    height:61px;
 
-    a {color:#FFFFFF;}
+    a {color:$color-dark;line-height:22px;}
 
-    img {float:left;margin:0 10px;top:8px;}
+    img {float:left;margin:0px 5px 0px 0px;}
 
     a:hover span, a:hover, a:hover span.out {
-        color:#FFFFFF;
+        color:$color-dark;
     }
 }
 
@@ -116,6 +120,8 @@ Footer language nav
 Content Area
 */
 
+h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
+
 #content {
     float:left;
     background:$color-content-bg;
@@ -130,24 +136,23 @@ Content Area
         border-top:2px solid darken($color-content-bg,10%);
     }
 
-    h1 {font-size:1.8em;}
+    h1 {font-size:$base-font-size * 1.8;}
 
     h2 {
-        font-size:1.2em;
+        font-size:$base-font-size * 1.1;
         margin-top:20px;
+        line-height: 120%;
     }
-
-    h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
     p, pre {
         margin-top:10px;
-        font-size: 1em;
-        line-height: 150%;
+        line-height: 120%;
     }
     h3 {
         color:$color-pink;
-        font-size:1.4em;
+        font-size:$base-font-size * 1.2;
         font-weight:bold;
+        line-height: 120%;
     }
 
     article {
@@ -206,7 +211,6 @@ Boards Page
     }
 
     strong  {
-        font-size:1em;
         font-family: 'Avenir', sans-serif;
         font-weight: 500;
         color:#FFFFFF;
@@ -235,19 +239,17 @@ Boards Page
 }
 
 .facets {
-    position: relative;
-    top: 90px;
-    padding: 4px 15px 15px 15px;
-    background: $color-dark;
+    padding: 0;
+    background: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-right: 18px;
 
     h4 {
         text-transform: capitalize;
-        font-size: 1em;
+        font-size: 1.2em;
         margin: 10px 0 0 0;
-        color:#ffffff;
+        color:$color-dark;
     }
 
     ul, li {
@@ -263,15 +265,14 @@ Boards Page
         margin-right: 2px;
         background: $color-green;
         color: #FFF;
-        font-size: 0.8em;
-        line-height: 23px;
-        height: 22px;
+        line-height: 160%;
+        font-size:$base-font-size * 0.7;
         cursor:pointer;
         text-transform:capitalize;
 
         &:hover, &.selected {
             color: $color-green;
-            background: #FFF;
+            background: lighten($color-green, 35);
         }
     }
 
@@ -281,7 +282,7 @@ Boards Page
 
     .facet:nth-of-type(2) li:hover, .facet:nth-of-type(2) li.selected {
         color: $color-pink;
-        background: #FFF;
+        background: lighten($color-pink, 35);
     }
 
     .facet:nth-of-type(1) li {
@@ -290,7 +291,7 @@ Boards Page
 
     .facet:nth-of-type(1) li:hover, .facet:nth-of-type(1) li.selected {
         color: $color-blue;
-        background: #FFF;
+        background: lighten($color-blue, 35);
     }
 }
 
@@ -390,7 +391,7 @@ Left Column
             margin-right:2px;
             background:darken($color-purple,5%);
             color:#FFF;
-            font-size: 0.9em;
+            font-size: $base-font-size * 0.7;
             line-height: 1.45em;
 
             &:hover {color: darken($color-purple,5%);background:mix($color-purple,#FFF,20%);}
@@ -411,45 +412,45 @@ GPIO nav
 
 nav {
     position:relative;
-    width:292px;
-    background:$nav-bg;
-    min-height:653px;
-    margin-right:208px;
-    border-top-right-radius:46px;
-    border-bottom-right-radius:46px;
-
-    &:before, &:after {
-        content:'';
-        display:block;
-        width:28px;
-        height:28px;
-        background:#FFFFFF;
-        border-radius:50%;
-        border:14px solid #F7DF84;
-        right:19px;
-        top:19px;
-        position: absolute;
-    }
-    &:after {
-        top:auto;
-        bottom:19px;
-    }
+    width:316px;
+    margin-top:64px;
 }
 
 
 #gpio {
-    ul {
+    width:496px;
+    min-height:493px;
+    background:$nav-bg;
+
+    &:before {
+        content: '';
+        display:block;
+        width:58px;
         position:absolute;
-        top:87px;
-        list-style:none;
+        left:219px;
+        height:493px;
+        background:$color-dark;
+        top:0px;
+    }
+
+    ul {
+        position: relative;
+        top:7px;
+        list-style: none;
+        display: block;
+        width: 248px;
+        float: left;
     }
     a {
         display:block;
         position:relative;
-        font-size:1em;
+        font-size:$base-font-size * 0.7;
         line-height:23px;
         height:22px;
         margin-bottom:2px;
+
+        color:#E9E5D2;
+        width:248px;
     }
 
     .phys {
@@ -457,7 +458,7 @@ nav {
         font-size:0.8em;
         opacity:0.8;
         position:absolute;
-        left:30px;
+        left:32px;
         text-indent:0;
     }
 
@@ -486,13 +487,9 @@ nav {
     }
 
     .top {
-        left:246px;
-
         li {text-indent:56px;}
 
         a {
-            color:#063541;
-            width:250px;
             border-top-left-radius:13px;
             border-bottom-left-radius:13px;
         }
@@ -501,18 +498,14 @@ nav {
             left:0;
         }
         .pin {
-            left:2px;
+            left:4px;
             top:2px;
         }
-        .gnd a {color:rgba(6, 53, 65, 0.5);}
     }
 
     .bottom {
-        left:0px;
         a {
             text-indent:10px;
-            color:#E9E5D2;
-            width:244px;
             border-top-right-radius:13px;
             border-bottom-right-radius:13px;
         }
@@ -523,13 +516,12 @@ nav {
         .phys {
             text-align:right;
             left:auto;
-            right:30px;
-        }
-        .gnd a {
-            color:rgba(233, 229, 210, 0.5);
-            &:hover {color:rgba(6, 53, 65, 0.5);}
+            right:32px;
         }
     }
+
+    .gnd a {color:rgba(233, 229, 210, 0.5)};
+    &:hover {color:rgba(6, 53, 65, 0.5);}
 
     a:hover,
     .active a {
@@ -607,9 +599,12 @@ nav {
 
 #legend {
     h2 {
-        margin-top:20px;
+        margin-top:5px;
         margin-bottom:5px;
-        font-size:16px;
+    }
+    p {
+        font-size:$base-font-size * 0.7;
+        padding: 0 10px 10px 0;
     }
     ul, li {
         list-style:none;
@@ -621,7 +616,7 @@ nav {
         margin-bottom:2px;
         line-height:20px;
         small {
-            font-size:10px;
+            font-size:0.7em;
         }
     }
 
@@ -663,15 +658,6 @@ nav {
             height:6px;
         }
     }
-}
-
-#pinbase {
-    width:58px;
-    position:absolute;
-    left:216px;
-    height:493px;
-    background:$color-dark;
-    top:80px;
 }
 
 .boards-page {

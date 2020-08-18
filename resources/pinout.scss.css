@@ -6,13 +6,15 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {
 body {
   font-family: 'Avenir', sans-serif;
   font-weight: 500;
-  font-size: 16px; }
+  font-size: 1.2em;
+  background: #ffffff;
+  color: #073642; }
 
 table {
   margin: 20px 0;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.8em; }
+  font-size: 0.84em; }
   table td, table th {
     border: 1px solid #073642;
     padding: 5px; }
@@ -23,7 +25,6 @@ table {
     width: 100%; }
     table.details td, table.details th {
       border: none;
-      font-size: 16px;
       vertical-align: top; }
     table.details img {
       margin-top: 54px; }
@@ -36,23 +37,25 @@ table {
   word-wrap: break-word; }
 
 .logo {
-  width: 250px;
-  font-size: 1.5em;
+  font-family: 'Avenir', sans-serif;
+  width: 200px;
+  font-size: 1.2em;
   line-height: 23px;
   cursor: pointer;
   position: absolute;
   left: 0px;
-  top: 28px;
+  top: 5px;
   z-index: 1;
-  font-weight: 600; }
+  font-weight: 600;
+  height: 61px; }
   .logo a {
-    color: #FFFFFF; }
+    color: #073642;
+    line-height: 22px; }
   .logo img {
     float: left;
-    margin: 0 10px;
-    top: 8px; }
+    margin: 0px 5px 0px 0px; }
   .logo a:hover span, .logo a:hover, .logo a:hover span.out {
-    color: #FFFFFF; }
+    color: #073642; }
 
 img.grayscale {
   filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
@@ -87,6 +90,9 @@ Footer language nav
 /*
 Content Area
 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+
 #content {
   float: left;
   background: #EBE6D3;
@@ -99,20 +105,19 @@ Content Area
     background: none;
     border-top: 2px solid #dbd2b0; }
   #content h1 {
-    font-size: 1.8em; }
+    font-size: 2.16em; }
   #content h2 {
-    font-size: 1.2em;
-    margin-top: 20px; }
-  #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+    font-size: 1.32em;
+    margin-top: 20px;
+    line-height: 120%; }
   #content p, #content pre {
     margin-top: 10px;
-    font-size: 1em;
-    line-height: 150%; }
+    line-height: 120%; }
   #content h3 {
     color: #D33682;
-    font-size: 1.4em;
-    font-weight: bold; }
+    font-size: 1.44em;
+    font-weight: bold;
+    line-height: 120%; }
   #content article {
     padding: 15px; }
     #content article .pin-hover {
@@ -121,8 +126,8 @@ Content Area
       color: #880000; }
     #content article img {
       max-width: 100%; }
-      #content article .details img {
-        min-width: 200px; }
+    #content article .details img {
+      min-width: 200px; }
     #content article a {
       color: #859900;
       text-decoration: underline; }
@@ -166,7 +171,6 @@ Boards Page
     display: block;
     margin: 0 auto; }
   #boards .board strong, #featured .board strong {
-    font-size: 1em;
     font-family: 'Avenir', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
@@ -187,18 +191,16 @@ Boards Page
   color: #333333; }
 
 .facets {
-  position: relative;
-  top: 90px;
-  padding: 4px 15px 15px 15px;
-  background: #073642;
+  padding: 0;
+  background: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-right: 18px; }
   .facets h4 {
     text-transform: capitalize;
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 10px 0 0 0;
-    color: #ffffff; }
+    color: #073642; }
   .facets ul, .facets li {
     margin: 0;
     padding: 0;
@@ -210,24 +212,23 @@ Boards Page
     margin-right: 2px;
     background: #859900;
     color: #FFF;
-    font-size: 0.8em;
-    line-height: 23px;
-    height: 22px;
+    line-height: 160%;
+    font-size: 0.84em;
     cursor: pointer;
     text-transform: capitalize; }
     .facets .facet li:hover, .facets .facet li.selected {
       color: #859900;
-      background: #FFF; }
+      background: #e8ff4d; }
   .facets .facet:nth-of-type(2) li {
     background: #D33682; }
   .facets .facet:nth-of-type(2) li:hover, .facets .facet:nth-of-type(2) li.selected {
     color: #D33682;
-    background: #FFF; }
+    background: #f3c8dd; }
   .facets .facet:nth-of-type(1) li {
     background: #268BD2; }
   .facets .facet:nth-of-type(1) li:hover, .facets .facet:nth-of-type(1) li.selected {
     color: #268BD2;
-    background: #FFF; }
+    background: #b8daf2; }
 
 /*
 Featured Boards
@@ -299,7 +300,7 @@ Left Column
       margin-right: 2px;
       background: #5a5fbd;
       color: #FFF;
-      font-size: 0.9em;
+      font-size: 0.84em;
       line-height: 1.45em; }
       #interfaces li a:hover {
         color: #5a5fbd;
@@ -314,88 +315,78 @@ GPIO nav
 */
 nav {
   position: relative;
-  width: 292px;
-  background: #5F8645;
-  min-height: 653px;
-  margin-right: 208px;
-  border-top-right-radius: 46px;
-  border-bottom-right-radius: 46px; }
-  nav:before, nav:after {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 28px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    border: 14px solid #F7DF84;
-    right: 19px;
-    top: 19px;
-    position: absolute; }
-  nav:after {
-    top: auto;
-    bottom: 19px; }
+  width: 316px;
+  margin-top: 64px; }
 
-#gpio ul {
-  position: absolute;
-  top: 87px;
-  list-style: none; }
-#gpio a {
-  display: block;
-  position: relative;
-  font-size: 1em;
-  line-height: 23px;
-  height: 22px;
-  margin-bottom: 2px; }
-#gpio .phys {
-  color: #073642;
-  font-size: 0.8em;
-  opacity: 0.8;
-  position: absolute;
-  left: 30px;
-  text-indent: 0; }
-#gpio .pin {
-  display: block;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  background: #002B36;
-  position: absolute;
-  right: 2px;
-  top: 2px; }
-  #gpio .pin:after {
+#gpio {
+  width: 496px;
+  min-height: 493px;
+  background: #5F8645; }
+  #gpio:before {
     content: '';
     display: block;
-    border-radius: 100%;
-    background: #FDF6E3;
+    width: 58px;
     position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 6px;
-    height: 6px; }
-#gpio .top {
-  left: 246px; }
+    left: 219px;
+    height: 493px;
+    background: #073642;
+    top: 0px; }
+  #gpio ul {
+    position: relative;
+    top: 7px;
+    list-style: none;
+    display: block;
+    width: 248px;
+    float: left; }
+  #gpio a {
+    display: block;
+    position: relative;
+    font-size: 0.84em;
+    line-height: 23px;
+    height: 22px;
+    margin-bottom: 2px;
+    color: #E9E5D2;
+    width: 248px; }
+  #gpio .phys {
+    color: #073642;
+    font-size: 0.8em;
+    opacity: 0.8;
+    position: absolute;
+    left: 32px;
+    text-indent: 0; }
+  #gpio .pin {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background: #002B36;
+    position: absolute;
+    right: 2px;
+    top: 2px; }
+    #gpio .pin:after {
+      content: '';
+      display: block;
+      border-radius: 100%;
+      background: #FDF6E3;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 6px;
+      height: 6px; }
   #gpio .top li {
     text-indent: 56px; }
   #gpio .top a {
-    color: #063541;
-    width: 250px;
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px; }
   #gpio .top .overlay-ground .phys {
     padding-left: 31px;
     left: 0; }
   #gpio .top .pin {
-    left: 2px;
+    left: 4px;
     top: 2px; }
-  #gpio .top .gnd a {
-    color: rgba(6, 53, 65, 0.5); }
-#gpio .bottom {
-  left: 0px; }
   #gpio .bottom a {
     text-indent: 10px;
-    color: #E9E5D2;
-    width: 244px;
     border-top-right-radius: 13px;
     border-bottom-right-radius: 13px; }
   #gpio .bottom .overlay-ground .phys {
@@ -404,71 +395,73 @@ nav {
   #gpio .bottom .phys {
     text-align: right;
     left: auto;
-    right: 30px; }
-  #gpio .bottom .gnd a {
+    right: 32px; }
+  #gpio .gnd a {
     color: rgba(233, 229, 210, 0.5); }
-    #gpio .bottom .gnd a:hover {
-      color: rgba(6, 53, 65, 0.5); }
-#gpio a:hover,
-#gpio .active a {
-  background: #f5f3ed;
-  color: #063541; }
-#gpio li a small {
-  font-size: 0.7em; }
-#gpio .overlay-pin a {
-  background: #ebe6d3;
-  color: #063541; }
-  #gpio .overlay-pin a:hover {
+  #gpio:hover {
+    color: rgba(6, 53, 65, 0.5); }
+  #gpio a:hover,
+  #gpio .active a {
     background: #f5f3ed;
     color: #063541; }
-#gpio .overlay-pin.gnd a {
-  color: rgba(6, 53, 65, 0.5); }
-#gpio .overlay-power .phys {
-  color: #FFFFFF;
-  opacity: 1; }
-#gpio .overlay-power a {
-  background: #073642;
-  color: #FFFFFF; }
-  #gpio .overlay-power a:hover {
+  #gpio li a small {
+    font-size: 0.7em; }
+  #gpio .overlay-pin a {
+    background: #ebe6d3;
+    color: #063541; }
+    #gpio .overlay-pin a:hover {
+      background: #f5f3ed;
+      color: #063541; }
+  #gpio .overlay-pin.gnd a {
+    color: rgba(6, 53, 65, 0.5); }
+  #gpio .overlay-power .phys {
+    color: #FFFFFF;
+    opacity: 1; }
+  #gpio .overlay-power a {
+    background: #073642;
+    color: #FFFFFF; }
+    #gpio .overlay-power a:hover {
+      background: #268BD2; }
+  #gpio .overlay-ground .phys {
+    background: #073642;
+    color: #FFFFFF;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 22px;
+    border-radius: 11px;
+    text-indent: 0px;
+    line-height: 22px; }
+  #gpio .overlay-ground a:hover .phys {
     background: #268BD2; }
-#gpio .overlay-ground .phys {
-  background: #073642;
-  color: #FFFFFF;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  width: 20px;
-  height: 22px;
-  border-radius: 11px;
-  text-indent: 0px;
-  line-height: 22px; }
-#gpio .overlay-ground a:hover .phys {
-  background: #268BD2; }
-#gpio .overlay-ground span.pin {
-  background: #073642; }
-#gpio ul li.hover-pin a,
-#gpio .bottom li.hover-pin a {
-  color: #FFF;
-  background: rgba(200, 0, 0, 0.6); }
-#gpio .pin1 a:hover, #gpio .pin1.active a, #gpio .pin1 .pin {
-  border-radius: 0; }
-#gpio .pow3v3 .pin {
-  background: #B58900; }
-#gpio .pow5v .pin {
-  background: #DC322F; }
-#gpio .gpio .pin {
-  background: #859900; }
-#gpio .i2c .pin {
-  background: #268BD2; }
-#gpio .spi .pin {
-  background: #D33682; }
-#gpio .uart .pin {
-  background: #6c71c4; }
+  #gpio .overlay-ground span.pin {
+    background: #073642; }
+  #gpio ul li.hover-pin a,
+  #gpio .bottom li.hover-pin a {
+    color: #FFF;
+    background: rgba(200, 0, 0, 0.6); }
+  #gpio .pin1 a:hover, #gpio .pin1.active a, #gpio .pin1 .pin {
+    border-radius: 0; }
+  #gpio .pow3v3 .pin {
+    background: #B58900; }
+  #gpio .pow5v .pin {
+    background: #DC322F; }
+  #gpio .gpio .pin {
+    background: #859900; }
+  #gpio .i2c .pin {
+    background: #268BD2; }
+  #gpio .spi .pin {
+    background: #D33682; }
+  #gpio .uart .pin {
+    background: #6c71c4; }
 
 #legend h2 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 16px; }
+  margin-top: 5px;
+  margin-bottom: 5px; }
+#legend p {
+  font-size: 0.84em;
+  padding: 0 10px 10px 0; }
 #legend ul, #legend li {
   list-style: none;
   margin: 0;
@@ -478,7 +471,7 @@ nav {
   margin-bottom: 2px;
   line-height: 20px; }
   #legend li small {
-    font-size: 10px; }
+    font-size: 0.7em; }
 #legend a {
   padding: 0 12px 0 30px; }
 #legend li, #legend a {
@@ -515,14 +508,6 @@ nav {
     top: 5px;
     width: 6px;
     height: 6px; }
-
-#pinbase {
-  width: 58px;
-  position: absolute;
-  left: 216px;
-  height: 493px;
-  background: #073642;
-  top: 80px; }
 
 .boards-page nav {
   margin-right: 0; }

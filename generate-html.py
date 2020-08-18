@@ -164,7 +164,8 @@ def load_overlay(overlay):
             elif pincount == 26:
                 details.append(strings['type_classic'])
             else:
-                details.append(strings['pin_header'].format(pincount))
+                if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
+                    details.append(strings['pin_header'].format(pincount))
 
         if 'eeprom' in loaded:
             eeprom = str(loaded['eeprom'])
@@ -216,7 +217,7 @@ def load_overlay(overlay):
                 if pin in pinout.pins:
                     actual_pin = pinout.pins[pin]
 
-                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and 'ground.md' not in overlay:
+                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
                         raise Exception(
                             "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
@@ -228,8 +229,9 @@ def load_overlay(overlay):
                     if pin in ['19', '21', '23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-            if uses > 0:
-                details.append(strings['uses_n_gpio_pins'].format(uses))
+            if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
+                if uses > 0:
+                    details.append(strings['uses_n_gpio_pins'].format(uses))
 
             if uses_spi:
                 details.append(strings['uses_spi'])
@@ -283,7 +285,10 @@ def load_overlay(overlay):
 
         details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'], details_html, details_image)
 
-        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], details_html)
+        if len(details) or len(details_image):
+            loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], details_html)
+        else:
+            loaded['long_description'] = '{}'.format(loaded['long_description'])
 
     # Automatically generate a page slug from the name if none is specified
     if 'page_url' not in loaded:

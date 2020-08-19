@@ -602,6 +602,14 @@ nav {
         margin-top:5px;
         margin-bottom:5px;
     }
+    div {
+        width: 300px;
+        float: left;
+        display: block;
+    }
+    img {width:196px;height:auto;margin-top:4px;
+        float: left;
+        display: block;}
     p {
         font-size:$base-font-size * 0.7;
         padding: 0 10px 10px 0;

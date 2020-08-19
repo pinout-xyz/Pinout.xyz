@@ -21,7 +21,7 @@ pin:
   '10':
     mode: uart
 -->
-#RaZberry
+# RaZberry
 
 RaZberry hosts a Sigma Designs ZM5101 Z-Wave transceiver module (a so called 5th generation Z-Wave module), an external 32 K SPI flash for network data and a PCBA antenna. Additionally two LEDs are used to indicate certain status of the Z-Wave controller chip. Beside the PCBA antenna there is an option to solder a U.FL connector for external SMA antenna.
 

@@ -3,7 +3,7 @@
 name: Keybow
 class: board
 type: io
-formfactor: phat
+formfactor: custom
 manufacturer: Pimoroni
 description: Add illuminated tactile keyboard keys to Raspberry Pi
 url: https://shop.pimoroni.com/products/keybow

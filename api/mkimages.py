@@ -4,6 +4,7 @@ import json
 import re
 import sys
 import os
+import glob
 import unicodedata
 from PIL import Image, ImageFont, ImageDraw
 
@@ -48,7 +49,7 @@ except ImportError:
 import markjaml
 import pinout
 
-output_dir = "img"
+output_dir = "v1/img"
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -60,7 +61,7 @@ if len(sys.argv) > 1:
 
 pinout.load(lang)
 
-overlays = pinout.settings['overlays']
+overlays = glob.glob("{}src/{}/overlay/*.md".format(BASE_DIR, lang))
 
 pages = {}
 
@@ -86,7 +87,7 @@ def slugify(value):
 
 def load_overlay(overlay):
     try:
-        data = markjaml.load('{}/src/{}/overlay/{}.md'.format(BASE_DIR, lang, overlay))['data']
+        data = markjaml.load(overlay)['data']
         slug = slugify(data['name'])
         data['slug'] = slug
 

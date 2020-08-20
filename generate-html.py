@@ -450,8 +450,8 @@ def render_pin(pin_num, selected_url, overlay=None):
 
             pin_url = 'gpio{}'.format(bcm)
             if pin_name != '':
-                pin_subname = '<small>({})</small>'.format(pin_name)
-            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
+                pin_subname = ' <small>({})</small>'.format(pin_name)
+            pin_name = '<span class="name">BCM {}</span>{}'.format(bcm, pin_subname)
 
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']

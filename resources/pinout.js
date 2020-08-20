@@ -4,6 +4,46 @@ jQuery(document).ready(function(){
 
 	$('pre').addClass('prettyprint').addClass('linenums');
 
+	$('#gpio li').each(function(){
+		var gpio = $(this).find('.default .phys').text();
+		var bcm = $(this).find('.default .name').text().replace('BCM ', '').trim();
+		$(this).find('.default .name').text(bcm);
+		$(this).data('gpio', gpio);
+		$(this).data('bcm', bcm);
+	});
+
+	$('#mode').show().find('li').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).parents('ul').find('li').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('li .phys').text('');
+
+		switch($(this).text()) {
+			case 'GPIO':
+				$('#gpio li').each(function(){
+					var gpio = $(this).data('gpio');
+					var bcm = $(this).data('bcm');
+					if($(this).hasClass('gpio')) {
+						$(this).find('.name').text(gpio);
+					}
+					$(this).find('.phys').text(bcm);
+				});
+				break;
+			case 'BCM':
+				$('#gpio li').each(function(){
+					var gpio = $(this).data('gpio');
+					var bcm = $(this).data('bcm');
+					if($(this).hasClass('gpio')) {
+						$(this).find('.name').text(bcm);
+					}
+					$(this).find('.phys').text(gpio);
+				});
+				break;
+		}
+	});
+
 	window.prettyPrint&&prettyPrint();
 
 	var groups = $('#sections .boards .group');

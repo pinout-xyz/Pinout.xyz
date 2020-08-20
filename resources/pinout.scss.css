@@ -314,6 +314,29 @@ Left Column
 /*
 GPIO nav
 */
+#mode {
+  position: relative;
+  top: 64px;
+  cursor: pointer;
+  cursor: hand;
+  display: none; }
+  #mode li {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-top: 2px;
+    margin-right: 2px;
+    background: #EBE6D3;
+    color: #073642;
+    font-size: .84em;
+    line-height: 1.45em; }
+    #mode li:hover {
+      background: #92b978; }
+    #mode li.selected {
+      background: #5F8645;
+      color: #EBE6D3; }
+      #mode li.selected:hover {
+        background: #5F8645; }
+
 nav {
   position: relative;
   width: 316px;
@@ -343,7 +366,7 @@ nav {
     display: block;
     position: relative;
     font-size: 0.84em;
-    line-height: 23px;
+    line-height: 22px;
     height: 22px;
     margin-bottom: 2px;
     color: #E9E5D2;

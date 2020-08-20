@@ -53,7 +53,8 @@ table {
     line-height: 22px; }
   .logo img {
     float: left;
-    margin: 0px 5px 0px 0px; }
+    margin: 0px 5px 0px 0px;
+    width: 45px; }
   .logo a:hover span, .logo a:hover, .logo a:hover span.out {
     color: #073642; }
 
@@ -362,7 +363,7 @@ nav {
     height: 16px;
     background: #002B36;
     position: absolute;
-    right: 2px;
+    right: 4px;
     top: 2px; }
     #gpio .pin:after {
       content: '';

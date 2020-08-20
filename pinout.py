@@ -2,8 +2,6 @@ import json
 import time
 import os
 
-print(__file__)
-
 try:
     import yaml
 except ImportError:

@@ -43,21 +43,12 @@ pin:
     name: GP12 pin 4
   '33':
     name: GP12 pin 3
-  '19':
-    mode: spi
-    name: RGB LEDs Data
-  '23':
-    mode: spi
-    name: RGB LEDs Clock
-  '29':
-    name: RGB LEDs enable pin
-    mode: output
-    external_pull: up
-    active: high
 -->
-#ReSpeaker 4 Mic Linear Array
+# ReSpeaker 4 Mic Linear Array
 
 This HAT comes with 4 microphones and is designed for AI and voice applications; integration with Amazon Alexa Voice, Google Assistant, and so on. It consists of two boards: the voice accessory HAT, and the four microphone linear array. It supports 8 input and 8 output channels in Raspbian/Raspberry Pi OS. The first 6 input channels are for microphone recording. Only the first 4 input channels are valid capture data, the remaining 2 input channels are an echo channel for playback. The first 2 output channels output stereo audio, the remaining 6 are unused.
+
+## Features
 
 * MIC: 4 Microphones
 * AC108: 2 4-channels ADC

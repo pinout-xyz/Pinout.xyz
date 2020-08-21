@@ -43,17 +43,6 @@ pin:
     name: GP12 pin 4
   '33':
     name: GP12 pin 3
-  '19':
-    mode: spi
-    name: RGB LEDs Data
-  '23':
-    mode: spi
-    name: RGB LEDs Clock
-  '29':
-    name: RGB LEDs enable pin
-    mode: output
-    external_pull: up
-    active: high
 -->
 # ReSpeaker 4 Mic Linear Array
 

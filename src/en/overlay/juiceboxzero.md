@@ -45,5 +45,4 @@ Battery and Raspberry Pi Zero not included. All you need to get started is your 
 * Integrated on/off switch
 * Charge/power status indicator LEDs
 * No programming necessary
-* Low power deep-sleep state with wake on interrupt/calendar event
 * Compatible with any single cell LiPo or LiIon battery with a JST, PH connector (check out Adafruit's batteries!)

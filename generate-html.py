@@ -65,6 +65,7 @@ default_strings = {
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
+exclude_pincounts = ['3v3-power', '5v-power', 'ground', 'iface-jtag', 'i2c', 'iface-gpclk', 'wiringpi', 'spi']
 
 
 def debug(level, string):
@@ -100,6 +101,8 @@ def load_overlay(overlay):
     loaded = data['data']
     loaded['source'] = overlay
     loaded['long_description'] = data['html']
+
+    filename = overlay.split('/')[-1].replace('.md', '')
 
     """
     try:
@@ -158,13 +161,15 @@ def load_overlay(overlay):
                 elif pincount == 40 and formfactor == '40-way':
                     details.append(strings['pin_header'].format(pincount))
                 else:
-                    details.append(strings['pin_header'].format(pincount))
+                    if filename not in exclude_pincounts:
+                        details.append(strings['pin_header'].format(pincount))
             elif pincount == 40:
                 details.append(strings['type_hat'])
             elif pincount == 26:
                 details.append(strings['type_classic'])
             else:
-                if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
+                if filename not in exclude_pincounts:
+                # if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
                     details.append(strings['pin_header'].format(pincount))
 
         if 'eeprom' in loaded:
@@ -229,7 +234,7 @@ def load_overlay(overlay):
                     if pin in ['19', '21', '23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-            if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
+            if filename not in exclude_pincounts:
                 if uses > 0:
                     details.append(strings['uses_n_gpio_pins'].format(uses))
 

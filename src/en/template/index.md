@@ -23,10 +23,10 @@ We've [added a board explorer](/boards)! Use it to find the pinout for a Raspber
 
 ## What do these numbers mean?
 
-* BCM - Broadcom pin number, commonly called "GPIO", these are the ones you probably want to use with RPi.GPIO and GPIO Zero
-* WiringPi - Wiring Pi pin number (shown as a tooltip), for Gordon Henderson's Wiring Pi library
-* Physical - Number corresponding to the pin's physical location on the header
-* Rev 1 Pi - Alternate BCM numbers for the original, 26-pin model "A" and "B" Pi
+* GPIO - General Purpose Input/Output, aka "BCM" or "Broadcom". These are the big numbers, eg "GPIO 22." You'll use these with RPi.GPIO and GPIO Zero.
+* Physical - or "Board" correspond to the pin's physical location on the header. These are the small numbers next to the header, eh "Physical Pin 15".
+* WiringPi - for Gordon Henderson's Wiring Pi library. These are shown as a tooltip when you mouseover a pin.
+* Rev 1 Pi - alternate GPIO/BCM numbers for the original, 26-pin model "A" and "B" Pi.
 
 ## What's the orientation of this pinout?
 

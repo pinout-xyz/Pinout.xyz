@@ -6,7 +6,7 @@ type: display
 formfactor: pHAT
 manufacturer: Waveshare
 description: an E-Ink display pHAT for with embedded controller, communicating via SPI interface.
-url: https://www.waveshare.com/product/2.13inch-e-paper-hat.htm
+url: http://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 buy: https://www.waveshare.com/product/2.13inch-e-paper-hat.htm
 image: 'waveshare213paper.png'
 pincount: 40
@@ -35,4 +35,9 @@ This is an E-Ink display HAT for Raspberry Pi, 2.13inch, 250x122 resolution, wit
 
 Due to the advantages like ultra low power consumption, wide viewing angle, clear display without electricity, it is an ideal choice for applications such as shelf label, industrial instrument, and so on.
 
-The WIKI for this pHAT can be found here: http://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
+## Features
+
+* 250x122 resolution
+* SPI interface
+* Support for partial refresh
+* Low power consumption

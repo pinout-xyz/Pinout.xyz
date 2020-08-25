@@ -4,46 +4,6 @@ jQuery(document).ready(function(){
 
 	$('pre').addClass('prettyprint').addClass('linenums');
 
-	$('#gpio li').each(function(){
-		var gpio = $(this).find('.default .phys').text();
-		var bcm = $(this).find('.default .name').text().replace('BCM ', '').trim();
-		$(this).find('.default .name').text(bcm);
-		$(this).data('gpio', gpio);
-		$(this).data('bcm', bcm);
-	});
-
-	$('#mode').show().find('li').on('click', function(e){
-		e.preventDefault();
-		e.stopPropagation();
-		$(this).parents('ul').find('li').removeClass('selected');
-		$(this).addClass('selected');
-
-		$('li .phys').text('');
-
-		switch($(this).text()) {
-			case 'GPIO':
-				$('#gpio li').each(function(){
-					var gpio = $(this).data('gpio');
-					var bcm = $(this).data('bcm');
-					if($(this).hasClass('gpio')) {
-						$(this).find('.name').text(gpio);
-					}
-					$(this).find('.phys').text(bcm);
-				});
-				break;
-			case 'BCM':
-				$('#gpio li').each(function(){
-					var gpio = $(this).data('gpio');
-					var bcm = $(this).data('bcm');
-					if($(this).hasClass('gpio')) {
-						$(this).find('.name').text(bcm);
-					}
-					$(this).find('.phys').text(gpio);
-				});
-				break;
-		}
-	});
-
 	window.prettyPrint&&prettyPrint();
 
 	var groups = $('#sections .boards .group');
@@ -106,7 +66,7 @@ jQuery(document).ready(function(){
 		overlay_slideUp = setTimeout(function(){dropdown.slideUp(100);}, 100);
 	})
 
-	$('article p').each(function(){
+	$('article p,article li').each(function(){
 		html = $(this).html();
 
 		html = html.replace(
@@ -116,10 +76,18 @@ jQuery(document).ready(function(){
 			}
 		)
 
+		html = html.replace(
+			/GPIO\ ([0-9]{1,2})/gi,
+			function(str, c1){
+				var pin = $("#gpio li").filter(function(){return $(this).find("span.name").text() == "GPIO " + c1}).find('.phys').text();
+				return '<span title="Click for details about pin ' + pin + '" class="pin-hover" data-pin="' + pin + '">' + str + '</span>';
+			}
+		)
+
 		$(this).html(html);
 	});
 
-	$('article p .pin-hover').hover(function(){
+	$('article p .pin-hover, article li .pin-hover').hover(function(){
 		var pin = $(this).data('pin');
 		$('li.pin' + pin).addClass('hover-pin');
 	},function(){
@@ -127,9 +95,9 @@ jQuery(document).ready(function(){
 		$('li.pin' + pin).removeClass('hover-pin');
 	});
 
-	$('article p').on('click','.pin-hover',function(){
+	$('article').on('click', '.pin-hover', function(){
 		var pin = $(this).data('pin');
-		$('li.pin' + pin + ' a').trigger('click');
-	})
+		window.location = $('li.pin' + pin + ' a').attr('href');
+	});
 
 });

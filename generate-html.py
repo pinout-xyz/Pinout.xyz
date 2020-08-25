@@ -51,8 +51,8 @@ default_strings = {
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
-    'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
-    'physical_pin_n': 'Physical pin {}',
+    'bcm_pin_rev1_pi': 'GPIO/BCM pin {} on Rev 1 ( very early ) Pi',
+    'physical_pin_n': 'Physical/Board pin {}',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
@@ -343,9 +343,9 @@ def render_pin_page(pin_num):
             bcm = pin['scheme']['bcm']
             pin_url = 'gpio{}'.format(bcm)
 
-            pin_text_name = 'BCM {}'.format(bcm)
+            pin_text_name = 'GPIO {}'.format(bcm)
 
-            pin_subtext.append('BCM pin {}'.format(bcm))
+            pin_subtext.append('GPIO/BCM pin {}'.format(bcm))
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
             pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
@@ -456,7 +456,7 @@ def render_pin(pin_num, selected_url, overlay=None):
             pin_url = 'gpio{}'.format(bcm)
             if pin_name != '':
                 pin_subname = ' <small>({})</small>'.format(pin_name)
-            pin_name = '<span class="name">BCM {}</span>{}'.format(bcm, pin_subname)
+            pin_name = '<span class="name">GPIO {}</span>{}'.format(bcm, pin_subname)
 
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']

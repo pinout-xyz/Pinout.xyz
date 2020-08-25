@@ -8,7 +8,7 @@ pins:
     name: 5v Power
     type: "+5v"
   '3':
-    name: SDA
+    name: I2C1 SDA
     description: I2C Data
     type: GPIO/I2C
     scheme:
@@ -25,7 +25,7 @@ pins:
     name: 5v Power
     type: "+5v"
   '5':
-    name: SCL
+    name: I2C1 SCL
     description: I2C Clock
     type: GPIO/I2C
     scheme:
@@ -55,7 +55,7 @@ pins:
       alt4: AVEIN VID0
       alt5: JTAG TDI
   '8':
-    name: TXD
+    name: UART TX
     description: UART Transmit
     type: GPIO/UART
     scheme:
@@ -72,7 +72,7 @@ pins:
     name: Ground
     type: GND
   '10':
-    name: RXD
+    name: UART RX
     description: UART Receive
     type: GPIO/UART
     scheme:
@@ -99,9 +99,9 @@ pins:
       alt4: SPI1 CE1
       alt5: UART1 RTS
   '12':
-    name: PWM0
-    description: PWM0
-    type: GPIO
+    name: PCM CLK
+    description: PCM Clock
+    type: GPIO/PCM
     scheme:
       wiringpi: 1
       bcm: 18
@@ -168,7 +168,7 @@ pins:
       alt3: SD1 DAT0
       alt4: JTAG TDO
   '19':
-    name: MOSI
+    name: SPI0 MOSI
     type: GPIO/SPI
     scheme:
       wiringpi: 12
@@ -183,7 +183,7 @@ pins:
     name: Ground
     type: GND
   '21':
-    name: MISO
+    name: SPI0 MISO
     type: GPIO/SPI
     scheme:
       wiringpi: 13
@@ -207,7 +207,7 @@ pins:
       alt3: SD1 DAT1
       alt4: JTAG TCK
   '23':
-    name: SCLK
+    name: SPI0 SCLK
     type: GPIO/SPI
     scheme:
       wiringpi: 14
@@ -219,7 +219,7 @@ pins:
       alt3: AVEOUT VID7
       alt4: AVEIN VID7
   '24':
-    name: CE0
+    name: SPI0 CE0
     description: SPI Chip Select 0
     type: GPIO/SPI
     scheme:
@@ -235,7 +235,7 @@ pins:
     name: Ground
     type: GND
   '26':
-    name: CE1
+    name: SPI0 CE1
     description: SPI Chip Select 1
     type: GPIO/SPI
     scheme:
@@ -248,7 +248,7 @@ pins:
       alt3: AVEOUT VID3
       alt4: AVEIN VID3
   '27':
-    name: ID_SD
+    name: EEPROM SDA
     description: HAT EEPROM i2c Data
     type: GPIO/I2C
     scheme:
@@ -261,7 +261,7 @@ pins:
       alt3: AVEOUT VCLK
       alt4: AVEIN VCLK
   '28':
-    name: ID_SC
+    name: EEPROM SCL
     description: HAT EEPROM i2c Clock
     type: GPIO/I2C
     scheme:
@@ -305,6 +305,7 @@ pins:
   '32':
     name: PWM0
     type: GPIO
+    description: PWM0
     scheme:
       wiringpi: 26
       bcm: 12
@@ -318,6 +319,7 @@ pins:
   '33':
     name: PWM1
     type: GPIO
+    description: PWM1
     scheme:
       wiringpi: 23
       bcm: 13
@@ -332,9 +334,9 @@ pins:
     name: Ground
     type: GND
   '35':
-    name: MISO
-    description: SPI Master-In
-    type: GPIO/SPI
+    name: PCM FS
+    description: PCM Frame Sync
+    type: GPIO/PCM
     scheme:
       wiringpi: 24
       bcm: 19
@@ -371,9 +373,9 @@ pins:
       alt3: SD1 DAT2
       alt4: JTAG TDI
   '38':
-    name: MOSI
-    description: SPI Master-Out
-    type: GPIO/SPI
+    name: PCM DIN
+    description: PCM Data-In
+    type: GPIO/PCM
     scheme:
       wiringpi: 28
       bcm: 20
@@ -388,9 +390,9 @@ pins:
     name: Ground
     type: GND
   '40':
-    name: SCLK
-    description: SPI Clock
-    type: GPIO/SPI
+    name: PCM DOUT
+    description: PCM Data-Out
+    type: GPIO/PCM
     scheme:
       wiringpi: 29
       bcm: 21

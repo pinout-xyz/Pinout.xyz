@@ -22,10 +22,12 @@ table {
     background: #073642;
     color: #EBE6D3; }
   table.details {
+    font-size: inherit;
     width: 100%; }
     table.details td, table.details th {
       border: none;
-      vertical-align: top; }
+      vertical-align: top;
+      padding: 0; }
     table.details img {
       margin-top: 54px; }
   table.pin-functions {
@@ -122,9 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   #content article {
     padding: 15px; }
     #content article .pin-hover {
-      cursor: help; }
-    #content article .pin-hover:hover {
+      cursor: help;
       color: #880000; }
+    #content article .pin-hover:hover {
+      color: #AA0000; }
     #content article img {
       max-width: 100%; }
     #content article .details img {
@@ -134,6 +137,8 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: underline; }
       #content article a:hover {
         text-decoration: none; }
+    #content article li {
+      margin-bottom: 10px; }
     #content article ul {
       margin-left: 20px;
       margin-top: 10px;
@@ -314,29 +319,6 @@ Left Column
 /*
 GPIO nav
 */
-#mode {
-  position: relative;
-  top: 64px;
-  cursor: pointer;
-  cursor: hand;
-  display: none; }
-  #mode li {
-    display: inline-block;
-    padding: 3px 10px;
-    margin-top: 2px;
-    margin-right: 2px;
-    background: #EBE6D3;
-    color: #073642;
-    font-size: .84em;
-    line-height: 1.45em; }
-    #mode li:hover {
-      background: #92b978; }
-    #mode li.selected {
-      background: #5F8645;
-      color: #EBE6D3; }
-      #mode li.selected:hover {
-        background: #5F8645; }
-
 nav {
   position: relative;
   width: 316px;
@@ -465,6 +447,9 @@ nav {
   #gpio .bottom li.hover-pin a {
     color: #FFF;
     background: rgba(200, 0, 0, 0.6); }
+    #gpio ul li.hover-pin a .phys,
+    #gpio .bottom li.hover-pin a .phys {
+      color: #FFF; }
   #gpio .pin1 a:hover, #gpio .pin1.active a, #gpio .pin1 .pin {
     border-radius: 0; }
   #gpio .pow3v3 .pin {
@@ -477,6 +462,8 @@ nav {
     background: #268BD2; }
   #gpio .spi .pin {
     background: #D33682; }
+  #gpio .pcm .pin {
+    background: #2aa198; }
   #gpio .uart .pin {
     background: #6c71c4; }
 
@@ -522,6 +509,8 @@ nav {
   background: #D33682; }
 #legend .uart .pin {
   background: #6c71c4; }
+#legend .pcm .pin {
+  background: #2aa198; }
 #legend .pin {
   display: block;
   border: 1px solid transparent;

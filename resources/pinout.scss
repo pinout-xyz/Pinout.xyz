@@ -6,6 +6,7 @@ $color-green: #859900;
 $color-red: #DC322F;
 $color-yellow: #B58900;
 $color-blue: #268BD2;
+$color-cyan: #2aa198;
 
 $color-dark: #073642;
 
@@ -39,10 +40,11 @@ table {
     th {background:$color-dark;color:$color-content-bg;}
 
     &.details {
+        font-size:inherit;
         width:100%;
 
         td, th {
-            border:none;vertical-align:top;
+            border:none;vertical-align:top;padding:0;
         }
 
         img {margin-top:54px;}
@@ -157,8 +159,8 @@ h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, se
 
     article {
         padding:15px;
-        .pin-hover {cursor:help;}
-        .pin-hover:hover {color:#880000;}
+        .pin-hover {cursor:help;color:#880000;}
+        .pin-hover:hover {color:#AA0000;}
          img {max-width:100%;}
          .details img {min-width:200px;}
          a {
@@ -167,6 +169,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, se
 
             &:hover {text-decoration:none;}
          }
+         li {margin-bottom:10px;}
          ul {margin-left:20px;margin-top:10px;margin-bottom:10px;}
     }
 }
@@ -410,34 +413,6 @@ Left Column
 GPIO nav
 */
 
-#mode {
-    position: relative;
-    top: 64px;
-    cursor: pointer;
-    cursor: hand;
-    display: none;
-    li {
-        display: inline-block;
-        padding: 3px 10px;
-        margin-top: 2px;
-        margin-right: 2px;
-        background: $color-content-bg;
-        color: $color-dark;
-        font-size: .84em;
-        line-height: 1.45em;
-        &:hover {
-            background:lighten($nav-bg, 20);
-        }
-        &.selected {
-            background:$nav-bg;
-            color: $color-content-bg;
-            &:hover {
-                background:$nav-bg;
-            }
-        }
-    }
-}
-
 nav {
     position:relative;
     width:316px;
@@ -613,6 +588,7 @@ nav {
     .bottom li.hover-pin a {
         color:#FFF;
         background:rgba(200,0,0,0.6);
+        .phys {color:#FFF}
     }
 
     .pin1 a:hover, .pin1.active a, .pin1 .pin {border-radius:0;}
@@ -622,6 +598,7 @@ nav {
     .gpio .pin {background:$color-green;}
     .i2c .pin {background:$color-blue;}
     .spi .pin {background:$color-pink;}
+    .pcm .pin {background:$color-cyan;}
     .uart .pin {background:$color-purple;}
 }
 
@@ -670,6 +647,7 @@ nav {
     .i2c .pin {background:$color-blue;}
     .spi .pin {background:$color-pink;}
     .uart .pin {background:$color-purple;}
+    .pcm .pin {background:$color-cyan;}
 
     .pin {
         display:block;

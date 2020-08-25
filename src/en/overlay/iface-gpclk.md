@@ -29,4 +29,5 @@ The following clock sources are available:
 7     216 MHz  HDMI auxiliary
 8-15  0 Hz     Ground
 ```
+
 Other frequencies can be achieved by setting a clock-divider in the form of `SOURCE/(DIV_I + DIV_F/4096)`. Note, that the [BCM2835 ARM Peripherals](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf) document contains an error and states that the denominator of the divider is 1024 instead of 4096.

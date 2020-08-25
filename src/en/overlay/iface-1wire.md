@@ -23,7 +23,7 @@ or
 dtoverlay=w1-gpio,gpiopin=x
 ```
 
-if you would like to use a custom pin (default is BCM4, as illustrated in pinout herein).
+if you would like to use a custom pin (default is GPIO 4, as illustrated in pinout herein).
 
 Alternatively you can enable the one-wire interface on demand using raspi-config, or the following:
 
@@ -39,7 +39,7 @@ sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
 sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
 ```
 
-once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default BCM4), like so:
+once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default GPIO 4), like so:
 
 ```
 ls /sys/bus/w1/devices/

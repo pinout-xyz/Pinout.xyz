@@ -1,0 +1,1 @@
+GPIO 20 is used by PCM to as a data input from an audio device such as an I2C microphone.

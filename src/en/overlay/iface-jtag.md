@@ -31,3 +31,8 @@ pin:
 # JTAG - Joint Test Action Group
 
 JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.
+
+There are two separate JTAG interfaces available on the Pi:
+
+* Alt5 on GPIOs 4, 5, 6, 12 and 13
+* Alt4 on GPIOs 22, 23, 24, 25, 26 and 27

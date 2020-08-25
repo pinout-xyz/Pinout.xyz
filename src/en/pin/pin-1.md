@@ -2,4 +2,4 @@ The 3v3 supply pin on the early Raspberry Pi had a maximum available current of 
 
 All Raspberry Pi since the Model B+ can provide quite a bit more, up to 500mA to remain on the safe side, thanks to a switching regulator.
 
-Still, you should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.
+You should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.

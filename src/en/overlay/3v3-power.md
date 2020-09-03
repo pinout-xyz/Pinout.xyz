@@ -11,8 +11,10 @@ pin:
 -->
 # 3v3 Power
 
-The 3v3 supply pin on the early Raspberry Pi had a maximum available current of about 50 mA. Enough to power a couple of LEDs or a microprocessor, but not much more.
+All Raspberry Pi models since the B+ can provide up to 500mA on the 3v3 pins, thanks to a switching regulator. In some cases it may be possible to draw more but, due to lack of documentation and testing on the actual limits, 500mA is given as a rule of thumb.
 
-All Raspberry Pi since the Model B+ can provide quite a bit more, up to 500mA to remain on the safe side, thanks to a switching regulator.
+The 3v3 supply pin on the early Raspberry Pi had a maximum available current of only 50mA.
 
-Still, you should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.
+The 5v supply coupled with a 3v3 regulator is recommended for powering 3.3v projects.
+
+The Piversify blog has [an exploration of the 3v3 supply rail on the Raspberry Pi B+](https://raspberrypise.tumblr.com/post/144555785379/exploring-the-33v-power-rail)

@@ -24,14 +24,12 @@ pin:
     active: high
 -->
 # I2C - Inter Integrated Circuit
----
-### I2C pins in BCM mode are: 2, 3
-### I2C pins in WiringPi are: 8, 9
----
 
-The Raspberry Pi's I2C pins are an extremely useful way to talk to many different types of external peripheral; from the MCP23017 digital IO expander, to a connected ATMega.
+GPIO 2 and GPIO 3 - the Raspberry Pi's I2C1 pins - allow for two-wire communication with a variety of external sensors and devices.
 
-The I2C pins include a fixed 1.8 kΩ pull-up resistor to 3.3v. This means they are not suitable for use as general purpose IO where a pull-up is not required.
+The I2C pins include a fixed 1.8 kΩ pull-up resistor to 3.3v. They are not suitable for use as general purpose IO where a pull-up might interfere.
+
+I2C is a multi-drop bus, multiple devices can be connected to these same two pins. Each device has its own unique I2C address.
 
 You can verify the address of connected I2C peripherals with a simple one-liner:
 
@@ -49,3 +47,5 @@ DEVICE_ADDR = 0x15
 bus = smbus.SMBus(DEVICE_BUS)
 bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
 ```
+
+GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typically used by the system to read the HAT EEPROM.

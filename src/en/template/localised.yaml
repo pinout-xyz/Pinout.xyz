@@ -1,5 +1,5 @@
 strings:
-- default_desc: 'The comprehensive Add-on boards & GPIO Pinout guide for the Raspberry Pi'
+- default_desc: 'The comprehensive add-on boards & GPIO Pinout guide for the Raspberry Pi'
 - default_title: 'Raspberry Pi GPIO Pinout'
 - title_suffix: ' at Raspberry Pi GPIO Pinout'
 - home: 'Home'
@@ -27,7 +27,7 @@ strings:
 - github_repository: 'GitHub Repository'
 - board_schematic : 'Schematic'
 - buy_now: 'Buy Now'
-- browse_addons: 'Browse more HATs, pHATs and add-ons'
+- browse_addons: 'Browse pinouts for HATs, pHATs and add-ons'
 - return_home: 'Return to the Raspberry Pi GPIO Pinout'
 - boards_title: 'Raspberry Pi HATs, pHATs &amp; Add-ons'
 - boards_subtitle: 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'

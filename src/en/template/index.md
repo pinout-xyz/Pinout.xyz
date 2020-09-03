@@ -1,8 +1,8 @@
 # Pinout!
 
-### The comprehensive GPIO Pinout guide for the Raspberry Pi.
+### The Raspberry Pi GPIO pinout guide.
 
-This GPIO Pinout is designed to be both a quick and interactive reference to the Raspberry Pi GPIO pins, plus a comprehensive guide to your Raspberry Pi's GPIO interfaces. It also includes [dozens of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
+This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces. Pinout also includes [dozens of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
 
 ## Support Pinout.xyz
 
@@ -19,7 +19,7 @@ Pinout has teamed up with Pimoroni to create a [prototype board compatibility to
 
 ## Explore HATs & pHATs
 
-We've [added a board explorer](/boards)! Use it to find the pinout for a Raspberry Pi add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/gadgetoid/Pinout.xyz).
+[Check out Pinout's board explorer](/boards)! Use it to find the pinout for your Raspberry Pi add-on board, or discover new boards. If you manufacture boards, we'd love to add yours too. [You can contribute to Pinout.xyz at GitHub.com](https://github.com/gadgetoid/Pinout.xyz).
 
 ## What do these numbers mean?
 
@@ -36,4 +36,4 @@ Pinout depicts pin 1 in the top left corner. Pin 1 is the only pin with a square
 
 We've whipped up a simple graphical Raspberry Pi GPIO Pinout. Feel free to print, embed, share or hotlink this image and don't forget to credit us!
 
-[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)
+![Graphical Raspberry Pi GPIO Pinout](https://raw.githubusercontent.com/Gadgetoid/Pinout.xyz/master/resources/raspberry-pi-pinout.png)

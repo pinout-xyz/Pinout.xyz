@@ -65,7 +65,7 @@ default_strings = {
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
-exclude_pincounts = ['3v3-power', '5v-power', 'ground', 'iface-jtag', 'i2c', 'iface-gpclk', 'wiringpi', 'spi']
+exclude_pincounts = ['3v3-power', '5v-power', 'ground', 'iface-jtag', 'i2c', 'iface-gpclk', 'wiringpi', 'spi', 'iface-1wire']
 
 
 def debug(level, string):

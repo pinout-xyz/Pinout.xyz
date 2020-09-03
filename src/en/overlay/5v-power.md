@@ -11,8 +11,6 @@ pin:
 -->
 # 5v Power
 
-The 5v power pins are connected directly to the Pi's power input and will capably provide the full current of your mains adaptor, less that used by the Pi itself.
+The 5v power pins are connected directly to the Pi's power input and will capably provide the full supply current of your mains adaptor, minus that used by the Pi itself.
 
-With a decent power supply, such as the official Pi adaptor, you can expect to pull about 1.5A.
-
-Don't be dissuaded by what sounds like a measly low voltage. You can do a lot with 5v. Power Arduinos, and even run a small electroluminescent wire inverter right off the 5v pin!
+With a decent power supply, such as the official Pi adaptor, you can expect to pull about 1.5A. This varies by Pi model and adapter used. Devices that require a high current- such as LED panels, long LED strips or motors- should use an external power supply.

@@ -13,6 +13,7 @@ image: 'blinkt.png'
 pincount: 40
 eeprom: no
 power:
+  '2':
   '4':
 ground:
   '6':
@@ -30,7 +31,16 @@ pin:
 
 Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.
 
-Note: First run Blinkt! boards use physical pin #2 for the 5V power supply. If your Blinkt! doesn't work with this pinout, try swapping over.
+## 5V Power
+
+Blinkt! does not require *both* Physical Pin 2 and Physical Pin 4:
+
+* Physical Pin 4 is used for 5v power on all Blinkt! boards since 2018
+* Physical Pin 2 was used for 5v power on first run Blinkt! boards prior to 2018
+
+If your Blinkt! doesn't work with one, try swapping over to the other or - if all else fails - wiring both.
+
+## Installing
 
 To get started you can use the one-line product installer:
 

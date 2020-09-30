@@ -12,15 +12,15 @@ This license also excludes all board photography which is pinched from various s
 
 # About this project
 
-The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
+The contents of this project  GitHub repository are used to build http://pinout.xyz and its translated in subdomains.
 
 This project aims to build a consistent workflow behind the Pinout.xyz front-end, gather useful information about the Raspberry Pi GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their Pi add-ons use.
 
-We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
+We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but also the translations too.
 
 # Reporting Issues & Making Suggestions
 
-If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
+If you've spotted an error, ommission or have a suggestion,  please raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
 # Contributing
 

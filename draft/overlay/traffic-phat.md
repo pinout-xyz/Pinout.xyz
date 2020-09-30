@@ -5,8 +5,8 @@ class: board
 type: multi
 formfactor: pHAT
 manufacturer: Pi Supply
-description: A quick and easy way to learn the basics of GPIO on a budget
-github: A small board that can be used easily to show status of the Pi
+description: A small board that can be used easily to show status of the Pi
+github: https://github.com/PiSupply/Ryanteck/tree/master/Traffic%20pHAT
 image: 'Traffic-pHAT.png'
 pincount: 40
 eeprom: no

@@ -10,7 +10,7 @@ This license excludes the 'pinout-graphic-horizontal' files located in the `grap
 
 This license also excludes all board photography which is pinched from various sources in the hope that using it for documentation/promotional purposes will not raise any hackles.
 
-# About this project
+# About our project
 
 The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
 
@@ -22,7 +22,7 @@ We hope that by making this project open and extensible we will invite not only 
 
 If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/Gadgetoid/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
-# Contributing
+# Contributing in our project
 
 If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/Gadgetoid/Pinout.xyz/blob/master/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
 

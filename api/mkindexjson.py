@@ -3,9 +3,11 @@
 import json
 import re
 import sys
+import glob
 import unicodedata
 
 sys.path.insert(0, "../")
+BASE_DIR = "../"
 
 try:
     import markdown
@@ -26,7 +28,7 @@ if len(sys.argv) > 1:
 
 pinout.load(lang)
 
-overlays = pinout.settings['overlays']
+overlays = glob.glob("{}src/{}/overlay/*.md".format(BASE_DIR, lang))
 
 pages = {}
 
@@ -64,7 +66,7 @@ def pimoroni_get_shop_handle(slug):
 
 def load_overlay(overlay):
     try:
-        data = markjaml.load('../src/{}/overlay/{}.md'.format(lang, overlay))['data']
+        data = markjaml.load(overlay)['data']
         slug = slugify(data['name'])
         return {
             'name': data['name'],

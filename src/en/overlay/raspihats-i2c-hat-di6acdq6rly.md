@@ -33,7 +33,7 @@ i2c:
   '0x60-0x6F':
     device: raspihats
 -->
-#DI6acDQ6rly I2C-HAT
+# DI6acDQ6rly I2C-HAT
 
 The DI6acDQ6rly I2C-HAT is a 6 isolated digital input channels and 6 relay output channels Raspberry Pi add-on board that uses the I2C bus for communication. The input channels can be used as edge counters, every input channel has an two 32-bit counters attached, one for counting rising edges and the other for counting falling edges. The DI6acDQ6rly also has 6 LED indicators for digital inputs status monitoring and 6 LED indicators for power relay outputs status monitoring.
 
@@ -41,6 +41,7 @@ Users can stack up to 16 DI6acDQ6rly I2C-HATs on one Raspberry Pi by using the o
 I2C address range is [0x60 .. 0x6F].
 
 ## Features
+
 * 6 isolated digital input channels(sink/source)
 * 32-bit counters for all digital input channels
 * 6 relay output channels(5A@250VAC)

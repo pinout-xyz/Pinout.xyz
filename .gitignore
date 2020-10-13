@@ -4,3 +4,4 @@ env/
 .DS_store
 .sass-cache/
 venv/
+api/v1/

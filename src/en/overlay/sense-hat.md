@@ -64,7 +64,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#Sense HAT
+# Sense HAT
 
 The Sense HAT is an add-on board for Raspberry Pi comprising of a 8×8 RGB LED matrix, a five-button joystick and the following sensors: Gyroscope, Accelerometer, Magnetometer, Temperature, Barometric pressure and Humidity.
 

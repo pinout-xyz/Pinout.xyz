@@ -32,7 +32,7 @@ install:
   'python3':
     - 'unicornhat'
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 64 blindingly bright LEDs packed into a HAT and driven with an ultra-fast, C library that you can talk to from Python make Unicorn HAT PiGlow's bigger, brighter brother.
 

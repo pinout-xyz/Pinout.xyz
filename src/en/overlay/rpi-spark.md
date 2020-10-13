@@ -89,9 +89,10 @@ RPi-Spark pHAT and SDK let you quickly and easily build Raspberry Pi GPIO projec
 
 For example: games, remote control car, balance car, sports pedometer, server monitor and other applications.
 
-### Key Features
+## Key Features
 
-#### Hardware
+### Hardware
+
 * 128x64 monochrome OLED
 * Accelerometer
 * Gyroscope
@@ -102,16 +103,17 @@ For example: games, remote control car, balance car, sports pedometer, server mo
 * 1W speaker
 * 19 extended GPIOs
 
-#### SDK
+### SDK
+
 * Drives - RPi-Spark hardware driver library - build applications directly or combine with other open-source libraries
 * Skeletons - For quick and easy development
 * CLI interface - Lets you use your preferred language: Bash Script, Node.js, Java, PHP, C/C++, Pascal, Basic, etc.
 
+## Supported
 
-### Supported
 * Raspberry Pi 2/3/3+/Zero/Zero W
 
-#### Requirements
+## Requirements
 
 * Raspbian Linux
 * Python 2.7 or Python 3.x

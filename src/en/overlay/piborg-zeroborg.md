@@ -23,11 +23,13 @@ pin:
   '5':
     mode: i2c
 -->
-#ZeroBorg
+# ZeroBorg
 
 The PiBorg ZeroBorg is a 4 channel motor controller for the Raspberry Pi Zero.
 
 It supports configurable i2c slave addresses from 3 (0x03) to 119 (0x77), meaning that while it uses i2c it can potentially co-exist with *any* other i2c board. See the "Multiple Boards" section of the ZeroBorg install guide for more details.
+
+## Features
 
 * 4 full H-Bridges
 * Drives 4 motors or 2 stepper motors

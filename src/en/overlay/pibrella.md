@@ -76,7 +76,7 @@ pin:
     direction: input
     active: high
 -->
-#Pibrella
+# Pibrella
 
 The all-in-one light, sound, input and output add-on board that uses lots of IO on the Pi but leaves both Serial and I2C free leaving plenty of room for expansion if you get creative.
 

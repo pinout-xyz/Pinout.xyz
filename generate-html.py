@@ -51,8 +51,8 @@ default_strings = {
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
-    'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
-    'physical_pin_n': 'Physical pin {}',
+    'bcm_pin_rev1_pi': 'GPIO/BCM pin {} on Rev 1 ( very early ) Pi',
+    'physical_pin_n': 'Physical/Board pin {}',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
@@ -65,6 +65,7 @@ default_strings = {
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
 }
+exclude_pincounts = ['3v3-power', '5v-power', 'ground', 'iface-jtag', 'i2c', 'iface-gpclk', 'wiringpi', 'spi', 'iface-1wire']
 
 
 def debug(level, string):
@@ -100,6 +101,8 @@ def load_overlay(overlay):
     loaded = data['data']
     loaded['source'] = overlay
     loaded['long_description'] = data['html']
+
+    filename = overlay.split('/')[-1].replace('.md', '')
 
     """
     try:
@@ -158,13 +161,16 @@ def load_overlay(overlay):
                 elif pincount == 40 and formfactor == '40-way':
                     details.append(strings['pin_header'].format(pincount))
                 else:
-                    details.append(strings['pin_header'].format(pincount))
+                    if filename not in exclude_pincounts:
+                        details.append(strings['pin_header'].format(pincount))
             elif pincount == 40:
                 details.append(strings['type_hat'])
             elif pincount == 26:
                 details.append(strings['type_classic'])
             else:
-                details.append(strings['pin_header'].format(pincount))
+                if filename not in exclude_pincounts:
+                # if '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
+                    details.append(strings['pin_header'].format(pincount))
 
         if 'eeprom' in loaded:
             eeprom = str(loaded['eeprom'])
@@ -216,7 +222,7 @@ def load_overlay(overlay):
                 if pin in pinout.pins:
                     actual_pin = pinout.pins[pin]
 
-                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and 'ground.md' not in overlay:
+                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and '3v3-power.md' not in overlay and '5v-power.md' not in overlay and 'ground.md' not in overlay:
                         raise Exception(
                             "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
@@ -228,8 +234,9 @@ def load_overlay(overlay):
                     if pin in ['19', '21', '23'] and data['mode'] == 'spi':
                         uses_spi = True
 
-            if uses > 0:
-                details.append(strings['uses_n_gpio_pins'].format(uses))
+            if filename not in exclude_pincounts:
+                if uses > 0:
+                    details.append(strings['uses_n_gpio_pins'].format(uses))
 
             if uses_spi:
                 details.append(strings['uses_spi'])
@@ -283,7 +290,10 @@ def load_overlay(overlay):
 
         details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'], details_html, details_image)
 
-        loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], details_html)
+        if len(details) or len(details_image):
+            loaded['long_description'] = '{}\n{}'.format(loaded['long_description'], details_html)
+        else:
+            loaded['long_description'] = '{}'.format(loaded['long_description'])
 
     # Automatically generate a page slug from the name if none is specified
     if 'page_url' not in loaded:
@@ -333,9 +343,9 @@ def render_pin_page(pin_num):
             bcm = pin['scheme']['bcm']
             pin_url = 'gpio{}'.format(bcm)
 
-            pin_text_name = 'BCM {}'.format(bcm)
+            pin_text_name = 'GPIO {}'.format(bcm)
 
-            pin_subtext.append('BCM pin {}'.format(bcm))
+            pin_subtext.append('GPIO/BCM pin {}'.format(bcm))
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
             pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
@@ -445,8 +455,8 @@ def render_pin(pin_num, selected_url, overlay=None):
 
             pin_url = 'gpio{}'.format(bcm)
             if pin_name != '':
-                pin_subname = '<small>({})</small>'.format(pin_name)
-            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
+                pin_subname = ' <small>({})</small>'.format(pin_name)
+            pin_name = '<span class="name">GPIO {}</span>{}'.format(bcm, pin_subname)
 
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']

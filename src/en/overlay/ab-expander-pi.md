@@ -52,11 +52,11 @@ i2c:
     device: DS1307
 
 -->
-#Expander Pi
+# Expander Pi
 
 Expander Pi is a versatile digital and analogue expansion board.  It allows you to connect your Raspberry Pi to switches, lights, sensors, and many other devices giving you a way to communicate with the outside world.
 
-##Features  
+## Features  
 
 8 channel MCP3208 12-bit ADC with a maximum sample rate of 100 ksps and includes a 4.096 volt precision voltage reference.  
 2 channel MCP4822 12-bit DAC with an internal voltage reference.  

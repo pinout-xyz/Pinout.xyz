@@ -34,9 +34,9 @@ def load(file):
     markson = open(file).read()
     markson = markson.replace('\r', '')
 
-    _data = re.search(re.compile(r'<!--(JSON:|\n---\n)(.*)-->', re.DOTALL), markson)
+    _data = re.search(re.compile(r'<!--(JSON:|\n---\n)(.*?)-->', re.DOTALL), markson)
 
-    _markdown = re.sub(re.compile(r'<!--(JSON:|\n---\n)(.*)-->', re.DOTALL), '', markson)
+    _markdown = re.sub(re.compile(r'<!--(JSON:|\n---\n)(.*?)-->', re.DOTALL), '', markson)
     _html = markdown.markdown(_markdown, extensions=['fenced_code'])
 
     # Scan for the Title in the Markdown file, this is always assumed

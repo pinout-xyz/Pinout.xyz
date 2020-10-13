@@ -11,8 +11,12 @@ buy: https://shop.pimoroni.com/products/fan-shim
 image: 'pimoroni-fan-shim.png'
 pincount: 12
 eeprom: no
+power:
+  '2':
+  '4':
 ground:
-  '39':
+  '6':
+  '9':
 pin:
   '5':
     name: Wake
@@ -30,9 +34,11 @@ pin:
     name: RGB LED Clock
     mode: output
 -->
-#Fan SHIM
+# Fan SHIM
 
 Add a 30mm fan to your Pi 4 keeping it around 20 degrees cooler. Fan SHIM uses a friction-fit header so it can be pushed into place.
+
+## Features
 
 * Surprisingly quiet
 * 4,200 RPM fan

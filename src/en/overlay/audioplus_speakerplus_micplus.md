@@ -35,14 +35,18 @@ pin:
     active: high
   '35':
     name: I2S WS
+  '36':
+    name: Google Driver
+  '38':
+    name: I2S D-In
   '40':
-    name: I2S Data
+    name: I2S D-Out
 install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+ Microphone+ 
-##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
+# Audio+ Speaker+ Microphone+ 
+## 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
 * Experiment with the Google AIY assistant (100% pin to pin compatible).
  
@@ -56,9 +60,9 @@ install:
 
 * No extra power supply required
 
-##Features:
+## Features
 
-1. Microphone I2S High sensitivity on board (can be separate from the main boad using the included cable)
+1. Microphone I2S High sensitivity on board (can be separate from the main board using the included cable)
 
 2. 2x5w Stereo Amplification anf 2 onboard speaker included
 
@@ -74,7 +78,7 @@ install:
 
 8. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
 
-##INSTALLATION:
+## Installation
 
 * Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
 

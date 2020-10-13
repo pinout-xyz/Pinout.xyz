@@ -55,7 +55,7 @@ for file in files:
             print("{type}: {name}: {desc} (dir:{direction} pol:{active})".format(
                 type=data["class"],
                 name=data["name"],
-                desc=pin["name"],
+                desc=pin.get("name", "**unnamed**"),
                 direction=pin["direction"] if "direction" in pin else "unknown",
                 active="active {}".format(pin["active"]) if "active" in pin else "unknown"
                 ))

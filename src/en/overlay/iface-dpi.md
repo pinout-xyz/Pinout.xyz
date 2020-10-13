@@ -65,7 +65,7 @@ pin:
 -->
 # DPI - Display Parallel Interface
 
-One of the alternate functions selectable on bank 0 of the Raspbery Pi GPIO is DPI. DPI (Display Parallel Interface) is a 24-bit parallel interface with 28 clock and synchronisation signals.
+One of the alternate functions selectable on bank 0 of the Raspberry Pi GPIO is DPI. DPI (Display Parallel Interface) is a 24-bit parallel interface with 28 clock and synchronisation signals.
 
 This interface allows parallel RGB displays to be attached to the Raspberry Pi GPIO either in RGB24 (8 bits for red, green and blue) or RGB666 (6 bits per colour) or RGB565 (5 bits red, 6 green, and 5 blue). It is available as alternate function 2 (ALT2) on GPIO bank 0.
 

@@ -33,7 +33,7 @@ pin:
 -->
 # Waveshare True Color RGB LED HAT 8x8
 
-This RGB LED HAT (B) can be easily attached on top of the Raspberry Pi to display colorful effect, and controlled by only one signal pin.
+This RGB LED HAT (B) can be easily attached on top of the Raspberry Pi to display colourful effect, and controlled by only one signal pin.
 
 * Supports any revision of Raspberry Pi (directly-pluggable)
 * Onboard 8 × 8 RGB LED (WS2812B)

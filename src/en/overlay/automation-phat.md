@@ -72,7 +72,7 @@ install:
   'python3':
     - 'automationhat'
 -->
-#Automation pHAT
+# Automation pHAT
 
 Automation pHAT is a home monitoring and automation controller for the Raspberry Pi; with relays, analog channels, powered outputs, and buffered inputs. All 24V tolerant.
 

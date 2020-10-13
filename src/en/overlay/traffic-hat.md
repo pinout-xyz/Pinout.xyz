@@ -6,6 +6,8 @@ type: multi
 formfactor: HAT
 manufacturer: Ryanteck
 description: A quick and easy way to learn the basics of GPIO on a budget
+github: https://github.com/PiSupply/Ryanteck/tree/master/RTK%20Traffic%20HAT
+buy: https://uk.pi-supply.com/products/traffic-hat-for-raspberry-pi
 image: 'traffic-hat.png'
 pincount: 40
 eeprom: yes
@@ -43,9 +45,9 @@ pin:
     direction: output
     active: high
 -->
-#Traffic HAT
+# Traffic HAT
 
-###A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
+A quick and easy way to learn the basics of GPIO on a budget. All in a nice HAT.
 
 ```python
 from gpiozero import TrafficHat

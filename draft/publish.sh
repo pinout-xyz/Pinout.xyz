@@ -6,12 +6,19 @@ draftpng="../draft/boards"
 dirpng="../resources/boards"
 draftmd="../draft/overlay"
 srcdir="../src"
+
 langlist=$(ls "$srcdir")
 yamlfile="settings.yaml"
 
 if [ "$#" -eq 0 ]; then
-    echo "please specify a board to publish!"
-    exit 1
+    echo "Available files to publish:"
+    for f in $draftmd/*.md; do
+        filename=$(basename -- "$f")
+        extension="${filename##*.}"
+        filename="${filename%.*}"
+        echo "- $filename"
+    done
+    exit 0
 fi
 
 board=$1

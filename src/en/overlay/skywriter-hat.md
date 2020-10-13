@@ -45,7 +45,7 @@ i2c:
     name: Gesture sensor
     device: mgc3130
 -->
-#Skywriter HAT
+# Skywriter HAT
 
 Skywriter HAT senses your finger's position above it in 3 dimensions, outputting an X, Y, Z axis
 which you can use in your Python scripts.

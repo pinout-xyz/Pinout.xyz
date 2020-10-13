@@ -1,7 +1,7 @@
 Dieser Anschluss kann auch als [UART](https://de.wikipedia.org/wiki/Universal_Asynchronous_Receiver_Transmitter) Sendeleitung genutzt werden. Senden heißt im Englischen 'transmit' - daher die Bezeichnung TXD. 
 
-Er wird im Allgemeinen auch als serielle Schnittstelle bezeichnet. Über diesen Pin empfängt der Pi standardmäßig Zeichen und 
-leitet sie an die Kommandozeile weiter. Zusammen mit RXD kannst Du so Deinen Pi über die Kommandozeile mit der seriellen Schnittstelle steuern.
+Er wird im Allgemeinen auch als serielle Schnittstelle bezeichnet. Über diesen Pin sendet der Pi standardmäßig Zeichen und 
+leitet sie an ein angeschlossenes Gerät weiter. Zusammen mit RXD kannst Du so Deinen Pi über die Kommandozeile mit der seriellen Schnittstelle steuern.
 
 Die serielle Schnittstelle ist sehr nützlich, wenn Du z.B. einen Arduino oder ein Propeller-Board mit Deinem Pi verbinden möchtest. Dabei musst Du allerdings
 darauf achten, dass Du vorher die serielle Kommandozeile (Console) in der raspi-config deaktivierst.

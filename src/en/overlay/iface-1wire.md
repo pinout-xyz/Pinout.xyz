@@ -11,6 +11,10 @@ pin:
 -->
 # W1-GPIO - One-Wire Interface
 
+One-wire is a single-wire communication bus typically used to connect sensors to the Pi.
+
+The Raspberry Pi supports one-wire on any GPIO pin, but the default is GPIO 4.
+
 To enable the one-wire interface you need to add the following line to /boot/config.txt, before rebooting your Pi:
 
 ```
@@ -23,9 +27,9 @@ or
 dtoverlay=w1-gpio,gpiopin=x
 ```
 
-if you would like to use a custom pin (default is BCM4, as illustrated in pinout herein).
+if you would like to use a custom pin (the default is GPIO 4)
 
-Alternatively you can enable the one-wire interface on demand using raspi-config, or the following:
+Alternatively you can enable the one-wire interface on demand using `raspi-config`, or the following:
 
 ```
 sudo modprobe w1-gpio
@@ -39,10 +43,10 @@ sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
 sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
 ```
 
-once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default BCM4), like so:
+once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default GPIO 4), like so:
 
 ```
 ls /sys/bus/w1/devices/
 ```
 
-n.b. Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17).  Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.
+Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.

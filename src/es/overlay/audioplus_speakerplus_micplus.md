@@ -35,8 +35,12 @@ pin:
     active: high
   '35':
     name: I2S WS
+  '36':
+    name: Google Driver
+  '38':
+    name: I2S D-In
   '40':
-    name: I2S Data
+    name: I2S D-Out
 install:
   'devices':
   - 'i2s'

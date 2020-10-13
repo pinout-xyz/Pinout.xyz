@@ -55,11 +55,13 @@ pin:
     external_pull: up
     active: high
 -->
-#ReSpeaker 4 Mic Array
+# ReSpeaker 4 Mic Array
 
 ReSpeaker 4 Mic Array for Raspberry Pi is a quad-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
 
 The board is developed based on AC108, a highly integrated quad-channel ADC with I2S/TDM output transition for high definition voice capture. Besides, it provides a super cool LED ring, which contains 12 APA102 programmable LEDs. With that 4 microphones and the LED ring, Raspberry Pi would have ability to do VAD (Voice Activity Detection), estimate DOA (Direction of Arrival) and show the direction via LED ring, just like Amazon Echo or Google Home.
+
+## Features
 
 * MIC: 4 Microphones on the corners of the square board
 * RGB LED: 12 APA102 RGB LEDs, connected to SPI interface

@@ -30,7 +30,7 @@ pin:
   '10':
     mode: UART
 -->
-#RS485 Pi
+# RS485 Pi
 
 The RS485 Pi is a UART to RS485 serial converter for the Raspberry Pi.
 
@@ -38,7 +38,7 @@ The RS485 port is connected to the UART port on the Raspberry Pi using a SN65HVD
 
 The RS485 Pi contains protection against voltage spikes in the form of a TVS Diode and two 10O, Pulse-Proof Thick-Film Resistors.  A 120O terminator resistor is included with the board.
 
-##Features
+## Features
 
 - RS-485 Half Duplex Port.
 - Up to 250 kbps transfer rate.

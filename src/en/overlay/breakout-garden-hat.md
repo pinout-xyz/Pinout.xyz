@@ -34,15 +34,15 @@ pin:
     mode: output
     active: low
 -->
-#Breakout Garden HAT
+# Breakout Garden HAT
 
-Breakout Garden HAT breaks out your Pi's i2c (inter-integrated circuit) bus into 6 convinient edge connectors designed to accomodate Pimoroni breakout boards.
+Breakout Garden HAT breaks out your Pi's i2c (inter-integrated circuit) bus into 6 convenient edge connectors designed to accommodate Pimoroni breakout boards.
 
 This means you can prototype your breakout-based designs with no soldering or connection hassles and write and test your code before assembling your final creation.
 
 The top of Breakout Garden HAT is an unbroken ground plane, so if you're wiring it off your Pi you will only need one ground pin (pick from the ones marked). The 5v line is regulated to 3v3 for the breakouts, and either pin will do. The 3v3 pins are only used for the EEPROM so you can safely omit them.
 
-For easy offboard wiring, or use with something like an Arduino you could use the SDA, SCL, INT, GND and 5V connections on the breakout header.
+For easy off-board wiring, or use with something like an Arduino you could use the SDA, SCL, INT, GND and 5V connections on the breakout header.
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

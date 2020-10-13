@@ -36,11 +36,11 @@ pin:
 
 The Sixfab XBee Shield is add-on board that allows you to use XBee modules easily with your Pi.
 
-Some features include:
+## Features include
 
 * Headers fit most XBee modules
 * Up to 28 miles range
 * Point to point communication
 * Communication LED
 * 1-Wire sensor breakout (bcm4)
-* Programable from Linux, Windows and Android
+* Programmable from Linux, Windows and Android

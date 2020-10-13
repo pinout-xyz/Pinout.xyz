@@ -83,7 +83,7 @@ install:
   'python3':
     - 'automationhat'
 -->
-#Automation HAT
+# Automation HAT
 
 Automation HAT is a home monitoring and automation controller for the Raspberry Pi; with relays, analog channels, powered outputs, and buffered inputs. All 24V tolerant.
 

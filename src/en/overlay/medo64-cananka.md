@@ -45,7 +45,7 @@ pin:
 Cananka is Raspberry Pi HAT allowing for CAN bus communication.
 
 Features include up to 1Mbit/s bus speed (125 kbit/s default); fully isolated
-(1 kV); does not require CAN bus power supply (onboard DC-to-DC converter);
+(1 kV); does not require CAN bus power supply (on-board DC-to-DC converter);
 supports powering Raspberry Pi from CAN bus (up to 24 V, 2 A); automatic
 detection via HAT specification; works on Raspberry Pi B+ and above (including
 Pi Zero).

@@ -7,7 +7,7 @@ formfactor: pHAT
 manufacturer: Pimoroni
 description: An e-paper display for your Raspberry Pi
 url: https://shop.pimoroni.com/products/inky-phat
-github: https://github.com/pimoroni/inky-phat
+github: https://github.com/pimoroni/inky
 buy: https://shop.pimoroni.com/products/inky-phat
 image: 'inkyphat.png'
 pincount: 40

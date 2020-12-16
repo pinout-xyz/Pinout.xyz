@@ -1,15 +1,15 @@
 <!--
 ---
-name: Inky pHAT
+name: Inky Impression
 class: board
 type: display
-formfactor: pHAT
+formfactor: custom
 manufacturer: Pimoroni
-description: An e-paper display for your Raspberry Pi
-url: https://shop.pimoroni.com/products/inky-phat
+description: A 7-colour e-paper display for your Raspberry Pi
+url: https://shop.pimoroni.com/products/inky-impression
 github: https://github.com/pimoroni/inky
-buy: https://shop.pimoroni.com/products/inky-phat
-image: 'inkyphat.png'
+buy: https://shop.pimoroni.com/products/inky-impression
+image: 'pimoroni-inky-impression.png'
 pincount: 40
 eeprom: no
 power:
@@ -61,13 +61,7 @@ The unit comes fully-assembled, with the display securely stuck down to the Inky
 To get the pHAT up and running, you can use the one-line product installer:
 
 ```bash
-curl https://get.pimoroni.com/inky | bash
+curl https://get.pimoroni.com/inkyphat | bash
 ```
 
 And follow the instructions!
-
-Note: For the old first edition Inky pHAT you should use:
-
-```bash
-curl https://get.pimoroni.com/inkyphat | bash
-```

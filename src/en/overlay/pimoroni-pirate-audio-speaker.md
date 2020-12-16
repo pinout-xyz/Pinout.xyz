@@ -33,6 +33,8 @@ pin:
   '36':
     name: Button X
   '38':
+    name: Button Y (Old)
+  '18':
     name: Button Y
   '33':
     name: LCD Backlight
@@ -61,3 +63,7 @@ Fully supported by Mopidy plugins to create an album-art-displaying digital audi
 * Onboard Speaker
 * 240x240 SPI LCD
 * 4 Playback control buttons
+
+## Button Y
+
+On older boards you might find button Y on GPIO 20. On newer boards this has been moved to GPIO 18 to free up PCM Data-in.

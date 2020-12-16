@@ -34,6 +34,8 @@ pin:
     name: Button X
   '38':
     name: Button Y
+  '18':
+    name: Button Y
   '33':
     name: LCD Backlight
   '21':
@@ -61,3 +63,7 @@ Fully supported by Mopidy plugins to create an album-art-displaying digital audi
 * Line-level 3.5mm output
 * 240x240 LCD
 * 4 Playback control buttons
+
+## Button Y
+
+On older boards you might find button Y on GPIO 20. On newer boards this has been moved to GPIO 18 to free up PCM Data-in.

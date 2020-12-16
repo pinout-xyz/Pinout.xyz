@@ -5,8 +5,9 @@ class: board
 type: multi
 formfactor: HAT
 manufacturer: InnoRoute GmbH
-description: The Real-Time HAT extends the Gigabit-Ethernet interface of the Raspberry Pi by professional networking functions.
+description: The Real-Time HAT extends the Gigabit-Ethernet interface of the Raspberry Pi, adding professional networking functions.
 github: https://github.com/InnoRoute/RealtimeHAT
+url: https://innoroute.com/realtimehat/
 image: 'RealTimeHAT.png'
 pincount: 40
 eeprom: yes
@@ -66,12 +67,13 @@ i2c:
 -->
 # Real-Time HAT
 
-The Real-Time HAT extends the Gigabit-Ethernet interface of the Raspberry Pi by professional networking functions.
+Real-Time HAT extends the Gigabit-Ethernet interface of the Raspberry Pi, adding professional networking functions.
 Typical applications are **industrial real-time communication** and **network monitoring**.
 
-The HAT provides **3 Gigabit-Ethernet ports**, one of which connecting to the Raspberry Pi's Ethernet port.
-Connection to the Raspberry Pi is realized via the GPIO connector and via a (short) Ethernet cable. Interface SPI0 is for main configuration, using either CE0# or CE1#. 
-Additional information on use cases, programming interfaces etc. can be found on [InnoRoute's website](https://innoroute.com/realtimehat/)., e.g., on using the HAT as an **endpoint in Time-Sensitive Networks**, as a **3-port Ethernet switch**, or to **measure and monitor** any kind of the traffic forwarded through the HAT.
+The HAT provides **3 Gigabit-Ethernet ports**, one of which is connected to the Raspberry Pi's Ethernet port.
+Connection to the Raspberry Pi is realized via the GPIO connector and via a (short) Ethernet cable. The SPI0 interface is used for main configuration, using either CE0# or CE1#.
+
+Additional information on use cases, programming interfaces etc. can be found on [InnoRoute's website](https://innoroute.com/realtimehat/), which includes details on using the HAT as an **endpoint in Time-Sensitive Networks**, as a **3-port Ethernet switch**, or to **measure and monitor** any kind of the traffic forwarded through the HAT.
 
 To install the necessary software, use the following commands:
 

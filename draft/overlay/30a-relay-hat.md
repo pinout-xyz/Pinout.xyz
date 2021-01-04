@@ -5,9 +5,10 @@ class: board
 type: io, relay
 formfactor: HAT
 manufacturer: PlasmaDan
-description: Raspberry Pi HAT I/O board which offers an impressive 30A switching capability.
+description: Raspberry Pi HAT I/O board with dual 30A SPDT power relays.
 url: https://plasmadan.com/30arelayhat
 github: https://github.com/plasmadancom/30A-Relay-HAT
+schematic: https://plasmadan.com/30a-relay-hat-schematic
 buy: https://plasmadan.com/30arelayhat
 image: '30a-relay-hat.png'
 pincount: 40
@@ -38,7 +39,7 @@ i2c:
 -->
 # 30A Relay HAT
 
-A Raspberry Pi HAT I/O board which offers an impressive 30A switching capability. Ideally suited to automation or industrial control, switching of household appliances, industrial machinery or automotive applications.
+The 30A Relay HAT is a dual SPDT power relay I/O board based on the Microchip MCP23008 I2C expander. Ideally suited to automation or industrial control, switching of household appliances, industrial machinery or automotive applications.
 
 ## Features
 

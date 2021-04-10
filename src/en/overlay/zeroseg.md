@@ -50,5 +50,5 @@ To install first enable SPI and update your pi then:
 ```bash
 sudo apt-get install build-essential python-dev python-spidev
 git clone https://github.com/AverageManVsPi/ZeroSeg.git
-cd zeroseg && sudo python setup.py install
+cd ZeroSeg && sudo python setup.py install
 ```

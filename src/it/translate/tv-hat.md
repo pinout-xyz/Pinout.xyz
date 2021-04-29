@@ -4,7 +4,7 @@ name: TV HAT
 class: board
 type: other
 formfactor: pHAT
-manufacturer: Rasbperry Pi
+manufacturer: Raspberry Pi
 description: Receives digital DVB-T2 TV streams on your Raspberry Pi to view them or stream them over a network to other devices.
 url: https://www.raspberrypi.org/products/raspberry-pi-tv-hat/
 github:

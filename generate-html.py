@@ -247,8 +247,9 @@ def load_overlay(overlay):
         if 'i2c' in loaded:
             for addr in loaded['i2c']:
                 data = loaded['i2c'][addr]
-                addr = str(addr)
-                dev = data['device'].upper()
+                if type(addr) is int:
+                    addr = "0x{:02x}".format(addr)
+                dev = data['device']
                 alt = None
                 try:
                     alt = data['alternate']

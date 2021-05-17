@@ -55,7 +55,7 @@ install:
 
 Fully supported by Mopidy plugins to create an album-art-displaying digital audio player based on the Raspberry Pi.
 
-* I2C DAC
+* I2S DAC
 * Headphone Amplifier
 * 240x240 LCD
 * 4 Playback control buttons

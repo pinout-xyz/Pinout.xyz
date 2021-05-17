@@ -5,13 +5,77 @@ class: interface
 type: pinout
 description: Raspberry Pi UART pins
 url: http://elinux.org/RPi_Serial_Connection
-pincount: 2
+pincount: 18
 pin:
   '8':
     name: TXD / Transmit
     direction: output
     active: high
   '10':
+    name: RXD / Receive
+    direction: input
+    active: high
+  '36':
+    name: CTS / Clear to Send
+    direction: both
+    active: high
+  '11':
+    name: RTS / Request to Send
+    direction: both
+    active: high
+  '27':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '28':
+    name: RXD / Receive
+    direction: input
+    active: high
+  '3':
+    name: CTS / Clear to Send
+    direction: both
+    active: high
+  '5':
+    name: RTS / Request to Send
+    direction: both
+    active: high
+  '7':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '29':
+    name: RXD / Receive
+    direction: input
+    active: high
+  '31':
+    name: CTS / Clear to Send
+    direction: both
+    active: high
+  '26':
+    name: RTS / Request to Send
+    direction: both
+    active: high
+  '24':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '21':
+    name: RXD / Receive
+    direction: input
+    active: high
+  '19':
+    name: CTS / Clear to Send
+    direction: both
+    active: high
+  '23':
+    name: RTS / Request to Send
+    direction: both
+    active: high
+  '32':
+    name: TXD / Transmit
+    direction: output
+    active: high
+  '33':
     name: RXD / Receive
     direction: input
     active: high
@@ -28,6 +92,8 @@ Asynchronous transmission allows data to be transmitted without the sender havin
 UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).
 
 It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
+
+Raspberry Pi 2/3 have two UARTs, uart1 and uart0. Raspberry Pi 4 has four additional UARTs available. Only uart0/1 is enabled over GPIO pin 14/15 by default. The additional UARTs can be enabled through the device tree overlays.
 
 Assuming you have WiringPi-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'
 

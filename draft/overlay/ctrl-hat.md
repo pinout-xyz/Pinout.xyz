@@ -8,6 +8,7 @@ manufacturer: PlasmaDan
 description: SIP style solid state relay (SSR) home automation and industrial control HAT for Raspberry Pi.
 url: https://plasmadan.com/ctrlhat
 github: https://github.com/plasmadancom/CTRL-HAT
+schematic: https://plasmadan.shop/ctrl-hat-v1-2-schematic/
 buy: https://plasmadan.com/ctrlhat
 image: 'ctrl-hat.png'
 pincount: 40

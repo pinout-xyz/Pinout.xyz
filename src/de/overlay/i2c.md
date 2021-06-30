@@ -29,7 +29,7 @@ pin:
 Der I2C-Bus des Raspberry Pi ist sehr praktisch um mit vielen unterschiedlichen Bausteinen
 zu kommunizieren - egal ob z.B. ein MCP23017 als digitale I/O-Erweiterung oder sogar ein ATmega. 
 
-Die Adresse einen angeschlossenen I2C-Bausteins kann mit einem einfachen Einzeiler überprüft werden:
+Die Adresse eines angeschlossenen I2C-Bausteins kann mit einem einfachen Einzeiler überprüft werden:
 
 ```bash
 sudo apt-get install i2c-tools

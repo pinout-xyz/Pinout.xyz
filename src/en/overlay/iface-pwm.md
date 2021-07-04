@@ -11,6 +11,8 @@ pin:
     name: PWM1
   '12':
     name: PWM0
+  '35':
+    name: PWM1
 -->
 # PWM - Pulse-width Modulation
 

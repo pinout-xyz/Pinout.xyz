@@ -56,6 +56,14 @@ pin:
     mode: SPI
   '23':
     mode: SPI
+  '29':
+    name: Button A
+  '31':
+    name: Button B
+  '36':
+    name: Button X
+  '18':
+    name: Button Y
 i2c:
   0x23:
     device: LTR559

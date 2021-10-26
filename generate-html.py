@@ -693,32 +693,18 @@ for overlay in overlays:
                 else:
                     o_formfactor = strings['form_undefined']
 
-            if 'collected' not in overlay:
-                boards_page.append({
-                    'name': overlay['name'],
-                    'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                        image=image,
-                        name=overlay['name'],
-                        page_url=overlay['page_url'],
-                        base_url=base_url,
-                        type=o_type,
-                        formfactor=o_formfactor,
-                        manufacturer=overlay['manufacturer'],
-                        resource_url=resource_url)
-                })
-            else:
-                boards_page.append({
-                    'name': overlay['name'],
-                    'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
-                        image=image,
-                        name=overlay['name'],
-                        page_url=overlay['page_url'],
-                        base_url=base_url,
-                        type=o_type,
-                        formfactor=o_formfactor,
-                        manufacturer=overlay['collected'],
-                        resource_url=resource_url)
-                })
+            boards_page.append({
+                'name': overlay['name'],
+                'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                    image=image,
+                    name=overlay['name'],
+                    page_url=overlay['page_url'],
+                    base_url=base_url,
+                    type=o_type,
+                    formfactor=o_formfactor,
+                    manufacturer=overlay.get('collected', overlay['manufacturer']),
+                    resource_url=resource_url)
+            })
 
 
 def interfaces_menu(current):

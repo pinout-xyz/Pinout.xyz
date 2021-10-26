@@ -5,6 +5,7 @@ class: board
 type: iot,radio
 formfactor: Custom
 manufacturer: Z-Wave.Me
+collected: Other
 description: Z-Wave transceiver module for Raspberry Pi
 url: https://z-wave.me/products/razberry/
 image: 'razberry.png'

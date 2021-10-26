@@ -5,6 +5,7 @@ class: board
 type: motor
 formfactor: HAT
 manufacturer: Pololu
+collected: Other
 description: A high-power motor driver board for the Raspberry Pi
 url: https://shop.pimoroni.com/collections/raspberry-pi/products/pololu-dual-g2-high-power-motor-driver-for-raspberry-pi
 buy: https://shop.pimoroni.com/collections/raspberry-pi/products/pololu-dual-g2-high-power-motor-driver-for-raspberry-pi

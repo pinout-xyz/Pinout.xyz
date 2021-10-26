@@ -5,6 +5,7 @@ class: board
 type: power
 formfactor: pHAT
 manufacturer: Omzlo
+collected: Other
 description: PiVoyager, the smart UPS for the Raspberry Pi
 url: https://www.omzlo.com/articles/pivoyager-the-smart-ups-for-the-raspberry-pi
 github: https://github.com/omzlo/pivoyager-hardware

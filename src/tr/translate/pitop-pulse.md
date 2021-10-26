@@ -5,6 +5,7 @@ class: board
 type: audio,io,led,sensor,multi
 formfactor: HAT
 manufacturer: pi-top
+collected: Other
 description: 7×7 RGB LED matrix, speaker and microphone
 url: http://pi-top.com/products/pulse
 github: https://github.com/pi-top/pi-topPULSE

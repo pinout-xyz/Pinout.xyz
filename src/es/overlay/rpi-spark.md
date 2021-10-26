@@ -5,6 +5,7 @@ class: board
 type: display, audio, multi, sensor, IO
 formfactor: pHAT
 manufacturer: mobiNRG
+collected: Other
 description: RPi-Spark pHAT y SDK te permite construir rápidamente proyectos para Raspberry Pi GPIO.
 url: https://www.mobinrg.com
 github: https://github.com/mobinrg/rpi_spark_foundations

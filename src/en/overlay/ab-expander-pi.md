@@ -3,7 +3,7 @@
 name: Expander Pi
 class: board
 type: adc, dac, io, rtc
-formfactor: Custom
+formfactor: HAT
 manufacturer: AB Electronics UK
 description: 8 ADC inputs, 2 DAC outputs, 16 IO channels and a Real-Time Clock
 url: https://www.abelectronics.co.uk/p/50/expander-pi

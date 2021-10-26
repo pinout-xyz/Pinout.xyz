@@ -3,7 +3,7 @@
 name: Real-Time HAT
 class: board
 type: multi
-formfactor: HAT
+formfactor: Custom
 manufacturer: InnoRoute GmbH
 collected: Other
 description: The Real-Time HAT extends the Gigabit-Ethernet interface of the Raspberry Pi, adding professional networking functions.

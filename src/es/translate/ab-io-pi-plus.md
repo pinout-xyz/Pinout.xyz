@@ -3,7 +3,7 @@
 name: IO Pi Plus
 class: board
 type: io
-formfactor: Custom
+formfactor: HAT
 manufacturer: AB Electronics UK
 description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/54/io-pi-plus

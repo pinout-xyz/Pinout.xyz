@@ -3,7 +3,7 @@
 name: ReSpeaker 4 Mic Linear Array
 class: board
 type: audio
-formfactor: phat
+formfactor: HAT
 manufacturer: seeed
 description: 4 mic linear array for Raspberry Pi to build AI and voice applications
 url: http://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/

@@ -3,7 +3,7 @@
 name: Raspberry Pi NB-IoT Shield
 class: board
 type: com
-formfactor: Custom
+formfactor: HAT
 manufacturer: Sixfab
 description: Connect from anywhere to the internet via NB-IoT on a Raspberry Pi
 github: https://github.com/sixfab/RPI-NB-IoT-Shield

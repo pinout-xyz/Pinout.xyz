@@ -3,7 +3,7 @@
 name: DOTs
 class: board
 type: otro
-formfactor: Otro
+formfactor: HAT
 manufacturer: Raspberry Pi
 description: Une los puntos para hacer un circuito
 url: http://www.raspberrypi.org/dots/

@@ -3,7 +3,7 @@
 name: ReSpeaker 4 Mic Array
 class: board
 type: audio
-formfactor: phat
+formfactor: HAT
 manufacturer: seeed
 description: 4 mic array for Raspberry Pi to build AI and voice applications
 url: http://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/

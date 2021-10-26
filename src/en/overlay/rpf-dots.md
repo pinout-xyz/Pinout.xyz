@@ -3,7 +3,7 @@
 name: DOTs
 class: board
 type: other
-formfactor: Custom
+formfactor: HAT
 manufacturer: Raspberry Pi
 description: Join the dots to make a circuit
 url: http://www.raspberrypi.org/dots/

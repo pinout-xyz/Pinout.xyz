@@ -3,7 +3,7 @@
 name: DOTs
 class: board
 type: hepsi
-formfactor: diğer
+formfactor: HAT
 manufacturer: Raspberry Pi
 description: Noktaları birleştirerek bir devre oluşturun
 url: http://www.raspberrypi.org/dots/

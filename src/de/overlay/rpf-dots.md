@@ -3,7 +3,7 @@
 name: DOTs
 class: board
 type: other
-formfactor: Custom
+formfactor: HAT
 manufacturer: Raspberry Pi
 description: verbinde die Punkte um eine Schaltung zu erstellen
 url: http://www.raspberrypi.org/dots/

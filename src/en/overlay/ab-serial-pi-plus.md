@@ -3,7 +3,7 @@
 name: Serial Pi Plus
 class: board
 type: com
-formfactor: Custom
+formfactor: HAT
 manufacturer: AB Electronics UK
 description: UART to RS232 Converter
 url: https://www.abelectronics.co.uk/p/51/serial-pi-plus

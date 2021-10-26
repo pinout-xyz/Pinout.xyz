@@ -3,7 +3,7 @@
 name: ReSpeaker 6 Mic Array
 class: board
 type: audio
-formfactor: phat
+formfactor: Custom
 manufacturer: seeed
 description: 6 mic array for Raspberry Pi to build AI and voice applications
 url: http://wiki.seeedstudio.com/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/

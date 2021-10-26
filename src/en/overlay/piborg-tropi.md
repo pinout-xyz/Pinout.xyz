@@ -3,7 +3,7 @@
 name: TroPi
 class: board
 type: LED
-formfactor: Custom
+formfactor: PHAT
 manufacturer: PiBorg
 description: A five LED add on board.
 url: https://www.piborg.org/tropi

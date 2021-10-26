@@ -3,7 +3,7 @@
 name: JuiceBox Zero
 class: board
 type: power
-formfactor: HAT
+formfactor: PHAT
 manufacturer: JuiceBox Zero
 description: JuiceBox Zero uninterruptible power supply for the Raspberry Pi Zero and Zero W.
 url: https://juiceboxzero.com/

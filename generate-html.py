@@ -52,6 +52,7 @@ default_strings = {
     'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'GPIO/BCM pin {} on Rev 1 ( very early ) Pi',
+    'supported_on': 'Supported on {} only',
     'physical_pin_n': 'Physical/Board pin {}',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
@@ -462,6 +463,9 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'wiringpi' in pin['scheme']:
             wiringpi = pin['scheme']['wiringpi']
             pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
+
+    if 'supported' in overlay_pin:
+        pin_link_title.append(strings['supported_on'].format(overlay_pin['supported']))
 
     pin_url = base_url + slugify('pin{}_{}'.format(pin_num, pin_url))
 

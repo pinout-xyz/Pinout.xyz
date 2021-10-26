@@ -20,6 +20,7 @@ strings:
 - uses_3v3: 'Alimentación 3v3'
 - uses_n_gpio_pins: 'Usa {} pines GPIO'
 - bcm_pin_rev1_pi: 'pin BCP {} en Rev 1 (primera) Pi'
+- supported_on: 'Supported on {} only'
 - physical_pin_n: 'pin físico {}'
 - wiring_pi_pin: 'pin Wiring Pi {}'
 - made_by: 'Fabricado por {manufacturer}'

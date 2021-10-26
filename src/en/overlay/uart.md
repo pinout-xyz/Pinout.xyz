@@ -8,77 +8,91 @@ url: http://elinux.org/RPi_Serial_Connection
 pincount: 18
 pin:
   '8':
-    name: TXD / Transmit
+    name: UART0/1 TXD
     direction: output
     active: high
   '10':
-    name: RXD / Receive
+    name: UART0/1 RXD
     direction: input
     active: high
   '36':
-    name: CTS / Clear to Send
+    name: UART0/1 CTS
     direction: both
     active: high
   '11':
-    name: RTS / Request to Send
+    name: UART0/1 RTS
     direction: both
     active: high
   '27':
-    name: TXD / Transmit
+    name: UART2 TXD
     direction: output
     active: high
+    supported: Pi4
   '28':
-    name: RXD / Receive
+    name: UART2 RXD
     direction: input
     active: high
+    supported: Pi4
   '3':
-    name: CTS / Clear to Send
+    name: UART2 CTS
     direction: both
     active: high
+    supported: Pi4
   '5':
-    name: RTS / Request to Send
+    name: UART2 RTS
     direction: both
     active: high
+    supported: Pi4
   '7':
-    name: TXD / Transmit
+    name: UART3 TXD
     direction: output
     active: high
+    supported: Pi4
   '29':
-    name: RXD / Receive
+    name: UART3 RXD
     direction: input
     active: high
+    supported: Pi4
   '31':
-    name: CTS / Clear to Send
+    name: UART3 CTS
     direction: both
     active: high
+    supported: Pi4
   '26':
-    name: RTS / Request to Send
+    name: UART3 RTS
     direction: both
     active: high
+    supported: Pi4
   '24':
-    name: TXD / Transmit
+    name: UART4 TXD
     direction: output
     active: high
+    supported: Pi4
   '21':
-    name: RXD / Receive
+    name: UART4 RXD
     direction: input
     active: high
+    supported: Pi4
   '19':
-    name: CTS / Clear to Send
+    name: UART4 CTS
     direction: both
     active: high
+    supported: Pi4
   '23':
-    name: RTS / Request to Send
+    name: UART4 RTS
     direction: both
     active: high
+    supported: Pi4
   '32':
-    name: TXD / Transmit
+    name: UART5 TXD
     direction: output
     active: high
+    supported: Pi4
   '33':
-    name: RXD / Receive
+    name: UART5 RXD
     direction: input
     active: high
+    supported: Pi4
 -->
 # UART - Universal Asynchronous Receiver/Transmitter
 
@@ -86,6 +100,11 @@ pin:
 * UART pins in WiringPi are: 15, 16
 
 UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.
+
+* TXD - Transmit
+* RXD - Receive
+* CTS - Clear to send
+* RTS - Request to send
 
 Asynchronous transmission allows data to be transmitted without the sender having to send a clock signal to the receiver. Instead, the sender and receiver agree on timing parameters in advance and special bits called 'start bits' are added to each word and used to synchronize the sending and receiving units.
 

@@ -20,6 +20,7 @@ strings:
 - uses_3v3: 'alimentation 3v3'
 - uses_n_gpio_pins: '{} broches GPIO actives'
 - bcm_pin_rev1_pi: 'broche BCM {} sur Raspi Rev 1'
+- supported_on: 'Supported on {} only'
 - physical_pin_n: 'broche physique {}'
 - wiring_pi_pin: 'broche Wiring Pi {}'
 - made_by: 'fabriqué par {manufacturer}'

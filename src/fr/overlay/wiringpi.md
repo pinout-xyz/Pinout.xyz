@@ -4,7 +4,7 @@ name: WiringPi
 class: interface
 type: pinout
 page_url: wiringpi
-url: http://wiringpi.com
+url: https://github.com/WiringPi/
 github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
@@ -64,24 +64,12 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#WiringPi sur Raspberry Pi
+# WiringPi
 
-###WiringPi est un concept proche de la façon dont Arduino adresse ses entrées et sorties, privilégiant la simplicité.
+WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 
-Le but avoué est de définir une librairie unique ainsi qu'un set de fonctions permettant l'accès au GPIO de la Raspberry Pi à partir de plusieurs languages de programmation.
+The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi" respectively.
 
-En effet, bien que WiringPi soit une bibliothèque en C au départ, elle est aussi disponible en Ruby et Python. Pour l'installer, un simple "gem install wiringpi" ou "pip install WiringPi" fera l'affaire, pour l'environnement Ruby et Python respectivement.
+WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
 
-Pour les usagers Python, noter bien le '2' suivant le 'wiringpi', cette nouvelle version est basée sur WiringPi 2 et incorpore la majorité des fonctionnalités de la version C.
-
-##Premiers pas avec WiringPi
-
-WiringPi présente son propre système de numérotation des broches GPIO, visible sur la gauche de cette page.
-
-Installez la librairie sous Python est particulièrement simple:
-
-```bash
-sudo pip install WiringPi
-```
-
-Pour toute information supplémentaire, visitez le site officiel de WiringPi!
+WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/

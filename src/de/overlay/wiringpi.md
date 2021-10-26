@@ -4,7 +4,7 @@ name: WiringPi
 class: interface
 type: pinout
 page_url: wiringpi
-url: http://wiringpi.com
+url: https://github.com/WiringPi/
 github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
@@ -64,18 +64,12 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#WiringPi Bibliothek
+# WiringPi
 
-###WiringPi ist der Versuch die Einfachheit der Verdrahtung des Arduino auf den Raspberry Pi zu bringen.
+WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 
-Das Ziel dieser Bibliothek ist es, eine einzige gemeinsame Plattform und Programmierschnistelle für den Zugriff auf die
-GPIOs des Rapsberry Pi für verschiedene Programmiersprachen zur Verfügung zu stellen.
-Im Kern ist WiringPi eine C-Bibliothek, aber sie steht auch in Ruby und Python per "gem install wiringpi" bzw. "pip install WiringPi" zur Verfügung.
+The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi" respectively.
 
-Bei Python muss man auf die "2" am Ende achten - das ist die WiringPi-Python Bibliothek, die momentan die aktuelle Version ist.
+WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
 
-Mehr Informationen findest Du auf der offiziellen WiringPi-Webseite.
-
-##Erste Schritte mit WiringPi
-
-WiringPi benutzt seine eigene Nummerierung der Anschlüsse am Pi. Links siehst Du die entsprechende Nummerierung.
+WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/

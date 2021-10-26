@@ -4,7 +4,7 @@ name: WiringPi
 class: interface
 type: pinout
 page_url: wiringpi
-url: http://wiringpi.com
+url: https://github.com/WiringPi/
 github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
@@ -64,22 +64,12 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#Raspberry Pi WiringPi
+# WiringPi
 
-###WiringPi, Arduino benzeri bir kablolama basitliğini Raspberry Pi'ye getirmeyi amaçlayan bir projedir.
+WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 
-WiringPi, Arduino kullanmış olanların hiç yabancılık çekmeyeceği, Arduino benzeri bir pinleme/klablolama sistemini Raspberry Pi'ye getirmeyi amaçlamış üçüncü parti bir kütüphanedir. Bu kütüphanenin amacı benzer ve ortak bir platform oluşturmak, ve de Raspberry Pi GPIO pinlerini farklı diller ile yönetebilmektir. WiringPi özünde C dili ile yazılmıştır, fakat hem Ruby hem de Python türevleri mevcuttur. Bunları sıra ile Ruby için "gem install wiringpi" veya Python için "pip install WiringPi" diyerek kurabilirsiniz.
+The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi" respectively.
 
-Python kullanıcıları kütüphanenin adının sonundaki 2'ye dikkat etmiş olabilirler. Bu aslında WiringPi-Python kütüphanesidir. Bu kütüphane sonunda mevcut WiringPi kütüğhanesindeki özellikleri ve esnekliği Raspberry Pi'ye Python dilinde getirmeyi başarmış bir kütüphanedir.
+WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
 
-##WiringPi'ye başlangıç
-
-WiringPi [kendi pin numaralama şematiğini kullanıyor](http://wiringpi.com/pins/). Bu linkten WiringPi'nin GPIO pinlerinizi nasıl numaralandırdığını görebilir, pinlerin ne yaptığını inceleyebilir, ve de C, Python veya Ruby dilleri ile GPIO programlamaya başlayabilir, devre elemanlarınızı yönetebilirsiniz.
-
-Python'a kurmak saniyelerinizi alacak:
-
-```bash
-sudo pip install WiringPi
-```
-
-Daha fazla bilgi için WiringPi resmi web sitesi ni ziyaret edebilirsiniz.
+WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/

@@ -4,7 +4,7 @@ name: WiringPi
 class: interface
 type: pinout
 page_url: wiringpi
-url: http://wiringpi.com
+url: https://github.com/WiringPi/
 github: https://github.com/WiringPi/WiringPi-Python
 pin:
   '3':
@@ -64,26 +64,12 @@ pin:
   '40':
     name: WiringPi 29
 -->
-#Raspberry Pi WiringPi
+# WiringPi
 
-###WiringPi è un tentativo di portare la semplicità di connessione dell'Arduino sul Raspberry.
+WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
 
-L'idea è di avere un'unica piattaforma comune e un insieme di funzioni per accedere alle porte GPIO da diversi linguaggi. 
-WiringPi ha il cuore in una libreria C, ma è disponibile sia per Ruby che per Python; gli utenti possono installarla usando 
-rispettivamente "gem install wiringpi" e "pip install WiringPi".
+The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi" respectively.
 
-Gli utenti Python noteranno il 2 alla fine del pacchetto; la libreria WiringPi-Python finalmente porta tutta una serie di 
-funzionalità preesistenti di WiringPi a Python, incluse le ultime presenti in WiringPi 2.
+WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
 
-##Primi passi con WiringPi
-
-WiringPi usa il suo sistema di numerazione dei pin; qui imparerai come WiringPi indicizza i pin GPIO, cosa fanno tali pin e 
-come realizzare progetti interessanti con Python o Ruby.
-
-Installarla in Python non potrebbe essere più semplice. Semplicemente:
-
-```bash
-sudo pip install WiringPi
-```
-
-Per maggiori informazioni su WiringPi, dai un'occhiata al loro sito ufficiale.
+WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/

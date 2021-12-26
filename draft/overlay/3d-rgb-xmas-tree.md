@@ -8,7 +8,7 @@ manufacturer: PiHut
 description: A 3D Christmas tree PCB with RGB LEDs controlled by the Raspberry Pi GPIO pins
 url: https://thepihut.com/products/3d-rgb-xmas-tree-for-raspberry-pi
 buy: https://thepihut.com/products/3d-rgb-xmas-tree-for-raspberry-pi
-image: '3d-xmas-tree.png'
+image: '3d-rgb-xmas-tree.png'
 pincount: 40
 eeprom: no
 power:

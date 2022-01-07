@@ -1,11 +1,11 @@
-This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
+此引脚可被复用为 UART 发送引脚，即 TX 引脚。UART 引脚就是通常所说的“串口”，默认作为树莓派的终端输出。连上合适的串口线的话，可以通过这个串口终端使用命令行控制树莓派。
 
-The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.
+UART 引脚可以用来配置没有显示屏的树莓派，以进行联网等操作。
 
-UART can be used to talk to Serial GPS modules or sensors such as the PM5003, but you must make sure you disable the Serial Console in raspi-config first.
+UART 还可以用来连接串行 GPS 模块或者 PM5003 之类的传感器，但得先确保在 raspi-config 中关闭了树莓派的串口终端。
 
-On the Pi 3 and 4 the UART is, by default, used for Bluetooth and you may need to add "dtoverlay=miniuart-bt" to "/boot/config.txt" to achieve a stable.
+在树莓派 3 和 4 上，UART 默认用来与蓝牙通信。为了稳定运行，最好在 "/boot/config.txt" 中添加 "dtoverlay=miniuart-bt" 这一配置。
 
-[Learn more about UART](/pinout/uart)
+[继续了解 UART](/pinout/uart)
 
-[Raspberry Pi UART documentation](https://www.raspberrypi.org/documentation/configuration/uart.md)
+[树莓派 UART 官方文档](https://www.raspberrypi.org/documentation/configuration/uart.md)

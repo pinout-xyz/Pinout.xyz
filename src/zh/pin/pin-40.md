@@ -1,1 +1,1 @@
-GPIO 21 is used by PCM to provide a data output signal to an external audio device such as a DAC chip.
+GPIO 21 属于 PCM 模块，用来向外部音频设备输出数据信号，比如 DAC 芯片。

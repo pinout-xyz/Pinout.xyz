@@ -1,3 +1,3 @@
-These pins are generally reserved for i2c communication with an EEPROM.
+此引脚是保留引脚，通常用于与 EEPROM 芯片进行 i2c 通讯。
 
-Connect those pins for auto configuration, if the board provides the feature (check the board description for details of EEPROM functionality).
+如果开发板提供了这一功能的话，可以连接这些引脚来进行自动配置（请查看开发板的 EEPROM 功能介绍）。

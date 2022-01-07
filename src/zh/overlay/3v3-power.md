@@ -9,12 +9,12 @@ pin:
   '1':
   '17':
 -->
-# 3v3 Power
+# 3v3 供电
 
-All Raspberry Pi models since the B+ can provide up to 500mA on the 3v3 pins, thanks to a switching regulator. In some cases it may be possible to draw more but, due to lack of documentation and testing on the actual limits, 500mA is given as a rule of thumb.
+由于添加了开关稳压器，所以从树莓派 1 代 B+ 开始的所有型号，3v3 供电引脚都支持输出高达 500mA 的电流。在某些情况下也许可以输出更大的电流，但是我们并没有找到相关文档，也没有实际测试过，所以 500mA 是根据经验给出的合理值。
 
-The 3v3 supply pin on the early Raspberry Pi had a maximum available current of only 50mA.
+早期树莓派的 3v3 引脚最大只支持输出 50mA 的电流。
 
-The 5v supply coupled with a 3v3 regulator is recommended for powering 3.3v projects.
+如果想给 3.3v 的设备供电，建议使用 5v 供电引脚并配合 3v3 稳压器输出。
 
-The Piversify blog has [an exploration of the 3v3 supply rail on the Raspberry Pi B+](https://raspberrypise.tumblr.com/post/144555785379/exploring-the-33v-power-rail)
+Piversify 博客 [对树莓派 B+ 的 3v3 输出做了深入的探索](https://raspberrypise.tumblr.com/post/144555785379/exploring-the-33v-power-rail)

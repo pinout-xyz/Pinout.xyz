@@ -1,3 +1,3 @@
-SDA (I2C1 Data) is one of the i2c pins on the Pi, [learn more about i2c](/pinout/i2c).
+SDA（I2C1 数据）引脚是树莓派的 i2c 引脚之一。[详细了解 i2c](/pinout/i2c)。
 
-SDA includes a fixed, 1.8 kΩ pull-up to 3.3v, which means this pin is not suitable for use as a general purpose IO where no pull-up resistor is desired.
+SDA 引脚被一个 1.8kΩ 的电阻上拉至 3.3v，也就是说，在不需要上拉电阻的情况下，请不要把这个引脚作为通用的输入输出引脚。

@@ -1,3 +1,3 @@
-The 5v power pins are connected directly to the Pi's power input and will capably provide the full current of your mains adaptor, less that used by the Pi itself.
+5v 供电引脚直接连接在树莓派的电源输入上，除去 Pi 自身消耗的电流外，该引脚可以提供电源适配器提供的全部电流。
 
-With a decent power supply, such as the official 3A adapter on the Pi 4, you can expect to pull about 1A to 2A.
+如果电源适配器合格的话（比如树莓派 4 的 3A 适配器），该引脚可以输出 1A 到 2A 的电流。

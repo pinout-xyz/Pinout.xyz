@@ -1,5 +1,5 @@
-The 3v3 supply pin on the early Raspberry Pi had a maximum available current of about 50 mA. Enough to power a couple of LEDs or a microprocessor, but not much more.
+早期树莓派的 3v3 引脚最大可以输出 50mA 左右的电流，可以驱动几个 LED 或者一个单片机，但也仅此而已。
 
-All Raspberry Pi since the Model B+ can provide quite a bit more, up to 500mA to remain on the safe side, thanks to a switching regulator.
+树莓派 B+ 以后的版本添加了开关稳压器，所以可以输出更大的电流（500mA 以内）。
 
-You should generally use the 5v supply, coupled with a 3v3 regulator for 3.3v projects.
+如果想给 3.3v 的设备供电，建议使用 5v 供电引脚并配合 3v3 稳压器输出。

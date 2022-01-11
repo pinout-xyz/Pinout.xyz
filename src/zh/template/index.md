@@ -1,39 +1,39 @@
 # Pinout!
 
-### The Raspberry Pi GPIO pinout guide.
+### 树莓派引脚定义导航
 
-This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces. Pinout also includes [dozens of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
+本站是一个交互式的树莓派 GPIO 引脚定义查询网站，并同时提供各类树莓派 GPIO 接口的介绍。本站同时囊括了[很多种树莓派扩展板、盖板（HAT）、迷你盖板（pHAT）的引脚定义](/boards).
 
-## Support Pinout.xyz
+## 支持 Pinout.xyz
 
-If you love Pinout, please help me fund new features and improvements:
+如果你喜欢本站，请捐助我们，以便我们继续努力，提供更多功能与改进：
 
-* via GitHub at [GitHub.com/sponsors/gadgetoid](https://github.com/sponsors/gadgetoid)
-* via Patreon at [Patreon.com/gadgetoid](https://www.patreon.com/gadgetoid)
+* 通过 GitHub [GitHub.com/sponsors/gadgetoid](https://github.com/sponsors/gadgetoid)
+* 通过 Patreon [Patreon.com/gadgetoid](https://www.patreon.com/gadgetoid)
 
-Every $1 makes all the difference! Thank you.
+一分钱也是爱，感谢！
 
-## pHAT Stack
+## 关于迷你盖板（pHAT）
 
-Pinout has teamed up with Pimoroni to create a [prototype board compatibility tool, check it out here!](/phatstack)
+本站已与 Pimoroni 合作以创建一个[开发板兼容工具，点击查看！](/phatstack)
 
-## Explore HATs & pHATs
+## 探索：盖板与迷你盖板
 
-[Check out Pinout's board explorer](/boards)! Use it to find the pinout for your Raspberry Pi add-on board, or discover new boards. If you manufacture boards, we'd love to add yours too. [You can contribute to Pinout.xyz at GitHub.com](https://github.com/gadgetoid/Pinout.xyz).
+[查看本站的开发板导航页](/boards)！你可以在这里找到树莓派扩展板的引脚定义，或者体验下新板子。如果你做出来了自己的开发板，我们也很乐意把它加在这个页面中。[你可以在 GitHub.com 中向 Pinout.xyz 贡献代码](https://github.com/gadgetoid/Pinout.xyz).
 
-## What do these numbers mean?
+## 页面中的数字代表什么意思？
 
-* GPIO - General Purpose Input/Output, aka "BCM" or "Broadcom". These are the big numbers, e.g. "GPIO 22". You'll use these with RPi.GPIO and GPIO Zero.
-* Physical - or "Board" correspond to the pin's physical location on the header. These are the small numbers next to the header, e.g. "Physical Pin 15".
+* GPIO 引脚 - 通用输入输出引脚。这些数字的字体较大，比如“GPIO 22”。你可以在树莓派或者树莓派 Zero 上使用它们。
+* 硬件引脚 - 也就是引脚在端子上的硬件位置。它们的字体较小，并紧挨着引脚。比如“硬件引脚 15”。
 * WiringPi - for Gordon Henderson's Wiring Pi library. These are shown as a tooltip when you mouseover a pin.
 * Rev 1 Pi - alternate GPIO/BCM numbers for the original, 26-pin model "A" and "B" Pi.
 
-## What's the orientation of this pinout?
+## 引脚定义图的排布方向是怎样的？
 
-Pinout depicts pin 1 in the top left corner. Pin 1 is the only pin with a square solder pad, which may only be visible from the underside of your Pi. If you orient your Pi such that you are looking at the top with the GPIO on the right and HDMI port(s) on the left, your orientation will match Pinout.
+在本页面上，左上方的是 1 号引脚。1 号引脚是唯一一个方形焊盘的引脚，从树莓派下方就可以看出来。再把树莓派转个面，从上方看树莓派，并让 HDMI 接口朝左，这样的话，你的树莓派朝向就跟本站页面一致了。
 
-## Graphical Pinout
+## 引脚定义图片下载
 
-We've whipped up a simple graphical Raspberry Pi GPIO Pinout. Feel free to print, embed, share or hotlink this image and don't forget to credit us!
+我们做了一个简单的树莓派 GPIO 引脚定义图。你可以免费下载、打印、分享链接，我们只需要一声谢谢就好啦。
 
-![Graphical Raspberry Pi GPIO Pinout](https://raw.githubusercontent.com/Gadgetoid/Pinout.xyz/master/resources/raspberry-pi-pinout.png)
+![树莓派 GPIO 引脚定义图](https://raw.githubusercontent.com/Gadgetoid/Pinout.xyz/master/resources/raspberry-pi-pinout.png)

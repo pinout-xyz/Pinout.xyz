@@ -1,15 +1,15 @@
 ---
-name: Raspberry Pi GPIO Pinout
+name: 树莓派 GPIO 引脚定义
 pins:
   '1':
-    name: 3v3 Power
+    name: 3v3 供电
     type: "+3v3"
   '2':
-    name: 5v Power
+    name: 5v 供电
     type: "+5v"
   '3':
     name: I2C1 SDA
-    description: I2C Data
+    description: I2C 数据
     type: GPIO/I2C
     scheme:
       wiringpi: 8
@@ -22,11 +22,11 @@ pins:
       alt3: AVEOUT VSYNC
       alt4: AVEIN VSYNC
   '4':
-    name: 5v Power
+    name: 5v 供电
     type: "+5v"
   '5':
     name: I2C1 SCL
-    description: I2C Clock
+    description: I2C 时钟
     type: GPIO/I2C
     scheme:
       wiringpi: 9
@@ -39,7 +39,7 @@ pins:
       alt3: AVEOUT HSYNC
       alt4: AVEIN HSYNC
   '6':
-    name: Ground
+    name: 地线
     type: GND
   '7':
     name: GPCLK0
@@ -56,7 +56,7 @@ pins:
       alt5: JTAG TDI
   '8':
     name: UART TX
-    description: UART Transmit
+    description: UART 发送
     type: GPIO/UART
     scheme:
       wiringpi: 15
@@ -69,11 +69,11 @@ pins:
       alt4: AVEIN VID10
       alt5: UART1 TXD
   '9':
-    name: Ground
+    name: 地线
     type: GND
   '10':
     name: UART RX
-    description: UART Receive
+    description: UART 接收
     type: GPIO/UART
     scheme:
       wiringpi: 16
@@ -100,7 +100,7 @@ pins:
       alt5: UART1 RTS
   '12':
     name: PCM CLK
-    description: PCM Clock
+    description: PCM 时钟
     type: GPIO/PCM
     scheme:
       wiringpi: 1
@@ -126,7 +126,7 @@ pins:
       alt3: SD1 DAT3
       alt4: JTAG TMS
   '14':
-    name: Ground
+    name: 地线
     type: GND
   '15':
     name: ''
@@ -153,7 +153,7 @@ pins:
       alt3: SD1 CMD
       alt4: JTAG RTCK
   '17':
-    name: 3v3 Power
+    name: 3v3 供电
     type: "+3v3"
   '18':
     name: ''
@@ -180,7 +180,7 @@ pins:
       alt3: AVEOUT VID6
       alt4: AVEIN VID6
   '20':
-    name: Ground
+    name: 地线
     type: GND
   '21':
     name: SPI0 MISO
@@ -220,7 +220,7 @@ pins:
       alt4: AVEIN VID7
   '24':
     name: SPI0 CE0
-    description: SPI Chip Select 0
+    description: SPI 片选信号 0
     type: GPIO/SPI
     scheme:
       wiringpi: 10
@@ -232,11 +232,11 @@ pins:
       alt3: AVEOUT VID4
       alt4: AVEIN VID4
   '25':
-    name: Ground
+    name: 地线
     type: GND
   '26':
     name: SPI0 CE1
-    description: SPI Chip Select 1
+    description: SPI 片选信号 1
     type: GPIO/SPI
     scheme:
       wiringpi: 11
@@ -249,7 +249,7 @@ pins:
       alt4: AVEIN VID3
   '27':
     name: EEPROM SDA
-    description: HAT EEPROM i2c Data
+    description: 盖板 EEPROM i2c 数据
     type: GPIO/I2C
     scheme:
       wiringpi: 30
@@ -262,7 +262,7 @@ pins:
       alt4: AVEIN VCLK
   '28':
     name: EEPROM SCL
-    description: HAT EEPROM i2c Clock
+    description: 盖板 EEPROM i2c 时钟
     type: GPIO/I2C
     scheme:
       wiringpi: 31
@@ -287,7 +287,7 @@ pins:
       alt4: AVEIN VID1
       alt5: JTAG TDO
   '30':
-    name: Ground
+    name: 地线
     type: GND
   '31':
     name: ''
@@ -331,7 +331,7 @@ pins:
       alt4: AVEIN VID9
       alt5: JTAG TCK
   '34':
-    name: Ground
+    name: 地线
     type: GND
   '35':
     name: PCM FS
@@ -374,7 +374,7 @@ pins:
       alt4: JTAG TDI
   '38':
     name: PCM DIN
-    description: PCM Data-In
+    description: PCM 数据输入
     type: GPIO/PCM
     scheme:
       wiringpi: 28
@@ -387,11 +387,11 @@ pins:
       alt4: SPI1 MOSI
       alt5: GPCLK0
   '39':
-    name: Ground
+    name: 地线
     type: GND
   '40':
     name: PCM DOUT
-    description: PCM Data-Out
+    description: PCM 数据输出
     type: GPIO/PCM
     scheme:
       wiringpi: 29

@@ -15,13 +15,10 @@ pin:
   '34':
   '39':
 -->
-# Ground
+# 地线
 
-The Ground pins on the Raspberry Pi are all electrically connected, so it doesn't matter
-which one you use if you're wiring up a voltage supply.
+树莓派上所有地线引脚在电路上都是连在一起的，所以如果想供电的话，无论哪一根引脚都是一样的。
 
-Generally the one that's most convenient or closest to the rest of your connections is tidier
-and easier, or alternatively the one closest to the supply pin that you use.
+通常情况下，插线的时候怎么方便怎么来，选择最靠近其他接线的地线引脚即可，或者选择最靠近供电引脚的地线。
 
-For example, it's a good idea to use Physical Pin 17 for 3v3 and Physical Pin 25 for ground when using
-the SPI connections, as these are right next to the important pins for SPI0.
+比如，在进行 SPI 通讯时，使用物理引脚 17 和 25 进行 3v3 供电是最好不过的，因为这两个引脚最靠近 SPI0 的引脚。

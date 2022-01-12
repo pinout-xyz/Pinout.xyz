@@ -9,8 +9,8 @@ pin:
   '2':
   '4':
 -->
-# 5v Power
+# 5v 供电
 
-The 5v power pins are connected directly to the Pi's power input and will capably provide the full supply current of your mains adaptor, minus that used by the Pi itself.
+5v 供电引脚直接接在树莓派的电源输入上，除去 Pi 自身消耗的电流外，该引脚可以提供电源适配器提供的全部电流。
 
-With a decent power supply, such as the official Pi adaptor, you can expect to pull about 1.5A. This varies by Pi model and adapter used. Devices that require a high current- such as LED panels, long LED strips or motors- should use an external power supply.
+如果电源适配器合格的话（比如树莓派官方电源适配器），该引脚可以输出 1.5A 左右的电流。不同的树莓派版本或者电源适配器能输出的电流也会不同。需要消耗大电流的器件，比如 LED 面板、大功率 LED 发光条、或者电机等，应该外接电源，不要用树莓派供电。

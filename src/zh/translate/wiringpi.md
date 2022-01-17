@@ -66,10 +66,10 @@ pin:
 -->
 # WiringPi
 
-WiringPi is an attempt to bring Arduino-wiring-like simplicity to the Raspberry Pi.
+WiringPi 是将树莓派引脚 Arduino 化的一个项目，以此让控制树莓派 GPIO 更加简单。
 
-The goal is to have a single common platform and set of functions for accessing the Raspberry Pi GPIO across multiple languages. WiringPi is a C library at heart, but it's available to both Ruby and Python users who can "gem install wiringpi" or "pip install wiringpi" respectively.
+WiringPi 旨在创造一个跨语言的通用 GPIO 控制平台及相关函数库。Wiring Pi 本质上是用 C 写的，但同样也适用于 Ruby 和 Python，只需要通过 `gem install wiringpi` 或者 `pip install wiring pi` 安装即可。
 
-WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
+WiringPi 有其独特的引脚编号，本页面阐释了 WiringPi 如何对 GPIO 进行编号。
 
-WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/
+尽管 WiringPi 已经被其原作者放弃了，但如果你有兴趣，还是可以关注 GitHub 的仓库 https://github.com/WiringPi/ ，此社区维护了 WiringPi 的多个版本和不同开发板的适配。

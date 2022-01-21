@@ -23,22 +23,22 @@ pin:
     direction: both
     active: high
 -->
-# I2C - Inter Integrated Circuit
+# I2C - 集成电路总线
 
-GPIO 2 and GPIO 3 - the Raspberry Pi's I2C1 pins - allow for two-wire communication with a variety of external sensors and devices.
+GPIO 2 和 GPIO 3 是树莓派 I2C1 的引脚。它们可以与各种支持两线制的外设传感器连接。
 
-The I2C pins include a fixed 1.8 kΩ pull-up resistor to 3.3v. They are not suitable for use as general purpose IO where a pull-up might interfere.
+树莓派的 I2C 引脚自带一个 1.8kΩ 的上拉电阻，上拉到 3.3V。因此，如果把这个引脚当成普通 GPIO 来用的话，要注意这个上拉电阻是否有影响。
 
-I2C is a multi-drop bus, multiple devices can be connected to these same two pins. Each device has its own unique I2C address.
+I2C 是一个多节点的总线，这两根引脚上可以连接多个设备，每个设备有唯一的 I2C 地址。
 
-You can verify the address of connected I2C peripherals with a simple one-liner:
+你可以通过下面的代码快速检测连在树莓派 I2C 总线上的设备地址：
 
 ```bash
 sudo apt-get install i2c-tools
 sudo i2cdetect -y 1
 ```
 
-You can then access I2C from Python using the smbus library:
+如果用 Python 的话，可以通过 smbus 库来实现 I2C 访问：
 
 ```python
 import smbus
@@ -48,4 +48,4 @@ bus = smbus.SMBus(DEVICE_BUS)
 bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
 ```
 
-GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typically used by the system to read the HAT EEPROM.
+GPIO 0 和 GPIO 1 是 I2C0 的引脚，可以作为另一个 I2C 总线来用，但它们通常用来读写树莓派盖板上的 EEPROM。

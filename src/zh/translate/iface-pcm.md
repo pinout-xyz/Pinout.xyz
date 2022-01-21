@@ -14,6 +14,6 @@ pin:
   'bcm21':
     name: DOUT
 -->
-# PCM - Pulse-code Modulation
+# PCM - 脉冲编码调制
 
-PCM (Pulse-code Modulation) is a digital representation of sampled analog. On the Raspberry Pi it's a form of digital audio output which can be understood by a DAC for high quality sound.
+PCM（脉冲编码调制）是一种模拟信号的数字化方法。在树莓派上，它是一种数字音频输出形式。其输出可以被 DAC 解析为高质量音频。

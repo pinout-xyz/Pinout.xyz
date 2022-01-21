@@ -45,23 +45,21 @@ pin:
   '40':
     name: SPI1 SCLK
 -->
-# SPI - Serial Peripheral Interface
+# SPI - 串行外设接口
 
 ---
-### SPI0 pins are GPIO 7, 8, 9, 10, 11
-### SPI1 pins are GPIO 16, 17, 18, 19, 20, 21
+### SPI0 的引脚是 GPIO 7, 8, 9, 10, 11
+### SPI1 的引脚是 GPIO 16, 17, 18, 19, 20, 21
 ---
 
-Known as the four-wire serial bus, SPI lets you attach multiple compatible devices to a single set of pins by assigning them different chip-select pins.
+SPI 是一个四线制的总线，通过切换片选引脚，可以用同一套数据引脚来访问多个不同的外设。
 
-To talk to an SPI device, you assert its corresponding chip-select pin.
+默认情况下，树莓派允许用户使用 SPI0 及其片选引脚 CE0（GPIO 8）和 CE1（GPIO 7）。
 
-By default the Pi allows you to use SPI0 with chip select pins on CE0 on GPIO 8 and CE1 on GPIO 7.
-
-You can enable SPI1 with a dtoverlay configured in "/boot/config.txt", for example:
+如果要启用 SPI，你需要在 `/boot/config.txt` 中加一行 dtoverlay 的配置，比如：
 
 ```
 dtoverlay=spi1-3cs
 ```
 
-For full details of the SPI dtoverlays (and others) see [the Raspberry Pi dtoverlay README](https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README)
+关于树莓派 SPI dtoverlays 的详情，请访问 [树莓派 dtoverlay 介绍](https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README)

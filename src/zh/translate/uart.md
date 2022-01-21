@@ -80,22 +80,23 @@ pin:
     direction: input
     active: high
 -->
-# UART - Universal Asynchronous Receiver/Transmitter
+# UART - 通用异步收发器
 ---
-### UART pins in BCM mode are: 14, 15
-### UART pins in WiringPi are: 15, 16
+### BCM 模式下的 UART 引脚: 14, 15
+### Wiring Pi 模式下的 UART 引脚: 15, 16
 ---
-UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.
 
-Asynchronous transmission allows data to be transmitted without the sender having to send a clock signal to the receiver. Instead, the sender and receiver agree on timing parameters in advance and special bits called 'start bits' are added to each word and used to synchronize the sending and receiving units.
+UART 是一个异步的串行通讯协议，也就是说，它按顺序一个一个地发送或接受比特位。
 
-UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).
+异步通信意味着无需独立的时钟同步线，发送方即可发送数据给接收方。二者需要使用相同的时钟参数（波特率），并且发送方需要在每个字节前添加一个特殊的“起始位”，这样才能实现通讯。
 
-It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
+通常，我们可以通过 UART 串口终端来直接控制树莓派，或者读取内核启动信息，而且这个功能是默认开启的。
 
-Raspberry Pi 2/3 have two UARTs, uart1 and uart0. Raspberry Pi 4 has four additional UARTs available. Only uart0/1 is enabled over GPIO pin 14/15 by default. The additional UARTs can be enabled through the device tree overlays.
+UART 同样可以与 Arduino、ESP866 等其他单片机设备进行通讯，但要注意双方的 UART 逻辑电平高低。比如，树莓派 UART 是 3.3V 的，而传统 Arduino 是 5V 的，如果把两者的 UART 直接连在一起，说不定你的树莓派就要冒烟了。
 
-Assuming you have WiringPi-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'
+树莓派 2 代和 3 代有两个 UART，分别是 UART0 和 UART1。树莓派 4 有四个额外的 UART 接口，但只有 UART0 和 UART1 是默认启用的（GPIO 引脚 14 和 15）。其他的 UART 可以通过修改设备描述树启用。
+
+如果你安装了 WiringPi-Python，可以参考下列 python 代码。它以 9600 的波特率打开了树莓派的 UART，并输出 `hello world`。
 
 ```python
 import wiringpi

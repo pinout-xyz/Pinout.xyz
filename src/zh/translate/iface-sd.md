@@ -3,7 +3,7 @@
 name: SDIO
 class: interface
 type: pinout
-description: Raspberry Pi SD0/SD1 pins
+description: 树莓派 SD0/SD1 接口
 pin:
   'bcm22':
     name: CLK
@@ -18,8 +18,8 @@ pin:
   'bcm27':
     name: DAT3
 -->
-# SDIO - SD Card Interface
+# SDIO - SD 卡接口
 
-SDIO is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.
+SDIO 是 SD 主站或者 eMMC 的接口。SD 主站通常用于读写 microSD 卡槽。
 
-These pins are "SD host" on Alt0 and "eMMC" on Alt3.
+这些引脚是复用功能 0 中的 “SD Host” 以及复用功能 3 中的“eMMC”。

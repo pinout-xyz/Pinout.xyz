@@ -3,7 +3,7 @@
 name: PCM
 class: interface
 type: pinout
-description: Raspberry Pi PCM pins
+description: 树莓派 PCM 接口
 pin:
   'bcm18':
     name: CLK

@@ -3,7 +3,7 @@
 name: JTAG
 class: interface
 type: pinout
-description: Raspberry Pi JTAG pins
+description: 树莓派 JTAG 接口
 pin:
   'bcm4':
     name: TDI (Alt5)
@@ -28,11 +28,11 @@ pin:
   'bcm27':
     name: TMS (Alt4)
 -->
-# JTAG - Joint Test Action Group
+# JTAG
 
-JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.
+JTAG 是一个标准化的、用于测试集成电路的接口，可以用来调试树莓派。
 
-There are two separate JTAG interfaces available on the Pi:
+树莓派上有两个独立的 JTAG 接口：
 
-* Alt5 on GPIOs 4, 5, 6, 12 and 13
-* Alt4 on GPIOs 22, 23, 24, 25, 26 and 27
+* 复用功能5：GPIOs 4, 5, 6, 12, 13
+* 复用功能4：GPIOs 22, 23, 24, 25, 26, 27

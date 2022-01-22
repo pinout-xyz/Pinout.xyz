@@ -3,7 +3,7 @@
 name: PWM
 class: interface
 type: pinout
-description: Raspberry Pi PWM pins
+description: 树莓派 PWM 接口
 pin:
   '32':
     name: PWM0
@@ -14,6 +14,6 @@ pin:
   '35':
     name: PWM1
 -->
-# PWM - Pulse-width Modulation
+# PWM - 脉冲宽度调制
 
-PWM (Pulse-width Modulation) is a method of creating an analog voltage by toggling a digital pin on and off.
+PWM (脉冲宽度调制) 通过快速切换引脚电平，以实现数字信号转模拟信号。

@@ -1,41 +1,39 @@
 <!--
 ---
-name: 1-WIRE
+name: 1-WIRE 单线接口
 class: interface
 type: pinout
-description: Raspberry Pi One-Wire pins
+description: 树莓派单线数据接口
 url: https://www.kernel.org/doc/Documentation/w1/w1.generic
 pin:
   'bcm4':
     name: Data
 -->
-# W1-GPIO - One-Wire Interface
+# W1-GPIO - 单线数据接口
 
-One-wire is a single-wire communication bus typically used to connect sensors to the Pi.
+树莓派的单线数据接口是只需要一根线就能通讯的总线，通常用来与某些传感器通讯。
 
-The Raspberry Pi supports one-wire on any GPIO pin, but the default is GPIO 4.
+树莓派支持在任何引脚上启用单线数据接口，但默认使用 GPIO 4。
 
-To enable the one-wire interface you need to add the following line to /boot/config.txt, before rebooting your Pi:
+要启用单线数据接口，你需要编辑 `/boot/config.txt` 并添加以下信息，然后重启树莓派：
 
 ```
 dtoverlay=w1-gpio
 ```
 
-or 
+或者，如果你想用除了 GPIO 4 以外的其他引脚：
 
 ```
 dtoverlay=w1-gpio,gpiopin=x
 ```
 
-if you would like to use a custom pin (the default is GPIO 4)
-
-Alternatively you can enable the one-wire interface on demand using `raspi-config`, or the following:
+你也可以用 `raspi-config` 命令来配置单线数据接口，或者以下命令：
 
 ```
 sudo modprobe w1-gpio
 ```
 
-Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire busses to be used at the same time:
+4.9.28 以后的内核版本可以动态加载引脚配置，还可以同时创建多个单线数据接口：
 
 ```
 sudo dtoverlay w1-gpio gpiopin=4 pullup=0  # header pin 7
@@ -43,10 +41,10 @@ sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
 sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
 ```
 
-once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default GPIO 4), like so:
+执行了以上任意一种配置步骤后，即可用下面的命令查看树莓派已经识别的所有单线数据接口：
 
 ```
 ls /sys/bus/w1/devices/
 ```
 
-Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.
+通常情况下，使用单线数据接口时，需要添加一个 4.7kΩ 的上拉电阻，上拉到 3.3V（比如引脚 1 或者 17）。你也可以通过其他方法把单线数据接口的传感器连到树莓派上，比如用一个 I2C 转单线的转接板。

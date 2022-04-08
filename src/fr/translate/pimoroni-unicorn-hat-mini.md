@@ -39,7 +39,7 @@ pin:
     name: Button B
   '36':
     name: Button X
-  '38':
+  '18':
     name: Button Y
 
 -->

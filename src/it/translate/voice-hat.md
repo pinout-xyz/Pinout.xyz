@@ -59,8 +59,10 @@ pin:
     name: Amp Shutdown
   '37':
     name: Servo 0 Breakout
+  '38':
+    name: I2S Data Input
   '40':
-    name: I2S Data
+    name: I2S Data Output
 install:
   'devices':
   - 'i2s'

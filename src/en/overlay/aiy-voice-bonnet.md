@@ -28,12 +28,6 @@ pin:
     mode: i2c
   '5':
     mode: i2c
-  '8':
-    mode: uart
-    name: TXD breakout
-  '10':
-    mode: uart
-    name: RXD breakout
   '12':
     mode: i2s
     name: I2S BCLK

@@ -55,7 +55,7 @@ Luego impórtalo en tu script Python y empieza a realizar proyectos:
 
 ```bash
 import unicornhat
-unicorn.set_layout(unicorn.PHAT)
+unicornhat.set_layout(unicornhat.PHAT)
 unicornhat.set_pixel(0, 0, 255, 255, 255)
 unicornhat.show()
 ```

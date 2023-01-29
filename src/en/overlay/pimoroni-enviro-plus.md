@@ -50,7 +50,7 @@ pin:
     name: Mic i2s fs
   '38':
     mode: PCM
-    name: Mic i2c data
+    name: Mic i2s data
   '19':
     mode: SPI
   '23':

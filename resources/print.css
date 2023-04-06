@@ -1,0 +1,37 @@
+#content,
+nav#gpio,
+div#pinbasebplus,
+div#pinbase {background:transparent;}
+#article {padding:0px;}
+
+.main-nav, .overlay-container, .logo img, #sections, #lang, nav#gpio:before, nav#gpio:after {display:none;}
+
+ul.bottom a {
+	color:#000000;
+}
+
+.logo, .logo a, .logo span.out, .logo span {
+	color:#000000;
+}
+
+nav#gpio li.overlay-pin a,
+nav#gpio ul.bottom li.overlay-pin a,
+nav#gpio li.active a,
+table th{
+	background:transparent;
+}
+
+* {color:#000000 !important;}
+
+ul.top a *, ul.bottom a * {
+	color:#999999 !important;
+}
+
+nav#gpio li.overlay-pin a *,
+nav#gpio ul.bottom li.overlay-pin a *,
+nav#gpio li.active * {
+	color:#000000 !important;
+	font-weight:bold;
+}
+
+.prettyprint.linenums, .prettyprint {box-shadow:none;-webkit-box-shadow:none;background:transparent;}

@@ -19,7 +19,7 @@ Pinout has teamed up with Pimoroni to create a [prototype board compatibility to
 
 ## Explore HATs & pHATs
 
-[Check out Pinout's board explorer](/boards)! Use it to find the pinout for your Raspberry Pi add-on board, or discover new boards. If you manufacture boards, we'd love to add yours too. [You can contribute to Pinout.xyz at GitHub.com](https://github.com/gadgetoid/Pinout.xyz).
+[Check out Pinout's board explorer](/boards)! Use it to find the pinout for your Raspberry Pi add-on board, or discover new boards. If you manufacture boards, we'd love to add yours too. [You can contribute to Pinout.xyz at GitHub.com](https://github.com/pinout-xyz/Pinout.xyz).
 
 ## What do these numbers mean?
 
@@ -36,4 +36,4 @@ Pinout depicts pin 1 in the top left corner. Pin 1 is the only pin with a square
 
 We've whipped up a simple graphical Raspberry Pi GPIO Pinout. Feel free to print, embed, share or hotlink this image and don't forget to credit us!
 
-![Graphical Raspberry Pi GPIO Pinout](https://raw.githubusercontent.com/Gadgetoid/Pinout.xyz/master/resources/raspberry-pi-pinout.png)
+![Graphical Raspberry Pi GPIO Pinout](https://raw.githubusercontent.com/pinout-xyz/Pinout.xyz/master/resources/raspberry-pi-pinout.png)

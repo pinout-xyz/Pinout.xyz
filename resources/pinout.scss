@@ -700,3 +700,25 @@ nav {
         width:898px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .facets h4, #boards .board strong {
+        color: $color-content-bg;
+    }
+    .logo a, .logo a:visited, .logo a:hover {
+        color: #363636;
+    }
+    #boards .board a:hover {
+        background:#222222;
+    }
+    body {
+        background:#000000;
+        color: $color-content-bg;
+    }
+    #legend li, #legend a {
+        color: $color-content-bg;
+    }
+    #gpio, #content, #lang, #interfaces, #crumbtrail {
+        background:transparent;
+    }
+}

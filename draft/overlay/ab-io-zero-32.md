@@ -5,7 +5,7 @@ class: board
 type: io
 formfactor: pHAT
 manufacturer: AB Electronics UK
-description: 16 Channel Digital Expansion Board
+description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/86/io-zero-32
 github: https://github.com/abelectronicsuk
 schematic: https://www.abelectronics.co.uk/viewpdf/io-zero-32-schematic

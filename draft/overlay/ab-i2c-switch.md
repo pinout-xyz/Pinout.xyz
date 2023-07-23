@@ -5,7 +5,7 @@ class: board
 type: io
 formfactor: pHAT
 manufacturer: AB Electronics UK
-description: 16 Channel Digital Expansion Board
+description: 4-channel bidirectional I2C switch
 url: https://www.abelectronics.co.uk/p/84/i2c-switch
 github: https://github.com/abelectronicsuk
 schematic: https://www.abelectronics.co.uk/viewpdf/schematic-i2cswitch

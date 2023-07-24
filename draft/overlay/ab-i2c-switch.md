@@ -29,6 +29,10 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '13':
+    name: RESET
+    mode: output
+    active: high
 i2c:
   '0x70':
     alternate: [ '0x71', '0x72', '0x73', '0x74', '0x75', '0x76', '0x77' ]

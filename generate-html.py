@@ -787,9 +787,14 @@ for pin in range(1, len(pinout.pins) + 1):
                                   crumbtrail=crumbtrail
                                   )
 
-    debug(0, '>> Saving: pinout/{}.html'.format(pin_url))
+    debug(0, '>> Saving: pinout/{}/index.html'.format(pin_url))
 
-    with open(os.path.join('output', lang, 'pinout', '{}.html'.format(pin_url)), 'w') as f:
+    try:
+        os.mkdir(os.path.join('output', lang, 'pinout', '{}'.format(pin_url)))
+    except FileExistsError:
+        pass
+
+    with open(os.path.join('output', lang, 'pinout', '{}/index.html'.format(pin_url)), 'w') as f:
         f.write(pin_html)
 
 
@@ -876,10 +881,21 @@ for url in pages:
     if url not in ['index', '404', 'boards']:
         url = os.path.join('pinout', url)
 
-    if 'source' in pages[key]:
-        debug(0, '>> Saving: {src} => {url}.html'.format(url=url, src=pages[key]['source']))
+    output_path = os.path.join('output', lang, f'{url}.html')
+    output_url = f'{url}.html'
 
-    with open(os.path.join('output', lang, '{}.html'.format(url)), 'w') as f:
+    if url == 'boards':
+        output_path = os.path.join('output', lang, f'{url}/index.html')
+        output_url = f'{url}/index.html'
+        try:
+            os.mkdir(os.path.join('output', lang, url))
+        except FileExistsError:
+            pass
+
+    if 'source' in pages[key]:
+        debug(0, '>> Saving: {src} => {url}'.format(url=output_url, src=pages[key]['source']))
+
+    with open(output_path, 'w') as f:
         f.write(html)
 
 print('\nAll done!')

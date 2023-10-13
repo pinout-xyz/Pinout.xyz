@@ -6,10 +6,10 @@ type: adc
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/69/adc-pi-raspberry-pi-analogue-to-digital-converter
+url: https://www.abelectronics.co.uk/p/69/adc-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-pi.pdf
-buy: https://www.abelectronics.co.uk/p/69/adc-pi-raspberry-pi-analogue-to-digital-converter
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-pi
+buy: https://www.abelectronics.co.uk/p/69/adc-pi
 image: 'ab-adc-pi.png'
 pincount: 40
 eeprom: no
@@ -38,26 +38,26 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Pi
+# ADC Pi
 
-ADC Pi es un convertidor analógico a digital de 8 canales y 17 bits diseñado para funcionar con la Raspberry Pi. El ADC Pi se basa en dos convertidores A / D Microchip MCP3424, cada uno de los cuales contiene 4 entradas analógicas. El MCP3424 es un convertidor A / D delta-sigma con entradas diferenciales de bajo ruido.
+The ADC Pi is an 8-channel 17-bit analogue to digital converter designed to work with the Raspberry Pi and other compatible single-board computers. The ADC Pi is based on two Microchip MCP3424 A/D converters, each containing 4 analogue inputs. The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Características
+## Features
 
-- 8 x 17 bits de 0 a 5 V entradas de terminación única
-- Control a través del puerto Raspberry Pi I2C
-- Combina hasta 4 placas ADC Pi en una sola Raspberry Pi
-- Direcciones I2C seleccionables por puente (0x68 a 0x6F)
-- Puerto I2C de 5V protegido
-- Basado en el MCP3424 de Microchip Technologies Inc
-- Rango de escala completa de un solo extremo de 5.0V
-- Voltaje de referencia incorporado de 2.048 V (precisión ± 0.05%, deriva: 15 ppm / ° C)
-- Amplificador de ganancia programable a bordo (PGA): ganancias de 1, 2, 4 u 8
-- Opciones de velocidad de datos programables:
-    - 3.75 SPS (17 bits)
-    - 15 SPS (15 bits)
-    - 60 SPS (13 bits)
-    - 240 SPS (11 bits)
-- Opciones de conversión única o continua
+- 8 x 17-bit 0 to 5V Single Ended Inputs
+- Control via the Raspberry Pi I2C port
+- Stack up to 4 ADC Pi boards on a single Raspberry Pi
+- Jumper selectable I2C addresses (0x68 to 0x6F)
+- Buffered 5V I2C port
+- Based on the MCP3424 from Microchip Technologies Inc
+- Single Ended full-scale range of 5.0V
+- On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
+- On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
+- Programmable Data Rate Options:
+   - 3.75 SPS (17 bits)
+   - 15 SPS (15 bits)
+   - 60 SPS (13 bits)
+   - 240 SPS (11 bits)
+- One-Shot or Continuous Conversion Options
 
-Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.
+Python, MicroPython, C, C++, Node.js and .Net Core libraries are available on GitHub.

@@ -1,16 +1,16 @@
 <!--
 ---
-name: ADC Pi
+name: ADC Pi Plus
 class: board
 type: adc
-formfactor: pHAT
+formfactor: HAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
 url: https://www.abelectronics.co.uk/p/69/adc-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-pi
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-pi-plus
 buy: https://www.abelectronics.co.uk/p/69/adc-pi
-image: 'ab-adc-pi.png'
+image: 'ab-adc-pi-plus.png'
 pincount: 40
 eeprom: no
 power:
@@ -18,8 +18,10 @@ power:
   '2':
 ground:
   '6':
+  '9':
   '14':
   '20':
+  '25':
   '30':
   '34':
   '39':
@@ -38,15 +40,17 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-# ADC Pi
+# ADC Pi Plus (Discontinued)
 
-The ADC Pi is an 8-channel 17-bit analogue to digital converter designed to work with the Raspberry Pi and other compatible single-board computers. The ADC Pi is based on two Microchip MCP3424 A/D converters, each containing 4 analogue inputs. The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+**The ADC Pi Plus has been replaced by the [ADC Pi](https://www.abelectronics.co.uk/p/69/adc-pi)**
+
+The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs. The board is stackable allowing you to use up to four ADC Pi Plus boards on a Raspberry Pi.
 
 ## Features
 
 - 8 x 17-bit 0 to 5V Single Ended Inputs
 - Control via the Raspberry Pi I2C port
-- Stack up to 4 ADC Pi boards on a single Raspberry Pi
+- Stack up to 4 ADC Pi Plus boards on a single Raspberry Pi
 - Jumper selectable I2C addresses (0x68 to 0x6F)
 - Buffered 5V I2C port
 - Based on the MCP3424 from Microchip Technologies Inc
@@ -60,4 +64,4 @@ The ADC Pi is an 8-channel 17-bit analogue to digital converter designed to work
    - 240 SPS (11 bits)
 - One-Shot or Continuous Conversion Options
 
-Python, MicroPython, C, C++, Node.js and .Net Core libraries are available on GitHub.
+Arduino, C, Node.js, Windows 10 IOT, Python 2 and Python 3 libraries are available on GitHub.

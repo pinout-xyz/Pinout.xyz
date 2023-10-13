@@ -8,7 +8,7 @@ manufacturer: AB Electronics UK
 description: Real-Time Clock Module for the Raspberry Pi
 url: https://www.abelectronics.co.uk/p/70/rtc-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/rtcpi/rtcpi-schematic.pdf
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-rtcpi-v3
 buy: https://www.abelectronics.co.uk/p/70/rtc-pi
 image: 'ab-rtc-pi-plus.png'
 pincount: 40
@@ -36,6 +36,8 @@ i2c:
     device: DS1307
 -->
 # RTC Pi Plus (Discontinued)
+
+**The RTC Pi Plus has been replaced by the [RTC Pi](https://www.abelectronics.co.uk/p/86/io-zero-32)**
 
 The RTC Pi Plus is a battery backed real-time clock module for the Raspberry Pi. It keeps track of the time while the Raspberry Pi is switched off and allows the Raspberry Pi to retrieve the current date and time from the RTC Pi Plus  when it is switched back on.
 

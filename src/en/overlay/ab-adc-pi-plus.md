@@ -6,10 +6,10 @@ type: adc
 formfactor: HAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
+url: https://www.abelectronics.co.uk/p/69/adc-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/stock/raspberrypi/adcpiplus/adc-pi-plus-schematic.pdf
-buy: https://www.abelectronics.co.uk/p/56/ADC-Pi-Plus-Raspberry-Pi-Analogue-to-Digital-converter
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-pi-plus
+buy: https://www.abelectronics.co.uk/p/69/adc-pi
 image: 'ab-adc-pi-plus.png'
 pincount: 40
 eeprom: no
@@ -41,6 +41,8 @@ i2c:
     device: MCP3424
 -->
 # ADC Pi Plus (Discontinued)
+
+**The ADC Pi Plus has been replaced by the [ADC Pi](https://www.abelectronics.co.uk/p/69/adc-pi)**
 
 The ADC Pi Plus is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi Plus is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs. The board is stackable allowing you to use up to four ADC Pi Plus boards on a Raspberry Pi.
 

@@ -6,10 +6,10 @@ type: adc
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/69/adc-pi-raspberry-pi-analogue-to-digital-converter
+url: https://www.abelectronics.co.uk/p/69/adc-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-pi.pdf
-buy: https://www.abelectronics.co.uk/p/69/adc-pi-raspberry-pi-analogue-to-digital-converter
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-pi
+buy: https://www.abelectronics.co.uk/p/69/adc-pi
 image: 'ab-adc-pi.png'
 pincount: 40
 eeprom: no
@@ -38,11 +38,11 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Pi
+# ADC Pi
 
-The ADC Pi is an 8 channel 17 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+The ADC Pi is an 8-channel 17-bit analogue to digital converter designed to work with the Raspberry Pi and other compatible single-board computers. The ADC Pi is based on two Microchip MCP3424 A/D converters, each containing 4 analogue inputs. The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Features
+## Features
 
 - 8 x 17-bit 0 to 5V Single Ended Inputs
 - Control via the Raspberry Pi I2C port
@@ -60,4 +60,4 @@ The ADC Pi is an 8 channel 17 bit analogue to digital converter designed to work
    - 240 SPS (11 bits)
 - One-Shot or Continuous Conversion Options
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, MicroPython, C, C++, Node.js and .Net Core libraries are available on GitHub.

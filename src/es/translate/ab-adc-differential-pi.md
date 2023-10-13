@@ -6,10 +6,10 @@ type: adc
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
+url: https://www.abelectronics.co.uk/p/65/adc-differential-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-differential-pi.pdf
-buy: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-differential-pi
+buy: https://www.abelectronics.co.uk/p/65/adc-differential-pi
 image: 'ab-adc-differential-pi.png'
 pincount: 40
 eeprom: no
@@ -40,26 +40,26 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Differential Pi
+# ADC Differential Pi
 
-El ADC Differential Pi es un convertidor analógico a digital de 8 canales y 18 bits diseñado para funcionar con Raspberry Pi. El ADC diferencial Pi se basa en dos convertidores A / D Microchip MCP3424, cada uno de los cuales contiene 4 entradas analógicas. El MCP3424 es un convertidor A / D delta-sigma con entradas diferenciales de bajo ruido.
+The ADC Differential Pi is an 8-channel 18-bit analogue to digital converter designed to work with the Raspberry Pi and other compatible single-board computers. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters, each containing 4 analogue inputs. The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Características
+## Features
 
-- 8 entradas diferenciales de 18 bits
-- Control a través del puerto Raspberry Pi I2C
-- Combina hasta 4 placas ADC Differential Pi en una sola Raspberry Pi
-- Direcciones I2C seleccionables por puente (8 opciones)
-- Puerto I2C de 5V protegido
-- Basado en el MCP3424 de Microchip Technologies Inc
-- Rango de entrada de ± 2.048V
-- Voltaje de referencia incorporado de 2.048 V (precisión ± 0.05%, deriva: 15 ppm / ° C)
-- Amplificador de ganancia programable a bordo (PGA): ganancias de 1, 2, 4 u 8
-- Opciones de velocidad de datos programables:
-     - 3.75 SPS (18 bits)
-     - 15 SPS (16 bits)
-     - 60 SPS (14 bits)
-     - 240 SPS (12 bits)
-- Opciones de conversión única o continua
+- 8 x 18-bit differential inputs
+- Control via the Raspberry Pi I2C port
+- Stack up to 4 ADC Differential Pi boards on a single Raspberry Pi
+- Jumper selectable I2C addresses (8 choices)
+- Buffered 5V I2C port
+- Based on the MCP3424 from Microchip Technologies Inc
+- Input range of ±2.048V
+- On-board 2.048V reference voltage (Accuracy  ± 0.05%, Drift: 15 ppm/°C)
+- On-Board Programmable Gain Amplifier (PGA): Gains of 1, 2, 4 or 8
+- Programmable Data Rate Options:
+    - 3.75 SPS (18 bits)
+    - 15 SPS (16 bits)
+    - 60 SPS (14 bits)
+    - 240 SPS (12 bits)
+- One-Shot or Continuous Conversion Options
 
-Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.
+Python, MicroPython, C, C++, Node.js and .Net Core libraries are available on GitHub.

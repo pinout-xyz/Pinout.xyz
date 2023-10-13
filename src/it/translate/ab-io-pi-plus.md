@@ -8,7 +8,7 @@ manufacturer: AB Electronics UK
 description: 32 Channel Digital Expansion Board
 url: https://www.abelectronics.co.uk/p/54/io-pi-plus
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-iopiplus-2-1.pdf
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-iopiplus-2-1
 buy: https://www.abelectronics.co.uk/p/54/io-pi-plus
 image: 'ab-io-pi-plus.png'
 pincount: 40
@@ -40,15 +40,15 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#IO Pi Plus
+# IO Pi Plus
 
-The IO Pi Plus is a 32 channel digital expansion board designed for use on the Raspberry Pi. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
+The IO Pi Plus is a 32-channel digital expansion board designed for the Raspberry Pi and other compatible single-board computers. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
 
-A pair of MCP23017 expanders are included on the board allowing you to connect up to 32 digital inputs or outputs to the Raspberry Pi.  The IO Pi Plus Expander is powered through the host Raspberry Pi using the GPIO port and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
+A pair of MCP23017 expanders are included on the board, allowing you to connect up to 32 digital channels to the Raspberry Pi. The IO Pi Plus is powered through the host Raspberry Pi using the GPIO port, and extended pins on the GPIO connector allow you to stack the IO Pi Plus along with other expansion boards.
 
-##Features
+## Features
 
--  32 Digital Inputs/Outputs
+-  32 Digital Inputs/Outputs (see note)
 -  Control via the Raspberry Pi I2C port
 -  Stack up to 4 IO Pi boards on a single Raspberry Pi
 -  Jumper selectable I2C addresses
@@ -60,3 +60,5 @@ A pair of MCP23017 expanders are included on the board allowing you to connect u
 -  Polarity Inversion register to configure the polarity of the input port data
 
 Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+
+(note) Microchip recommends that pin 8 (GPA7) and pin 16 (GPB7) are used as outputs only.

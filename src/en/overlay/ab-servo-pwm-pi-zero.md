@@ -1,15 +1,15 @@
 <!--
 ---
-name: Servo PWM Pi Zero
+name: Servo PWM Pi
 class: board
 type: io,motor
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 16-channel, 12-bit PWM Controller
-url: https://www.abelectronics.co.uk/p/72/servo-pwm-pi-zero
+url: https://www.abelectronics.co.uk/p/72/servo-pwm-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-servopi-zero.pdf
-buy: https://www.abelectronics.co.uk/p/72/servo-pwm-pi-zero
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-servopi-zero
+buy: https://www.abelectronics.co.uk/p/72/servo-pwm-pi
 image: 'ab-servo-pwm-pi-zero.png'
 pincount: 40
 eeprom: no
@@ -37,9 +37,9 @@ i2c:
     name: PCA9685
     device: PCA9685
 -->
-# Servo PWM Pi Zero
+# Servo PWM Pi
 
-The Servo PWM Pi Zero is a 16-channel, 12-bit PWM controller for the Raspberry Pi, suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with 12 bit (4096 steps) duty cycle from 0%  to 100%.
+The Servo PWM Pi is a 16-channel, 12-bit PWM controller for the Raspberry Pi and other compatible single-board computers; suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with a 12-bit (4096 steps) duty cycle from 0%  to 100%.
 
 The output frequency is programmable from a typical 40Hz to 1000Hz. Each output driver is programmed to be either open-drain with a 22 mA current sink capability at 5 V or totem pole with a 22 mA sink, 10 mA source capability at 5 V. 220R current limiting resistors are used on each channel allowing you to connect servos or LEDs directly to the outputs.
 

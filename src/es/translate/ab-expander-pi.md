@@ -8,7 +8,7 @@ manufacturer: AB Electronics UK
 description: 8 ADC inputs, 2 DAC outputs, 16 IO channels and a Real-Time Clock
 url: https://www.abelectronics.co.uk/p/50/expander-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-expander_pi.pdf
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-expander-pi-v2-1
 buy: https://www.abelectronics.co.uk/p/50/expander-pi
 image: 'ab-expander-pi.png'
 pincount: 40
@@ -52,15 +52,18 @@ i2c:
     device: DS1307
 
 -->
-#Expander Pi
+# Expander Pi
 
-Expander Pi es una placa de expansión digital y analógica versátil. Le permite conectar su Raspberry Pi a interruptores, luces, sensores y muchos otros dispositivos, lo que le permite comunicarse con el mundo exterior.
+Expander Pi is a versatile digital and analogue expansion board for the Raspberry Pi and other compatible single-board computers. It allows you to connect to switches, lights, sensors, and many other devices, allowing you to communicate with the outside world.
 
-##Características
+## Features  
 
-ADC de 8 bits MCP3208 de 12 bits con una frecuencia de muestreo máxima de 100 ksps e incluye una referencia de voltaje de precisión de 4.096 voltios.
-2 canales MCP4822 DAC de 12 bits con una referencia de voltaje interno.
-16 canales de E / S digitales, utilizando un expansor de E / S de 16 bits MCP23017 con una entrada máxima de 5 voltios en cada canal.
-Un reloj de tiempo real que utiliza un RTC DS1307 y una batería CR2032 para mantener la fecha y la hora cuando la alimentación del sistema principal no está disponible.
+8 channel MCP3208 12-bit ADC with a maximum sample rate of 100 ksps and includes a 4.096 volt precision voltage reference.  
 
-Python, C, C ++, Node.js y las bibliotecas IOT de Windows 10 están disponibles en GitHub.
+2 channel MCP4822 12-bit DAC with an internal voltage reference.  
+
+16 digital I/O channels, using an MCP23017 16-bit I/O expander with a maximum input of 5 volts on each channel.
+
+A Real Time Clock using a DS1307 RTC and a CR2032 battery to maintain the date and time when the main system power is not available.
+
+Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

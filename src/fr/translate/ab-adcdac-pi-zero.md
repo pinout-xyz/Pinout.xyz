@@ -6,10 +6,10 @@ type: adc
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 2 channel Analogue to Digital Converter and 2 channel Digital to Analogue Converter
-url: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero-raspberry-pi-adc-and-dac-expansion-board
+url: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-dac-pi-zero.pdf
-buy: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero-raspberry-pi-adc-and-dac-expansion-board
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-dac-pi-zero
+buy: https://www.abelectronics.co.uk/p/74/adc-dac-pi-zero
 image: 'ab-adcdac-pi-zero.png'
 pincount: 40
 eeprom: no
@@ -39,9 +39,9 @@ install:
   'devices':
     - 'spi'
 -->
-#ADC-DAC Pi Zero
+# ADC-DAC Pi Zero
 
-The ADC-DAC Pi Zero is a 2 channel 12 bit analogue to digital converter and 2 channel 12 bit digital to analogue converter designed to work with the Raspberry Pi.   Designed for the same footprint as the Raspberry Pi Zero the ADC-DAC Pi Zero is also compatible with full size Raspberry Pi models.
+The ADC DAC Pi Zero is a 2-channel 12-bit analogue-to-digital converter and a 2-channel 12-bit digital-to-analogue converter designed to work with the Raspberry Pi and other compatible single-board computers.   Designed for the same footprint as the Raspberry Pi Zero, the ADC DAC Pi Zero is also compatible with full-size Raspberry Pi models.  
 
 The ADC-DAC Pi Zero is based on the Microchip MCP3202 A/D converter containing 2 analogue inputs with 12 bit resolution with a Microchip MCP4822 dual channel 12-bit DAC with internal voltage reference.
 
@@ -49,4 +49,4 @@ Max ADC Sample Rate: 100 ksamples/sec
 
 Max ADC Sample Rate under Python: 12,000 samples per second.
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, MicroPython, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

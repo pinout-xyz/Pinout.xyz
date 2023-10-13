@@ -2,20 +2,20 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>Servo PWM Pi Zero at Raspberry Pi GPIO Pinout</title>
+		<title>Servo PWM Pi at Raspberry Pi GPIO Pinout</title>
 		<meta name="description" content="16-channel, 12-bit PWM Controller" />
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
 		<link href="/resources/pinout.scss.css?v=4c5780" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1690823437"/>
-		<!-- Build: 1690823437 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1697206908"/>
+		<!-- Build: 1697206908 -->
 				<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@pipinout">
 		<meta name="twitter:creator" content="@gadgetoid">
-		<meta name="twitter:title" content="Servo PWM Pi Zero at Raspberry Pi GPIO Pinout">
+		<meta name="twitter:title" content="Servo PWM Pi at Raspberry Pi GPIO Pinout">
 		<meta name="twitter:description" content="16-channel, 12-bit PWM Controller">
-		<meta name="twitter:image" content="https://api.pinout.xyz/v1/img/servo_pwm_pi_zero.png">
+		<meta name="twitter:image" content="https://api.pinout.xyz/v1/img/servo_pwm_pi.png">
 		
 	</head>
 	<body class="board">
@@ -131,7 +131,7 @@
 			<div id="content">
 				<div id="interfaces">
 					<ul>
-					<li><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/pcm">PCM</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/i2c">I2C</a></li>
+					<li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/i2c">I2C</a></li><li><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/pcm">PCM</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li>
 					</ul>
 				</div>
 				<div id="crumbtrail"><p><a href="/">Home</a> &raquo; <a href="/boards">Boards</a> &raquo; <a href="/boards#manufacturer=AB Electronics UK">AB Electronics UK</a></p></div>
@@ -140,8 +140,8 @@
 					
 					</ul>
 				</div>
-				<article class="page_servo_pwm_pi_zero"><h1>Servo PWM Pi Zero</h1>
-<p>The Servo PWM Pi Zero is a 16-channel, 12-bit PWM controller for the Raspberry Pi, suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with 12 bit (4096 steps) duty cycle from 0%  to 100%.</p>
+				<article class="page_servo_pwm_pi"><h1>Servo PWM Pi</h1>
+<p>The Servo PWM Pi is a 16-channel, 12-bit PWM controller for the Raspberry Pi and other compatible single-board computers; suitable for driving LEDs and radio control servos. The board is based around PCA9685 PWM I2C LED controller IC from NXT and can drive each of the 16 outputs with a 12-bit (4096 steps) duty cycle from 0%  to 100%.</p>
 <p>The output frequency is programmable from a typical 40Hz to 1000Hz. Each output driver is programmed to be either open-drain with a 22 mA current sink capability at 5 V or totem pole with a 22 mA sink, 10 mA source capability at 5 V. 220R current limiting resistors are used on each channel allowing you to connect servos or LEDs directly to the outputs.</p>
 <p>Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
@@ -151,11 +151,11 @@
 <li>Uses 3 GPIO pins</li>
 <li>Communication over I2C</li>
 <li>0x40: PCA9685 (Alt: 0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5A, 0x5B, 0x5C, 0x5D, 0x5E, 0x5F, 0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78, 0x79, 0x7A, 0x7B, 0x7C, 0x7D, 0x7E, 0x7F)</li>
-<li><a href="https://www.abelectronics.co.uk/p/72/servo-pwm-pi-zero">More Information</a></li>
+<li><a href="https://www.abelectronics.co.uk/p/72/servo-pwm-pi">More Information</a></li>
 <li><a href="https://github.com/abelectronicsuk">GitHub Repository</a></li>
-<li><a href="https://www.abelectronics.co.uk/docs/pdf/schematic-servopi-zero.pdf">Schematic</a></li>
-<li><a href="https://www.abelectronics.co.uk/p/72/servo-pwm-pi-zero">Buy Now</a></li>
-</ul></td><td><img loading="lazy" src="/resources/boards/ab-servo-pwm-pi-zero.png" alt="Servo PWM Pi Zero" /></td></tr></table></article>
+<li><a href="https://www.abelectronics.co.uk/viewpdf/schematic-servopi-zero">Schematic</a></li>
+<li><a href="https://www.abelectronics.co.uk/p/72/servo-pwm-pi">Buy Now</a></li>
+</ul></td><td><img loading="lazy" src="/resources/boards/ab-servo-pwm-pi-zero.png" alt="Servo PWM Pi" /></td></tr></table></article>
 				<div id="lang">
 					
 				</div>

@@ -6,10 +6,10 @@ type: io
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 16 Channel Digital Expansion Board
-url: https://www.abelectronics.co.uk/p/71/io-pi-zero
+url: https://www.abelectronics.co.uk/kb/article/1098/io-pi-zero
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-iopizero.pdf
-buy: https://www.abelectronics.co.uk/p/71/io-pi-zero
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-iopizero
+buy: https://www.abelectronics.co.uk/kb/article/1098/io-pi-zero
 image: 'ab-io-pi-zero.png'
 pincount: 40
 eeprom: no
@@ -36,7 +36,9 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-# IO Pi Zero
+# IO Pi Zero (Discontinued)
+
+**The IO Pi Zero has been replaced by the [IO Zero 32](https://www.abelectronics.co.uk/p/86/io-zero-32)**
 
 The IO Pi Zero is a 16 channel digital expansion board designed for use on the Raspberry Pi Zero. The board is based around the MCP23017 16-bit I/O expander from Microchip Technology Inc. 
 

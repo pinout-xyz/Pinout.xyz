@@ -8,7 +8,7 @@ manufacturer: AB Electronics UK
 description: 8 ADC inputs, 2 DAC outputs, 16 IO channels and a Real-Time Clock
 url: https://www.abelectronics.co.uk/p/50/expander-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-expander_pi.pdf
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-expander-pi-v2-1
 buy: https://www.abelectronics.co.uk/p/50/expander-pi
 image: 'ab-expander-pi.png'
 pincount: 40
@@ -54,13 +54,16 @@ i2c:
 -->
 # Expander Pi
 
-Expander Pi is a versatile digital and analogue expansion board.  It allows you to connect your Raspberry Pi to switches, lights, sensors, and many other devices giving you a way to communicate with the outside world.
+Expander Pi is a versatile digital and analogue expansion board for the Raspberry Pi and other compatible single-board computers. It allows you to connect to switches, lights, sensors, and many other devices, allowing you to communicate with the outside world.
 
 ## Features  
 
 8 channel MCP3208 12-bit ADC with a maximum sample rate of 100 ksps and includes a 4.096 volt precision voltage reference.  
+
 2 channel MCP4822 12-bit DAC with an internal voltage reference.  
+
 16 digital I/O channels, using an MCP23017 16-bit I/O expander with a maximum input of 5 volts on each channel.
+
 A Real Time Clock using a DS1307 RTC and a CR2032 battery to maintain the date and time when the main system power is not available.
 
 Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.

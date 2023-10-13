@@ -6,10 +6,10 @@ type: adc
 formfactor: pHAT
 manufacturer: AB Electronics UK
 description: 8 channel Analogue to Digital Converter
-url: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
+url: https://www.abelectronics.co.uk/p/65/adc-differential-pi
 github: https://github.com/abelectronicsuk
-schematic: https://www.abelectronics.co.uk/docs/pdf/schematic-adc-differential-pi.pdf
-buy: https://www.abelectronics.co.uk/p/65/adc-differential-pi-raspberry-pi-analogue-to-digital-converter
+schematic: https://www.abelectronics.co.uk/viewpdf/schematic-adc-differential-pi
+buy: https://www.abelectronics.co.uk/p/65/adc-differential-pi
 image: 'ab-adc-differential-pi.png'
 pincount: 40
 eeprom: no
@@ -40,11 +40,11 @@ i2c:
     name: MCP3424
     device: MCP3424
 -->
-#ADC Differential Pi
+# ADC Differential Pi
 
-The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter designed to work with the Raspberry Pi. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters each containing 4 analogue inputs.  The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
+The ADC Differential Pi is an 8-channel 18-bit analogue to digital converter designed to work with the Raspberry Pi and other compatible single-board computers. The ADC Differential Pi is based on two Microchip MCP3424 A/D converters, each containing 4 analogue inputs. The MCP3424 is a delta-sigma A/D converter with low noise differential inputs.
 
-##Features
+## Features
 
 - 8 x 18-bit differential inputs
 - Control via the Raspberry Pi I2C port
@@ -62,4 +62,4 @@ The ADC Differential Pi is an 8 channel 18 bit analogue to digital converter des
     - 240 SPS (12 bits)
 - One-Shot or Continuous Conversion Options
 
-Python, C, C++, Node.js and Windows 10 IOT libraries are available on GitHub.
+Python, MicroPython, C, C++, Node.js and .Net Core libraries are available on GitHub.

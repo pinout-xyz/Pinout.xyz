@@ -10,8 +10,10 @@ import markjaml
 import pinout
 
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+try:
+    sys.setdefaultencoding('utf8')
+except AttributeError:  # Does not work in Python 3
+    unicode = str
 
 lang = "en"
 
@@ -40,7 +42,6 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
@@ -133,7 +134,7 @@ def load_md(filename):
         return ''
 
 
-overlays = map(load_overlay, overlays)
+overlays = list(map(load_overlay, overlays))
 
 print(json.dumps(overlays))
 #print(json.dumps(product_map))

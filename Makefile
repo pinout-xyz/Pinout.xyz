@@ -8,6 +8,9 @@ LANG := $(firstword $(LANG))
 
 all: html resources
 
+deps:
+	python3 -m pip install -r requirements.txt
+
 css:
 	scss resources/pinout.scss > resources/pinout.scss.css
 

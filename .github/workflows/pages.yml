@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   test:
@@ -26,6 +27,7 @@ jobs:
       - name: Build Packages
         run: |
           make LANG=en
+          cp -r phatstack output/en
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

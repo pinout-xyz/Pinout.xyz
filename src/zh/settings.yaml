@@ -1,0 +1,13 @@
+domain: zh.pinout.xyz
+base_url: /pinout/
+resource_url: /resources/
+url_suffix:
+urls:
+  GND: ground
+  "+5v": 5v_power
+  "+3v3": 3v3_power
+featured:
+- scorezero
+- motozero
+- adafruit-arcade-bonnet
+- sixfab-xbee-shield

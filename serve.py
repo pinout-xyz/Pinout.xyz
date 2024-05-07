@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import os
 
 try:
     from flask import Flask, send_from_directory
@@ -25,6 +26,9 @@ def custom_static(filename):
 
 @app.route("/<path:page>")
 def show_page(page):
+    if not os.path.exists('{}/{}.html'.format(basedir, page)):
+        page = page + '/index'
+
     return send_from_directory(basedir, '{}.html'.format(page))
 
 

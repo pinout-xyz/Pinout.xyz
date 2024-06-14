@@ -4,11 +4,20 @@
 
 [Pinout.xyz](http://pinout.xyz/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
 
-To support translation efforts, and allow people to build tools with the data in this repository, Pinout.xyz is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+To support translation efforts, and allow people to build documentation and tools with the data in this repository, Pinout.xyz is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-This license excludes the 'pinout-graphic-horizontal' files located in the `graphics` directory and the 'pi-orientation' graphic located in `resources`, which are provided under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) to permit commercial use; specifically publication in books and magazines with appropriate attribution.
+The license was previously explicitly non-commercial, to understand why it has been changed please see: https://github.com/pinout-xyz/Pinout.xyz/issues/481
 
-This license also excludes all board photography which is pinched from various sources in the hope that using it for documentation/promotional purposes will not raise any hackles.
+This license includes the 'pinout-graphic-horizontal' files located in the `graphics` directory and the 'pi-orientation' graphic located in `resources`, which are provided to permit commercial use; specifically publication in books and magazines with appropriate attribution.
+
+The license excludes all board photography which has been supplied by manufacturers or customers via PR without any explicit license grant, or supplied under the implicit permission of my (@Gadgetoid) employment at Pimoroni. Re-use of product photography is normally assumed to be implicitly permitted for resale or promotional purposes, but I cannot pass a nebulous, implicit license on for re-use. YMMV.
+
+If you copy and re-use this website henceforth, I would prefer full attribution in the page footer, for example:
+
+Based on <a href="https://pinout.xyz">Pinout.xyz</a> created by <a href="https://fosstodon.org/@gadgetoid">@gadgetoid.</a>
+Maintained by @yourname, contribute at https://github.com/yourname/yourfork
+
+If you're a commercial venture, or closely associated, I would also appreciate, but do not require, that you review Pinout's funding options and maybe chuck me a bone!
 
 # About this project
 

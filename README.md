@@ -77,6 +77,12 @@ docker run -p 5000:5000 -e PINOUT_LANG=en pinout.xyz
 
 Now you can access the webserver at http://127.0.0.1:5000.
 
+Optionally you can include a draft board in the containerized webserver by setting the `PUBLISH_DRAFT` build argument:
+
+```bash
+docker run -p 5000:5000 -e PINOUT_LANG=en --build-arg PUBLISH_DRAFT=myboard pinout.xyz
+```
+
 # Translating
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).

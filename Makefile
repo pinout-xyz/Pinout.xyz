@@ -18,7 +18,7 @@ html:
 	./generate-html.py $(LANG)
 
 resources:
-	cp -r resources output/$(LANG)/
+	cp -r resources phatstack output/$(LANG)/
 
 devel: css all resources
 	./serve.py ${LANG}

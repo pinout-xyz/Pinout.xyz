@@ -79,7 +79,7 @@ i2c:
     name: Real Time Clock
     device: MCP7940N
 -->
-#PaPiRus HAT
+# PaPiRus HAT
 
 The PaPiRus HAT is a versatile ePaper display for the Raspberry Pi with screens ranging from 1.44" to 2.7" in size.
 

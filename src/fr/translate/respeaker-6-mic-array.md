@@ -55,7 +55,7 @@ pin:
     external_pull: up
     active: high
 -->
-#ReSpeaker 6 Mic Array
+# ReSpeaker 6 Mic Array
 
 This HAT comes with 6 microphones and designed for AI and voice applications. That means you can build a more powerful and flexible voice product with Raspberry Pi which can integrate Amazon Alexa Voice Service, Google Assistant, and so on. It consists of two boards, one is voice accessory HAT, another is six microphones circular array. It supports 8 input & 8 output channels in Raspbian system. The first 6 input channel for microphone recording,rest of 2 input channel are echo channel of playback. The first 2 output channel for playing, rest of 6 output channel are dummy.
 

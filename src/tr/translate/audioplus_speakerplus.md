@@ -41,8 +41,8 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+ 
-##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
+# Audio+ Speaker+
+## 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
 * Great for any portable radio project where you need built in speaker
 
@@ -50,7 +50,7 @@ install:
 
 * No extra power supply required
 
-##Features:
+## Features:
 
 (There is no microphone on this board, for a microphone see our other model MIC+)
 
@@ -68,7 +68,7 @@ install:
 
 7. Soldered Long female header 2x20 (NO soldering required) Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
 
-##INSTALLATION for Raspian users:
+## INSTALLATION for Raspian users:
 
 * Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
 

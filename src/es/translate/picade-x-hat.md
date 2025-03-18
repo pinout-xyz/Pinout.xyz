@@ -110,7 +110,7 @@ install:
   'devices':
   - 'i2s'
 -->
-#Picade X HAT
+# Picade X HAT
 
 Picade X HAT supercedes Picade HAT, providing push-in headers for 10 arcade buttons and a joystick.
 

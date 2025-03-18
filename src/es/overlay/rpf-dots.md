@@ -98,9 +98,9 @@ pin:
     name: 'Color: Rojo'
     direction: entrada
 -->
-#Raspberry Pi Dots
+# Raspberry Pi Dots
 
-###Dots es un HAT para Raspberry Pi que te permite unir los puntos con pintura conductiva BARE!
+### Dots es un HAT para Raspberry Pi que te permite unir los puntos con pintura conductiva BARE!
 
 Cada punto en la placa Dots es un contacto de metal "flotante", esperando a ser conectado a tierra con una gota de pintura.
 

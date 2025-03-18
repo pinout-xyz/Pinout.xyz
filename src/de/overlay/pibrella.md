@@ -66,7 +66,7 @@ pin:
     direction: input
     active: high
 -->
-#Pibrella
+# Pibrella
 
 Die "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine von Pimoroni vs Cyntech 
 benutzt jede Menge I/O Anschlüsse des Pi aber lässt die serielle Schnittstelle und den I2C-Bus noch frei und somit viel Raum für creative Erweiterungen!

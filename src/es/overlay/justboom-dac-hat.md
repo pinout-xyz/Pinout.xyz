@@ -48,7 +48,7 @@ i2c:
     name: DAC
     device: PCM5122
 -->
-#DAC HAT
+# DAC HAT
 
 * Audio de alta calidad – 348kHz / 32bit
 * Incluye DAC y amplificador

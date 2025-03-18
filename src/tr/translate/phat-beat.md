@@ -64,7 +64,7 @@ install:
   'devices':
   - 'i2s'
 -->
-#pHAT BEAT
+# pHAT BEAT
 
 To get the pHAT BEAT set up and ready to go you can use the one-line product installer:
 

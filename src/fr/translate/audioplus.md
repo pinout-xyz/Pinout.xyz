@@ -32,13 +32,13 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio +
+# Audio +
 
 RaspiAudio enables your Raspberry Pi ( Pi 3, 2, B+, A+, and Zero) with a state of the art audio DAC.
 
 Great for home audio sound sytems, an internet radio, or any project with audio.
 
-##Features
+## Features
 
 1. DAC I2s 24-bit 96KHz audio with studio sampling quality
 
@@ -50,7 +50,7 @@ Great for home audio sound sytems, an internet radio, or any project with audio.
 
 5. Compatible with Raspberry Pi 3, 2, B+, A+, and Zero
 
-##INSTALLATION for Raspian users:
+## INSTALLATION for Raspian users:
 
 * Plug Audio+ firmly on top of your Raspberry Pi GPIO and turn on your Pi
 

@@ -31,9 +31,9 @@ pin:
     direction: salida
     active: alto (encendido)
 -->
-#Traffic HAT
+# Traffic HAT
 
-###Una manera rápida de aprender lo básico del GPIO con un bajo presupuesto. Todo en un bonito HAT.
+### Una manera rápida de aprender lo básico del GPIO con un bajo presupuesto. Todo en un bonito HAT.
 
 ```python
 import RPi.GPIO as IO
@@ -41,14 +41,14 @@ from time import sleep
 
 IO.setmode(IO.BCM)
 
-#Luces
+# Luces
 IO.setup(22,IO.OUT)
 IO.setup(23,IO.OUT)
 IO.setup(24,IO.OUT)
 
-#Zumbador
+# Zumbador
 IO.setup(5,IO.OUT)
 
-#Botón
+# Botón
 IO.setup(25,IO.IN,pull_up_down=IO.PUD_UP)
 ```

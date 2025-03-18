@@ -24,7 +24,7 @@ pin:
     active: high
     description: WS2812 Data
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 64 adet parlak LEDe sahip bu HAT kart'ı bir C kütüphanesi ile çok hızlı çalışacak bir şekilde yönetebilir, LEDlerin daha parlak veya sönük yanmasını sağlayabilirsiniz.
 

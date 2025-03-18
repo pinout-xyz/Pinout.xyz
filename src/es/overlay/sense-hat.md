@@ -64,7 +64,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#Sense HAT
+# Sense HAT
 
 Sense HAT es una placa adicional para Raspberry Pi con una matriz led 8x8 RGB, un joystick de 5 botones y los siguientes sensores: giroscopio, acelerómetro, magnetómetro, temperatura, presión barométrica y humedad.
 

@@ -70,7 +70,7 @@ pin:
     mode: input
     active: low
 -->
-#PiGRRL Gamepad
+# PiGRRL Gamepad
 
 La placa PiGRRL Gamepad se diseñó para el uso en proyectos de videojuegos portátiles como el PiGRRL 2 aunque es en esencia un conjunto de botones conectados entre tierra y un pin GPIO.
 

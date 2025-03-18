@@ -37,7 +37,7 @@ i2c:
     name: Cap Touch B
     device: cap1188
 -->
-#Piano HAT
+# Piano HAT
 
 Piano HAT hat 16 berührungsempfindliche Tasten. 13 dieser Tasten bilden eine Piano-Oktave, die anderen lassen die die Oktave hoch oder runter schalten und Instrumente auswählen.
 

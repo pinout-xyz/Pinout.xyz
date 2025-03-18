@@ -35,7 +35,7 @@ i2c:
     name: PiconZero
     device: ATMega328
 -->
-#Picon Zero
+# Picon Zero
 
 The Picon Zero is an add-on PCB for the Raspberry Pi that is physically the same size as a Raspberry Pi Zero and so is ideal as a pseudo-Hat (pHat) for the Pi Zero. However, it can of course be used on any Raspberry Pi with a 40-pin GPIO connector.
 

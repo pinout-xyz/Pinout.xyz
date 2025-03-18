@@ -98,7 +98,7 @@ install:
   'devices':
   - 'i2s'
 -->
-#Picade HAT
+# Picade HAT
 
 Picade HAT proporciona conexión para 10 botones arcade y un joystick. Además incluye un conversor de audio digital a analógico y un amplificador con salida hacia un altavoz. p
 

@@ -33,7 +33,7 @@ i2c:
     name: LED matrix 5-6
     device: IS31FL3730
 -->
-#Micro Dot pHAT
+# Micro Dot pHAT
 
 An unashamedly old school LED matrix display board, with up to 30x7 pixels, using Lite-On LTP-305 matrices (or any similar matrices). Perfect for building a retro scrolling message display, a tiny 30-band spectrum analyser, or a retro clock.
 

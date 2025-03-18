@@ -35,7 +35,7 @@ i2c:
     name: PiconZero
     device: ATMega328
 -->
-#Picon Zero
+# Picon Zero
 
 Le **Picon Zero** est une carte chapeau au format pHat (pseudo-Hat) pour le **Raspberry Pi Zero**. La carte peut, bien evidemment, être utilisée sur les autres Raspberry pi grâce au connecteur GPIO 40 broches.
 

@@ -33,7 +33,7 @@ i2c:
     name: LED matrix 5-6
     device: IS31FL3730
 -->
-#Micro Dot pHAT
+# Micro Dot pHAT
 
 Una placa con una matriz LED descarada, de vieja escuela, con hasta 30x7 pixels utilizando las matrices Lite-On LTP-305 (o cualquiera similar). Perfecta para construir un mensaje en movimiento retro, un pequeño analizador de espectro de 30 bandas o un reloj retro.
 

@@ -51,7 +51,7 @@ pin:
   '37':
     name: 'WiFi SDIO_D2'
 -->
-#IoT pHAT
+# IoT pHAT
 
 The RedBear IoT pHAT brings the BCM43438 used on the Raspberry Pi 3 to pHAT format, compatible with the Pi Zero.
 

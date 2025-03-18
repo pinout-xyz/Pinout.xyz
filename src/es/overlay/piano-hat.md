@@ -37,7 +37,7 @@ i2c:
     name: Cap Touch B
     device: cap1188
 -->
-#Piano HAT
+# Piano HAT
 
 El Piano HAT tiene 16 botones capacitivos. 13 de estos se usan para una octava, y el resto para subir/bajar la octava y el selector de instrumento.
 

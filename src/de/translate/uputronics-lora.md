@@ -52,7 +52,7 @@ pin:
   '33':
     name: INTERNET LED
 -->
-#Uputronics LoRa Expansion Board
+# Uputronics LoRa Expansion Board
 
 Fitted with one or two (CE1 populated by default) HopeRF LoRa modules in 434,868 or 915MHz frequencies. 
 Primarily designed to make a LoRa gateway for High Altitude balloon reception or stacked on the Pi In The Sky board to provide LoRa tranmission from High Altitude balloons. 

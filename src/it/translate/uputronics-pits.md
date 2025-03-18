@@ -53,7 +53,7 @@ i2c:
     name: ADC
     device: MAXIM MCP3426
 -->
-#Uputronics Pi In The Sky Board
+# Uputronics Pi In The Sky Board
 
 Telemetry board designed for use on high altitude balloons. Features Ublox MAX-M8Q, Radiometrix MTX2 434MHz radio transmitter, efficient 2A buck/boost, I2C ADC and One Wire temperature sensor.
 

@@ -116,7 +116,7 @@ pin:
     direction: output
     active: high
 -->
-#3D Xmas Tree
+# 3D Xmas Tree
 
 A 3D Christmas tree PCB with red LEDs controlled by the Raspberry Pi GPIO pins: can be used as a programmable Christmas decoration. Available as a DIY soldering kit, or pre-soldered.
 

@@ -48,7 +48,7 @@ i2c:
     name: Cap Touch
     device: cap1166
 -->
-#GFX HAT
+# GFX HAT
 
 GFX HAT usa SPI e I2c para controlar una pantalla LCD, luz trasera y toque. Sin embargo, estos buses pueden compartirse con otros dispositivos.
 

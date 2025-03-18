@@ -63,7 +63,7 @@ pin:
     direction: output
     active: high
 -->
-#Jam Hat
+# Jam Hat
 
 An LED, button and buzzer hat ideal for Raspberry Jams, Jam Makers and people learning the basics of GPIO.
 

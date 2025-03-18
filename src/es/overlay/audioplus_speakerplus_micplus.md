@@ -45,8 +45,8 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+ Microphone+
-##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
+# Audio+ Speaker+ Microphone+
+## 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
 * Experimenta con el asistente AIY de Google (compatible 100% pin a pin).
 
@@ -60,7 +60,7 @@ install:
 
 * No se requiere suministro de energía adicional
 
-##Especificaciones:
+## Especificaciones:
 
 
 1. Micrófono I2S Alta sensibilidad a bordo (se puede separar de la boad principal con el cable incluido)
@@ -79,7 +79,7 @@ install:
 
 8. Cabezal hembra largo soldado 2x20 (NO se requiere soldadura) Compatible con Raspberry Pi 3, 2, B +, A + y Zero.
 
-##Instalación:
+## Instalación:
 
 Abre terminal y ejecuta los siguientes comandos:
 

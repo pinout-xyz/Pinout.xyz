@@ -41,8 +41,8 @@ install:
   'devices':
   - 'i2s'
 -->
-#Audio+ Speaker+
-##2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
+# Audio+ Speaker+
+## 2X5W STEREO AMP FOR ONBOARD/EXTERNAL SPEAKERS
 
 
 * Ideal para cualquier proyecto de radio portátil donde necesite un altavoz integrado
@@ -51,7 +51,7 @@ install:
 
 * No requiere fuente de alimentación adicional
 
-##Especificaciones:
+## Especificaciones:
 
 
 (No hay micrófono en esta placa, para un micrófono vea nuestro otro modelo MIC +)
@@ -70,7 +70,7 @@ install:
 
 7. Cabezal hembra larga soldada 2x20 (no se requiere soldadura) Compatible con Raspberry Pi 3, 2, B +, A + y Zero
 
-##Instalación para usuarios de Raspbian:
+## Instalación para usuarios de Raspbian:
 
 * Abre terminal y ejecuta los siguientes comandos:
 

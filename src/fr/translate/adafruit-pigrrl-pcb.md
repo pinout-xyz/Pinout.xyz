@@ -70,7 +70,7 @@ pin:
     mode: input
     active: low
 -->
-#PiGRRL Gamepad
+# PiGRRL Gamepad
 
 The PiGRRL Gamepad PCB is designed for use in portable gaming projects like the PiGRRL 2 but it's basically a set of buttons wired between ground and select GPIO.
 

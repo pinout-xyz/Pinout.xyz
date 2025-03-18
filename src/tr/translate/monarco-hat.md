@@ -64,13 +64,13 @@ i2c:
     name: 1-Wire Interface Controller
     device: DS2482-100
 -->
-#Monarco HAT
+# Monarco HAT
 
 Manufacturered by Monarco Solutions Group / REX Controls s.r.o., the Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
 
 All the inputs and outputs are designed to directly interface standard industrial sensors and devices, eliminating the need for additional hardware. 
 
-##Features
+## Features
 
 - **Power supply: 10-30 VDC**, powers also the Raspberry Pi
 - **4x digital IN, 3.5-30 VDC**, optical isolation, common GND

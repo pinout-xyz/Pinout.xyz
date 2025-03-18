@@ -98,9 +98,9 @@ pin:
     name: 'Colore: Rosso'
     direction: input
 -->
-#Raspberry Pi Dots
+# Raspberry Pi Dots
 
-###Dots è una scheda HAT punto-a-punto per il Raspberry Pi che ti permette di chiudere il circuito con la vernice conduttiva BARE!
+### Dots è una scheda HAT punto-a-punto per il Raspberry Pi che ti permette di chiudere il circuito con la vernice conduttiva BARE!
 
 Ogni puntino ("Dot") sulla scheda Dots è un contatto metallico temporaneo, in attesa di essere collegato con una pennellata di vernice.
 

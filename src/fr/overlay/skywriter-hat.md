@@ -26,7 +26,7 @@ i2c:
     name: Gesture sensor
     device: mgc3130
 -->
-#Skywriter HAT
+# Skywriter HAT
 
 Le Skywriter est capable de détecter la position de vos doigts dans l'espace défini en 3 dimensions au dessus de son capteur. Il transfère les coordonnées X, Y et Z à votre Raspi, qui sont dès lors disponibles pour effectuer l'opération désirée au sein de votre script.
 

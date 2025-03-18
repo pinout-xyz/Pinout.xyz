@@ -37,7 +37,7 @@ pin:
   '40':
     name: I2S
 -->
-#IQaudIO Pi-DAC+
+# IQaudIO Pi-DAC+
 
 El Pi-DAC+ coge las señales de audio digital (I2S) de la Raspberry Pi y a través del
 DAC PCM5122 de Texas Instruments proporciona una salida variable (control de volumen por hardware)

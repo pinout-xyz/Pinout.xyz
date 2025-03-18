@@ -26,7 +26,7 @@ i2c:
     name: Gesture sensor
     device: mgc3130
 -->
-#Skywriter HAT
+# Skywriter HAT
 
 El Skywriter HAT detecta la posición de tu dedo en 3 dimensiones, retornando X, Y y Z, que puedes usar en
 tus programas de Python.

@@ -66,7 +66,7 @@ i2c:
     name: Capteur tactile
     device: cap1208
 -->
-#Explorer HAT
+# Explorer HAT
 
 L'Explorer HAT est un chapeau multi-usage avec entrées et sorties en 5V, LED et touches tactiles. Une extension utile pour tout prototype!
 

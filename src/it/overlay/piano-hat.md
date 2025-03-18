@@ -37,7 +37,7 @@ i2c:
     name: Touch capacitivo B
     device: cap1188
 -->
-#Piano HAT
+# Piano HAT
 
 Il Piano HAT ha 16 tasti touch, 13 di questi sono singole ottave, gli altri ti danno 
 le ottave superiori e inferiori e la selezione dello strumento.

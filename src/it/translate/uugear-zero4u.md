@@ -12,7 +12,7 @@ image: 'uugear-zero4u.png'
 pincount: 4
 eeprom: no
 -->
-#Zero4U
+# Zero4U
 
 Zero4U is a 4-port USB hub for Raspberry Pi Zero, and it can be mounted to Raspberry Pi Zero back-to-back. The 4 pogo pins on the back will connect the PP1, PP6, PP22 and PP23 testing pads on Raspberry Pi Zero, hence no soldering will be needed to make it work.
 

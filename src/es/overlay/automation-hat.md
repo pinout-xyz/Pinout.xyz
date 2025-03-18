@@ -83,7 +83,7 @@ install:
   'python3':
     - 'automationhat'
 -->
-#Automation HAT
+# Automation HAT
 
 Automatian HAT es una placa adicional de domótica para Raspberry Pi; con relés, canales analógicos, salidas alimentadas y entradas regulables. Todos con tolerancia hasta 24V.
 

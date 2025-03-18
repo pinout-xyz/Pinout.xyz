@@ -35,7 +35,7 @@ i2c:
     name: DS2482
     device: DS2482-100
 -->
-#1 Wire Pi Zero
+# 1 Wire Pi Zero
 
 The 1 Wire Pi Zero from AB Electronics UK is a communication board supporting the 1-Wire® protocol designed for use on the Raspberry Pi Zero.  A 5V buffered I2C port is also provided on the board. 
 

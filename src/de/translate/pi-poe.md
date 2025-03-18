@@ -34,7 +34,7 @@ pin:
   '18':
     name: LED Yellow/Green
 -->
-#Pi PoE Switch HAT
+# Pi PoE Switch HAT
 The Pi PoE Switch HAT is an add on board for the Raspberry Pi that brings the Pi Supply Switch technology together with PoE all in one fantastic package!
 
 You can now power your Raspberry Pi and provide an Ethernet connection in any location with just a single cable. Perfect for removing the clutter of wires and for reliable use in remote locations.

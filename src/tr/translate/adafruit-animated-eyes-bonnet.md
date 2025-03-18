@@ -61,7 +61,7 @@ i2c:
     name: Analog Input
     device: ads1015
 -->
-#Snake Eyes Bonnet
+# Snake Eyes Bonnet
 The Snake Eyes Bonnet is a Raspberry Pi accessory for driving two 128x128 pixel OLED or TFT LCD displays, and also provides four analog inputs for sensors.
 
 It's perfect for making cosplay masks, props, spooky sculptures for halloween, animatronics, robots...anything where you want to add a pair of animated eyes!

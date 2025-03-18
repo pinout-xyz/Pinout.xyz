@@ -67,7 +67,7 @@ pin:
     direction: input
     active: alto (encendido)
 -->
-#Pibrella
+# Pibrella
 
 La placa todo en uno con luz, sonido, entradas y salidas de Pimoroni vs Cyntech usa un montón de pines de entrada/salida en la Pi, pero deja tanto el puerto Serial como el I2c libres, dejando un montón de espacio por si te pones creativo.
 

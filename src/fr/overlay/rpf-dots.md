@@ -98,9 +98,9 @@ pin:
     name: 'couleur: rouge'
     direction: input
 -->
-#Raspberry Pi Dots
+# Raspberry Pi Dots
 
-###Dots est un project éducatif qui vous permet de créez un circuit en joignant les points représentés avec de la peinture électrique.
+### Dots est un project éducatif qui vous permet de créez un circuit en joignant les points représentés avec de la peinture électrique.
 
 Les points du circuit sont des contacts métalliques que la peinture connectera à la masse, créant un effect de résistance de rappel.
 

@@ -66,7 +66,7 @@ pin:
     direction: input
     active: high
 -->
-#Pibrella
+# Pibrella
 
 La scheda all-in-one per luci, suoni, input ed output di Pimoroni vs Cyntech utilizza molti dei pin IO 
 del Raspberry, ma la seriale e l'I2C restano liberi, lasciando molto spazio alla creatività.

@@ -25,7 +25,7 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#LCD 16x2 caracteres
+# LCD 16x2 caracteres
 
 Esta placa hace sencillo utilizar una pantalla LCD de 16x2 caracteres. La mayoría de LCDs utilizan muchos pines GPIO, pero como esta utiliza I2C sólo necesita dos pines.
 

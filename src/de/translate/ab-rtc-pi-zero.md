@@ -35,7 +35,7 @@ i2c:
     name: DS1307
     device: DS1307
 -->
-#RTC Pi Zero
+# RTC Pi Zero
 
 The RTC Pi Zero is a battery backed real-time clock module for the Raspberry Pi Zero. It keeps track of the time while the Raspberry Pi is switched off and allows the Raspberry Pi to retrieve the current date and time from the RTC Pi Zero when it is switched back on.
 

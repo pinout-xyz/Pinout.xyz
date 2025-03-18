@@ -48,7 +48,7 @@ i2c:
     name: Cap Touch
     device: cap1166
 -->
-#Display-o-Tron HAT
+# Display-o-Tron HAT
 
 Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and touch. However both of these busses can be shared with other devices.
 

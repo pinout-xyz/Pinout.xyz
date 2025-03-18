@@ -55,7 +55,7 @@ pin:
     external_pull: up
     active: high
 -->
-#ReSpeaker 4 Mic Array
+# ReSpeaker 4 Mic Array
 
 ReSpeaker 4 Mic Array for Raspberry Pi is a quad-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that you can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
 

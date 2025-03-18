@@ -40,6 +40,6 @@ i2c:
     name: PCA9685
     device: PCA9685
 -->
-#SparkFun Pi Servo HAT
+# SparkFun Pi Servo HAT
 
 The SparkFun Pi Servo HAT allows your Raspberry Pi to control up to 16 servo motors in a straightforward and uncomplicated manner via an I2C connection. Thanks to its I2C capabilities, this PWM HAT saves the Raspberry Pi's GPIO, allowing you to use them for other purposes. Additionally, the Pi Servo HAT adds a serial terminal connection, which will allow you to bring up a Raspberry Pi without having to hook it up to a monitor and keyboard.

@@ -89,7 +89,7 @@ i2c:
     name: Input analogico
     device: ads1015
 -->
-#Explorer HAT Pro
+# Explorer HAT Pro
 
 Input ed output a 5V, touch pad, LED, input analogici e un motore H-Bridge sono le caratteristiche dell'Explorer HAT Pro--un asso nella manica per il tuo Raspberry Pi.
 

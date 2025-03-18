@@ -45,7 +45,7 @@ pin:
   '38':
   '40':
 -->
-#DPI TFT Kippah
+# DPI TFT Kippah
 
 Esta placa parecida a un HAT permite, con una mínima configuración, conectar una pantalla TFT.
 

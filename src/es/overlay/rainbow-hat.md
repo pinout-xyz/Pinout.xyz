@@ -72,7 +72,7 @@ i2c:
     name: Barometer
     device: BMP280
 -->
-#Rainbow HAT para Android Things™
+# Rainbow HAT para Android Things™
 
 Rainbow HAT tiene varios sensores, entradas y displays para explorar Android Things™. Utilízalo como estación meteorológica, reloj, cronómetro, efectos de luz o muchas otras cosas.
 

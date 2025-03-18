@@ -38,7 +38,7 @@ pin:
     name: Chip Program
     active: low
 -->
-#ESP IoT pHAT
+# ESP IoT pHAT
 
 The ESP IoT pHAT is an ESP8266 based add-on for the Raspberry Pi. It provides some GPIO and one ADC channel, broken out to use alongside a small prototyping area. Perfect for RPi Zero but works with A+/B+/2 too!
 

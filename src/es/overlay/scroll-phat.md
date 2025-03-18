@@ -43,7 +43,7 @@ install:
   'python3':
     - 'scrollphat'
 -->
-#Scroll pHAT
+# Scroll pHAT
 
 Scroll pHAT proporciona una matriz de 55 LED blancos en formato píxel que es ideal para escribir mensajes, mostrar gráficas y dibujar. Perfecto para RPi Zero pero también funciona con A+/B+/2.
 

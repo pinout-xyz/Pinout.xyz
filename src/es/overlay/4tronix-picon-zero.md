@@ -35,7 +35,7 @@ i2c:
     name: PiconZero
     device: ATMega328
 -->
-#Picon Zero
+# Picon Zero
 
 Picon Zero es una placa adicional para Raspberry Pi, con el mismo tamaño que Raspberry Pi Zero por lo que es ideal como pseudo-Hat (pHat) para Pi Zero. Sin embargo, se puede usar en cualquier Raspberry Pi con 40 pines GPIO.
 

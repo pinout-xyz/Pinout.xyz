@@ -23,7 +23,7 @@ pin:
     direction: both
     active: high
 -->
-#I2C - Inter Integrated Circuit
+# I2C - Inter Integrated Circuit
 
 Raspberry Pi'nin I2C pinleri eğer pek çok harici bileşen ile çalışıyorsanız oldukça işinize yarayacaktır.
 

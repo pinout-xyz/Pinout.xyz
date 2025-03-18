@@ -62,7 +62,7 @@ pin:
     mode: salida
     active: alto (encendido)
 -->
-#Explorer HAT
+# Explorer HAT
 
 Entradas y salidas de 5V, paneles táctiles y LEDs componen el Explorer HAT.
 

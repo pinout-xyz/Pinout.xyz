@@ -34,7 +34,7 @@ pin:
     mode: output
     active: low
 -->
-#Breakout Garden HAT
+# Breakout Garden HAT
 
 Breakout Garden HAT breaks out your Pi's i2c (inter-integrated circuit) bus into 6 convinient edge connectors designed to accomodate Pimoroni breakout boards.
 

@@ -64,7 +64,7 @@ install:
   'devices':
   - 'i2s'
 -->
-#pHAT BEAT
+# pHAT BEAT
 
 Para hacer funcionar el pHAT BEAT puedes utilizar nuestro instalador de una línea:
 

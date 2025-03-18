@@ -31,6 +31,6 @@ pin:
   '16':
     name: HX1 ENABLE
 -->
-#Uputronics HX1 Board
+# Uputronics HX1 Board
 
 A simple board to permit attachment of a Radiometrix HX1 300mW radio module to a Pi. Can be used to transmit APRS when used with a Pi In The Sky board.

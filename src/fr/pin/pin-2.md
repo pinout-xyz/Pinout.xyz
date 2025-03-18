@@ -1,4 +1,4 @@
-###Les broches d'alimentation en 5V sont connectées directement à l'arrivée de courant de la Raspi et permettent de débiter la totalité de la source de courant (moins ce que la Pi elle-même requière).
+### Les broches d'alimentation en 5V sont connectées directement à l'arrivée de courant de la Raspi et permettent de débiter la totalité de la source de courant (moins ce que la Pi elle-même requière).
 
 N'ayez aucune inquiétude cependant, une tension relativement basse de 5V est amplement suffisante pour alimenter des périphériques tels que circuits intégrés de type Arduino ou même des fils électroluminescents.
 

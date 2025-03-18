@@ -15,9 +15,9 @@ pin:
     direction: input
     active: high
 -->
-#UART - Universal Asenkron Verici/Alcı
+# UART - Universal Asenkron Verici/Alcı
 
-###WiringPi'deki 2 UART pini Pin 15 ve 16'dır
+### WiringPi'deki 2 UART pini Pin 15 ve 16'dır
 
 UART Arduino, veya bootload edilmiş bir ATmega ile kolayca iletişim kurmanızı sağlayacak bir arayüzdür. Yalnız bu iletişimi kurarken dikkat etmeniz gereken bazı hususlar var. Raspberry Pi 3.3v iken Arduino 5v'tur. Bunları akımları eşitlemeden bağlarsanız cihazlarınızdan dumanlar tütmeye başlayabilir
 

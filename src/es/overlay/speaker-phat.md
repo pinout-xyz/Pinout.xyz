@@ -42,7 +42,7 @@ i2c:
     name: LED driver
     device: sn3218
 -->
-#Speaker pHAT
+# Speaker pHAT
 
 Speaker pHAT cuenta con I2S DAC, amplificador mono, un pequeño altavoz de 8Ω y 2W además de unas barras de 10 LED, todo en una placa del mismo tamaño que una Pi Zero.
 

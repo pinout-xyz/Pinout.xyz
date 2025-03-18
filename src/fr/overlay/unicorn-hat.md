@@ -24,7 +24,7 @@ pin:
     active: high
     description: WS2812 Data
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 l'Unicorn présente une matrice composée de 64 LEDs tricolores RGB contrôlées par une bibliothèque programmée en C, mais addressable depuis Python.
 

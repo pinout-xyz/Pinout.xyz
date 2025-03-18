@@ -14,7 +14,7 @@ pin:
   '34': {}
   '39': {}
 -->
-#Toprak
+# Toprak
 
 Raspberry Pi'deki GND pinlerinin hepsi birbiri ile bağlantılıdır, bu yüzden hangi pine toprağı verdiğinizin bir önemi yok.
 

@@ -50,7 +50,7 @@ i2c:
     name: Amplifier
     device: TAS5756M
 -->
-#Amp HAT
+# Amp HAT
 
 * Audio de alta calidad – 192kHz / 32bit
 * Máxima salida 2 x 55 Watt y 8 ohms (2 x 30 Watt RMS)

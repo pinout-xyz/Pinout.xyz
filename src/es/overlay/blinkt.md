@@ -26,7 +26,7 @@ pin:
     mode: output
     active: high
 -->
-#Blinkt!
+# Blinkt!
 
 Blinkt! es una placa adicional ultradelgada para Raspberry Pi con 8 LEDs APA-102.
 

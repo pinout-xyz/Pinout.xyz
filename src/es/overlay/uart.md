@@ -15,9 +15,9 @@ pin:
     direction: entrada
     active: alto (encendido)
 -->
-#UART - Universal Asynchronous Receiver/Transmitter (Receptor/Transmisor Universal Asíncrono)
+# UART - Universal Asynchronous Receiver/Transmitter (Receptor/Transmisor Universal Asíncrono)
 
-###Los 2 pines de UART en WiringPi son: 15, 16
+### Los 2 pines de UART en WiringPi son: 15, 16
 
 El UART es una útil y directa manera de comunicar un Arduino ( o un ATmega con bootloader) con tu Pi. Debes, sin embargo, tener cuidado con los niveles lógicos entre los dos aparatos: la Pi es de 3.3v y el Arduino de 5v. Conecta los dos y puede que invoques humo mágico azul.
 

@@ -94,7 +94,7 @@ install:
   'python3':
     - 'explorerhat'
 -->
-#Explorer pHAT
+# Explorer pHAT
 
 Entradas y salidas de 5V, entradas analógicas y un controlador de motores H-Bridge forman el Explorer pHAT; un complemento de prototipado multifuncional para Raspberry Pi. Perfecto para RPi Zero pero también funciona con A+/B+/2.
 

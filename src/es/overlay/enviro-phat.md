@@ -45,7 +45,7 @@ i2c:
     name: Temp/Pressure Sensor
     device: BMP280
 -->
-#Enviro pHAT
+# Enviro pHAT
 
 Junto con una Pi Zero, Enviro pHAT es un conjunto de sensores asequible, ideal para monitorizar habitáculos de servidores, habitaciones o cualquier cosa que quieras observar. Además incluye una entrada ADC de 4-canales para añadir sensores. Funciona con cualquiera de las versiones de Raspberry Pi de 40 pines - 3/2/B+/A+/Zero.
 

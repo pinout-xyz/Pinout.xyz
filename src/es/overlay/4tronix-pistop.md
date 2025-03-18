@@ -27,7 +27,7 @@ pin:
     mode: output
     active: high
 -->
-#Pi Stop Traffic Lights
+# Pi Stop Traffic Lights
 
 PiStop se conecta verticalmente a los pines GPIO y puede y puede colocarse en distintas posiciones. Sirve tanto para 26 pines como para 40.
 

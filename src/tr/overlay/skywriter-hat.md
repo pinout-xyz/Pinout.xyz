@@ -26,7 +26,7 @@ i2c:
     name: Gesture sensor
     device: mgc3130
 -->
-#Skywriter HAT
+# Skywriter HAT
 
 Skywriter HAT X, Y ve Z ekseninde parmağınızın pozisyonunu algılamanızı, ve de bu değerleri Python Scriptinizde kullanmanızı sağlar.
 

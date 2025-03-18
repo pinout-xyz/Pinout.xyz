@@ -63,7 +63,7 @@ pin:
     mode: output
     active: high
  -->
-#Explorer HAT
+# Explorer HAT
 
 5V giriş ve çıkışları, dokunmatik paneli ve LEDler ile Explorer HAT, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
 

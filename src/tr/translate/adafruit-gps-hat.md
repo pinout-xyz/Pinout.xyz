@@ -31,7 +31,7 @@ pin:
   '10':
     mode: UART
 -->
-#Ultimate GPS HAT
+# Ultimate GPS HAT
 
 The Ultimate GPS HAT from Adafruit adds precision time and location to your Raspberry Pi.
 

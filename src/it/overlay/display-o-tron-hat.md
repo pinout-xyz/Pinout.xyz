@@ -42,7 +42,7 @@ pin:
     mode: output
     active: low
 -->
-#Display-o-Tron HAT
+# Display-o-Tron HAT
 
 Il Display-o-Tron HAT usa sia l'SPI che l'I2c per controllare il display LCD, la retroilluminazione e il touchscreen. 
 Entrambi questi bus possono essere comunque condivisi con altre periferiche.

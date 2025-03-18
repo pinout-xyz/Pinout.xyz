@@ -75,7 +75,7 @@ The design has a built-in temperature, humidity, light sensors, 3-axis accelerom
 
 Also using the USB connector you can use the shield with Linux, Windows and Android.
 
-##Features
+## Features
 
 - BG96 Cat.M1 / Cat.NB1 (NB-IoT) / eGPRS (EDGE, GPRS)
 - Supported Bands : Global – B1/ B2/ B3/ B4/ B5/ B8/ B12/ B13/ B18/ B19/ B20/ B26/ B28 and B39 ( for Cat M1 only )

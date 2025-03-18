@@ -24,7 +24,7 @@ pin:
     active: high
 
 -->
-#I2C - Inter Integrated Circuit 
+# I2C - Inter Integrated Circuit
 
 Der I2C-Bus des Raspberry Pi ist sehr praktisch um mit vielen unterschiedlichen Bausteinen
 zu kommunizieren - egal ob z.B. ein MCP23017 als digitale I/O-Erweiterung oder sogar ein ATmega. 

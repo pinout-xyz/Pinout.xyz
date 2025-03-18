@@ -31,9 +31,9 @@ pin:
     direction: output
     active: high
 -->
-#Traffic HAT
+# Traffic HAT
 
-###Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
+### Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
 
 ```python
 import RPi.GPIO as IO
@@ -41,14 +41,14 @@ from time import sleep
 
 IO.setmode(IO.BCM)
 
-#Lights
+# Lights
 IO.setup(22,IO.OUT)
 IO.setup(23,IO.OUT)
 IO.setup(24,IO.OUT)
 
-#Buzzer
+# Buzzer
 IO.setup(5,IO.OUT)
 
-#Button
+# Button
 IO.setup(25,IO.IN,pull_up_down=IO.PUD_UP)
 ```

@@ -14,7 +14,7 @@ pin:
   '34':
   '39':
 -->
-#Masse
+# Masse
 
 Les broches raccordées à la masse de la Raspberry Pi sont interconnectées et celle que vous utilisez n'a aucune importance.
 

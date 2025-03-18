@@ -24,7 +24,7 @@ pin:
     active: alto (encendido)
     description: WS2812 Datos
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 64 LEDs RGB cegadores contenidos en un HAT y controlados con una ultrarrápida librería escrita en C, controlable
 desde Python, hacen al Unicorn HAT el hermano mayor del PiGlow.

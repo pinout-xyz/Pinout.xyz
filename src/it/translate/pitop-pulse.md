@@ -56,7 +56,7 @@ install:
     - 'python-pt-pulse'
     - 'python3-pt-pulse'
 -->
-#pi-topPULSE
+# pi-topPULSE
 
 The pi-topPULSE is a Raspberry Pi HAT and a pi-top/pi-topCEED compatible add-on board comprising of a 7x7 LED array, a speaker and a microphone. Additionally the device features ambient lights: 4 around the speaker, and 3 on the underside.
 

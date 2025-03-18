@@ -98,9 +98,9 @@ pin:
     name: 'Color: Red'
     direction: input
 -->
-#Raspberry Pi Dots
+# Raspberry Pi Dots
 
-###Dots, Raspberry Pi için Dot to Dot HAT (Noktadan-noktaya, Raspberry Pi üzerine tam bağlanıp oturabilen), uçları tanımlamak ve de birleştirmek için sadece bir iletken kalem boya kullanılamn bir devredir.
+### Dots, Raspberry Pi için Dot to Dot HAT (Noktadan-noktaya, Raspberry Pi üzerine tam bağlanıp oturabilen), uçları tanımlamak ve de birleştirmek için sadece bir iletken kalem boya kullanılamn bir devredir.
 
 Bu devre üzerindeki tüm noktalar "akıcı" bir metal olmakla birlikte toprağa bağlamak ve devreyi tamamlamak için sadece modülle gelen bir adet iletken boya ile (gazlı kaleme benziyor) toprağa bir çizgi çizilmesi yeterlidir. Bu sayede lehimle uğraşmadan kolaylıkla devreler tamamlanabilir.
 

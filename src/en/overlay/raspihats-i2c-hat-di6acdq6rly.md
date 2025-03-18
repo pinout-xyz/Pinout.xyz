@@ -53,7 +53,7 @@ I2C address range is [0x60 .. 0x6F].
 * temperature operating range: -25 ~ +75°C
 * stackable, up to 16x
 
-##Integration
+## Integration
 * [Python](https://pypi.python.org/pypi/raspihats)
 * [Node-RED](https://www.npmjs.com/package/node-red-contrib-raspihats) - Flow-based programming for the IoT
 * [HomeAssistant](https://home-assistant.io/components/raspihats) - Home automation platform

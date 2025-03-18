@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:slim
 
 COPY . ./
 
@@ -7,4 +7,4 @@ RUN apt-get update && \
 
 RUN pip install -r requirements.txt
 
-CMD ["bash", "-c", "make serve LANG=en"]
+CMD ["make", "serve", "LANG=en"]

@@ -20,8 +20,8 @@ def slugify(value):
     """
     value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '-', value).strip().lower()
-    return re.sub('[-\s]+', '-', value)
+    value = re.sub(r'[^\w\s-]', '-', value).strip().lower()
+    return re.sub(r'[-\s]+', '-', value)
 
 
 def load(file):
@@ -50,10 +50,10 @@ def load(file):
         _type = _data.group(0)[4:8].upper().strip()
 
         if _type == 'JSON':
-            _data = re.search('\{(.*)\}', _data.group(0), re.DOTALL).group(0)
+            _data = re.search(r'\{(.*)\}', _data.group(0), re.DOTALL).group(0)
             _data = json.loads(_data)
         elif _type == '---':
-            _data = re.search('\n(.*)\n', _data.group(0), re.DOTALL).group(0)
+            _data = re.search(r'\n(.*)\n', _data.group(0), re.DOTALL).group(0)
             _data = yaml.safe_load(_data)
         else:
             data = {}

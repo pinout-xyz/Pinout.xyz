@@ -90,7 +90,7 @@ i2c:
     name: Analog Input
     device: ads1015
  -->
-#Explorer HAT Pro
+# Explorer HAT Pro
 
 5V giriş ve çıkışları, dokunmatik paneli, LEDler, analog girişler ve bir H-Bridge motor ile Explorer HAT Pro, Raspberry Pi'de prototipleme için tam teşekkürlü bir araç olarak teşkil etmekte.
 

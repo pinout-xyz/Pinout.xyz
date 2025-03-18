@@ -15,9 +15,9 @@ pin:
     direction: input
     active: high
 -->
-#UART - Universal Asynchronous Receiver/Transmitter (serielle Schnittstelle)
+# UART - Universal Asynchronous Receiver/Transmitter (serielle Schnittstelle)
 
-###Die beiden UART Anschlüsse sind in WiringPi 15 und 16
+### Die beiden UART Anschlüsse sind in WiringPi 15 und 16
 
 UART ist eine einfache und nützliche Schnittstelle um einen Arduino (oder vorbereiteten ATmega) mit Deinem Pi zu verbinden.
 Allerdings solltest Du auf die Spannungspegel der Anschlüsse zwischen den beiden Chips achten: der Pi hat 3,3 Volt, der Arduino 5 Volt.

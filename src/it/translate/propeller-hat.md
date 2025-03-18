@@ -39,7 +39,7 @@ flash:
     mode: flash
     active: low
 -->
-#Propeller HAT
+# Propeller HAT
 
 Propeller HAT brings the 8-core Parallax Propeller microcontroller to HAT form-factor. Program and talk to it over Serial using Propeller IDE and you'll have a powerful, realtime co-processor for your Pi.
 

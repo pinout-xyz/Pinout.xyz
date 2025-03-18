@@ -66,7 +66,7 @@ i2c:
     name: Touch capacitivo
     device: cap1208
 -->
-#Explorer HAT
+# Explorer HAT
 
 Input ed output a 5V, touch pad, LED sono le caratteristiche dell'Explorer HAT Pro--un asso nella manica per il tuo Raspberry Pi.
 

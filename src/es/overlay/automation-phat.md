@@ -72,7 +72,7 @@ install:
   'python3':
     - 'automationhat'
 -->
-#Automation pHAT
+# Automation pHAT
 
 Automation pHAT sirva para monitorizar y domotizar el hogar con Raspberry Pi; cuenta con relés, canales analógicos, salidas con alimentación y entradas regulables. Todo capaz de funcionar con 24V.
 

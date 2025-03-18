@@ -39,7 +39,7 @@ i2c:
     name: device display name
     device: chip name
 -->
-#my add-on board
+# my add-on board
 
 Use this section to provide additional information such as features, technical parts, install requirements, etc. Please keep this section to the point and avoid copy/paste of marketing blurb - the board's extended description should be primarily neutral and technical.
 

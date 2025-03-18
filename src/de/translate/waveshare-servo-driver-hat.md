@@ -37,12 +37,12 @@ i2c:
     name: PCA9685
     device: PCA9685
 -->
-#Servo Driver HAT
+# Servo Driver HAT
 
 Standard Raspberry Pi 40PIN GPIO extension header, supports Raspberry Pi series boards.
 I2C controlled, using only 2 pins, up to 32 different addresses, enabling to stack the same number of boards. They are selectable by desoldering the resistances and solder on pins A0..A4. 
 
-##Notes
+## Notes
 * The PCA9685 A5 pin is soldered to GND so you can't use the  other 32 possible addresses offerred by PCA9685.
 * Also the i2c 0x70 address is present, if you run `i2cdetect -y 1`. That's because the PCA9685 uses that address to send data to all the devices of the same model.
 

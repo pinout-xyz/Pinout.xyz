@@ -35,7 +35,7 @@ install:
   'devices':
     - 'spi'
 -->
-#Duino
+# Duino
 
 RasPiO Duino es una pequeña placa adicional para Raspberry Pi. Tiene funciones similares a Arduino Uno, con un ATMega 328P-PU como corazón, pero es completamente programable desde Raspberry Pi. Una vez programado, puede desconectarse de Raspberry Pi y usarse de manera independiente.
 

@@ -38,7 +38,7 @@ i2c:
     name: Ublox
     device: Ublox
 -->
-#Uputronics GPS Expansion Board
+# Uputronics GPS Expansion Board
 
 Adds location and PPS to enable precision time keeping to your Raspberry Pi. 
 

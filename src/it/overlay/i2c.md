@@ -24,7 +24,7 @@ pin:
     active: high
 
 -->
-#I2C - Inter Integrated Circuit
+# I2C - Inter Integrated Circuit
 
 L'I2C del Raspberry è un modo estremamente utile per comunicare con molti tipi diversi di periferiche esterne, dall'expander digitale MCP23017, ad un ATmega collegato.
 

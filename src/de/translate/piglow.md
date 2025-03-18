@@ -31,7 +31,7 @@ i2c:
     name: LED driver
     device: sn3218
 -->
-#PiGlow
+# PiGlow
 
 The PiGlow is a small add-on board for the Raspberry Pi that provides 18 individually controllable LEDs.
 

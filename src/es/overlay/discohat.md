@@ -79,9 +79,9 @@ pin:
     mode: spi
     description: LED strip clock
 -->
-#DiscoHAT
+# DiscoHAT
 
-###DiscoHAT es una pequeña placa que permtie controlar por ordenador luces, sonidos y efectos especiales.
+### DiscoHAT es una pequeña placa que permtie controlar por ordenador luces, sonidos y efectos especiales.
 
 Es una pieza esencial para hacer sistemas de luz y sonido personalizados. Puedes crear fácilmente tu propia discoteca. Es también útil para pequeños grupos de teatro, grupos de música o proyectos escolares.
 

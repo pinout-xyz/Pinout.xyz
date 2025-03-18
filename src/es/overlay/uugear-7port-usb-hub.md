@@ -16,7 +16,7 @@ power:
 ground:
   '39':
 -->
-#7-port USB hub for Raspberry Pi
+# 7-port USB hub for Raspberry Pi
 
 Es un hub con 7 puertos USB para Raspberry Pi. Aumenta un puerto USB de Raspberry Pi en 7, lo que permite usar más dispositivos. Cuenta con un LED rojo para indicar la alimentación y 7 LEDs verdes para el tráfico en los puertos USB.
 

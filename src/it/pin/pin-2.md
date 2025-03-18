@@ -1,4 +1,4 @@
-###I pin di alimentazione a 5V sono collegati direttamente all'alimentazione del Raspberry stesso, e sono in grado di fornire tutta la corrente del tuo alimentatore principale, meno quella usata dallo stesso Raspberry.
+### I pin di alimentazione a 5V sono collegati direttamente all'alimentazione del Raspberry stesso, e sono in grado di fornire tutta la corrente del tuo alimentatore principale, meno quella usata dallo stesso Raspberry.
 
 Con un'alimentazione decente, come l'alimentatore ufficiale del Raspberry, puoi ragionevolmente ottenere circa 1.5A.
 

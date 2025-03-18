@@ -26,7 +26,7 @@ install:
   'devices':
   - 'i2s'
 -->
-#pHAT DAC
+# pHAT DAC
 
 Der pHAT DAC verfügt über einen high-quality digital nach analog audio Konverter für den Raspberry Pi: 24-bits bei 192KHz über das I2S Interface mit dem 2x20 pin GPIO header. Er hat einen a 3.5mm stereo Klinkenstecker vormontiert. Optional kann ein RCA Klinkenstecker angelötet werden.
 

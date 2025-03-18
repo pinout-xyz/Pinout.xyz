@@ -34,7 +34,7 @@ i2c:
     name: Servo And Light Driver
     device: PIC16F1503
 -->
-#Pan Tilt HAT
+# Pan Tilt HAT
 
 Pan Tilt HAT es un controlador servo de dos canales diseñado para controlar un pequeño montaje Pan/Tilt controlado por un servo. Además controla luces por PWM o píxels WS2812; hasta 24 RGB o 18 RGBW.
 

@@ -38,7 +38,7 @@ RaspiAudio enables your Raspberry Pi ( Pi 3, 2, B+, A+, and Zero) with a state o
 
 Great for home audio sound systems, an internet radio, or any project with audio.
 
-##Features
+## Features
 
 1. DAC I2s 24-bit 96KHz audio with studio sampling quality
 

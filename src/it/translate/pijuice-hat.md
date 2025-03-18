@@ -34,7 +34,7 @@ i2c:
     name: Control
     device: STM32F030CCT6
 -->
-#PiJuice
+# PiJuice
 
 PiJuice is a fully uninterruptable / uninterupted power supply that will always keep your Raspberry Pi powered! It has a real time clock (RTC) for time tracking and scheduled tasks when the Pi is offline (as well as remote on/off of your Pi). It also has an integrated microcontroller (MCU) chip which will manage soft shut down functionality, a true low power deep sleep state and intelligent start up.
 

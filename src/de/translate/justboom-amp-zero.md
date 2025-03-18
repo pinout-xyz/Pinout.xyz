@@ -48,7 +48,7 @@ i2c:
     name: Amplifier
     device: TAS5756M
 -->
-#Amp Zero
+# Amp Zero
 
 * Full high quality audio – 192kHz / 32bit
 * 2 x 40 Watt peak output at 4 ohms (2 x 20 Watt RMS)

@@ -31,7 +31,7 @@ pin:
   '10':
     mode: UART
 -->
-#Ultimate GPS HAT
+# Ultimate GPS HAT
 
 Ultimate GPS HAT (Sombrero definitivo de GPS) de Adafruit le proporciona a tu Raspberry Pi una ubicación y tiempo precisos.
 

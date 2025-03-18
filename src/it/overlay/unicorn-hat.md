@@ -24,7 +24,7 @@ pin:
     active: high
     description: WS2812 Dati
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 64 LED accecanti montati su un HAT e controllati da una velocissima libreria in C, con cui puoi comunicare
 via Python, rendono l'Unicorn HAT il fratello maggiore (e più luminoso) del PiGlow.

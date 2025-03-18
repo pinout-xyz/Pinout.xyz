@@ -32,7 +32,7 @@ pin:
   '40':
     name: I2S
 -->
-#Speaker Bonnet
+# Speaker Bonnet
 
 The Speaker Bonnet is a 3W stereo amplifier add-on for the Raspberry Pi. It uses I2S, so you get really crisp audio. The digital data goes right into the amplifier so there's no static like you hear from the headphone jack. It works with any and all Raspberry Pi computers with a 2x20 connector - A+, B+, Zero, Pi 2, Pi 3.
 

@@ -44,7 +44,7 @@ i2c:
     name: DS1307
     device: DS1307
 -->
-#Witty Pi
+# Witty Pi
 
 Witty Pi is an extension board that adds realtime clock and power management to your Raspberry Pi.
 

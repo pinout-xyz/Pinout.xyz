@@ -25,7 +25,7 @@ i2c:
     name: MCP23017
     device: MCP23017
 -->
-#16x2 Character LCD
+# 16x2 Character LCD
 
 This plate makes it easy to use a 16x2 Character LCD. Most character LCDs use lots of GPIO pins, but since this uses I2C you only need two pins. 
 

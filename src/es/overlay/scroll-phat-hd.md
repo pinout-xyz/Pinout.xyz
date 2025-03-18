@@ -33,7 +33,7 @@ i2c:
     name: Matrix LED driver
     device: IS31FL3731
 -->
-#Scroll pHAT HD
+# Scroll pHAT HD
 
 Scroll pHAT HD proporciona una matriz de 119 píxeles LED blancos, ideal para escribir mensajes, mostrar gráficas o hacer dibujos. Es perfecto para RPi Zero pero también funciona con A+/B+/2.
 

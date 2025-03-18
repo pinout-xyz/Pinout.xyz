@@ -48,7 +48,7 @@ i2c:
     name: Digital Interface Transceiver
     device: WM8804G
 -->
-#Digi HAT
+# Digi HAT
 
 * Interfaz S/PDIF de salida dedicada, compatible con 192kHz / 24bit
 * Salida de sonido digital mediante conector óptico (TOSLINK) o coaxial (RCA electrical)

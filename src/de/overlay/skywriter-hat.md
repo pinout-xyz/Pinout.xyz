@@ -26,7 +26,7 @@ i2c:
     name: Gesture sensor
     device: mgc3130
 -->
-#Skywriter HAT
+# Skywriter HAT
 
 Skywriter HAT spürt die Position Deines Fingers über ihm in drei Dimensionen und gibt die somit die X-, Y- und Z-Koordinaten, welche Du in Deinen Python-Skripten verarbeiten kannst.
 

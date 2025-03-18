@@ -18,7 +18,7 @@ pin:
   'bcm27':
     name: DAT3
 -->
-#SDIO - SD Card Interface
+# SDIO - SD Card Interface
 
 SDIO is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.
 

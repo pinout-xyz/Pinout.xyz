@@ -35,7 +35,7 @@ i2c:
     name: Cap Touch
     device: cap1188
 -->
-#Drum HAT
+# Drum HAT
 
 Drum HAT es la compañía perfecta para Piano HAT. Utiliza el mismo sensor táctical para crear 8 pads del tamaño de un dedo. Utilízalo para hacer música con Python, controlar software musical en tu Pi, controlar instrumentos o que forme parte de un proyecto mayor.
 

@@ -45,9 +45,9 @@ pin:
   '40':
     name: SPI1 SCLK
 -->
-#SPI - Serial Peripheral Interface
+# SPI - Serial Peripheral Interface
 
-###Conocido como el bus serial de cuatro cables, SPI te permite encadenar múltiples dispositivos desde un solo set de pines, asignando a cada chip un pin distinto de Chip Select.
+### Conocido como el bus serial de cuatro cables, SPI te permite encadenar múltiples dispositivos desde un solo set de pines, asignando a cada chip un pin distinto de Chip Select.
 
 Un útil ejemplo de un periférico SPI es el MCP23S17, expansor de puertos digital. Fíjate en la S en lugar del 0 encontrado en la versión I2C
 

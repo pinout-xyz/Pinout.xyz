@@ -4,14 +4,21 @@
 
 This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces. Pinout also includes [hundreds of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
 
-## Support Pinout.xyz
+Find this website useful? Support me via [Ko-Fi](https://ko-fi.com/gadgetoid), [GitHub](https://github.com/sponsors/gadgetoid), or [Patreon](https://www.patreon.com/gadgetoid)
 
-If you love Pinout, please help me fund new features and improvements:
+## Other Pinouts
 
-* via GitHub at [GitHub.com/sponsors/gadgetoid](https://github.com/sponsors/gadgetoid)
-* via Patreon at [Patreon.com/gadgetoid](https://www.patreon.com/gadgetoid)
+We've created Pinouts for the Raspberry Pi Pico range of boards, too, you can find them here:
 
-Every $1 makes all the difference! Thank you.
+* [Raspberry Pi Pico Pinout](https://pico.pinout.xyz)
+* [Raspberry Pi Pico W Pinout](https://picow.pinout.xyz)
+* [Raspberry Pi Pico 2 Pinout](https://pico2.pinout.xyz)
+
+And some advanced/experimental pinouts, too:
+
+* [Minimal Raspberry Pi 40-pin Pinout](https://pi.pinout.xyz)
+* [Raspberry Pi RP2350A QFN-60 Pinout](https://rp2350a.pinout.xyz)
+* [Espressif ESP32 C5 DevKitC Pinout](https://esp32c5.pinout.xyz)
 
 ## pHAT Stack
 

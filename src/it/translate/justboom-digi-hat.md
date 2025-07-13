@@ -48,7 +48,7 @@ i2c:
     name: Digital Interface Transceiver
     device: WM8804G
 -->
-#Digi HAT
+# Digi HAT
 
 * Dedicated S/PDIF output interface chip supports up to 192kHz / 24bit
 * Digital audio output over either optical (TOSLINK) or coaxial (RCA electrical) connectors

@@ -34,7 +34,7 @@ pin:
     mode: output
     active: low
 -->
-#Breakout Garden HAT
+# Breakout Garden HAT
 
 Breakout Garden HAT convierte el bus i2c de tu Raspberry Pi en 6 conectores válidos para placas de Pimoroni.
 

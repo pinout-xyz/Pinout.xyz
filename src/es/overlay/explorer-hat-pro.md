@@ -89,7 +89,7 @@ i2c:
     name: Entrada Analógica
     device: ads1015
 -->
-#Explorer HAT Pro
+# Explorer HAT Pro
 
 Entradas y salidas de 5V, paneles táctiles, LEDs, entradas analógicas y un Puente-H para controlar motores componen el Explorer HAT Pro.
 

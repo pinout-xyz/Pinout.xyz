@@ -55,11 +55,11 @@ pin:
   '23':
     mode: spi
 -->
-#High-Precision AD/DA Board
+# High-Precision AD/DA Board
 
 The High-Precision AD/DA Board allows you to add high-precision analog to digital and digital to analog functions to the Raspberry Pi.
 
-##Features
+## Features
 
 - Onboard ADS1256, 8ch 24bit high-precision ADC (4ch differential input), 30ksps sampling rate
 - Onboard DAC8532, 2ch 16bit high-precision DAC
@@ -68,7 +68,7 @@ The High-Precision AD/DA Board allows you to add high-precision analog to digita
 - Onboard input/output interface via screw terminals, for connecting analog/digital signal
 - Features AD/DA detect circuit, easy for signal demonstration
 
-##Getting Started
+## Getting Started
 
 - [Official Wiki page getting started on Linux](http://www.waveshare.com/wiki/High-Precision_AD/DA_Board)
 - [Raspberry Pi AD/DA Board Library for Window 10 IoT Core](https://www.hackster.io/laserbrain/raspberry-pi-ad-da-board-library-for-window-10-iot-core-c8cc34 "www.hackster.io")

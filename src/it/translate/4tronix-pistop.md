@@ -27,7 +27,7 @@ pin:
     mode: output
     active: high
 -->
-#Pi Stop Traffic Lights
+# Pi Stop Traffic Lights
 
 The PiStop is placed vertically into the GPIO connectors and can be fitted into several positions in the board. It can be fitted into 26-pin headers as well as 40-pin headers.
 

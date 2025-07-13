@@ -1,4 +1,4 @@
-#Pinout Overlays
+# Pinout Overlays
 
 A Pinout overlay describes the functions of the Raspberry Pi pins for a specific board.
 An overlay is specified by a Markdown file containing mandatory and optional fields as well as an extended long-description.

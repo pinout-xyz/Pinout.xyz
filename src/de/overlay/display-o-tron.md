@@ -51,7 +51,7 @@ pin:
   23:
     mode: spi
 -->
-#Display-o-Tron 3000
+# Display-o-Tron 3000
 
 Mit diesem Einzeiler installierst Du das Display-o-Tron 3000:
 

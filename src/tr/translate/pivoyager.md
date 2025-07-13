@@ -39,7 +39,7 @@ i2c:
     name: Controller
     device: STM32F030C6T6
 -->
-#PiVoyager UPS
+# PiVoyager UPS
 
 **The PiVoyager is a UPS with a programmable watchdog, wake-up and a real-time calendar for the Raspberry-Pi.**
 

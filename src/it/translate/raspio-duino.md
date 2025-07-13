@@ -35,7 +35,7 @@ install:
   'devices':
     - 'spi'
 -->
-#Duino
+# Duino
 
 The RasPiO Duino is a small plug-on board for Raspberry Pi. It has similar functionality to an Arduino Uno, with an ATMega 328P-PU at its heart, but is fully programmable from the Raspberry Pi. Once programmed, it can be removed from the Pi and used on its own.
 

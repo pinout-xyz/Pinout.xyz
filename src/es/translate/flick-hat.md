@@ -38,7 +38,7 @@ i2c:
     name: Gesture controller
     device: MGC3130
 -->
-#Flick HAT
+# Flick HAT
 Integra Flick en tu proyecto I2C para  múltiples formas de controlarlo. Con la tecnología de gestos de campo cercano, puedes ocultar tu proyecto detrás de material no conductor (madera / acrílico) y seguir utilizando Flick.
 
 * Seguimiento 3D

@@ -45,10 +45,10 @@ pin:
   '40':
     name: SPI1 SCLK
 -->
-#SPI - Serial Peripheral Interface
+# SPI - Serial Peripheral Interface
 ---
-###SPI0 pins in BCM mode are: 9, 10, 11 + 7/8
-###SPI0 pins in WiringPi are: 12, 13, 14 + 10/11
+### SPI0 pins in BCM mode are: 9, 10, 11 + 7/8
+### SPI0 pins in WiringPi are: 12, 13, 14 + 10/11
 ---
 Known as the four-wire serial bus, SPI lets you daisy-chain multiple compatible devices off a single set of pins by assigning them different chip-select pins.
 

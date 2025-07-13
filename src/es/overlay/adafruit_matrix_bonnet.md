@@ -60,7 +60,7 @@ pin:
 
 
 -->
-#RGB Matrix Bonnet
+# RGB Matrix Bonnet
 
 Este HAT se conecta a tu Pi y hace muy sencillo controlar matrices RGB, como las que ves en Times Square, permitiendo crear una pantalla en movimiento llena de color o un mini muro LED.
 

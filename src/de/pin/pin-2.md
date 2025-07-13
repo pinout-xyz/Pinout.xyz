@@ -1,4 +1,4 @@
-###Die 5V Stromanschlüsse sind direkt mit der Stromversorgung des Pi verbunden und können somit soviel Strom liefern, wie die Stromversorgung (abzüglich des Verbrauchs des Pi) hergibt
+### Die 5V Stromanschlüsse sind direkt mit der Stromversorgung des Pi verbunden und können somit soviel Strom liefern, wie die Stromversorgung (abzüglich des Verbrauchs des Pi) hergibt
 
 Mit einer guten Stromversorgung (z.B. dem offiziellen Pi Adapter) kannst Du hier ca. 1,5A ziehen.
 

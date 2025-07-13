@@ -44,7 +44,7 @@ i2c:
     name: DS1307
     device: DS1307
 -->
-#Witty Pi
+# Witty Pi
 
 Witty Pi es una placa adicional que añade reloj de tiempo real y gestión de alimentación a Raspberry Pi..
 

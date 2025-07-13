@@ -93,7 +93,7 @@ i2c:
     device: BMP280
 
 -->
-#Coral Environmental Sensor Board
+# Coral Environmental Sensor Board
 
 The Coral Environmental Sensor Board adds multiple environmental sensors and Grove connectors for external devices. It works with all 40-pin Rasperry Pi variants as well as the Coral Dev Board.
 

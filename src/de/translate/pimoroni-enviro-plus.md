@@ -76,7 +76,7 @@ i2c:
     name: Analog for Gas Sensor
     device: ADS1015
 -->
-#Enviro+
+# Enviro+
 
 An all-in-one hobbyist environmental monitoring board. Measures air quality (particulates and gases), temperature, pressure, humidity, light and noise level.
 

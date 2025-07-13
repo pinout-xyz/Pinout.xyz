@@ -42,7 +42,7 @@ i2c:
     name: LED driver
     device: sn3218
 -->
-#Speaker pHAT
+# Speaker pHAT
 
 Speaker pHAT crams an I2S DAC and mono amplifier, a tiny 8Ω 2W speaker, and a 10 LED bar graph all on a board no bigger than a Pi zero.
 

@@ -31,7 +31,7 @@ i2c:
     name: LED driver
     device: sn3218
 -->
-#PiGlow
+# PiGlow
 
 La Piglow est une carte petit format pour la Raspberry Pi composée de 18 LEDs contrôlables individuellement.
 

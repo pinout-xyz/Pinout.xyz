@@ -24,7 +24,7 @@ pin:
     active: alto (encendido)
 
 -->
-#I2C - Inter Integrated Circuit
+# I2C - Inter Integrated Circuit
 
 Los pines de I2C de Raspberry Pi son una manera extremadamente útil de comunicarse con distintos tipos de periféricos externos, desde el
 expansor de puertos digital MCP23017, hasta un ATmega conectado.

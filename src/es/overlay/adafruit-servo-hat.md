@@ -41,7 +41,7 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#Servo/PWM HAT
+# Servo/PWM HAT
 
 El Servo/PWM HAT de Adafruit permite controlar 16 salidas servo o PWM a través de I2C con sólo 2 pines.
 El controlador PWM incluido en la placa controlará los 16 canales simultáneamente sin ningún procesamiento adicional por parte de Raspberry Pi. Utilizando un sistema de direcciones binaria, mediante cables soldados al PCB, es posible acoplar hasta 62 HATs para controlar hasta 992 servos, utilizando solo el puerto I2C.

@@ -48,7 +48,7 @@ pin:
     name: RT Chip Select
     mode: chipselect
 -->
-#PiTFT Plus 3.5"
+# PiTFT Plus 3.5"
 
 PiTFT+ cuenta con una pantalla de 3.5" y 480x320, pixel de colores de 16-bit e interfaz resistiva, creada específicamente para la Raspberry Pi 3, 2 y A+/B+.
 

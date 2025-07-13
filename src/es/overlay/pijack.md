@@ -37,7 +37,7 @@ pin:
   '24':
     mode: spi
 -->
-#PiJack
+# PiJack
 
 La forma más sencilla de añadir Ethernet a Raspberry Pi Zero. Simplemente conecta PiJack a tu Pi y arranca la última versión de Raspbian. PiJack será detectada a nivel del kernel Linux, cargando el controlador correcto y la interfaz Ethernet estará lista para uso.
 

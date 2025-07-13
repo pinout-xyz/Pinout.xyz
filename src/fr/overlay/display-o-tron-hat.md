@@ -42,7 +42,7 @@ pin:
     mode: output
     active: low
 -->
-#Display-o-Tron HAT
+# Display-o-Tron HAT
 
 Le chapeau Display-o-Tron est un LCD 3x16 caractères avec rétro-éclairage sur 6 zones RGB et buttons tactiles. Il communique avec la Raspberry Pi par l'intermédiaire des bus SPI et I2C.
 

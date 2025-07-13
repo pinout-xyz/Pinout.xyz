@@ -28,6 +28,6 @@ pin:
   'bcm27':
     name: TMS (Alt4)
 -->
-#JTAG - Joint Test Action Group
+# JTAG - Joint Test Action Group
 
 JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.

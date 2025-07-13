@@ -14,7 +14,7 @@ pin:
   '34':
   '39':
 -->
-#Masa
+# Masa
 
 Los pines de masa en la Raspberry Pi están todos electrónicamente conectados, así que
 no importa cual uses si estás conectando una fuente de alimentación

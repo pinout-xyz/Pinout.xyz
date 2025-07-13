@@ -46,7 +46,7 @@ i2c:
     name: DS1307
     device: DS1307
 -->
-#RGB Matrix HAT + RTC
+# RGB Matrix HAT + RTC
 
 Este HAT hace sencillo controlar matrices RGB como las que se ven en Times Square, permitiendo crear una pantalla en movimiento con color o un panel LED. Se necesita una fuente de alimentación de 5V, no incluida, para alimentar la matriz. Raspberry Pi no puede hacerlo al tratarse de grandes corrientes. Para calcular la máxima corriente de la matriz, multiplica la anchura de las matrices por 0.12. Una matriz de 32 píxeles necesita 32*0.12 = 3.85A así que escoge una fuente de alimentación de 5V y 4A. Este HAT es sólo para ser utilizado con las matrices HUB75 tipo RGB. No se puede utilizar con NeoPixel, DotStar u otros LEDs direccionables.
 

@@ -40,7 +40,7 @@ pin:
   '37':
     name: ESP GPIO9
 -->
-#WiFi Pants
+# WiFi Pants
 
 WiFi Pants is a WiFi and 5V boost power supply add-on board for your Raspberry Pi based around the ESP-12F.
 

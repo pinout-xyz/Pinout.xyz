@@ -33,7 +33,7 @@ i2c:
    name: TB6612
    device: TB6612    
 -->
-#DC & Stepper Motor HAT
+# DC & Stepper Motor HAT
 
 Haz tus sueños de root realidad con el nuevo DC+Stepper Motor HAT de Adafruit. Es perfecto para cualquier proyecto que implique movimiento ya que permite controlar 4 motores DC o 2 paso a paso con un control completo de la velocidad PWM.
 

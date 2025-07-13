@@ -48,7 +48,7 @@ pin:
     name: RT Chip Select
     mode: chipselect
 -->
-#PiTFT Plus 3.5"
+# PiTFT Plus 3.5"
 
 The PiTFT+ features a 3.5" display with 480x320 16-bit color pixels and a resistive touch overlay and is engineered specifically to work with the Raspberry Pi 3, 2 and the Model A+/B+.
 

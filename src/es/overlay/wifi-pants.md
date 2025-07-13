@@ -40,7 +40,7 @@ pin:
   '37':
     name: ESP GPIO9
 -->
-#WiFi Pants
+# WiFi Pants
 
 WiFi Pants es una placa adicional para Raspberry Pi con WiFi y alimentación de 5V, basada en ESP-12F.
 

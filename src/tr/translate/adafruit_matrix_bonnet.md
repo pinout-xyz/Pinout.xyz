@@ -60,7 +60,7 @@ pin:
 
 
 -->
-#RGB Matrix Bonnet
+# RGB Matrix Bonnet
 
 This HAT plugs into your Pi and makes it super easy to control RGB matrices, such as those you see in the likes of Times square, enabling you to create a colorful scrolling display or mini LED wall.
 

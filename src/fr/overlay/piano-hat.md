@@ -37,7 +37,7 @@ i2c:
     name: Capteur tactile B
     device: cap1188
 -->
-#Piano HAT
+# Piano HAT
 
 Le Piano HAT est un mini-piano pour la RasPi muni de 16 touches tactiles. 13 d'entre elles forment le clavier en lui-même, s'étendant sur une octave. Les autres quant à elles servent à déplacer l'octave vers le haut ou le bas, ainsi que la sélection d'instrument.
 

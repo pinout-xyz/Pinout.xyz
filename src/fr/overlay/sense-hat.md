@@ -64,7 +64,7 @@ install:
   'devices':
     - 'i2c'
 -->
-#Sense HAT
+# Sense HAT
 
 Sense HAT est une carte d'extension pour Raspberry Pi composé d'une matrice LED 8x8 en RGB (rouge, vert, bleu), d'un joystick 5 boutons (directions+appui), et ainsi qu'un capteur IMU, de température, d'humidité et de pression.
 

@@ -37,7 +37,7 @@ pin:
   '40':
     name: I2S
 -->
-#IQaudIO Pi-DAC+
+# IQaudIO Pi-DAC+
 
 Le Pi-DAC+ permet de convertir le signal audio numérique I2S de la Raspi en analogique, à l'aide de son CDA Texas Instrument PCM5122 et sorties phono. Il comprend aussi un pre-ampli pour sortie casque Texas Instrument TPA6133A.
 

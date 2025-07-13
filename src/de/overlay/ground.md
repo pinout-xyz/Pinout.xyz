@@ -14,7 +14,7 @@ pin:
   '34':
   '39':
 -->
-#Masse
+# Masse
 
 Die Masseanschlüsse des Raspberry Pi sind alle miteinander verbunden. Es ist also egal, welchen
 Du verwendest.

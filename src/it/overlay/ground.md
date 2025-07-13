@@ -14,7 +14,7 @@ pin:
   '34':
   '39':
 -->
-#Massa
+# Massa
 
 I pin a massa sul Raspberry Pi sono tutti collegati, quindi non importa quale colleghi nel fornire
 la tensione di alimentazione.

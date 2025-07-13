@@ -51,7 +51,7 @@ pin:
   '23':
     mode: spi
 -->
-#Display-o-Tron 3000
+# Display-o-Tron 3000
 
 Puedes usar la siguiente línea para instalar, preparar y dejar listo para el uso el Display-o-Tron 3000:
 

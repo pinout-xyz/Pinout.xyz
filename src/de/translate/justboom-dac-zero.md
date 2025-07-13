@@ -48,7 +48,7 @@ i2c:
     name: DAC
     device: PCM5121
 -->
-#DAC Zero
+# DAC Zero
 
 * Full high quality audio – 384kHz / 32bit
 * Includes both a DAC and headphone amplifier

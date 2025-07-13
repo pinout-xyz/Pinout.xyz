@@ -24,7 +24,7 @@ pin:
     active: high
     description: WS2812 Data
 -->
-#Unicorn HAT
+# Unicorn HAT
 
 64 blendend helle LEDs auf einem HAT, die über eine super schnelle C-Library angesteuert werden.
 Die C-Library lässt sich auch über Python ansteuern. Der Unicorn HAT ist quasi der grössere und hellere Bruder der PiGlow.

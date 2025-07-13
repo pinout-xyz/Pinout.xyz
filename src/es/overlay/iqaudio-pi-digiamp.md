@@ -51,7 +51,7 @@ install:
   'devices':
   - 'i2c'
 -->
-#Pi-DigiAMP+
+# Pi-DigiAMP+
 
 Pi-DigiAMP+ es una placa adicional que incluye un conversor digital a anlógico (DAC) y un potente amplificador estéreo de 35w. Si quieres convertir tu Raspberry Pi en una minicadena con audio estéreo de Alta Fidelidad, simplemente añade altavoces.
 

@@ -98,9 +98,9 @@ pin:
     name: 'Farbe: Rot'
     direction: input
 -->
-#Raspberry Pi Dots
+# Raspberry Pi Dots
 
-###Dots ist eine verbinde die Punkte HAT Platine für den Raspberry Pi, auf dem Du Punkte mit leitender Farbe verbindest!
+### Dots ist eine verbinde die Punkte HAT Platine für den Raspberry Pi, auf dem Du Punkte mit leitender Farbe verbindest!
 
 Jeder Punkt auf der Dots-Platine ist ein offener Metallkontakt der darauf wartet mit der Farbe kontaktiert zu werden.
 

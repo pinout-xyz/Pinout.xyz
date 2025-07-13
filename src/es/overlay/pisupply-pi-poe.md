@@ -34,7 +34,7 @@ pin:
   '18':
     name: LED Yellow/Green
 -->
-#Pi PoE Switch HAT
+# Pi PoE Switch HAT
 
 El Pi PoE Switch HAT es una placa añadida para Raspberry Pi que lleva la tecnología Switch de Pi Supply junto a PoE.
 

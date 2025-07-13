@@ -42,7 +42,7 @@ pin:
     mode: output
     active: low
 -->
-#Display-o-Tron HAT
+# Display-o-Tron HAT
 
 Der Display-o-Tron HAT benutzt den SPI- und I2C-Bus um das LC-Display, die Hintergrundbeleuchtung und die Tasten zu steuern bzw. abzufragen.
 Beide Busse können aber weiterhin noch mit anderen Komponenten genutzt werden.

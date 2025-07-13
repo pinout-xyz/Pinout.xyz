@@ -66,7 +66,7 @@ pin:
     direction: input
     active: high
 -->
-#Pibrella
+# Pibrella
 
 La Pibrella est une carte à usage multiple avec son, lumière, entrées et sorties. Elle monopolise un nombre élevé de broches GPIO tout en laissant cependant les bus série, SPI et i2c libres.
 

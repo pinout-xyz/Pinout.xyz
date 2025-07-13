@@ -45,7 +45,7 @@ i2c:
     name: SGTL5000
     device: SGTL5000XNAA3/R2
 -->
-#Audio Z
+# Audio Z
 
 The Fe-Pi Audio Z is designed to provide a complete low cost audio solution for Raspberry Pi 2, 3, and Zero, needing line-in, line-out, and headphone-out/mic-in.
 

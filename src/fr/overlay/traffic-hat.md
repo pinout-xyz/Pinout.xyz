@@ -31,9 +31,9 @@ pin:
     direction: output
     active: high
 -->
-#Traffic HAT
+# Traffic HAT
 
-###Contrôler les broches GPIO du Traffic HAT depuis votre Raspberry Pi est aisé:
+### Contrôler les broches GPIO du Traffic HAT depuis votre Raspberry Pi est aisé:
 
 ```python
 import RPi.GPIO as GPIO
@@ -41,14 +41,14 @@ from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 
-#LEDs
+# LEDs
 GPIO.setup(22,GPIO.OUT)
 GPIO.setup(23,GPIO.OUT)
 GPIO.setup(24,GPIO.OUT)
 
-#Buzzer
+# Buzzer
 GPIO.setup(5,GPIO.OUT)
 
-#Bouton
+# Bouton
 GPIO.setup(25,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 ```

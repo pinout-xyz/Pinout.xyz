@@ -41,6 +41,6 @@ pin:
     name: Reset
     mode: output
 -->
-#IoT LoRa Gateway HAT
+# IoT LoRa Gateway HAT
 
 Our IoT LoRa Gateway HAT allows you to create an inexpensive LoRa gateway, compatible with The Things Network, in conjunction with a Raspberry Pi or other single board computers. The HAT allows you to set up your IoT LoRa gateway in minutes rather than hours for a third of the price of traditional gateways.

@@ -56,7 +56,7 @@ pin:
     mode: input
     active: low
 -->
-#Score:Zero
+# Score:Zero
 
 Score:Zero is a simple-soldering-kit-come-games-controller for the Raspberry Pi Zero.
 

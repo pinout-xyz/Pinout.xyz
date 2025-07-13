@@ -76,7 +76,7 @@ i2c:
     name: Temperature Sensor
     device: LM75BD
 -->
-#PaPiRus Zero
+# PaPiRus Zero
 
 The PaPiRus Zero is a versatile ePaper display for the Raspberry Pi Zero with screens ranging from 1.44" to 2.0" in size.
 

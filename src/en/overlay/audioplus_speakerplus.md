@@ -50,7 +50,7 @@ install:
 
 * No extra power supply required
 
-##Features:
+## Features:
 
 (There is no microphone on this board, for a microphone see our other model MIC+)
 

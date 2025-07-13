@@ -52,7 +52,7 @@ pin:
   '23':
     mode: spi
 -->
-#Display-o-Tron 3000
+# Display-o-Tron 3000
 
 Aşağıdaki tek satır kodla Display-o-Tron 3000'u kurup kullanmaya başlayabilirsiniz. Yapmanız gereken tek şey terminalde şu komutu çalıştırmak,
 

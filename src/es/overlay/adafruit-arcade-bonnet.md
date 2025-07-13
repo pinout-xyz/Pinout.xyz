@@ -39,7 +39,7 @@ i2c:
     name: MCP23017
     device: MCP23017   
 -->
-#Arcade Bonnet
+# Arcade Bonnet
 
 Arcade Bonnet de Adafruit está diseñado para facilitar la construcción de pequeños emuladores. Estas son sus especificaciones:
 

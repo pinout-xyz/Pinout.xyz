@@ -24,9 +24,9 @@ pin:
     active: high
     description: Arduino Reset
 -->
-#SPI üzerinden ATmega 328p / Arduino
+# SPI üzerinden ATmega 328p / Arduino
 
-###Raspberry pi'nizin doğrudan ATmega 328p/Arduino'yu besleyip onunla programlama yapmanıza olanak sağladığını biliyor muydunuz? Bunu sadece birkaç kablo, bir breadboard, bir 16MHZ kristal with nothing but a few wires, a breadboard, a 16Mhz crystal osilatör ve de birkaç 22pF kondansatör ile yapabilirsiniz!
+### Raspberry pi'nizin doğrudan ATmega 328p/Arduino'yu besleyip onunla programlama yapmanıza olanak sağladığını biliyor muydunuz? Bunu sadece birkaç kablo, bir breadboard, bir 16MHZ kristal with nothing but a few wires, a breadboard, a 16Mhz crystal osilatör ve de birkaç 22pF kondansatör ile yapabilirsiniz!
 
 Öncelikle [Pico PiDuino makalesi](http://pi.gadgetoid.com/article/building-the-pico-piduino)'ni takip edin / etmenizi öneririz, bunu sıfırdan uygulamak sadece &pound;5 gibi bir masraf çıkaracak.
 

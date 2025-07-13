@@ -23,7 +23,7 @@ pin:
   '5':
     mode: i2c
 -->
-#ZeroBorg
+# ZeroBorg
 
 The PiBorg ZeroBorg is a 4 channel motor controller for the Raspberry Pi Zero.
 

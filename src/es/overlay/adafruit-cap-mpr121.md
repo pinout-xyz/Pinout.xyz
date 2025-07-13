@@ -41,7 +41,7 @@ install:
     - 'python-dev'
     - 'python3-dev'
 -->
-#Capacitive Touch HAT
+# Capacitive Touch HAT
 
 Esta placa para Raspberry Pi proporciona 12 entradas táctiles capacitivas y todo el sistema para poder leerlas mediante el puerto I2C.
 

@@ -33,7 +33,7 @@ i2c:
    name: TB6612
    device: TB6612    
 -->
-#DC & Stepper Motor HAT 
+# DC & Stepper Motor HAT
 
 Let your robotic dreams come true with the new DC+Stepper Motor HAT from Adafruit. This Raspberry Pi add-on is perfect for any motion project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control.
 

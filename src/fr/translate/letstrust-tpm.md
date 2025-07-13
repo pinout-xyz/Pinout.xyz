@@ -35,7 +35,7 @@ pin:
   26:
     mode: spi
 -->
-#LetsTrust-TPM
+# LetsTrust-TPM
 
 LetsTrust-TPM is a TPM2.0 daughter board for the Raspberry Pi platform based on an Infineon SLB9670 chip.  
 It is compatible with all Raspberry Pi models and probably the smallest available addon board on the market.

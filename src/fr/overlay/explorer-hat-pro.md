@@ -89,7 +89,7 @@ i2c:
     name: Entrées analogiques
     device: ads1015
 -->
-#Explorer HAT Pro
+# Explorer HAT Pro
 
 L'Explorer HAT pro est un chapeau à usage multiple avec entrées et sorties en 5V, entrées analogiques et contrôle moteurs. Tout cela agrémenté de LED et touches tactiles. C'est donc d'un véritable couteau Suisse dont il s'agit!
 

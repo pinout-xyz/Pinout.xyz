@@ -39,7 +39,7 @@ install:
   'python3':
     - 'unicornhat'
 -->
-#Unicorn pHAT
+# Unicorn pHAT
 
 32 LEDs brillantes, cegadores, dentro de un pHAT controlado por una librería C ultrarápida con la que puedes comunicarte mediante Python hacen del Unicorn HAT el hermano mayor, más brillate de PiGlow.
 

@@ -51,7 +51,7 @@ pin:
   '23':
     mode: spi
 -->
-#Display-o-Tron 3000
+# Display-o-Tron 3000
 
 Le Display-o-Tron 3000 est un écran LCD avec 3 lignes, rétro-éclairage et joystick
 

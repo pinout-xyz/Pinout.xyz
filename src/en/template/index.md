@@ -18,7 +18,10 @@ And some advanced/experimental pinouts, too:
 
 * [Minimal Raspberry Pi 40-pin Pinout](https://pi.pinout.xyz)
 * [Raspberry Pi RP2350A QFN-60 Pinout](https://rp2350a.pinout.xyz)
+* [Raspberry Pi RP2350B QFN-80 Pinout](https://rp2350b.pinout.xyz)
 * [Espressif ESP32 C5 DevKitC Pinout](https://esp32c5.pinout.xyz)
+* [Espressif ESP32 C3 DevKitC Pinout](https://esp32c3.pinout.xyz)
+* [PJRC Teensy 4.0 Pinout](https://teensy40.pinout.xyz)
 
 ## pHAT Stack
 

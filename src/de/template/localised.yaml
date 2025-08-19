@@ -20,6 +20,7 @@ strings:
 - uses_3v3: '3v3 Stromversorgung'
 - uses_n_gpio_pins: 'benutzt {} GPIO Anschlüsse'
 - bcm_pin_rev1_pi: 'BCM Anschluss {} auf dem Rev 1 ( sehr alter ) Pi'
+- supported_on: 'Supported on {} only'
 - physical_pin_n: 'Physical pin {}'
 - wiring_pi_pin: 'Wiring Pi Anschluss {}'
 - made_by: 'Hersteller: {manufacturer}'

@@ -20,6 +20,7 @@ strings:
 - uses_3v3: '3.3V Güç'
 - uses_n_gpio_pins: 'Kullanan {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} on Rev 1 ( very early ) Pi'
+- supported_on: 'Supported on {} only'
 - physical_pin_n: 'Physical pin {}'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - made_by: 'Yapılan {manufacturer}'

@@ -20,6 +20,7 @@ strings:
 - uses_3v3: 'Alimentazione a 3.3V'
 - uses_n_gpio_pins: 'Utilizza {} GPIO pins'
 - bcm_pin_rev1_pi: 'BCM pin {} su Raspberry Rev 1 (le prime edizioni)'
+- supported_on: 'Supported on {} only'
 - physical_pin_n: 'Pin fisico {}'
 - wiring_pi_pin: 'Wiring Pi pin {}'
 - made_by: 'Prodotto da {manufacturer}'

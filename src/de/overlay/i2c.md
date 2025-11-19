@@ -51,3 +51,5 @@ DEVICE_ADDR = 0x15
 bus = smbus.SMBus(DEVICE_BUS)
 bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
 ```
+
+GPIO0 und GPIO1 - I2C0 - können als alternativer I2C bus verwendet werden, typischerweise sind diese in Verwendung um das EEPROM von Hats zu lesen.

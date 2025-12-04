@@ -4,8 +4,9 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>{{title}}</title>
 		<meta name="description" content="{{description}}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
-		<link href="{{resource_url}}pinout.scss.css?v=4c5780" rel="stylesheet">
+		<link href="{{resource_url}}pinout.scss.css?v=20251204" rel="stylesheet">
 		<link href="{{resource_url}}print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="{{resource_url}}pinout-logo.png" type="image/png">
 		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: {{v}}"/>
@@ -14,25 +15,16 @@
 		{{hreflang}}
 	</head>
 	<body class="{{body_class}}">
-		<div id="container">
+		<article>
 			<h1 class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" width="45" height="45" />Raspberry Pi Pinout</a></h1>
 			
 			{{main_content}}
 			
-			<div class="footer">
+			<footer>
 			{{footer}}
-			</div>
-		</div>
+			</footer>
+		</article>
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PPJ0FZJ37Z"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'G-PPJ0FZJ37Z');
-		</script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/prettify/0.1/prettify.js"></script>
     	<script src='{{resource_url}}prettify/lang-bash.js'></script>

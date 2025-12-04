@@ -55,7 +55,7 @@ pins:
       alt4: AVEIN VID0
       alt5: JTAG TDI
   '8':
-    name: UART TX
+    name: UART0 TX
     description: UART Transmit
     type: GPIO/UART
     scheme:
@@ -72,7 +72,7 @@ pins:
     name: Ground
     type: GND
   '10':
-    name: UART RX
+    name: UART0 RX
     description: UART Receive
     type: GPIO/UART
     scheme:

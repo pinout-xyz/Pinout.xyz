@@ -43,7 +43,7 @@ img.grayscale {
 }
 
 
-#container {
+article {
     width:1000px;
     margin:0 auto;
     position:relative;
@@ -607,7 +607,7 @@ span.alternate {display:none;}
 ol.linenums {margin-left:30px;}
 
 @media (min-width:1200px){
-    #container {
+    article {
         width:1200px;
     }
     .board {

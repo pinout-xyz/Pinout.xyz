@@ -175,22 +175,13 @@ section article ul {
 Boards Page
 */
 #boards > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #boards .board, #featured .board {
   box-sizing: border-box;
-  width: 25%;
+  list-style: none;
   display: block;
   text-align: center;
 }
@@ -237,6 +228,7 @@ Boards Page
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-right: 18px;
+  margin-bottom: 18px;
 }
 .facets h4 {
   text-transform: capitalize;
@@ -667,9 +659,15 @@ GPIO nav
   body.boards-page > article {
     grid-template-columns: 302px auto;
   }
+  #boards > ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1200px) {
   body > article {
     width: 1180px;
+  }
+  #boards > ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

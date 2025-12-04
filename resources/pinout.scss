@@ -58,21 +58,18 @@ table {
 }
 
 .prettyprint {
+    text-wrap-mode: wrap;
     word-wrap:break-word;
 }
 
 .logo {
-    font-family:'Avenir', sans-serif;
-    width:200px;
-    font-size:$base-font-size;
-    line-height:23px;
-    cursor:pointer;
-    position: absolute;
-    left:0px;
-    top:5px;
-    z-index:1;
-    font-weight:600;
-    height:61px;
+    font-family: 'Avenir', sans-serif;
+    width: 200px;
+    font-size: $base-font-size;
+    line-height: 23px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: center;
 
     a {color:$color-dark;line-height:22px;}
 
@@ -91,16 +88,17 @@ img.grayscale {
 }
 
 
-#container {
-    width:1000px;
-    margin:0 auto;
-    position:relative;
-    padding-top:4px;
+body > article {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-rows: 70px auto auto;
+    align-self: center;
+    margin: 0 5px;
 }
+
 /*
 Footer language nav
 */
-
 
 #lang {
     display:block;
@@ -124,12 +122,9 @@ Content Area
 
 h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
-#content {
-    float:left;
+section {
     background:$color-content-bg;
-    width:500px;
     min-height:640px;
-    position: relative;
     padding-bottom:50px;
 
     hr {
@@ -179,22 +174,13 @@ Boards Page
 */
 
 #boards > ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #boards .board, #featured .board  {
     box-sizing:border-box;
-    width:25%;
+    list-style: none;
     display:block;
     text-align:center;
 
@@ -247,6 +233,7 @@ Boards Page
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-right: 18px;
+    margin-bottom: 18px;
 
     h4 {
         text-transform: capitalize;
@@ -333,8 +320,7 @@ Featured Boards
 Footer
 */
 
-.footer {
-    clear: both;
+footer {
     padding: 20px 0px;
     text-align:center;
 
@@ -345,11 +331,6 @@ Footer
 /*
 Left Column
 */
-
-#leftcolumn {
-    float:left;
-    width:500px;
-}
 
 #crumbtrail {
     background:$color-dark;
@@ -373,10 +354,32 @@ Left Column
 #interfaces {
     background: $color-purple;
     padding: 0px 0px 2px 2px;
-    display: block;
-    clear: both;
+    display: grid;
+    grid-template-columns: 200px auto;
     line-height: 2px;
-    text-align:right;
+
+    div {
+        background:darken($color-purple,5%);
+        line-height: 1.45em;
+        grid-column: 1;
+        color: #FFF;
+        align-content: center;
+        padding: 0 6px;
+        margin-top: 2px;
+        
+        a, a:hover, a:visited, a:active {
+            color: #FFF;
+            display: block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        text-align: right;
+        grid-column: 2;
+    }
 
     ul, li {
         list-style:none;
@@ -414,36 +417,20 @@ GPIO nav
 */
 
 nav {
-    position:relative;
-    width:316px;
-    margin-top:64px;
 }
 
 
 #gpio {
-    width:496px;
-    min-height:493px;
+    display: grid;
+    grid-template-columns: 50% 50%;
     background:$nav-bg;
 
-    &:before {
-        content: '';
-        display:block;
-        width:58px;
-        position:absolute;
-        left:219px;
-        height:493px;
-        background:$color-dark;
-        top:0px;
-    }
-
     ul {
-        position: relative;
-        top:7px;
         list-style: none;
         display: block;
-        width: 248px;
-        float: left;
+        padding: 5px 0;
     }
+
     a {
         display:block;
         position:relative;
@@ -451,9 +438,7 @@ nav {
         line-height:22px;
         height:22px;
         margin-bottom:2px;
-
         color:#E9E5D2;
-        width:248px;
     }
 
     .phys {
@@ -490,6 +475,7 @@ nav {
     }
 
     .top {
+        background: linear-gradient(90deg, rgba(7, 54, 66, 1) 27px, rgba(0, 0, 0, 0) 27px);
         li {text-indent:56px;}
 
         a {
@@ -507,6 +493,7 @@ nav {
     }
 
     .bottom {
+        background: linear-gradient(270deg, rgba(7, 54, 66, 1) 27px, rgba(0, 0, 0, 0) 27px);
         a {
             text-indent:10px;
             border-top-right-radius:13px;
@@ -603,18 +590,18 @@ nav {
 }
 
 #legend {
+    display: grid;
+    grid-template-columns: auto 196px;
+
     h2 {
         margin-top:5px;
         margin-bottom:5px;
     }
     div {
-        width: 300px;
-        float: left;
-        display: block;
     }
-    img {width:196px;height:auto;margin-top:4px;
-        float: left;
-        display: block;}
+    img {
+        margin-top:4px;
+    }
     p {
         font-size:$base-font-size * 0.7;
         padding: 0 10px 10px 0;
@@ -674,29 +661,42 @@ nav {
     }
 }
 
-.boards-page {
-    nav {
-        margin-right:0;
+@media screen and (min-width: 1000px) {
+    footer {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
-    #leftcolumn {
-        width:302px;
+    section {
+        grid-column: 2;
     }
-    #content {
-        width:698px;
+    aside {
+        grid-column: 1;
+    }
+    
+    body > article {
+        grid-template-columns: 500px auto;
+        grid-template-rows: 70px auto;
+        width: 1000px;
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    body.boards-page > article {
+        grid-template-columns: 302px auto;
+    }
+    
+    #boards > ul {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media (min-width:1200px){
-    #container {
-        width:1200px;
+
+@media screen and (min-width: 1200px) {
+    body > article {
+        width: 1180px;
     }
-    .board {
-        right:1200px;
-    }
-    #content {
-        width:700px;
-    }
-    .boards-page #content {
-        width:898px;
+    
+    #boards > ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

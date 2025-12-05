@@ -7,7 +7,7 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {
 body {
   font-family: "Avenir", sans-serif;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 14pt;
   background: #ffffff;
   color: #073642;
 }
@@ -16,7 +16,7 @@ table {
   margin: 20px 0;
   border-collapse: collapse;
   text-align: left;
-  font-size: 0.84em;
+  font-size: 0.8em;
 }
 table td, table th {
   border: 1px solid #073642;
@@ -47,13 +47,15 @@ table.pin-functions td {
 
 .prettyprint {
   text-wrap-mode: wrap;
-  word-wrap: break-word;
+  white-space-collapse: break-spaces;
+  word-wrap: anywhere;
 }
 
 .logo {
+  grid-row: 1;
   font-family: "Avenir", sans-serif;
   width: 200px;
-  font-size: 1.2em;
+  font-size: 22px;
   line-height: 23px;
   cursor: pointer;
   font-weight: 600;
@@ -81,6 +83,7 @@ img.grayscale {
 body > article {
   display: grid;
   grid-column-gap: 5px;
+  grid-row-gap: 5px;
   grid-template-rows: 70px auto auto;
   align-self: center;
   margin: 0 5px;
@@ -122,10 +125,10 @@ section hr {
   border-top: 2px solid rgb(219.0625, 210.078125, 175.9375);
 }
 section h1 {
-  font-size: 2.16em;
+  font-size: 1.8em;
 }
 section h2 {
-  font-size: 1.32em;
+  font-size: 1.1em;
   margin-top: 20px;
   line-height: 120%;
 }
@@ -135,7 +138,7 @@ section p, section pre {
 }
 section h3 {
   color: #D33682;
-  font-size: 1.44em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 120%;
 }
@@ -243,13 +246,13 @@ Boards Page
 }
 .facets .facet li {
   display: inline-block;
-  padding: 0px 10px 0px 10px;
+  padding: 6px 7px 6px 7px;
   margin-top: 2px;
   margin-right: 2px;
   background: #859900;
   color: #FFF;
   line-height: 160%;
-  font-size: 0.84em;
+  font-size: 0.6em;
   cursor: pointer;
   text-transform: capitalize;
 }
@@ -312,7 +315,9 @@ footer a {
 Left Column
 */
 #crumbtrail {
+  grid-row: 2;
   background: #073642;
+  font-size: 0.8em;
 }
 #crumbtrail p {
   color: #fff;
@@ -331,11 +336,12 @@ Left Column
 }
 
 #interfaces {
+  grid-row: 3;
   background: #6c71c4;
   padding: 0px 0px 2px 2px;
-  display: grid;
-  grid-template-columns: 200px auto;
   line-height: 2px;
+  text-align: center;
+  font-size: 0.7em;
 }
 #interfaces div {
   background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
@@ -343,18 +349,16 @@ Left Column
   grid-column: 1;
   color: #FFF;
   align-content: center;
-  padding: 0 6px;
+  padding: 6px;
   margin-top: 2px;
 }
 #interfaces div a, #interfaces div a:hover, #interfaces div a:visited, #interfaces div a:active {
   color: #FFF;
-  display: block;
 }
 #interfaces div a:hover {
   text-decoration: underline;
 }
 #interfaces ul {
-  text-align: right;
   grid-column: 2;
 }
 #interfaces ul, #interfaces li {
@@ -363,16 +367,15 @@ Left Column
   padding: 0;
 }
 #interfaces li {
-  display: inline-block;
+  display: contents;
 }
 #interfaces li a {
   display: inline-block;
-  padding: 3px 10px 3px 10px;
+  padding: 6px 7px 6px 7px;
   margin-top: 2px;
   margin-right: 2px;
   background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
   color: #FFF;
-  font-size: 0.84em;
   line-height: 1.45em;
 }
 #interfaces li a:hover {
@@ -385,11 +388,17 @@ Left Column
   text-decoration: underline;
 }
 
+body.boards-page #interfaces,
+body.board #interfaces {
+  display: none;
+}
+
 /*
 GPIO nav
 */
 #gpio {
   display: grid;
+  grid-row: 4;
   grid-template-columns: 50% 50%;
   background: #5F8645;
 }
@@ -401,7 +410,7 @@ GPIO nav
 #gpio a {
   display: block;
   position: relative;
-  font-size: 0.84em;
+  font-size: 0.6em;
   line-height: 22px;
   height: 22px;
   margin-bottom: 2px;
@@ -484,7 +493,7 @@ GPIO nav
   color: #063541;
 }
 #gpio li a small {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 #gpio .overlay-pin a {
   background: rgb(235, 230, 211);
@@ -560,7 +569,12 @@ GPIO nav
   background: #6c71c4;
 }
 
+aside {
+  display: contents;
+}
+
 #legend {
+  grid-row: 6;
   display: grid;
   grid-template-columns: auto 196px;
 }
@@ -572,7 +586,7 @@ GPIO nav
   margin-top: 4px;
 }
 #legend p {
-  font-size: 0.84em;
+  font-size: 0.8em;
   padding: 0 10px 10px 0;
 }
 #legend ul, #legend li {
@@ -586,7 +600,7 @@ GPIO nav
   line-height: 20px;
 }
 #legend li small {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 #legend a {
   padding: 0 12px 0 30px;
@@ -638,20 +652,38 @@ GPIO nav
   height: 6px;
 }
 
+@media screen and (min-width: 540px) {
+  #interfaces {
+    font-size: 0.8em;
+  }
+  #gpio a {
+    font-size: 0.8em;
+  }
+}
 @media screen and (min-width: 1000px) {
+  .facets .facet li, #interfaces ul a {
+    font-size: 0.8em;
+  }
   footer {
     grid-column-start: 1;
     grid-column-end: 3;
   }
   section {
     grid-column: 2;
+    grid-row: 4;
   }
   aside {
+    display: block;
     grid-column: 1;
+    grid-row: 2/-1;
+  }
+  #legend, #gpio {
+    grid-row: unset;
   }
   body > article {
+    grid-row-gap: 0;
     grid-template-columns: 500px auto;
-    grid-template-rows: 70px auto;
+    grid-template-rows: 70px auto auto auto auto;
     width: 1000px;
     align-self: center;
     margin: 0 auto;
@@ -661,6 +693,34 @@ GPIO nav
   }
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  body.boards-page #interfaces,
+  body.board #interfaces,
+  #interfaces {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 200px auto;
+    text-align: right;
+  }
+  body.boards-page #interfaces div,
+  body.board #interfaces div,
+  #interfaces div {
+    text-align: left;
+  }
+  body.boards-page #interfaces div a,
+  body.board #interfaces div a,
+  #interfaces div a {
+    display: block;
+  }
+  #interfaces {
+    font-size: 1em;
+  }
+  #crumbtrail {
+    grid-column: 2;
+    font-size: inherit;
+  }
+  #gpio a {
+    font-size: 0.8em;
   }
 }
 @media screen and (min-width: 1200px) {

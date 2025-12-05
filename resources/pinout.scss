@@ -1,5 +1,3 @@
-$base-font-size: 1.2em;
-
 $color-purple: #6c71c4;
 $color-pink: #D33682;
 $color-green: #859900;
@@ -25,7 +23,7 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;text-decoration:n
 body {
     font-family:'Avenir', sans-serif;
     font-weight:500;
-    font-size:$base-font-size;
+    font-size: 14pt;
     background:#ffffff;
     color:$color-dark;
 }
@@ -34,7 +32,7 @@ table {
     margin:20px 0;
     border-collapse:collapse;
     text-align:left;
-    font-size:$base-font-size * 0.7;
+    font-size:.8em;
 
     td, th {border:1px solid $color-dark;padding:5px;}
     th {background:$color-dark;color:$color-content-bg;}
@@ -59,13 +57,15 @@ table {
 
 .prettyprint {
     text-wrap-mode: wrap;
-    word-wrap:break-word;
+    white-space-collapse: break-spaces;
+    word-wrap: anywhere;
 }
 
 .logo {
+    grid-row: 1;
     font-family: 'Avenir', sans-serif;
     width: 200px;
-    font-size: $base-font-size;
+    font-size: 22px;
     line-height: 23px;
     cursor: pointer;
     font-weight: 600;
@@ -91,6 +91,7 @@ img.grayscale {
 body > article {
     display: grid;
     grid-column-gap: 5px;
+    grid-row-gap: 5px;
     grid-template-rows: 70px auto auto;
     align-self: center;
     margin: 0 5px;
@@ -111,7 +112,7 @@ Footer language nav
 
     a {
         display:inline-block;
-        margin:10px;
+        margin: 10px;
         margin-left:0px;
     }
 }
@@ -133,10 +134,10 @@ section {
         border-top:2px solid darken($color-content-bg,10%);
     }
 
-    h1 {font-size:$base-font-size * 1.8;}
+    h1 {font-size: 1.8em;}
 
     h2 {
-        font-size:$base-font-size * 1.1;
+        font-size: 1.1em;
         margin-top:20px;
         line-height: 120%;
     }
@@ -147,7 +148,7 @@ section {
     }
     h3 {
         color:$color-pink;
-        font-size:$base-font-size * 1.2;
+        font-size: 1.2em;
         font-weight:bold;
         line-height: 120%;
     }
@@ -250,13 +251,13 @@ Boards Page
 
     .facet li {
         display: inline-block;
-        padding: 0px 10px 0px 10px;
+        padding: 6px 7px 6px 7px;
         margin-top: 2px;
         margin-right: 2px;
         background: $color-green;
         color: #FFF;
         line-height: 160%;
-        font-size:$base-font-size * 0.7;
+        font-size:.6em;
         cursor:pointer;
         text-transform:capitalize;
 
@@ -332,8 +333,12 @@ footer {
 Left Column
 */
 
+
 #crumbtrail {
+    grid-row: 2;
     background:$color-dark;
+    font-size: 0.8em;
+
     p {
         color:#fff;
         margin:0;
@@ -352,24 +357,24 @@ Left Column
 }
 
 #interfaces {
+    grid-row: 3;
     background: $color-purple;
     padding: 0px 0px 2px 2px;
-    display: grid;
-    grid-template-columns: 200px auto;
     line-height: 2px;
+    text-align: center;
+    font-size: .7em;
 
     div {
-        background:darken($color-purple,5%);
+        background: darken($color-purple,5%);
         line-height: 1.45em;
         grid-column: 1;
         color: #FFF;
         align-content: center;
-        padding: 0 6px;
+        padding: 6px;
         margin-top: 2px;
         
         a, a:hover, a:visited, a:active {
             color: #FFF;
-            display: block;
         }
         a:hover {
             text-decoration: underline;
@@ -377,7 +382,6 @@ Left Column
     }
 
     ul {
-        text-align: right;
         grid-column: 2;
     }
 
@@ -388,16 +392,14 @@ Left Column
     }
 
     li {
-        display:inline-block;
-
+        display: contents;
         a {
-            display:inline-block;
-            padding:3px 10px 3px 10px;
-            margin-top:2px;
-            margin-right:2px;
-            background:darken($color-purple,5%);
-            color:#FFF;
-            font-size: $base-font-size * 0.7;
+            display: inline-block;
+            padding: 6px 7px 6px 7px;
+            margin-top: 2px;
+            margin-right: 2px;
+            background: darken($color-purple,5%);
+            color: #FFF;
             line-height: 1.45em;
 
             &:hover {color: darken($color-purple,5%);background:mix($color-purple,#FFF,20%);}
@@ -405,23 +407,24 @@ Left Column
 
         &.selected a {
             background:darken($color-purple,10%);
-            color:#FFF;
+            color: #FFF;
             text-decoration: underline;
         }
     }
 }
 
+body.boards-page #interfaces, 
+body.board #interfaces {
+    display: none;
+}
 
 /*
 GPIO nav
 */
 
-nav {
-}
-
-
 #gpio {
     display: grid;
+    grid-row: 4;
     grid-template-columns: 50% 50%;
     background:$nav-bg;
 
@@ -434,7 +437,7 @@ nav {
     a {
         display:block;
         position:relative;
-        font-size:$base-font-size * 0.7;
+        font-size:.6em;
         line-height:22px;
         height:22px;
         margin-bottom:2px;
@@ -519,7 +522,7 @@ nav {
         color:#063541;
     }
 
-    li a small {font-size:0.7em;}
+    li a small {font-size:0.8em;}
 
     .overlay-pin {
         a {
@@ -589,7 +592,11 @@ nav {
     .uart .pin {background:$color-purple;}
 }
 
+
+aside {display:contents;}
+
 #legend {
+    grid-row: 6; // Put at the page bottom in mobile mode
     display: grid;
     grid-template-columns: auto 196px;
 
@@ -603,7 +610,7 @@ nav {
         margin-top:4px;
     }
     p {
-        font-size:$base-font-size * 0.7;
+        font-size:.8em;
         padding: 0 10px 10px 0;
     }
     ul, li {
@@ -616,7 +623,7 @@ nav {
         margin-bottom:2px;
         line-height:20px;
         small {
-            font-size:0.7em;
+            font-size:0.8em;
         }
     }
 
@@ -661,21 +668,42 @@ nav {
     }
 }
 
+@media screen and (min-width: 540px) {
+    #interfaces {
+        font-size: .8em;
+    }
+
+    #gpio a {
+        font-size:.8em;
+    }
+}
+
 @media screen and (min-width: 1000px) {
+    .facets .facet li, #interfaces ul a {
+        font-size: .8em;
+    }   
     footer {
         grid-column-start: 1;
         grid-column-end: 3;
     }
     section {
         grid-column: 2;
+        grid-row: 4;
     }
     aside {
+        display: block;
         grid-column: 1;
+        grid-row: 2/-1;
+    }
+
+    #legend, #gpio {
+        grid-row: unset;
     }
     
     body > article {
+        grid-row-gap: 0;
         grid-template-columns: 500px auto;
-        grid-template-rows: 70px auto;
+        grid-template-rows: 70px auto auto auto auto;
         width: 1000px;
         align-self: center;
         margin: 0 auto;
@@ -687,6 +715,34 @@ nav {
     
     #boards > ul {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    body.boards-page #interfaces, 
+    body.board #interfaces,
+    #interfaces {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 200px auto;
+        text-align: right;
+        div {
+            text-align: left;
+            a {
+                display: block;
+            }
+        }
+    }
+
+    #interfaces {
+        font-size: 1em;
+    }
+
+    #crumbtrail {
+        grid-column: 2;
+        font-size: inherit;
+    }
+
+    #gpio a {
+        font-size:.8em;
     }
 }
 

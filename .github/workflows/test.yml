@@ -1,6 +1,7 @@
 name: Pages
 
 on:
+  pull_request:
   push:
     branches:
       - master
@@ -8,7 +9,7 @@ on:
 
 jobs:
   test:
-    name: GitHub Pages (en)
+    name: Test Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -27,10 +28,3 @@ jobs:
         run: |
           make LANG=en
           cp -r phatstack output/en
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./output/en
-            cname: pinout.xyz

@@ -421,7 +421,6 @@ body.board #interfaces {
 /*
 GPIO nav
 */
-
 #gpio {
     display: grid;
     grid-row: 4;
@@ -591,6 +590,7 @@ GPIO nav
     .pcm .pin {background:$color-cyan;}
     .uart .pin {background:$color-purple;}
 }
+.board #gpio {grid-row: 3;}
 
 
 aside {display:contents;}
@@ -696,7 +696,7 @@ aside {display:contents;}
         grid-row: 2/-1;
     }
 
-    #legend, #gpio {
+    #legend, #gpio, .board #gpio {
         grid-row: unset;
     }
     

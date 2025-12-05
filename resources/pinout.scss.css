@@ -116,8 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
   background: #EBE6D3;
-  min-height: 640px;
-  padding-bottom: 50px;
 }
 section hr {
   border: none;
@@ -675,6 +673,8 @@ aside {
   section {
     grid-column: 2;
     grid-row: 4;
+    min-height: 640px;
+    padding-bottom: 50px;
   }
   aside {
     display: block;

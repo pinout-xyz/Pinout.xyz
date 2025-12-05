@@ -45,7 +45,7 @@ table.pin-functions td {
   width: 16.6666%;
 }
 
-.prettyprint {
+pre {
   text-wrap-mode: wrap;
   white-space-collapse: break-spaces;
   word-wrap: anywhere;
@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
   background: #EBE6D3;
+  padding-bottom: 20px;
 }
 section hr {
   border: none;

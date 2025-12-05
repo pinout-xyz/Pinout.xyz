@@ -124,9 +124,7 @@ Content Area
 h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
 section {
-    background:$color-content-bg;
-    min-height:640px;
-    padding-bottom:50px;
+    background: $color-content-bg;
 
     hr {
         border:none;
@@ -689,6 +687,8 @@ aside {display:contents;}
     section {
         grid-column: 2;
         grid-row: 4;
+        min-height: 640px;
+        padding-bottom: 50px;
     }
     aside {
         display: block;

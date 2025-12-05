@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251205v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764950781"/>
-		<!-- Build: 1764950781 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764951308"/>
+		<!-- Build: 1764951308 -->
 				<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@pipinout">
 		<meta name="twitter:creator" content="@gadgetoid">
@@ -142,7 +142,14 @@
 					</ul>
 				</div>
 				<article class="page_pwm"><h1>PWM - Pulse-width Modulation</h1>
-<p>PWM (Pulse-width Modulation) is a method of creating an analog voltage by toggling a digital pin on and off.</p>
+<p>Pulse-width modulation creates a rectangular wave signal that is commonly used
+for dimming or blinking an LED, control a display backlight or the speed of a
+motor (e.g. a fan).</p>
+<p>Note that the outputs are only useful as control signals, not to actually drive
+a motor.</p>
+<p>The PWM controller that has outputs available on the Raspberry Pi header
+(<code>pwm@7e20c000</code>) has two independent channels. The output of the first can be
+routed to GPIO 12 or GPIO 18, the second's output to GPIO 13 or GPIO 19.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li>Uses 4 GPIO pins</li>
 </ul></td><td></td></tr></table></article>

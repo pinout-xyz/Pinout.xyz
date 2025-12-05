@@ -5,11 +5,12 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-  font-family: "Avenir", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
-  font-size: 14pt;
+  font-size: 12pt;
   background: #ffffff;
   color: #073642;
+  padding: 5px;
 }
 
 table {
@@ -52,7 +53,6 @@ pre {
 }
 
 .logo {
-  grid-row: 1;
   font-family: "Avenir", sans-serif;
   width: 200px;
   font-size: 22px;
@@ -80,13 +80,15 @@ img.grayscale {
   -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
-body > article {
+header {
+  margin-bottom: 10px;
+}
+
+main {
   display: grid;
   grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  grid-template-rows: 70px auto auto;
-  align-self: center;
-  margin: 0 5px;
+  grid-row-gap: 2px;
+  grid-template-areas: "crumbtrail" "interfaces" "pinout" "content" "legend";
 }
 
 /*
@@ -112,9 +114,11 @@ Content Area
 */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 120%;
 }
 
 section {
+  grid-area: content;
   background: #EBE6D3;
   padding-bottom: 20px;
 }
@@ -124,22 +128,19 @@ section hr {
   border-top: 2px solid rgb(219.0625, 210.078125, 175.9375);
 }
 section h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 section h2 {
-  font-size: 1.1em;
-  margin-top: 20px;
-  line-height: 120%;
+  font-size: 1.3em;
+  margin-top: 1em;
 }
 section p, section pre {
-  margin-top: 10px;
-  line-height: 120%;
+  margin-top: 0.5em;
+  line-height: 140%;
 }
 section h3 {
   color: #D33682;
-  font-size: 1.2em;
-  font-weight: bold;
-  line-height: 120%;
+  font-size: 1.3em;
 }
 section article {
   padding: 15px;
@@ -165,12 +166,14 @@ section article a:hover {
   text-decoration: none;
 }
 section article li {
-  margin-bottom: 10px;
+  margin: 0;
 }
 section article ul {
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0.5em 0 1em 25px;
+  line-height: 140%;
+}
+section article ul li {
+  margin-bottom: 0.5em;
 }
 
 /*
@@ -309,12 +312,16 @@ footer {
 footer a {
   color: #5F8645;
 }
+footer p {
+  line-height: 130%;
+  margin: 0.5em 0 0.5em 0;
+}
 
 /*
 Left Column
 */
 #crumbtrail {
-  grid-row: 2;
+  grid-area: crumbtrail;
   background: #073642;
   font-size: 0.8em;
 }
@@ -335,7 +342,7 @@ Left Column
 }
 
 #interfaces {
-  grid-row: 3;
+  grid-area: interfaces;
   background: #6c71c4;
   padding: 0px 0px 2px 2px;
   line-height: 2px;
@@ -387,8 +394,8 @@ Left Column
   text-decoration: underline;
 }
 
-body.boards-page #interfaces,
-body.board #interfaces {
+.boards-page #interfaces,
+.board #interfaces {
   display: none;
 }
 
@@ -396,10 +403,14 @@ body.board #interfaces {
 GPIO nav
 */
 #gpio {
+  grid-area: pinout;
   display: grid;
-  grid-row: 4;
   grid-template-columns: 50% 50%;
   background: #5F8645;
+}
+#gpio .name {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  letter-spacing: -0.6pt;
 }
 #gpio ul {
   list-style: none;
@@ -449,7 +460,7 @@ GPIO nav
   background: linear-gradient(90deg, rgb(7, 54, 66) 27px, rgba(0, 0, 0, 0) 27px);
 }
 #gpio .top li {
-  text-indent: 56px;
+  text-indent: 48px;
 }
 #gpio .top a {
   border-top-left-radius: 13px;
@@ -569,7 +580,11 @@ GPIO nav
 }
 
 .board #gpio {
-  grid-row: 3;
+  grid-row: 2;
+}
+
+#boardsnav {
+  grid-area: "pinout";
 }
 
 aside {
@@ -577,16 +592,19 @@ aside {
 }
 
 #legend {
-  grid-row: 6;
+  grid-area: legend;
   display: grid;
-  grid-template-columns: auto 196px;
+  grid-template-columns: auto 130.536px;
+  margin-top: 1em;
 }
 #legend h2 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 #legend img {
-  margin-top: 4px;
+  margin-top: calc(1.5em + 12px);
+  width: 100%;
+  height: auto;
 }
 #legend p {
   font-size: 0.8em;
@@ -599,14 +617,19 @@ aside {
 }
 #legend li {
   position: relative;
-  margin-bottom: 2px;
+  margin-bottom: 0.4em;
   line-height: 20px;
 }
 #legend li small {
   font-size: 0.8em;
 }
 #legend a {
-  padding: 0 12px 0 30px;
+  padding: 0 12px 0 25px;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  letter-spacing: -0.6pt;
+}
+#legend a span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #legend li, #legend a {
   color: #063541;
@@ -655,6 +678,10 @@ aside {
   height: 6px;
 }
 
+code {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+
 @media screen and (min-width: 540px) {
   #interfaces {
     font-size: 0.8em;
@@ -662,58 +689,69 @@ aside {
   #gpio a {
     font-size: 0.8em;
   }
+  #gpio .top li {
+    text-indent: 56px;
+  }
 }
 @media screen and (min-width: 1000px) {
+  .boards-page #interfaces,
+  .board #interfaces {
+    display: grid;
+  }
   .facets .facet li, #interfaces ul a {
     font-size: 0.8em;
   }
-  footer {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
   section {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3;
     min-height: 640px;
     padding-bottom: 50px;
   }
   aside {
     display: block;
     grid-column: 1;
-    grid-row: 2/-1;
+    grid-row: 1/-1;
   }
-  #legend, #gpio, .board #gpio {
-    grid-row: unset;
+  #legend {
+    grid-template-columns: auto 196px;
   }
-  body > article {
-    grid-row-gap: 0;
-    grid-template-columns: 500px auto;
-    grid-template-rows: 70px auto auto auto auto;
+  #legend, #gpio, .board #gpio, #interfaces, #crumbtrail {
+    grid-area: unset;
+  }
+  header {
     width: 1000px;
-    align-self: center;
+    margin: 0 auto;
+    height: 70px;
+    display: grid;
+  }
+  main {
+    grid-template-columns: 500px auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: unset;
+    width: 1000px;
     margin: 0 auto;
   }
-  body.boards-page > article {
+  .boards-page main {
     grid-template-columns: 302px auto;
   }
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  body.boards-page #interfaces,
-  body.board #interfaces,
+  .boards-page #interfaces,
+  .board #interfaces,
   #interfaces {
     grid-column: 2;
     display: grid;
     grid-template-columns: 200px auto;
     text-align: right;
   }
-  body.boards-page #interfaces div,
-  body.board #interfaces div,
+  .boards-page #interfaces div,
+  .board #interfaces div,
   #interfaces div {
     text-align: left;
   }
-  body.boards-page #interfaces div a,
-  body.board #interfaces div a,
+  .boards-page #interfaces div a,
+  .board #interfaces div a,
   #interfaces div a {
     display: block;
   }
@@ -729,7 +767,7 @@ aside {
   }
 }
 @media screen and (min-width: 1200px) {
-  body > article {
+  main, header {
     width: 1180px;
   }
   #boards > ul {

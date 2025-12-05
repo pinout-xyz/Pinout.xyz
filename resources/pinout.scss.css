@@ -136,7 +136,6 @@ section h2, section h3 {
 }
 section h1 + h2 {
   margin-top: 0;
-  color: #859900;
 }
 section p, section pre {
   margin-top: 0.5em;
@@ -314,6 +313,10 @@ footer {
 }
 footer a {
   color: #228179;
+  text-decoration: underline;
+}
+footer a:hover {
+  text-decoration: none;
 }
 footer p {
   line-height: 130%;

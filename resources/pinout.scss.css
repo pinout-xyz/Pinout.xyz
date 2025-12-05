@@ -130,17 +130,20 @@ section hr {
 section h1 {
   font-size: 1.6em;
 }
-section h2 {
+section h2, section h3 {
   font-size: 1.3em;
-  margin-top: 1em;
+  margin-top: 1.5em;
+}
+section h1 + h2 {
+  margin-top: 0;
+  color: #859900;
 }
 section p, section pre {
   margin-top: 0.5em;
   line-height: 140%;
 }
-section h3 {
-  color: #D33682;
-  font-size: 1.3em;
+section p img {
+  margin-top: 1.5em;
 }
 section article {
   padding: 15px;
@@ -159,7 +162,7 @@ section article .details img {
   min-width: 200px;
 }
 section article a {
-  color: #859900;
+  color: #D33682;
   text-decoration: underline;
 }
 section article a:hover {
@@ -420,7 +423,7 @@ GPIO nav
 #gpio a {
   display: block;
   position: relative;
-  font-size: 0.6em;
+  font-size: 0.65em;
   line-height: 22px;
   height: 22px;
   margin-bottom: 2px;
@@ -457,7 +460,8 @@ GPIO nav
   height: 6px;
 }
 #gpio .top {
-  background: linear-gradient(90deg, rgb(7, 54, 66) 27px, rgba(0, 0, 0, 0) 27px);
+  padding-left: 1px;
+  background: linear-gradient(90deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
 }
 #gpio .top li {
   text-indent: 48px;
@@ -475,10 +479,11 @@ GPIO nav
   top: 2px;
 }
 #gpio .bottom {
-  background: linear-gradient(270deg, rgb(7, 54, 66) 27px, rgba(0, 0, 0, 0) 27px);
+  padding-right: 1px;
+  background: linear-gradient(270deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
 }
 #gpio .bottom a {
-  text-indent: 10px;
+  text-indent: 6px;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
 }
@@ -533,9 +538,9 @@ GPIO nav
   opacity: 1;
   position: absolute;
   top: 0px;
-  width: 20px;
+  width: 14px;
   height: 22px;
-  border-radius: 11px;
+  border-radius: 2px;
   text-indent: 0px;
   line-height: 22px;
 }
@@ -691,6 +696,10 @@ code {
   }
   #gpio .top li {
     text-indent: 56px;
+  }
+  #gpio .overlay-ground .phys {
+    width: 22px;
+    border-radius: 11px;
   }
 }
 @media screen and (min-width: 1000px) {

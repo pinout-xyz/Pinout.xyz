@@ -1,6 +1,6 @@
 # Pinout!
 
-### The Raspberry Pi GPIO pinout guide.
+## The Raspberry Pi GPIO pinout guide.
 
 This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces. Pinout also includes [hundreds of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
 

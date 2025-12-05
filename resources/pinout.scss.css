@@ -162,7 +162,7 @@ section article .details img {
   min-width: 200px;
 }
 section article a {
-  color: #D33682;
+  color: #C92C6D;
   text-decoration: underline;
 }
 section article a:hover {
@@ -313,7 +313,7 @@ footer {
   text-align: center;
 }
 footer a {
-  color: #2aa198;
+  color: #228179;
 }
 footer p {
   line-height: 130%;

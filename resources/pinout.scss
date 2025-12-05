@@ -173,7 +173,7 @@ section {
          img {max-width:100%;}
          .details img {min-width:200px;}
          a {
-            color: $color-pink;
+            color: #C92C6D; // Just scrape an AAA small text contrast pass
             text-decoration: underline;
 
             &:hover {text-decoration:none;}
@@ -344,7 +344,9 @@ footer {
     padding: 20px 0px;
     text-align:center;
 
-    a {color:$color-cyan;}
+    a {
+        color:#228179; // Just scrape an AAA contrast pass
+    }
 
     p {
         line-height: 130%;

@@ -40,10 +40,10 @@ pin:
 -->
 # GSM/GPRS Shield
 
-* This page is for the older, retired GSM/GPRS shield. For the newer V1.5 GSM/GRPS shield with a diffrent pinout please see: [GSM/GRPS Shield V1.5](/pinout/gsmgprs_shield)
+* This page is for the older, retired GSM/GPRS shield. For the newer V1.5 GSM/GRPS shield with a different pinout please see: [GSM/GRPS Shield V1.5](/pinout/gsmgprs_shield)
 
 The Sixfab GSM/GPRS Shield allows you to connect to the internet anywhere there is a signal and with 85.6 kbps up and down 
 you are able to make voice calls, SMS and it can also do bluetooth.
  
-You can also use it with a PC, MacOS, Arduino and Android aswell as the Pi.
+You can also use it with a PC, MacOS, Arduino and Android in addition to as the Pi.
 

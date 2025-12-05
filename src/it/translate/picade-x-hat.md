@@ -112,7 +112,7 @@ install:
 -->
 # Picade X HAT
 
-Picade X HAT supercedes Picade HAT, providing push-in headers for 10 arcade buttons and a joystick.
+Picade X HAT supersedes Picade HAT, providing push-in headers for 10 arcade buttons and a joystick.
 
 It also includes a digital to analog audio converter and amplifier which outputs to a single push-fit speaker terminal.
 

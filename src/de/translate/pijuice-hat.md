@@ -36,14 +36,14 @@ i2c:
 -->
 # PiJuice
 
-PiJuice is a fully uninterruptable / uninterupted power supply that will always keep your Raspberry Pi powered! It has a real time clock (RTC) for time tracking and scheduled tasks when the Pi is offline (as well as remote on/off of your Pi). It also has an integrated microcontroller (MCU) chip which will manage soft shut down functionality, a true low power deep sleep state and intelligent start up.
+PiJuice is a fully uninterruptible / uninterupted power supply that will always keep your Raspberry Pi powered! It has a real time clock (RTC) for time tracking and scheduled tasks when the Pi is offline (as well as remote on/off of your Pi). It also has an integrated microcontroller (MCU) chip which will manage soft shut down functionality, a true low power deep sleep state and intelligent start up.
 
 The tri-coloured RGB LEDs will allow you to keep track of the battery charge levels and other info (they are programmable). There are also three programmable buttons which will allow you to trigger events or customisable scripts aside from their predefined functions. PiJuice only uses five of the Pi's GPIO pins (just power and I2C), the rest are free and made available via the stacking header which allows for other boards to be used along side PiJuice. The board can be powered directly from the grid with the standard Raspberry Pi PSU, via an on board battery, via external batteries, solar panels, wind turbines and other renewable sources.
 
 The board has a Raspberry Pi HAT compatible layout, with onboard EEPROM (you can disable the EEPROM if you want also). It has been designed for the Raspberry Pi A+, B+, 2B, 3B and 3B+ but it is also electrically compatible with the Raspberry Pi Zero v1.3 and Zero W v1.1 or any other Pi.
 
 * Onboard 1820 mAh off the shelf Lipo / LiIon battery for ~4 to 6 hours in constant use (with support for larger Lipo Battery of 5000 or 10,000 mAH+ to last up to 24 hrs +)
-* A Full Uninterruptable Power Supply solution
+* A Full Uninterruptible Power Supply solution
 * Designed for the Raspberry Pi A+, B+, 2B, 3B and 3B+ but also compatible with Raspberry Pi Zero v1.3 and Raspberry Pi Zero Wireless.
 * Integrated Real Time Clock
 * Onboard intelligent on/off switch

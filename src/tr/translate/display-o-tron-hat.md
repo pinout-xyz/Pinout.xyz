@@ -50,7 +50,7 @@ i2c:
 -->
 # Display-o-Tron HAT
 
-Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and touch. However both of these busses can be shared with other devices.
+Display-o-Tron HAT uses both SPI and I2c to drive the LCD display, backlight and touch. However both of these buses can be shared with other devices.
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

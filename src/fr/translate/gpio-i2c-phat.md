@@ -72,7 +72,7 @@ Makes use of the extra hardware I2C buses introduced on Raspberry Pi 4 (BCM2711)
 
 ## Usage
 
-Add required dtoverlay parameter(s) to ```/boot/config.txt``` and reboot.
+Add required dtoverlay parameter(s) to ```/boot/firmware/config.txt``` and reboot.
 
 Mount the GPIO I2C pHAT board to your Pi, use the slide switch to select your preferred I2C bus and stack your I2C based HAT on top.
 

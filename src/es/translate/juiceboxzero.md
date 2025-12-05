@@ -37,7 +37,7 @@ JuiceBox Zero is designed specifically for the Raspberry Pi Zero to let you powe
 Battery and Raspberry Pi Zero not included. All you need to get started is your JuiceBox Zero, a Raspberry Pi Zero or Zero W, a stacking or non-stacking header connection, and a JST‑compatible, single‑cell lithium‑ion battery
 
 * Compatible with any 3.7 to 4.2V Lithium-Ion or Lithium-Polymer battery with a JST PH connector, 1A Current Output and 1A Charge rate
-* The simplest uninterruptable power supply solution
+* The simplest uninterruptible power supply solution
 * Requires a 5V micro USB power supply, and can draw up to 2A. 
 * Smart power supply selection: it can charge the battery and power the Raspberry Pi at the same time
 * Compatible with both Raspberry Pi Zero and Pi Zero W models. Possibly suitable for powering other Pi models (depends on application)

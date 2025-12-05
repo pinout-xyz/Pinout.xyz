@@ -6,7 +6,7 @@ type: otro
 formfactor: Otro
 manufacturer: Paser
 collected: Otro
-description: add-on board designed to inteface with car electronics
+description: add-on board designed to interface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/
 buy: http://www.carberry.it
 image: 'carberry.png'

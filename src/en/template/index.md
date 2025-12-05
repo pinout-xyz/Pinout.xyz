@@ -4,8 +4,6 @@
 
 This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces. Pinout also includes [hundreds of pinouts for Raspberry Pi add-on boards, HATs and pHATs](/boards).
 
-Find this website useful? Support me via [Ko-Fi](https://ko-fi.com/gadgetoid), [GitHub](https://github.com/sponsors/gadgetoid), or [Patreon](https://www.patreon.com/gadgetoid)
-
 ## Other Pinouts
 
 We've created Pinouts for the Raspberry Pi Pico range of boards, too, you can find them here:
@@ -14,11 +12,14 @@ We've created Pinouts for the Raspberry Pi Pico range of boards, too, you can fi
 * [Raspberry Pi Pico W Pinout](https://picow.pinout.xyz)
 * [Raspberry Pi Pico 2 Pinout](https://pico2.pinout.xyz)
 
-And some advanced/experimental pinouts, too:
+Plus chip planners for the RP2350A and RP2350B chips:
 
-* [Minimal Raspberry Pi 40-pin Pinout](https://pi.pinout.xyz)
 * [Raspberry Pi RP2350A QFN-60 Pinout](https://rp2350a.pinout.xyz)
 * [Raspberry Pi RP2350B QFN-80 Pinout](https://rp2350b.pinout.xyz)
+
+And some experimental pinouts, too:
+
+* [Minimal Raspberry Pi 40-pin Pinout](https://pi.pinout.xyz)
 * [Espressif ESP32 C5 DevKitC Pinout](https://esp32c5.pinout.xyz)
 * [Espressif ESP32 C3 DevKitC Pinout](https://esp32c3.pinout.xyz)
 * [PJRC Teensy 4.0 Pinout](https://teensy40.pinout.xyz)

@@ -72,4 +72,4 @@ The goal is to have a single common platform and set of functions for accessing 
 
 WiringPi uses its own pin numbering scheme, this page illustrates how WiringPi numbers your GPIO pins.
 
-WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the WiringPi GitHub org: https://github.com/WiringPi/
+WiringPi has been deprecated by its original author. For more information about, and support with the ongoing community maintained version and ports, see the [WiringPi GitHub org at https://github.com/WiringPi](https://github.com/WiringPi)

@@ -159,6 +159,7 @@ section {
     p, pre {
         margin-top: .5em;
         line-height: 140%;
+        margin-bottom: 1em;
     }
 
     p img {
@@ -239,7 +240,7 @@ Boards Page
 
 #boards .board {
     a:hover {
-        background: lighten($color-content-bg,5%);
+        background: rgba(0, 0, 0, 25%);
     }
     strong {
         color:#333333;
@@ -366,16 +367,15 @@ Left Column
 
 #crumbtrail {
     grid-area: crumbtrail;
-    background:$color-dark;
     font-size: 0.8em;
 
     p {
-        color:#fff;
+        color:$color-dark;
         margin:0;
-        padding:5px 15px;
+        padding: 10px 0;
     }
     a, a:hover, a:active {
-        color:#fff;
+        color:$color-dark;
     }
     a.more {
         text-align:center;
@@ -807,6 +807,7 @@ code {
         grid-template-columns: 200px auto;
         text-align: right;
         div {
+            padding: 6px 6px 6px 13px;
             text-align: left;
             a {
                 display: block;
@@ -821,13 +822,16 @@ code {
     #crumbtrail {
         grid-column: 2;
         font-size: inherit;
+        p {
+            padding:5px 15px;
+            padding-top: 1em;
+        }
     }
 
     #gpio a {
         font-size:.8em;
     }
 }
-
 
 @media screen and (min-width: 1200px) {
     main, header {
@@ -836,5 +840,58 @@ code {
     
     #boards > ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: #001e26;
+        color: #fff;
+    }
+    section {
+        background: #002B36;
+        article {
+            .pin-hover {color:#CC0000;}
+            .pin-hover:hover {color:#EE0000;}
+        }
+    }
+    #crumbtrail {
+        background: transparent;
+        p, a, a:hover, a:active {
+            color: #fff;
+        }
+    }
+    #interfaces {
+        background: #175853;
+        div, li a {
+            background: #1a6a64;
+        }
+        li a:hover, li.selected a {
+            color:  #175853;
+            background: $color-cyan;
+        }
+    }
+    footer {
+        a {
+            color: $color-cyan;
+        }
+    }
+    #gpio {
+        background: rgba(95, 134, 69, 0.5);
+    }
+    #gpio .phys {
+        color: #011e26;
+    }
+    #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
+        color: #fff;
+    }
+    #boards .board a:hover {
+        background: rgba(255, 255, 255, 10%);
+    }
+    #legend img {
+        border-radius: 10px; // TODO: Fix this with an svg or something?
+    }
+    pre, .prettyprint {
+        background-color: #f7f7f9;
     }
 }

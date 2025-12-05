@@ -55,7 +55,7 @@ table {
     }
 }
 
-.prettyprint {
+pre {
     text-wrap-mode: wrap;
     white-space-collapse: break-spaces;
     word-wrap: anywhere;
@@ -125,6 +125,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Palatino Linotype", "Book Antiqua", Palatino, se
 
 section {
     background: $color-content-bg;
+    padding-bottom: 20px;
 
     hr {
         border:none;

@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251205v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764945052"/>
-		<!-- Build: 1764945052 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764950781"/>
+		<!-- Build: 1764950781 -->
 				<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@pipinout">
 		<meta name="twitter:creator" content="@gadgetoid">
@@ -144,6 +144,7 @@
 				<article class="page_1_wire"><h1>W1-GPIO - One-Wire Interface</h1>
 <p>One-wire is a single-wire communication bus typically used to connect sensors to the Pi.</p>
 <p>The Raspberry Pi supports one-wire on any GPIO pin, but the default is GPIO 4.</p>
+<h2>Enable via config.txt</h2>
 <p>To enable the one-wire interface you need to add the following line to /boot/firmware/config.txt, before rebooting your Pi:</p>
 <pre><code>dtoverlay=w1-gpio
 </code></pre>
@@ -151,15 +152,16 @@
 <pre><code>dtoverlay=w1-gpio,gpiopin=x
 </code></pre>
 <p>if you would like to use a custom pin (the default is GPIO 4)</p>
+<h2>Enable manually</h2>
 <p>Alternatively you can enable the one-wire interface on demand using <code>raspi-config</code>, or the following:</p>
 <pre><code>sudo modprobe w1-gpio
 </code></pre>
-<p>Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire busses to be used at the same time:</p>
+<p>Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire buses to be used at the same time:</p>
 <pre><code>sudo dtoverlay w1-gpio gpiopin=4 pullup=0  # header pin 7
 sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
 sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
 </code></pre>
-<p>once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire busses (by default GPIO 4), like so:</p>
+<p>once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire buses (by default GPIO 4), like so:</p>
 <pre><code>ls /sys/bus/w1/devices/
 </code></pre>
 <p>Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.</p>

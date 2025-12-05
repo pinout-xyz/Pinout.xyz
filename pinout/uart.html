@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251205v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764945052"/>
-		<!-- Build: 1764945052 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764950781"/>
+		<!-- Build: 1764950781 -->
 				<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@pipinout">
 		<meta name="twitter:creator" content="@gadgetoid">
@@ -142,15 +142,16 @@
 					</ul>
 				</div>
 				<article class="page_uart"><h1>UART - Universal Asynchronous Receiver/Transmitter</h1>
-<hr />
-<h3>UART pins in BCM mode are: 14, 15</h3>
-<h3>UART pins in WiringPi are: 15, 16</h3>
-<hr />
+<ul>
+<li>UART pins in BCM mode are: GPIO 14, GPIO 15</li>
+<li>UART pins in WiringPi are: 15, 16</li>
+</ul>
 <p>UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.</p>
 <p>Asynchronous transmission allows data to be transmitted without the sender having to send a clock signal to the receiver. Instead, the sender and receiver agree on timing parameters in advance and special bits called 'start bits' are added to each word and used to synchronize the sending and receiving units.</p>
 <p>UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).</p>
 <p>It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.</p>
 <p>Raspberry Pi 2/3 have two UARTs, uart1 and uart0. Raspberry Pi 4 has four additional UARTs available. Only uart0/1 is enabled over GPIO pin 14/15 by default. The additional UARTs can be enabled through the device tree overlays.</p>
+<h2>Using a UART from WiringPi</h2>
 <p>Assuming you have WiringPi-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'</p>
 <pre><code class="language-python">import wiringpi
 wiringpi.wiringPiSetup()

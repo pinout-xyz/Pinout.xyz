@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251205v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764945052"/>
-		<!-- Build: 1764945052 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764950781"/>
+		<!-- Build: 1764950781 -->
 		
 	</head>
 	<body class="pin">
@@ -150,7 +150,7 @@
         </table><ul><li>Physical/Board pin 8</li><li>GPIO/BCM pin 14</li><li>Wiring Pi pin 15</li></ul><p>This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.</p>
 <p>The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.</p>
 <p>UART can be used to talk to Serial GPS modules or sensors such as the PM5003, but you must make sure you disable the Serial Console in raspi-config first.</p>
-<p>On the Pi 3 and 4 the UART is, by default, used for Bluetooth and you may need to add "dtoverlay=miniuart-bt" to "/boot/config.txt" to achieve a stable.</p>
+<p>On the Pi 3 and 4 the UART is, by default, used for Bluetooth and you may need to add "dtoverlay=miniuart-bt" to "/boot/firmware/config.txt" to achieve a stable.</p>
 <p><a href="/pinout/uart">Learn more about UART</a></p>
 <p><a href="https://www.raspberrypi.org/documentation/configuration/uart.md">Raspberry Pi UART documentation</a></p></article>
 			</section>

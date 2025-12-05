@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251205v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764945052"/>
-		<!-- Build: 1764945052 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1764950781"/>
+		<!-- Build: 1764950781 -->
 				<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@pipinout">
 		<meta name="twitter:creator" content="@gadgetoid">
@@ -142,14 +142,15 @@
 					</ul>
 				</div>
 				<article class="page_spi"><h1>SPI - Serial Peripheral Interface</h1>
-<hr />
-<h3>SPI0 pins are GPIO 7, 8, 9, 10, 11</h3>
-<h3>SPI1 pins are GPIO 16, 17, 18, 19, 20, 21</h3>
-<hr />
+<ul>
+<li>SPI0 pins are GPIO 7, GPIO 8, GPIO 9, GPIO 10, GPIO 11</li>
+<li>SPI1 pins are GPIO 16, GPIO 17, GPIO 18, GPIO 19, GPIO 20, GPIO 21</li>
+</ul>
 <p>Known as the four-wire serial bus, SPI lets you attach multiple compatible devices to a single set of pins by assigning them different chip-select pins.</p>
 <p>To talk to an SPI device, you assert its corresponding chip-select pin.</p>
 <p>By default the Pi allows you to use SPI0 with chip select pins on CE0 on GPIO 8 and CE1 on GPIO 7.</p>
-<p>You can enable SPI1 with a dtoverlay configured in "/boot/config.txt", for example:</p>
+<h2>Enable via config.txt</h2>
+<p>You can enable SPI1 with a dtoverlay configured in "/boot/firmware/config.txt", for example:</p>
 <pre><code>dtoverlay=spi1-3cs
 </code></pre>
 <p>For full details of the SPI dtoverlays (and others) see <a href="https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README">the Raspberry Pi dtoverlay README</a></p>

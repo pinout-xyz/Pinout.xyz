@@ -154,7 +154,6 @@ section {
 
     h1 + h2 {
         margin-top: 0;
-        color: $color-green;
     }
 
     p, pre {
@@ -346,6 +345,11 @@ footer {
 
     a {
         color:#228179; // Just scrape an AAA contrast pass
+        text-decoration: underline;
+    }
+
+    a:hover {
+        text-decoration: none;
     }
 
     p {

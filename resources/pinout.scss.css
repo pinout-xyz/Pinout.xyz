@@ -569,6 +569,10 @@ GPIO nav
   background: #6c71c4;
 }
 
+.board #gpio {
+  grid-row: 3;
+}
+
 aside {
   display: contents;
 }
@@ -677,7 +681,7 @@ aside {
     grid-column: 1;
     grid-row: 2/-1;
   }
-  #legend, #gpio {
+  #legend, #gpio, .board #gpio {
     grid-row: unset;
   }
   body > article {

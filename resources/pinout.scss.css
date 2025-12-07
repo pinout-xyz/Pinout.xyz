@@ -230,18 +230,10 @@ Boards Page
   color: #333333;
 }
 
-.facets {
-  padding: 0;
-  background: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin-right: 18px;
-  margin-bottom: 18px;
-}
 .facets h4 {
   text-transform: capitalize;
   font-size: 1.2em;
-  margin: 10px 0 0 0;
+  margin: 0 0 0.2em 0;
   color: #073642;
 }
 .facets ul, .facets li {
@@ -249,33 +241,35 @@ Boards Page
   padding: 0;
   list-style: none;
 }
+.facets .facet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-bottom: 0.5em;
+}
 .facets .facet li {
-  display: inline-block;
-  padding: 6px 7px 6px 7px;
-  margin-top: 2px;
-  margin-right: 2px;
+  padding: 8px;
   background: #859900;
   color: #FFF;
-  line-height: 160%;
   font-size: 0.6em;
   cursor: pointer;
   text-transform: capitalize;
 }
-.facets .facet li:hover, .facets .facet li.selected {
+.facets .facet li.selected {
   color: #859900;
   background: rgb(231.6666666667, 255, 76.5);
 }
 .facets .facet:nth-of-type(2) li {
   background: #D33682;
 }
-.facets .facet:nth-of-type(2) li:hover, .facets .facet:nth-of-type(2) li.selected {
+.facets .facet:nth-of-type(2) li.selected {
   color: #D33682;
   background: rgb(243.0571428571, 200.4428571429, 221.0714285714);
 }
 .facets .facet:nth-of-type(1) li {
   background: #268BD2;
 }
-.facets .facet:nth-of-type(1) li:hover, .facets .facet:nth-of-type(1) li.selected {
+.facets .facet:nth-of-type(1) li.selected {
   color: #268BD2;
   background: rgb(184.2943548387, 218.3004032258, 242.2056451613);
 }
@@ -359,7 +353,6 @@ Left Column
   padding: 8px;
   background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
   color: #FFF;
-  line-height: 1.45em;
   flex: 1;
   white-space: pre;
   font-size: 0.7em;
@@ -641,6 +634,9 @@ code {
   .board #interfaces {
     display: grid;
   }
+  .facets .facet {
+    margin-bottom: 2em;
+  }
   .facets .facet li {
     font-size: 0.8em;
   }
@@ -726,6 +722,9 @@ code {
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  #interfaces {
+    max-width: 675px;
+  }
 }
 @media screen and (prefers-color-scheme: dark) {
   body {
@@ -768,5 +767,19 @@ code {
   }
   pre, .prettyprint {
     background-color: #f7f7f9;
+  }
+}
+@media (hover: hover) {
+  .facets .facet li:hover {
+    color: #859900;
+    background: rgb(231.6666666667, 255, 76.5);
+  }
+  .facets .facet:nth-of-type(2) li:hover {
+    color: #D33682;
+    background: rgb(243.0571428571, 200.4428571429, 221.0714285714);
+  }
+  .facets .facet:nth-of-type(1) li:hover {
+    color: #268BD2;
+    background: rgb(184.2943548387, 218.3004032258, 242.2056451613);
   }
 }

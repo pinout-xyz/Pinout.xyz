@@ -248,39 +248,35 @@ Boards Page
 }
 
 .facets {
-    padding: 0;
-    background: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-right: 18px;
-    margin-bottom: 18px;
-
     h4 {
         text-transform: capitalize;
         font-size: 1.2em;
-        margin: 10px 0 0 0;
+        margin: 0 0 .2em 0;
         color:$color-dark;
     }
 
     ul, li {
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
         list-style:none;
     }
 
+    .facet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        margin-bottom: .5em;
+    }
+
     .facet li {
-        display: inline-block;
-        padding: 6px 7px 6px 7px;
-        margin-top: 2px;
-        margin-right: 2px;
+        padding: 8px;
         background: $color-green;
         color: #FFF;
-        line-height: 160%;
-        font-size:.6em;
-        cursor:pointer;
-        text-transform:capitalize;
+        font-size: .6em;
+        cursor: pointer;
+        text-transform: capitalize;
 
-        &:hover, &.selected {
+        &.selected {
             color: $color-green;
             background: lighten($color-green, 35);
         }
@@ -290,7 +286,7 @@ Boards Page
         background: $color-pink;
     }
 
-    .facet:nth-of-type(2) li:hover, .facet:nth-of-type(2) li.selected {
+    .facet:nth-of-type(2) li.selected {
         color: $color-pink;
         background: lighten($color-pink, 35);
     }
@@ -299,7 +295,7 @@ Boards Page
         background: $color-blue;
     }
 
-    .facet:nth-of-type(1) li:hover, .facet:nth-of-type(1) li.selected {
+    .facet:nth-of-type(1) li.selected {
         color: $color-blue;
         background: lighten($color-blue, 35);
     }
@@ -395,7 +391,6 @@ Left Column
             padding: 8px;
             background: darken($color-purple, 5%);
             color: #FFF;
-            line-height: 1.45em;
             flex: 1;
             white-space: pre;
             font-size: .7em;
@@ -692,8 +687,11 @@ code {
         display: grid;
     }
 
-    .facets .facet li {
-        font-size: .8em;
+    .facets .facet {
+        margin-bottom: 2em;
+        li {
+            font-size: .8em;
+        }
     }
     section {
         grid-column: 2;
@@ -782,6 +780,10 @@ code {
     #boards > ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    #interfaces {
+        max-width: 675px;
+    }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -827,5 +829,25 @@ code {
     }
     pre, .prettyprint {
         background-color: #f7f7f9;
+    }
+}
+
+@media (hover: hover) {
+    // On tablet/mobile, facets will behave like mutually exclusive buttons
+    // with a toggle on/off and no hover state. Normally a hover would "stick"
+    // on so we only enable it if the "hover" state is supported.
+    .facets .facet {
+        li:hover {
+            color: $color-green;
+            background: lighten($color-green, 35);
+        }
+        &:nth-of-type(2) li:hover {
+            color: $color-pink;
+            background: lighten($color-pink, 35);
+        }
+        &:nth-of-type(1) li:hover {
+            color: $color-blue;
+            background: lighten($color-blue, 35);
+        }
     }
 }

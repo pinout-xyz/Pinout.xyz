@@ -766,9 +766,6 @@ code {
   #boards .board a:hover {
     background: rgba(255, 255, 255, 0.1);
   }
-  #legend img {
-    border-radius: 10px;
-  }
   pre, .prettyprint {
     background-color: #f7f7f9;
   }

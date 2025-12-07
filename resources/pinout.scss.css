@@ -455,7 +455,7 @@ GPIO nav
   background: rgb(245, 243, 237);
   color: #063541;
 }
-#gpio a:hover .pin, #gpio .overlay-pin .pin {
+#gpio a:hover .pin, #gpio .overlay-pin .pin, #gpio .active .pin {
   color: #E9E5D2;
 }
 #gpio li a small {

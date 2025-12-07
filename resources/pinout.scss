@@ -127,7 +127,7 @@ Footer language nav
 Content Area
 */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
     line-height: 120%;
 }
@@ -198,7 +198,7 @@ Boards Page
     grid-template-columns: 1fr 1fr;
 }
 
-#boards .board, #featured .board  {
+#boards .board  {
     box-sizing:border-box;
     list-style: none;
     display:block;
@@ -302,37 +302,6 @@ Boards Page
     .facet:nth-of-type(1) li:hover, .facet:nth-of-type(1) li.selected {
         color: $color-blue;
         background: lighten($color-blue, 35);
-    }
-}
-
-
-/*
-Featured Boards
-*/
-
-
-#featured {
-    overflow:hidden;
-    background:#C32672;
-
-    ul {
-        overflow: hidden;
-    }
-
-    .board  {
-        width:25%;
-
-        a {
-            min-height: 130px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-            &:hover {
-                background: $color-pink;
-            }
-        }
-
-        img {max-width:50%;}
     }
 }
 
@@ -455,9 +424,9 @@ GPIO nav
     grid-area: pinout;
     display: grid;
     grid-template-columns: 50% 50%;
-    background:$nav-bg;
+    background: $nav-bg;
 
-    .name {
+    .name, .pin {
         font-family: ui-monospace,
             Menlo, Monaco,
             "Cascadia Mono", "Segoe UI Mono",
@@ -468,93 +437,67 @@ GPIO nav
             "Fira Mono",
             "Droid Sans Mono",
             "Courier New", monospace;
-        letter-spacing:-.6pt;
     }
 
     ul {
         list-style: none;
         display: block;
         padding: 5px 0;
+        display: grid;
+    }
+
+    li {
+        display: contents;
     }
 
     a {
-        display:block;
-        position:relative;
-        font-size:.65em;
-        line-height:22px;
-        height:22px;
-        margin-bottom:2px;
-        color:#E9E5D2;
+        display: block;
+        position: relative;
+        font-size: .65em;
+        line-height: 22px;
+        height: 22px;
+        margin-bottom: 2px;
+        color: #E9E5D2;
+        text-indent: 8px;
     }
-
-    .phys {
-        color:$color-dark;
-        font-size:0.8em;
-        opacity:0.8;
-        position:absolute;
-        left:32px;
-        text-indent:0;
-    }
-
     .pin {
-        display:block;
-        border:1px solid transparent;
-        border-radius:50%;
-        width:16px;
-        height:16px;
-        background:#002B36;
-        position:absolute;
-        right:4px;
-        top:2px;
+        font-size:0.8em;
+        line-height: 18px;
+        text-align: center;
+        text-indent: 0;
 
-        &:after {
-            content:'';
-            display:block;
-            border-radius:100%;
-            background:#FDF6E3;
-            position:absolute;
-            left:5px;
-            top:5px;
-            width:6px;
-            height:6px;
-        }
+        display: block;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        background: #002B36;
+        position: absolute;
+
+        right: 3px;
+        top: 2px;
     }
 
-    .top {
-        padding-left: 1px;
+    .top { // Right
+        padding-left: 1px; // Gap between pins in the middle
         background: linear-gradient(90deg, rgba(7, 54, 66, 1) 29px, rgba(0, 0, 0, 0) 29px);
-        li {text-indent:48px;}
 
         a {
-            border-top-left-radius:13px;
-            border-bottom-left-radius:13px;
-        }
-        .overlay-ground .phys {
-            padding-left:31px;
-            left:0;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            text-indent: 36px;
         }
         .pin {
-            left:4px;
-            top:2px;
+            left: 3px;
         }
     }
 
-    .bottom {
-        padding-right: 1px;
+    .bottom { // Left
+        padding-right: 1px; // Gap between pins in the middle
         background: linear-gradient(270deg, rgba(7, 54, 66, 1) 29px, rgba(0, 0, 0, 0) 29px);
+
         a {
-            text-indent:6px;
-            border-top-right-radius:13px;
-            border-bottom-right-radius:13px;
-        }
-        .overlay-ground .phys {
-            padding-right:32px;
-            right:0;
-        }
-        .phys {
-            text-align:right;
-            left:auto;
-            right:32px;
+            border-top-right-radius: 13px;
+            border-bottom-right-radius: 13px;
         }
     }
 
@@ -567,6 +510,10 @@ GPIO nav
         color:#063541;
     }
 
+    a:hover .pin, .overlay-pin .pin {
+        color: #E9E5D2;
+    }
+
     li a small {font-size:0.8em;}
 
     .overlay-pin {
@@ -575,8 +522,8 @@ GPIO nav
             color:$overlay-pin-fg;
 
             &:hover {
-                background:$overlay-pin-bg-hover;
-                color:$overlay-pin-fg-hover;
+                background: $overlay-pin-bg-hover;
+                color: $overlay-pin-fg-hover;
             }
         }
         &.gnd a {
@@ -585,37 +532,49 @@ GPIO nav
     }
 
     .overlay-power {
-        .phys {
-            color:#FFFFFF;
-            opacity:1;
-        }
         a {
-            background:$color-dark;
+            background: $color-dark;
             color:#FFFFFF;
 
             &:hover {
-                background:$color-blue;
+                background: $color-blue;
             }
         }
     }
 
     .overlay-ground {
-        .phys {
-            background:$color-dark;
-            color:#FFFFFF;
-            opacity:1;
-            position:absolute;
-            top:0px;
-            width:14px;
-            height:22px;
-            border-radius:2px;
-            text-indent: 0px;
-            line-height: 22px;
+        .pin:after {
+            display: block;
+            content: "";
+            background: #073642;
+            width: 6px;
+            height: 22px;
+            position: absolute;
+            top: -2px;
         }
-        a:hover .phys {
-            background:$color-blue;
-        }
-        span.pin {background:$color-dark;}
+    }
+
+    .bottom .overlay-ground a:hover {
+        background: linear-gradient(270deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
+    }
+    .top .overlay-ground a:hover {
+        background: linear-gradient(90deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
+    }
+
+    .overlay-ground:hover .pin:after {
+        background: #268BD2;
+    }
+
+    .bottom .overlay-ground .pin:after {
+        left: -13px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .top .overlay-ground .pin:after {
+        left: 25px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
 
@@ -623,7 +582,6 @@ GPIO nav
     .bottom li.hover-pin a {
         color:#FFF;
         background:rgba(200,0,0,0.6);
-        .phys {color:#FFF}
     }
 
     .pin1 a:hover, .pin1.active a, .pin1 .pin {border-radius:0;}
@@ -699,27 +657,14 @@ aside {display:contents;}
     .pcm .pin {background:$color-cyan;}
 
     .pin {
-        display:block;
-        border:1px solid transparent;
+        display: block;
         border-radius:50%;
-        width:16px;
-        height:16px;
-        background:#002B36;
-        position:absolute;
-        left:2px;
-        top:2px;
-
-        &:after {
-            content:'';
-            display:block;
-            border-radius:100%;
-            background:#FDF6E3;
-            position:absolute;
-            left:5px;
-            top:5px;
-            width:6px;
-            height:6px;
-        }
+        width: 18px;
+        height: 18px;
+        background: #002B36;
+        position: absolute;
+        left: 2px;
+        top: 2px;
     }
 }
 
@@ -739,11 +684,6 @@ code {
 
         .top li {
             text-indent:56px;
-        }
-
-        .overlay-ground .phys {
-            width: 22px;
-            border-radius:11px;
         }
     }
 }
@@ -878,9 +818,6 @@ code {
     }
     #gpio {
         background: rgba(95, 134, 69, 0.5);
-    }
-    #gpio .phys {
-        color: #011e26;
     }
     #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
         color: #fff;

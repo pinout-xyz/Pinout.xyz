@@ -10,11 +10,11 @@ body {
   font-size: 12pt;
   background: #ffffff;
   color: #073642;
-  padding: 5px;
+  padding: 0;
 }
 
 table {
-  margin: 20px 0;
+  margin: 1em 0;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.8em;
@@ -81,7 +81,8 @@ img.grayscale {
 }
 
 header {
-  margin-bottom: 10px;
+  margin: 8px 8px 10px 8px;
+  box-sizing: border-box;
 }
 
 main {
@@ -128,7 +129,7 @@ section hr {
   border-top: 2px solid rgba(219.0625, 210.078125, 175.9375, 0.5);
 }
 section h1 {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 section h2, section h3 {
   font-size: 1.3em;
@@ -146,7 +147,7 @@ section p img {
   margin-top: 1.5em;
 }
 section article {
-  padding: 15px;
+  padding: 15px 8px;
 }
 section article .pin-hover {
   cursor: help;
@@ -172,11 +173,14 @@ section article li {
   margin: 0;
 }
 section article ul {
-  margin: 0.5em 0 1em 25px;
+  margin: 0 0 2em 25px;
   line-height: 140%;
 }
 section article ul li {
   margin-bottom: 0.5em;
+}
+section article p + ul {
+  margin-top: -0.5em;
 }
 
 /*
@@ -230,6 +234,9 @@ Boards Page
   color: #333333;
 }
 
+.facets {
+  margin: 0 5px;
+}
 .facets h4 {
   text-transform: capitalize;
   font-size: 1.2em;
@@ -546,7 +553,7 @@ aside {
   grid-area: legend;
   display: grid;
   grid-template-columns: auto 130.536px;
-  margin-top: 1em;
+  margin: 1em 8px 0 8px;
 }
 #legend h2 {
   margin-top: 5px;
@@ -629,22 +636,19 @@ code {
     text-indent: 56px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .boards-page #interfaces,
   .board #interfaces {
     display: grid;
-  }
-  .facets .facet {
-    margin-bottom: 2em;
-  }
-  .facets .facet li {
-    font-size: 0.8em;
   }
   section {
     grid-column: 2;
     grid-row: 3;
     min-height: 640px;
     padding-bottom: 50px;
+  }
+  section article {
+    padding: 15px;
   }
   aside {
     display: block;
@@ -660,6 +664,7 @@ code {
   header {
     width: 1000px;
     margin: 0 auto;
+    padding: 0 8px;
     height: 70px;
     display: grid;
   }
@@ -685,7 +690,7 @@ code {
   .boards-page #interfaces div,
   .board #interfaces div,
   #interfaces div {
-    padding: 8px 25px 8px 15px;
+    padding: 8px 20px 8px 15px;
     margin-bottom: 0;
     margin-right: 2px;
     text-align: left;
@@ -694,11 +699,6 @@ code {
   .board #interfaces div a,
   #interfaces div a {
     display: block;
-  }
-  .boards-page #interfaces li a,
-  .board #interfaces li a,
-  #interfaces li a {
-    font-size: 0.8em;
   }
   #interfaces {
     font-size: 1em;
@@ -716,14 +716,26 @@ code {
   }
 }
 @media screen and (min-width: 1200px) {
+  .facets .facet {
+    margin-bottom: 2em;
+  }
+  .facets .facet li {
+    font-size: 0.8em;
+  }
   main, header {
     width: 1180px;
+  }
+  header {
+    padding: 0;
   }
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   #interfaces {
     max-width: 675px;
+  }
+  #interfaces li a {
+    font-size: 0.8em;
   }
 }
 @media screen and (prefers-color-scheme: dark) {

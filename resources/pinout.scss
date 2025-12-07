@@ -26,11 +26,11 @@ body {
     font-size: 12pt;
     background:#ffffff;
     color:$color-dark;
-    padding: 5px;
+    padding: 0;
 }
 
 table {
-    margin:20px 0;
+    margin:1em 0;
     border-collapse:collapse;
     text-align:left;
     font-size:.8em;
@@ -88,7 +88,8 @@ img.grayscale {
 }
 
 header {
-    margin-bottom: 10px;
+    margin: 8px 8px 10px 8px;
+    box-sizing: border-box;
 }
 
 main {
@@ -144,7 +145,7 @@ section {
     }
 
     h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
 
     h2, h3 {
@@ -167,24 +168,27 @@ section {
     }
 
     article {
-        padding:15px;
+        padding: 15px 8px;
         .pin-hover {cursor:help;color:#880000;}
         .pin-hover:hover {color:#AA0000;}
-         img {max-width:100%;}
-         .details img {min-width:200px;}
-         a {
+        img {max-width:100%;}
+        .details img {min-width:200px;}
+        a {
             color: #C92C6D; // Just scrape an AAA small text contrast pass
             text-decoration: underline;
 
             &:hover {text-decoration:none;}
-         }
-         li {margin:0;}
-         ul {
-            margin:.5em 0 1em 25px;
+        }
+        li {margin:0;}
+        ul {
+            margin:0 0 2em 25px;
             line-height: 140%;
             li {
                 margin-bottom:.5em;
             }
+        }
+        p + ul {
+            margin-top: -0.5em;
         }
     }
 }
@@ -248,6 +252,8 @@ Boards Page
 }
 
 .facets {
+    margin: 0 5px;
+
     h4 {
         text-transform: capitalize;
         font-size: 1.2em;
@@ -603,7 +609,7 @@ aside {display:contents;}
     grid-area: legend;
     display: grid;
     grid-template-columns: auto calc(196px * 0.666);
-    margin-top: 1em;
+    margin: 1em 8px 0 8px;
 
     h2 {
         margin-top:5px;
@@ -681,23 +687,20 @@ code {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
     .boards-page #interfaces, 
     .board #interfaces {
         display: grid;
-    }
-
-    .facets .facet {
-        margin-bottom: 2em;
-        li {
-            font-size: .8em;
-        }
     }
     section {
         grid-column: 2;
         grid-row: 3;
         min-height: 640px;
         padding-bottom: 50px;
+
+        article {
+            padding: 15px;
+        }
     }
     aside {
         display: block;
@@ -715,6 +718,7 @@ code {
     header {
         width: 1000px;
         margin: 0 auto;
+        padding: 0 8px;
         height: 70px;
         display: grid;
     }
@@ -741,16 +745,13 @@ code {
         grid-column: 2;
         display: grid;
         div {
-            padding: 8px 25px 8px 15px;
+            padding: 8px 20px 8px 15px;
             margin-bottom: 0;
             margin-right: 2px;
             text-align: left;
             a {
                 display: block;
             }
-        }
-        li a {
-            font-size: .8em;
         }
     }
 
@@ -773,8 +774,19 @@ code {
 }
 
 @media screen and (min-width: 1200px) {
+    .facets .facet {
+        margin-bottom: 2em;
+        li {
+            font-size: .8em;
+        }
+    }
+
     main, header {
         width: 1180px;
+    }
+
+    header {
+        padding: 0;
     }
     
     #boards > ul {
@@ -783,6 +795,9 @@ code {
 
     #interfaces {
         max-width: 675px;
+        li a {
+            font-size: .8em;
+        }
     }
 }
 

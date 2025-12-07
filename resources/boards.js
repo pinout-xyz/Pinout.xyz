@@ -129,10 +129,11 @@ jQuery(document).ready(function(){
 		for(var idx in hash){
 			var kv = hash[idx].replace('#','').split('=');
 			if(kv.length == 2 && typeof(filters[kv[0]]) != 'undefined'){
-				filters[kv[0]] = decodeURIComponent(kv[1]);
+				var val = decodeURIComponent(kv[1]);
+				filters[kv[0]] = val;
 				$('.item').each(function(idx,obj){
 					obj = $(obj);
-					if(obj.data('key') == kv[0] && obj.data('val') == kv[1]) obj.addClass('selected');
+					if(obj.data('key') == kv[0] && obj.data('val') == val) obj.addClass('selected');
 				});
 			}
 		}

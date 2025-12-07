@@ -357,11 +357,8 @@ Left Column
 
 #interfaces {
     grid-area: interfaces;
-    background: $color-purple;
-    padding: 0px 0px 2px 2px;
-    line-height: 2px;
+    padding: 0;
     text-align: center;
-    font-size: .7em;
 
     div {
         background: darken($color-purple,5%);
@@ -369,8 +366,8 @@ Left Column
         grid-column: 1;
         color: #FFF;
         align-content: center;
-        padding: 6px;
-        margin-top: 2px;
+        padding: 8px;
+        margin-bottom: 2px;
         
         a, a:hover, a:visited, a:active {
             color: #FFF;
@@ -382,30 +379,34 @@ Left Column
 
     ul {
         grid-column: 2;
-    }
-
-    ul, li {
         list-style:none;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        gap: 2px;
     }
 
     li {
         display: contents;
         a {
-            display: inline-block;
-            padding: 6px 7px 6px 7px;
-            margin-top: 2px;
-            margin-right: 2px;
-            background: darken($color-purple,5%);
+            padding: 8px;
+            background: darken($color-purple, 5%);
             color: #FFF;
             line-height: 1.45em;
+            flex: 1;
+            white-space: pre;
+            font-size: .7em;
 
-            &:hover {color: darken($color-purple,5%);background:mix($color-purple,#FFF,20%);}
+            &:hover {
+                color: darken($color-purple,5%);
+                background: mix($color-purple,#FFF,20%);}
         }
 
         &.selected a {
-            background:darken($color-purple,10%);
+            background: darken($color-purple,10%);
             color: #FFF;
             text-decoration: underline;
         }
@@ -557,11 +558,12 @@ GPIO nav
     .bottom .overlay-ground a:hover {
         background: linear-gradient(270deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
     }
+
     .top .overlay-ground a:hover {
         background: linear-gradient(90deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
     }
 
-    .overlay-ground:hover .pin:after {
+    .overlay-ground a:hover .pin:after {
         background: #268BD2;
     }
 
@@ -673,10 +675,6 @@ code {
 }
 
 @media screen and (min-width: 540px) {
-    #interfaces {
-        font-size: .8em;
-    }
-
     #gpio {
         a {
             font-size:.8em;
@@ -694,7 +692,7 @@ code {
         display: grid;
     }
 
-    .facets .facet li, #interfaces ul a {
+    .facets .facet li {
         font-size: .8em;
     }
     section {
@@ -744,14 +742,17 @@ code {
     #interfaces {
         grid-column: 2;
         display: grid;
-        grid-template-columns: 200px auto;
-        text-align: right;
         div {
-            padding: 6px 6px 6px 13px;
+            padding: 8px 25px 8px 15px;
+            margin-bottom: 0;
+            margin-right: 2px;
             text-align: left;
             a {
                 display: block;
             }
+        }
+        li a {
+            font-size: .8em;
         }
     }
 
@@ -802,7 +803,6 @@ code {
         }
     }
     #interfaces {
-        background: #175853;
         div, li a {
             background: #1a6a64;
         }

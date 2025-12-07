@@ -324,11 +324,8 @@ Left Column
 
 #interfaces {
   grid-area: interfaces;
-  background: #6c71c4;
-  padding: 0px 0px 2px 2px;
-  line-height: 2px;
+  padding: 0;
   text-align: center;
-  font-size: 0.7em;
 }
 #interfaces div {
   background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
@@ -336,8 +333,8 @@ Left Column
   grid-column: 1;
   color: #FFF;
   align-content: center;
-  padding: 6px;
-  margin-top: 2px;
+  padding: 8px;
+  margin-bottom: 2px;
 }
 #interfaces div a, #interfaces div a:hover, #interfaces div a:visited, #interfaces div a:active {
   color: #FFF;
@@ -347,23 +344,25 @@ Left Column
 }
 #interfaces ul {
   grid-column: 2;
-}
-#interfaces ul, #interfaces li {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 2px;
 }
 #interfaces li {
   display: contents;
 }
 #interfaces li a {
-  display: inline-block;
-  padding: 6px 7px 6px 7px;
-  margin-top: 2px;
-  margin-right: 2px;
+  padding: 8px;
   background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
   color: #FFF;
   line-height: 1.45em;
+  flex: 1;
+  white-space: pre;
+  font-size: 0.7em;
 }
 #interfaces li a:hover {
   color: rgb(89.8033980583, 95.4223300971, 188.6966019417);
@@ -495,7 +494,7 @@ GPIO nav
 #gpio .top .overlay-ground a:hover {
   background: linear-gradient(90deg, #268BD2 28px, rgb(245, 243, 237) 28px);
 }
-#gpio .overlay-ground:hover .pin:after {
+#gpio .overlay-ground a:hover .pin:after {
   background: #268BD2;
 }
 #gpio .bottom .overlay-ground .pin:after {
@@ -630,9 +629,6 @@ code {
 }
 
 @media screen and (min-width: 540px) {
-  #interfaces {
-    font-size: 0.8em;
-  }
   #gpio a {
     font-size: 0.8em;
   }
@@ -645,7 +641,7 @@ code {
   .board #interfaces {
     display: grid;
   }
-  .facets .facet li, #interfaces ul a {
+  .facets .facet li {
     font-size: 0.8em;
   }
   section {
@@ -689,19 +685,24 @@ code {
   #interfaces {
     grid-column: 2;
     display: grid;
-    grid-template-columns: 200px auto;
-    text-align: right;
   }
   .boards-page #interfaces div,
   .board #interfaces div,
   #interfaces div {
-    padding: 6px 6px 6px 13px;
+    padding: 8px 25px 8px 15px;
+    margin-bottom: 0;
+    margin-right: 2px;
     text-align: left;
   }
   .boards-page #interfaces div a,
   .board #interfaces div a,
   #interfaces div a {
     display: block;
+  }
+  .boards-page #interfaces li a,
+  .board #interfaces li a,
+  #interfaces li a {
+    font-size: 0.8em;
   }
   #interfaces {
     font-size: 1em;
@@ -745,9 +746,6 @@ code {
   }
   #crumbtrail p, #crumbtrail a, #crumbtrail a:hover, #crumbtrail a:active {
     color: #fff;
-  }
-  #interfaces {
-    background: #175853;
   }
   #interfaces div, #interfaces li a {
     background: #1a6a64;

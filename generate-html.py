@@ -707,8 +707,18 @@ for overlay in overlays:
             })
 
 
+def interfaces_sort(iface):
+    name = iface['name'].lower()
+    if name == "ground":
+        return "6"  # Put after 5v5
+    if name == "1-wire":
+        return "7"  # Put after the moved "Ground"
+    return iface['name']
+
+
 def interfaces_menu(current):
     interfaces = [overlay for overlay in overlays if overlay['class'] == 'interface']
+    interfaces.sort(key=interfaces_sort)
 
     html = ''
 

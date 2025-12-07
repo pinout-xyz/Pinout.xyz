@@ -361,7 +361,7 @@ Left Column
     text-align: center;
 
     div {
-        background: darken($color-purple,5%);
+        background: darken($color-purple, 5%);
         line-height: 1.45em;
         grid-column: 1;
         color: #FFF;
@@ -511,7 +511,7 @@ GPIO nav
         color:#063541;
     }
 
-    a:hover .pin, .overlay-pin .pin {
+    a:hover .pin, .overlay-pin .pin, .active .pin {
         color: #E9E5D2;
     }
 

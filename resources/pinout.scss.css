@@ -187,26 +187,26 @@ Boards Page
   grid-template-columns: 1fr 1fr;
 }
 
-#boards .board, #featured .board {
+#boards .board {
   box-sizing: border-box;
   list-style: none;
   display: block;
   text-align: center;
 }
-#boards .board a, #featured .board a {
+#boards .board a {
   padding-top: 20px;
   padding-bottom: 0px;
   min-height: 220px;
   display: block;
   background: none;
 }
-#boards .board img, #featured .board img {
+#boards .board img {
   max-width: 80%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-#boards .board strong, #featured .board strong {
+#boards .board strong {
   font-family: "Avenir", sans-serif;
   font-weight: 500;
   color: #FFFFFF;
@@ -214,7 +214,7 @@ Boards Page
   padding: 0 5px;
   display: block;
 }
-#boards .board span, #featured .board span {
+#boards .board span {
   color: #FFFFFF;
   font-size: 0.75em;
   font-weight: normal;
@@ -278,31 +278,6 @@ Boards Page
 .facets .facet:nth-of-type(1) li:hover, .facets .facet:nth-of-type(1) li.selected {
   color: #268BD2;
   background: rgb(184.2943548387, 218.3004032258, 242.2056451613);
-}
-
-/*
-Featured Boards
-*/
-#featured {
-  overflow: hidden;
-  background: #C32672;
-}
-#featured ul {
-  overflow: hidden;
-}
-#featured .board {
-  width: 25%;
-}
-#featured .board a {
-  min-height: 130px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-#featured .board a:hover {
-  background: #D33682;
-}
-#featured .board img {
-  max-width: 50%;
 }
 
 /*
@@ -414,14 +389,17 @@ GPIO nav
   grid-template-columns: 50% 50%;
   background: #5F8645;
 }
-#gpio .name {
+#gpio .name, #gpio .pin {
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  letter-spacing: -0.6pt;
 }
 #gpio ul {
   list-style: none;
   display: block;
   padding: 5px 0;
+  display: grid;
+}
+#gpio li {
+  display: contents;
 }
 #gpio a {
   display: block;
@@ -431,73 +409,41 @@ GPIO nav
   height: 22px;
   margin-bottom: 2px;
   color: #E9E5D2;
-}
-#gpio .phys {
-  color: #073642;
-  font-size: 0.8em;
-  opacity: 0.8;
-  position: absolute;
-  left: 32px;
-  text-indent: 0;
+  text-indent: 8px;
 }
 #gpio .pin {
+  font-size: 0.8em;
+  line-height: 18px;
+  text-align: center;
+  text-indent: 0;
   display: block;
-  border: 1px solid transparent;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background: #002B36;
   position: absolute;
-  right: 4px;
+  right: 3px;
   top: 2px;
-}
-#gpio .pin:after {
-  content: "";
-  display: block;
-  border-radius: 100%;
-  background: #FDF6E3;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 6px;
-  height: 6px;
 }
 #gpio .top {
   padding-left: 1px;
   background: linear-gradient(90deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
 }
-#gpio .top li {
-  text-indent: 48px;
-}
 #gpio .top a {
   border-top-left-radius: 13px;
   border-bottom-left-radius: 13px;
-}
-#gpio .top .overlay-ground .phys {
-  padding-left: 31px;
-  left: 0;
+  text-indent: 36px;
 }
 #gpio .top .pin {
-  left: 4px;
-  top: 2px;
+  left: 3px;
 }
 #gpio .bottom {
   padding-right: 1px;
   background: linear-gradient(270deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
 }
 #gpio .bottom a {
-  text-indent: 6px;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
-}
-#gpio .bottom .overlay-ground .phys {
-  padding-right: 32px;
-  right: 0;
-}
-#gpio .bottom .phys {
-  text-align: right;
-  left: auto;
-  right: 32px;
 }
 #gpio .gnd a {
   color: rgba(233, 229, 210, 0.5);
@@ -509,6 +455,9 @@ GPIO nav
 #gpio .active a {
   background: rgb(245, 243, 237);
   color: #063541;
+}
+#gpio a:hover .pin, #gpio .overlay-pin .pin {
+  color: #E9E5D2;
 }
 #gpio li a small {
   font-size: 0.8em;
@@ -524,10 +473,6 @@ GPIO nav
 #gpio .overlay-pin.gnd a {
   color: rgba(6, 53, 65, 0.5);
 }
-#gpio .overlay-power .phys {
-  color: #FFFFFF;
-  opacity: 1;
-}
 #gpio .overlay-power a {
   background: #073642;
   color: #FFFFFF;
@@ -535,32 +480,38 @@ GPIO nav
 #gpio .overlay-power a:hover {
   background: #268BD2;
 }
-#gpio .overlay-ground .phys {
+#gpio .overlay-ground .pin:after {
+  display: block;
+  content: "";
   background: #073642;
-  color: #FFFFFF;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  width: 14px;
+  width: 6px;
   height: 22px;
-  border-radius: 2px;
-  text-indent: 0px;
-  line-height: 22px;
+  position: absolute;
+  top: -2px;
 }
-#gpio .overlay-ground a:hover .phys {
+#gpio .bottom .overlay-ground a:hover {
+  background: linear-gradient(270deg, #268BD2 28px, rgb(245, 243, 237) 28px);
+}
+#gpio .top .overlay-ground a:hover {
+  background: linear-gradient(90deg, #268BD2 28px, rgb(245, 243, 237) 28px);
+}
+#gpio .overlay-ground:hover .pin:after {
   background: #268BD2;
 }
-#gpio .overlay-ground span.pin {
-  background: #073642;
+#gpio .bottom .overlay-ground .pin:after {
+  left: -13px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#gpio .top .overlay-ground .pin:after {
+  left: 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 #gpio ul li.hover-pin a,
 #gpio .bottom li.hover-pin a {
   color: #FFF;
   background: rgba(200, 0, 0, 0.6);
-}
-#gpio ul li.hover-pin a .phys,
-#gpio .bottom li.hover-pin a .phys {
-  color: #FFF;
 }
 #gpio .pin1 a:hover, #gpio .pin1.active a, #gpio .pin1 .pin {
   border-radius: 0;
@@ -665,25 +616,13 @@ aside {
 }
 #legend .pin {
   display: block;
-  border: 1px solid transparent;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background: #002B36;
   position: absolute;
   left: 2px;
   top: 2px;
-}
-#legend .pin:after {
-  content: "";
-  display: block;
-  border-radius: 100%;
-  background: #FDF6E3;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 6px;
-  height: 6px;
 }
 
 code {
@@ -699,10 +638,6 @@ code {
   }
   #gpio .top li {
     text-indent: 56px;
-  }
-  #gpio .overlay-ground .phys {
-    width: 22px;
-    border-radius: 11px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -826,9 +761,6 @@ code {
   }
   #gpio {
     background: rgba(95, 134, 69, 0.5);
-  }
-  #gpio .phys {
-    color: #011e26;
   }
   #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
     color: #fff;

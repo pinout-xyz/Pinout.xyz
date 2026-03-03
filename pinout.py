@@ -23,7 +23,7 @@ pins = None
 settings = None
 
 master_template = open(os.path.join(BASE_DIR, 'common/layout.html')).read()
-twitter_template = open(os.path.join(BASE_DIR, 'common/twittercard.html')).read()
+twitter_template = open(os.path.join(BASE_DIR, 'common/opengraph.html')).read()
 
 
 def get_setting(setting, default=None):
@@ -43,11 +43,11 @@ def render_html(*args, **kwargs):
     html = html.replace('{{main_content}}', args[0])
     html = html.replace('{{footer}}', args[1])
 
-    if "twittercard" in kwargs:
-        if kwargs["twittercard"]:
-            html = html.replace('{{twittercard}}', twitter_template)
+    if "opengraph" in kwargs:
+        if kwargs["opengraph"]:
+            html = html.replace('{{opengraph}}', twitter_template)
 
-    html = html.replace('{{twittercard}}', "")
+    html = html.replace('{{opengraph}}', "")
 
     strings = args[2]
 

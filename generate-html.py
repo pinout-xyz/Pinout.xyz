@@ -868,7 +868,7 @@ for url in pages:
                               template_footer,
                               strings,
                               pinout.settings,
-                              twittercard=True,
+                              opengraph=True,
                               lang_links="\n\t\t".join(langlinks),
                               hreflang="\n\t\t".join(hreflang),
                               nav=nav,

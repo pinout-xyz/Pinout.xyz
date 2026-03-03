@@ -6,3 +6,4 @@ Markdown
 MarkupSafe
 PyYAML
 Werkzeug
+pillow

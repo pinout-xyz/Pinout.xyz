@@ -883,7 +883,7 @@ for url in pages:
                               interfaces=interfaces_menu(pages[url]),
                               body_class=body_class,
                               crumbtrail=crumbtrail,
-                              api_image="https://api.pinout.xyz/v1/img/{url}.png".format(url=url)
+                              api_image="https://pinout.xyz/v1/img/{url}.png".format(url=url)
                               )
 
     key = url

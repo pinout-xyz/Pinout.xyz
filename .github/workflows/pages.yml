@@ -27,6 +27,8 @@ jobs:
         run: |
           make LANG=en
           cp -r phatstack output/en
+          make -C api
+          cp -r api/v1 output/en
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

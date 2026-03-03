@@ -13,10 +13,6 @@ BASE_DIR = "../"
 import markjaml
 import pinout
 
-
-reload(sys)
-sys.setdefaultencoding('utf8')
-
 lang = "en"
 
 if len(sys.argv) > 1:
@@ -42,10 +38,9 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '', value).strip().lower()
-    return re.sub('[-\s]+', '_', value)
+    value = re.sub(r'[^\w\s-]', '', value).strip().lower()
+    return re.sub(r'[-\s]+', '_', value)
 
 
 def load_overlay(overlay):
@@ -65,16 +60,17 @@ def load_overlay(overlay):
 
     return loaded
 
-overlays = map(load_overlay, overlays)
+overlays = list(map(load_overlay, overlays))
 
 for overlay in overlays:
     for t in ['power', 'ground']:
         try:
-            overlay['data'][t] = overlay['data'][t].keys()
+            overlay['data'][t] = list(overlay['data'][t].keys())
         except (KeyError, AttributeError):
             pass
     filename = overlay['api_output_file']
-    data = json.dumps(overlay['data'], sort_keys=True)
+    print(overlay['data'])
+    data = json.dumps(overlay['data'])
     
     #print("Writing: {}".format(filename))
     #print(data)

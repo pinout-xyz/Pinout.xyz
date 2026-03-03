@@ -18,9 +18,6 @@ import markjaml
 import pinout
 
 
-reload(sys)
-sys.setdefaultencoding('utf8')
-
 lang = "en"
 
 if len(sys.argv) > 1:
@@ -46,7 +43,6 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
@@ -90,6 +86,6 @@ def load_md(filename):
         return ''
 
 
-overlays = map(load_overlay, overlays)
+overlays = list(map(load_overlay, overlays))
 
 print(json.dumps(overlays, sort_keys=True))

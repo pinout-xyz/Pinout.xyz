@@ -51,9 +51,6 @@ import pinout
 
 output_dir = "v1/img"
 
-reload(sys)
-sys.setdefaultencoding('utf8')
-
 lang = "en"
 
 if len(sys.argv) > 1:
@@ -79,7 +76,6 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '_', value)
@@ -92,7 +88,7 @@ def load_overlay(overlay):
         data['slug'] = slug
 
         if "pin" in data:
-            for pin in data["pin"].keys():
+            for pin in list(data["pin"].keys()):
                 if str(pin).startswith("bcm"):
                     data["pin"][pinout.bcm_to_physical(str(pin).replace("bcm",""))] = data["pin"][pin]
 
@@ -143,7 +139,7 @@ for overlay in overlays:
         ground = overlay["ground"]
 
     if "i2c" in overlay:
-        i2c = ", ".join(overlay["i2c"].keys())
+        i2c = ", ".join(f"0x{k:02x}" if isinstance(k, int) else k for k in overlay["i2c"].keys())
 
     print("Processing: {}".format(name))
     for pin_number in range(1,41):

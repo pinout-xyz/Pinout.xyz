@@ -124,7 +124,7 @@ for x in range(4):
 for overlay in overlays:
     if not overlay['class'] == "board" or "pin" not in overlay:
         continue
-    img = Image.new("RGBA", (20, 7), (255, 255, 255, 255))
+    img = Image.new("RGBA", (20, 11), (255, 255, 255, 255))
     slug = overlay['slug']
     pins = overlay['pin']
     name = overlay['name']
@@ -148,6 +148,7 @@ for overlay in overlays:
 
         y = 1 - ((pin_number-1) % 2)
         x = (pin_number-1) // 2
+        y += 1
         
         if pin_number in [6, 9, 14, 20, 25, 30, 34, 39]:
             if str(pin_number) in ground:
@@ -184,11 +185,11 @@ for overlay in overlays:
     #img = img.crop((1, 1, 21, 3))
     #img = Image.new("RGBA", (20, 7), (0, 0, 0, 0))
     #img.paste(pinout, (0, 0, 21, 3))
-    img.paste(logo, (0, 3))
-    img = img.resize((400,140), Image.NEAREST)
+    img.paste(logo, (0, 5))
+    img = img.resize((400,220), Image.NEAREST)
     draw = ImageDraw.Draw(img)
     
-    o_y = 60
+    o_y = 100
     draw.text((100, o_y), name, (60, 60, 60), font=LOGO_FONT)
     o_y += 25
     if i2c != "":

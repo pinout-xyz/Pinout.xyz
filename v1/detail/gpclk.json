@@ -1,0 +1,1 @@
+{"name": "GPCLK", "class": "interface", "type": "pinout", "description": "Raspberry Pi General Purpose Clock", "pin": {"bcm4": {"name": "GPCLK0"}, "bcm5": {"name": "GPCLK1"}, "bcm6": {"name": "GPCLK2"}}, "title": "GPCLK - General Purpose CLock", "pinout_url": ["https://pinout.xyz/pinout/gpclk"]}

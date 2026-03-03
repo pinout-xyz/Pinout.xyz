@@ -1,0 +1,1 @@
+{"name": "Ground", "class": "interface", "type": "pinout", "description": "Raspberry Pi Ground Pins", "pincount": 1, "pin": {"6": null, "9": null, "14": null, "20": null, "25": null, "30": null, "34": null, "39": null}, "title": "Ground", "pinout_url": ["https://pinout.xyz/pinout/ground"]}

@@ -1,0 +1,1 @@
+{"name": "3v3 Power", "class": "interface", "type": "pinout", "description": "Raspberry Pi 3v3 Power Pins", "pincount": 2, "pin": {"1": null, "17": null}, "title": "3v3 Power", "pinout_url": ["https://pinout.xyz/pinout/3v3_power"]}

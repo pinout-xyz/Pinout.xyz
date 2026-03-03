@@ -1,0 +1,1 @@
+{"name": "5v Power", "class": "interface", "type": "pinout", "description": "Raspberry Pi 5v Power Pins", "pincount": 2, "pin": {"2": null, "4": null}, "title": "5v Power", "pinout_url": ["https://pinout.xyz/pinout/5v_power"]}

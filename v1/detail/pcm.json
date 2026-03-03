@@ -1,0 +1,1 @@
+{"name": "PCM", "class": "interface", "type": "pinout", "description": "Raspberry Pi PCM pins", "pin": {"bcm18": {"name": "CLK"}, "bcm19": {"name": "FS"}, "bcm20": {"name": "DIN"}, "bcm21": {"name": "DOUT"}}, "title": "PCM - Pulse-code Modulation", "pinout_url": ["https://pinout.xyz/pinout/pcm"]}

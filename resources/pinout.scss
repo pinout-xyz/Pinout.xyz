@@ -379,6 +379,11 @@ Left Column
         }
     }
 
+    small {
+        font-size: 0.6em;
+        display: block;
+    }
+
     ul {
         grid-column: 2;
         list-style:none;
@@ -400,6 +405,7 @@ Left Column
             flex: 1;
             white-space: pre;
             font-size: .7em;
+            align-content: center;
 
             &:hover {
                 color: darken($color-purple,5%);
@@ -771,6 +777,13 @@ code {
     #gpio a {
         font-size:.8em;
     }
+
+    #interfaces {
+        li a {
+            padding: 0 4px;
+            height: calc(33% - 1px);
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -797,6 +810,8 @@ code {
         max-width: 675px;
         li a {
             font-size: .8em;
+            padding: 0 8px;
+            height: calc(50% - 1px);
         }
     }
 }

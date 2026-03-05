@@ -343,6 +343,10 @@ Left Column
 #interfaces div a:hover {
   text-decoration: underline;
 }
+#interfaces small {
+  font-size: 0.6em;
+  display: block;
+}
 #interfaces ul {
   grid-column: 2;
   list-style: none;
@@ -363,6 +367,7 @@ Left Column
   flex: 1;
   white-space: pre;
   font-size: 0.7em;
+  align-content: center;
 }
 #interfaces li a:hover {
   color: rgb(89.8033980583, 95.4223300971, 188.6966019417);
@@ -714,6 +719,10 @@ code {
   #gpio a {
     font-size: 0.8em;
   }
+  #interfaces li a {
+    padding: 0 4px;
+    height: calc(33% - 1px);
+  }
 }
 @media screen and (min-width: 1200px) {
   .facets .facet {
@@ -736,6 +745,8 @@ code {
   }
   #interfaces li a {
     font-size: 0.8em;
+    padding: 0 8px;
+    height: calc(50% - 1px);
   }
 }
 @media screen and (prefers-color-scheme: dark) {

@@ -364,13 +364,15 @@ Left Column
 
 #interfaces {
     grid-area: interfaces;
+    grid-row-gap: 2px;
     padding: 0;
     text-align: center;
 
     div {
-        background: darken($color-purple, 5%);
-        line-height: 1.45em;
-        grid-column: 1;
+        background: $color-green;
+        line-height: 1em;
+        font-size: 0.9em;
+        grid-row: 1;
         color: #FFF;
         align-content: center;
         padding: 8px;
@@ -378,9 +380,10 @@ Left Column
         
         a, a:hover, a:visited, a:active {
             color: #FFF;
+            text-decoration: underline;
         }
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
 
@@ -390,7 +393,7 @@ Left Column
     }
 
     ul {
-        grid-column: 2;
+        grid-row: 2;
         list-style:none;
         margin: 0;
         padding: 0;
@@ -404,7 +407,7 @@ Left Column
     li {
         display: contents;
         a {
-            padding: 8px;
+            padding: 8px 3%;
             background: darken($color-purple, 5%);
             color: #FFF;
             flex: 1;
@@ -750,26 +753,6 @@ code {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .boards-page #interfaces, 
-    .board #interfaces,
-    #interfaces {
-        grid-column: 2;
-        display: grid;
-        div {
-            padding: 8px 20px 8px 15px;
-            margin-bottom: 0;
-            margin-right: 2px;
-            text-align: left;
-            a {
-                display: block;
-            }
-        }
-    }
-
-    #interfaces {
-        font-size: 1em;
-    }
-
     #crumbtrail {
         grid-column: 2;
         font-size: inherit;
@@ -781,13 +764,6 @@ code {
 
     #gpio a {
         font-size:.8em;
-    }
-
-    #interfaces {
-        li a {
-            padding: 0 4px;
-            height: calc(33% - 1px);
-        }
     }
 }
 
@@ -810,15 +786,6 @@ code {
     #boards > ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    #interfaces {
-        max-width: 675px;
-        li a {
-            font-size: .8em;
-            padding: 0 8px;
-            height: calc(50% - 1px);
-        }
-    }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -840,7 +807,7 @@ code {
         }
     }
     #interfaces {
-        div, li a {
+        li a {
             background: #1a6a64;
         }
         li a:hover, li.selected a {

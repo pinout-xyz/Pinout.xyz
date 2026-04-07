@@ -383,14 +383,16 @@ Left Column
 
 #interfaces {
   grid-area: interfaces;
+  grid-row-gap: 2px;
   padding: 0;
   text-align: center;
 }
 
 #interfaces div {
-  background: #5a5fbd;
-  line-height: 1.45em;
-  grid-column: 1;
+  background: #859900;
+  line-height: 1em;
+  font-size: 0.9em;
+  grid-row: 1;
   color: #FFF;
   align-content: center;
   padding: 8px;
@@ -399,10 +401,11 @@ Left Column
 
 #interfaces div a, #interfaces div a:hover, #interfaces div a:visited, #interfaces div a:active {
   color: #FFF;
+  text-decoration: underline;
 }
 
 #interfaces div a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #interfaces small {
@@ -411,7 +414,7 @@ Left Column
 }
 
 #interfaces ul {
-  grid-column: 2;
+  grid-row: 2;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -426,7 +429,7 @@ Left Column
 }
 
 #interfaces li a {
-  padding: 8px;
+  padding: 8px 3%;
   background: #5a5fbd;
   color: #FFF;
   flex: 1;
@@ -806,28 +809,6 @@ code {
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .boards-page #interfaces,
-.board #interfaces,
-#interfaces {
-    grid-column: 2;
-    display: grid;
-  }
-  .boards-page #interfaces div,
-.board #interfaces div,
-#interfaces div {
-    padding: 8px 20px 8px 15px;
-    margin-bottom: 0;
-    margin-right: 2px;
-    text-align: left;
-  }
-  .boards-page #interfaces div a,
-.board #interfaces div a,
-#interfaces div a {
-    display: block;
-  }
-  #interfaces {
-    font-size: 1em;
-  }
   #crumbtrail {
     grid-column: 2;
     font-size: inherit;
@@ -838,10 +819,6 @@ code {
   }
   #gpio a {
     font-size: .8em;
-  }
-  #interfaces li a {
-    padding: 0 4px;
-    height: calc(33% - 1px);
   }
 }
 
@@ -860,14 +837,6 @@ code {
   }
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  #interfaces {
-    max-width: 675px;
-  }
-  #interfaces li a {
-    font-size: .8em;
-    padding: 0 8px;
-    height: calc(50% - 1px);
   }
 }
 
@@ -891,7 +860,7 @@ code {
   #crumbtrail p, #crumbtrail a, #crumbtrail a:hover, #crumbtrail a:active {
     color: #fff;
   }
-  #interfaces div, #interfaces li a {
+  #interfaces li a {
     background: #1a6a64;
   }
   #interfaces li a:hover, #interfaces li.selected a {

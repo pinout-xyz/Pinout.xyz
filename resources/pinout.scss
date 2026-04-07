@@ -42,6 +42,11 @@ table {
         font-size:inherit;
         width:100%;
 
+        tr {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
         td, th {
             border:none;vertical-align:top;padding:0;
         }
@@ -172,7 +177,7 @@ section {
         .pin-hover {cursor:help;color:#880000;}
         .pin-hover:hover {color:#AA0000;}
         img {max-width:100%;}
-        .details img {min-width:200px;}
+        .details img {min-width:200px;max-width: 100%;}
         a {
             color: #C92C6D; // Just scrape an AAA small text contrast pass
             text-decoration: underline;

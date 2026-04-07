@@ -3,7 +3,6 @@ ul, li, a, body, h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   text-decoration: none;
 }
-
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
@@ -12,7 +11,6 @@ body {
   color: #073642;
   padding: 0;
 }
-
 table {
   margin: 1em 0;
   border-collapse: collapse;
@@ -31,6 +29,10 @@ table.details {
   font-size: inherit;
   width: 100%;
 }
+table.details tr {
+  display: grid;
+  grid-template-columns: auto auto;
+}
 table.details td, table.details th {
   border: none;
   vertical-align: top;
@@ -45,15 +47,13 @@ table.pin-functions {
 table.pin-functions td {
   width: 16.6666%;
 }
-
 pre {
   text-wrap-mode: wrap;
   white-space-collapse: break-spaces;
   word-wrap: anywhere;
 }
-
 .logo {
-  font-family: "Avenir", sans-serif;
+  font-family: 'Avenir', sans-serif;
   width: 200px;
   font-size: 22px;
   line-height: 23px;
@@ -73,28 +73,21 @@ pre {
 .logo a:hover span, .logo a:hover, .logo a:hover span.out {
   color: #073642;
 }
-
 img.grayscale {
-  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
 }
-
 header {
   margin: 8px 8px 10px 8px;
   box-sizing: border-box;
 }
-
 main {
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 2px;
   grid-template-areas: "crumbtrail" "interfaces" "pinout" "content" "legend";
 }
-
-/*
-Footer language nav
-*/
 #lang {
   display: block;
   background: #C7C2AE;
@@ -109,15 +102,10 @@ Footer language nav
   margin: 10px;
   margin-left: 0px;
 }
-
-/*
-Content Area
-*/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   line-height: 120%;
 }
-
 section {
   grid-area: content;
   background: rgba(235, 230, 211, 0.5);
@@ -126,7 +114,7 @@ section {
 section hr {
   border: none;
   background: none;
-  border-top: 2px solid rgba(219.0625, 210.078125, 175.9375, 0.5);
+  border-top: 2px solid rgba(219, 210, 176, 0.5);
 }
 section h1 {
   font-size: 1.8em;
@@ -161,6 +149,7 @@ section article img {
 }
 section article .details img {
   min-width: 200px;
+  max-width: 100%;
 }
 section article a {
   color: #C92C6D;
@@ -182,15 +171,10 @@ section article ul li {
 section article p + ul {
   margin-top: -0.5em;
 }
-
-/*
-Boards Page
-*/
 #boards > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 #boards .board {
   box-sizing: border-box;
   list-style: none;
@@ -211,7 +195,7 @@ Boards Page
   margin: 0 auto;
 }
 #boards .board strong {
-  font-family: "Avenir", sans-serif;
+  font-family: 'Avenir', sans-serif;
   font-weight: 500;
   color: #FFFFFF;
   margin: 0;
@@ -226,14 +210,12 @@ Boards Page
   padding: 0 5px;
   display: block;
 }
-
 #boards .board a:hover {
   background: rgba(0, 0, 0, 0.25);
 }
 #boards .board strong {
   color: #333333;
 }
-
 .facets {
   margin: 0 5px;
 }
@@ -264,26 +246,22 @@ Boards Page
 }
 .facets .facet li.selected {
   color: #859900;
-  background: rgb(231.6666666667, 255, 76.5);
+  background: #e8ff4c;
 }
 .facets .facet:nth-of-type(2) li {
   background: #D33682;
 }
 .facets .facet:nth-of-type(2) li.selected {
   color: #D33682;
-  background: rgb(243.0571428571, 200.4428571429, 221.0714285714);
+  background: #f3c8dd;
 }
 .facets .facet:nth-of-type(1) li {
   background: #268BD2;
 }
 .facets .facet:nth-of-type(1) li.selected {
   color: #268BD2;
-  background: rgb(184.2943548387, 218.3004032258, 242.2056451613);
+  background: #b8daf2;
 }
-
-/*
-Footer
-*/
 footer {
   padding: 20px 0px;
   text-align: center;
@@ -299,10 +277,6 @@ footer p {
   line-height: 130%;
   margin: 0.5em 0 0.5em 0;
 }
-
-/*
-Left Column
-*/
 #crumbtrail {
   grid-area: crumbtrail;
   font-size: 0.8em;
@@ -322,14 +296,13 @@ Left Column
 #crumbtrail a:hover {
   text-decoration: underline;
 }
-
 #interfaces {
   grid-area: interfaces;
   padding: 0;
   text-align: center;
 }
 #interfaces div {
-  background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
+  background: #5a5fbd;
   line-height: 1.45em;
   grid-column: 1;
   color: #FFF;
@@ -337,7 +310,8 @@ Left Column
   padding: 8px;
   margin-bottom: 2px;
 }
-#interfaces div a, #interfaces div a:hover, #interfaces div a:visited, #interfaces div a:active {
+#interfaces div a, #interfaces div a:hover, #interfaces div a:visited,
+#interfaces div a:active {
   color: #FFF;
 }
 #interfaces div a:hover {
@@ -362,7 +336,7 @@ Left Column
 }
 #interfaces li a {
   padding: 8px;
-  background: rgb(89.8033980583, 95.4223300971, 188.6966019417);
+  background: #5a5fbd;
   color: #FFF;
   flex: 1;
   white-space: pre;
@@ -370,23 +344,17 @@ Left Column
   align-content: center;
 }
 #interfaces li a:hover {
-  color: rgb(89.8033980583, 95.4223300971, 188.6966019417);
-  background: rgb(225.6, 226.6, 243.2);
+  color: #5a5fbd;
+  background: #e2e3f3;
 }
 #interfaces li.selected a {
-  background: rgb(72.4611650485, 78.6019417476, 180.5388349515);
+  background: #484fb5;
   color: #FFF;
   text-decoration: underline;
 }
-
-.boards-page #interfaces,
-.board #interfaces {
+.boards-page #interfaces, .board #interfaces {
   display: none;
 }
-
-/*
-GPIO nav
-*/
 #gpio {
   grid-area: pinout;
   display: grid;
@@ -394,7 +362,9 @@ GPIO nav
   background: #5F8645;
 }
 #gpio .name, #gpio .pin {
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", monospace;
 }
 #gpio ul {
   list-style: none;
@@ -431,7 +401,7 @@ GPIO nav
 }
 #gpio .top {
   padding-left: 1px;
-  background: linear-gradient(90deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
+  background: linear-gradient(90deg, #073642 29px, transparent 29px);
 }
 #gpio .top a {
   border-top-left-radius: 13px;
@@ -443,7 +413,7 @@ GPIO nav
 }
 #gpio .bottom {
   padding-right: 1px;
-  background: linear-gradient(270deg, rgb(7, 54, 66) 29px, rgba(0, 0, 0, 0) 29px);
+  background: linear-gradient(270deg, #073642 29px, transparent 29px);
 }
 #gpio .bottom a {
   border-top-right-radius: 13px;
@@ -452,12 +422,11 @@ GPIO nav
 #gpio .gnd a {
   color: rgba(233, 229, 210, 0.5);
 }
-#gpio:hover {
+; #gpio:hover {
   color: rgba(6, 53, 65, 0.5);
 }
-#gpio a:hover,
-#gpio .active a {
-  background: rgb(245, 243, 237);
+#gpio a:hover, #gpio .active a {
+  background: #f5f3ed;
   color: #063541;
 }
 #gpio a:hover .pin, #gpio .overlay-pin .pin, #gpio .active .pin {
@@ -467,11 +436,11 @@ GPIO nav
   font-size: 0.8em;
 }
 #gpio .overlay-pin a {
-  background: rgb(235, 230, 211);
+  background: #ebe6d3;
   color: #063541;
 }
 #gpio .overlay-pin a:hover {
-  background: rgb(245, 243, 237);
+  background: #f5f3ed;
   color: #063541;
 }
 #gpio .overlay-pin.gnd a {
@@ -494,10 +463,10 @@ GPIO nav
   top: -2px;
 }
 #gpio .bottom .overlay-ground a:hover {
-  background: linear-gradient(270deg, #268BD2 28px, rgb(245, 243, 237) 28px);
+  background: linear-gradient(270deg, #268BD2 28px, #f5f3ed 28px);
 }
 #gpio .top .overlay-ground a:hover {
-  background: linear-gradient(90deg, #268BD2 28px, rgb(245, 243, 237) 28px);
+  background: linear-gradient(90deg, #268BD2 28px, #f5f3ed 28px);
 }
 #gpio .overlay-ground a:hover .pin:after {
   background: #268BD2;
@@ -512,8 +481,7 @@ GPIO nav
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-#gpio ul li.hover-pin a,
-#gpio .bottom li.hover-pin a {
+#gpio ul li.hover-pin a, #gpio .bottom li.hover-pin a {
   color: #FFF;
   background: rgba(200, 0, 0, 0.6);
 }
@@ -541,23 +509,19 @@ GPIO nav
 #gpio .uart .pin {
   background: #6c71c4;
 }
-
 .board #gpio {
   grid-row: 2;
 }
-
 #boardsnav {
   grid-area: "pinout";
 }
-
 aside {
   display: contents;
 }
-
 #legend {
   grid-area: legend;
   display: grid;
-  grid-template-columns: auto 130.536px;
+  grid-template-columns: auto calc(196px * 0.666);
   margin: 1em 8px 0 8px;
 }
 #legend h2 {
@@ -588,7 +552,9 @@ aside {
 }
 #legend a {
   padding: 0 12px 0 25px;
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", monospace;
   letter-spacing: -0.6pt;
 }
 #legend a span {
@@ -628,11 +594,11 @@ aside {
   left: 2px;
   top: 2px;
 }
-
 code {
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
+    "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", monospace;
 }
-
 @media screen and (min-width: 540px) {
   #gpio a {
     font-size: 0.8em;
@@ -642,8 +608,7 @@ code {
   }
 }
 @media screen and (min-width: 768px) {
-  .boards-page #interfaces,
-  .board #interfaces {
+  .boards-page #interfaces, .board #interfaces {
     display: grid;
   }
   section {
@@ -658,7 +623,7 @@ code {
   aside {
     display: block;
     grid-column: 1;
-    grid-row: 1/-1;
+    grid-row: -1;
   }
   #legend {
     grid-template-columns: auto 196px;
@@ -686,23 +651,17 @@ code {
   #boards > ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .boards-page #interfaces,
-  .board #interfaces,
-  #interfaces {
+  .boards-page #interfaces, .board #interfaces, #interfaces {
     grid-column: 2;
     display: grid;
   }
-  .boards-page #interfaces div,
-  .board #interfaces div,
-  #interfaces div {
+  .boards-page #interfaces div, .board #interfaces div, #interfaces div {
     padding: 8px 20px 8px 15px;
     margin-bottom: 0;
     margin-right: 2px;
     text-align: left;
   }
-  .boards-page #interfaces div a,
-  .board #interfaces div a,
-  #interfaces div a {
+  .boards-page #interfaces div a, .board #interfaces div a, #interfaces div a {
     display: block;
   }
   #interfaces {
@@ -782,7 +741,8 @@ code {
   #gpio {
     background: rgba(95, 134, 69, 0.5);
   }
-  #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
+  #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4,
+  #boards .board strong {
     color: #fff;
   }
   #boards .board a:hover {
@@ -795,14 +755,14 @@ code {
 @media (hover: hover) {
   .facets .facet li:hover {
     color: #859900;
-    background: rgb(231.6666666667, 255, 76.5);
+    background: #e8ff4c;
   }
   .facets .facet:nth-of-type(2) li:hover {
     color: #D33682;
-    background: rgb(243.0571428571, 200.4428571429, 221.0714285714);
+    background: #f3c8dd;
   }
   .facets .facet:nth-of-type(1) li:hover {
     color: #268BD2;
-    background: rgb(184.2943548387, 218.3004032258, 242.2056451613);
+    background: #b8daf2;
   }
 }

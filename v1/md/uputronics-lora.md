@@ -7,7 +7,7 @@ formfactor: HAT
 manufacturer: Uputronics
 description: LoRa Radio board for Raspberry Pi
 url: http://www.pi-in-the-sky.com/
-buy: https://store.uputronics.com/index.php?route=product/product&path=61&product_id=68
+buy: https://store.uputronics.com/products/raspberry-pi-loratm-expansion-board
 github: https://github.com/piinthesky
 schematic: https://github.com/PiInTheSky/pits-hardware/blob/master/PiLoraGatewayV2.5.pdf
 image: 'uputronics-lora.png'

@@ -9,8 +9,8 @@
 		<link href="/resources/pinout.scss.css?v=20251207v5" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1775590448"/>
-		<!-- Build: 1775590448 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 1775591675"/>
+		<!-- Build: 1775591675 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Uputronics GPS Expansion Board at Raspberry Pi GPIO Pinout">
@@ -26,7 +26,7 @@
 						<aside>
 				<nav id="gpio">
 					<ul class="bottom">
-<li class="pin1 pow3v3 overlay-power"><a href="/pinout/3v3_power" title=""><span class="default"> 3v3 Power</span><span class="pin">1</span></a></li>
+<li class="pin1 pow3v3"><a href="/pinout/3v3_power" title=""><span class="default"> 3v3 Power</span><span class="pin">1</span></a></li>
 <li class="pin3 gpio i2c overlay-pin"><a href="/pinout/pin3_gpio2" title="Wiring Pi pin 8"><span class="default"> <span class="name">GPIO 2</span> <small>(I2C1 SDA)</small></span><span class="pin">3</span></a></li>
 <li class="pin5 gpio i2c overlay-pin"><a href="/pinout/pin5_gpio3" title="Wiring Pi pin 9"><span class="default"> <span class="name">GPIO 3</span> <small>(I2C1 SCL)</small></span><span class="pin">5</span></a></li>
 <li class="pin7 gpio"><a href="/pinout/pin7_gpio4" title="Wiring Pi pin 7"><span class="default"> <span class="name">GPIO 4</span> <small>(GPCLK0)</small></span><span class="pin">7</span></a></li>
@@ -48,8 +48,8 @@
 <li class="pin39 gnd overlay-ground"><a href="/pinout/ground" title=""><span class="default"> Ground</span><span class="pin">39</span></a></li>
 </ul>
 <ul class="top">
-<li class="pin2 pow5v"><a href="/pinout/5v_power" title=""><span class="default"> 5v Power</span><span class="pin">2</span></a></li>
-<li class="pin4 pow5v"><a href="/pinout/5v_power" title=""><span class="default"> 5v Power</span><span class="pin">4</span></a></li>
+<li class="pin2 pow5v overlay-power"><a href="/pinout/5v_power" title=""><span class="default"> 5v Power</span><span class="pin">2</span></a></li>
+<li class="pin4 pow5v overlay-power"><a href="/pinout/5v_power" title=""><span class="default"> 5v Power</span><span class="pin">4</span></a></li>
 <li class="pin6 gnd overlay-ground"><a href="/pinout/ground" title=""><span class="default"> Ground</span><span class="pin">6</span></a></li>
 <li class="pin8 gpio uart overlay-pin"><a href="/pinout/pin8_gpio14" title="Wiring Pi pin 15"><span class="default"> <span class="name">GPIO 14</span> <small>(UART0 TX)</small></span><span class="pin">8</span></a></li>
 <li class="pin10 gpio uart overlay-pin"><a href="/pinout/pin10_gpio15" title="Wiring Pi pin 16"><span class="default"> <span class="name">GPIO 15</span> <small>(UART0 RX)</small></span><span class="pin">10</span></a></li>
@@ -145,7 +145,12 @@
 					</ul>
 				</div>
 				<article class="page_uputronics_gps_expansion_board"><h1>Uputronics GPS Expansion Board</h1>
-<p>Adds location and PPS to enable precision time keeping to your Raspberry Pi. </p>
+<p><br>
+Adds location and PPS to enable precision time keeping to your Raspberry Pi. 
+<br>
+Fitted with a RV-3028-C7 RTC.
+<br>
+USB-C For direct serial connection to a PC Windows/Linux/Mac (Independant of the Raspberry Pi)</p>
 <p>Features: </p>
 <ul>
 <li>166 dBm sensitivity, 18Hz update rate, 72 channel</li>
@@ -155,18 +160,22 @@
 <li>Altitude limit 50km in flight mode</li>
 <li>Robust SMA connector for external antenna</li>
 <li>Current draw 6mA in cyclic mode up to 18mA in acquire.</li>
+<li>Seperate RV-3028-C7 RTC</li>
+<li>RAW Output available from the GPS</li>
 </ul>
-<p>I2C is connected but uses clock stretching.</p>
-<p>Command reference guide: <a href="https://www.u-blox.com/sites/default/files/products/documents/u-blox8-M8_ReceiverDescrProtSpec_(UBX-13003221)_Public.pdf">U-Blox M8 Receiver Description</a></p>
+<p>Datasheet: <a href="https://cdn.shopify.com/s/files/1/0835/7707/8094/files/Uputronics_Raspberry_Pi_GPS_RTC_Board_Datasheet_9eec2e77-d368-45ee-acc2-be899ff1d0be.pdf?v=1736517155">Raspberry Pi GPS/RTC Expansion Board Datasheet</a>
+<br>
+Command reference guide: <a href="https://cdn.shopify.com/s/files/1/0835/7707/8094/files/u-blox8-M8_ReceiverDescrProtSpec__UBX-13003221__Public_fba84713-56a9-46e5-a976-1ce199a1c935.pdf?v=1773174585">U-Blox M8 Receiver Description</a></p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li>Made by <a href="/boards#manufacturer=Uputronics">Uputronics</a></li>
 <li>HAT form-factor</li>
-<li>Needs 3v3 power</li>
+<li>Needs 5v power</li>
 <li>Uses 5 GPIO pins</li>
 <li>Communication over I2C</li>
-<li>0x00: Ublox</li>
+<li>0x42: Ublox M8030</li>
+<li>0x52: Microcrystal RV-3028-C7 RTC</li>
 <li><a href="https://store.uputronics.com">More Information</a></li>
-<li><a href="https://store.uputronics.com/index.php?route=product/product&amp;path=60_64&amp;product_id=81">Buy Now</a></li>
+<li><a href="https://store.uputronics.com/products/raspberry-pi-gps-rtc-expansion-board">Buy Now</a></li>
 </ul></td><td><img loading="lazy" src="/resources/boards/uputronics-gps-hat.png" alt="Uputronics GPS Expansion Board" /></td></tr></table></article>
 			</section>
 

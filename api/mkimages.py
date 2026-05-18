@@ -122,7 +122,7 @@ for x in range(4):
         logo.putpixel((x, y), col)
 
 for overlay in overlays:
-    if not overlay['class'] == "board" or "pin" not in overlay:
+    if "pin" not in overlay:
         continue
     img = Image.new("RGBA", (20, 11), (255, 255, 255, 255))
     slug = overlay['slug']
@@ -153,7 +153,7 @@ for overlay in overlays:
         if pin_number in [6, 9, 14, 20, 25, 30, 34, 39]:
             if str(pin_number) in ground:
                 img.putpixel((x, y), (0, 0, 0, 255))
-            else:
+            elif overlay['class'] == "board":
                 img.putpixel((x, y), (196, 196, 128, 255))
 
         elif pin_number in [1, 17] and str(pin_number) in power: # 3v3

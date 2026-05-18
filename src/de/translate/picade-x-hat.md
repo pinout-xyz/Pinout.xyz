@@ -123,7 +123,7 @@ All button inputs should be configured with their corresponding internal pull-up
 * Stereo audio combined for a single speaker
 * Support for an external power button and safe power shutdown
 * External power LED support
-* Heck header for extra buttons and i2c connectivity
+* Hack header for extra buttons and i2c connectivity
 
 To get the HAT set up and ready to go you can use the one-line product installer:
 

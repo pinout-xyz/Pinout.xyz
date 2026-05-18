@@ -1,5 +1,5 @@
 import json
-import time
+import datetime
 import os
 
 try:
@@ -12,7 +12,7 @@ try:
 except NameError:
     unicode = str
 
-BUILD_ID = str(int(time.time()))
+BUILD_ID = datetime.datetime.now().isoformat().replace(":","").replace("-", "").split(".")[0]
 PINOUT_FILE = 'pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'
 STRINGS_FILE = 'localised.yaml'

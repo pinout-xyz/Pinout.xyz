@@ -12,7 +12,7 @@ deps:
 	python3 -m pip install -r requirements.txt
 
 css:
-	scss resources/pinout.scss > resources/pinout.scss.css
+	python3 mkcss.py
 
 html:
 	./generate-html.py $(LANG)

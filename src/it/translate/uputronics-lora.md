@@ -7,7 +7,7 @@ formfactor: HAT
 manufacturer: Uputronics
 description: LoRa Radio board for Raspberry Pi
 url: http://www.pi-in-the-sky.com/
-buy: https://store.uputronics.com/index.php?route=product/product&path=61&product_id=68
+buy: https://store.uputronics.com/products/raspberry-pi-loratm-expansion-board
 github: https://github.com/piinthesky
 schematic: https://github.com/PiInTheSky/pits-hardware/blob/master/PiLoraGatewayV2.5.pdf
 image: 'uputronics-lora.png'
@@ -55,10 +55,10 @@ pin:
 # Uputronics LoRa Expansion Board
 
 Fitted with one or two (CE1 populated by default) HopeRF LoRa modules in 434,868 or 915MHz frequencies. 
-Primarily designed to make a LoRa gateway for High Altitude balloon reception or stacked on the Pi In The Sky board to provide LoRa tranmission from High Altitude balloons. 
+Primarily designed to make a LoRa gateway for High Altitude balloon reception or stacked on the Pi In The Sky board to provide LoRa transmission from High Altitude balloons. 
 However can be used for whatever custom project you have where LoRa radio is required.
 
-Features: 
+## Features
 
 * Four LEDs for data and other indications. 
 * One or two HopeRF modules for making gateways/repeaters 

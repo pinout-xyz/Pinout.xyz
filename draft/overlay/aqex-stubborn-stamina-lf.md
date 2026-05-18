@@ -102,8 +102,8 @@ The system utilizes a 3-pin GPIO interface for OS-level integration. The followi
 
 ## Visual Diagnostics (LED Indicators)
 
-* **External Power (6)** [Green]: Primary 5V power source detected.
-* **Bad Polarity (9)** [Red]: **CRITICAL:** Battery installed backwards!
+* **External Power** [Green]: Primary 5V power source detected.
+* **Bad Polarity** [Red]: **CRITICAL:** Battery installed backwards!
 * **Full** [Green]: Battery fully charged (>3.5V).
 * **Min** [Green]: Sufficient energy for a safe boot-shutdown cycle.
 * **Safe** [Yellow]: Sufficient energy for a safe shutdown cycle.

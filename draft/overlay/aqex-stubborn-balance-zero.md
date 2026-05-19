@@ -3,7 +3,7 @@
 name: AQEX Stubborn Balance Zero
 class: board
 type: power
-formfactor: HAT
+formfactor: PHAT
 manufacturer: AQEX
 description: Stubborn Balance Zero - The Hybrid Supercap UPS for Raspberry Pi Zero. The Perfect Balance of Power Density and Endurance. 
 url: https://www.aqex.eu/stubborn-balance-zero-raspberry-pi-zero-ups-hat-hybrid-supercap.html

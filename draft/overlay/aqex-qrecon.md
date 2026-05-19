@@ -3,7 +3,7 @@
 name: AQEX qReCon
 class: board
 type: relay
-formfactor: Custom
+formfactor: HAT
 manufacturer: AQEX
 description: qRecon - Configurable 4-Channel Relay HAT for Raspberry Pi IO Expansion. 
 url: https://www.aqex.eu/qrecon-raspberry-pi-relay-module-with-4-output.html

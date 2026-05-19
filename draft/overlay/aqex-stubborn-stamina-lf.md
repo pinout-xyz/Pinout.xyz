@@ -3,7 +3,7 @@
 name: AQEX Stubborn Stamina LF
 class: board
 type: power
-formfactor: Custom
+formfactor: HAT
 manufacturer: AQEX
 description: High-reliability LiFePO4 UPS engineered for long-term Raspberry Pi deployments. Zero-configuration design (no jumpers or settings) ensuring relentless uptime with superior thermal stability and extended cycle life over standard Li-ion.
 url: https://www.aqex.eu/stubborn-stamina-lf-raspberry-pi-lfp-ups-hat.html

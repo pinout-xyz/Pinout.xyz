@@ -3,7 +3,7 @@
 name: AQEX qReCon Flex
 class: board
 type: relay
-formfactor: Custom
+formfactor: HAT
 manufacturer: AQEX
 description: qRecon Flex - Raspberry Pi HAT with Variable & Replaceable Relay Type
 url: https://aqex.eu/qrecon-flex-raspberry-pi-relay-module-with-4-output.html

@@ -70,7 +70,6 @@ pin:
 The **qReCon** is a high-quality 4-channel relay output module designed specifically for Raspberry Pi and other microcomputers. Featuring **premium Schrack relays**, **optical isolation**, and **configurable GPIOs** and **Active High and Active Low control**, it gives you the confidence and reliability your projects deserve. It allows low-voltage logic devices to control high-voltage and high-current external AC/DC loads with maximum safety.
 
 
-
 ## Strategic Advantages
 
 * **Premium Switching Hardware:** High-end Austrian SCHRACK relays ensure long operational lifespan for critical workloads.

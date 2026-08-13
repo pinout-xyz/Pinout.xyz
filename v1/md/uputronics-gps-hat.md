@@ -50,7 +50,7 @@ Adds location and PPS to enable precision time keeping to your Raspberry Pi.
 <br>
 Fitted with a RV-3028-C7 RTC.
 <br>
-USB-C For direct serial connection to a PC Windows/Linux/Mac (Independant of the Raspberry Pi)
+USB-C For direct serial connection to a PC Windows/Linux/Mac (Independent of the Raspberry Pi)
 
 Features: 
 
@@ -61,7 +61,7 @@ Features:
 * Altitude limit 50km in flight mode
 * Robust SMA connector for external antenna
 * Current draw 6mA in cyclic mode up to 18mA in acquire.
-* Seperate RV-3028-C7 RTC
+* Separate RV-3028-C7 RTC
 * RAW Output available from the GPS
 
 Datasheet: <a href="https://cdn.shopify.com/s/files/1/0835/7707/8094/files/Uputronics_Raspberry_Pi_GPS_RTC_Board_Datasheet_9eec2e77-d368-45ee-acc2-be899ff1d0be.pdf?v=1736517155">Raspberry Pi GPS/RTC Expansion Board Datasheet</a>

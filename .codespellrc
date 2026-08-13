@@ -1,0 +1,5 @@
+[codespell]
+# src/ holds translations; only the English source is spell-checked.
+skip = ./.git,*.svg,*.png,*.ai,LICENSE,./output,./__pycache__,./resources/prettify,./src/de,./src/es,./src/fr,./src/it,./src/tr
+# "re-use" is the spelling used throughout; DOUT and TE are signal names.
+ignore-words-list = re-use,dout,te

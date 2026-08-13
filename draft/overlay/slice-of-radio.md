@@ -35,7 +35,7 @@ pin:
 -->
 # Slice of Radio
 
-The Slice of Radio is a two way secure wireless RF transceiver for the Raspberry Pi. Sending and recieving via the standard on board Raspberry Pi serial port, it is very easy to use and means you do not need any drivers or special software.
+The Slice of Radio is a two way secure wireless RF transceiver for the Raspberry Pi. Sending and receiving via the standard on board Raspberry Pi serial port, it is very easy to use and means you do not need any drivers or special software.
 
 It supports 128bit AES encryption and Over The Air Micro Programming from the Arduino IDE (OTAMP).
 

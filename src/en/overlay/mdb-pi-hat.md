@@ -66,7 +66,7 @@ pin:
   '31':
     name: MDB_RES
     mode: input
-    description: MDB Contoller Reset
+    description: MDB Controller Reset
   '33':
     name: IOfromRPi
     mode: input

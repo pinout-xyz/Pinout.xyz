@@ -1,6 +1,6 @@
 # Pinout.xyz
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 [Pinout.xyz](http://pinout.xyz/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
 
@@ -29,7 +29,7 @@ We hope that by making this project open and extensible we will invite not only 
 
 # Reporting Issues & Making Suggestions
 
-If you've spotted an error, ommission or have a suggestion, raise an [issue](https://github.com/pinout-xyz/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
+If you've spotted an error, omission or have a suggestion, raise an [issue](https://github.com/pinout-xyz/Pinout.xyz/issues). Feedback on every aspect of the site or this repository is welcome!
 
 # Contributing
 

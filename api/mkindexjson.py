@@ -51,7 +51,7 @@ def pimoroni_get_shop_handle(slug):
     """Maps a Pinout.xyz slug to a Pimoroni shop handle
     
     This is a customisation for shop.pimoroni.com which probably
-    wont be of use in any other context.
+    will not be of use in any other context.
     """
     pimoroni_shop_handles = {
         'unicorn_hat': 'unicorn-hat'

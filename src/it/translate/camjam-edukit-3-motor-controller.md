@@ -13,6 +13,14 @@ image: 'camjam-edukit-3-motor-controller.png'
 pincount: 26
 eeprom: no
 pin:
+  '8':
+    name: Green LED
+    mode: output
+    active: high
+  '10':
+    name: Red LED
+    mode: output
+    active: high
   '21':
     name: MotorA_0
     mode: output
@@ -31,6 +39,8 @@ pin:
 This motor controller board is part of CamJam EduKit 3 - Robotics but is also [available separately from The Pi Hut](https://thepihut.com/products/camjam-edukit-motor-controller). It provides two motor outputs for 6V motors using a DRV8833 H Bridge and breaks out most of the unused pins to a female header on top of the board.
 
 Pins that are broken out to the header are as follows: 5v, 3v3, SDA and SCL (for I2C devices), 4, 17, 18, 22, 23, 24, 25, 27, and Ground.
+
+Two LEDs are fitted to the top of the board: green on GPIO 14 and red on GPIO 15. Both are off at boot, although the red one may glow dimly since GPIO 15 doubles as the UART receive pin, so disable the serial console before driving them.
 
 The board expects 4 AA batteries to be used to power the board, although it will accept up to 10V if you have more powerful motors available. A flyback diode is provided to protect your board and Raspberry Pi if you should accidentally wire up the power source the wrong way around.
 

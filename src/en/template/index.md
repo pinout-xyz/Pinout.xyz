@@ -11,6 +11,7 @@ We've created Pinouts for the Raspberry Pi Pico range of boards, too, you can fi
 * [Raspberry Pi Pico Pinout](https://pico.pinout.xyz)
 * [Raspberry Pi Pico W Pinout](https://picow.pinout.xyz)
 * [Raspberry Pi Pico 2 Pinout](https://pico2.pinout.xyz)
+* [Raspberry Pi Pico 2 W Pinout](https://pico2w.pinout.xyz)
 
 Plus chip planners for the RP2350A and RP2350B chips:
 

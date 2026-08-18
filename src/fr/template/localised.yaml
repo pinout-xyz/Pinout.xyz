@@ -29,6 +29,8 @@ strings:
 - board_schematic : 'schéma'
 - buy_now: 'achat'
 - browse_addons: 'Voir toutes les cartes disponibles'
+- mirror_pinout: 'Mirror the pinout, as seen from the underside of the board'
+- rotate_pinout: 'Rotate the pinout 180 degrees'
 - return_home: 'Retour à l''accueil'
 - boards_title: "Cartes d'extension pour la Raspberry Pi"
 - boards_subtitle: "Cliquez sur une carte ci-dessous pour en révéler tous les détails!"

@@ -2,6 +2,23 @@
 				<nav id="gpio">
 					{{nav}}
 				</nav>
+				<div id="pinout-view" hidden>
+					<button type="button" class="mirror" aria-pressed="false" title="{{strings:mirror_pinout}}">
+						<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+							<path d="M10 1.5v17" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" />
+							<path d="M7.5 4.5 2 10l5.5 5.5z" fill="currentColor" />
+							<path d="M12.5 4.5 18 10l-5.5 5.5z" fill="none" stroke="currentColor" stroke-width="1.5" />
+						</svg>
+						<span>{{strings:mirror_pinout}}</span>
+					</button>
+					<button type="button" class="rotate" aria-pressed="false" title="{{strings:rotate_pinout}}">
+						<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+							<path d="M16.5 10a6.5 6.5 0 1 1-2.9-5.4" fill="none" stroke="currentColor" stroke-width="1.8" />
+							<path d="M15.2 1.6v4h-4z" fill="currentColor" />
+						</svg>
+						<span>{{strings:rotate_pinout}}</span>
+					</button>
+				</div>
 				<div id="legend">
 					<div>
 						<h2>Legend</h2>

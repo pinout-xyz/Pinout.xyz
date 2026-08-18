@@ -29,6 +29,8 @@ strings:
 - board_schematic : 'Diagrama'
 - buy_now: 'Comprar'
 - browse_addons: 'Explorar más HATs, pHATs y complementos'
+- mirror_pinout: 'Mirror the pinout, as seen from the underside of the board'
+- rotate_pinout: 'Rotate the pinout 180 degrees'
 - return_home: 'Volver al pinout GPIO de Raspberry Pi'
 - boards_title: 'Raspberry Pi HATs, pHATs &amp; Complementos'
 - boards_subtitle: 'Pulsa en un HAT, pHAT o complemento para más detalles de los pines que utiliza'

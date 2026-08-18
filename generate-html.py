@@ -62,6 +62,8 @@ default_strings = {
     'buy_now': 'Buy Now',
     'translate_msg': '<a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
     'browse_addons': 'Browse more HATs, pHATs and add-ons',
+    'mirror_pinout': 'Mirror the pinout, as seen from the underside of the board',
+    'rotate_pinout': 'Rotate the pinout 180 degrees',
     'return_home': 'Return to the Raspberry Pi GPIO Pinout',
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'

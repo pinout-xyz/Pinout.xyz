@@ -107,7 +107,49 @@ main {
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 2px;
-  grid-template-areas: "crumbtrail" "interfaces" "pinout" "content" "legend";
+  grid-template-areas: "crumbtrail" "interfaces" "pinout" "pinout-view" "content" "legend";
+}
+
+/*
+Pinout view controls
+*/
+#pinout-view {
+  grid-area: pinout-view;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 5px 0px 0 0px;
+}
+
+#pinout-view button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  color: #073642;
+  background: #ebe6d3;
+  border: none;
+}
+
+#pinout-view button span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+#pinout-view button:hover {
+  background: #f5f3ed;
+}
+
+#pinout-view button[aria-pressed="true"] {
+  background: #073642;
+  color: #ebe6d3;
 }
 
 /*
@@ -470,9 +512,9 @@ GPIO nav
 
 #gpio ul {
   list-style: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 5px 0;
-  display: grid;
 }
 
 #gpio li {
@@ -528,6 +570,87 @@ GPIO nav
 #gpio .bottom a {
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
+}
+
+#gpio.mirror:not(.rotate) .top, #gpio.rotate:not(.mirror) .top {
+  order: -1;
+  padding-left: 0;
+  padding-right: 1px;
+  background: linear-gradient(270deg, #073642 29px, rgba(0, 0, 0, 0) 29px);
+}
+
+#gpio.mirror:not(.rotate) .top a, #gpio.rotate:not(.mirror) .top a {
+  border-radius: 0;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  text-indent: 8px;
+}
+
+#gpio.mirror:not(.rotate) .top .pin, #gpio.rotate:not(.mirror) .top .pin {
+  left: auto;
+  right: 3px;
+}
+
+#gpio.mirror:not(.rotate) .top .overlay-ground .pin:after, #gpio.rotate:not(.mirror) .top .overlay-ground .pin:after {
+  left: auto;
+  right: -13px;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#gpio.mirror:not(.rotate) .top .overlay-ground a:hover, #gpio.rotate:not(.mirror) .top .overlay-ground a:hover {
+  background: linear-gradient(270deg, #268BD2 28px, #f5f3ed 28px);
+}
+
+#gpio.mirror:not(.rotate) .bottom, #gpio.rotate:not(.mirror) .bottom {
+  padding-left: 1px;
+  padding-right: 0;
+  background: linear-gradient(90deg, #073642 29px, rgba(0, 0, 0, 0) 29px);
+}
+
+#gpio.mirror:not(.rotate) .bottom a, #gpio.rotate:not(.mirror) .bottom a {
+  border-radius: 0;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  text-indent: 36px;
+}
+
+#gpio.mirror:not(.rotate) .bottom .pin, #gpio.rotate:not(.mirror) .bottom .pin {
+  right: auto;
+  left: 3px;
+}
+
+#gpio.mirror:not(.rotate) .bottom .overlay-ground .pin:after, #gpio.rotate:not(.mirror) .bottom .overlay-ground .pin:after {
+  left: 25px;
+  right: auto;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#gpio.mirror:not(.rotate) .bottom .overlay-ground a:hover, #gpio.rotate:not(.mirror) .bottom .overlay-ground a:hover {
+  background: linear-gradient(90deg, #268BD2 28px, #f5f3ed 28px);
+}
+
+#gpio.rotate ul {
+  flex-direction: column-reverse;
+}
+
+#gpio.flipping {
+  animation: pinout-flip .3s linear;
+}
+
+#gpio.flipping a {
+  animation: pinout-flip 0.3s steps(2, jump-none);
+}
+
+#gpio.rotating {
+  animation: pinout-rotate .3s linear;
+}
+
+#gpio.rotating a {
+  animation: pinout-rotate-content 0.3s steps(2, jump-none);
 }
 
 #gpio .gnd a {
@@ -762,6 +885,12 @@ code {
   #gpio .top li {
     text-indent: 56px;
   }
+  #gpio.mirror:not(.rotate) .top li, #gpio.rotate:not(.mirror) .top li {
+    text-indent: 8px;
+  }
+  #gpio.mirror:not(.rotate) .bottom li, #gpio.rotate:not(.mirror) .bottom li {
+    text-indent: 56px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -786,7 +915,7 @@ code {
   #legend {
     grid-template-columns: auto 196px;
   }
-  #legend, #gpio, .board #gpio, #interfaces, #crumbtrail {
+  #legend, #gpio, .board #gpio, #interfaces, #crumbtrail, #pinout-view {
     grid-area: unset;
   }
   header {
@@ -873,6 +1002,17 @@ code {
   #gpio {
     background: rgba(95, 134, 69, 0.5);
   }
+  #pinout-view button {
+    color: #ebe6d3;
+    background: #002B36;
+  }
+  #pinout-view button:hover {
+    background: #073642;
+  }
+  #pinout-view button[aria-pressed="true"] {
+    color: #002B36;
+    background: #ebe6d3;
+  }
   #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
     color: #fff;
   }
@@ -896,5 +1036,39 @@ code {
   .facets .facet:nth-of-type(1) li:hover {
     color: #268BD2;
     background: #b8daf2;
+  }
+}
+
+@keyframes pinout-flip {
+  from {
+    transform: scaleX(-1);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes pinout-rotate {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes pinout-rotate-content {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #gpio.flipping, #gpio.flipping a,
+#gpio.rotating, #gpio.rotating a {
+    animation: none;
   }
 }

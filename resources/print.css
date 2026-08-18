@@ -1,37 +1,56 @@
-#content,
-nav#gpio,
-div#pinbasebplus,
-div#pinbase {background:transparent;}
-#article {padding:0px;}
-
-.main-nav, .overlay-container, .logo img, #sections, #lang, nav#gpio:before, nav#gpio:after {display:none;}
-
-ul.bottom a {
-	color:#000000;
+@page {
+	margin: 15mm;
 }
 
-.logo, .logo a, .logo span.out, .logo span {
-	color:#000000;
+#interfaces,
+#featured,
+#legend,
+#pinout-view,
+#crumbtrail a.more,
+.logo img,
+footer {
+	display: none !important;
 }
 
-nav#gpio li.overlay-pin a,
-nav#gpio ul.bottom li.overlay-pin a,
-nav#gpio li.active a,
-table th{
-	background:transparent;
+*,
+*::before,
+*::after {
+	background: transparent !important;
+	color: #000000 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
 }
 
-* {color:#000000 !important;}
-
-ul.top a *, ul.bottom a * {
-	color:#999999 !important;
+a {
+	text-decoration: none;
 }
 
-nav#gpio li.overlay-pin a *,
-nav#gpio ul.bottom li.overlay-pin a *,
-nav#gpio li.active * {
-	color:#000000 !important;
-	font-weight:bold;
+aside {
+	break-inside: avoid;
 }
 
-.prettyprint.linenums, .prettyprint {box-shadow:none;-webkit-box-shadow:none;background:transparent;}
+nav#gpio a {
+	font-size: 0.75em;
+}
+
+nav#gpio .pin {
+	border: 1px solid #000000;
+	box-sizing: border-box;
+}
+
+nav#gpio .overlay-pin a,
+nav#gpio .overlay-power a,
+nav#gpio .overlay-ground a {
+	font-weight: bold;
+}
+
+nav#gpio .overlay-pin .pin,
+nav#gpio .overlay-power .pin,
+nav#gpio .overlay-ground .pin {
+	border-width: 2px;
+}
+
+.prettyprint,
+.prettyprint.linenums {
+	border: 1px solid #000000;
+}

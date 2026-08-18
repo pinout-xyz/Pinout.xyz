@@ -1,5 +1,25 @@
 jQuery(document).ready(function(){
 
+	$('#pinout-view').removeAttr('hidden');
+
+	$('#gpio').on('animationend', function(event){
+		if (event.target === this) {
+			$(this).removeClass('flipping rotating');
+		}
+	});
+
+	$('#pinout-view button').on('click', function(){
+		var view = $(this).hasClass('mirror') ? 'mirror' : 'rotate';
+		var pressed = !$('#gpio').hasClass(view);
+		var gpio = $('#gpio');
+
+		gpio.toggleClass(view, pressed).removeClass('flipping rotating');
+		gpio[0].offsetWidth;
+		gpio.addClass(view === 'mirror' ? 'flipping' : 'rotating');
+
+		$(this).attr('aria-pressed', pressed);
+	});
+
 	$('pre').addClass('prettyprint').addClass('linenums');
 
 	window.prettyPrint&&prettyPrint();

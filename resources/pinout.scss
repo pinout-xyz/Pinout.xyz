@@ -105,8 +105,52 @@ main {
         "crumbtrail"
         "interfaces"
         "pinout"
+        "pinout-view"
         "content"
         "legend";
+}
+
+/*
+Pinout view controls
+*/
+
+#pinout-view {
+    grid-area: pinout-view;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 5px 0px 0 0px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        cursor: pointer;
+        color: $color-dark;
+        background: $overlay-pin-bg;
+        border: none;
+
+        span {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+        }
+
+        &:hover {
+            background: $overlay-pin-bg-hover;
+        }
+
+        &[aria-pressed="true"] {
+            background: $color-dark;
+            color: $overlay-pin-bg;
+        }
+    }
 }
 
 /*
@@ -457,9 +501,9 @@ GPIO nav
 
     ul {
         list-style: none;
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 5px 0;
-        display: grid;
     }
 
     li {
@@ -514,6 +558,89 @@ GPIO nav
         a {
             border-top-right-radius: 13px;
             border-bottom-right-radius: 13px;
+        }
+    }
+
+    &.mirror:not(.rotate) .top,
+    &.rotate:not(.mirror) .top {
+        order: -1;
+        padding-left: 0;
+        padding-right: 1px;
+        background: linear-gradient(270deg, rgba(7, 54, 66, 1) 29px, rgba(0, 0, 0, 0) 29px);
+
+        a {
+            border-radius: 0;
+            border-top-right-radius: 13px;
+            border-bottom-right-radius: 13px;
+            text-indent: 8px;
+        }
+
+        .pin {
+            left: auto;
+            right: 3px;
+        }
+
+        .overlay-ground .pin:after {
+            left: auto;
+            right: -13px;
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .overlay-ground a:hover {
+            background: linear-gradient(270deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
+        }
+    }
+
+    &.mirror:not(.rotate) .bottom,
+    &.rotate:not(.mirror) .bottom {
+        padding-left: 1px;
+        padding-right: 0;
+        background: linear-gradient(90deg, rgba(7, 54, 66, 1) 29px, rgba(0, 0, 0, 0) 29px);
+
+        a {
+            border-radius: 0;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            text-indent: 36px;
+        }
+
+        .pin {
+            right: auto;
+            left: 3px;
+        }
+
+        .overlay-ground .pin:after {
+            left: 25px;
+            right: auto;
+            border-radius: 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .overlay-ground a:hover {
+            background: linear-gradient(90deg, #268BD2 28px, $overlay-pin-bg-hover 28px);
+        }
+    }
+
+    &.rotate ul {
+        flex-direction: column-reverse;
+    }
+
+    &.flipping {
+        animation: pinout-flip .3s linear;
+
+        a {
+            animation: pinout-flip .3s steps(2, jump-none);
+        }
+    }
+
+    &.rotating {
+        animation: pinout-rotate .3s linear;
+
+        a {
+            animation: pinout-rotate-content .3s steps(2, jump-none);
         }
     }
 
@@ -698,6 +825,11 @@ code {
         .top li {
             text-indent:56px;
         }
+
+        &.mirror:not(.rotate), &.rotate:not(.mirror) {
+            .top li {text-indent: 8px;}
+            .bottom li {text-indent: 56px;}
+        }
     }
 }
 
@@ -726,7 +858,7 @@ code {
         grid-template-columns: auto 196px;
     }
 
-    #legend, #gpio, .board #gpio, #interfaces, #crumbtrail {
+    #legend, #gpio, .board #gpio, #interfaces, #crumbtrail, #pinout-view {
         grid-area: unset;
     }
     header {
@@ -823,6 +955,19 @@ code {
     #gpio {
         background: rgba(95, 134, 69, 0.5);
     }
+    #pinout-view button {
+        color: $overlay-pin-bg;
+        background: #002B36;
+
+        &:hover {
+            background: #073642;
+        }
+
+        &[aria-pressed="true"] {
+            color: #002B36;
+            background: $overlay-pin-bg;
+        }
+    }
     #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
         color: #fff;
     }
@@ -851,5 +996,27 @@ code {
             color: $color-blue;
             background: lighten($color-blue, 35);
         }
+    }
+}
+
+@keyframes pinout-flip {
+    from {transform: scaleX(-1);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate {
+    from {transform: rotate(180deg);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate-content {
+    from {transform: rotate(-180deg);}
+    to {transform: none;}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #gpio.flipping, #gpio.flipping a,
+    #gpio.rotating, #gpio.rotating a {
+        animation: none;
     }
 }

@@ -8,91 +8,91 @@ url: http://elinux.org/RPi_Serial_Connection
 pincount: 18
 pin:
   '8':
-    name: UART0/1 TXD
+    name: UART0 TXD
     direction: output
     active: high
   '10':
-    name: UART0/1 RXD
+    name: UART0 RXD
     direction: input
     active: high
   '36':
-    name: UART0/1 CTS
+    name: UART0 CTS
     direction: both
     active: high
   '11':
-    name: UART0/1 RTS
+    name: UART0 RTS
     direction: both
     active: high
   '27':
     name: UART2 TXD
     direction: output
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '28':
     name: UART2 RXD
     direction: input
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '3':
     name: UART2 CTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '5':
     name: UART2 RTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '7':
     name: UART3 TXD
     direction: output
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '29':
     name: UART3 RXD
     direction: input
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '31':
     name: UART3 CTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '26':
     name: UART3 RTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '24':
     name: UART4 TXD
     direction: output
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '21':
     name: UART4 RXD
     direction: input
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '19':
     name: UART4 CTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '23':
     name: UART4 RTS
     direction: both
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '32':
     name: UART5 TXD
     direction: output
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART5) and Pi 5 (UART4)
   '33':
     name: UART5 RXD
     direction: input
     active: high
-    supported: Pi4
+    supported: Pi 4 (UART5) and Pi 5 (UART4)
 -->
 # UART - Universal Asynchronous Receiver/Transmitter
 
@@ -112,7 +112,16 @@ UART is commonly used on the Pi as a convenient way to control it over the GPIO,
 
 It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
 
-Raspberry Pi 2/3 have two UARTs, uart1 and uart0. Raspberry Pi 4 has four additional UARTs available. Only uart0/1 is enabled over GPIO pin 14/15 by default. The additional UARTs can be enabled through the device tree overlays.
+Only uart0, on GPIO 14 and GPIO 15, is enabled by default. On Pi 4 and earlier the mini UART (uart1) shares those pins with uart0 and becomes `/dev/serial0` if the Bluetooth module claims the full UART.
+
+Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins, but different numbering:
+
+* uart2 on Pi 4, uart1 on Pi 5: TXD on GPIO 0, RXD on GPIO 1, CTS on GPIO 2, RTS on GPIO 3
+* uart3 on Pi 4, uart2 on Pi 5: TXD on GPIO 4, RXD on GPIO 5, CTS on GPIO 6, RTS on GPIO 7
+* uart4 on Pi 4, uart3 on Pi 5: TXD on GPIO 8, RXD on GPIO 9, CTS on GPIO 10, RTS on GPIO 11
+* uart5 on Pi 4, uart4 on Pi 5: TXD on GPIO 12, RXD on GPIO 13, CTS on GPIO 14, RTS on GPIO 15
+
+These are enabled with a device tree overlay - `dtoverlay=uart2` on Pi 4, `dtoverlay=uart1-pi5` on Pi 5 - and the CTS/RTS pins are enabled with an additional `ctsrts` parameter.
 
 ## Using a UART from WiringPi
 

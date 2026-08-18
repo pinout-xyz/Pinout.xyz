@@ -52,7 +52,7 @@ default_strings = {
     'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
     'bcm_pin_rev1_pi': 'GPIO/BCM pin {} on Rev 1 ( very early ) Pi',
-    'supported_on': 'Supported on {} only',
+    'supported_on': 'Supported on {}',
     'physical_pin_n': 'Physical/Board pin {}',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',

@@ -1,11 +1,11 @@
 <!--
 ---
-name: uBLOX ZED-X20P Expansion Board for Raspberry Pi 
+name: uBLOX ZED-X20P Expansion Board for Raspberry Pi
 class: board
 type: gps
 formfactor: HAT
 manufacturer: Uputronics
-description: All band GPS reciever for Raspberry Pi
+description: All band GPS receiver for Raspberry Pi
 url: https://store.uputronics.com
 buy: https://store.uputronics.com/products/ublox-zed-x20p-expansion-for-raspberry-pi
 image: 'uputronics-zed-x20p-hat.png'
@@ -29,9 +29,9 @@ pin:
   '5':
     mode: i2c
   '8':
-    mode: UART
+    mode: uart
   '10':
-    mode: UART
+    mode: uart
   '12':
     name: PPS
   '16':

@@ -5,7 +5,7 @@ class: board
 type: audio
 formfactor: HAT
 manufacturer: Audio Injector
-description: A soundcard with stereo input and output, phones amplifier and electret microhpone input.
+description: A soundcard with stereo input and output, phones amplifier and electret microphone input.
 url: https://www.audioinjector.net/rpi-hat
 github: https://github.com/Audio-Injector/stereo-and-zero
 buy: https://shop.audioinjector.net/detail/Sound_Cards/Original+Pi+Sound+Card
@@ -60,4 +60,4 @@ A sound card with full functionality
 
 ## Its yours !
 
-The stereo soundcard includes hardware to facilitate stereo audio capture and playback, headphone playback and electret microphone capture. It is fully populated with RCA audio connectors and the microphone. There are potentiometers to trim audio input and output levels. Headphone trimming is dont using the audio level in the alsa mixer. The top of the board has male pins sticking up allowing you to stack other hats (This image shows the male pins with their plastic shipping protector mounted).
+The stereo soundcard includes hardware to facilitate stereo audio capture and playback, headphone playback and electret microphone capture. It is fully populated with RCA audio connectors and the microphone. There are potentiometers to trim audio input and output levels. Headphone trimming is done using the audio level in the alsa mixer. The top of the board has male pins sticking up allowing you to stack other hats (This image shows the male pins with their plastic shipping protector mounted).

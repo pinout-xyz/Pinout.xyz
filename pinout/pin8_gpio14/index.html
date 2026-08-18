@@ -6,11 +6,11 @@
 		<meta name="description" content="The comprehensive add-on boards & GPIO Pinout guide for the Raspberry Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.scss.css?v=20260818T220347" rel="stylesheet">
+		<link href="/resources/pinout.scss.css?v=20260818T221027" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260818T220347"/>
-		<!-- Build: 20260818T220347 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260818T221027"/>
+		<!-- Build: 20260818T221027 -->
 		
 	</head>
 	<body class="pin">
@@ -149,12 +149,14 @@
                 <td>UART0 TXD</td><td>SMI SD6</td><td>DSI D10</td><td>AVEOUT VID10</td><td>AVEIN VID10</td><td>UART1 TXD</td>
             </tr>
         </tbody>
-        </table><ul><li>Physical/Board pin 8</li><li>GPIO/BCM pin 14</li><li>Wiring Pi pin 15</li></ul><p>This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.</p>
-<p>The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.</p>
-<p>UART can be used to talk to Serial GPS modules or sensors such as the PM5003, but you must make sure you disable the Serial Console in raspi-config first.</p>
-<p>On the Pi 3 and 4 the UART is, by default, used for Bluetooth and you may need to add "dtoverlay=miniuart-bt" to "/boot/firmware/config.txt" to achieve a stable.</p>
+        </table><ul><li>Physical/Board pin 8</li><li>GPIO/BCM pin 14</li><li>Wiring Pi pin 15</li></ul><p>This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, with a <a href="https://elinux.org/RPi_Serial_Connection">suitable serial cable</a> and the serial port enabled in raspi-config, gives you a console you can use to control your Pi from the command line.</p>
+<p>The UART pins can be useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.</p>
+<p>UART can also be used to talk to serial GPS modules or sensors such as the PMS5003, but you must disable the serial console in raspi-config first.</p>
+<p>On the Pi 3, Pi 4, Pi Zero W and Pi Zero 2 W, Bluetooth has the full hardware UART and these pins are wired to the mini UART, whose baud rate follows the VPU core clock. Adding "enable_uart=1" to "/boot/firmware/config.txt" pins that clock, and "dtoverlay=miniuart-bt" swaps the two over so that these pins get the full UART, at the cost of a lower Bluetooth baud rate.</p>
+<p>The Pi 5 has no mini UART. These pins carry a full PL011 UART, enabled with "dtoverlay=uart0-pi5", and the serial console lives on the dedicated three-pin debug header instead.</p>
+<p>All UARTs are 3.3v only and damage will occur if they are connected to 5v systems.</p>
 <p><a href="/pinout/uart">Learn more about UART</a></p>
-<p><a href="https://www.raspberrypi.org/documentation/configuration/uart.md">Raspberry Pi UART documentation</a></p></article>
+<p><a href="https://www.raspberrypi.com/documentation/computers/configuration.html#uarts">Raspberry Pi UART documentation</a></p></article>
 			</section>
 
 		</main>
@@ -165,7 +167,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260818T220347'></script>
+		<script src='/resources/pinout.js?v=20260818T221027'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

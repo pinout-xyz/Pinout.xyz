@@ -1,11 +1,15 @@
-This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, by default, will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
+This pin doubles up as the UART transmit pin, TX. It's also commonly known as "Serial" and, with a [suitable serial cable](https://elinux.org/RPi_Serial_Connection) and the serial port enabled in raspi-config, gives you a console you can use to control your Pi from the command line.
 
-The UART pins are useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.
+The UART pins can be useful for setting up a "headless" Pi (a Pi without a screen) and getting it connected to a network.
 
-UART can be used to talk to Serial GPS modules or sensors such as the PM5003, but you must make sure you disable the Serial Console in raspi-config first.
+UART can also be used to talk to serial GPS modules or sensors such as the PMS5003, but you must disable the serial console in raspi-config first.
 
-On the Pi 3 and 4 the UART is, by default, used for Bluetooth and you may need to add "dtoverlay=miniuart-bt" to "/boot/firmware/config.txt" to achieve a stable.
+On the Pi 3, Pi 4, Pi Zero W and Pi Zero 2 W, Bluetooth has the full hardware UART and these pins are wired to the mini UART, whose baud rate follows the VPU core clock. Adding "enable_uart=1" to "/boot/firmware/config.txt" pins that clock, and "dtoverlay=miniuart-bt" swaps the two over so that these pins get the full UART, at the cost of a lower Bluetooth baud rate.
+
+The Pi 5 has no mini UART. These pins carry a full PL011 UART, enabled with "dtoverlay=uart0-pi5", and the serial console lives on the dedicated three-pin debug header instead.
+
+All UARTs are 3.3v only and damage will occur if they are connected to 5v systems.
 
 [Learn more about UART](/pinout/uart)
 
-[Raspberry Pi UART documentation](https://www.raspberrypi.org/documentation/configuration/uart.md)
+[Raspberry Pi UART documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#uarts)

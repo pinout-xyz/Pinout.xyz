@@ -44,7 +44,7 @@ Once your draft has been made, before filing a pull request, you should try to r
 make serve LANG=en
 ```
 
-And then open: http://127.0.0.1:5000 in your browser.
+And then open: http://127.0.0.1:8080 in your browser.
 
 Once you are happy with the result, 
 
@@ -72,15 +72,21 @@ docker build -t pinout.xyz .
 Next, you can start the containerized webserver:
 
 ```bash
-docker run -p 5000:5000 -e PINOUT_LANG=en pinout.xyz
+docker run -p 8080:8080 pinout.xyz
 ```
 
-Now you can access the webserver at http://127.0.0.1:5000.
+Now you can access the webserver at http://127.0.0.1:8080.
 
-Optionally you can include a draft board in the containerized webserver by setting the `PUBLISH_DRAFT` build argument:
+Set `PINOUT_LANG` to serve a language other than English:
 
 ```bash
-docker run -p 5000:5000 -e PINOUT_LANG=en --build-arg PUBLISH_DRAFT=myboard pinout.xyz
+docker run -p 8080:8080 -e PINOUT_LANG=de pinout.xyz
+```
+
+Optionally you can include a draft board in the image by setting the `PUBLISH_DRAFT` build argument:
+
+```bash
+docker build --build-arg PUBLISH_DRAFT=myboard -t pinout.xyz .
 ```
 
 # Translating
@@ -99,7 +105,7 @@ Once you've made your translation, you can build and preview it with, for exampl
 make serve LANG=de
 ```
 
-And then open: http://127.0.0.1:5000 in your browser.
+And then open: http://127.0.0.1:8080 in your browser.
 
 The last step will be to submit your finished translation as a [pull request](https://github.com/pinout-xyz/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
 

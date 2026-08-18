@@ -1,14 +1,19 @@
-FROM python:3.12.3-slim
+FROM python:slim
 
 ARG PUBLISH_DRAFT=''
 
-COPY . ./
+WORKDIR /app
+
+COPY . .
 
 RUN apt-get update && \
-	apt-get install -y make
+	apt-get install -y make g++ && \
+	rm -rf /var/lib/apt/lists/*
 
 RUN pip install -r requirements.txt
 
-RUN test -n ${PUBLISH_DRAFT} && ./draft/publish.sh ${PUBLISH_DRAFT}
+RUN if [ -n "${PUBLISH_DRAFT}" ]; then ./draft/publish.sh "${PUBLISH_DRAFT}"; fi
 
-CMD ["bash", "-c", "make serve LANG=en"]
+EXPOSE 8080
+
+CMD ["sh", "-c", "make serve LANG=${PINOUT_LANG:-en}"]

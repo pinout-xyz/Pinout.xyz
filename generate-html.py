@@ -623,7 +623,7 @@ for overlay in overlays:
 
     if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
         featured_boards_count += 1
-        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img loading=\"lazy\"" alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img loading=\"lazy\" alt="" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
             image=overlay['image'],
             name=overlay['name'],
             page_url=overlay['page_url'],
@@ -703,7 +703,7 @@ for overlay in overlays:
 
             boards_page.append({
                 'name': overlay['name'],
-                'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img loading=\"lazy\" src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img loading=\"lazy\" alt="" src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],

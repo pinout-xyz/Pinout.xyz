@@ -1,4 +1,5 @@
 import os
+import unicodedata
 
 from . import documents, overlays, settings
 
@@ -13,6 +14,11 @@ def frontmatter(path):
 def body(path):
     text = open(path, encoding='utf-8', errors='replace').read().replace('\r\n', '\n')
     return documents.FRONTMATTER.sub('', text).strip()
+
+
+def pad(value, width):
+    wide = sum(1 for character in value if unicodedata.east_asian_width(character) in 'WF')
+    return value + ' ' * max(0, width - len(value) - wide)
 
 
 def check_source(path, data):
@@ -126,14 +132,15 @@ def report_list(root, languages):
     names = settings.language_names(root)
     total = len(source)
 
-    print('{:6} {:12} {:>12} {:>12} {:>10}'.format('code', 'language', 'translated', 'text only', 'English'))
+    print('{} {} {:>12} {:>12} {:>10}'.format(
+        pad('code', 6), pad('language', 12), 'translated', 'text only', 'English'))
 
     for lang in languages:
         if lang == SOURCE:
             continue
         translated, partial, absent = coverage(root, lang, source)
-        print('{:6} {:12} {:>12} {:>12} {:>10}'.format(
-            lang, names.get(lang, (lang, lang))[0],
+        print('{} {} {:>12} {:>12} {:>10}'.format(
+            pad(lang, 6), pad(names.get(lang, (lang, lang))[0], 12),
             '{}/{}'.format(len(translated), total), len(partial), len(absent)))
 
     print('\ntext only overrides just a name, description or pin label; English pages fall back to src/en')

@@ -18,14 +18,12 @@ Los pines de General Purpose Clock pueden programarse a una frequencia fija, sin
 
 Están disponibles los siguientes:
 
-```
-0     0 Hz     Tierra
-1     19.2 MHz Oscilador
-2     0 Hz     testdebug0
-3     0 Hz     testdebug1
-4     0 Hz     PLLA
-5     1000 MHz PLLC (cambia con overclock)
-6     500 MHz  PLLD
-7     216 MHz  HDMI auxiliar
-8-15  0 Hz     Tierra
-```
+* 0 - Tierra, 0 Hz
+* 1 - Oscilador de 19.2 MHz
+* 2 - testdebug0, 0 Hz
+* 3 - testdebug1, 0 Hz
+* 4 - PLLA, 0 Hz
+* 5 - PLLC, 1000 MHz, cambia con overclock
+* 6 - PLLD, 500 MHz
+* 7 - HDMI auxiliar, 216 MHz
+* 8 a 15 - Tierra, 0 Hz

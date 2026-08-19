@@ -17,13 +17,7 @@ Para habilitar la interaz one-wire necesitas añadir la siguiente línea a /boot
 dtoverlay=w1-gpio
 ```
 
-También puedes habilitar la interfaz sobre la marcha, cuando sea necesario:
-
-```
-sudo modprobe w1-gpio
-```
-
-Tras realizar una de las dos acciones anteriores, puedes enumerar los dispositivos conectados al BCM4 de tu Raspberry Pi (por defecto) con:
+Tras habilitar la interfaz, puedes enumerar los dispositivos conectados al BCM4 de tu Raspberry Pi (por defecto) con:
 
 ```
 ls /sys/bus/w1/devices/

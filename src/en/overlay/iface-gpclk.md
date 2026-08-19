@@ -18,16 +18,14 @@ General Purpose Clock pins can be set up to output a fixed frequency without any
 
 The following clock sources are available:
 
-```
-0     0 Hz     Ground
-1     19.2 MHz oscillator
-2     0 Hz     testdebug0
-3     0 Hz     testdebug1
-4     0 Hz     PLLA
-5     1000 MHz PLLC (changes with overclock settings)
-6     500 MHz  PLLD
-7     216 MHz  HDMI auxiliary
-8-15  0 Hz     Ground
-```
+* 0 - Ground, 0 Hz
+* 1 - 19.2 MHz oscillator
+* 2 - testdebug0, 0 Hz
+* 3 - testdebug1, 0 Hz
+* 4 - PLLA, 0 Hz
+* 5 - PLLC, 1000 MHz, changes with overclock settings
+* 6 - PLLD, 500 MHz
+* 7 - HDMI auxiliary, 216 MHz
+* 8 to 15 - Ground, 0 Hz
 
 Other frequencies can be achieved by setting a clock-divider in the form of `SOURCE/(DIV_I + DIV_F/4096)`. Note, that the [BCM2835 ARM Peripherals](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf) document contains an error and states that the denominator of the divider is 1024 instead of 4096.

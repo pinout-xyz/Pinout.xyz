@@ -37,18 +37,3 @@ sudo apt-get install i2c-tools
 sudo i2cdetect -y 1
 ```
 
-Puoi accedere ad i2c da Python usando la libreria smbus:
-
-```bash
-sudo apt-get install python-smbus
-```
-
-E poi sempre in Python:
-
-```python
-import smbus
-DEVICE_BUS = 1
-DEVICE_ADDR = 0x15
-bus = smbus.SMBus(DEVICE_BUS)
-bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
-```

@@ -35,18 +35,3 @@ Puedes verificar la dirección de los dispositivos I2C conectados con este simpl
 sudo apt-get install i2c-tools
 sudo i2cdetect -y 1
 ```
-Puedes acceder al bus i2c desde Python usando la librería smbus:
-
-```bash
-sudo apt-get install python-smbus
-```
-
-Y entonces en Python:
-
-```python
-import smbus
-DEVICE_BUS = 1
-DEVICE_ADDR = 0x15
-bus = smbus.SMBus(DEVICE_BUS)
-bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
-```

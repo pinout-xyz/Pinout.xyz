@@ -101,28 +101,15 @@ The I2C pins include a fixed 1.8 kΩ pull-up resistor to 3.3v. They are not sui
 
 I2C is a multi-drop bus, multiple devices can be connected to these same two pins. Each device has its own unique I2C address.
 
-You can verify the address of connected I2C peripherals with a simple one-liner:
+I2C is turned off on a stock Raspberry Pi OS image. Enable it with `raspi-config`, or by adding `dtparam=i2c_arm=on` to `/boot/firmware/config.txt`.
 
-```bash
-sudo apt-get install i2c-tools
-sudo i2cdetect -y 1
-```
-
-You can then access I2C from Python using the smbus library:
-
-```python
-import smbus
-DEVICE_BUS = 1
-DEVICE_ADDR = 0x15
-bus = smbus.SMBus(DEVICE_BUS)
-bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
-```
+Once it's on, `i2cdetect -y 1` from the `i2c-tools` package lists the addresses responding on the bus.
 
 GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typically used by the system to read the HAT EEPROM.
 
 ## More than one bus
 
-Only i2c1 is enabled by default. Pi 4 and Pi 5 both have several more buses, and most of the low-numbered GPIO pins can carry one, but the numbering differs between the two models:
+i2c1 is the only bus available without an overlay. Pi 4 and Pi 5 both have several more, each on a pair of low-numbered GPIO pins, but the numbering differs between the two models:
 
 * GPIO 0 and GPIO 1: i2c0 on both, or i2c6 on Pi 4. Usually left alone for the HAT EEPROM.
 * GPIO 2 and GPIO 3: i2c1 on both, or i2c3 on Pi 4.

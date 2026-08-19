@@ -38,7 +38,7 @@ Pinout has teamed up with Pimoroni to create a [prototype board compatibility to
 * GPIO - General Purpose Input/Output, aka "BCM" or "Broadcom". These are the big numbers, e.g. "GPIO 22". You'll use these with RPi.GPIO and GPIO Zero.
 * Physical - or "Board" correspond to the pin's physical location on the header. These are the small numbers next to the header, e.g. "Physical Pin 15".
 * WiringPi - for Gordon Henderson's Wiring Pi library. These are shown as a tooltip when you mouseover a pin.
-* Rev 1 Pi - alternate GPIO/BCM numbers for the original, 26-pin model "A" and "B" Pi.
+* Rev 1 Pi - alternate GPIO/BCM numbers for the original, 26-pin model "A" and "B" Pi. The 40-pin header is a superset of that 26-pin one: pins 1 to 26 carry the same signals, so a 26-pin board or wiring diagram still applies.
 
 ## What's the orientation of this pinout?
 

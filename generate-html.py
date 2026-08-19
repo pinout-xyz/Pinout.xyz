@@ -664,14 +664,14 @@ for overlay in overlays:
             if t_handle in allowed_types:
                 return allowed_types[t_handle]
 
-            for remap_src, remap_target in remapped_types.iteritems():
+            for remap_src, remap_target in remapped_types.items():
                 if t_handle == remap_src:
                     return allowed_types[remap_target]
 
             print("Rejecting unsupported type: {} in overlay: {}".format(t, overlay['name']))
             return None
 
-        o_types = [sanitize_type(t) for t in o_type.split(',') if sanitize_type(t) is not None]
+        o_types = [t for t in map(sanitize_type, o_type.split(',')) if t is not None]
 
         if len(o_types) > 1 and 'Multi' not in o_types:
             o_types.append('Multi')

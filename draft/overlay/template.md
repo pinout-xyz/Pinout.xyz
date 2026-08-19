@@ -53,12 +53,12 @@ MANDATORY
 * manufacturer: the manufacturer's name.
 * description: a description of what the add-on board provides.
 * url: the main URL for the product providing detailed technical information about the board.
-* pin: an array of the pins used. Do not specify power or EEPROM pins as part of the array!
+* pin: an array of the pins used. Do not specify power or EEPROM pins as part of the array! The exception is an EEPROM write-protect pin, which takes 'mode: EEPROM_WP' and is labelled 'EEPROM WP'.
 
 DESIRABLE
 * pincount: the header pin count, typically 26 or 40 but shims/custom boards are acceptable.
 * eeprom: whether the board includes an eeprom (required by 'HAT' specs!).
-* power: the supply logic required by the board. Valid values are 'external', '3v3', '5v' and '3v3,5v'.
+* power: the header pins the board draws power from, listed like the pin array. Pins 2 and 4 are read as 5v, pins 1 and 17 as 3v3. Boards which supply power to the Pi should list the pins they feed.
 * i2c: if the board uses i2c, a list of the bus address(es) and device(s) identification.
 
 OPTIONAL

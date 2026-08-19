@@ -50,6 +50,23 @@
 
 ul, li, a, body, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;text-decoration:none;}
 
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 1;
+    padding: 10px 14px;
+    color: var(--overlay-pin-fg);
+    background: var(--overlay-pin-bg);
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+section:focus {
+    outline: none;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;

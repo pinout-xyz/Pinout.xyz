@@ -58,6 +58,7 @@ default_strings = {
     'gpio_header': 'GPIO header',
     'pins_odd': 'Odd-numbered pins',
     'pins_even': 'Even-numbered pins',
+    'skip_to_content': 'Skip to content',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',

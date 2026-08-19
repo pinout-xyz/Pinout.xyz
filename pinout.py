@@ -9,12 +9,14 @@ except ImportError:
 
 BUILD_ID = datetime.datetime.now().isoformat().replace(":","").replace("-", "").split(".")[0]
 PINOUT_FILE = 'pinout.yaml'
+FUNCTIONS_FILE = 'common/pin-functions.yaml'
 SETTINGS_FILE = 'settings.yaml'
 STRINGS_FILE = 'localised.yaml'
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 pins = None
+pin_functions = None
 settings = None
 
 master_template = open(os.path.join(BASE_DIR, 'common/layout.html')).read()
@@ -110,7 +112,7 @@ def physical_to(pin, scheme='bcm'):
 
 
 def load(lang='en'):
-    global pins, settings, strings
+    global pins, pin_functions, settings, strings
 
     settings_path = os.path.join(BASE_DIR, 'src/{}/{}'.format(lang, SETTINGS_FILE))
     strings_path = os.path.join(BASE_DIR, 'src/{}/template/{}'.format(lang, STRINGS_FILE))
@@ -134,5 +136,7 @@ def load(lang='en'):
     site_url = get_setting('site_url') or ''
     settings['site_url'] = site_url
     settings['base_url'] = site_url + get_setting('base_url', '/pinout/')
+
+    pin_functions = yaml.safe_load(open(os.path.join(BASE_DIR, FUNCTIONS_FILE)).read())
 
     pins = pinout['pins']

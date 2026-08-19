@@ -29,6 +29,7 @@ strings:
 - board_schematic : 'Diagrama'
 - buy_now: 'Comprar'
 - browse_addons: 'Explorar más HATs, pHATs y complementos'
+- pin_functions: 'Alternate functions by model'
 - mirror_pinout: 'Mirror the pinout, as seen from the underside of the board'
 - rotate_pinout: 'Rotate the pinout 180 degrees'
 - return_home: 'Volver al pinout GPIO de Raspberry Pi'

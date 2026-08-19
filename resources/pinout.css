@@ -116,7 +116,50 @@ table {
     &.pin-functions {
         width:100%;
 
-        td {width:16.6666%;}
+        td, th {white-space: nowrap;}
+    }
+}
+
+.pin-function-tabs {
+    margin: 1em 0;
+
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        border-bottom: 3px solid var(--color-dark);
+
+        button {
+            font: inherit;
+            font-size: .8em;
+            padding: 4px 10px;
+            border: none;
+            cursor: pointer;
+            color: var(--color-dark);
+            background: var(--overlay-pin-bg);
+
+            &:hover {
+                background: var(--overlay-pin-bg-hover);
+            }
+
+            &[aria-selected="true"] {
+                color: var(--overlay-pin-bg);
+                background: var(--color-dark);
+            }
+        }
+    }
+
+    .functions-panel {
+        overflow-x: auto;
+        margin-top: 6px;
+    }
+
+    table.pin-functions {
+        margin: 0;
+    }
+
+    &.tabbed caption {
+        display: none;
     }
 }
 
@@ -1025,6 +1068,23 @@ code {
         article {
             .pin-hover {color:#CC0000;}
             .pin-hover:hover {color:#EE0000;}
+        }
+    }
+    .pin-function-tabs .tabs {
+        border-bottom-color: var(--overlay-pin-bg);
+
+        button {
+            color: var(--overlay-pin-bg);
+            background: #073642;
+
+            &:hover {
+                background: #0a4657;
+            }
+
+            &[aria-selected="true"] {
+                color: #002B36;
+                background: var(--overlay-pin-bg);
+            }
         }
     }
     #crumbtrail {

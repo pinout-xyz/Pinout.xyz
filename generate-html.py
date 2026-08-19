@@ -56,6 +56,7 @@ default_strings = {
     'translate_msg': '<a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
     'browse_addons': 'Browse more HATs, pHATs and add-ons',
     'mirror_pinout': 'Mirror the pinout, as seen from the underside of the board',
+    'pin_functions': 'Alternate functions by model',
     'rotate_pinout': 'Rotate the pinout 180 degrees',
     'return_home': 'Return to the Raspberry Pi GPIO Pinout',
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
@@ -353,31 +354,7 @@ def render_pin_page(pin_num):
     if 'description' in pin:
         pin_text_name = '{} ({})'.format(pin_text_name, pin['description'])
 
-    fn_headings = []
-    fn_functions = []
-    pin_functions = ''
-    if 'functions' in pin:
-        for x in range(6):
-            fn_headings.append('Alt' + str(x))
-
-            function = ''
-            if 'alt' + str(x) in pin['functions']:
-                function = pin['functions']['alt' + str(x)]
-
-            fn_functions.append(function)
-
-        pin_functions = '''<table class="pin-functions">
-        <thead>
-            <tr>
-                <th>{headings}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{functions}</td>
-            </tr>
-        </tbody>
-        </table>'''.format(headings='</th><th>'.join(fn_headings), functions='</td><td>'.join(fn_functions))
+    pin_functions = render_pin_functions(pin_num, pin)
 
     pin_url = slugify('pin{}_{}'.format(pin_num, pin_url))
 
@@ -390,6 +367,59 @@ def render_pin_page(pin_num):
 
     # if pin_text != None:
     return pin_url, pin_text, pin_text_name  # pages[pin_url] = pin_text
+
+
+def render_pin_functions(pin_num, pin):
+    bcm = pin.get('scheme', {}).get('bcm')
+    models = pinout.pin_functions['models']
+
+    if bcm is None:
+        return ''
+
+    tabs = []
+    tables = []
+
+    for model in models:
+        functions = pinout.pin_functions['functions'][model['id']].get(str(bcm))
+
+        if functions is None:
+            continue
+
+        tab_id = 'functions-tab-{}-{}'.format(pin_num, model['id'])
+        panel_id = 'functions-{}-{}'.format(pin_num, model['id'])
+        selected = model is models[-1]
+
+        tabs.append('<button type="button" role="tab" id="{tab}" aria-controls="{panel}" aria-selected="{selected}">{name}</button>'.format(
+            tab=tab_id, panel=panel_id, name=model['name'], selected='true' if selected else 'false'))
+
+        headings = ['{}{}'.format(model['prefix'], index) for index in range(model['width'])]
+
+        tables.append('''<div class="functions-panel" id="{panel}" role="tabpanel" aria-labelledby="{tab}">
+        <table class="pin-functions">
+        <caption>{name}</caption>
+        <thead>
+            <tr>
+                <th>{headings}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{functions}</td>
+            </tr>
+        </tbody>
+        </table>
+        </div>'''.format(
+            panel=panel_id, tab=tab_id, name=model['name'],
+            headings='</th><th>'.join(headings),
+            functions='</td><td>'.join(function or '' for function in functions)))
+
+    if not tables:
+        return ''
+
+    return '''<div class="pin-function-tabs">
+        <div class="tabs" role="tablist" aria-label="{label}" hidden>{tabs}</div>
+        {tables}
+        </div>'''.format(label=strings['pin_functions'], tabs=''.join(tabs), tables=''.join(tables))
 
 
 def render_pin(pin_num, selected_url, overlay=None):

@@ -2,8 +2,14 @@ import os
 
 from . import boards, details, render
 
+TRANSLATE_BANNER = '<p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">{}</a></p>'
+
 
 def page_content(site, overlay):
+    if not overlay['translated']:
+        overlay['long_description'] = TRANSLATE_BANNER.format(
+            site.strings['translate_msg']) + overlay['long_description']
+
     overlay['long_description'] = details.describe(site, overlay, site.report.warn)
     return render.article(overlay['name'], overlay['long_description'])
 

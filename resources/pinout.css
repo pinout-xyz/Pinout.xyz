@@ -492,6 +492,13 @@ Left Column
 */
 
 
+.translate-me {
+    border-left: 4px solid var(--color-yellow);
+    padding: 2px 0 2px 12px;
+    margin: 0 0 20px 0;
+    font-size: 0.9em;
+}
+
 #crumbtrail {
     grid-area: crumbtrail;
     font-size: 0.8em;

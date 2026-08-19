@@ -64,8 +64,9 @@ def load_source(root, warn=None):
     return source
 
 
-def finalise(data):
+def finalise(data, translated=True):
     data['page_url'] = page_url(data)
+    data['translated'] = translated
     return data
 
 
@@ -110,7 +111,7 @@ def load_all(root, lang, source=None, warn=None):
         path = overrides.get(name)
 
         if path is None:
-            loaded.append(finalise(copy.deepcopy(base)))
+            loaded.append(finalise(copy.deepcopy(base), False))
             continue
 
         document = documents.load(path)
@@ -121,6 +122,6 @@ def load_all(root, lang, source=None, warn=None):
         if html:
             merged['long_description'] = document['html']
 
-        loaded.append(finalise(merged))
+        loaded.append(finalise(merged, bool(html)))
 
     return loaded

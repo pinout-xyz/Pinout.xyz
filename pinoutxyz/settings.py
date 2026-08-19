@@ -38,7 +38,7 @@ DEFAULTS = {
     'github_repository': 'GitHub Repository',
     'board_schematic': 'Schematic',
     'buy_now': 'Buy Now',
-    'translate_msg': '<a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
+    'translate_msg': 'This page needs translating, can you help?',
     'browse_addons': 'Browse more HATs, pHATs and add-ons',
     'mirror_pinout': 'Mirror the pinout, as seen from the underside of the board',
     'pin_functions': 'Alternate functions by model',

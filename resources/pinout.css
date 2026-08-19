@@ -345,7 +345,7 @@ Boards Page
 .facets {
     margin: 0 5px;
 
-    h4 {
+    h2 {
         text-transform: capitalize;
         font-size: 1.2em;
         margin: 0 0 .2em 0;
@@ -1035,7 +1035,7 @@ code {
             background: var(--overlay-pin-bg);
         }
     }
-    #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
+    #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h2, #boards .board strong {
         color: #fff;
     }
     #boards .board a:hover {

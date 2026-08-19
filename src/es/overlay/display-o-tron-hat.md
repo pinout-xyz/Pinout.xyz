@@ -24,13 +24,13 @@ pin:
     mode: i2c
   '22':
     name: LCD CMD/DATA
-    mode: salida
+    mode: output
     active: alto (encendido)
   '19':
     mode: spi
   '22':
     name: Selector de Registro LCD
-    mode: salida
+    mode: output
   '23':
     mode: spi
   '24':
@@ -39,7 +39,7 @@ pin:
     active: alto (encendido)
   '32':
     name: LCD Reset
-    mode: salida
+    mode: output
     active: low
 -->
 # Display-o-Tron HAT

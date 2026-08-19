@@ -98,7 +98,7 @@ def load_overlay(overlay):
             pin_5 = loaded['pin']['5']
             if pin_3 is not None and pin_5 is not None:
                 if 'mode' in pin_3 and 'mode' in pin_5:
-                    if pin_3['mode'] == 'i2c' and pin_5['mode'] == 'i2c':
+                    if pinout.sanitize_mode(pin_3['mode']) == 'i2c' and pinout.sanitize_mode(pin_5['mode']) == 'i2c':
                         details.append('* Uses I2C')
 
     if 'url' in loaded:

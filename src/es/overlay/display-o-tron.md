@@ -24,29 +24,29 @@ pin:
     mode: i2c
   '7':
     name: Botón del Joystick
-    mode: entrada
+    mode: input
     active: bajo (apagado)
   '11':
     name: Joystick Izquierda
-    mode: entrada
+    mode: input
     active: bajo (apagado)
   '13':
     name: Joystick Arriba
-    mode: entrada
+    mode: input
     active: bajo (apagado)
   '15':
     name: Joystick Derecha
-    mode: entrada
+    mode: input
     active: bajo (apagado)
   '19':
     mode: spi
   '21':
     name: Joystick Abajo
-    mode: entrada
+    mode: input
     active: bajo (apagado)
   '22':
     name: LCD CMD/DATA
-    mode: salida
+    mode: output
     active: alto (encendido)
   '23':
     mode: spi

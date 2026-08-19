@@ -26,11 +26,14 @@ ground:
   '39':
 pin:
   '19':
-    mode: DIN
+    name: DIN
+    mode: spi
   '24':
-    mode: CS
+    name: CS
+    mode: chipselect
   '23':
     name: CLK
+    mode: spi
   '11':
     name: SW1
   '37':

@@ -19,67 +19,67 @@ pin:
     mode: i2c
   '7':
     name: LED 1
-    mode: salida
+    mode: output
     active: alto (encendido)
   '11':
     name: LED 2
-    mode: salida
+    mode: output
     active: alto (encendido)
   '13':
     name: LED 3
-    mode: salida
+    mode: output
     active: alto (encendido)
   '15':
     name: Entrada 2
-    mode: entrada
+    mode: input
     active: alto (encendido)
   '16':
     name: Entrada 1
-    mode: entrada
+    mode: input
     active: alto (encendido)
   '18':
     name: Entrada 3
-    mode: entrada
+    mode: input
     active: alto (encendido)
   '22':
     name: Entrada 4
-    mode: entrada
+    mode: input
     active: alto (encendido)
   '29':
     name: LED 4
-    mode: salida
+    mode: output
     active: alto (encendido)
   '31':
     name: Salida 1
-    mode: salida
+    mode: output
     active: alto (encendido)
   '32':
     name: Salida 2
-    mode: salida
+    mode: output
     active: alto (encendido)
   '33':
     name: Salida 3
-    mode: salida
+    mode: output
     active: alto (encendido)
   '35':
     name: Motor 1 +
-    mode: salida
+    mode: output
     active: alto (encendido)
   '36':
     name: Salida 4
-    mode: salida
+    mode: output
     active: alto (encendido)
   '37':
     name: Motor 2 -
-    mode: salida
+    mode: output
     active: alto (encendido)
   '38':
     name: Motor 1 -
-    mode: salida
+    mode: output
     active: alto (encendido)
   '40':
     name: Motor 2 +
-    mode: salida
+    mode: output
     active: alto (encendido)
 i2c:
   '0x28':

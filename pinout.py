@@ -15,12 +15,34 @@ STRINGS_FILE = 'localised.yaml'
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
+MODES = {
+    '1wire': '1wire',
+    '1-wire': '1wire',
+    'chipselect': 'chipselect',
+    'cs': 'chipselect',
+    'eeprom_wp': 'eeprom_wp',
+    'gpio': 'gpio',
+    'i2c': 'i2c',
+    'i2s': 'pcm',
+    'input': 'input',
+    'input/output': 'gpio',
+    'output': 'output',
+    'pcm': 'pcm',
+    'pwm': 'pwm',
+    'spi': 'spi',
+    'uart': 'uart',
+}
+
 pins = None
 pin_functions = None
 settings = None
 
 master_template = open(os.path.join(BASE_DIR, 'common/layout.html')).read()
 twitter_template = open(os.path.join(BASE_DIR, 'common/opengraph.html')).read()
+
+
+def sanitize_mode(mode):
+    return MODES.get(str(mode).strip().lower())
 
 
 def get_setting(setting, default=None):

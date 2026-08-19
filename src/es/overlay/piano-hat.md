@@ -19,16 +19,16 @@ pin:
     mode: i2c
   '7':
     name: Alerta A
-    mode: entrada
+    mode: input
   '11':
     name: Reset A
-    mode: salida
+    mode: output
   '13':
     name: Alerta B
-    mode: entrada
+    mode: input
   '15':
     name: Reset B
-    mode: salida
+    mode: output
 i2c:
   '0x28':
     name: Cap Touch A

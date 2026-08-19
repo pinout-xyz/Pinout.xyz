@@ -99,6 +99,14 @@ def load_overlay(overlay):
     loaded['source'] = overlay
     loaded['long_description'] = data['html']
 
+    for pin, pin_data in (loaded.get('pin') or {}).items():
+        if not isinstance(pin_data, dict) or 'mode' not in pin_data:
+            continue
+        mode = pinout.sanitize_mode(pin_data['mode'])
+        if mode is None:
+            debug(1, "{}: Unsupported mode '{}' on pin {}".format(overlay, pin_data['mode'], pin))
+        pin_data['mode'] = mode
+
     filename = overlay.split('/')[-1].replace('.md', '')
 
     """
@@ -473,7 +481,7 @@ def render_pin(pin_num, selected_url, overlay=None):
             if 'description' in overlay_pin:
                 pin_link_title.append(overlay_pin['description'])
 
-            if overlay_pin.get('mode') == "EEPROM_WP":
+            if overlay_pin.get('mode') == 'eeprom_wp':
                 pin_name = "EEPROM WP"
 
     if 'scheme' in pin:

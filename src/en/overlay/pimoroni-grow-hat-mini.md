@@ -65,7 +65,7 @@ pin:
   '18':
     name: Button Y
 i2c:
-  0x23:
+  '0x23':
     device: LTR559
 -->
 # Grow HAT Mini

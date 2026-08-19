@@ -119,9 +119,6 @@ def i2c_devices(overlay):
     found = []
 
     for address, data in overlay['i2c'].items():
-        if isinstance(address, int):
-            address = '0x{:02x}'.format(address)
-
         if data is None or 'device' not in data:
             continue
 

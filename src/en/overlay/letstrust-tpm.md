@@ -29,11 +29,11 @@ pin:
     mode: spi
   '23':
     mode: spi
-  22:
+  '22':
     name: PIRQ
     mode: input
     active: low
-  26:
+  '26':
     mode: spi
 -->
 # LetsTrust-TPM

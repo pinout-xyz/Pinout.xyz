@@ -49,7 +49,7 @@ pin:
   '5':
     mode: i2c
 i2c:
-  0x50:
+  '0x50':
     device: Inky ID EEPROM
 -->
 # Inky Impression

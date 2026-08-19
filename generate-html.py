@@ -55,6 +55,9 @@ default_strings = {
     'supported_on': 'Supported on {}',
     'physical_pin_n': 'Physical/Board pin {}',
     'physical_pin_label': 'physical pin',
+    'gpio_header': 'GPIO header',
+    'pins_odd': 'Odd-numbered pins',
+    'pins_even': 'Even-numbered pins',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
@@ -507,10 +510,10 @@ def render_nav(url, overlay=None):
         html_odd += render_pin(odd, url, overlay)
         html_even += render_pin(odd + 1, url, overlay)
 
-    return '''<ul class="bottom">
+    return '''<ul class="bottom" aria-label="{}">
 {}</ul>
-<ul class="top">
-{}</ul>'''.format(html_odd, html_even)
+<ul class="top" aria-label="{}">
+{}</ul>'''.format(strings['pins_odd'], html_odd, strings['pins_even'], html_even)
 
 
 def get_hreflang_urls(src):

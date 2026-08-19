@@ -1,49 +1,17 @@
 <!--
 ---
-name: Traffic HAT
-class: board
-type: multi
-formfactor: HAT
-manufacturer: Ryanteck
 description: carte multi-usage avec buzzer, LED et bouton
-github: https://github.com/PiSupply/Ryanteck/tree/master/RTK%20Traffic%20HAT
-buy: https://uk.pi-supply.com/products/traffic-hat-for-raspberry-pi
-image: 'traffic-hat.png'
-pincount: 40
-eeprom: yes
-power:
-  '1':
-  '2':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
 pin:
   '15':
     name: LED1 / vert
-    direction: output
-    active: high
   '16':
     name: LED2 / orange
-    direction: output
-    active: high
   '18':
     name: LED3 / rouge
-    direction: output
-    active: high
   '22':
     name: bouton
-    direction: input
-    active: high
   '29':
     name: buzzer
-    direction: output
-    active: high
 -->
 # Traffic HAT
 

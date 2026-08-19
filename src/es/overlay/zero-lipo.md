@@ -1,27 +1,3 @@
-<!--
----
-name: Zero LiPo
-class: board
-type: power
-formfactor: Custom
-manufacturer: Pimoroni
-description: LiPo/LiIon power supply shim for Raspberry Pi
-url: https://shop.pimoroni.com/products/zero-lipo
-buy: https://shop.pimoroni.com/products/zero-lipo
-image: 'zero-lipo.png'
-pincount: 8
-eeprom: no
-power:
-  '1':
-  '2':
-ground:
-  '6':
-pin:
-  '7':
-    name: Battery Low
-    mode: input
-    active: high
--->
 # Zero LiPo
 
 El objetivo de Zero LiPo es ser la fuente de alimentación para Raspberry Pi más compacta.

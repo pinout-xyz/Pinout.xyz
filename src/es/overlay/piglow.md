@@ -1,36 +1,3 @@
-<!--
----
-name: PiGlow
-class: board
-type: led
-formfactor: Custom
-manufacturer: Pimoroni
-description: Simply 18 LEDs in a spiral pattern controllable in Python
-url: http://shop.pimoroni.com/products/piglow
-github: https://github.com/pimoroni/piglow
-buy: http://shop.pimoroni.com/products/piglow
-image: 'piglow.png'
-pincount: 26
-eeprom: no
-power:
-  '1':
-  '2':
-  '17':
-ground:
-  '14':
-pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
-install:
-  'devices':
-  - 'i2c'
-i2c:
-  '0x54':
-    name: LED driver
-    device: sn3218
--->
 # PiGlow
 
 PiGlow es una pequeña placa adicional para Raspberry Pi con 18 LEDs controlables individualmente.

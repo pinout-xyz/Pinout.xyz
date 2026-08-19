@@ -1,48 +1,11 @@
 <!--
 ---
-name: Piano HAT
-class: board
-type: instrument,touch
-formfactor: HAT
-manufacturer: Pimoroni
 description: Un mini Pi piano con 16 botones capacitivos
-url: https://shop.pimoroni.com/products/piano-hat
-github: https://github.com/pimoroni/piano-hat
-buy: https://shop.pimoroni.com/products/piano-hat
-image: 'piano-hat.png'
-pincount: 40
-eeprom: yes
-power:
-  '2':
-  '17':
-ground:
-  '9':
-  '30':
-  '34':
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
   '7':
     name: Alerta A
-    mode: input
-  '11':
-    name: Reset A
-    mode: output
   '13':
     name: Alerta B
-    mode: input
-  '15':
-    name: Reset B
-    mode: output
-i2c:
-  '0x28':
-    name: Cap Touch A
-    device: cap1188
-  '0x2b':
-    name: Cap Touch B
-    device: cap1188
 -->
 # Piano HAT
 

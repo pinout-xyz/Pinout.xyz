@@ -1,38 +1,3 @@
-<!--
----
-name: DC & Stepper Motor HAT
-class: board
-type: motor
-formfactor: HAT
-manufacturer: Adafruit
-description: Drive 4 DC Motors or 2 Stepper Motors with a Raspberry Pi
-url: https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi
-buy: https://www.adafruit.com/products/2348
-image: adafruit-motor-hat.png
-pincount: 40
-eeprom: yes
-power:
-  '17':
-  '1': 
-ground:
-  '9':
-  '25':
-  '39':
-  '34':
-  '30':
-  '20':
-  '14':
-  '6':
-pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
-i2c:
- '0x20':
-   name: TB6612
-   device: TB6612    
--->
 # DC & Stepper Motor HAT
 
 Haz tus sueños de root realidad con el nuevo DC+Stepper Motor HAT de Adafruit. Es perfecto para cualquier proyecto que implique movimiento ya que permite controlar 4 motores DC o 2 paso a paso con un control completo de la velocidad PWM.

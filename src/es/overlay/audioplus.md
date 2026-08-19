@@ -1,37 +1,4 @@
- <!--
----
-name: RASPIAUDIO AUDIO+
-class: board
-type: audio
-formfactor: phat
-manufacturer: RASPIAUDIO
-description: An I2S digital to analog audio converter
-buy: https://raspiaudio.com
-image: 'audioplus.png'
-pincount: 40
-eeprom: no
-power:
-  '1':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
-pin:
-  '12':
-    name: I2S
-  '35':
-    name: I2S
-  '40':
-    name: I2S
-install:
-  'devices':
-  - 'i2s'
--->
+ 
 # Audio +
 
 

@@ -1,14 +1,3 @@
-<!--
----
-name: 1-WIRE
-class: interface
-type: pinout
-description: Raspberry Pi One-Wire pins
-url: https://www.kernel.org/doc/Documentation/w1/w1.generic
-pin:
-  'bcm4':
-    name: Data
--->
 # W1-GPIO - One-Wire Interface
 
 Para habilitar la interaz one-wire necesitas añadir la siguiente línea a /boot/firmware/config.txt y después reiniciar tu Pi:

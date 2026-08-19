@@ -1,19 +1,7 @@
 <!--
 ---
 name: Masse
-class: interface
-type: pinout
 description: broches raccordées à la masse
-pincount: 1
-pin:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
 -->
 # Masse
 

@@ -1,21 +1,3 @@
-<!--
----
-name: 7-port USB hub
-class: board
-type: power,usb
-formfactor: USB
-manufacturer: UUGear
-description: 7-port USB hub for Raspberry Pi
-url: http://www.uugear.com/product/7-port-usb-hub-for-raspberry-pi/
-buy: http://www.uugear.com/product/7-port-usb-hub-for-raspberry-pi/
-image: 'uugear-7port-usb-hub.png'
-pincount: 7
-eeprom: no
-power:
-  '2':
-ground:
-  '39':
--->
 # 7-port USB hub for Raspberry Pi
 
 Es un hub con 7 puertos USB para Raspberry Pi. Aumenta un puerto USB de Raspberry Pi en 7, lo que permite usar más dispositivos. Cuenta con un LED rojo para indicar la alimentación y 7 LEDs verdes para el tráfico en los puertos USB.

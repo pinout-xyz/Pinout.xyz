@@ -1,32 +1,3 @@
-<!--
----
-name: Zero2Go
-class: board
-type: power
-formfactor: pHAT
-manufacturer: UUGear
-description: Wide Input Range Power Supply for Raspberry Pi
-url: http://www.uugear.com/product/zero2go/
-buy: http://www.uugear.com/product/zero2go/
-image: 'uugear-zero2go.png'
-pincount: 40
-eeprom: no
-power:
-  '2':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
-pin:
-  '7':
-    name: HALT
-    mode: input
--->
 # Zero2Go
 
 Zero2Go es una fuente de alimentación de tamaño de Pi Zero que acepta entrada DC 5~26V y salida de 5V/2.6A máximo. Permite encender/apagar tu Raspberry Pi (Zero u otros modelos) con un solo toque.

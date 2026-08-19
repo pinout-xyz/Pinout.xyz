@@ -1,41 +1,6 @@
 <!--
 ---
-name: LEDBorg
-class: board
-type: led
-formfactor: Custom
-manufacturer: PiBorg
 description: Un único LED RGB para tu Raspberry Pi
-url: https://www.piborg.org/ledborg-new/install
-buy: https://www.piborg.org/ledborg
-image: 'piborg-led-borg.png'
-pincount: 26
-eeprom: no
-power:
-  '1':
-  '2':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-pin:
-  '11':
-    name: Red LED
-    direction: output
-    active: high
-    description: PiBorg Red LED
-  '13':
-    name: Green LED
-    direction: input
-    active: high
-    description: PiBorg Green LED
-  '15':
-    name: Blue LED
-    direction: output
-    active: high
-    description: PiBorg Blue LED
 -->
 ### PiBorg LedBorg
 

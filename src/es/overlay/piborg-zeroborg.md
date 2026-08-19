@@ -1,28 +1,3 @@
-<!--
----
-name: ZeroBorg
-class: board
-type: motor
-formfactor: Custom
-manufacturer: PiBorg
-description: A PiZero robot controller
-url: https://www.piborg.org/zeroborg
-buy: https://www.piborg.org/zeroborg
-image: 'piborg-zeroborg.png'
-pincount: 6
-eeprom: no
-power:
-  '1':
-  '2':
-  '4':
-ground:
-  '6':
-pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
--->
 # ZeroBorg
 
 ZeroBorg fabricado por PiBorg es un controlador de motores de 4 canales para Raspberry Pi Zero.

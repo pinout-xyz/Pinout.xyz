@@ -1,49 +1,11 @@
 <!--
 ---
-name: Skywriter HAT
-class: board
-type: 'gesture,touch'
-formfactor: HAT
-manufacturer: Pimoroni
 description: un capteur de mouvements 3D
-url: http://shop.pimoroni.com/products/skywriter-hat
-github: https://github.com/pimoroni/skywriter-hat
-buy: http://shop.pimoroni.com/products/skywriter-hat
-image: 'skywriter-hat.png'
-pincount: 40
-eeprom: yes
-power:
-  '17':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
   '11':
     name: reset
   '13':
     name: transfer
-install:
-  'apt':
-    - 'python-smbus'
-    - 'python3-smbus'
-    - 'python-dev'
-    - 'python3-dev'
-  'python':
-    - 'skywriter'
-i2c:
-  '0x42':
-    name: Gesture sensor
-    device: mgc3130
 -->
 # Skywriter HAT
 

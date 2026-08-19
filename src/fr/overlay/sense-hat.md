@@ -1,68 +1,22 @@
 <!--
 ---
-name: Sense HAT
-class: board
-type: led,sensor
-formfactor: HAT
-manufacturer: Raspberry Pi
 description: Carte d'extension incluant une metrice LED 8×8 en RGB, un joystick 5 boutons ainsi qu'un capteur IMU, de température et de pression.
-url: https://www.raspberrypi.org/products/sense-hat/
-github: https://github.com/RPi-Distro/python-sense-hat
-schematic: https://www.raspberrypi.org/documentation/hardware/sense-hat/images/Sense-HAT-V1_0.pdf
-buy: https://thepihut.com/products/raspberry-pi-sense-hat-astro-pi
-image: 'sense-hat.png'
-pincount: 40
-eeprom: setup
-power:
-  '1':
-  '2':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
-  '39':
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
-  '16':
-    name: IMU Interrupt
-    mode: output
-  '18':
-    name: IMU Interrupt
-    mode: output
   '22':
     name: Atmel Reset
-    mode: output
-    active: high
   '24':
     name: Atmel Selection
-    mode: chipselect
-    active: high
 i2c:
   '0x5c':
     name: Pression/Temp
-    device: lps25h
   '0x5f':
     name: Humidité/Temp
-    device: hts221
   '0x6a':
     name: Accéléromètre
-    device: lsm9ds1
   '0x1c':
     name: Magnétomèter
-    device: lsm9ds1
   '0x46':
     name: Matrice LED
-    device: led2472g
-install:
-  'devices':
-    - 'i2c'
 -->
 # Sense HAT
 

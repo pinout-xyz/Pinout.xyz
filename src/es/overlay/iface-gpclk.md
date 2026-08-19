@@ -1,17 +1,3 @@
-<!--
----
-name: GPCLK
-class: interface
-type: pinout
-description: Raspberry Pi General Purpose Clock
-pin:
-  'bcm4':
-    name: GPCLK0
-  'bcm5':
-    name: GPCLK1
-  'bcm6':
-    name: GPCLK2
--->
 # GPCLK - General Purpose CLock
 
 Los pines de General Purpose Clock pueden programarse a una frequencia fija, sin sofware adicional.

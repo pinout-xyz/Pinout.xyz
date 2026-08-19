@@ -9,7 +9,7 @@
     --color-dark: #073642;
     --color-content-bg: rgba(235, 230, 211, 0.5);
     --pin-gnd: #002B36;
-    --nav-bg: #5F8645;
+    --nav-bg: #4C6E36;
     --overlay-pin-bg: rgb(235, 230, 211);
     --overlay-pin-fg: #063541;
     --overlay-pin-bg-hover: rgb(245, 243, 237);
@@ -1020,7 +1020,7 @@ code {
         }
     }
     #gpio {
-        background: rgba(95, 134, 69, 0.5);
+        background: color-mix(in srgb, var(--nav-bg) 50%, transparent);
     }
     #pinout-view button {
         color: var(--overlay-pin-bg);

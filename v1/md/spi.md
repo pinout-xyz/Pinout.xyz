@@ -44,6 +44,39 @@ pin:
     name: SPI1 MOSI
   '40':
     name: SPI1 SCLK
+  '27':
+    name: SPI CE0
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '28':
+    name: SPI MISO
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '3':
+    name: SPI MOSI
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '5':
+    name: SPI SCLK
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '7':
+    name: SPI CE0
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '29':
+    name: SPI MISO
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '31':
+    name: SPI MOSI
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '32':
+    name: SPI CE0
+    supported: Pi 4 and Pi 5 (spi5)
+  '33':
+    name: SPI MISO
+    supported: Pi 4 and Pi 5 (spi5)
+  '8':
+    name: SPI MOSI
+    supported: Pi 4 and Pi 5 (spi5)
+  '10':
+    name: SPI SCLK
+    supported: Pi 4 and Pi 5 (spi5)
 -->
 # SPI - Serial Peripheral Interface
 
@@ -65,3 +98,18 @@ dtoverlay=spi1-3cs
 ```
 
 For full details of the SPI dtoverlays (and others) see [the Raspberry Pi dtoverlay README](https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README)
+
+## More than two buses
+
+Pi 4 and Pi 5 both have extra SPI controllers on the low-numbered GPIO pins, numbered differently between the two models. Each group runs CE0, MISO, MOSI then SCLK in ascending pin order:
+
+* GPIO 0 to GPIO 3: spi3 on Pi 4, spi2 on Pi 5.
+* GPIO 4 to GPIO 7: spi4 on Pi 4, spi3 on Pi 5. GPIO 7 is SPI0's CE1, so the two cannot both be in use.
+* GPIO 12 to GPIO 15: spi5 on both models. GPIO 14 and GPIO 15 are also the UART pins.
+* GPIO 18 to GPIO 21: spi6 on Pi 4, sharing SPI1's pins with CE0 on GPIO 18.
+
+Enable one with the matching overlay, in a `1cs` or `2cs` form for the number of chip selects you need: `dtoverlay=spi4-1cs` on a Pi 4, `dtoverlay=spi3-1cs-pi5` on a Pi 5. The `cs0_pin` parameter moves the chip select if the default clashes with something.
+
+The `spi2` overlay without a `-pi5` suffix is a different thing entirely: spi2 on GPIO 40 to GPIO 42, which only exists on Compute Modules.
+
+Raspberry Pi 5 documentation calls MISO and MOSI SIO1 and SIO0, since RP1's SPI blocks can run in modes where the data lines change direction.

@@ -12,6 +12,17 @@ buy: http://shop.pimoroni.com/products/skywriter-hat
 image: 'skywriter-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -21,6 +32,14 @@ pin:
     name: Reset
   '13':
     name: Transferencia
+install:
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'skywriter'
 i2c:
   '0x42':
     name: Gesture sensor

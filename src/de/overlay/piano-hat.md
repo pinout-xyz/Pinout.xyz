@@ -12,6 +12,13 @@ buy: https://shop.pimoroni.com/products/piano-hat
 image: 'piano-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '9':
+  '30':
+  '34':
 pin:
   3:
     mode: i2c

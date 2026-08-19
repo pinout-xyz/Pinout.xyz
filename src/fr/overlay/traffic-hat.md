@@ -11,6 +11,18 @@ buy: https://uk.pi-supply.com/products/traffic-hat-for-raspberry-pi
 image: 'traffic-hat.png'
 pincount: 40
 eeprom: yes
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   '15':
     name: LED1 / vert

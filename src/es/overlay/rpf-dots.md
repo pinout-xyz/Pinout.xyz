@@ -12,6 +12,18 @@ buy: https://thepihut.com/products/raspberry-pi-dots-board
 image: 'rpf-dots.png'
 pincount: 40
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
+  '30':
+  '34':
+  '39':
 pin:
   bcm0:
     name: 'Color: Blue'

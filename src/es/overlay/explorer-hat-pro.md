@@ -12,6 +12,16 @@ buy: http://shop.pimoroni.com/products/explorer-hat
 image: 'explorer-hat-pro.png'
 pincount: 40
 eeprom: yes
+power:
+  '2':
+  '17':
+ground:
+  '6':
+  '9':
+  '14':
+  '25':
+  '30':
+  '39':
 pin:
   '3':
     mode: i2c
@@ -88,6 +98,18 @@ i2c:
   '0x48':
     name: Entrada Analógica
     device: ads1015
+install:
+  'devices':
+    - 'i2c'
+  'apt':
+    - 'python-smbus'
+    - 'python3-smbus'
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'explorerhat'
+  'python3':
+    - 'explorerhat'
 -->
 # Explorer HAT Pro
 

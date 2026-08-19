@@ -11,6 +11,15 @@ buy: https://www.piborg.org/ledborg
 image: 'piborg-led-borg.png'
 pincount: 26
 eeprom: no
+power:
+  '1':
+  '2':
+ground:
+  '6':
+  '9':
+  '14':
+  '20':
+  '25':
 pin:
   '11':
     name: Red LED

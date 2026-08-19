@@ -14,6 +14,7 @@ eeprom: no
 power:
   '2':
 ground:
+  '9':
   '25':
   '39':
 pin:

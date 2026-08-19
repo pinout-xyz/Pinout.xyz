@@ -23,6 +23,14 @@ pin:
     mode: pwm
     active: high
     description: WS2812 Dati
+install:
+  'apt':
+    - 'python-dev'
+    - 'python3-dev'
+  'python':
+    - 'unicornhat'
+  'python3':
+    - 'unicornhat'
 -->
 # Unicorn HAT
 

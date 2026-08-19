@@ -84,7 +84,7 @@ def command_translations_listing(args):
 
 def command_boards_list(args):
     for board in drafts.available(args.root):
-        print(board)
+        print('{:38} {}'.format(board, drafts.check(args.root, board) or 'ready to publish'))
     return 0
 
 

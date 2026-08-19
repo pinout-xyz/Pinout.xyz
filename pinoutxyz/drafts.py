@@ -2,7 +2,7 @@ import glob
 import os
 import shutil
 
-from . import documents, settings
+from . import boards, documents, overlays, settings
 
 DRAFT_OVERLAYS = 'draft/overlay'
 DRAFT_BOARDS = 'draft/boards'
@@ -64,13 +64,28 @@ def check(root, board):
     if not os.path.exists(path):
         return 'No draft at {}'.format(path)
 
-    data = documents.load(path)['data'] or {}
+    data = documents.frontmatter(path) or {}
+
     missing = [key for key in ('name', 'class', 'type', 'description') if key not in data]
-
     if missing:
-        return 'Draft is missing: {}'.format(', '.join(missing))
+        return 'Missing: {}'.format(', '.join(missing))
 
-    if not os.path.exists(os.path.join(root, DRAFT_BOARDS, '{}.png'.format(board))) and 'image' not in data:
-        return 'Draft has no image in {} and no image key'.format(DRAFT_BOARDS)
+    names = boards.type_names('en')
+    unknown = [token.strip() for token in str(data.get('type', '')).split(',')
+               if boards.sanitize_type(names, token) is None]
+    if unknown:
+        return 'Unsupported type: {}'.format(', '.join(unknown))
+
+    published = os.path.join(root, 'src', overlays.SOURCE, 'overlay', '{}.md'.format(board))
+    if os.path.exists(published):
+        return 'Already published as {}'.format(published)
+
+    image = data.get('image')
+    if image is None:
+        return 'No image key'
+
+    if not any(image in os.listdir(os.path.join(root, directory))
+               for directory in (DRAFT_BOARDS, BOARD_IMAGES)):
+        return 'image {!r} is in neither {} nor {}'.format(image, DRAFT_BOARDS, BOARD_IMAGES)
 
     return None

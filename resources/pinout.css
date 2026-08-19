@@ -206,6 +206,11 @@ img.grayscale {
 header {
     margin: 8px 8px 10px 8px;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 main {
@@ -269,19 +274,10 @@ Footer language nav
 */
 
 #lang {
-    display:none;
-    background:#C7C2AE;
-    position:absolute;
-    bottom:0px;
-    width:100%;
-    font-size:0;
-    text-align:right;
-
-    a {
-        display:inline-block;
-        margin: 10px;
-        margin-left:0px;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 10px;
 }
 
 /*
@@ -966,6 +962,10 @@ code {
 }
 
 @media screen and (min-width: 540px) {
+    #lang {
+        display: flex;
+    }
+
     #gpio {
         a {
             font-size:.8em;
@@ -1015,7 +1015,6 @@ code {
         margin: 0 auto;
         padding: 0 8px;
         height: 70px;
-        display: grid;
     }
 
     main {

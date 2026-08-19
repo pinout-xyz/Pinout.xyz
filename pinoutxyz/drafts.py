@@ -25,15 +25,6 @@ def publish(root, board):
     shutil.move(draft, published)
     print('Published {}'.format(published))
 
-    for lang in settings.languages(root):
-        if lang == 'en':
-            continue
-        if os.path.exists(os.path.join(root, 'src', lang, 'overlay', '{}.md'.format(board))):
-            continue
-        copy = os.path.join(root, 'src', lang, 'translate', '{}.md'.format(board))
-        shutil.copy(published, copy)
-        print('Copied to {}'.format(copy))
-
     image = os.path.join(root, DRAFT_BOARDS, '{}.png'.format(board))
     if os.path.exists(image):
         shutil.move(image, os.path.join(root, BOARD_IMAGES, '{}.png'.format(board)))
@@ -54,11 +45,10 @@ def unpublish(root, board):
     for lang in settings.languages(root):
         if lang == 'en':
             continue
-        for subdir in ('overlay', 'translate'):
-            path = os.path.join(root, 'src', lang, subdir, '{}.md'.format(board))
-            if os.path.exists(path):
-                os.remove(path)
-                print('Removed {}'.format(path))
+        path = os.path.join(root, 'src', lang, 'overlay', '{}.md'.format(board))
+        if os.path.exists(path):
+            os.remove(path)
+            print('Removed {}'.format(path))
 
     image = os.path.join(root, BOARD_IMAGES, '{}.png'.format(board))
     if os.path.exists(image):

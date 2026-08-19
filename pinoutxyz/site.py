@@ -23,9 +23,6 @@ class Site:
         self.templates = Templates(root, lang)
         self.alternates = alternates if alternates is not None else urls.alternates(root)
 
-        for name in overlays.duplicates(root, lang):
-            self.report.warn('{} exists in both overlay and translate, only one of them will be used'.format(name))
-
         self.overlays = overlays.load_all(root, lang, source, self.report.warn)
 
         found = {overlay['src']: overlay['page_url'] for overlay in self.overlays}

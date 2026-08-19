@@ -1,14 +1,9 @@
 import os
-import urllib.parse
 
 from . import documents, overlays, settings
 
-TRANSLATABLE = {'name', 'description', 'title', 'page_url', 'docs'}
-LOCALISED = {'url', 'buy', 'github', 'schematic'}
-PIN_MAPS = {'pin', 'power', 'ground', 'i2c'}
+SOURCE = overlays.SOURCE
 EEPROM_VALUES = {'True', 'False', 'None', 'detect', 'setup'}
-
-SOURCE = 'en'
 
 
 def frontmatter(path):
@@ -18,40 +13,6 @@ def frontmatter(path):
 def body(path):
     text = open(path, encoding='utf-8', errors='replace').read().replace('\r\n', '\n')
     return documents.FRONTMATTER.sub('', text).strip()
-
-
-def source_overlays(root):
-    return {os.path.basename(path): path for path in overlays.paths(root, SOURCE)}
-
-
-def source_frontmatter(root):
-    return {name: frontmatter(path) for name, path in source_overlays(root).items()}
-
-
-def sources(root, lang):
-    found = {}
-    clashes = []
-
-    for path in overlays.paths(root, lang):
-        name = os.path.basename(path)
-        if name in found:
-            clashes.append((path, found[name]))
-        found[name] = path
-
-    return found, clashes
-
-
-def structure(value):
-    if isinstance(value, dict):
-        return {str(key): structure(inner) for key, inner in value.items() if key != 'name'}
-    return value
-
-
-def same_host(one, other):
-    try:
-        return urllib.parse.urlparse(one).netloc == urllib.parse.urlparse(other).netloc
-    except (AttributeError, ValueError):
-        return False
 
 
 def check_source(path, data):
@@ -68,109 +29,92 @@ def check_source(path, data):
     return findings
 
 
-def compare(path, data, source):
+def check_override(path, data, base):
     findings = []
 
-    for key in sorted((set(source) - set(data)) - TRANSLATABLE):
-        findings.append((path, '{}: missing, English has {!r}'.format(key, source[key])))
+    for key in sorted(set(data) - set(overlays.OVERRIDE_KEYS) - set(overlays.OVERRIDE_MAPS) - {'title'}):
+        findings.append((path, '{}: belongs to English, remove it'.format(key)))
 
-    for key in sorted((set(data) - set(source)) - TRANSLATABLE):
-        findings.append((path, '{}: not in English'.format(key)))
-
-    for key in sorted((set(source) & set(data)) - TRANSLATABLE):
-        theirs, ours = structure(data[key]), structure(source[key])
-
-        if theirs == ours:
-            continue
-
-        if key in LOCALISED and same_host(theirs, ours):
-            continue
-
-        if isinstance(theirs, dict) and isinstance(ours, dict) and key in PIN_MAPS:
-            differs = set(theirs) ^ set(ours)
-            differs |= {key for key in set(theirs) & set(ours) if theirs[key] != ours[key]}
-            findings.append((path, '{}: differs at {}'.format(key, ', '.join(sorted(differs)))))
-        else:
-            findings.append((path, '{}: {!r}, English has {!r}'.format(key, data[key], source[key])))
+    for key in overlays.OVERRIDE_MAPS:
+        entries = data.get(key) or {}
+        for entry in sorted(entries, key=str):
+            values = entries[entry]
+            if entry not in (base.get(key) or {}):
+                findings.append((path, '{} {}: not in the English overlay'.format(key, entry)))
+                continue
+            if not isinstance(values, dict):
+                findings.append((path, '{} {}: should be a mapping'.format(key, entry)))
+                continue
+            for inner in sorted(set(values) - set(overlays.OVERRIDE_ENTRY_KEYS)):
+                findings.append((path, '{} {}: {} belongs to English, remove it'.format(key, entry, inner)))
 
     return findings
 
 
-def check(root, lang, english, source, discovered):
+def check(root, lang, source):
     findings = []
-    found, clashes = discovered
-
-    for path, shadowed in clashes:
-        findings.append((path, 'also exists as {}, only one will be built'.format(shadowed)))
-
-    for name in sorted(set(english) - set(found)):
-        findings.append((os.path.join(root, 'src', lang), 'nothing translates {}'.format(name)))
-
     urls = {}
 
-    for name, path in sorted(found.items()):
+    for name, path in sorted(overlays.named(root, lang).items()):
         data = frontmatter(path)
 
-        if not data.get('name'):
-            findings.append((path, 'name: missing'))
-        else:
-            url = overlays.page_url(data)
-            if url in urls:
-                findings.append((path, 'page_url {!r} collides with {}'.format(url, urls[url])))
-            urls[url] = path
-
         if lang == SOURCE:
+            if not data.get('name'):
+                findings.append((path, 'name: missing'))
+            else:
+                url = overlays.page_url(data)
+                if url in urls:
+                    findings.append((path, 'page_url {!r} collides with {}'.format(url, urls[url])))
+                urls[url] = path
             findings += check_source(path, data)
             continue
 
-        if name not in english:
+        if name not in source:
             findings.append((path, 'no English counterpart'))
             continue
 
-        findings += compare(path, data, source[name])
+        findings += check_override(path, data, source[name])
+
+        if not data and not body(path):
+            findings.append((path, 'overrides nothing, remove it'))
 
     return findings
 
 
-def coverage(root, lang, english):
+def coverage(root, lang, source):
     translated = []
-    outstanding = []
-    stale = []
+    partial = []
+    overrides = overlays.named(root, lang)
 
-    for name, path in sorted(sources(root, lang)[0].items()):
-        if name not in english:
+    for name in sorted(overrides):
+        if name not in source:
             continue
-        if os.sep + 'overlay' + os.sep in path:
+        if body(overrides[name]):
             translated.append(name)
-        elif body(path) == body(english[name]):
-            outstanding.append(name)
         else:
-            stale.append(name)
+            partial.append(name)
 
-    return translated, outstanding, stale
+    absent = sorted(set(source) - set(overrides))
+
+    return translated, partial, absent
 
 
 def report_check(root, languages):
-    english = source_overlays(root)
-    source = source_frontmatter(root)
+    source = {name: frontmatter(path) for name, path in overlays.named(root, SOURCE).items()}
     findings = []
 
-    print('Checking {} overlays against src/{}'.format(len(english), SOURCE))
+    print('Checking against {} English overlays'.format(len(source)))
 
     for lang in languages:
-        discovered = sources(root, lang)
-        found = check(root, lang, english, source, discovered)
-        print('  {:4} {:4} overlays, {:4} findings'.format(lang, len(discovered[0]), len(found)))
+        found = check(root, lang, source)
+        print('  {:4} {:4} overrides, {:4} findings'.format(
+            lang, len(overlays.named(root, lang)) if lang != SOURCE else len(source), len(found)))
         findings += found
 
     findings.sort()
-    previous = None
 
     for path, message in findings:
-        if path != previous:
-            print(path)
-            previous = path
-        print('  {}'.format(message))
+        print('{}\n  {}'.format(path, message))
 
     print('\n{} findings'.format(len(findings)))
 
@@ -178,33 +122,33 @@ def report_check(root, languages):
 
 
 def report_list(root, languages):
-    english = source_overlays(root)
+    source = overlays.named(root, SOURCE)
     names = settings.language_names(root)
-    total = len(english)
+    total = len(source)
 
-    print('{:6} {:12} {:>12} {:>12} {:>8}'.format('code', 'language', 'translated', 'outstanding', 'stale'))
+    print('{:6} {:12} {:>12} {:>12} {:>10}'.format('code', 'language', 'translated', 'text only', 'English'))
 
     for lang in languages:
         if lang == SOURCE:
             continue
-        translated, outstanding, stale = coverage(root, lang, english)
-        print('{:6} {:12} {:>12} {:>12} {:>8}'.format(
+        translated, partial, absent = coverage(root, lang, source)
+        print('{:6} {:12} {:>12} {:>12} {:>10}'.format(
             lang, names.get(lang, (lang, lang))[0],
-            '{}/{}'.format(len(translated), total), len(outstanding), len(stale)))
+            '{}/{}'.format(len(translated), total), len(partial), len(absent)))
 
-    print('\nstale counts English copies in translate/ that no longer match src/en')
+    print('\ntext only overrides just a name, description or pin label; English pages fall back to src/en')
 
     return 0
 
 
-def report_outstanding(root, lang, which='outstanding'):
-    english = source_overlays(root)
-    translated, outstanding, stale = coverage(root, lang, english)
-    listing = {'outstanding': outstanding, 'stale': stale, 'translated': translated}[which]
+def report_listing(root, lang, which):
+    source = overlays.named(root, SOURCE)
+    translated, partial, absent = coverage(root, lang, source)
+    listing = {'outstanding': absent, 'partial': partial, 'translated': translated}[which]
 
     for name in listing:
         print(name)
 
-    print('\n{} {} of {} overlays'.format(len(listing), which, len(english)))
+    print('\n{} {} of {} overlays'.format(len(listing), which, len(source)))
 
     return 0

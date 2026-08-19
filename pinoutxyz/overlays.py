@@ -7,7 +7,7 @@ from .pins import sanitize_mode
 from .slugs import slugify
 
 SOURCE = 'en'
-SUBDIRS = ('overlay', 'translate')
+OVERLAY_DIR = 'overlay'
 
 OVERRIDE_KEYS = ('name', 'description', 'page_url', 'url', 'buy', 'github', 'schematic', 'docs')
 OVERRIDE_MAPS = ('pin', 'i2c')
@@ -15,10 +15,7 @@ OVERRIDE_ENTRY_KEYS = ('name', 'description')
 
 
 def paths(root, lang):
-    found = []
-    for subdir in SUBDIRS:
-        found += sorted(glob.glob(os.path.join(root, 'src', lang, subdir, '*.md')))
-    return found
+    return sorted(glob.glob(os.path.join(root, 'src', lang, OVERLAY_DIR, '*.md')))
 
 
 def named(root, lang):
@@ -26,17 +23,6 @@ def named(root, lang):
     for path in paths(root, lang):
         found[os.path.basename(path)] = path
     return found
-
-
-def duplicates(root, lang):
-    seen = set()
-    clashes = []
-    for path in paths(root, lang):
-        name = os.path.basename(path)
-        if name in seen:
-            clashes.append(name)
-        seen.add(name)
-    return sorted(clashes)
 
 
 def page_url(data):
@@ -78,6 +64,11 @@ def load_source(root, warn=None):
     return source
 
 
+def finalise(data):
+    data['page_url'] = page_url(data)
+    return data
+
+
 def merge(base, override, path, warn=None):
     merged = copy.deepcopy(base)
 
@@ -98,7 +89,6 @@ def merge(base, override, path, warn=None):
                 if inner in values:
                     target[inner] = values[inner]
 
-    merged['page_url'] = page_url(merged)
     return merged
 
 
@@ -107,12 +97,7 @@ def load_all(root, lang, source=None, warn=None):
         source = load_source(root, warn)
 
     if lang == SOURCE:
-        loaded = []
-        for base in source.values():
-            data = copy.deepcopy(base)
-            data['page_url'] = page_url(data)
-            loaded.append(data)
-        return loaded
+        return [finalise(copy.deepcopy(base)) for base in source.values()]
 
     overrides = named(root, lang)
     loaded = []
@@ -125,7 +110,7 @@ def load_all(root, lang, source=None, warn=None):
         path = overrides.get(name)
 
         if path is None:
-            loaded.append(copy.deepcopy(base))
+            loaded.append(finalise(copy.deepcopy(base)))
             continue
 
         document = documents.load(path)
@@ -136,6 +121,6 @@ def load_all(root, lang, source=None, warn=None):
         if html:
             merged['long_description'] = document['html']
 
-        loaded.append(merged)
+        loaded.append(finalise(merged))
 
     return loaded

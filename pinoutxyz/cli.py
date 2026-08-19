@@ -78,8 +78,8 @@ def command_translations_check(args):
     return translations.report_check(args.root, resolve(args.root, args.languages))
 
 
-def command_translations_outstanding(args):
-    return translations.report_outstanding(args.root, resolve(args.root, [args.lang])[0], args.action)
+def command_translations_listing(args):
+    return translations.report_listing(args.root, resolve(args.root, [args.lang])[0], args.action)
 
 
 def command_boards_list(args):
@@ -132,12 +132,12 @@ def parser():
     action.add_argument('languages', nargs='*')
     action.set_defaults(handler=command_translations_check)
 
-    for name, help_text in (('outstanding', 'overlays still to translate'),
-                            ('stale', 'English copies that no longer match src/en'),
-                            ('translated', 'overlays already translated')):
+    for name, help_text in (('outstanding', 'overlays with no translation at all'),
+                            ('partial', 'overrides that carry no translated text'),
+                            ('translated', 'overlays with translated text')):
         action = translations_actions.add_parser(name, help=help_text)
         action.add_argument('lang')
-        action.set_defaults(handler=command_translations_outstanding)
+        action.set_defaults(handler=command_translations_listing)
 
     boards_command = commands.add_parser('boards', help='manage draft board overlays')
     boards_actions = boards_command.add_subparsers(dest='action', required=True)

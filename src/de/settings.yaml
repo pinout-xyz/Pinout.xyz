@@ -5,8 +5,3 @@ resource_url: /resources/
 url_suffix:
 urls:
   GND: masse_ground
-featured:
-- display-o-tron
-- rpf-dots
-- pibrella
-- rtk-000-001

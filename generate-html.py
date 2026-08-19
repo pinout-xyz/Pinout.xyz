@@ -632,10 +632,6 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
 
 print("\nRendering overlay pages...")
 overlays = list(map(load_overlay, overlays))
-overlay_subnav = ['featured']
-featured_boards_count = 0
-featured_boards_html = ''
-
 boards_page = []
 boards_manufacturers = []
 
@@ -650,17 +646,6 @@ for overlay in overlays:
     link = (overlay['page_url'], overlay['name'])
 
     overlays_html += [link]
-
-    if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
-        featured_boards_count += 1
-        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img loading=\"lazy\" alt="" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
-            image=overlay['image'],
-            name=overlay['name'],
-            page_url=overlay['page_url'],
-            base_url=base_url,
-            resource_url=resource_url,
-            description=overlay['description']
-        )
 
     if 'class' in overlay and 'type' in overlay:
         o_class = overlay['class']
@@ -827,7 +812,6 @@ for pin in range(1, len(pinout.pins) + 1):
                                   overlays=overlays_html,
                                   description=strings['default_desc'],
                                   title=pin_title + strings['title_suffix'],
-                                  featured_boards=featured_boards_html,
                                   langcode=lang,
                                   nav_html=nav_html,
                                   interfaces=interfaces,
@@ -875,7 +859,6 @@ for url in pages:
     if 'name' in pages[url]:
         name = pages[url]['name'] + strings['title_suffix']
 
-    feat_boards_html = featured_boards_html
 
     body_class = ''
 
@@ -917,7 +900,6 @@ for url in pages:
                               resource_url=resource_url,
                               description=pages[url]['description'],
                               title=name,
-                              featured_boards=feat_boards_html,
                               langcode=lang,
                               nav_html=nav_html,
                               interfaces=interfaces_menu(pages[url]),

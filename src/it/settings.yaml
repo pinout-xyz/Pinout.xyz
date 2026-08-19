@@ -5,8 +5,3 @@ resource_url: /resources/
 url_suffix:
 urls:
   GND: massa
-featured:
-- display-o-tron
-- piborg-ledborg
-- pibrella
-- rtk-000-001

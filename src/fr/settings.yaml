@@ -5,8 +5,3 @@ resource_url: /resources/
 url_suffix:
 urls:
   GND: masse
-featured:
-- 4tronix-picon-zero
-- ab-adc-pi-zero
-- piborg-ledborg
-- pibrella

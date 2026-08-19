@@ -44,6 +44,39 @@ pin:
     name: SPI1 MOSI
   '40':
     name: SPI1 SCLK
+  '27':
+    name: SPI CE0
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '28':
+    name: SPI MISO
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '3':
+    name: SPI MOSI
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '5':
+    name: SPI SCLK
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '7':
+    name: SPI CE0
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '29':
+    name: SPI MISO
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '31':
+    name: SPI MOSI
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '32':
+    name: SPI CE0
+    supported: Pi 4 and Pi 5 (spi5)
+  '33':
+    name: SPI MISO
+    supported: Pi 4 and Pi 5 (spi5)
+  '8':
+    name: SPI MOSI
+    supported: Pi 4 and Pi 5 (spi5)
+  '10':
+    name: SPI SCLK
+    supported: Pi 4 and Pi 5 (spi5)
 -->
 # SPI - Serial Peripheral Interface
 

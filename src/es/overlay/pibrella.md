@@ -25,56 +25,56 @@ ground:
 pin:
   '7':
     name: LED Verde
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '11':
     name: LED Amarillo
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '12':
     name: Zumbador
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '13':
     name: LED Rojo
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '15':
     name: Salida A
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '16':
     name: Salida B
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '18':
     name: Salida C
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '19':
     name: Entrada D
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '21':
     name: Entrada A
     direction: input
-    active: alto (encendido)
+    active: high
   '22':
     name: Salida D
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '23':
     name: Botón
     direction: input
-    active: alto (encendido)
+    active: high
   '24':
     name: Entrada C
     direction: input
-    active: alto (encendido)
+    active: high
   '26':
     name: Entrada B
     direction: input
-    active: alto (encendido)
+    active: high
 -->
 # Pibrella
 

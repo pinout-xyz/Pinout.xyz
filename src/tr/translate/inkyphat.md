@@ -44,6 +44,13 @@ pin:
     name: Chip Select
     mode: chipselect
     active: high
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
+i2c:
+  0x50:
+    device: Inky ID EEPROM
 -->
 # Inky pHAT
 

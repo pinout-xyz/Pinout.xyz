@@ -48,13 +48,13 @@ pin:
     name: RI
   '37':
     mode: output
-    name: Reset
+    name: Relay
   '37':
     mode: output
     name: Relay
   '38':
     mode: output
-    name: User Led
+    name: User Button
   '38':
     mode: input
     name: User Button

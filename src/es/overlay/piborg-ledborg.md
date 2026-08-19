@@ -23,19 +23,19 @@ ground:
 pin:
   '11':
     name: Red LED
-    direction: salida
-    active: alto (encendido)
-    description: LED Rojo PiBorg
+    direction: output
+    active: high
+    description: PiBorg Red LED
   '13':
     name: Green LED
-    direction: entrada
-    active: alto (encendido)
-    description: LED Verde PiBorg
+    direction: input
+    active: high
+    description: PiBorg Green LED
   '15':
     name: Blue LED
-    direction: salida
-    active: alto (encendido)
-    description: LED Azul PiBorg
+    direction: output
+    active: high
+    description: PiBorg Blue LED
 -->
 ### PiBorg LedBorg
 

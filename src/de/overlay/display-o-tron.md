@@ -21,38 +21,42 @@ ground:
   '14':
   '25':
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  7:
+  '7':
     name: Joystick Taste
     mode: input
     active: low
-  11:
+  '11':
     name: Joystick links
     mode: input
     active: low
-  13:
+  '13':
     name: Joystick oben
     mode: input
     active: low
-  15:
+  '15':
     name: Joystick rechts
     mode: input
     active: low
-  19:
+  '19':
     mode: spi
-  21:
+  '21':
     name: Joystick unten
     mode: input
     active: low
-  22:
+  '22':
     name: LCD CMD/DATA
     mode: output
     active: high
-  23:
+  '23':
     mode: spi
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
 -->
 # Display-o-Tron 3000
 

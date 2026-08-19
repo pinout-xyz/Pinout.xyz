@@ -13,6 +13,11 @@ pincount: 40
 eeprom: no
 
 pin:
+  '12':
+    name: Data
+    direction: output
+    mode: pwm
+    description: WS2812 Data
 
 power:
   '2':

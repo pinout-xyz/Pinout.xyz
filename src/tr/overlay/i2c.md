@@ -22,6 +22,76 @@ pin:
     name: EEPROM Clock
     direction: both
     active: high
+  '7':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c3) and Pi 5 (i2c2)
+  '29':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c3) and Pi 5 (i2c2)
+  '31':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c4) and Pi 5 (i2c3)
+  '26':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c4) and Pi 5 (i2c3)
+  '24':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c4) and Pi 5 (i2c0)
+  '21':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c4) and Pi 5 (i2c0)
+  '19':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c5) and Pi 5 (i2c1)
+  '23':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c5) and Pi 5 (i2c1)
+  '32':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c5) and Pi 5 (i2c2)
+  '33':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c5) and Pi 5 (i2c2)
+  '15':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 4 (i2c6) and Pi 5 (i2c3)
+  '16':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 4 (i2c6) and Pi 5 (i2c3)
+  '8':
+    name: I2C SDA
+    direction: both
+    active: high
+    supported: Pi 5 (i2c3)
+  '10':
+    name: I2C SCL
+    direction: both
+    active: high
+    supported: Pi 5 (i2c3)
 -->
 # I2C - Inter Integrated Circuit
 

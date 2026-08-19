@@ -25,17 +25,17 @@ pin:
     name: LED rouge
     direction: output
     active: high
-    description: LED rouge de la PiBorg
+    description: PiBorg Red LED
   '13':
     name: LED verte
     direction: input
     active: high
-    description: LED verte de la PiBorg
+    description: PiBorg Green LED
   '15':
     name: LED bleue
     direction: output
     active: high
-    description: LED bleue de la PiBorg
+    description: PiBorg Blue LED
 -->
 ### PiBorg LedBorg
 

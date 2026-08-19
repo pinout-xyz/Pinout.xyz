@@ -27,88 +27,88 @@ ground:
 pin:
   bcm0:
     name: 'Color: Blue'
-    direction: entrada
+    direction: input
   bcm1:
     name: Dot 7
-    direction: entrada
+    direction: input
   bcm2:
     name: Dot 22
-    direction: entrada
+    direction: input
   bcm3:
     name: Dot 21
-    direction: entrada
+    direction: input
   bcm4:
     name: Dot 2
-    direction: entrada
+    direction: input
   bcm5:
     name: Dot 9
-    direction: entrada
+    direction: input
   bcm6:
     name: Dot 14
-    direction: entrada
+    direction: input
   bcm7:
     name: Dot 6
-    direction: entrada
+    direction: input
   bcm8:
     name: Dot 18
-    direction: entrada
+    direction: input
   bcm9:
     name: Dot 17
-    direction: entrada
+    direction: input
   bcm10:
     name: 'Color: Verde'
-    direction: entrada
+    direction: input
   bcm11:
     name: Dot 8
-    direction: entrada
+    direction: input
   bcm12:
     name: Dot 10
-    direction: entrada
+    direction: input
   bcm13:
     name: Cloud
-    direction: entrada
+    direction: input
   bcm14:
     name: Dot 1
-    direction: entrada
+    direction: input
   bcm15:
     name: Dot 3
-    direction: entrada
+    direction: input
   bcm16:
     name: Dot 13
-    direction: entrada
+    direction: input
   bcm17:
     name: Dot 4
-    direction: entrada
+    direction: input
   bcm18:
     name: Dot 20
-    direction: entrada
+    direction: input
   bcm19:
     name: 'Color: Naranja'
-    direction: entrada
+    direction: input
   bcm20:
     name: Bear
-    direction: entrada
+    direction: input
   bcm21:
     name: Dot 12
-    direction: entrada
+    direction: input
   bcm22:
     name: Dot 15
-    direction: entrada
+    direction: input
   bcm23:
     name: Dot 16
-    direction: entrada
+    direction: input
   bcm24:
     name: Dot 19
-    direction: entrada
+    direction: input
   bcm25:
     name: Dot 5
-    direction: entrada
+    direction: input
   bcm26:
     name: Dot 11
-    direction: entrada
+    direction: input
   bcm27:
     name: 'Color: Rojo'
-    direction: entrada
+    direction: input
 -->
 # Raspberry Pi Dots
 

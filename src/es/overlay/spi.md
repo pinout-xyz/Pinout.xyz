@@ -13,28 +13,28 @@ pin:
     name: SPI1 CE0
   '19':
     name: SPI0 MOSI
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
     description: Master Out / Slave In
   '21':
     name: SPI0 MISO
-    direction: entrada
-    active: alto (encendido)
+    direction: input
+    active: high
     description: Master In / Slave Out
   '23':
     name: SPI0 SCLK
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
     description: Clock
   '24':
     name: SPI0 CE0
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
     description: Chip Select 0
   '26':
     name: SPI0 CE1
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
     description: Chip Select 1
   '35':
     name: SPI1 MISO
@@ -44,6 +44,39 @@ pin:
     name: SPI1 MOSI
   '40':
     name: SPI1 SCLK
+  '27':
+    name: SPI CE0
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '28':
+    name: SPI MISO
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '3':
+    name: SPI MOSI
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '5':
+    name: SPI SCLK
+    supported: Pi 4 (spi3) and Pi 5 (spi2)
+  '7':
+    name: SPI CE0
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '29':
+    name: SPI MISO
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '31':
+    name: SPI MOSI
+    supported: Pi 4 (spi4) and Pi 5 (spi3)
+  '32':
+    name: SPI CE0
+    supported: Pi 4 and Pi 5 (spi5)
+  '33':
+    name: SPI MISO
+    supported: Pi 4 and Pi 5 (spi5)
+  '8':
+    name: SPI MOSI
+    supported: Pi 4 and Pi 5 (spi5)
+  '10':
+    name: SPI SCLK
+    supported: Pi 4 and Pi 5 (spi5)
 -->
 # SPI - Serial Peripheral Interface
 

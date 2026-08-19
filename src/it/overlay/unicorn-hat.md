@@ -22,7 +22,7 @@ pin:
     direction: output
     mode: pwm
     active: high
-    description: WS2812 Dati
+    description: WS2812 Data
 install:
   'apt':
     - 'python-dev'

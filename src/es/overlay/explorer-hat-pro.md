@@ -30,67 +30,67 @@ pin:
   '7':
     name: LED 1
     mode: output
-    active: alto (encendido)
+    active: high
   '11':
     name: LED 2
     mode: output
-    active: alto (encendido)
+    active: high
   '13':
     name: LED 3
     mode: output
-    active: alto (encendido)
+    active: high
   '15':
     name: Entrada 2
     mode: input
-    active: alto (encendido)
+    active: high
   '16':
     name: Entrada 1
     mode: input
-    active: alto (encendido)
+    active: high
   '18':
     name: Entrada 3
     mode: input
-    active: alto (encendido)
+    active: high
   '22':
     name: Entrada 4
     mode: input
-    active: alto (encendido)
+    active: high
   '29':
     name: LED 4
     mode: output
-    active: alto (encendido)
+    active: high
   '31':
     name: Salida 1
     mode: output
-    active: alto (encendido)
+    active: high
   '32':
     name: Salida 2
     mode: output
-    active: alto (encendido)
+    active: high
   '33':
     name: Salida 3
     mode: output
-    active: alto (encendido)
+    active: high
   '35':
     name: Motor 1 +
     mode: output
-    active: alto (encendido)
+    active: high
   '36':
     name: Salida 4
     mode: output
-    active: alto (encendido)
+    active: high
   '37':
     name: Motor 2 -
     mode: output
-    active: alto (encendido)
+    active: high
   '38':
     name: Motor 1 -
     mode: output
-    active: alto (encendido)
+    active: high
   '40':
     name: Motor 2 +
     mode: output
-    active: alto (encendido)
+    active: high
 i2c:
   '0x28':
     name: Sensor capacitivo

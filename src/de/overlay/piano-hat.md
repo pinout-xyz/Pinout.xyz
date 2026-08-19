@@ -20,20 +20,20 @@ ground:
   '30':
   '34':
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  7:
+  '7':
     name: Alert A
     mode: input
-  11:
+  '11':
     name: Reset A
     mode: output
-  13:
+  '13':
     name: Alert B
     mode: input
-  15:
+  '15':
     name: Reset B
     mode: output
 i2c:

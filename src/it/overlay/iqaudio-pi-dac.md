@@ -32,16 +32,16 @@ pin:
     name: I2S
   '15':
     name: Muto/Non-muto
-    description: Solo Pi-AMP+ (opzionale) 
+    description: Pi-AMP+ only (optional)
   '16':
     name: Rotary Encoder
-    description: (opzionale) 
+    description: (optional)
   '18':
     name: Rotary Encoder
-    description: (opzionale)
+    description: (optional)
   '22':
     name: Sensore IR
-    description: (opzionale) 
+    description: (optional)
   '35':
     name: I2S
   '38':

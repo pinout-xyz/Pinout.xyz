@@ -53,6 +53,10 @@ pin:
     active: high
   '23':
     mode: spi
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
 -->
 # Display-o-Tron 3000
 

@@ -32,16 +32,16 @@ pin:
     name: I2S
   '15':
     name: Mutear/Desmutear
-    description: Solo Pi-AMP+ (opcional)
+    description: Pi-AMP+ only (optional)
   '16':
     name: Codificador rotatorio
-    description: (opcional)
+    description: (optional)
   '18':
     name: Codificador rotatorio
-    description: (opcional)
+    description: (optional)
   '22':
     name: Sensor de infrarrojos
-    description: (opcional)
+    description: (optional)
   '35':
     name: I2S
   '38':

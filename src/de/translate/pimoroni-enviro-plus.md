@@ -24,6 +24,9 @@ ground:
   '34':
   '39':
 pin:
+  '8':
+    mode: uart
+    name: PMS5003
   '10':
     mode: uart
     name: PMS5003

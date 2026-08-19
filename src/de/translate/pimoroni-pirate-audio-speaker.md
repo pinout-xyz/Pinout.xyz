@@ -34,6 +34,8 @@ pin:
     name: Button X
   '38':
     name: Button Y
+  '18':
+    name: Button Y
   '33':
     name: LCD Backlight
   '21':

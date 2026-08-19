@@ -19,10 +19,10 @@ ground:
 pin:
   '12':
     name: Datos
-    direction: salida
+    direction: output
     mode: pwm
-    active: alto (encendido)
-    description: WS2812 Datos
+    active: high
+    description: WS2812 Data
 install:
   'apt':
     - 'python-dev'

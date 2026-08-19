@@ -22,7 +22,7 @@ pin:
   '35':
     name: I2S
   '38':
-    name: I2S
+    name: Button Y
   '29':
     name: Button A
   '31':

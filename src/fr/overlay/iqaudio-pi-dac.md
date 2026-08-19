@@ -32,16 +32,16 @@ pin:
     name: I2S
   '15':
     name: silence
-    description: pour le Pi-AMP+ (option)
+    description: Pi-AMP+ only (optional)
   '16':
     name: encodeur rotatif
-    description: (option)
+    description: (optional)
   '18':
     name: encodeur rotatif
-    description: (option)
+    description: (optional)
   '22':
     name: capteur IR
-    description: (option)
+    description: (optional)
   '35':
     name: I2S
   '38':

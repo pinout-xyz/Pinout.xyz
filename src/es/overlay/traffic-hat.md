@@ -26,24 +26,24 @@ ground:
 pin:
   '15':
     name: LED1 / Verde
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '16':
     name: LED2 / Amarillo
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '18':
     name: LED3 / Rojo
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
   '22':
     name: Botón
-    direction: entrada
-    active: alto (encendido)
+    direction: input
+    active: high
   '29':
     name: Zumbador
-    direction: salida
-    active: alto (encendido)
+    direction: output
+    active: high
 -->
 # Traffic HAT
 

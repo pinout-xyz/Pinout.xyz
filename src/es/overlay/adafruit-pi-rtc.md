@@ -23,7 +23,7 @@ pin:
 i2c:
   '0x68':
     name: PCF8523
-    device: PCF8523
+    device: PCF8523 
 -->
 # PiRTC
 

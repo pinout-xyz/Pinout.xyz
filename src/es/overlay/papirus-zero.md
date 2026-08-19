@@ -62,7 +62,7 @@ pin:
   '37':
     name: SW5
     mode: input
-    active: low
+    active: low  
   '38':
     name: SW3
     mode: input

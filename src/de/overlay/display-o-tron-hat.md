@@ -20,29 +20,33 @@ ground:
   '9':
   '39':
 pin:
-  3:
+  '3':
     mode: i2c
-  5:
+  '5':
     mode: i2c
-  22:
-    name: LCD CMD/DATA
-    mode: output
-    active: high
-  19:
+  '19':
     mode: spi
-  22:
+  '22':
     name: LCD Register Select
     mode: output
-  23:
+    active: high
+  '23':
     mode: spi
-  24:
+  '24':
     name: LCD Chip Select
     mode: chipselect
     active: high
-  32:
+  '32':
     name: LCD Reset
     mode: output
     active: low
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
+  '0x2c':
+    name: Cap Touch
+    device: cap1166
 -->
 # Display-o-Tron HAT
 

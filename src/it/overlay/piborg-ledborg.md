@@ -25,17 +25,17 @@ pin:
     name: LED rosso
     direction: output
     active: high
-    description: PiBorg LED rosso
+    description: PiBorg Red LED
   '13':
     name: LED verde
     direction: input
     active: high
-    description: PiBorg LED verde
+    description: PiBorg Green LED
   '15':
     name: LED blu
     direction: output
     active: high
-    description: PiBorg LED blu
+    description: PiBorg Blue LED
 -->
 # PiBorg LedBorg
 

@@ -24,6 +24,10 @@ ground:
   '30':
   '39':
 pin:
+  '3':
+    mode: i2c
+  '5':
+    mode: i2c
   '7':
     name: LED 1
     mode: output
@@ -72,6 +76,10 @@ pin:
     name: Output 4
     mode: output
     active: high
+i2c:
+  '0x28':
+    name: Cap Touch
+    device: cap1208
 install:
   'devices':
     - 'i2c'

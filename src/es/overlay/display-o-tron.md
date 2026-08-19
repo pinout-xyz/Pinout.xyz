@@ -28,31 +28,35 @@ pin:
   '7':
     name: Botón del Joystick
     mode: input
-    active: bajo (apagado)
+    active: low
   '11':
     name: Joystick Izquierda
     mode: input
-    active: bajo (apagado)
+    active: low
   '13':
     name: Joystick Arriba
     mode: input
-    active: bajo (apagado)
+    active: low
   '15':
     name: Joystick Derecha
     mode: input
-    active: bajo (apagado)
+    active: low
   '19':
     mode: spi
   '21':
     name: Joystick Abajo
     mode: input
-    active: bajo (apagado)
+    active: low
   '22':
     name: LCD CMD/DATA
     mode: output
-    active: alto (encendido)
+    active: high
   '23':
     mode: spi
+i2c:
+  '0x54':
+    name: Backlight
+    device: sn3218
 -->
 # Display-o-Tron 3000
 

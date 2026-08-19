@@ -559,6 +559,12 @@ def get_hreflang_urls(src):
                 lang=lang,
                 url=url
             ))
+
+    if src in alternate_urls.get('en', {}):
+        hreflang.append('<link rel="alternate" href="{url}" hreflang="x-default"/>'.format(
+            url=alternate_urls['en'][src]
+        ))
+
     return hreflang
 
 

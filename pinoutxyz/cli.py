@@ -3,7 +3,7 @@ import os
 import shutil
 import sys
 
-from . import drafts, settings, translations, urls
+from . import drafts, overlays, settings, translations, urls
 from .build import build
 from .site import Reporter, Site
 
@@ -26,11 +26,12 @@ def resolve(root, requested):
 
 def build_languages(root, languages, verbose=False):
     reporter = Reporter(verbose)
-    alternates = urls.alternates(root)
+    source = overlays.load_source(root, reporter.warn)
+    alternates = urls.alternates(root, source)
 
     for lang in languages:
         reporter.info('\nBuilding {}...'.format(lang))
-        build(Site(root, lang, alternates, reporter))
+        build(Site(root, lang, alternates, reporter, source))
 
     return reporter
 

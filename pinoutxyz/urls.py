@@ -19,7 +19,7 @@ def pin_url(pins, number):
     return slugify('pin{}_{}'.format(number, name))
 
 
-def for_language(root, lang):
+def for_language(root, lang, source=None):
     conf = settings.load_settings(root, lang)
     pins = Pins(root, lang)
 
@@ -34,8 +34,7 @@ def for_language(root, lang):
         if url is not None:
             found['pin{}'.format(number)] = site + base_url + url
 
-    for path in overlays.paths(root, lang):
-        data = overlays.load(path)
+    for data in overlays.load_all(root, lang, source):
         found[data['src']] = site + base_url + data['page_url']
 
     found['index'] = site + site_url
@@ -44,5 +43,7 @@ def for_language(root, lang):
     return found
 
 
-def alternates(root='.'):
-    return {lang: for_language(root, lang) for lang in settings.languages(root)}
+def alternates(root='.', source=None):
+    if source is None:
+        source = overlays.load_source(root)
+    return {lang: for_language(root, lang, source) for lang in settings.languages(root)}

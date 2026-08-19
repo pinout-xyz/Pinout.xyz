@@ -11,7 +11,7 @@ LEGEND_URLS = (('url_gpio', 'gpio', 'gpio'),
 
 
 class Site:
-    def __init__(self, root, lang, alternates=None, reporter=None):
+    def __init__(self, root, lang, alternates=None, reporter=None, source=None):
         self.root = root
         self.lang = lang
         self.report = reporter if reporter is not None else Reporter()
@@ -26,7 +26,7 @@ class Site:
         for name in overlays.duplicates(root, lang):
             self.report.warn('{} exists in both overlay and translate, only one of them will be used'.format(name))
 
-        self.overlays = overlays.load_all(root, lang, self.report.warn)
+        self.overlays = overlays.load_all(root, lang, source, self.report.warn)
 
         found = {overlay['src']: overlay['page_url'] for overlay in self.overlays}
         for key, src, default in LEGEND_URLS:

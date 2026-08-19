@@ -14,12 +14,12 @@ def to_html(text):
     return html.replace('<table', TABLE_SCROLL[0]).replace('</table>', TABLE_SCROLL[1])
 
 
-def load(path):
-    text = open(path).read().replace('\r', '')
+def frontmatter(path):
+    return parse(open(path).read().replace('\r', ''))
 
+
+def parse(text):
     match = FRONTMATTER.search(text)
-    html = to_html(FRONTMATTER.sub('', text))
-
     heading = HEADING.search(text)
     if heading is not None:
         heading = heading.group(0).replace('#', '').strip()
@@ -36,4 +36,9 @@ def load(path):
     elif heading is not None:
         data = {'title': heading}
 
-    return {'data': data, 'html': html}
+    return data
+
+
+def load(path):
+    text = open(path).read().replace('\r', '')
+    return {'data': parse(text), 'html': to_html(FRONTMATTER.sub('', text))}

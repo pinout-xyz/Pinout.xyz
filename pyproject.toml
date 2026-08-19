@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pinoutxyz"
+version = "1.0.0"
+description = "Build and maintain Pinout.xyz"
+requires-python = ">=3.9"
+dependencies = [
+    "Markdown",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+serve = ["Flask"]
+api = ["pillow"]
+
+[project.scripts]
+pinoutxyz = "pinoutxyz.cli:main"
+
+[tool.setuptools]
+packages = ["pinoutxyz"]

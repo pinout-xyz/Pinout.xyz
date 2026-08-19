@@ -615,7 +615,13 @@ language_names = get_language_names()
 
 pinout.load(lang)
 
-overlays = glob.glob("src/{}/overlay/*.md".format(lang)) + glob.glob("src/{}/translate/*.md".format(lang))
+overlay_files = glob.glob("src/{}/overlay/*.md".format(lang))
+translate_files = glob.glob("src/{}/translate/*.md".format(lang))
+
+for duplicate in sorted(set(map(os.path.basename, overlay_files)) & set(map(os.path.basename, translate_files))):
+    debug(1, "{} exists in both overlay and translate, only one of them will be used".format(duplicate))
+
+overlays = overlay_files + translate_files
 
 strings = pinout.get_string('strings', {})
 

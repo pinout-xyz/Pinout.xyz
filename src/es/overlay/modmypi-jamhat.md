@@ -67,7 +67,7 @@ pin:
 
 Una placa complementaria con LED, botón y zumbador para Raspberry Jams, Jam Makers y personas que están aprendiendo lo básico de GPIO.
 
-La placa tiene 6 LEDs, 2 botone y un zumbador tonal que permiten un montón de experimentación hardware utilizando la biblioteca GPIO Zero library para una sencillez de uso.
+La placa tiene 6 LEDs, 2 botones y un zumbador tonal que permiten un montón de experimentación hardware utilizando la biblioteca GPIO Zero para una sencillez de uso.
 ```
 from gpiozero import JamHat
 from time import sleep

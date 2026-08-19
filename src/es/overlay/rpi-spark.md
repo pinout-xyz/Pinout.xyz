@@ -88,7 +88,7 @@ i2c:
 
 RPi-Spark pHAT y SDK te permite construir rápida y fácilmente tus proyectos para Raspberry Pi GPIO.
 
-Por ejemplo:: juegos, coches de control remoto, coches de equilibrio, podómetros deportivos, monitor de servidor y otros proyectos.
+Por ejemplo: juegos, coches de control remoto, coches de equilibrio, podómetros deportivos, monitor de servidor y otros proyectos.
 
 ## Especificaciones
 

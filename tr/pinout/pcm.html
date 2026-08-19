@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi PCM pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T121453" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T190716" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/pcm" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pcm" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/pcm" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pcm" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T121453"/>
-		<!-- Build: 20260819T121453 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190716"/>
+		<!-- Build: 20260819T190716 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="PCM - Raspberry Pi Pinleri">
@@ -109,7 +109,7 @@
 						<p>Orientate your Pi with the GPIO on the right and the HDMI port(s) on the left.</p>
 						<ul>
 							<li class="gpio">
-								<a href="/tr/pinout/wiringpi" title="GPIO (General Purpose IO)">
+								<a href="/tr/pinout/gpio" title="GPIO (General Purpose IO)">
 									<span class="default"></span>
 									<span class="pin"></span> GPIO <small>(General Purpose IO)</small>
 								</a>
@@ -139,7 +139,7 @@
 								</a>
 							</li>
 							<li class="gnd">
-								<a href="/tr/pinout/ground" title="Ground">
+								<a href="/tr/pinout/toprak" title="Ground">
 									<span class="default"></span>
 									<span class="pin"></span> Ground
 								</a>
@@ -166,13 +166,15 @@
 					Support us: <a href="https://www.pcbway.com/?from=pinout.xyz03">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/tr/pinout/1_wire">1-WIRE</a></li><li><a href="/tr/pinout/dpi">DPI</a></li><li><a href="/tr/pinout/gpclk">GPCLK</a></li><li><a href="/tr/pinout/i2c">I2C</a></li><li><a href="/tr/pinout/jtag">JTAG</a></li><li class="selected"><a href="/tr/pinout/pcm">PCM</a></li><li><a href="/tr/pinout/sdio">SDIO</a></li><li><a href="/tr/pinout/spi">SPI</a></li><li><a href="/tr/pinout/toprak">Toprak</a></li><li><a href="/tr/pinout/uart">UART</a></li><li><a href="/tr/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/tr/pinout/gpio">GPIO</a></li><li><a href="/tr/pinout/3v3_power">3v3 Power</a></li><li><a href="/tr/pinout/5v_power">5v Power</a></li><li><a href="/tr/pinout/1_wire">1-WIRE</a></li><li><a href="/tr/pinout/dpi">DPI</a></li><li><a href="/tr/pinout/gpclk">GPCLK</a></li><li><a href="/tr/pinout/i2c">I2C</a></li><li><a href="/tr/pinout/jtag">JTAG</a></li><li class="selected"><a href="/tr/pinout/pcm">PCM</a></li><li><a href="/tr/pinout/pwm">PWM</a></li><li><a href="/tr/pinout/sdio">SDIO</a></li><li><a href="/tr/pinout/spi">SPI</a></li><li><a href="/tr/pinout/toprak">Toprak</a></li><li><a href="/tr/pinout/uart">UART</a></li><li><a href="/tr/pinout/wiringpi">WiringPi</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail"><p><a class="more" href="/tr/boards">Browse more HATs, pHATs and add-ons &raquo;</a></p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_pcm"><h1>PCM - Pulse-code Modulation</h1>
 <p>PCM (Pulse-code Modulation) is a digital representation of sampled analog. On the Raspberry Pi it's a form of digital audio output which can be understood by a DAC for high quality sound.</p>
+<p>These are the pins you'll want for I2S (Inter-IC Sound), which is the signalling most audio HATs and DACs use and the name they usually give it.</p>
+<p>I2S is off by default. <code>dtparam=i2s=on</code> in /boot/firmware/config.txt enables it, though most audio HATs ship an overlay that does this as part of their own setup.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li>Kullanan 4 GPIO pins</li>
 </ul></td><td></td></tr></table></article>
@@ -187,7 +189,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T121453'></script>
+		<script src='/resources/pinout.js?v=20260819T190716'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

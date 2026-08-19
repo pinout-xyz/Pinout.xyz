@@ -17,29 +17,17 @@ The Raspberry Pi supports one-wire on any GPIO pin, but the default is GPIO 4.
 
 ## Enable via config.txt
 
-To enable the one-wire interface you need to add the following line to /boot/firmware/config.txt, before rebooting your Pi:
+Add the overlay to /boot/firmware/config.txt and reboot, or let `raspi-config` do it for you:
 
 ```
 dtoverlay=w1-gpio
 ```
 
-or 
+The default pin is GPIO 4. Any other pin needs the `gpiopin` parameter, for example `dtoverlay=w1-gpio,gpiopin=17`.
 
-```
-dtoverlay=w1-gpio,gpiopin=x
-```
+## Enable at runtime
 
-if you would like to use a custom pin (the default is GPIO 4)
-
-## Enable manually
-
-Alternatively you can enable the one-wire interface on demand using `raspi-config`, or the following:
-
-```
-sudo modprobe w1-gpio
-```
-
-Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire buses to be used at the same time:
+Kernels since 4.9.28 can load overlays without a reboot, including several 1-Wire buses at once:
 
 ```
 sudo dtoverlay w1-gpio gpiopin=4  # header pin 7
@@ -47,10 +35,6 @@ sudo dtoverlay w1-gpio gpiopin=17 # header pin 11
 sudo dtoverlay w1-gpio gpiopin=27 # header pin 13
 ```
 
-once any of the steps above have been performed, and discovery is complete you can list the devices that your Raspberry Pi has discovered via all 1-Wire buses (by default GPIO 4), like so:
-
-```
-ls /sys/bus/w1/devices/
-```
+Devices found on any of the buses appear in `/sys/bus/w1/devices/`.
 
 Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). [GPIO 2 and GPIO 3](/pinout/i2c) already have a 1.8 kΩ pull-up fitted, which will do the same job if you can spare the I2C pins. Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.

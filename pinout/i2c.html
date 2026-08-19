@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi I2C pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T121436" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T190650" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/i2c" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/i2c" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/i2c" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/i2c" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T121436"/>
-		<!-- Build: 20260819T121436 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190650"/>
+		<!-- Build: 20260819T190650 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="I2C at Raspberry Pi GPIO Pinout">
@@ -109,7 +109,7 @@
 						<p>Orientate your Pi with the GPIO on the right and the HDMI port(s) on the left.</p>
 						<ul>
 							<li class="gpio">
-								<a href="/pinout/wiringpi" title="GPIO (General Purpose IO)">
+								<a href="/pinout/gpio" title="GPIO (General Purpose IO)">
 									<span class="default"></span>
 									<span class="pin"></span> GPIO <small>(General Purpose IO)</small>
 								</a>
@@ -166,7 +166,7 @@
 					Support us: <a href="https://www.pcbway.com/?from=pinout.xyz03">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li class="selected"><a href="/pinout/i2c">I2C</a></li><li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/pcm">PCM</a></li><li><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/pinout/gpio">GPIO</a></li><li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li class="selected"><a href="/pinout/i2c">I2C</a></li><li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/pcm">PCM</a></li><li><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail"><p><a class="more" href="/boards">Click here to browse pinouts for HATs & pHATs &raquo;</a></p></div>
@@ -175,20 +175,11 @@
 <p>GPIO 2 and GPIO 3 - the Raspberry Pi's I2C1 pins - allow for two-wire communication with a variety of external sensors and devices.</p>
 <p>The I2C pins include a fixed 1.8 kΩ pull-up resistor to 3.3v. They are not suitable for use as general purpose IO where a pull-up might interfere.</p>
 <p>I2C is a multi-drop bus, multiple devices can be connected to these same two pins. Each device has its own unique I2C address.</p>
-<p>You can verify the address of connected I2C peripherals with a simple one-liner:</p>
-<pre><code class="language-bash">sudo apt-get install i2c-tools
-sudo i2cdetect -y 1
-</code></pre>
-<p>You can then access I2C from Python using the smbus library:</p>
-<pre><code class="language-python">import smbus
-DEVICE_BUS = 1
-DEVICE_ADDR = 0x15
-bus = smbus.SMBus(DEVICE_BUS)
-bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
-</code></pre>
+<p>I2C is turned off on a stock Raspberry Pi OS image. Enable it with <code>raspi-config</code>, or by adding <code>dtparam=i2c_arm=on</code> to <code>/boot/firmware/config.txt</code>.</p>
+<p>Once it's on, <code>i2cdetect -y 1</code> from the <code>i2c-tools</code> package lists the addresses responding on the bus.</p>
 <p>GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typically used by the system to read the HAT EEPROM.</p>
 <h2>More than one bus</h2>
-<p>Only i2c1 is enabled by default. Pi 4 and Pi 5 both have several more buses, and most of the low-numbered GPIO pins can carry one, but the numbering differs between the two models:</p>
+<p>i2c1 is the only bus available without an overlay. Pi 4 and Pi 5 both have several more, each on a pair of low-numbered GPIO pins, but the numbering differs between the two models:</p>
 <ul>
 <li>GPIO 0 and GPIO 1: i2c0 on both, or i2c6 on Pi 4. Usually left alone for the HAT EEPROM.</li>
 <li>GPIO 2 and GPIO 3: i2c1 on both, or i2c3 on Pi 4.</li>
@@ -215,7 +206,7 @@ bus.write_byte_data(DEVICE_ADDR, 0x00, 0x01)
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T121436'></script>
+		<script src='/resources/pinout.js?v=20260819T190650'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

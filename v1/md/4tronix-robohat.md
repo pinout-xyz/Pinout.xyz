@@ -7,7 +7,6 @@ formfactor: HAT
 manufacturer: 4tronix
 description: Robotics controller HAT
 url: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=547
-github:
 buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=547
 image: '4tronix-robohat.png'
 pincount: 40

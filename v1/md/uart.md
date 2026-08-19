@@ -122,14 +122,3 @@ Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins,
 * uart5 on Pi 4, uart4 on Pi 5: TXD on GPIO 12, RXD on GPIO 13, CTS on GPIO 14, RTS on GPIO 15
 
 These are enabled with a device tree overlay - `dtoverlay=uart2` on Pi 4, `dtoverlay=uart1-pi5` on Pi 5 - and the CTS/RTS pins are enabled with an additional `ctsrts` parameter.
-
-## Using a UART from WiringPi
-
-Assuming you have WiringPi-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'
-
-```python
-import wiringpi
-wiringpi.wiringPiSetup()
-serial = wiringpi.serialOpen('/dev/ttyAMA0',9600)
-wiringpi.serialPuts(serial,'hello world!')
-```

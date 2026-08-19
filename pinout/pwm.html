@@ -6,14 +6,18 @@
 		<meta name="description" content="Raspberry Pi PWM pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T121436" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T190650" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/pwm" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pwm" hreflang="en"/>
+		<link rel="alternate" href="https://pinout.xyz/es/pinout/pwm" hreflang="es"/>
+		<link rel="alternate" href="https://pinout.xyz/fr/pinout/pwm" hreflang="fr"/>
+		<link rel="alternate" href="https://pinout.xyz/it/pinout/pwm" hreflang="it"/>
+		<link rel="alternate" href="https://pinout.xyz/tr/pinout/pwm" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pwm" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T121436"/>
-		<!-- Build: 20260819T121436 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190650"/>
+		<!-- Build: 20260819T190650 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="PWM at Raspberry Pi GPIO Pinout">
@@ -28,6 +32,10 @@
 			<nav id="lang" aria-label="Choose a language">
 				<a href="https://pinout.xyz/de/pinout/pwm" rel="alternate" hreflang="de" lang="de" title="Deutsch"><img src="/resources/flags/de.svg" width="16" height="12" alt="Deutsch" /></a>
 				<a href="https://pinout.xyz/pinout/pwm" rel="alternate" hreflang="en" lang="en" title="English" aria-current="true"><img class="grayscale" src="/resources/flags/gb.svg" width="16" height="12" alt="English" /></a>
+				<a href="https://pinout.xyz/es/pinout/pwm" rel="alternate" hreflang="es" lang="es" title="Español"><img src="/resources/flags/es.svg" width="16" height="12" alt="Español" /></a>
+				<a href="https://pinout.xyz/fr/pinout/pwm" rel="alternate" hreflang="fr" lang="fr" title="Français"><img src="/resources/flags/fr.svg" width="16" height="12" alt="Français" /></a>
+				<a href="https://pinout.xyz/it/pinout/pwm" rel="alternate" hreflang="it" lang="it" title="Italiano"><img src="/resources/flags/it.svg" width="16" height="12" alt="Italiano" /></a>
+				<a href="https://pinout.xyz/tr/pinout/pwm" rel="alternate" hreflang="tr" lang="tr" title="Türkçe"><img src="/resources/flags/tr.svg" width="16" height="12" alt="Türkçe" /></a>
 			</nav>
 		</header>
 		<main>
@@ -101,7 +109,7 @@
 						<p>Orientate your Pi with the GPIO on the right and the HDMI port(s) on the left.</p>
 						<ul>
 							<li class="gpio">
-								<a href="/pinout/wiringpi" title="GPIO (General Purpose IO)">
+								<a href="/pinout/gpio" title="GPIO (General Purpose IO)">
 									<span class="default"></span>
 									<span class="pin"></span> GPIO <small>(General Purpose IO)</small>
 								</a>
@@ -158,7 +166,7 @@
 					Support us: <a href="https://www.pcbway.com/?from=pinout.xyz03">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li><a href="/pinout/i2c">I2C</a></li><li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/pcm">PCM</a></li><li class="selected"><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/pinout/gpio">GPIO</a></li><li><a href="/pinout/3v3_power">3v3 Power</a></li><li><a href="/pinout/5v_power">5v Power</a></li><li><a href="/pinout/ground">Ground</a></li><li><a href="/pinout/1_wire">1-WIRE</a></li><li><a href="/pinout/dpi">DPI</a></li><li><a href="/pinout/gpclk">GPCLK</a></li><li><a href="/pinout/i2c">I2C</a></li><li><a href="/pinout/jtag">JTAG</a></li><li><a href="/pinout/pcm">PCM</a></li><li class="selected"><a href="/pinout/pwm">PWM</a></li><li><a href="/pinout/sdio">SDIO</a></li><li><a href="/pinout/spi">SPI</a></li><li><a href="/pinout/uart">UART</a></li><li><a href="/pinout/wiringpi">WiringPi</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail"><p><a class="more" href="/boards">Click here to browse pinouts for HATs & pHATs &raquo;</a></p></div>
@@ -172,6 +180,23 @@ a motor.</p>
 <p>The PWM controller that has outputs available on the Raspberry Pi header
 (<code>pwm@7e20c000</code>) has two independent channels. The output of the first can be
 routed to GPIO 12 or GPIO 18, the second's output to GPIO 13 or GPIO 19.</p>
+<p>On Pi 5 the RP1 PWM block has four channels instead of two, one each on GPIO 12,
+GPIO 13, GPIO 18 and GPIO 19.</p>
+<h2>Enable via config.txt</h2>
+<p><code>dtoverlay=pwm</code> sets up one channel and <code>dtoverlay=pwm-2chan</code> sets up both, on
+GPIO 18 and GPIO 19 by default. The <code>pin</code> and <code>func</code> parameters move a channel to
+another of its pins:</p>
+<pre><code>dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
+</code></pre>
+<p><code>func</code> is the function number for the pin you pick: 4 for GPIO 12 and GPIO 13, 2
+for GPIO 18 and GPIO 19. These are the numbers the older models use, and they
+still work on Pi 5, where the RP1 GPIO driver maps each one to the closest
+matching RP1 function. Overlays written before Pi 5 don't need a Pi 5 variant.</p>
+<p>The onboard analogue audio output uses both channels, so it can't be used at the
+same time as PWM. GPIO 18 and GPIO 19 are also the I2S clock and frame select,
+which makes GPIO 12 and GPIO 13 the pair to use alongside an I2S audio HAT.</p>
+<p>Pi 5 also has <code>dtoverlay=pwm-pio</code>, which drives a PWM signal from PIO on any pin
+in bank 0 rather than from the PWM block.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li>Uses 4 GPIO pins</li>
 </ul></td><td></td></tr></table></article>
@@ -185,7 +210,7 @@ routed to GPIO 12 or GPIO 18, the second's output to GPIO 13 or GPIO 19.</p>
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T121436'></script>
+		<script src='/resources/pinout.js?v=20260819T190650'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

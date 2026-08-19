@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi General Purpose Clock" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T121431" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T190643" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/gpclk" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpclk" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/gpclk" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpclk" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T121431"/>
-		<!-- Build: 20260819T121431 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190643"/>
+		<!-- Build: 20260819T190643 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="GPCLK at Raspberry Pi GPIO Pinout">
@@ -109,7 +109,7 @@
 						<p>Orientate your Pi with the GPIO on the right and the HDMI port(s) on the left.</p>
 						<ul>
 							<li class="gpio">
-								<a href="/de/pinout/wiringpi" title="GPIO (General Purpose IO)">
+								<a href="/de/pinout/gpio" title="GPIO (General Purpose IO)">
 									<span class="default"></span>
 									<span class="pin"></span> GPIO <small>(General Purpose IO)</small>
 								</a>
@@ -139,7 +139,7 @@
 								</a>
 							</li>
 							<li class="gnd">
-								<a href="/de/pinout/ground" title="Ground">
+								<a href="/de/pinout/masse_ground" title="Ground">
 									<span class="default"></span>
 									<span class="pin"></span> Ground
 								</a>
@@ -166,7 +166,7 @@
 					Support us: <a href="https://www.pcbway.com/?from=pinout.xyz03">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/de/pinout/1_wire">1-WIRE</a></li><li><a href="/de/pinout/dpi">DPI</a></li><li class="selected"><a href="/de/pinout/gpclk">GPCLK</a></li><li><a href="/de/pinout/i2c">I2C</a></li><li><a href="/de/pinout/jtag">JTAG</a></li><li><a href="/de/pinout/masse_ground">Masse (Ground)</a></li><li><a href="/de/pinout/pcm">PCM</a></li><li><a href="/de/pinout/pwm">PWM</a></li><li><a href="/de/pinout/sdio">SDIO</a></li><li><a href="/de/pinout/spi">SPI</a></li><li><a href="/de/pinout/uart">UART</a></li><li><a href="/de/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/de/pinout/gpio">GPIO</a></li><li><a href="/de/pinout/3v3_power">3v3 Power</a></li><li><a href="/de/pinout/5v_power">5v Power</a></li><li><a href="/de/pinout/1_wire">1-WIRE</a></li><li><a href="/de/pinout/dpi">DPI</a></li><li class="selected"><a href="/de/pinout/gpclk">GPCLK</a></li><li><a href="/de/pinout/i2c">I2C</a></li><li><a href="/de/pinout/jtag">JTAG</a></li><li><a href="/de/pinout/masse_ground">Masse (Ground)</a></li><li><a href="/de/pinout/pcm">PCM</a></li><li><a href="/de/pinout/pwm">PWM</a></li><li><a href="/de/pinout/sdio">SDIO</a></li><li><a href="/de/pinout/spi">SPI</a></li><li><a href="/de/pinout/uart">UART</a></li><li><a href="/de/pinout/wiringpi">WiringPi</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail"><p><a class="more" href="/de/boards">Browse more HATs, pHATs and add-ons &raquo;</a></p></div>
@@ -174,16 +174,17 @@
 				<article class="page_gpclk"><h1>GPCLK - General Purpose CLock</h1>
 <p>General Purpose Clock pins can be set up to output a fixed frequency without any ongoing software control.</p>
 <p>The following clock sources are available:</p>
-<pre><code>0     0 Hz     Ground
-1     19.2 MHz oscillator
-2     0 Hz     testdebug0
-3     0 Hz     testdebug1
-4     0 Hz     PLLA
-5     1000 MHz PLLC (changes with overclock settings)
-6     500 MHz  PLLD
-7     216 MHz  HDMI auxiliary
-8-15  0 Hz     Ground
-</code></pre></article>
+<ul>
+<li>0 - Ground, 0 Hz</li>
+<li>1 - 19.2 MHz oscillator</li>
+<li>2 - testdebug0, 0 Hz</li>
+<li>3 - testdebug1, 0 Hz</li>
+<li>4 - PLLA, 0 Hz</li>
+<li>5 - PLLC, 1000 MHz, changes with overclock settings</li>
+<li>6 - PLLD, 500 MHz</li>
+<li>7 - HDMI auxiliary, 216 MHz</li>
+<li>8 to 15 - Ground, 0 Hz</li>
+</ul></article>
 			</section>
 
 		</main>
@@ -195,7 +196,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T121431'></script>
+		<script src='/resources/pinout.js?v=20260819T190643'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi SD0/SD1 pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T121449" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T190709" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/sdio" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/sdio" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/sdio" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/sdio" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T121449"/>
-		<!-- Build: 20260819T121449 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190709"/>
+		<!-- Build: 20260819T190709 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="SDIO - Assegnazione pin GPIO del Raspberry Pi">
@@ -109,7 +109,7 @@
 						<p>Orientate your Pi with the GPIO on the right and the HDMI port(s) on the left.</p>
 						<ul>
 							<li class="gpio">
-								<a href="/it/pinout/wiringpi" title="GPIO (General Purpose IO)">
+								<a href="/it/pinout/gpio" title="GPIO (General Purpose IO)">
 									<span class="default"></span>
 									<span class="pin"></span> GPIO <small>(General Purpose IO)</small>
 								</a>
@@ -139,7 +139,7 @@
 								</a>
 							</li>
 							<li class="gnd">
-								<a href="/it/pinout/ground" title="Ground">
+								<a href="/it/pinout/massa" title="Ground">
 									<span class="default"></span>
 									<span class="pin"></span> Ground
 								</a>
@@ -166,7 +166,7 @@
 					Support us: <a href="https://www.pcbway.com/?from=pinout.xyz03">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/it/pinout/1_wire">1-WIRE</a></li><li><a href="/it/pinout/dpi">DPI</a></li><li><a href="/it/pinout/gpclk">GPCLK</a></li><li><a href="/it/pinout/i2c">I2C</a></li><li><a href="/it/pinout/jtag">JTAG</a></li><li><a href="/it/pinout/massa">Massa</a></li><li><a href="/it/pinout/pcm">PCM</a></li><li class="selected"><a href="/it/pinout/sdio">SDIO</a></li><li><a href="/it/pinout/spi">SPI</a></li><li><a href="/it/pinout/uart">UART</a></li><li><a href="/it/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/it/pinout/gpio">GPIO</a></li><li><a href="/it/pinout/3v3_power">3v3 Power</a></li><li><a href="/it/pinout/5v_power">5v Power</a></li><li><a href="/it/pinout/1_wire">1-WIRE</a></li><li><a href="/it/pinout/dpi">DPI</a></li><li><a href="/it/pinout/gpclk">GPCLK</a></li><li><a href="/it/pinout/i2c">I2C</a></li><li><a href="/it/pinout/jtag">JTAG</a></li><li><a href="/it/pinout/massa">Massa</a></li><li><a href="/it/pinout/pcm">PCM</a></li><li><a href="/it/pinout/pwm">PWM</a></li><li class="selected"><a href="/it/pinout/sdio">SDIO</a></li><li><a href="/it/pinout/spi">SPI</a></li><li><a href="/it/pinout/uart">UART</a></li><li><a href="/it/pinout/wiringpi">WiringPi</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail"><p><a class="more" href="/it/boards">Browse more HATs, pHATs and add-ons &raquo;</a></p></div>
@@ -174,6 +174,12 @@
 				<article class="page_sdio"><h1>SDIO - SD Card Interface</h1>
 <p>SDIO is the SD host/eMMC interface on the Raspberry Pi. SD host signals are normally used for the microSD slot.</p>
 <p>These pins are "SD host" on Alt0 and "eMMC" on Alt3.</p>
+<h2>Enable via config.txt</h2>
+<p><code>dtoverlay=sdio</code> adds a second, four-bit SD interface on GPIO 22 to GPIO 27, and moves the microSD slot onto the bcm2835-sdhost driver. A one-bit interface uses GPIO 22 to GPIO 25 instead, leaving GPIO 26 and GPIO 27 free:</p>
+<pre><code>dtoverlay=sdio,bus_width=1,gpios_22_25
+</code></pre>
+<p>The older <code>sdio-1bit</code> overlay does the same thing and is deprecated.</p>
+<p>Pi 5 has its own version, <code>dtoverlay=sdio-pi5</code>, which uses the same six pins.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li>Utilizza 6 GPIO pins</li>
 </ul></td><td></td></tr></table></article>
@@ -188,7 +194,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T121449'></script>
+		<script src='/resources/pinout.js?v=20260819T190709'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

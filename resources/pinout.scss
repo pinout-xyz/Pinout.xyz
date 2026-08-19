@@ -10,6 +10,40 @@ $color-dark: #073642;
 
 $color-content-bg: rgba(235, 230, 211, 0.5);
 
+$pin-gnd: #002B36;
+
+$pin-bolt: "<path d='M21.2 0L4.4 19.8H13.8L10.6 32L27.6 12.2H18Z'/>";
+$pin-diamond: "<path d='M16 0l-10 16 10 16 10-16z'/>";
+$pin-heart: "<g transform='translate(0 1.6)'><path d='M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z'/></g>";
+$pin-spade: "<path d='M25.549 10.88c-6.049-4.496-8.133-8.094-9.549-10.88-1.415 2.785-3.5 6.384-9.549 10.88-10.314 7.665-0.606 18.365 7.93 12.476-0.556 3.654-2.454 6.318-4.381 7.465v1.179h12.001v-1.179c-1.928-1.147-3.825-3.811-4.382-7.465 8.535 5.889 18.244-4.811 7.93-12.476z'/>";
+$pin-club: "<path d='M24.588 12.274c-1.845 0-3.503 0.769-4.683 2.022-0.5 0.531-1.368 1.16-2.306 1.713 0.441-1.683 1.834-3.803 2.801-4.733 1.239-1.193 2-2.87 2-4.734 0-3.59-2.859-6.503-6.4-6.541-3.541 0.038-6.4 2.951-6.4 6.541 0 1.865 0.761 3.542 2 4.734 0.967 0.93 2.36 3.050 2.801 4.733-0.939-0.553-1.806-1.182-2.306-1.713-1.18-1.253-2.838-2.022-4.683-2.022-3.575 0-6.471 2.927-6.471 6.541s2.897 6.542 6.471 6.542c1.845 0 3.503-0.792 4.683-2.045 0.525-0.558 1.451-1.254 2.447-1.832-0.094 4.615-2.298 8.005-4.541 9.341v1.179h12v-1.179c-2.244-1.335-4.448-4.726-4.541-9.341 0.995 0.578 1.922 1.274 2.447 1.832 1.18 1.253 2.838 2.045 4.683 2.045 3.575 0 6.471-2.928 6.471-6.542s-2.897-6.541-6.471-6.541z'/>";
+
+$pin-shapes: (
+    gnd: ($pin-gnd, null),
+    pow3v3: ($color-yellow, square),
+    pow5v: ($color-red, $pin-bolt),
+    gpio: ($color-green, null),
+    i2c: ($color-blue, $pin-diamond),
+    spi: ($color-pink, $pin-heart),
+    pcm: ($color-cyan, $pin-club),
+    uart: ($color-purple, $pin-spade)
+);
+
+@mixin pin-shape($colour, $symbol) {
+    background: $colour;
+
+    @if $symbol == square {
+        border-radius: 0;
+    } @else if $symbol {
+        $mask: linear-gradient(#000000 0 0), url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-7.5 -7.5 47 47'>#{$symbol}</svg>");
+        -webkit-mask-image: $mask;
+        mask-image: $mask;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+        mask-composite: subtract;
+    }
+}
+
 $nav-bg: #5F8645;
 
 $overlay-pin-bg: rgb(235, 230, 211);
@@ -523,18 +557,29 @@ GPIO nav
     .pin {
         font-size:0.8em;
         line-height: 18px;
-        text-align: center;
+        text-align: right;
         text-indent: 0;
 
         display: block;
-        border-radius: 50%;
         width: 18px;
         height: 18px;
-        background: #002B36;
+        padding-right: 35px;
         position: absolute;
 
         right: 3px;
         top: 2px;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: $pin-gnd;
+        }
     }
 
     .top { // Right
@@ -544,10 +589,19 @@ GPIO nav
         a {
             border-top-left-radius: 13px;
             border-bottom-left-radius: 13px;
-            text-indent: 36px;
+            padding-left: 58px;
         }
         .pin {
             left: 3px;
+            right: auto;
+            padding-left: 35px;
+            padding-right: 0;
+            text-align: left;
+
+            &:before {
+                left: 0;
+                right: auto;
+            }
         }
     }
 
@@ -558,6 +612,7 @@ GPIO nav
         a {
             border-top-right-radius: 13px;
             border-bottom-right-radius: 13px;
+            padding-right: 58px;
         }
     }
 
@@ -572,17 +627,26 @@ GPIO nav
             border-radius: 0;
             border-top-right-radius: 13px;
             border-bottom-right-radius: 13px;
-            text-indent: 8px;
+            padding-left: 0;
+            padding-right: 58px;
         }
 
         .pin {
             left: auto;
             right: 3px;
+            padding-left: 0;
+            padding-right: 35px;
+            text-align: right;
+
+            &:before {
+                left: auto;
+                right: 0;
+            }
         }
 
         .overlay-ground .pin:after {
             left: auto;
-            right: -13px;
+            right: 25px;
             border-radius: 0;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
@@ -603,12 +667,21 @@ GPIO nav
             border-radius: 0;
             border-top-left-radius: 13px;
             border-bottom-left-radius: 13px;
-            text-indent: 36px;
+            padding-left: 58px;
+            padding-right: 0;
         }
 
         .pin {
             right: auto;
             left: 3px;
+            padding-left: 35px;
+            padding-right: 0;
+            text-align: left;
+
+            &:before {
+                right: auto;
+                left: 0;
+            }
         }
 
         .overlay-ground .pin:after {
@@ -644,17 +717,13 @@ GPIO nav
         }
     }
 
-    .gnd a {color:rgba(233, 229, 210, 0.5)};
+    .gnd .default {color:rgba(233, 229, 210, 0.5)};
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
     a:hover,
     .active a {
         background:rgb(245, 243, 237);
         color:#063541;
-    }
-
-    a:hover .pin, .overlay-pin .pin, .active .pin {
-        color: #E9E5D2;
     }
 
     li a small {font-size:0.8em;}
@@ -669,7 +738,7 @@ GPIO nav
                 color: $overlay-pin-fg-hover;
             }
         }
-        &.gnd a {
+        &.gnd .default {
             color:rgba(6, 53, 65, 0.5);
         }
     }
@@ -710,7 +779,8 @@ GPIO nav
     }
 
     .bottom .overlay-ground .pin:after {
-        left: -13px;
+        left: auto;
+        right: 25px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
@@ -728,15 +798,11 @@ GPIO nav
         background:rgba(200,0,0,0.6);
     }
 
-    .pin1 a:hover, .pin1.active a, .pin1 .pin {border-radius:0;}
+    .pin1 a:hover, .pin1.active a, .pin1 .pin:before {border-radius:0;}
 
-    .pow3v3 .pin {background:$color-yellow;}
-    .pow5v .pin {background:$color-red;}
-    .gpio .pin {background:$color-green;}
-    .i2c .pin {background:$color-blue;}
-    .spi .pin {background:$color-pink;}
-    .pcm .pin {background:$color-cyan;}
-    .uart .pin {background:$color-purple;}
+    @each $type, $shape in $pin-shapes {
+        .#{$type} .pin:before {@include pin-shape($shape...);}
+    }
 }
 .board #gpio {grid-row: 2;}
 
@@ -792,20 +858,15 @@ aside {display:contents;}
         color:$overlay-pin-fg;
     }
 
-    .pow3v3 .pin {background:$color-yellow;}
-    .pow5v .pin {background:$color-red;}
-    .gpio .pin {background:$color-green;}
-    .i2c .pin {background:$color-blue;}
-    .spi .pin {background:$color-pink;}
-    .uart .pin {background:$color-purple;}
-    .pcm .pin {background:$color-cyan;}
+    @each $type, $shape in $pin-shapes {
+        .#{$type} .pin {@include pin-shape($shape...);}
+    }
 
     .pin {
         display: block;
         border-radius:50%;
         width: 18px;
         height: 18px;
-        background: #002B36;
         position: absolute;
         left: 2px;
         top: 2px;

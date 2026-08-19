@@ -44,13 +44,13 @@ pin:
     name: LCD Data/Command
   '19':
     name: LCD SPI MOSI
-    mode: SPI
+    mode: spi
   '23':
     name: LCD SPI SCLK
-    mode: SPI
+    mode: spi
   '26':
     name: LCD SPI CS
-    mode: SPI
+    mode: spi
 install:
   'devices':
   - 'i2s'

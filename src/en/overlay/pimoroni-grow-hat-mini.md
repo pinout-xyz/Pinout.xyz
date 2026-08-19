@@ -46,16 +46,16 @@ pin:
   '33':
     name: Piezo
   '26':
-    mode: SPI
+    mode: spi
     name: Chip-select
   '32':
     name: Backlight
   '21':
     name: Data/Command
   '19':
-    mode: SPI
+    mode: spi
   '23':
-    mode: SPI
+    mode: spi
   '29':
     name: Button A
   '31':

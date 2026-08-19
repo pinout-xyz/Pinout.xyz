@@ -25,9 +25,9 @@ ground:
   '39':
 pin:
   '8':
-    mode: UART
+    mode: uart
   '10':
-    mode: UART
+    mode: uart
 -->
 # Serial Pi Plus
 

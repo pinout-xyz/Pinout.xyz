@@ -29,9 +29,9 @@ pin:
   '5':
     mode: i2c
   '8':
-    mode: UART
+    mode: uart
   '10':
-    mode: UART
+    mode: uart
   '12':
     name: PPS
 i2c:

@@ -81,6 +81,12 @@ docker run -p 8080:8080 pinout.xyz
 
 Now you can access the webserver at http://127.0.0.1:8080.
 
+Mount the repository over `/app` to work on the site without rebuilding the image. The container rebuilds and reserves whenever you edit anything under `src`, `common` or `resources`:
+
+```bash
+docker run -p 8080:8080 -v "$(pwd):/app" pinout.xyz
+```
+
 Set `PINOUT_LANG` to serve a language other than English:
 
 ```bash

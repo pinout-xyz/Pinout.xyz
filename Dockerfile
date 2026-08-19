@@ -16,4 +16,4 @@ RUN if [ -n "${PUBLISH_DRAFT}" ]; then python3 -m pinoutxyz boards publish "${PU
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "make serve LANG=${PINOUT_LANG:-en}"]
+CMD ["sh", "-c", "python3 -m pinoutxyz serve --watch --lang ${PINOUT_LANG:-en}"]

@@ -11,16 +11,13 @@ all: html resources
 deps:
 	python3 -m pip install -r requirements.txt
 
-css:
-	python3 mkcss.py
-
 html:
 	./generate-html.py $(LANG)
 
 resources:
 	cp -r resources phatstack output/$(LANG)/
 
-devel: css all resources
+devel: all resources
 	./serve.py ${LANG}
 
 clean:

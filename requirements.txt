@@ -7,4 +7,3 @@ MarkupSafe
 PyYAML
 Werkzeug
 pillow
-libsass

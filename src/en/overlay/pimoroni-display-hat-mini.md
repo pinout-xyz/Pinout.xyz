@@ -3,7 +3,7 @@
 name: Display HAT Mini
 class: board
 type: display
-formfactor: custom
+formfactor: Custom
 manufacturer: Pimoroni
 description: 320x240 2.0" LCD, RGB LED & 4 Buttons
 buy: https://shop.pimoroni.com/products/display-hat-mini

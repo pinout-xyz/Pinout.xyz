@@ -34,10 +34,10 @@ def form_factor(site, overlay):
     excluded = overlay['src'] in EXCLUDE_PINCOUNTS
 
     if 'formfactor' in overlay:
-        formfactor = str(overlay['formfactor'])
-        if pincount == 40 and formfactor == 'HAT':
+        formfactor = str(overlay['formfactor']).lower()
+        if pincount == 40 and formfactor == 'hat':
             return strings['type_hat']
-        if pincount == 40 and formfactor == 'pHAT':
+        if pincount == 40 and formfactor == 'phat':
             return strings['type_phat']
         if pincount == 40 and formfactor == '40-way':
             return header

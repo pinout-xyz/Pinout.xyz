@@ -3,7 +3,7 @@
 name: Inky wHAT
 class: board
 type: display
-formfactor: custom
+formfactor: Custom
 manufacturer: Pimoroni
 description: An e-paper display for your Raspberry Pi
 url: https://shop.pimoroni.com/products/inky-what

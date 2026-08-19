@@ -1,15 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-import json
-import re
-import sys
 import os
-import glob
-import unicodedata
+import sys
+
 from PIL import Image, ImageFont, ImageDraw
 
 
-sys.path.insert(0,"../")
+sys.path.insert(0, "..")
 BASE_DIR = "../"
 
 SOL_BLUE = (38, 139, 210)
@@ -41,13 +38,8 @@ LOGO = [0,0,1,0,
 LOGO_FONT = ImageFont.truetype("Lato-Semibold.ttf", 21)
 TEXT_FONT = ImageFont.truetype("Lato-Medium.ttf", 16)
 
-try:
-    import markdown
-except ImportError:
-    exit("This script requires the psutil module\nInstall with: sudo pip install Markdown")
-
-import markjaml
-import pinout
+from pinoutxyz import documents, overlays as overlay_files
+from pinoutxyz.pins import Pins
 
 output_dir = "v1/img"
 
@@ -56,57 +48,20 @@ lang = "en"
 if len(sys.argv) > 1:
     lang  = sys.argv[1]
 
-pinout.load(lang)
+header = Pins(BASE_DIR, lang)
 
-overlays = glob.glob("{}src/{}/overlay/*.md".format(BASE_DIR, lang))
-
-pages = {}
-
-
-def cssify(value):
-    value = slugify(value)
-    if value[0] == '3' or value[0] == '5':
-        value = 'pow' + value
-
-    return value
-
-
-def slugify(value):
-    """
-    Normalizes string, converts to lowercase, removes non-alpha characters,
-    and converts spaces to hyphens.
-    """
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '', value).strip().lower()
-    return re.sub('[-\s]+', '_', value)
+overlays = overlay_files.paths(BASE_DIR, lang)
 
 
 def load_overlay(overlay):
-    try:
-        data = markjaml.load(overlay)['data']
-        slug = slugify(data['name'])
-        data['slug'] = slug
+    data = documents.load(overlay)['data']
+    data['slug'] = overlay_files.page_url(data)
 
-        if "pin" in data:
-            for pin in list(data["pin"].keys()):
-                if str(pin).startswith("bcm"):
-                    data["pin"][pinout.bcm_to_physical(str(pin).replace("bcm",""))] = data["pin"][pin]
+    for pin in list((data.get("pin") or {}).keys()):
+        if str(pin).startswith("bcm"):
+            data["pin"][header.bcm_to_physical(str(pin).replace("bcm", ""))] = data["pin"][pin]
 
-        return data
-    except IOError:
-        print('Not found: {}/src/{}/overlay/{}.md'.format(BASE_DIR, lang, overlay))
-        return None
-
-
-def load_md(filename):
-    filename = 'src/{}/{}'.format(lang, filename)
-    try:
-        html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
-
-        return html
-    except IOError:
-        print('Unable to load markdown from {}'.format(filename))
-        return ''
+    return data
 
 
 overlays = map(load_overlay, overlays)

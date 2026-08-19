@@ -1,79 +1,27 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import json
-import re
+import os
 import sys
-import unicodedata
-import glob
-import markdown
 
-sys.path.insert(0, "../")
-BASE_DIR = "../"
+sys.path.insert(0, '..')
 
-import markjaml
-import pinout
+from pinoutxyz import documents, overlays
 
-lang = "en"
+BASE_DIR = '..'
+OUTPUT_DIR = 'v1/detail'
 
-if len(sys.argv) > 1:
-    lang  = sys.argv[1]
+lang = sys.argv[1] if len(sys.argv) > 1 else 'en'
 
-pinout.load(lang)
+for path in overlays.paths(BASE_DIR, lang):
+    data = documents.load(path)['data']
+    slug = overlays.page_url(data)
 
-overlays = glob.glob("{}src/{}/overlay/*.md".format(BASE_DIR, lang))
+    data['pinout_url'] = 'https://pinout.xyz/pinout/{}'.format(slug)
 
-pages = {}
+    for key in ('power', 'ground'):
+        if isinstance(data.get(key), dict):
+            data[key] = list(data[key].keys())
 
-
-def cssify(value):
-    value = slugify(value)
-    if value[0] == '3' or value[0] == '5':
-        value = 'pow' + value
-
-    return value
-
-
-def slugify(value):
-    """
-    Normalizes string, converts to lowercase, removes non-alpha characters,
-    and converts spaces to hyphens.
-    """
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub(r'[^\w\s-]', '', value).strip().lower()
-    return re.sub(r'[-\s]+', '_', value)
-
-
-def load_overlay(overlay):
-    try:
-        data = markjaml.load(overlay) 
-        slug = slugify(data['data']['name'])
-
-        filename = 'v1/detail/{}.json'.format(slug)
-        web_url = "https://pinout.xyz/pinout/{}".format(slug),
-
-        data['api_output_file'] = filename
-        data['data']['pinout_url'] = web_url
-
-        loaded = data
-    except IOError:
-        return None
-
-    return loaded
-
-overlays = list(map(load_overlay, overlays))
-
-for overlay in overlays:
-    for t in ['power', 'ground']:
-        try:
-            overlay['data'][t] = list(overlay['data'][t].keys())
-        except (KeyError, AttributeError):
-            pass
-    filename = overlay['api_output_file']
-    print(overlay['data'])
-    data = json.dumps(overlay['data'])
-    
-    #print("Writing: {}".format(filename))
-    #print(data)
-    f = open(filename, 'w')
-    f.write(data)
-    f.close()
+    with open(os.path.join(OUTPUT_DIR, '{}.json'.format(slug)), 'w') as handle:
+        handle.write(json.dumps(data))

@@ -7,7 +7,6 @@ formfactor: pHAT
 manufacturer: Raspberry Pi
 description: Receives digital DVB-T2 TV streams on your Raspberry Pi to view them or stream them over a network to other devices.
 url: https://www.raspberrypi.org/products/raspberry-pi-tv-hat/
-github:
 schematic: https://www.raspberrypi.org/app/uploads/2018/10/Raspberry-Pi-TV-HAT-Product-Brief.pdf
 buy: https://www.raspberrypi.org/products/raspberry-pi-tv-hat/
 image: 'tv-hat.png'

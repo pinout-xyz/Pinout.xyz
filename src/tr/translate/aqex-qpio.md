@@ -7,7 +7,6 @@ formfactor: HAT
 manufacturer: AQEX
 description: qPIO HAT - 4 Relays, 8 Isolated Inputs - The Raspberry Pi I/O Solution. 
 url: https://aqex.eu/qpio-raspberry-pi-io-module-with-8-input-4-output.html
-github: 
 buy: https://lectronz.com/products/aqex-qpio-4-relays-8-input-hat-raspberry-pi
 image: 'aqex-qpio.png'
 pincount: 40

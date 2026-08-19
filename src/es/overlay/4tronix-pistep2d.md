@@ -7,7 +7,6 @@ formfactor: pHAT
 manufacturer: 4tronix
 description: A Dual Stepper Motor Driver for Raspberry Pi
 url: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=554
-github:
 buy: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=554
 image: '4tronix-pistep2d.png'
 pincount: 40

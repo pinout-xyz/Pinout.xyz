@@ -274,24 +274,20 @@ def load_overlay(overlay):
                     else:
                         details.append('{address}: {device}'.format(address=addr, device=dev))
 
-        # A URL to more information about the add-on board, could be a GitHub readme or an about page
-        if 'url' in loaded:
-            details.append('[{text}]({url})'.format(text=strings['more_information'], url=loaded['url']))
+        links = (
+            ('url', strings['more_information']),
+            ('github', strings['github_repository']),
+            ('schematic', strings['board_schematic']),
+            ('buy', strings['buy_now']),
+        )
 
-        # Should only ever be a URL to the github repository with code supporting the product
-        if 'github' in loaded:
-            details.append('[{text}]({url})'.format(text=strings['github_repository'], url=loaded['github']))
-
-        # A URL referencing the add-on board schematic
-        if 'schematic' in loaded:
-            if loaded['schematic'] is not None:
-                details.append('[{text}]({url})'.format(text=strings['board_schematic'], url=loaded['schematic']))
-            else:
-                debug(1, "schematic defined in {}, but missing a value.".format(loaded['source']))
-
-        # A URL to a preferred place to buy the add-on board
-        if 'buy' in loaded:
-            details.append('[{text}]({url})'.format(text=strings['buy_now'], url=loaded['buy']))
+        for key, text in links:
+            if key not in loaded:
+                continue
+            if loaded[key] is None:
+                debug(1, "{} defined in {}, but missing a value.".format(key, loaded['source']))
+                continue
+            details.append('[{text}]({url})'.format(text=text, url=loaded[key]))
 
         details_html = markdown.markdown('\n'.join(map(lambda d: '* ' + d, details)))
 

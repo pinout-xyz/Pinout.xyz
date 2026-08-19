@@ -7,7 +7,7 @@ LANG := $(firstword $(LANG))
 LANGS := $(notdir $(wildcard src/??))
 SITE := output/site
 
-.PHONY: resources site
+.PHONY: resources site site-lang
 
 all: html resources
 
@@ -20,20 +20,20 @@ html:
 resources:
 	cp -r resources phatstack output/$(LANG)/
 
+site-lang: html
+	mkdir -p $(SITE)
+	if [ $(LANG) = en ]; then cp -r output/$(LANG)/. $(SITE)/; \
+	else mkdir -p $(SITE)/$(LANG) && cp -r output/$(LANG)/. $(SITE)/$(LANG)/; fi
+	cp -r resources phatstack $(SITE)/
+
 site:
 	rm -rf $(SITE)
-	for lang in $(LANGS); do ./generate-html.py $$lang; done
-	mkdir -p $(SITE)
-	cp -r output/en/. $(SITE)/
-	for lang in $(LANGS); do \
-		if [ $$lang != en ]; then mkdir -p $(SITE)/$$lang && cp -r output/$$lang/. $(SITE)/$$lang/; fi; \
-	done
-	cp -r resources phatstack $(SITE)/
+	for lang in $(LANGS); do $(MAKE) site-lang LANG=$$lang; done
 
 devel: serve
 
 clean:
 	rm -rf output/$(LANG)/* $(SITE)
 
-serve: site
+serve: site-lang
 	./serve.py

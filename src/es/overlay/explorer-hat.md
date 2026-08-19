@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: cap,io,multi
+type: io,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Una placa completa, con luz, entradas, entradas táctiles y salidas.

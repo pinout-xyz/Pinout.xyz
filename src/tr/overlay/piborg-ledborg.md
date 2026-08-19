@@ -2,8 +2,8 @@
 ---
 name: LEDBorg
 class: board
-type: hepsi
-formfactor: diğer
+type: led
+formfactor: Custom
 manufacturer: PiBorg
 description: Raspberry Pi RGB ledlerine sahip bir kart
 url: https://www.piborg.org/ledborg-new/install

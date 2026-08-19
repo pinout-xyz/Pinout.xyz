@@ -2,7 +2,7 @@
 ---
 name: TroPi
 class: board
-type: LED
+type: led
 formfactor: PHAT
 manufacturer: PiBorg
 description: A five LED add on board.

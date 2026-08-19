@@ -2,9 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: hepsi
-formfactor: diğer
+type: multi,io
+formfactor: Custom
 manufacturer: Cyntech
+collected: Other
 description: Hepsi-bir-arada, hafif, ses, giriş ve çıkış destekleyen eklenti kartı.
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

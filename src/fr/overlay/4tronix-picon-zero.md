@@ -2,7 +2,7 @@
 ---
 name: Picon Zero
 class: board
-type: moteur
+type: motor
 formfactor: pHAT
 manufacturer: 4tronix
 description: Une carte de contrôle de robot pour le Raspberry Pi

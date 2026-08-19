@@ -2,7 +2,7 @@
 ---
 name: Piano HAT
 class: board
-type: Tutti
+type: instrument,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un piccolo Pi-piano con 16 tasti touch

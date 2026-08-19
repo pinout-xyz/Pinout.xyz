@@ -2,8 +2,8 @@
 ---
 name: Display-o-Tron 3000
 class: board
-type: hepsi
-formfactor: diğer
+type: display
+formfactor: Custom
 manufacturer: Pimoroni
 description: 3 satır destekleyen, RGB renkli arka plana sahip bir LCD ve joystick
   butonları

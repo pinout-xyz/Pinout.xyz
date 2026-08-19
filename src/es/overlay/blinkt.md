@@ -3,7 +3,7 @@
 name: 'Blinkt!'
 class: board
 type: led
-formfactor: Otro
+formfactor: Custom
 manufacturer: Pimoroni
 description: Slimline board with 8 super-bright RGB LED indicators
 url: http://blog.pimoroni.com/blinkt/

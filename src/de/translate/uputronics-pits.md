@@ -2,7 +2,7 @@
 ---
 name: Uputronics Pi In The Sky Board
 class: board
-type: gps,Radio
+type: gps,radio
 formfactor: HAT
 manufacturer: Uputronics
 description: Radio telemetry board for Raspberry Pi

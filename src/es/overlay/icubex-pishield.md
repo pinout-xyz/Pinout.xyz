@@ -3,9 +3,9 @@
 name: PiShield
 class: board
 type: adc
-formfactor: Otro
+formfactor: Custom
 manufacturer: Infusion Systems
-collected: Otro
+collected: Other
 description: 5V Analog to Digital Converter and 5V I2C level shifter
 url: https://infusionsystems.com/pishield/
 github: https://github.com/I-CubeX/PythonExamples

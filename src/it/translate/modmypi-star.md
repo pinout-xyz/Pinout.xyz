@@ -2,7 +2,7 @@
 ---
 name: Christmas Tree Star
 class: board
-type: LED
+type: led
 formfactor: Custom
 manufacturer: ModMyPi
 description: A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper.

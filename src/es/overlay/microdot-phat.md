@@ -2,7 +2,7 @@
 ---
 name: Micro Dot pHAT
 class: board
-type: led
+type: display, led
 formfactor: pHAT
 manufacturer: Pimoroni
 description: An LED matrix display board for the Raspberry Pi

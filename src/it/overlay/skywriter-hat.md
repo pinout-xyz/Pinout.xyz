@@ -2,7 +2,7 @@
 ---
 name: Skywriter HAT
 class: board
-type: Tutti
+type: 'gesture,touch'
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un sensore 3D posizionale per le dita.

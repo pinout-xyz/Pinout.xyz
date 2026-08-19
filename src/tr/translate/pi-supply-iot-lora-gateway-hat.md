@@ -2,7 +2,7 @@
 ---
 name: IOT LoRa Gateway HAT
 class: board
-type: IOT, Radio, LoRa
+type: iot, radio, lora
 formfactor: HAT
 manufacturer: Pi Supply
 description: The IoT LoRa Gateway HAT Turns your Raspberry Pi into a LoRaWan Gateway

@@ -2,10 +2,9 @@
 ---
 name: Voice HAT
 class: board
-type: audio,io
+type: audio,sensor,io
 formfactor: HAT
 manufacturer: Google
-collected: Other
 description: A voice kit made for Google Assistant
 url: https://aiyprojects.withgoogle.com/voice
 github: https://github.com/google/aiyprojects-raspbian

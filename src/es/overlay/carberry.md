@@ -2,10 +2,10 @@
 ---
 name: Carberry
 class: board
-type: otro
-formfactor: Otro
+type: other
+formfactor: Custom
 manufacturer: Paser
-collected: Otro
+collected: Other
 description: add-on board designed to interface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/
 buy: http://www.carberry.it

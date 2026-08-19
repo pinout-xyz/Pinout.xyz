@@ -2,7 +2,7 @@
 ---
 name: Rainbow HAT
 class: board
-type: cap,display,led,multi,sensor
+type: display,led,multi,sensor,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Sensors and IO for Android Things

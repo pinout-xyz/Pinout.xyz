@@ -2,8 +2,8 @@
 ---
 name: Display-o-Tron 3000
 class: board
-type: lcd
-formfactor: Autre
+type: display
+formfactor: Custom
 manufacturer: Pimoroni
 description: Un écran LCD 3 lignes avec rétro-éclairage et joystick
 url: https://shop.pimoroni.com/products/displayotron-3000

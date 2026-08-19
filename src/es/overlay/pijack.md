@@ -5,7 +5,7 @@ class: board
 type: network
 formfactor: pHAT
 manufacturer: Hot Glue
-collected: Otro
+collected: Other
 description: Add Ethernet to your Pi Zero
 url: https://pijack.net
 buy: https://pijack.net

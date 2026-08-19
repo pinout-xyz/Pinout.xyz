@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: hepsi
+type: adc,io,motor,multi,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Hepsi-bir-arada, hafif, hızlı, dokunma, giriş ve çıkış destekleyen eklenti

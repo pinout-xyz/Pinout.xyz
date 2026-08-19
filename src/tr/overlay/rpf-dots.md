@@ -2,7 +2,7 @@
 ---
 name: DOTs
 class: board
-type: hepsi
+type: other
 formfactor: HAT
 manufacturer: Raspberry Pi
 description: Noktaları birleştirerek bir devre oluşturun

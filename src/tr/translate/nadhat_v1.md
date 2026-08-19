@@ -2,7 +2,7 @@
 ---
 name: NadHAT v1
 class: board
-type: IOT,ADC
+type: iot,adc
 formfactor: pHAT
 manufacturer: Garatronic
 collected: Other

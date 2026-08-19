@@ -5,6 +5,7 @@ class: board
 type: other
 formfactor: HAT
 manufacturer: Mime Industries
+collected: Other
 description: Una placa de control por joystick para el MeArm Pi
 url: https://mime.co.uk
 github: https://github.com/mimeindustries/mearm-pi-hat-pcb

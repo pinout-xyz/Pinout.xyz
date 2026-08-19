@@ -3,7 +3,7 @@
 name: Zero LiPo
 class: board
 type: power
-formfactor: Otro
+formfactor: Custom
 manufacturer: Pimoroni
 description: LiPo/LiIon power supply shim for Raspberry Pi
 url: https://shop.pimoroni.com/products/zero-lipo

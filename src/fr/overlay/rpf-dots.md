@@ -2,7 +2,7 @@
 ---
 name: DOTs
 class: board
-type: autre
+type: other
 formfactor: HAT
 manufacturer: Raspberry Pi
 description: créez un circuit avec de la peinture électrique

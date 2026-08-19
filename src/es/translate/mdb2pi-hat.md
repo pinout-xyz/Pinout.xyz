@@ -2,7 +2,7 @@
 ---
 name: MDB2Pi HAT
 class: board
-type: IO,Power
+type: io,power
 formfactor: HAT
 manufacturer: Abrantix
 collected: Other

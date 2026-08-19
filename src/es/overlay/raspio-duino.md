@@ -3,7 +3,7 @@
 name: Duino
 class: board
 type: mcu,io
-formfactor: Otro
+formfactor: Custom
 manufacturer: RasPiO
 description: Arduino Programming on the Raspberry Pi
 url: http://rasp.io/duino/

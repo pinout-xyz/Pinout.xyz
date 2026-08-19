@@ -2,7 +2,7 @@
 ---
 name: Skywriter HAT
 class: board
-type: autre
+type: 'gesture,touch'
 formfactor: HAT
 manufacturer: Pimoroni
 description: un capteur de mouvements 3D

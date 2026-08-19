@@ -5,6 +5,7 @@ class: board
 type: multi,io
 formfactor: Custom
 manufacturer: Cyntech
+collected: Other
 description: eine "Alles-in-Einem" Licht, Ton, Ein- und Ausgabe Erweiterungsplatine.
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

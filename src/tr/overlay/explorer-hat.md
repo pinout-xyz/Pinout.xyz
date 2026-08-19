@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: hepsi
+type: io,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Hepsi-bir-arada, hafif, hızlı, dokunma, giriş ve çıkış destekleyen eklenti

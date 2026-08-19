@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT Pro
 class: board
-type: a/n,cap.,e/s,moteur
+type: adc,io,motor,multi,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: Un chapeau multi-usage avec entrées analogiques et contrôle moteurs

@@ -3,7 +3,7 @@
 ---
 name: PiOLED
 class: board
-type: Display
+type: display
 formfactor: Custom
 manufacturer: Adafruit
 description: A small 128x32 display for your Pi

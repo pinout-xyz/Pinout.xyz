@@ -2,7 +2,7 @@
 ---
 name: Uputronics LoRa Expansion Board
 class: board
-type: Radio
+type: radio
 formfactor: HAT
 manufacturer: Uputronics
 description: LoRa Radio board for Raspberry Pi

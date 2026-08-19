@@ -2,7 +2,7 @@
 ---
 name: Skywriter HAT
 class: board
-type: hepsi
+type: 'gesture,touch'
 formfactor: HAT
 manufacturer: Pimoroni
 description: 3 Boyutlu pozisyon ve hareket sensörü.

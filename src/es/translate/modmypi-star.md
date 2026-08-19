@@ -2,7 +2,7 @@
 ---
 name: Christmas Tree Star
 class: board
-type: LED
+type: led
 formfactor: Custom
 manufacturer: ModMyPi
 description: Una placa LED en forma de estrella para Raspberry Pi que sirve como punta del árbol de Navidad.

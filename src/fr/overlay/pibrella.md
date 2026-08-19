@@ -2,9 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: e/s,multi
-formfactor: Autre
+type: multi,io
+formfactor: Custom
 manufacturer: Cyntech
+collected: Other
 description: carte multi-usage avec son, lumière, entrées et sorties
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

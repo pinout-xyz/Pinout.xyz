@@ -2,7 +2,7 @@
 ---
 name: RPi-Spark
 class: board
-type: display, audio, multi, sensor, IO
+type: display, audio, multi, sensor, io
 formfactor: pHAT
 manufacturer: mobiNRG
 collected: Other

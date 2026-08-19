@@ -2,7 +2,7 @@
 ---
 name: "Pi-DAC+"
 class: board
-type: Tutti
+type: audio
 formfactor: HAT
 manufacturer: IQaudIO
 description: Un convertitore audio I2S da digitale ad analogico per il Raspberry

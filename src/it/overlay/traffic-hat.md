@@ -2,7 +2,7 @@
 ---
 name: Traffic HAT
 class: board
-type: Tutti
+type: multi
 formfactor: HAT
 manufacturer: Ryanteck
 description: Una maniera facile e veloce per imparare le basi del GPIO a basso prezzo. Tutto in un singolo HAT.

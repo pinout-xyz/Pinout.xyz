@@ -2,9 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: Tutti
-formfactor: Altro
+type: multi,io
+formfactor: Custom
 manufacturer: Cyntech
+collected: Other
 description: Una scheda all-in-one per luci, suoni, input ed output.
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

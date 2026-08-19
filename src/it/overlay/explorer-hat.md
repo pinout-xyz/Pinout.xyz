@@ -2,7 +2,7 @@
 ---
 name: Explorer HAT
 class: board
-type: Tutti
+type: io,touch
 formfactor: HAT
 manufacturer: Pimoroni
 description: All-in-one luce, input, touch e add-on output board.

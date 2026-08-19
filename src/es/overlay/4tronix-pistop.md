@@ -3,7 +3,7 @@
 name: Pi Stop
 class: board
 type: led
-formfactor: Otro
+formfactor: Custom
 manufacturer: 4tronix
 description: LED Traffic Lights for Raspberry Pi
 url: http://4tronix.co.uk/store/index.php?rt=product/product&product_id=390

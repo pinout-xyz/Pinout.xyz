@@ -3,7 +3,7 @@
 ---
 name: OLED Bonnet
 class: board
-type: Display
+type: display
 formfactor: pHAT
 manufacturer: Adafruit
 description: A 128x64 display with jostick and buttons for your Pi

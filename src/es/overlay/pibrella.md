@@ -2,10 +2,10 @@
 ---
 name: Pibrella
 class: board
-type: io,multi
-formfactor: Otro
+type: multi,io
+formfactor: Custom
 manufacturer: Cyntech
-collected: Otro
+collected: Other
 description: Luz, sonido, entradas y salidas en una placa.
 url: http://pibrella.com
 github: https://github.com/pimoroni/pibrella

@@ -5,6 +5,7 @@ class: board
 type: io
 formfactor: HAT
 manufacturer: Qibixx
+collected: Other
 description: Interfaz para el bus MDB (Machine Data Bus)
 url: https://qibixx.com
 buy: https://qiba.pt/

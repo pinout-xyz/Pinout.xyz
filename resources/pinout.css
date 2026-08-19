@@ -745,12 +745,14 @@ GPIO nav
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
     a:hover,
+    a:focus-visible,
     .active a {
         background:rgb(245, 243, 237);
         color:#063541;
     }
 
     .gnd a:hover .default,
+    .gnd a:focus-visible .default,
     .gnd.active .default {
         color: var(--overlay-pin-fg);
     }
@@ -768,7 +770,8 @@ GPIO nav
             }
         }
         &.gnd .default,
-        &.gnd a:hover .default {
+        &.gnd a:hover .default,
+        &.gnd a:focus-visible .default {
             color:rgba(6, 53, 65, 0.5);
         }
     }

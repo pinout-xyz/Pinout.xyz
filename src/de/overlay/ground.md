@@ -4,6 +4,7 @@ name: Masse (Ground)
 class: interface
 type: pinout
 description: Raspberry Pi Masse Pins
+pincount: 1
 pin:
   '6':
   '9':

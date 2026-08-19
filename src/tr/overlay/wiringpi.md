@@ -6,6 +6,7 @@ type: pinout
 page_url: wiringpi
 url: https://github.com/WiringPi/
 github: https://github.com/WiringPi/WiringPi-Python
+pincount: 40
 pin:
   '3':
     name: WiringPi 8

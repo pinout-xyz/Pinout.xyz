@@ -4,6 +4,7 @@ name: Toprak
 class: interface
 type: pinout
 description: Raspberry Pi Toprak Pinleri
+pincount: 1
 pin:
   '6': {}
   '9': {}

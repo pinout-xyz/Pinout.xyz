@@ -9,7 +9,7 @@ description: Ein I2S digital zu analog audio Konverter
 buy: https://shop.pimoroni.com/products/phat-dac
 image: 'phat-dac.png'
 pincount: 40
-eeprom: nein
+eeprom: no
 power:
   '2':
 ground:

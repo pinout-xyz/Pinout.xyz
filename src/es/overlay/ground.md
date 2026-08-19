@@ -4,6 +4,7 @@ name: Masa
 class: interface
 type: pinout
 description: Pines de masa de Raspberry Pi
+pincount: 1
 pin:
   '6':
   '9':

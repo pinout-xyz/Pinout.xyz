@@ -42,8 +42,8 @@ Note that as part of the submission, a top-down view of the board in the form of
 Once your draft has been made, before filing a pull request, you should try to render the page and make sure it build and appears as intended. To do so:
 
 ```bash
-./draft/publish.sh myboard
-make serve LANG=en
+python3 -m pinoutxyz boards publish myboard
+make serve
 ```
 
 And then open: http://127.0.0.1:8080 in your browser.
@@ -51,9 +51,11 @@ And then open: http://127.0.0.1:8080 in your browser.
 Once you are happy with the result, 
 
 ```bash
-./draft/unpublish.sh myboard
+python3 -m pinoutxyz boards unpublish myboard
 ```
 (this will file the overlay back into the draft folder, ready for review)
+
+`make watch` serves the site and rebuilds it whenever anything under `src`, `common` or `resources` changes.
 
 *note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
 *`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
@@ -99,14 +101,16 @@ Set `language`, `locale` and `flag` in your `settings.yaml` so the language swit
 
 The first resources we recommend you translate are the language-specific strings found in the `settings.yaml` file, `pi-pinout.md`, `index.md`, `404.md` and the `footer.html` template, as well as the content of the `/pin` folder, preferably.
 
-Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphabetical order). Leave those translations in the `/translate` folder when finished.
+Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphabetical order). Move each finished translation into the `/overlay` folder, leaving the untranslated English copies in `/translate`.
+
+`python3 -m pinoutxyz translations list` shows how much of each language is done, and `python3 -m pinoutxyz translations outstanding de` lists the overlays still waiting for a translation. Board metadata is shared, not translated, so `python3 -m pinoutxyz translations check` reports any frontmatter that has drifted away from `src/en`; only `name`, `description`, `page_url` and the pin `name` fields are yours to change.
 
 Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the languages and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your own social handle however, but don't fiddle with the structure!
 
 Once you've made your translation, you can build and preview it with, for example:
 
 ```bash
-make serve
+make serve LANG=de
 ```
 
 And then open: http://127.0.0.1:8080/de/ in your browser.
@@ -118,9 +122,23 @@ If you wish to provide a translation for a language that is already published, o
 If you have a question about translations, raise an [issue](https://github.com/pinout-xyz/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
 
 
+# Building
+
+The builder is the `pinoutxyz` package at the root of this repository. `make` wraps the commands you'll want most often, but you can call it directly:
+
+```bash
+python3 -m pinoutxyz build              # every language, into output/<lang>
+python3 -m pinoutxyz build en --site    # one language, assembled into output/site
+python3 -m pinoutxyz serve --watch      # serve on :8080 and rebuild on change
+python3 -m pinoutxyz translations list  # translation coverage per language
+python3 -m pinoutxyz boards list        # drafts awaiting publication
+```
+
+Add `--help` to any of them for the full set of options. `pip install -e .` puts a `pinoutxyz` command on your path if you'd rather not type `python3 -m`.
+
 # Roadmap &amp; wishlist
 
-* Redesign HTML generation and unify HTML templates into a single, translatable file
+* Make translations true overlays of the English source, so board metadata lives in one place
 * Add functionality to compare two or more boards, to visualise pin compatibility
 * Tool to convert WiringPi to GPIO to BCM and back
 * Add as many [boards](http://pinout.xyz/boards) as possible!

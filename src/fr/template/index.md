@@ -13,9 +13,3 @@ Nous avons [ajouté un explorateur de cartes](/boards)! Utilisez le pour trouver
 * BCM - numérotation Broadcom, plus communément apellée "GPIO"; utile pour travailler avec la librarie RPi.GPIO
 * WiringPi - numérotation Wiring Pi; utile pour travailler avec la librarie Wiring Pi
 * Physique - numérotation correspondante à la position physique des broches sur le connecteur GPIO
-
-## Représentation graphique du brochage
-
-Nous avons créé un schema simple du brochage du port GPIO du Raspberry Pi. Soyez libres d'imprimer, intégrer, partager ou référencer cette image mais sans oublier de nous mentionner !
-
-[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)

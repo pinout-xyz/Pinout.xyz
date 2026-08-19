@@ -12,8 +12,3 @@ Hemos añadido un [explorador de placas!](https://github.com/pinout-xyz/Pinout.x
 * WiringPi - Número de pin de WiringPi, para la librería WiringPi de Gordon Henderson
 * Físico - Número correspondiente a la posición física del pin
 * Rev 1 Pi - Numeración BCM alternativa para los modelos originales de 26 pines, Raspberry Pi modelos "A" y "B"
-
-## Diagrama de asignación de pines
-Hemos creado un diagrama de asignación de pines para Raspberry Pi. Siéntete libre de imprimirlo, adjuntarlo, compartirlo o enlazarlo, ¡no te olvides de nombrarnos!
-
-[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)

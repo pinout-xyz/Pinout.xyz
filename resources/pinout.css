@@ -88,6 +88,11 @@ body {
     padding: 0;
 }
 
+.table-scroll {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
 table {
     margin:1em 0;
     border-collapse:collapse;
@@ -149,8 +154,12 @@ table {
         }
     }
 
+    max-width: 100%;
+    min-width: 0;
+
     .functions-panel {
         overflow-x: auto;
+        max-width: 100%;
         margin-top: 6px;
     }
 
@@ -288,6 +297,7 @@ section {
     grid-area: content;
     background: var(--color-content-bg);
     padding-bottom: 20px;
+    min-width: 0;
 
     hr {
         border:none;
@@ -320,6 +330,7 @@ section {
 
     article {
         padding: 15px 8px;
+        min-width: 0;
         .pin-hover {cursor:help;color:#880000;}
         .pin-hover:hover {color:#AA0000;}
         img {max-width:100%;}

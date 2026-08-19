@@ -2,6 +2,8 @@ import json
 import re
 import unicodedata
 
+TABLE_SCROLL = ('<div class="table-scroll"><table', '</table></div>')
+
 try:
     import markdown
 except ImportError:
@@ -38,6 +40,7 @@ def load(file):
 
     _markdown = re.sub(re.compile(r'<!--(JSON:|\n---\n)(.*?)-->', re.DOTALL), '', markson)
     _html = markdown.markdown(_markdown, extensions=['fenced_code'])
+    _html = _html.replace('<table', TABLE_SCROLL[0]).replace('</table>', TABLE_SCROLL[1])
 
     # Scan for the Title in the Markdown file, this is always assumed
     # to be the first string starting with a single hash/pound ( # ) sign

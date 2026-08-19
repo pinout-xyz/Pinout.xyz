@@ -309,6 +309,7 @@ def load_md(filename):
     filename = 'src/{}/{}'.format(lang, filename)
     try:
         html = markdown.markdown(open(filename).read(), extensions=['fenced_code'])
+        html = html.replace('<table', '<div class="table-scroll"><table').replace('</table>', '</table></div>')
         # print(':) Loaded markdown from {}'.format(filename))
         return html
     except IOError:

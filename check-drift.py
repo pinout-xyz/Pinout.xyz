@@ -8,7 +8,7 @@ import urllib.parse
 import markjaml
 import urlmapper
 
-TRANSLATABLE = {'name', 'description', 'title', 'page_url', 'install', 'docs'}
+TRANSLATABLE = {'name', 'description', 'title', 'page_url', 'docs'}
 LOCALISED = {'url', 'buy', 'github', 'schematic'}
 PIN_MAPS = {'pin', 'power', 'ground', 'i2c'}
 EEPROM_VALUES = {'True', 'False', 'None', 'detect', 'setup'}

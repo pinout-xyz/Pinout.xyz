@@ -5,7 +5,7 @@ class: board
 type: other
 formfactor: HAT
 manufacturer: Mime Industries
-description: A Joystick control board for controlling the MeArm Pi
+description: Una placa de control por joystick para el MeArm Pi
 url: https://mime.co.uk
 github: https://github.com/mimeindustries/mearm-pi-hat-pcb
 schematic: http://learn.mime.co.uk/assets/mearm-pi-hat-schematic-v1.4.pdf
@@ -73,36 +73,35 @@ i2c:
 -->
 # MeArm Pi HAT
 
-### The MeArm Pi HAT is a joystick controller board for the MeArm Pi Robotic Arm Kit
+### El MeArm Pi HAT es una placa controladora de joystick para el kit de brazo robótico MeArm Pi
 
-The MeArm Pi HAT provides the following:
+El MeArm Pi HAT proporciona lo siguiente:
 
- * An 8 bit I2C ADC (address 0x48) connected to two analogue joysticks
- * Access to the push buttons of the joysticks on GPIO
- * An RGB LED for output
- * A 6 pin port to connect to the servos on the arm
+ * Un ADC I2C de 8 bits (dirección 0x48) conectado a dos joysticks analógicos
+ * Acceso a los pulsadores de los joysticks en el GPIO
+ * Un LED RGB para salida
+ * Un puerto de 6 pines para conectar los servos del brazo
 
-Power can be supplied to the Pi through the HAT or direct in to the Pi, but the servos are only supplied through the HAT to avoid strain on the Pi power supply.
+La alimentación se puede suministrar a la Pi a través del HAT o directamente a la Pi, pero los servos solo se alimentan a través del HAT para no sobrecargar la fuente de alimentación de la Pi.
 
-The pinout of the 6 pin connector is:
+El pinout del conector de 6 pines es:
 
 <table>
   <tr>
     <td>+5v</td>
-    <td>Left Servo</td>
-    <td>Grip Servo</td>
+    <td>Servo izquierdo</td>
+    <td>Servo de la pinza</td>
   </tr>
   <tr>
     <td>GND</td>
-    <td>Base Servo</td>
-    <td>Right Servo</td>
+    <td>Servo de la base</td>
+    <td>Servo derecho</td>
   </tr>
 </table>
 
-Additionally the I2C and power lines are brought out on to a header for easy expansion with the following pinout from top to bottom:
+Además, las líneas I2C y de alimentación se llevan a un conector para facilitar la expansión, con el siguiente pinout de arriba a abajo:
 
 1. SDA
 2. 3V3
 3. SCL
 4. GND
-

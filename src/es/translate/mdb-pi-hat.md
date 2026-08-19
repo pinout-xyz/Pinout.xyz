@@ -5,7 +5,7 @@ class: board
 type: io
 formfactor: HAT
 manufacturer: Qibixx
-description: MDB (Machine Data Bus) Bus Interface
+description: Interfaz para el bus MDB (Machine Data Bus)
 url: https://qibixx.com
 buy: https://qiba.pt/
 image: 'mdb-pi-hat.png'
@@ -72,13 +72,14 @@ pin:
     description: IO RPi>MDB
 -->
 # MDB HAT
-The MDBHAT from [Qibixx](https://qibixx.com) is a Raspberry Pi HAT connecting the Pi with the MDB (Machine Data Bus), found in vending machines and peripherals such as Coin and Bill Acceptors. With its advanced architecture, the MDB Hat can support MDB Master, MDB Peripheral and MDB Sniffing applications without any jumper settings.
 
-The firmware of the MDBHAT can be updated from the Pi.
+El MDBHAT de [Qibixx](https://qibixx.com) es un HAT para Raspberry Pi que conecta la Pi con el MDB (Machine Data Bus), presente en máquinas expendedoras y periféricos como los receptores de monedas y billetes. Con su arquitectura avanzada, el MDB HAT admite aplicaciones MDB Master, MDB Peripheral y MDB Sniffing sin necesidad de configurar puentes.
 
-For universal connectivity, the MDB HAT connects with the PI with either serial or SPI interface.
-The MDB HAT is powered from the Pi, however, it can also provide up to 15W (5V, 3A) and backpower the Pi if MDB power is available. In most applications, the MDB HAT plus Pi and even other peripherals can be used without an additional power supply.
+El firmware del MDBHAT se puede actualizar desde la Pi.
 
-Full device documentation and protocol information is available [here](https://docs.qibixx.com).
+Para una conectividad universal, el MDB HAT se conecta a la Pi mediante una interfaz serie o SPI.
+El MDB HAT se alimenta desde la Pi, aunque también puede proporcionar hasta 15W (5V, 3A) y retroalimentar la Pi si hay alimentación MDB disponible. En la mayoría de las aplicaciones, el MDB HAT junto con la Pi e incluso otros periféricos se pueden usar sin una fuente de alimentación adicional.
 
-General MDB information and a device family overview can be found [here](https://mdb.technology).
+La documentación completa del dispositivo y la información del protocolo están disponibles [aquí](https://docs.qibixx.com).
+
+Se puede encontrar información general sobre MDB y una descripción general de la familia de dispositivos [aquí](https://mdb.technology).

@@ -5,7 +5,7 @@ class: board
 type: LED
 formfactor: Custom
 manufacturer: ModMyPi
-description: A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper.
+description: Una placa LED en forma de estrella para Raspberry Pi que sirve como punta del árbol de Navidad.
 url: https://www.modmypi.com/raspberry-pi-christmas-tree-star
 github: https://github.com/modmypi/Programmable-Christmas-Star
 buy: https://www.modmypi.com/raspberry-pi-christmas-tree-star
@@ -131,28 +131,28 @@ pin:
 -->
 # Christmas Tree Star
 
-The ModMy Pi Christmas Tree Star is an LED add-on board for the Raspberry Pi designed to go on top of your Christmas tree. There are 30 white LEDs controllable through a Python library which extends GPIO Zero and is available on GitHub.
+La ModMy Pi Christmas Tree Star es una placa LED para Raspberry Pi diseñada para colocarse en la copa de tu árbol de Navidad. Tiene 30 LED blancos controlables mediante una biblioteca de Python que extiende GPIO Zero y está disponible en GitHub.
 
-## Features
-- 30 white LEDs
-- GPIO Zero compatible library.
-- Mounting points for Raspberry Pi Zero.
-- [Christmas Tree build guide](https://www.modmypi.com/blog/christmas-tree-star-guide)
+## Características
+- 30 LED blancos
+- Biblioteca compatible con GPIO Zero.
+- Puntos de montaje para Raspberry Pi Zero.
+- [Guía de montaje del árbol de Navidad](https://www.modmypi.com/blog/christmas-tree-star-guide)
 
-## Sample Code
+## Código de ejemplo
 ```
 from star import Star
 from time import sleep
 
-# Initialise the star
+# Inicializa la estrella
 star = Star()
 
-# Turn the star on and off.
+# Enciende y apaga la estrella.
 star.on()
 sleep(1)
 star.off()
 
-# Turn the inner and outer LEDs off.
+# Enciende y apaga los LED exteriores e interiores.
 star.outer.on()
 sleep(1)
 star.off()
@@ -160,7 +160,7 @@ star.inner.on()
 sleep(1)
 star.off()
 
-# Turn on individual LEDs on the outer rim.
+# Enciende LED individuales del anillo exterior.
 star.outer.A.on()
 star.outer.F.on()
 star.outer.P.on()

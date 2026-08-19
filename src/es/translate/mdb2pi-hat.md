@@ -6,7 +6,7 @@ type: IO,Power
 formfactor: HAT
 manufacturer: Abrantix
 collected: Other
-description: Multi-Drop-Bus MDB Converter Board for the Raspberry Pi
+description: Placa conversora de bus MDB (Multi-Drop-Bus) para Raspberry Pi
 url: http://blog.abrantix.com/webshop/mdb-converter/
 buy: http://blog.abrantix.com/webshop/product/mdb-to-raspberrypi
 image: 'mdb2pi-hat.png'
@@ -49,8 +49,8 @@ i2c:
 -->
 # MDB2Pi HAT
 
-The MDB2Pi is a Raspberry Pi HAT which can serve as a MDB master (VMC), as MDB cashless peripheral, or as tracer for MDB Vending Machines. It takes care of the MDB specific 9-bit format, electrical and timing constraints. It forwards the MDB payload to the Raspberry Pi UART using a simple serial protocol. The MDB2Pi is powered through the MDB bus (10...42V regulated or unregulated supply) and back-powers the Raspberry Pi with up to 2.5A at 5V. Therefore, no separate power supply is required. Furthermore, the MDB2Pi contains a Real Time Clock (RTC), buffered by a super capacitor.
+El MDB2Pi es un HAT para Raspberry Pi que puede funcionar como maestro MDB (VMC), como periférico MDB sin efectivo o como rastreador para máquinas expendedoras MDB. Se ocupa del formato específico de MDB de 9 bits y de las restricciones eléctricas y de temporización. Reenvía la carga útil de MDB a la UART de la Raspberry Pi mediante un protocolo serie sencillo. El MDB2Pi se alimenta a través del bus MDB (suministro regulado o no regulado de 10...42 V) y retroalimenta la Raspberry Pi con hasta 2.5A a 5V. Por lo tanto, no se necesita una fuente de alimentación aparte. Además, el MDB2Pi incluye un reloj de tiempo real (RTC) respaldado por un supercondensador.
 
-A housing for the MDB2Pi (and the MDB2Pi itself) is available at the Abrantix Web Shop: http://blog.abrantix.com/webshop/product/mdb-to-raspberrypi/. Alternatively, you can download a free 3D model here: http://www.thingiverse.com/thing:2209661
+Una carcasa para el MDB2Pi (y el propio MDB2Pi) está disponible en la tienda web de Abrantix: http://blog.abrantix.com/webshop/product/mdb-to-raspberrypi/. También puedes descargar un modelo 3D gratuito aquí: http://www.thingiverse.com/thing:2209661
 
-For Configuration and further information, please see http://blog.abrantix.com/webshop/mdb-to-raspberry-pi-configuration/
+Para la configuración y más información, consulta http://blog.abrantix.com/webshop/mdb-to-raspberry-pi-configuration/

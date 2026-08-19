@@ -6,7 +6,7 @@ type: iot,radio
 formfactor: Custom
 manufacturer: dresden elektronik
 collected: Other
-description: A Zigbee add-on board for the Raspberry Pi
+description: Una placa Zigbee para Raspberry Pi
 url: https://phoscon.de/raspbee
 github: https://github.com/dresden-elektronik/deconz-rest-plugin
 buy: https://phoscon.de/raspbee#buy
@@ -35,9 +35,9 @@ pin:
 -->
 # RaspBee Zigbee add-on board
 
-The add-on board adds full Zigbee capabilities to a Raspberry Pi, to use lights, sensors and switches from various vendors.
+La placa añade capacidades Zigbee completas a una Raspberry Pi, para usar luces, sensores e interruptores de varios fabricantes.
 
-* Supports Zigbee 3.0, Zigbee Light Link (ZLL) and Zigbee Home Automation (ZHA) devices
-* Supports up to 200 devices
-* On board power-amplifier for a signal-range of max. 200 m (650ft) in free line of sight
-* Supported by the most popular open source home automation systems
+* Compatible con dispositivos Zigbee 3.0, Zigbee Light Link (ZLL) y Zigbee Home Automation (ZHA)
+* Admite hasta 200 dispositivos
+* Amplificador de potencia integrado para un alcance de señal de máx. 200 m (650 pies) en línea de visión directa
+* Compatible con los sistemas de automatización del hogar de código abierto más populares

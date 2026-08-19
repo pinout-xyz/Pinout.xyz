@@ -6,7 +6,7 @@ type: adc, dac, io, led, com, rtc, power, motor
 formfactor: HAT
 manufacturer: Monarco
 collected: Other
-description: Industrial I/O for the Raspberry Pi
+description: E/S industrial para Raspberry Pi
 url: https://monarco.io
 github: https://github.com/monarco
 schematic: http://www.monarco.io/docs/Monarco-HAT-Hardware-Reference-Manual.pdf
@@ -66,29 +66,29 @@ i2c:
 -->
 # Monarco HAT
 
-Manufacturered by Monarco Solutions Group / REX Controls s.r.o., the Monarco HAT is is an all-in-one solution for using Raspberry Pi in industrial automation. It provides analog and digital inputs and outputs as well as RS-485 and 1-Wire communication interfaces. In fact, it turns the Raspberry Pi into a PLC or a mini industrial PC (IPC) ready for use in your automation project.
+Fabricado por Monarco Solutions Group / REX Controls s.r.o., el Monarco HAT es una solución todo en uno para usar la Raspberry Pi en la automatización industrial. Proporciona entradas y salidas analógicas y digitales, así como interfaces de comunicación RS-485 y 1-Wire. De hecho, convierte la Raspberry Pi en un PLC o en un mini PC industrial (IPC) listo para usar en tu proyecto de automatización.
 
-All the inputs and outputs are designed to directly interface standard industrial sensors and devices, eliminating the need for additional hardware. 
+Todas las entradas y salidas están diseñadas para conectarse directamente con sensores y dispositivos industriales estándar, eliminando la necesidad de hardware adicional.
 
-## Features
+## Características
 
-- **Power supply: 10-30 VDC**, powers also the Raspberry Pi
-- **4x digital IN, 3.5-30 VDC**, optical isolation, common GND
-    - 2x counter (pulse/DIR) or 2x encoder (A/B), up to 200 kHz
-    - Counter values retention during power off
-- **4x digital OUT**, open-drain, max 40 VDC, 1 A per channel continuous
-    - All with up to 100 kHz PWM
-    - Short-circuit protection (continuous)
-- **2x analog IN**, 0-10 V / 0-20 mA, 12-bit
-    - Electronic switching of voltage/current sensing mode
-    - Protected against overvoltage and reverse polarity
-    - 500 Hz bandwidth, configurable filter
-- **2x analog OUT**, 0-10 V, 0.5 ms settling time, 12-bit
-- **1x RS-485 bus** with ESD protection
-- **1x 1-Wire bus** with ESD protection
-- **9x LED indicator**, by default mapped as indicators for digital inputs and outputs and system status, user controllable
-- **High quality push-in terminals**, detachable connector
-- **Battery-backed RTC chip** for keeping the track of time
-- **Hardware watchdog** for power-cycling the Raspberry Pi in case of failure
-- Compatible with the **Raspberry Pi 7“ official touchscreen** (onboard connector for powering the display)
-- **EMC tested, CE marked**
+- **Alimentación: 10-30 VDC**, alimenta también la Raspberry Pi
+- **4x entrada digital, 3.5-30 VDC**, aislamiento óptico, GND común
+    - 2x contador (pulso/DIR) o 2x encoder (A/B), hasta 200 kHz
+    - Retención de los valores del contador con la alimentación apagada
+- **4x salida digital**, drenador abierto, máx. 40 VDC, 1 A por canal en continuo
+    - Todas con PWM de hasta 100 kHz
+    - Protección contra cortocircuitos (continua)
+- **2x entrada analógica**, 0-10 V / 0-20 mA, 12 bits
+    - Conmutación electrónica del modo de medida de tensión/corriente
+    - Protegidas contra sobretensión y polaridad inversa
+    - Ancho de banda de 500 Hz, filtro configurable
+- **2x salida analógica**, 0-10 V, tiempo de establecimiento de 0,5 ms, 12 bits
+- **1x bus RS-485** con protección ESD
+- **1x bus 1-Wire** con protección ESD
+- **9x indicador LED**, asignados por defecto como indicadores de las entradas y salidas digitales y del estado del sistema, controlables por el usuario
+- **Terminales push-in de alta calidad**, conector desmontable
+- **Chip RTC con batería** para mantener la hora
+- **Watchdog de hardware** para reiniciar la Raspberry Pi en caso de fallo
+- Compatible con la **pantalla táctil oficial de 7" de Raspberry Pi** (conector integrado para alimentar la pantalla)
+- **Probado en EMC, con marcado CE**

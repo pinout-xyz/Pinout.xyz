@@ -5,7 +5,7 @@ class: board
 type: motor
 formfactor: pHAT
 manufacturer: PiHut
-description: Control 4 motors from your Raspberry Pi
+description: Controla 4 motores desde tu Raspberry Pi
 url: https://thepihut.com/products/motozero
 buy: https://thepihut.com/products/motozero
 image: 'motozero.png'
@@ -45,13 +45,13 @@ pin:
 -->
 # MotoZero
 
-The MotoZero is a simple Raspberry Pi motor controller add-on board that lets you control up to 4 motors independently.
-With simple GPIO control and its very own GPIO Zero library entry, it's one of the easiest ways to control lots of motors on your Raspberry Pi.
+El MotoZero es una sencilla placa controladora de motores para Raspberry Pi que te permite controlar hasta 4 motores de forma independiente.
+Con un simple control por GPIO y su propia entrada en la biblioteca GPIO Zero, es una de las formas más fáciles de controlar muchos motores en tu Raspberry Pi.
 
-Features:
+Características:
 
-* Control 4 motors independently in both forwards and reverse
-* Control with basic GPIO 'on/off' code, or using GPIO Zero library
-* Terminals break out the motor outputs to the edge of the board
-* Built-in flyback voltage protection diodes
-* Suitable for all 40 pin Raspberry Pi models
+* Controla 4 motores de forma independiente, tanto hacia adelante como hacia atrás
+* Contrólalos con código GPIO básico de encendido/apagado, o usando la biblioteca GPIO Zero
+* Los terminales llevan las salidas de los motores al borde de la placa
+* Diodos integrados de protección contra la tensión de retorno
+* Compatible con todos los modelos de Raspberry Pi de 40 pines

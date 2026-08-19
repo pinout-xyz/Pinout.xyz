@@ -5,7 +5,7 @@ class: board
 type: adc,sensor
 formfactor: pHAT
 manufacturer: Google
-description: An Environmental Sensor and Grove Breakout Board
+description: Placa de sensores ambientales y conectores Grove
 url: https://coral.withgoogle.com/products/environmental
 github: https://coral.googlesource.com/coral-cloud/
 buy: https://coral.withgoogle.com/products/environmental
@@ -95,20 +95,19 @@ i2c:
 -->
 # Coral Environmental Sensor Board
 
-The Coral Environmental Sensor Board adds multiple environmental sensors and Grove connectors for external devices. It works with all 40-pin Rasperry Pi variants as well as the Coral Dev Board.
+La Coral Environmental Sensor Board añade múltiples sensores ambientales y conectores Grove para dispositivos externos. Funciona con todas las variantes de Raspberry Pi de 40 pines, así como con la placa Coral Dev.
 
-Features:
+Características:
 
-* 128x32 OLED Display (SSD1306-based SPI interface)  
-* Ambient light sensor (OPT3002, 0x45 on i2c bus)  
-* Barometric pressure sensor (BMP280, 0x76 on i2c bus)  
-* Humidity / temperature sensor (HDC2010, 0x40 on i2c bus)  
-* Cryptoprocessor with Google keys (ECC608, 0x30 on i2c bus)  
-* Four Grove connectors:  
-    1x UART  
-    1x I2C  
-    1x PWM  
-    1x 3.3/5V analog (using TLA2022 ADC, 0x49 on i2c bus)
-* General purpose button  
-* General purpose LED  
-
+* Pantalla OLED de 128x32 (interfaz SPI basada en SSD1306)
+* Sensor de luz ambiental (OPT3002, 0x45 en el bus i2c)
+* Sensor de presión barométrica (BMP280, 0x76 en el bus i2c)
+* Sensor de humedad/temperatura (HDC2010, 0x40 en el bus i2c)
+* Criptoprocesador con claves de Google (ECC608, 0x30 en el bus i2c)
+* Cuatro conectores Grove:
+    1x UART
+    1x I2C
+    1x PWM
+    1x analógico de 3.3/5V (usando el ADC TLA2022, 0x49 en el bus i2c)
+* Botón de uso general
+* LED de uso general

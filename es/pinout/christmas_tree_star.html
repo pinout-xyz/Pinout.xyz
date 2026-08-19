@@ -3,10 +3,10 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>Christmas Tree Star Raspberry Pi GPIO pinout</title>
-		<meta name="description" content="A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper." />
+		<meta name="description" content="Una placa LED en forma de estrella para Raspberry Pi que sirve como punta del árbol de Navidad." />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T101915" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T104234" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="//pinout.xyz/de/pinout/christmas_tree_star" hreflang="de"/>
 		<link rel="alternate" href="//pinout.xyz/pinout/christmas_tree_star" hreflang="en"/>
@@ -15,12 +15,12 @@
 		<link rel="alternate" href="//pinout.xyz/it/pinout/christmas_tree_star" hreflang="it"/>
 		<link rel="alternate" href="//pinout.xyz/tr/pinout/christmas_tree_star" hreflang="tr"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T101915"/>
-		<!-- Build: 20260819T101915 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T104234"/>
+		<!-- Build: 20260819T104234 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Christmas Tree Star Raspberry Pi GPIO pinout">
-		<meta property="og:description" content="A star shaped LED add-on board for the Raspberry Pi which can be used as a Christmas Tree topper.">
+		<meta property="og:description" content="Una placa LED en forma de estrella para Raspberry Pi que sirve como punta del árbol de Navidad.">
 		<meta property="og:image" content="https://pinout.xyz/v1/img/christmas_tree_star.png">
 		<meta property="og:locale" content="en_GB">
 	</head>
@@ -171,27 +171,27 @@
 			<div id="crumbtrail"><p><a href="/es/">Inicio</a> &raquo; <a href="/es/boards">Placas</a> &raquo; <a href="/es/boards#manufacturer=ModMyPi">ModMyPi</a> &raquo; Christmas Tree Star</p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_christmas_tree_star"><h1>Christmas Tree Star</h1>
-<p>The ModMy Pi Christmas Tree Star is an LED add-on board for the Raspberry Pi designed to go on top of your Christmas tree. There are 30 white LEDs controllable through a Python library which extends GPIO Zero and is available on GitHub.</p>
-<h2>Features</h2>
+<p>La ModMy Pi Christmas Tree Star es una placa LED para Raspberry Pi diseñada para colocarse en la copa de tu árbol de Navidad. Tiene 30 LED blancos controlables mediante una biblioteca de Python que extiende GPIO Zero y está disponible en GitHub.</p>
+<h2>Características</h2>
 <ul>
-<li>30 white LEDs</li>
-<li>GPIO Zero compatible library.</li>
-<li>Mounting points for Raspberry Pi Zero.</li>
-<li><a href="https://www.modmypi.com/blog/christmas-tree-star-guide">Christmas Tree build guide</a></li>
+<li>30 LED blancos</li>
+<li>Biblioteca compatible con GPIO Zero.</li>
+<li>Puntos de montaje para Raspberry Pi Zero.</li>
+<li><a href="https://www.modmypi.com/blog/christmas-tree-star-guide">Guía de montaje del árbol de Navidad</a></li>
 </ul>
-<h2>Sample Code</h2>
+<h2>Código de ejemplo</h2>
 <pre><code>from star import Star
 from time import sleep
 
-# Initialise the star
+# Inicializa la estrella
 star = Star()
 
-# Turn the star on and off.
+# Enciende y apaga la estrella.
 star.on()
 sleep(1)
 star.off()
 
-# Turn the inner and outer LEDs off.
+# Enciende y apaga los LED exteriores e interiores.
 star.outer.on()
 sleep(1)
 star.off()
@@ -199,7 +199,7 @@ star.inner.on()
 sleep(1)
 star.off()
 
-# Turn on individual LEDs on the outer rim.
+# Enciende LED individuales del anillo exterior.
 star.outer.A.on()
 star.outer.F.on()
 star.outer.P.on()
@@ -227,7 +227,7 @@ star.off()
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T101915'></script>
+		<script src='/resources/pinout.js?v=20260819T104234'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

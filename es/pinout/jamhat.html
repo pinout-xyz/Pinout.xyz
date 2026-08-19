@@ -3,10 +3,10 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>JamHat Raspberry Pi GPIO pinout</title>
-		<meta name="description" content="A Jam friendly board with 6 LEDs, 2 buttons and a buzzer." />
+		<meta name="description" content="Una placa Jam amigable con 6 LEDs, 2 botones y un zumbador." />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T101915" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T104234" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="//pinout.xyz/de/pinout/jamhat" hreflang="de"/>
 		<link rel="alternate" href="//pinout.xyz/pinout/jamhat" hreflang="en"/>
@@ -15,12 +15,12 @@
 		<link rel="alternate" href="//pinout.xyz/it/pinout/jamhat" hreflang="it"/>
 		<link rel="alternate" href="//pinout.xyz/tr/pinout/jamhat" hreflang="tr"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T101915"/>
-		<!-- Build: 20260819T101915 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T104234"/>
+		<!-- Build: 20260819T104234 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="JamHat Raspberry Pi GPIO pinout">
-		<meta property="og:description" content="A Jam friendly board with 6 LEDs, 2 buttons and a buzzer.">
+		<meta property="og:description" content="Una placa Jam amigable con 6 LEDs, 2 botones y un zumbador.">
 		<meta property="og:image" content="https://pinout.xyz/v1/img/jamhat.png">
 		<meta property="og:locale" content="en_GB">
 	</head>
@@ -171,19 +171,19 @@
 			<div id="crumbtrail"><p><a href="/es/">Inicio</a> &raquo; <a href="/es/boards">Placas</a> &raquo; <a href="/es/boards#manufacturer=ModMyPi">ModMyPi</a> &raquo; JamHat</p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_jamhat"><h1>Jam Hat</h1>
-<p>An LED, button and buzzer hat ideal for Raspberry Jams, Jam Makers and people learning the basics of GPIO.</p>
-<p>The Hat has 6 LEDs, 2 buttons and a tonal buzzer allowing for lots of hardware experimentation using the GPIO Zero library for ease of use.</p>
+<p>Una placa complementaria con LED, botón y zumbador para Raspberry Jams, Jam Makers y personas que están aprendiendo lo básico de GPIO.</p>
+<p>La placa tiene 6 LEDs, 2 botones y un zumbador tonal que permiten un montón de experimentación hardware utilizando la biblioteca GPIO Zero para una sencillez de uso.</p>
 <pre><code>from gpiozero import JamHat
 from time import sleep
 
 jh = JamHat()
 
-# Turn the hat on, wait and turn it off.
+# Enciende la plaza, espera y apágala.
 jh.on()
 sleep(1)
 jh.off()
 
-# Play tones through the buzzer.
+# Reproduce tones mediante el zumbador.
 jh.buzzer.play('C4')
 sleep(0.5)
 jh.buzzer.play('D4')
@@ -192,21 +192,21 @@ jh.buzzer.play('E4')
 sleep(0.5)
 jh.off()
 
-# Use the buttons to turn on lights.
+# Utiliza los botones para encender las luces.
 jh.button_1.when_pressed = jh.lights_1.on
 jh.button_1.when_released = jh.lights_1.off
 jh.button_2.when_pressed = jh.lights_2.on
 jh.button_2.when_released = jh.lights_2.off
 </code></pre>
-<p>Full getting started guides are available on the <a href="https://www.modmypi.com/blog/getting-started-with-the-jamhat">ModMyPi website</a></p>
+<p>Las guías completas de inicio están disponibles en <a href="https://www.modmypi.com/blog/getting-started-with-the-jamhat">El sitio web de ModMyPi</a></p>
 <table class="details"><tr><td><h2>Detalles</h2><ul>
 <li>Fabricado por <a href="/es/boards#manufacturer=ModMyPi">ModMyPi</a></li>
 <li>formato HAT</li>
 <li>Alimentación 5v y 3v3</li>
 <li>Usa 9 pines GPIO</li>
-<li><a href="https://www.modmypi.com/jam-hat">Más información</a></li>
+<li><a href="https://thepihut.com/products/jam-hat">Más información</a></li>
 <li><a href="https://github.com/modmypi/Jam-HAT">GitHub</a></li>
-<li><a href="http://www.modmypi.com/jam-hat">Comprar</a></li>
+<li><a href="https://thepihut.com/products/jam-hat">Comprar</a></li>
 </ul></td><td><img loading="lazy" src="/resources/boards/modmypi-jamhat.png" alt="JamHat" /></td></tr></table></article>
 			</section>
 
@@ -219,7 +219,7 @@ jh.button_2.when_released = jh.lights_2.off
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T101915'></script>
+		<script src='/resources/pinout.js?v=20260819T104234'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

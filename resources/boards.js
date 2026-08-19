@@ -48,7 +48,7 @@ jQuery(document).ready(function(){
 						    return -1;
 						});
 
-		$('<h4>').text(title).appendTo(dom_facets);
+		$('<h2>').text(title).appendTo(dom_facets);
 		var dom_facet = $('<ul>').addClass('facet').appendTo(dom_facets);
 
 		for(var idx in items){

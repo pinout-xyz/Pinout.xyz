@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
 
 	$('#gpio').on('animationend', function(event){
 		if (event.target === this) {
-			$(this).removeClass('flipping rotating');
+			$(this).removeClass('flipping rotating rotating-back');
 		}
 	});
 
@@ -13,9 +13,9 @@ jQuery(document).ready(function(){
 		var pressed = !$('#gpio').hasClass(view);
 		var gpio = $('#gpio');
 
-		gpio.toggleClass(view, pressed).removeClass('flipping rotating');
+		gpio.toggleClass(view, pressed).removeClass('flipping rotating rotating-back');
 		gpio[0].offsetWidth;
-		gpio.addClass(view === 'mirror' ? 'flipping' : 'rotating');
+		gpio.addClass(view === 'mirror' ? 'flipping' : (pressed ? 'rotating' : 'rotating rotating-back'));
 
 		$(this).attr('aria-pressed', pressed);
 	});
@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
 		html = html.replace(
 			/GPIO\ ([0-9]{1,2})/gi,
 			function(str, c1){
-				var pin = $("#gpio li").filter(function(){return $(this).find("span.name").text() == "GPIO " + c1}).find('.pin').text();
+				var pin = $("#gpio li").filter(function(){return $(this).find("span.name").text() == "GPIO " + c1}).find('.phys').text();
 				return '<span title="Click for details about pin ' + pin + '" class="pin-hover" data-pin="' + pin + '">' + str + '</span>';
 			}
 		)

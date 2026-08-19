@@ -9,7 +9,7 @@
     --color-dark: #073642;
     --color-content-bg: rgba(235, 230, 211, 0.5);
     --pin-gnd: #002B36;
-    --nav-bg: #5F8645;
+    --nav-bg: #4C6E36;
     --overlay-pin-bg: rgb(235, 230, 211);
     --overlay-pin-fg: #063541;
     --overlay-pin-bg-hover: rgb(245, 243, 237);
@@ -49,6 +49,35 @@
 }
 
 ul, li, a, body, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;text-decoration:none;}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 1;
+    padding: 10px 14px;
+    color: var(--overlay-pin-fg);
+    background: var(--overlay-pin-bg);
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+section:focus {
+    outline: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -333,7 +362,7 @@ Boards Page
 .facets {
     margin: 0 5px;
 
-    h4 {
+    h2 {
         text-transform: capitalize;
         font-size: 1.2em;
         margin: 0 0 .2em 0;
@@ -712,16 +741,26 @@ GPIO nav
         }
     }
 
+    &.rotating-back {
+        animation-name: pinout-rotate-back;
+
+        a {
+            animation-name: pinout-rotate-content-back;
+        }
+    }
+
     .gnd .default {color:rgba(233, 229, 210, 0.5);}
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
     a:hover,
+    a:focus-visible,
     .active a {
         background:rgb(245, 243, 237);
         color:#063541;
     }
 
     .gnd a:hover .default,
+    .gnd a:focus-visible .default,
     .gnd.active .default {
         color: var(--overlay-pin-fg);
     }
@@ -739,7 +778,8 @@ GPIO nav
             }
         }
         &.gnd .default,
-        &.gnd a:hover .default {
+        &.gnd a:hover .default,
+        &.gnd a:focus-visible .default {
             color:rgba(6, 53, 65, 0.5);
         }
     }
@@ -1008,7 +1048,7 @@ code {
         }
     }
     #gpio {
-        background: rgba(95, 134, 69, 0.5);
+        background: color-mix(in srgb, var(--nav-bg) 50%, transparent);
     }
     #pinout-view button {
         color: var(--overlay-pin-bg);
@@ -1023,7 +1063,7 @@ code {
             background: var(--overlay-pin-bg);
         }
     }
-    #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h4, #boards .board strong {
+    #legend a, .logo a, .logo a:hover, .logo a:visited, .logo a:active, .facets h2, #boards .board strong {
         color: #fff;
     }
     #boards .board a:hover {
@@ -1066,6 +1106,16 @@ code {
 
 @keyframes pinout-rotate-content {
     from {transform: rotate(-180deg);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate-back {
+    from {transform: rotate(-180deg);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate-content-back {
+    from {transform: rotate(180deg);}
     to {transform: none;}
 }
 

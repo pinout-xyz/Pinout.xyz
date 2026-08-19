@@ -6,7 +6,7 @@
 		<meta name="description" content="8 character 7 segment display for the Raspberry Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T083058" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T095226" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="//pinout.xyz/de/pinout/zeroseg" hreflang="de"/>
 		<link rel="alternate" href="//pinout.xyz/pinout/zeroseg" hreflang="en"/>
@@ -15,8 +15,8 @@
 		<link rel="alternate" href="//pinout.xyz/it/pinout/zeroseg" hreflang="it"/>
 		<link rel="alternate" href="//pinout.xyz/tr/pinout/zeroseg" hreflang="tr"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T083058"/>
-		<!-- Build: 20260819T083058 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T095226"/>
+		<!-- Build: 20260819T095226 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="ZeroSeg Raspberry Pi GPIO Pinout">
@@ -42,7 +42,7 @@
 <li class="pin13 gpio"><a href="/fr/pinout/pin13_gpio27" title="broche Wiring Pi 2"><span class="default"> <span class="name">GPIO 27</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">13</span></span></a></li>
 <li class="pin15 gpio"><a href="/fr/pinout/pin15_gpio22" title="broche Wiring Pi 3"><span class="default"> <span class="name">GPIO 22</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">15</span></span></a></li>
 <li class="pin17 pow3v3"><a href="/fr/pinout/pin17_alimentation_33v" title=""><span class="default"> Alimentation 3.3v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">17</span></span></a></li>
-<li class="pin19 gpio spi overlay-pin"><a href="/fr/pinout/pin19_gpio10" title="broche Wiring Pi 12"><span class="default"> <span class="name">GPIO 10</span> <small>(MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">19</span></span></a></li>
+<li class="pin19 gpio spi overlay-pin"><a href="/fr/pinout/pin19_gpio10" title="broche Wiring Pi 12"><span class="default"> <span class="name">GPIO 10</span> <small>(DIN)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">19</span></span></a></li>
 <li class="pin21 gpio spi"><a href="/fr/pinout/pin21_gpio9" title="broche Wiring Pi 13"><span class="default"> <span class="name">GPIO 9</span> <small>(MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">21</span></span></a></li>
 <li class="pin23 gpio spi overlay-pin"><a href="/fr/pinout/pin23_gpio11" title="broche Wiring Pi 14"><span class="default"> <span class="name">GPIO 11</span> <small>(CLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">23</span></span></a></li>
 <li class="pin25 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">25</span></span></a></li>
@@ -66,7 +66,7 @@
 <li class="pin18 gpio"><a href="/fr/pinout/pin18_gpio24" title="broche Wiring Pi 5"><span class="default"> <span class="name">GPIO 24</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">18</span></span></a></li>
 <li class="pin20 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">20</span></span></a></li>
 <li class="pin22 gpio"><a href="/fr/pinout/pin22_gpio25" title="broche Wiring Pi 6"><span class="default"> <span class="name">GPIO 25</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">22</span></span></a></li>
-<li class="pin24 gpio spi overlay-pin"><a href="/fr/pinout/pin24_gpio8" title="broche Wiring Pi 10"><span class="default"> <span class="name">GPIO 8</span> <small>(CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
+<li class="pin24 gpio spi overlay-pin"><a href="/fr/pinout/pin24_gpio8" title="broche Wiring Pi 10"><span class="default"> <span class="name">GPIO 8</span> <small>(CS)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
 <li class="pin26 gpio spi"><a href="/fr/pinout/pin26_gpio7" title="broche Wiring Pi 11"><span class="default"> <span class="name">GPIO 7</span> <small>(CE1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">26</span></span></a></li>
 <li class="pin28 gpio i2c"><a href="/fr/pinout/pin28_gpio1" title="broche Wiring Pi 31"><span class="default"> <span class="name">GPIO 1</span> <small>(ID_SC)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">28</span></span></a></li>
 <li class="pin30 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">30</span></span></a></li>
@@ -177,6 +177,7 @@ cd zeroseg &amp;&amp; sudo python setup.py install
 <li>carte au format pHAT</li>
 <li>alimentation 5v et 3v3</li>
 <li>5 broches GPIO actives</li>
+<li>communication par bus SPI</li>
 <li><a href="https://thepihut.com/products/zeroseg">plus d'info</a></li>
 <li><a href="https://github.com/AverageManVsPi/ZeroSeg">lien GitHub</a></li>
 <li><a href="https://thepihut.com/products/zeroseg">achat</a></li>
@@ -194,13 +195,13 @@ cd zeroseg &amp;&amp; sudo python setup.py install
 		</nav>
 		<footer>
 			<p>Vous Voyez des erreurs? Vous voulez contribuer? Rejoignez-nous sur <a href="https://github.com/pinout-xyz/Pinout.xyz">GitHub!</a></p>
-<p>Publié initialement sur <a href="http://pi.gadgetoid.com">pi.gadgetoid.com</a>. Twitter <a href="https://twitter.com/pipinout"> @PiPinout</a>. Site maintenu par <a href="https://twitter.com/gadgetoid">@Gadgetoid</a> et <a href="https://twitter.com/roguehal13">@RogueHAL13</a>.</p>
+<p>Partie de <a href="https://www.gadgetoid.com">gadgetoid.com</a>. Site maintenu par <a href="https://fosstodon.org/@gadgetoid">@Gadgetoid@fosstodon.org</a>.</p>
 <p>Traduction par <a href="https://github.com/RogueM">@RogueM</a> et <a href="https://github.com/smileyn64">@smileyn64</a>.</p>
 
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T083058'></script>
+		<script src='/resources/pinout.js?v=20260819T095226'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

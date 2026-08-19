@@ -30,9 +30,10 @@ pin:
   '5':
     mode: i2c
   '8':
-    mode: UART/MTX2 TXD
+    name: MTX2 TXD
+    mode: uart
   '10':
-    mode: UART
+    mode: uart
   '38':
     name: PPS
   '7':

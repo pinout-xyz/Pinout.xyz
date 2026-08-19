@@ -6,7 +6,7 @@
 		<meta name="description" content="8 character 7 segment display for the Raspberry Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T083050" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T095218" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="//pinout.xyz/de/pinout/zeroseg" hreflang="de"/>
 		<link rel="alternate" href="//pinout.xyz/pinout/zeroseg" hreflang="en"/>
@@ -15,8 +15,8 @@
 		<link rel="alternate" href="//pinout.xyz/it/pinout/zeroseg" hreflang="it"/>
 		<link rel="alternate" href="//pinout.xyz/tr/pinout/zeroseg" hreflang="tr"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T083050"/>
-		<!-- Build: 20260819T083050 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T095218"/>
+		<!-- Build: 20260819T095218 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="ZeroSeg at Raspberry Pi GPIO Pinout">
@@ -42,7 +42,7 @@
 <li class="pin13 gpio"><a href="/pinout/pin13_gpio27" title="Wiring Pi pin 2"><span class="default"> <span class="name">GPIO 27</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">13</span></span></a></li>
 <li class="pin15 gpio"><a href="/pinout/pin15_gpio22" title="Wiring Pi pin 3"><span class="default"> <span class="name">GPIO 22</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">15</span></span></a></li>
 <li class="pin17 pow3v3"><a href="/pinout/3v3_power" title=""><span class="default"> 3v3 Power</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">17</span></span></a></li>
-<li class="pin19 gpio spi overlay-pin"><a href="/pinout/pin19_gpio10" title="Wiring Pi pin 12"><span class="default"> <span class="name">GPIO 10</span> <small>(SPI0 MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">19</span></span></a></li>
+<li class="pin19 gpio spi overlay-pin"><a href="/pinout/pin19_gpio10" title="Wiring Pi pin 12"><span class="default"> <span class="name">GPIO 10</span> <small>(DIN)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">19</span></span></a></li>
 <li class="pin21 gpio spi"><a href="/pinout/pin21_gpio9" title="Wiring Pi pin 13"><span class="default"> <span class="name">GPIO 9</span> <small>(SPI0 MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">21</span></span></a></li>
 <li class="pin23 gpio spi overlay-pin"><a href="/pinout/pin23_gpio11" title="Wiring Pi pin 14"><span class="default"> <span class="name">GPIO 11</span> <small>(CLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">23</span></span></a></li>
 <li class="pin25 gnd overlay-ground"><a href="/pinout/ground" title=""><span class="default"> Ground</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">25</span></span></a></li>
@@ -66,7 +66,7 @@
 <li class="pin18 gpio"><a href="/pinout/pin18_gpio24" title="Wiring Pi pin 5"><span class="default"> <span class="name">GPIO 24</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">18</span></span></a></li>
 <li class="pin20 gnd overlay-ground"><a href="/pinout/ground" title=""><span class="default"> Ground</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">20</span></span></a></li>
 <li class="pin22 gpio"><a href="/pinout/pin22_gpio25" title="Wiring Pi pin 6"><span class="default"> <span class="name">GPIO 25</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">22</span></span></a></li>
-<li class="pin24 gpio spi overlay-pin"><a href="/pinout/pin24_gpio8" title="Wiring Pi pin 10"><span class="default"> <span class="name">GPIO 8</span> <small>(SPI0 CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
+<li class="pin24 gpio spi overlay-pin"><a href="/pinout/pin24_gpio8" title="Wiring Pi pin 10"><span class="default"> <span class="name">GPIO 8</span> <small>(CS)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
 <li class="pin26 gpio spi"><a href="/pinout/pin26_gpio7" title="Wiring Pi pin 11"><span class="default"> <span class="name">GPIO 7</span> <small>(SPI0 CE1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">26</span></span></a></li>
 <li class="pin28 gpio i2c"><a href="/pinout/pin28_gpio1" title="Wiring Pi pin 31"><span class="default"> <span class="name">GPIO 1</span> <small>(EEPROM SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">28</span></span></a></li>
 <li class="pin30 gnd overlay-ground"><a href="/pinout/ground" title=""><span class="default"> Ground</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">30</span></span></a></li>
@@ -177,6 +177,7 @@ cd ZeroSeg &amp;&amp; sudo python setup.py install
 <li>pHAT form-factor</li>
 <li>Needs 5v and 3v3 power</li>
 <li>Uses 5 GPIO pins</li>
+<li>Communication over SPI</li>
 <li><a href="https://thepihut.com/products/zeroseg">More Information</a></li>
 <li><a href="https://github.com/AverageManVsPi/ZeroSeg">GitHub Repository</a></li>
 <li><a href="https://thepihut.com/products/zeroseg">Buy Now</a></li>
@@ -199,7 +200,7 @@ cd ZeroSeg &amp;&amp; sudo python setup.py install
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T083050'></script>
+		<script src='/resources/pinout.js?v=20260819T095218'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 import datetime
 import os
 
+from .settings import resolve
+
 LAYOUT_FILE = 'common/layout.html'
 OPENGRAPH_FILE = 'common/opengraph.html'
 PAGE_FILE = 'common/page.html'
@@ -16,7 +18,7 @@ class Templates:
         self.opengraph = read(root, OPENGRAPH_FILE)
         self.page = read(root, PAGE_FILE)
         self.boards = read(root, BOARDS_FILE)
-        self.footer = read(root, FOOTER_FILE.format(lang))
+        self.footer = open(resolve(root, FOOTER_FILE, lang)).read()
 
     def render(self, main, strings, settings, opengraph=False, **kwargs):
         html = self.layout

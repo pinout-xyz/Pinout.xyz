@@ -42,8 +42,9 @@ class Site:
         return self.settings.get('url_suffix') or ''
 
     def markdown(self, path):
+        resolved = settings.resolve(self.root, 'src/{}/' + path.lstrip('/'), self.lang)
         try:
-            return documents.to_html(open(os.path.join(self.root, 'src', self.lang, path.lstrip('/'))).read())
+            return documents.to_html(open(resolved).read())
         except IOError:
             return ''
 

@@ -2,6 +2,8 @@ import os
 
 import yaml
 
+from .settings import resolve
+
 FUNCTIONS_FILE = 'common/pin-functions.yaml'
 PINOUT_FILE = 'src/{}/template/pinout.yaml'
 
@@ -30,7 +32,7 @@ def sanitize_mode(mode):
 
 class Pins:
     def __init__(self, root, lang):
-        self._pins = yaml.safe_load(open(os.path.join(root, PINOUT_FILE.format(lang))).read())['pins']
+        self._pins = yaml.safe_load(open(resolve(root, PINOUT_FILE, lang)).read())['pins']
         self.functions = yaml.safe_load(open(os.path.join(root, FUNCTIONS_FILE)).read())
 
     def __len__(self):

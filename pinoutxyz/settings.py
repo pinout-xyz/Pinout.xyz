@@ -5,6 +5,7 @@ import yaml
 
 SETTINGS_FILE = 'src/{}/settings.yaml'
 STRINGS_FILE = 'src/{}/template/localised.yaml'
+SOURCE = 'en'
 
 DEFAULTS = {
     'home': 'Home',
@@ -63,6 +64,13 @@ def language_names(root='.'):
     return names
 
 
+def resolve(root, template, lang):
+    path = os.path.join(root, template.format(lang))
+    if os.path.exists(path):
+        return path
+    return os.path.join(root, template.format(SOURCE))
+
+
 def load_settings(root, lang):
     loaded = yaml.safe_load(open(os.path.join(root, SETTINGS_FILE.format(lang))).read())
     site_url = loaded.get('site_url') or ''
@@ -72,7 +80,7 @@ def load_settings(root, lang):
 
 
 def load_strings(root, lang):
-    loaded = yaml.safe_load(open(os.path.join(root, STRINGS_FILE.format(lang))).read())
+    loaded = yaml.safe_load(open(resolve(root, STRINGS_FILE, lang)).read())
     strings = loaded.get('strings', {})
 
     if isinstance(strings, list):

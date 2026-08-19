@@ -741,6 +741,14 @@ GPIO nav
         }
     }
 
+    &.rotating-back {
+        animation-name: pinout-rotate-back;
+
+        a {
+            animation-name: pinout-rotate-content-back;
+        }
+    }
+
     .gnd .default {color:rgba(233, 229, 210, 0.5);}
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
@@ -1098,6 +1106,16 @@ code {
 
 @keyframes pinout-rotate-content {
     from {transform: rotate(-180deg);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate-back {
+    from {transform: rotate(-180deg);}
+    to {transform: none;}
+}
+
+@keyframes pinout-rotate-content-back {
+    from {transform: rotate(180deg);}
     to {transform: none;}
 }
 

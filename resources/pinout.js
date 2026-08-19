@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
 
 	$('#gpio').on('animationend', function(event){
 		if (event.target === this) {
-			$(this).removeClass('flipping rotating');
+			$(this).removeClass('flipping rotating rotating-back');
 		}
 	});
 
@@ -13,9 +13,9 @@ jQuery(document).ready(function(){
 		var pressed = !$('#gpio').hasClass(view);
 		var gpio = $('#gpio');
 
-		gpio.toggleClass(view, pressed).removeClass('flipping rotating');
+		gpio.toggleClass(view, pressed).removeClass('flipping rotating rotating-back');
 		gpio[0].offsetWidth;
-		gpio.addClass(view === 'mirror' ? 'flipping' : 'rotating');
+		gpio.addClass(view === 'mirror' ? 'flipping' : (pressed ? 'rotating' : 'rotating rotating-back'));
 
 		$(this).attr('aria-pressed', pressed);
 	});

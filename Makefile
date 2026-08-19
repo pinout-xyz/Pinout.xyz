@@ -4,36 +4,33 @@ LANG := $(subst -, ,$(LANG))
 LANG := $(subst _, ,$(LANG))
 LANG := $(firstword $(LANG))
 
-LANGS := $(notdir $(wildcard src/??))
-SITE := output/site
+PYTHON ?= python3
+PINOUTXYZ := $(PYTHON) -m pinoutxyz
 
-.PHONY: resources site site-lang
+.PHONY: all deps html site serve watch translations check clean
 
-all: html resources
+all: site
 
 deps:
-	python3 -m pip install -r requirements.txt
+	$(PYTHON) -m pip install -r requirements.txt
 
 html:
-	./generate-html.py $(LANG)
-
-resources:
-	cp -r resources phatstack output/$(LANG)/
-
-site-lang: html
-	mkdir -p $(SITE)
-	if [ $(LANG) = en ]; then cp -r output/$(LANG)/. $(SITE)/; \
-	else mkdir -p $(SITE)/$(LANG) && cp -r output/$(LANG)/. $(SITE)/$(LANG)/; fi
-	cp -r resources phatstack $(SITE)/
+	$(PINOUTXYZ) build $(LANG)
 
 site:
-	rm -rf $(SITE)
-	for lang in $(LANGS); do $(MAKE) site-lang LANG=$$lang; done
+	$(PINOUTXYZ) build --site
 
-devel: serve
+serve:
+	$(PINOUTXYZ) serve --lang $(LANG)
+
+watch:
+	$(PINOUTXYZ) serve --lang $(LANG) --watch
+
+translations:
+	$(PINOUTXYZ) translations list
+
+check:
+	$(PINOUTXYZ) translations check
 
 clean:
-	rm -rf output/$(LANG)/* $(SITE)
-
-serve: site-lang
-	./serve.py
+	rm -rf output

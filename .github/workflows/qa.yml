@@ -24,3 +24,24 @@ jobs:
 
       - name: Check Spelling
         run: codespell
+
+  translations:
+    name: Translations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check Frontmatter Drift
+        run: python3 -m pinoutxyz translations check
+
+      - name: Report Coverage
+        run: python3 -m pinoutxyz translations list

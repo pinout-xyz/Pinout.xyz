@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 RUN pip install -r requirements.txt
 
-RUN if [ -n "${PUBLISH_DRAFT}" ]; then ./draft/publish.sh "${PUBLISH_DRAFT}"; fi
+RUN if [ -n "${PUBLISH_DRAFT}" ]; then python3 -m pinoutxyz boards publish "${PUBLISH_DRAFT}"; fi
 
 EXPOSE 8080
 

@@ -27,3 +27,4 @@ jobs:
       - name: Build Packages
         run: |
           make site
+          make -C api

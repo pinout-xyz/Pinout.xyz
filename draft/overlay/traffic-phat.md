@@ -7,7 +7,7 @@ formfactor: pHAT
 manufacturer: Pi Supply
 description: A small board that can be used easily to show status of the Pi
 github: https://github.com/PiSupply/Ryanteck/tree/master/Traffic%20pHAT
-image: 'Traffic-pHAT.png'
+image: 'traffic-phat.png'
 pincount: 40
 eeprom: no
 power:

@@ -3,7 +3,7 @@
 name: Unicorn HAT Mini
 class: board
 type: led
-formfactor: phat
+formfactor: pHAT
 manufacturer: Pimoroni
 description: 17x7 RGB LED Matrix
 url: https://shop.pimoroni.com/products/unicorn-hat-mini

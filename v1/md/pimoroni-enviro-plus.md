@@ -43,18 +43,18 @@ pin:
     mode: output
     name: Gas Heater En
   '12':
-    mode: PCM
+    mode: pcm
     name: Mic i2s clk
   '35':
-    mode: PCM
+    mode: pcm
     name: Mic i2s fs
   '38':
-    mode: PCM
+    mode: pcm
     name: Mic i2s data
   '19':
-    mode: SPI
+    mode: spi
   '23':
-    mode: SPI
+    mode: spi
   '21':
     mode: output
     name: LCD D/C

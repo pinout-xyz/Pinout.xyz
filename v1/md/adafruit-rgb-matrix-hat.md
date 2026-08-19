@@ -25,9 +25,9 @@ ground:
   '6':
 pin:
   '3':
-    mode: I2C
+    mode: i2c
   '5':
-    mode: I2C
+    mode: i2c
   '29': 
   '33':
   '31':

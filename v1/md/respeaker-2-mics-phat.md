@@ -3,7 +3,7 @@
 name: ReSpeaker 2 Mics pHAT
 class: board
 type: audio
-formfactor: phat
+formfactor: pHAT
 manufacturer: seeed
 description: Dual-microphone expansion board for AI and voice applications
 url: http://wiki.seeed.cc/Respeaker_2_Mics_Pi_HAT/

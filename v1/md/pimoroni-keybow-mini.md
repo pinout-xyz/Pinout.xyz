@@ -3,7 +3,7 @@
 name: Keybow Mini
 class: board
 type: io
-formfactor: phat
+formfactor: pHAT
 manufacturer: Pimoroni
 description: Add illuminated tactile keyboard keys to Raspberry Pi
 url: https://shop.pimoroni.com/products/keybow-mini-3-key-macro-pad-kit

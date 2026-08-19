@@ -3,7 +3,7 @@
 name: Display HAT Mini
 class: board
 type: display
-formfactor: custom
+formfactor: Custom
 manufacturer: Pimoroni
 description: 320x240 2.0" LCD, RGB LED & 4 Buttons
 buy: https://shop.pimoroni.com/products/display-hat-mini
@@ -45,15 +45,15 @@ pin:
     name: LCD Backlight
   '19':
     name: LCD SPI MOSI
-    mode: SPI
+    mode: spi
   '21':
     name: LCD Data/Command
   '23':
     name: LCD SPI SCLK
-    mode: SPI
+    mode: spi
   '26':
     name: LCD SPI CS
-    mode: SPI
+    mode: spi
 install:
   'devices':
   - 'i2s'

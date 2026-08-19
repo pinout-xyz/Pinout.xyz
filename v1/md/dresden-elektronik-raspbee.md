@@ -21,17 +21,17 @@ ground:
 pin:
   '8':
     name: TXD
-    mode: UART
+    mode: uart
   '10':
     name: RXD
-    mode: UART
+    mode: uart
   '11':
     name: RESET
     mode: input
     active: low
   '12':
     name: SW1
-    mode: GPIO
+    mode: gpio
 -->
 # RaspBee Zigbee add-on board
 

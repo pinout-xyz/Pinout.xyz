@@ -84,6 +84,10 @@ def check(root, board):
     if image is None:
         return 'No image key'
 
+    expected = '{}.png'.format(board)
+    if image != expected:
+        return 'image is {!r}, publishing moves {!r}'.format(image, expected)
+
     if not any(image in os.listdir(os.path.join(root, directory))
                for directory in (DRAFT_BOARDS, BOARD_IMAGES)):
         return 'image {!r} is in neither {} nor {}'.format(image, DRAFT_BOARDS, BOARD_IMAGES)

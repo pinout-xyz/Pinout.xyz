@@ -33,9 +33,17 @@ nav#gpio a {
 	font-size: 0.75em;
 }
 
-nav#gpio .pin {
+nav#gpio .pin::before {
 	border: 1px solid #000000;
 	box-sizing: border-box;
+}
+
+nav#gpio .pow5v .pin::before,
+nav#gpio .i2c .pin::before,
+nav#gpio .spi .pin::before,
+nav#gpio .pcm .pin::before,
+nav#gpio .uart .pin::before {
+	background: #000000 !important;
 }
 
 nav#gpio .overlay-pin a,
@@ -44,9 +52,9 @@ nav#gpio .overlay-ground a {
 	font-weight: bold;
 }
 
-nav#gpio .overlay-pin .pin,
-nav#gpio .overlay-power .pin,
-nav#gpio .overlay-ground .pin {
+nav#gpio .overlay-pin .pin::before,
+nav#gpio .overlay-power .pin::before,
+nav#gpio .overlay-ground .pin::before {
 	border-width: 2px;
 }
 

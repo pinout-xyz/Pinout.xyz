@@ -1,68 +1,45 @@
-import sys
-sys.path.insert(0,".")
+#!/usr/bin/env python3
+
 import os
-os.chdir("../")
+import sys
 
-import markjaml
-import glob
-import pinout
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
+os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
-
-
-pinout.load()
+from pinoutxyz import documents, overlays
+from pinoutxyz.pins import Pins
 
 if len(sys.argv) < 2:
-    print("Usage {} <physical pin>".format(sys.argv[0]))
-    sys.exit(1)
+    sys.exit("Usage {} <physical pin>".format(sys.argv[0]))
 
-find_pin = sys.argv[1]
+pins = Pins('.', 'en')
 
-files = glob.glob("src/en/overlay/*.md")
+pin_physical = str(sys.argv[1])
+pin_bcm = "bcm{}".format(pins.physical_to_bcm(pin_physical))
 
-pin_physical = str(find_pin)
-pin_bcm = "bcm{}".format(pinout.physical_to_bcm(pin_physical))
-
-msg = "Searching for pin: {physical}, {bcm}".format(physical=pin_physical, bcm=pin_bcm)
-print(msg)
-print(''.join('-' for x in msg))
+message = "Searching for pin: {physical}, {bcm}".format(physical=pin_physical, bcm=pin_bcm)
+print(message)
+print('-' * len(message))
 
 count = 0
 
-for file in files:
-    #print("Loading: {}".format(file))
-    loaded = markjaml.load(file)
+for path in overlays.paths('.', 'en'):
+    loaded = documents.load(path)['data']
 
-    if "data" not in loaded:
-        continue
-
-    data = loaded["data"]
-
-    if "class" not in data or "pin" not in data:
-        continue  
-  
-    if data["class"] in ["board", "interface"]:
-        pin = None
-
-        if pin_bcm in data["pin"]:
-            pin = data["pin"][pin_bcm]
-
-        if pin_physical in data["pin"]:
-            pin = data["pin"][pin_physical]
-
-        if pin is not None:
-            print("{type}: {name}: {desc} (dir:{direction} pol:{active})".format(
-                type=data["class"],
-                name=data["name"],
-                desc=pin.get("name", "**unnamed**"),
-                direction=pin["direction"] if "direction" in pin else "unknown",
-                active="active {}".format(pin["active"]) if "active" in pin else "unknown"
-                ))
-
+    for key in ('pin', 'power', 'ground'):
+        entries = loaded.get(key) or {}
+        for candidate in (pin_physical, int(pin_physical), pin_bcm):
+            if candidate not in entries:
+                continue
+            pin = entries[candidate] or {}
             count += 1
+            print("{type}: {name}: {desc} (dir:{direction} pol:{active})".format(
+                type=key,
+                name=loaded['name'],
+                desc=pin.get('name', ''),
+                direction=pin.get('direction', 'unknown'),
+                active=pin.get('active', 'unknown')))
+            break
 
-print(''.join('-' for x in msg))
-
-if count > 0:
-    print("Found {count} boards using physical pin: {physical}".format(count=count, physical=pin_physical))
-else:
-    print("No boards use this pin!")
+print()
+print("Found {} boards using this pin".format(count))

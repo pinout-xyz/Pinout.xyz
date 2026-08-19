@@ -5,8 +5,7 @@ import os
 import sys
 import urllib.parse
 
-import markjaml
-import urlmapper
+from pinoutxyz import documents, overlays
 
 TRANSLATABLE = {'name', 'description', 'title', 'page_url', 'docs'}
 LOCALISED = {'url', 'buy', 'github', 'schematic'}
@@ -15,7 +14,7 @@ EEPROM_VALUES = {'True', 'False', 'None', 'detect', 'setup'}
 
 
 def load(path):
-    return markjaml.load(path)['data'] or {}
+    return documents.load(path)['data'] or {}
 
 
 def sources(lang):
@@ -77,7 +76,7 @@ def check(lang, english):
         if not data.get('name'):
             findings.append((path, "name: missing"))
         else:
-            url = data.get('page_url') or urlmapper.url_slugify(data['name'])
+            url = overlays.page_url(data)
             if url in urls:
                 findings.append((path, "page_url {!r} collides with {}".format(url, urls[url])))
             urls[url] = path

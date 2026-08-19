@@ -81,7 +81,7 @@ docker run -p 8080:8080 pinout.xyz
 
 Now you can access the webserver at http://127.0.0.1:8080.
 
-Mount the repository over `/app` to work on the site without rebuilding the image. The container rebuilds and reserves whenever you edit anything under `src`, `common` or `resources`:
+Mount the repository over `/app` to work on the site without rebuilding the image. The container rebuilds whenever you edit anything under `src`, `common` or `resources`:
 
 ```bash
 docker run -p 8080:8080 -v "$(pwd):/app" pinout.xyz
@@ -91,6 +91,13 @@ Set `PINOUT_LANG` to serve a language other than English:
 
 ```bash
 docker run -p 8080:8080 -e PINOUT_LANG=de pinout.xyz
+```
+
+The image installs the builder, so the `pinoutxyz` command is on the path inside the container:
+
+```bash
+docker exec <container> pinoutxyz translations list
+docker exec <container> pinoutxyz boards list
 ```
 
 Optionally you can include a draft board in the image by setting the `PUBLISH_DRAFT` build argument:

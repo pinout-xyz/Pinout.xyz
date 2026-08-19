@@ -2,7 +2,7 @@
 ---
 name: Uputronics Pi HX1 Expansion Board 
 class: board
-type: Radio
+type: radio
 formfactor: HAT
 manufacturer: Uputronics
 description: HX1 Expansion board for Raspberry Pi

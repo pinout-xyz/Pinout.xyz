@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi SPI pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190703" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/spi" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/spi" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190703"/>
-		<!-- Build: 20260819T190703 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="SPI Raspberry Pi GPIO Pinout">
@@ -43,9 +43,9 @@
 				<nav id="gpio" aria-label="GPIO header">
 					<ul class="bottom" aria-label="Odd-numbered pins">
 <li class="pin1 pow3v3"><a href="/fr/pinout/pin1_alimentation_33v" title=""><span class="default"> Alimentation 3.3v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">1</span></span></a></li>
-<li class="pin3 gpio i2c"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8"><span class="default"> <span class="name">GPIO 2</span> <small>(SDA)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
-<li class="pin5 gpio i2c"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9"><span class="default"> <span class="name">GPIO 3</span> <small>(SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
-<li class="pin7 gpio"><a href="/fr/pinout/pin7_gpio4" title="broche Wiring Pi 7"><span class="default"> <span class="name">GPIO 4</span> <small>(GPCLK0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">7</span></span></a></li>
+<li class="pin3 gpio i2c overlay-pin"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8, Supported on Pi 4 (spi3) and Pi 5 (spi2)"><span class="default"> <span class="name">GPIO 2</span> <small>(SPI MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
+<li class="pin5 gpio i2c overlay-pin"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9, Supported on Pi 4 (spi3) and Pi 5 (spi2)"><span class="default"> <span class="name">GPIO 3</span> <small>(SPI SCLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
+<li class="pin7 gpio overlay-pin"><a href="/fr/pinout/pin7_gpio4" title="broche Wiring Pi 7, Supported on Pi 4 (spi4) and Pi 5 (spi3)"><span class="default"> <span class="name">GPIO 4</span> <small>(SPI CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">7</span></span></a></li>
 <li class="pin9 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">9</span></span></a></li>
 <li class="pin11 gpio overlay-pin"><a href="/fr/pinout/pin11_gpio17" title="broche Wiring Pi 0"><span class="default"> <span class="name">GPIO 17</span> <small>(SPI1 CE1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">11</span></span></a></li>
 <li class="pin13 gpio"><a href="/fr/pinout/pin13_gpio27" title="broche Wiring Pi 2"><span class="default"> <span class="name">GPIO 27</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">13</span></span></a></li>
@@ -55,10 +55,10 @@
 <li class="pin21 gpio spi overlay-pin"><a href="/fr/pinout/pin21_gpio9" title="Master In / Slave Out, broche Wiring Pi 13"><span class="default"> <span class="name">GPIO 9</span> <small>(SPI0 MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">21</span></span></a></li>
 <li class="pin23 gpio spi overlay-pin"><a href="/fr/pinout/pin23_gpio11" title="Clock, broche Wiring Pi 14"><span class="default"> <span class="name">GPIO 11</span> <small>(SPI0 SCLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">23</span></span></a></li>
 <li class="pin25 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">25</span></span></a></li>
-<li class="pin27 gpio i2c"><a href="/fr/pinout/pin27_gpio0" title="broche Wiring Pi 30"><span class="default"> <span class="name">GPIO 0</span> <small>(ID_SD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">27</span></span></a></li>
-<li class="pin29 gpio"><a href="/fr/pinout/pin29_gpio5" title="broche Wiring Pi 21"><span class="default"> <span class="name">GPIO 5</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">29</span></span></a></li>
-<li class="pin31 gpio"><a href="/fr/pinout/pin31_gpio6" title="broche Wiring Pi 22"><span class="default"> <span class="name">GPIO 6</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">31</span></span></a></li>
-<li class="pin33 gpio"><a href="/fr/pinout/pin33_gpio13" title="broche Wiring Pi 23"><span class="default"> <span class="name">GPIO 13</span> <small>(PWM1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">33</span></span></a></li>
+<li class="pin27 gpio i2c overlay-pin"><a href="/fr/pinout/pin27_gpio0" title="broche Wiring Pi 30, Supported on Pi 4 (spi3) and Pi 5 (spi2)"><span class="default"> <span class="name">GPIO 0</span> <small>(SPI CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">27</span></span></a></li>
+<li class="pin29 gpio overlay-pin"><a href="/fr/pinout/pin29_gpio5" title="broche Wiring Pi 21, Supported on Pi 4 (spi4) and Pi 5 (spi3)"><span class="default"> <span class="name">GPIO 5</span> <small>(SPI MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">29</span></span></a></li>
+<li class="pin31 gpio overlay-pin"><a href="/fr/pinout/pin31_gpio6" title="broche Wiring Pi 22, Supported on Pi 4 (spi4) and Pi 5 (spi3)"><span class="default"> <span class="name">GPIO 6</span> <small>(SPI MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">31</span></span></a></li>
+<li class="pin33 gpio overlay-pin"><a href="/fr/pinout/pin33_gpio13" title="broche Wiring Pi 23, Supported on Pi 4 and Pi 5 (spi5)"><span class="default"> <span class="name">GPIO 13</span> <small>(SPI MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">33</span></span></a></li>
 <li class="pin35 gpio spi overlay-pin"><a href="/fr/pinout/pin35_gpio19" title="broche Wiring Pi 24"><span class="default"> <span class="name">GPIO 19</span> <small>(SPI1 MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">35</span></span></a></li>
 <li class="pin37 gpio"><a href="/fr/pinout/pin37_gpio26" title="broche Wiring Pi 25"><span class="default"> <span class="name">GPIO 26</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">37</span></span></a></li>
 <li class="pin39 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
@@ -67,8 +67,8 @@
 <li class="pin2 pow5v"><a href="/fr/pinout/pin2_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
 <li class="pin4 pow5v"><a href="/fr/pinout/pin4_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">4</span></span></a></li>
 <li class="pin6 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">6</span></span></a></li>
-<li class="pin8 gpio uart"><a href="/fr/pinout/pin8_gpio14" title="broche Wiring Pi 15"><span class="default"> <span class="name">GPIO 14</span> <small>(TXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">8</span></span></a></li>
-<li class="pin10 gpio uart"><a href="/fr/pinout/pin10_gpio15" title="broche Wiring Pi 16"><span class="default"> <span class="name">GPIO 15</span> <small>(RXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">10</span></span></a></li>
+<li class="pin8 gpio uart overlay-pin"><a href="/fr/pinout/pin8_gpio14" title="broche Wiring Pi 15, Supported on Pi 4 and Pi 5 (spi5)"><span class="default"> <span class="name">GPIO 14</span> <small>(SPI MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">8</span></span></a></li>
+<li class="pin10 gpio uart overlay-pin"><a href="/fr/pinout/pin10_gpio15" title="broche Wiring Pi 16, Supported on Pi 4 and Pi 5 (spi5)"><span class="default"> <span class="name">GPIO 15</span> <small>(SPI SCLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">10</span></span></a></li>
 <li class="pin12 gpio overlay-pin"><a href="/fr/pinout/pin12_gpio18" title="broche Wiring Pi 1"><span class="default"> <span class="name">GPIO 18</span> <small>(SPI1 CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">12</span></span></a></li>
 <li class="pin14 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">14</span></span></a></li>
 <li class="pin16 gpio"><a href="/fr/pinout/pin16_gpio23" title="broche Wiring Pi 4"><span class="default"> <span class="name">GPIO 23</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">16</span></span></a></li>
@@ -77,9 +77,9 @@
 <li class="pin22 gpio"><a href="/fr/pinout/pin22_gpio25" title="broche Wiring Pi 6"><span class="default"> <span class="name">GPIO 25</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">22</span></span></a></li>
 <li class="pin24 gpio spi overlay-pin"><a href="/fr/pinout/pin24_gpio8" title="Chip Select 0, broche Wiring Pi 10"><span class="default"> <span class="name">GPIO 8</span> <small>(SPI0 CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
 <li class="pin26 gpio spi overlay-pin"><a href="/fr/pinout/pin26_gpio7" title="Chip Select 1, broche Wiring Pi 11"><span class="default"> <span class="name">GPIO 7</span> <small>(SPI0 CE1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">26</span></span></a></li>
-<li class="pin28 gpio i2c"><a href="/fr/pinout/pin28_gpio1" title="broche Wiring Pi 31"><span class="default"> <span class="name">GPIO 1</span> <small>(ID_SC)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">28</span></span></a></li>
+<li class="pin28 gpio i2c overlay-pin"><a href="/fr/pinout/pin28_gpio1" title="broche Wiring Pi 31, Supported on Pi 4 (spi3) and Pi 5 (spi2)"><span class="default"> <span class="name">GPIO 1</span> <small>(SPI MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">28</span></span></a></li>
 <li class="pin30 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">30</span></span></a></li>
-<li class="pin32 gpio"><a href="/fr/pinout/pin32_gpio12" title="broche Wiring Pi 26"><span class="default"> <span class="name">GPIO 12</span> <small>(PWM0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">32</span></span></a></li>
+<li class="pin32 gpio overlay-pin"><a href="/fr/pinout/pin32_gpio12" title="broche Wiring Pi 26, Supported on Pi 4 and Pi 5 (spi5)"><span class="default"> <span class="name">GPIO 12</span> <small>(SPI CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">32</span></span></a></li>
 <li class="pin34 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">34</span></span></a></li>
 <li class="pin36 gpio overlay-pin"><a href="/fr/pinout/pin36_gpio16" title="broche Wiring Pi 27"><span class="default"> <span class="name">GPIO 16</span> <small>(SPI1 CE2)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">36</span></span></a></li>
 <li class="pin38 gpio spi overlay-pin"><a href="/fr/pinout/pin38_gpio20" title="broche Wiring Pi 28"><span class="default"> <span class="name">GPIO 20</span> <small>(SPI1 MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">38</span></span></a></li>
@@ -172,19 +172,29 @@
 			<div id="crumbtrail"><p><a class="more" href="/fr/boards">Voir toutes les cartes disponibles &raquo;</a></p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_spi"><h1>SPI - Serial Peripheral Interface</h1>
-<hr />
-<h3>SPI0 pins in BCM mode are: 9, 10, 11 + 7/8</h3>
-<h3>SPI0 pins in WiringPi are: 12, 13, 14 + 10/11</h3>
-<hr />
-<p>Known as the four-wire serial bus, SPI lets you daisy-chain multiple compatible devices off a single set of pins by assigning them different chip-select pins.</p>
-<p>A useful example of an SPI peripheral is the MCP23S17 digital IO expander chip ( Note the S in place of the 0 found on the I2C version ). You can also use the SPI port to "Bit-Bang" an ATmega 328, loading Arduino sketches onto it with Gordon Hendersons' modified version of AVRDude.</p>
-<p>To talk to an SPI device, you assert its corresponding chip-select pin. By default the Pi has CE0 and CE1.</p>
-<pre><code class="language-python">import spidev
-spi = spidev.SpiDev()
-spi.open(0, CHIP_SELECT_0_OR_1)
-spi.max_speed_hz = 1000000
-spi.xfer([value_8bit])
+<ul>
+<li>SPI0 pins are GPIO 7, GPIO 8, GPIO 9, GPIO 10, GPIO 11</li>
+<li>SPI1 pins are GPIO 16, GPIO 17, GPIO 18, GPIO 19, GPIO 20, GPIO 21</li>
+</ul>
+<p>Known as the four-wire serial bus, SPI lets you attach multiple compatible devices to a single set of pins by assigning them different chip-select pins.</p>
+<p>To talk to an SPI device, you assert its corresponding chip-select pin.</p>
+<p>By default the Pi allows you to use SPI0 with chip select pins on CE0 on GPIO 8 and CE1 on GPIO 7.</p>
+<h2>Enable via config.txt</h2>
+<p>You can enable SPI1 with a dtoverlay configured in "/boot/firmware/config.txt", for example:</p>
+<pre><code>dtoverlay=spi1-3cs
 </code></pre>
+<p>For full details of the SPI dtoverlays (and others) see <a href="https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README">the Raspberry Pi dtoverlay README</a></p>
+<h2>More than two buses</h2>
+<p>Pi 4 and Pi 5 both have extra SPI controllers on the low-numbered GPIO pins, numbered differently between the two models. Each group runs CE0, MISO, MOSI then SCLK in ascending pin order:</p>
+<ul>
+<li>GPIO 0 to GPIO 3: spi3 on Pi 4, spi2 on Pi 5.</li>
+<li>GPIO 4 to GPIO 7: spi4 on Pi 4, spi3 on Pi 5. GPIO 7 is SPI0's CE1, so the two cannot both be in use.</li>
+<li>GPIO 12 to GPIO 15: spi5 on both models. GPIO 14 and GPIO 15 are also the UART pins.</li>
+<li>GPIO 18 to GPIO 21: spi6 on Pi 4, sharing SPI1's pins with CE0 on GPIO 18.</li>
+</ul>
+<p>Enable one with the matching overlay, in a <code>1cs</code> or <code>2cs</code> form for the number of chip selects you need: <code>dtoverlay=spi4-1cs</code> on a Pi 4, <code>dtoverlay=spi3-1cs-pi5</code> on a Pi 5. The <code>cs0_pin</code> parameter moves the chip select if the default clashes with something.</p>
+<p>The <code>spi2</code> overlay without a <code>-pi5</code> suffix is a different thing entirely: spi2 on GPIO 40 to GPIO 42, which only exists on Compute Modules.</p>
+<p>Raspberry Pi 5 documentation calls MISO and MOSI SIO1 and SIO0, since RP1's SPI blocks can run in modes where the data lines change direction.</p>
 <table class="details"><tr><td><h2>Détails</h2><ul>
 <li><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/">plus d'info</a></li>
 </ul></td><td></td></tr></table></article>
@@ -199,7 +209,7 @@ spi.xfer([value_8bit])
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190703'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

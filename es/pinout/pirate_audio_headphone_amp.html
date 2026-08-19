@@ -6,7 +6,7 @@
 		<meta name="description" content="I2S digital audio to amplified headphone output" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190656" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/pirate_audio_headphone_amp" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pirate_audio_headphone_amp" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/pirate_audio_headphone_amp" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pirate_audio_headphone_amp" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190656"/>
-		<!-- Build: 20260819T190656 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Pirate Audio Headphone Amp Raspberry Pi GPIO pinout">
@@ -72,7 +72,7 @@
 <li class="pin12 gpio overlay-pin"><a href="/es/pinout/pin12_gpio18" title="pin Wiring Pi 1"><span class="default"> <span class="name">GPIO 18</span> <small>(I2S)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">12</span></span></a></li>
 <li class="pin14 gnd"><a href="/es/pinout/masa" title=""><span class="default"> Masa</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">14</span></span></a></li>
 <li class="pin16 gpio"><a href="/es/pinout/pin16_gpio23" title="pin Wiring Pi 4"><span class="default"> <span class="name">GPIO 23</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">16</span></span></a></li>
-<li class="pin18 gpio"><a href="/es/pinout/pin18_gpio24" title="pin Wiring Pi 5"><span class="default"> <span class="name">GPIO 24</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">18</span></span></a></li>
+<li class="pin18 gpio overlay-pin"><a href="/es/pinout/pin18_gpio24" title="pin Wiring Pi 5"><span class="default"> <span class="name">GPIO 24</span> <small>(Button Y)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">18</span></span></a></li>
 <li class="pin20 gnd"><a href="/es/pinout/masa" title=""><span class="default"> Masa</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">20</span></span></a></li>
 <li class="pin22 gpio overlay-pin"><a href="/es/pinout/pin22_gpio25" title="pin Wiring Pi 6"><span class="default"> <span class="name">GPIO 25</span> <small>(Amp Enable)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">22</span></span></a></li>
 <li class="pin24 gpio spi"><a href="/es/pinout/pin24_gpio8" title="pin Wiring Pi 10"><span class="default"> <span class="name">GPIO 8</span> <small>(CE0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">24</span></span></a></li>
@@ -173,17 +173,20 @@
 			<section id="content" tabindex="-1">
 				<article class="page_pirate_audio_headphone_amp"><h1>Pirate Audio: Headphone Amp</h1>
 <p>Fully supported by Mopidy plugins to create an album-art-displaying digital audio player based on the Raspberry Pi.</p>
+<h2>Features</h2>
 <ul>
 <li>I2S DAC</li>
 <li>Headphone Amplifier</li>
 <li>240x240 LCD</li>
 <li>4 Playback control buttons</li>
 </ul>
+<h2>Button Y</h2>
+<p>On older boards you might find button Y on GPIO 20. On newer boards this has been moved to GPIO 24 to free up PCM Data-in.</p>
 <table class="details"><tr><td><h2>Detalles</h2><ul>
 <li>Fabricado por <a href="/es/boards#manufacturer=Pimoroni">Pimoroni</a></li>
 <li>formato pHAT</li>
 <li>Alimentación 5v</li>
-<li>Usa 13 pines GPIO</li>
+<li>Usa 14 pines GPIO</li>
 <li>Usa SPI</li>
 <li><a href="https://github.com/pimoroni/pirate-audio">GitHub</a></li>
 <li><a href="https://shop.pimoroni.com/products/pirate-audio-headphone-amp">Comprar</a></li>
@@ -199,7 +202,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190656'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

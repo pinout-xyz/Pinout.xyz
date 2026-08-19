@@ -6,7 +6,7 @@
 		<meta name="description" content="Un LCD 3x16 avec rétro-éclairage sur 6 zones RGB et buttons tactiles" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190703" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/display_o_tron_hat" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/display_o_tron_hat" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/display_o_tron_hat" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/display_o_tron_hat" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190703"/>
-		<!-- Build: 20260819T190703 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Display-o-Tron HAT Raspberry Pi GPIO Pinout">
@@ -46,7 +46,7 @@
 <li class="pin3 gpio i2c overlay-pin"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8"><span class="default"> <span class="name">GPIO 2</span> <small>(SDA)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
 <li class="pin5 gpio i2c overlay-pin"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9"><span class="default"> <span class="name">GPIO 3</span> <small>(SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
 <li class="pin7 gpio"><a href="/fr/pinout/pin7_gpio4" title="broche Wiring Pi 7"><span class="default"> <span class="name">GPIO 4</span> <small>(GPCLK0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">7</span></span></a></li>
-<li class="pin9 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">9</span></span></a></li>
+<li class="pin9 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">9</span></span></a></li>
 <li class="pin11 gpio"><a href="/fr/pinout/pin11_gpio17" title="broche Wiring Pi 0"><span class="default"> <span class="name">GPIO 17</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">11</span></span></a></li>
 <li class="pin13 gpio"><a href="/fr/pinout/pin13_gpio27" title="broche Wiring Pi 2"><span class="default"> <span class="name">GPIO 27</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">13</span></span></a></li>
 <li class="pin15 gpio"><a href="/fr/pinout/pin15_gpio22" title="broche Wiring Pi 3"><span class="default"> <span class="name">GPIO 22</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">15</span></span></a></li>
@@ -61,7 +61,7 @@
 <li class="pin33 gpio"><a href="/fr/pinout/pin33_gpio13" title="broche Wiring Pi 23"><span class="default"> <span class="name">GPIO 13</span> <small>(PWM1)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">33</span></span></a></li>
 <li class="pin35 gpio spi"><a href="/fr/pinout/pin35_gpio19" title="broche Wiring Pi 24"><span class="default"> <span class="name">GPIO 19</span> <small>(MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">35</span></span></a></li>
 <li class="pin37 gpio"><a href="/fr/pinout/pin37_gpio26" title="broche Wiring Pi 25"><span class="default"> <span class="name">GPIO 26</span></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">37</span></span></a></li>
-<li class="pin39 gnd"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
+<li class="pin39 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
 </ul>
 <ul class="top" aria-label="Even-numbered pins">
 <li class="pin2 pow5v overlay-power"><a href="/fr/pinout/pin2_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
@@ -184,6 +184,8 @@
 <li>7 broches GPIO actives</li>
 <li>communication par bus SPI</li>
 <li>communication par bus I2C</li>
+<li>0x54: sn3218</li>
+<li>0x2c: cap1166</li>
 <li><a href="https://shop.pimoroni.com/products/display-o-tron-hat">plus d'info</a></li>
 <li><a href="https://github.com/pimoroni/displayotron">lien GitHub</a></li>
 <li><a href="https://shop.pimoroni.com/products/display-o-tron-hat">achat</a></li>
@@ -199,7 +201,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190703'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

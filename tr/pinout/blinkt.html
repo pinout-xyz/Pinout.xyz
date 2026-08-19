@@ -6,7 +6,7 @@
 		<meta name="description" content="Slimline board with 8 super-bright RGB LED indicators" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190716" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/blinkt" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/blinkt" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/blinkt" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/blinkt" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190716"/>
-		<!-- Build: 20260819T190716 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Blinkt! - Raspberry Pi Pinleri">
@@ -64,7 +64,7 @@
 <li class="pin39 gnd"><a href="/tr/pinout/toprak" title=""><span class="default"> Toprak</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
 </ul>
 <ul class="top" aria-label="Even-numbered pins">
-<li class="pin2 pow5v"><a href="/tr/pinout/pin2_5v_guc" title=""><span class="default"> 5v Güç</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
+<li class="pin2 pow5v overlay-power"><a href="/tr/pinout/pin2_5v_guc" title=""><span class="default"> 5v Güç</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
 <li class="pin4 pow5v overlay-power"><a href="/tr/pinout/pin4_5v_guc" title=""><span class="default"> 5v Güç</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">4</span></span></a></li>
 <li class="pin6 gnd overlay-ground"><a href="/tr/pinout/toprak" title=""><span class="default"> Toprak</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">6</span></span></a></li>
 <li class="pin8 gpio uart"><a href="/tr/pinout/pin8_gpio14" title="Wiring Pi pin 15"><span class="default"> <span class="name">GPIO 14</span> <small>(TXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">8</span></span></a></li>
@@ -173,6 +173,14 @@
 			<section id="content" tabindex="-1">
 				<article class="page_blinkt"><h1>Blinkt!</h1>
 <p>Blinkt! is a super slimline Raspberry Pi Add-on board with 8 APA-102 LEDs.</p>
+<h2>5V Power</h2>
+<p>Blinkt! does not require <em>both</em> Physical Pin 2 and Physical Pin 4:</p>
+<ul>
+<li>Physical Pin 4 is used for 5v power on all Blinkt! boards since 2018</li>
+<li>Physical Pin 2 was used for 5v power on first run Blinkt! boards prior to 2018</li>
+</ul>
+<p>If your Blinkt! doesn't work with one, try swapping over to the other or - if all else fails - wiring both.</p>
+<h2>Installing</h2>
 <p>To get started you can use the one-line product installer:</p>
 <pre><code class="language-bash">curl -sS https://get.pimoroni.com/blinkt | bash
 </code></pre>
@@ -210,7 +218,7 @@ while True:
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190716'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 		<meta name="description" content="An e-paper display for your Raspberry Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190703" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/inky_phat" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/inky_phat" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/inky_phat" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/inky_phat" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190703"/>
-		<!-- Build: 20260819T190703 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Inky pHAT Raspberry Pi GPIO Pinout">
@@ -43,8 +43,8 @@
 				<nav id="gpio" aria-label="GPIO header">
 					<ul class="bottom" aria-label="Odd-numbered pins">
 <li class="pin1 pow3v3 overlay-power"><a href="/fr/pinout/pin1_alimentation_33v" title=""><span class="default"> Alimentation 3.3v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">1</span></span></a></li>
-<li class="pin3 gpio i2c"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8"><span class="default"> <span class="name">GPIO 2</span> <small>(SDA)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
-<li class="pin5 gpio i2c"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9"><span class="default"> <span class="name">GPIO 3</span> <small>(SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
+<li class="pin3 gpio i2c overlay-pin"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8"><span class="default"> <span class="name">GPIO 2</span> <small>(SDA)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
+<li class="pin5 gpio i2c overlay-pin"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9"><span class="default"> <span class="name">GPIO 3</span> <small>(SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
 <li class="pin7 gpio"><a href="/fr/pinout/pin7_gpio4" title="broche Wiring Pi 7"><span class="default"> <span class="name">GPIO 4</span> <small>(GPCLK0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">7</span></span></a></li>
 <li class="pin9 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">9</span></span></a></li>
 <li class="pin11 gpio overlay-pin"><a href="/fr/pinout/pin11_gpio17" title="broche Wiring Pi 0"><span class="default"> <span class="name">GPIO 17</span> <small>(Chip Busy)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">11</span></span></a></li>
@@ -172,18 +172,23 @@
 			<div id="crumbtrail"><p><a href="/fr/">Accueil</a> &raquo; <a href="/fr/boards">Cartes</a> &raquo; <a href="/fr/boards#manufacturer=Pimoroni">Pimoroni</a> &raquo; Inky pHAT</p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_inky_phat"><h1>Inky pHAT</h1>
-<p>Inky pHAT is a low-energy, red/black/white electronic paper display for the Raspberry Pi. Multi-colour EPD displays, like the one on Inky pHAT, use ingenious electrophoresis to pull coloured particles up and down on the display. The coloured particles reflect light, unlike most display types, so they're visible under bright lights.</p>
+<p>Inky pHAT is a low-energy, red/black, red/black/white or yellow/black/white electronic paper display for the Raspberry Pi. Multi-colour EPD displays, like the one on Inky pHAT, use ingenious electrophoresis to pull coloured particles up and down on the display. The coloured particles reflect light, unlike most display types, so they're visible under bright lights.</p>
 <p>The unit comes fully-assembled, with the display securely stuck down to the Inky pHAT PCB and connected via a ribbon cable. The Inky pHAT is compatible with all 40-way Raspberry Pis.</p>
 <p>To get the pHAT up and running, you can use the one-line product installer:</p>
-<pre><code class="language-bash">curl https://get.pimoroni.com/inkyphat | bash
+<pre><code class="language-bash">curl https://get.pimoroni.com/inky | bash
 </code></pre>
 <p>And follow the instructions!</p>
+<p>Note: For the old first edition Inky pHAT you should use:</p>
+<pre><code class="language-bash">curl https://get.pimoroni.com/inkyphat | bash
+</code></pre>
 <table class="details"><tr><td><h2>Détails</h2><ul>
 <li>fabriqué par <a href="/fr/boards#manufacturer=Pimoroni">Pimoroni</a></li>
 <li>carte au format pHAT</li>
 <li>alimentation 5v et 3v3</li>
-<li>6 broches GPIO actives</li>
+<li>8 broches GPIO actives</li>
 <li>communication par bus SPI</li>
+<li>communication par bus I2C</li>
+<li>0x50: Inky ID EEPROM</li>
 <li><a href="https://shop.pimoroni.com/products/inky-phat">plus d'info</a></li>
 <li><a href="https://github.com/pimoroni/inky">lien GitHub</a></li>
 <li><a href="https://shop.pimoroni.com/products/inky-phat">achat</a></li>
@@ -199,7 +204,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190703'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

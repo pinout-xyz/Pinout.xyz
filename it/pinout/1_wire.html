@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi One-Wire pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T190709" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260819T211929" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/1_wire" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/1_wire" hreflang="en"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/tr/pinout/1_wire" hreflang="tr"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/1_wire" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T190709"/>
-		<!-- Build: 20260819T190709 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T211929"/>
+		<!-- Build: 20260819T211929 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="1-WIRE - Assegnazione pin GPIO del Raspberry Pi">
@@ -172,21 +172,21 @@
 			<div id="crumbtrail"><p><a class="more" href="/it/boards">Browse more HATs, pHATs and add-ons &raquo;</a></p></div>
 			<section id="content" tabindex="-1">
 				<article class="page_1_wire"><h1>W1-GPIO - One-Wire Interface</h1>
-<p>To enable the one-wire interface you need to add the following line to /boot/firmware/config.txt, before rebooting your Pi:</p>
+<p>One-wire is a single-wire communication bus typically used to connect sensors to the Pi.</p>
+<p>The Raspberry Pi supports one-wire on any GPIO pin, but the default is GPIO 4.</p>
+<h2>Enable via config.txt</h2>
+<p>Add the overlay to /boot/firmware/config.txt and reboot, or let <code>raspi-config</code> do it for you:</p>
 <pre><code>dtoverlay=w1-gpio
 </code></pre>
-<p>or </p>
-<pre><code>dtoverlay=w1-gpio,gpiopin=x
-</code></pre>
-<p>if you would like to use a custom pin (default is BCM4, as illustrated in pinout herein).</p>
-<p>Alternatively you can enable the one-wire interface using raspi-config.</p>
-<p>Newer kernels (4.9.28 and later) allow you to use dynamic overlay loading instead, including creating multiple 1-Wire buses to be used at the same time:</p>
-<pre><code>sudo dtoverlay w1-gpio gpiopin=4 pullup=0  # header pin 7
-sudo dtoverlay w1-gpio gpiopin=17 pullup=0 # header pin 11
-sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
+<p>The default pin is GPIO 4. Any other pin needs the <code>gpiopin</code> parameter, for example <code>dtoverlay=w1-gpio,gpiopin=17</code>.</p>
+<h2>Enable at runtime</h2>
+<p>Kernels since 4.9.28 can load overlays without a reboot, including several 1-Wire buses at once:</p>
+<pre><code>sudo dtoverlay w1-gpio gpiopin=4  # header pin 7
+sudo dtoverlay w1-gpio gpiopin=17 # header pin 11
+sudo dtoverlay w1-gpio gpiopin=27 # header pin 13
 </code></pre>
 <p>Devices found on any of the buses appear in <code>/sys/bus/w1/devices/</code>.</p>
-<p>n.b. Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17).  Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.</p>
+<p>Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). <a href="/pinout/i2c">GPIO 2 and GPIO 3</a> already have a 1.8 kΩ pull-up fitted, which will do the same job if you can spare the I2C pins. Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.</p>
 <table class="details"><tr><td><h2>Details</h2><ul>
 <li><a href="https://www.kernel.org/doc/Documentation/w1/w1.generic">Maggiori informazioni</a></li>
 </ul></td><td></td></tr></table></article>
@@ -201,7 +201,7 @@ sudo dtoverlay w1-gpio gpiopin=27 pullup=0 # header pin 13
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T190709'></script>
+		<script src='/resources/pinout.js?v=20260819T211929'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

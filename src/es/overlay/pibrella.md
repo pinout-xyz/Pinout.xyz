@@ -40,15 +40,15 @@ pin:
     direction: output
     active: high
   '15':
-    name: Salida A
+    name: Salida E
     direction: output
     active: high
   '16':
-    name: Salida B
+    name: Salida F
     direction: output
     active: high
   '18':
-    name: Salida C
+    name: Salida G
     direction: output
     active: high
   '19':
@@ -60,7 +60,7 @@ pin:
     direction: input
     active: high
   '22':
-    name: Salida D
+    name: Salida H
     direction: output
     active: high
   '23':

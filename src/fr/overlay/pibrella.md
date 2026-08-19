@@ -40,19 +40,19 @@ pin:
     direction: output
     active: high
   '15':
-    name: sortie A
+    name: sortie E
     direction: output
     active: high
   '16':
-    name: sortie B
+    name: sortie F
     direction: output
     active: high
   '18':
-    name: sortie C
+    name: sortie G
     direction: output
     active: high
   '19':
-    name: sortie D
+    name: entrée D
     direction: output
     active: high
   '21':
@@ -60,7 +60,7 @@ pin:
     direction: input
     active: high
   '22':
-    name: entrée D
+    name: sortie H
     direction: output
     active: high
   '23':

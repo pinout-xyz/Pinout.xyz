@@ -25,10 +25,6 @@ And some experimental pinouts, too:
 * [Espressif ESP32 C3 DevKitC Pinout](https://esp32c3.pinout.xyz)
 * [PJRC Teensy 4.0 Pinout](https://teensy40.pinout.xyz)
 
-## pHAT Stack
-
-Pinout has teamed up with Pimoroni to create a [prototype board compatibility tool, check it out here!](/phatstack)
-
 ## Explore HATs & pHATs
 
 [Check out Pinout's board explorer](/boards)! Use it to find the pinout for your Raspberry Pi add-on board, or discover new boards. If you manufacture boards, we'd love to add yours too. [You can contribute to Pinout.xyz at GitHub.com](https://github.com/pinout-xyz/Pinout.xyz).

@@ -54,6 +54,7 @@ default_strings = {
     'bcm_pin_rev1_pi': 'GPIO/BCM pin {} on Rev 1 ( very early ) Pi',
     'supported_on': 'Supported on {}',
     'physical_pin_n': 'Physical/Board pin {}',
+    'physical_pin_label': 'physical pin',
     'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
@@ -487,8 +488,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 
     pin_url = pin_url + url_suffix
 
-    return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"> {pin_name}</span><span class="pin">{pin_num}</span></a></li>\n'.format(
+    return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"> {pin_name}</span><span class="pin"><span class="visually-hidden">{physical_pin} </span><span class="phys">{pin_num}</span></span></a></li>\n'.format(
         pin_num=pin_num,
+        physical_pin=strings['physical_pin_label'],
         pin_type=' '.join(map(cssify, pin_type)),
         pin_selected=selected,
         pin_url=pin_url,

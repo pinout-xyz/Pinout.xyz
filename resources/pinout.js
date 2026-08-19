@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
 		html = html.replace(
 			/GPIO\ ([0-9]{1,2})/gi,
 			function(str, c1){
-				var pin = $("#gpio li").filter(function(){return $(this).find("span.name").text() == "GPIO " + c1}).find('.pin').text();
+				var pin = $("#gpio li").filter(function(){return $(this).find("span.name").text() == "GPIO " + c1}).find('.phys').text();
 				return '<span title="Click for details about pin ' + pin + '" class="pin-hover" data-pin="' + pin + '">' + str + '</span>';
 			}
 		)

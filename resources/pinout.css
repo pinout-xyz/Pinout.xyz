@@ -50,6 +50,18 @@
 
 ul, li, a, body, h1, h2, h3, h4, h5, h6, p {margin:0;padding:0;text-decoration:none;}
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight:500;

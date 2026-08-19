@@ -1,6 +1,8 @@
 output/
 *.py[cod]
 __pycache__/
+*.egg-info/
+build/
 env/
 .DS_store
 .sass-cache/

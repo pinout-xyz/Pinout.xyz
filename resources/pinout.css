@@ -712,13 +712,18 @@ GPIO nav
         }
     }
 
-    .gnd .default {color:rgba(233, 229, 210, 0.5)};
+    .gnd .default {color:rgba(233, 229, 210, 0.5);}
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
     a:hover,
     .active a {
         background:rgb(245, 243, 237);
         color:#063541;
+    }
+
+    .gnd a:hover .default,
+    .gnd.active .default {
+        color: var(--overlay-pin-fg);
     }
 
     li a small {font-size:0.8em;}
@@ -733,7 +738,8 @@ GPIO nav
                 color: var(--overlay-pin-fg-hover);
             }
         }
-        &.gnd .default {
+        &.gnd .default,
+        &.gnd a:hover .default {
             color:rgba(6, 53, 65, 0.5);
         }
     }

@@ -1,6 +1,7 @@
 domain: pinout.xyz
 language: Italiano
 locale: it_IT
+flag: it
 site_url: '/it'
 base_url: /pinout/
 resource_url: /resources/

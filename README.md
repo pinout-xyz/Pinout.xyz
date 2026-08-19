@@ -10,6 +10,8 @@ The license was previously explicitly non-commercial, to understand why it has b
 
 This license includes the 'pinout-graphic-horizontal' files located in the `graphics` directory and the 'pi-orientation' graphic located in `resources`, which are provided to permit commercial use; specifically publication in books and magazines with appropriate attribution.
 
+The flags in `resources/flags` are from [flag-icons](https://github.com/lipis/flag-icons) and are MIT licensed, see `resources/flags/LICENSE`. The Spanish flag is the civil version, with the coat of arms removed to keep the file small. To add a flag for a new language, take the 4x3 SVG for the country you want from that project.
+
 The license excludes all board photography which has been supplied by manufacturers or customers via PR without any explicit license grant, or supplied under the implicit permission of my (@Gadgetoid) employment at Pimoroni. Re-use of product photography is normally assumed to be implicitly permitted for resale or promotional purposes, but I cannot pass a nebulous, implicit license on for re-use. YMMV.
 
 If you copy and re-use this website henceforth, I would prefer full attribution in the page footer, for example:
@@ -92,6 +94,8 @@ docker build --build-arg PUBLISH_DRAFT=myboard -t pinout.xyz .
 # Translating
 
 If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).
+
+Set `language`, `locale` and `flag` in your `settings.yaml` so the language switcher can label and flag your language.
 
 The first resources we recommend you translate are the language-specific strings found in the `settings.yaml` file, `pi-pinout.md`, `index.md`, `404.md` and the `footer.html` template, as well as the content of the `/pin` folder, preferably.
 

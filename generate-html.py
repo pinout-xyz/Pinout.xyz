@@ -568,12 +568,13 @@ def get_hreflang_urls(src):
     return hreflang
 
 
-def get_language_names():
-    names = {}
+def get_language_settings():
+    languages = {}
     for path in sorted(glob.glob('src/??/settings.yaml')):
         code = path.split('/')[1]
-        names[code] = yaml.safe_load(open(path)).get('language', code)
-    return names
+        settings = yaml.safe_load(open(path))
+        languages[code] = (settings.get('language', code), settings.get('flag', code))
+    return languages
 
 
 def render_lang_nav(langlinks):
@@ -594,12 +595,13 @@ def get_lang_urls(src):
             if url_lang == lang:
                 img_css = ' class="grayscale"'
                 current = ' aria-current="true"'
-            name = language_names.get(url_lang, url_lang)
+            name, flag = languages.get(url_lang, (url_lang, url_lang))
             url = alternate_urls[url_lang][src]
             urls.append(
-                '<a href="{url}" rel="alternate" hreflang="{lang}" lang="{lang}" title="{name}"{current}><img{css} src="{resource_url}{lang}.png" width="16" height="11" alt="{name}" /></a>'.format(
+                '<a href="{url}" rel="alternate" hreflang="{lang}" lang="{lang}" title="{name}"{current}><img{css} src="{resource_url}flags/{flag}.svg" width="16" height="12" alt="{name}" /></a>'.format(
                     lang=url_lang,
                     name=name,
+                    flag=flag,
                     url=url,
                     current=current,
                     resource_url=resource_url,
@@ -617,7 +619,7 @@ if len(sys.argv) > 1:
 
 alternate_urls = urlmapper.generate_urls(lang)
 
-language_names = get_language_names()
+languages = get_language_settings()
 
 pinout.load(lang)
 

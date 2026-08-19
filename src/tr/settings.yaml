@@ -1,6 +1,7 @@
 domain: pinout.xyz
 language: Türkçe
 locale: tr_TR
+flag: tr
 site_url: '/tr'
 base_url: /pinout/
 resource_url: /resources/

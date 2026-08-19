@@ -677,6 +677,7 @@ overlays = list(map(load_overlay, overlays))
 
 overlay_urls = {overlay['src']: overlay['page_url'] for overlay in overlays if overlay is not None}
 
+pinout.settings['url_gpio'] = overlay_urls.get('gpio', 'gpio')
 pinout.settings['url_ground'] = overlay_urls.get('ground', 'ground')
 pinout.settings['url_3v3'] = overlay_urls.get('3v3-power', '3v3_power')
 pinout.settings['url_5v'] = overlay_urls.get('5v-power', '5v_power')
@@ -781,6 +782,8 @@ for overlay in overlays:
 
 def interfaces_sort(iface):
     name = iface['name'].lower()
+    if name == "gpio":
+        return "0"  # Every pin has it, so put it first
     if name == "ground":
         return "6"  # Put after 5v5
     if name == "1-wire":

@@ -678,6 +678,13 @@ if not os.path.isdir('output/{}/pinout'.format(lang)):
 
 print("\nRendering overlay pages...")
 overlays = list(map(load_overlay, overlays))
+
+overlay_urls = {overlay['src']: overlay['page_url'] for overlay in overlays if overlay is not None}
+
+pinout.settings['url_ground'] = overlay_urls.get('ground', 'ground')
+pinout.settings['url_3v3'] = overlay_urls.get('3v3-power', '3v3_power')
+pinout.settings['url_5v'] = overlay_urls.get('5v-power', '5v_power')
+
 boards_page = []
 boards_manufacturers = []
 

@@ -32,6 +32,7 @@ strings:
 - pin_functions: 'Alternate functions by model'
 - mirror_pinout: 'Mirror the pinout, as seen from the underside of the board'
 - rotate_pinout: 'Rotate the pinout 180 degrees'
+- choose_language: 'Elegir idioma'
 - return_home: 'Volver al pinout GPIO de Raspberry Pi'
 - boards_title: 'Raspberry Pi HATs, pHATs &amp; Complementos'
 - boards_subtitle: 'Pulsa en un HAT, pHAT o complemento para más detalles de los pines que utiliza'

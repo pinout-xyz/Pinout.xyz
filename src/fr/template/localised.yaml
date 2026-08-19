@@ -32,6 +32,7 @@ strings:
 - pin_functions: 'Alternate functions by model'
 - mirror_pinout: 'Mirror the pinout, as seen from the underside of the board'
 - rotate_pinout: 'Rotate the pinout 180 degrees'
+- choose_language: 'Choisir une langue'
 - return_home: 'Retour à l''accueil'
 - boards_title: "Cartes d'extension pour la Raspberry Pi"
 - boards_subtitle: "Cliquez sur une carte ci-dessous pour en révéler tous les détails!"

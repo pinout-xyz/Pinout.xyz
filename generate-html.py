@@ -15,6 +15,11 @@ import markjaml
 import pinout
 import urlmapper
 
+try:
+    import yaml
+except ImportError:
+    exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
+
 DEBUG_LEVEL = 1
 
 # TODO: Why is this here and not loaded from pinout.yaml
@@ -58,6 +63,7 @@ default_strings = {
     'mirror_pinout': 'Mirror the pinout, as seen from the underside of the board',
     'pin_functions': 'Alternate functions by model',
     'rotate_pinout': 'Rotate the pinout 180 degrees',
+    'choose_language': 'Choose a language',
     'return_home': 'Return to the Raspberry Pi GPIO Pinout',
     'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
     'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
@@ -556,11 +562,21 @@ def get_hreflang_urls(src):
     return hreflang
 
 
+def get_language_names():
+    names = {}
+    for path in sorted(glob.glob('src/??/settings.yaml')):
+        code = path.split('/')[1]
+        names[code] = yaml.safe_load(open(path)).get('language', code)
+    return names
+
+
 def render_lang_nav(langlinks):
     if not langlinks:
         return ''
 
-    return '<nav id="lang">\n\t\t\t{}\n\t\t</nav>'.format("\n\t\t\t".join(langlinks))
+    return '<nav id="lang" aria-label="{label}">\n\t\t\t\t{links}\n\t\t\t</nav>'.format(
+        label=strings['choose_language'],
+        links="\n\t\t\t\t".join(langlinks))
 
 
 def get_lang_urls(src):
@@ -568,13 +584,18 @@ def get_lang_urls(src):
     for url_lang in sorted(alternate_urls):
         if src in alternate_urls[url_lang]:
             img_css = ''
+            current = ''
             if url_lang == lang:
                 img_css = ' class="grayscale"'
+                current = ' aria-current="true"'
+            name = language_names.get(url_lang, url_lang)
             url = alternate_urls[url_lang][src]
             urls.append(
-                '<a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" width="16" height="11" alt="{lang}" /></a>'.format(
+                '<a href="{url}" rel="alternate" hreflang="{lang}" lang="{lang}" title="{name}"{current}><img{css} src="{resource_url}{lang}.png" width="16" height="11" alt="{name}" /></a>'.format(
                     lang=url_lang,
+                    name=name,
                     url=url,
+                    current=current,
                     resource_url=resource_url,
                     css=img_css
                 ))
@@ -589,6 +610,8 @@ if len(sys.argv) > 1:
     lang = sys.argv[1]
 
 alternate_urls = urlmapper.generate_urls(lang)
+
+language_names = get_language_names()
 
 pinout.load(lang)
 

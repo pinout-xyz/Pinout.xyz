@@ -2,7 +2,7 @@
 ---
 name: Uputronics LoRa Zero Expansion Board
 class: board
-type: Radio
+type: radio
 formfactor: pHAT
 manufacturer: Uputronics
 description: LoRa Radio board for Raspberry Pi Zero

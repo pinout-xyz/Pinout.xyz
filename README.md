@@ -95,19 +95,32 @@ docker build --build-arg PUBLISH_DRAFT=myboard -t pinout.xyz .
 
 # Translating
 
-If you would like to provide support for a language not yet in the repository you should start by duplicating the `src/en` directory to the appropriate [language-code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For example, if you want to create a Czech translation you would create the folder `src/cs`. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!).
+Board metadata lives once, in `src/en/overlay`. A translation is an overlay on top of it: a file at `src/<languagecode>/overlay/<board>.md` holding only the text you have changed. Anything you leave out falls back to English, so a board with no file at all still gets a page in your language.
 
-Set `language`, `locale` and `flag` in your `settings.yaml` so the language switcher can label and flag your language.
+Only four things are yours to change: `name`, `description`, `page_url`, and the `name` of each pin or I2C device. A German translation of the Display-o-Tron is the whole of `src/de/overlay/display-o-tron.md`:
 
-The first resources we recommend you translate are the language-specific strings found in the `settings.yaml` file, `pi-pinout.md`, `index.md`, `404.md` and the `footer.html` template, as well as the content of the `/pin` folder, preferably.
+```markdown
+<!--
+---
+description: Ein 3-zeiliges LCD mit RGB Hintergrundbeleuchtung und Joystick
+pin:
+  '7':
+    name: Joystick Taste
+  '11':
+    name: Joystick links
+-->
+# Display-o-Tron 3000
 
-Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphabetical order). Move each finished translation into the `/overlay` folder, leaving the untranslated English copies in `/translate`.
+Mit diesem Einzeiler installierst Du das Display-o-Tron 3000:
+```
 
-`python3 -m pinoutxyz translations list` shows how much of each language is done, and `python3 -m pinoutxyz translations outstanding de` lists the overlays still waiting for a translation. Board metadata is shared, not translated, so `python3 -m pinoutxyz translations check` reports any frontmatter that has drifted away from `src/en`; only `name`, `description`, `page_url` and the pin `name` fields are yours to change.
+Pin numbers, modes, form factor, pin counts, images and links all come from English, and repeating them means they can drift. `pinoutxyz translations check` will tell you if you have copied something that isn't yours to change, and it runs in CI. Shop and documentation links are the one exception: you may point `url` or `buy` at a localised page of the same site.
 
-Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the languages and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your own social handle however, but don't fiddle with the structure!
+If you would like to provide support for a language not yet in the repository, create `src/<languagecode>` with `pin`, `overlay` and `template` directories, then translate `settings.yaml`, `template/localised.yaml`, `template/pinout.yaml`, `template/index.md`, `template/404.md`, `template/footer.html` and the contents of `pin`, using `src/en` as your starting point. Note that there are no plans to support cultures (it would just get out of hand), so you can't have `src/fr-CA` (sorry!). Set `language`, `locale` and `flag` in your `settings.yaml` so the language switcher can label and flag your language.
 
-Once you've made your translation, you can build and preview it with, for example:
+Please do not attempt to translate the `resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the languages and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your own social handle however, but don't fiddle with the structure!
+
+`pinoutxyz translations list` shows how much of each language is done and `pinoutxyz translations outstanding de` lists the boards with no German file at all. To build and preview your work:
 
 ```bash
 make serve LANG=de
@@ -116,8 +129,6 @@ make serve LANG=de
 And then open: http://127.0.0.1:8080/de/ in your browser.
 
 The last step will be to submit your finished translation as a [pull request](https://github.com/pinout-xyz/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live at its own pinout.xyz/*&lt;languagecode&gt;*/ path.
-
-If you wish to provide a translation for a language that is already published, or correct a typo in an existing markdown file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
 
 If you have a question about translations, raise an [issue](https://github.com/pinout-xyz/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
 
@@ -138,7 +149,6 @@ Add `--help` to any of them for the full set of options. `pip install -e .` puts
 
 # Roadmap &amp; wishlist
 
-* Make translations true overlays of the English source, so board metadata lives in one place
 * Add functionality to compare two or more boards, to visualise pin compatibility
 * Tool to convert WiringPi to GPIO to BCM and back
 * Add as many [boards](http://pinout.xyz/boards) as possible!

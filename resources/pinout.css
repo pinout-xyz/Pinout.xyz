@@ -549,9 +549,8 @@ Left Column
         margin: 0;
         padding: 0;
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: right;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
         gap: 2px;
     }
 
@@ -561,7 +560,6 @@ Left Column
             padding: 8px 3%;
             background: #5a5fbd;
             color: #FFF;
-            flex: 1;
             white-space: pre;
             font-size: .7em;
             align-content: center;
@@ -962,6 +960,15 @@ code {
 @media screen and (min-width: 540px) {
     #lang {
         display: flex;
+    }
+
+    #interfaces ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #interfaces li a {
+        flex: 1;
     }
 
     #gpio {

@@ -6,9 +6,9 @@ type: led
 formfactor: Custom
 manufacturer: ModMyPi
 description: Una placa LED en forma de estrella para Raspberry Pi que sirve como punta del árbol de Navidad.
-url: https://www.modmypi.com/raspberry-pi-christmas-tree-star
+url: https://thepihut.com/products/raspberry-pi-christmas-tree-star
 github: https://github.com/modmypi/Programmable-Christmas-Star
-buy: https://www.modmypi.com/raspberry-pi-christmas-tree-star
+buy: https://thepihut.com/products/raspberry-pi-christmas-tree-star
 image: 'modmypi-star.png'
 pincount: 40
 eeprom: no

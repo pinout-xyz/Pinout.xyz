@@ -6,6 +6,8 @@ type: multi
 formfactor: HAT
 manufacturer: Ryanteck
 description: Ein schneller und einfacher Weg um die grundlegenden Fähigkeiten der GPIO-Ports zu erkunden.
+github: https://github.com/PiSupply/Ryanteck/tree/master/RTK%20Traffic%20HAT
+buy: https://uk.pi-supply.com/products/traffic-hat-for-raspberry-pi
 image: 'traffic-hat.png'
 pincount: 40
 eeprom: yes

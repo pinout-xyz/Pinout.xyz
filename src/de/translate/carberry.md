@@ -4,7 +4,7 @@ name: Carberry
 class: board
 type: other
 formfactor: Custom
-manufacturer: Paser
+manufacturer: Parser
 collected: Other
 description: add-on board designed to interface with car electronics
 url: http://www.carberry.it/en/p/347/Carberry/

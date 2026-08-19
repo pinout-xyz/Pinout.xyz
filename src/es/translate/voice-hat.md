@@ -6,7 +6,7 @@ type: audio,sensor,io
 formfactor: HAT
 manufacturer: Google
 description: A voice kit made for Google Assistant
-url: https://aiyprojects.withgoogle.com/voice
+url: https://aiyprojects.withgoogle.com/voice-v1
 github: https://github.com/google/aiyprojects-raspbian
 image: 'voice-hat.png'
 pincount: 40

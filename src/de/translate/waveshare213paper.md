@@ -4,9 +4,9 @@ name: 2.13 Inch E-Paper pHAT
 class: board
 type: display
 formfactor: pHAT
-manufacturer: WaveShare
+manufacturer: Waveshare
 description: an E-Ink display pHAT for with embedded controller, communicating via SPI interface.
-url: https://www.waveshare.com/product/2.13inch-e-paper-hat.htm
+url: http://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 buy: https://www.waveshare.com/product/2.13inch-e-paper-hat.htm
 image: 'waveshare213paper.png'
 pincount: 40

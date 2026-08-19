@@ -1,5 +1,6 @@
 domain: pinout.xyz
 language: Français
+locale: fr_FR
 site_url: '/fr'
 base_url: /pinout/
 resource_url: /resources/

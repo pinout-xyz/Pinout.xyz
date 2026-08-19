@@ -21,7 +21,7 @@ If you're a commercial venture, or closely associated, I would also appreciate, 
 
 # About this project
 
-The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
+The contents of this GitHub repository are used to build https://pinout.xyz and its translations, which are published as subdirectories such as https://pinout.xyz/de/.
 
 This project aims to build a consistent workflow behind the Pinout.xyz front-end, gather useful information about the Raspberry Pi GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their Pi add-ons use.
 
@@ -97,19 +97,19 @@ The first resources we recommend you translate are the language-specific strings
 
 Once that's done, rename the `/overlay` folder to `/translate` and start translating the boards markdown files (pick any you fancy translating, it does not have to be the first board in alphabetical order). Leave those translations in the `/translate` folder when finished.
 
-Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the subdomains and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your Twitter handle however, but don't fiddle with the structure!
+Please do not attempt to translate the `/resources` folder, or anything not specifically mentioned in this section of the README - all files outside your *&lt;languagecode&gt;* directory are shared between the languages and are meant to be generic. Feel free to modify the template with links relevant to your country, and / or your Twitter handle however, but don't fiddle with the structure!
 
 Once you've made your translation, you can build and preview it with, for example:
 
 ```bash
-make serve LANG=de
+make serve
 ```
 
-And then open: http://127.0.0.1:8080 in your browser.
+And then open: http://127.0.0.1:8080/de/ in your browser.
 
-The last step will be to submit your finished translation as a [pull request](https://github.com/pinout-xyz/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
+The last step will be to submit your finished translation as a [pull request](https://github.com/pinout-xyz/Pinout.xyz/pulls) (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live at its own pinout.xyz/*&lt;languagecode&gt;*/ path.
 
-If you wish to provide a translation for an existing subdomain, or correct a typo in an existing markdown file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
+If you wish to provide a translation for a language that is already published, or correct a typo in an existing markdown file, just edit the file in place (leaving the files in the `translate` folder for review, if you are pushing a translation).
 
 If you have a question about translations, raise an [issue](https://github.com/pinout-xyz/Pinout.xyz/issues) and we'll be happy to help you get past whatever hurdle you may face!
 

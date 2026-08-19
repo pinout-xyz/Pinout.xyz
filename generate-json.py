@@ -9,12 +9,6 @@ import glob
 import markjaml
 import pinout
 
-
-try:
-    sys.setdefaultencoding('utf8')
-except AttributeError:  # Does not work in Python 3
-    unicode = str
-
 lang = "en"
 
 if len(sys.argv) > 1:
@@ -43,8 +37,8 @@ def slugify(value):
     and converts spaces to hyphens.
     """
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '', value).strip().lower()
-    return re.sub('[-\s]+', '_', value)
+    value = re.sub(r'[^\w\s-]', '', value).strip().lower()
+    return re.sub(r'[-\s]+', '_', value)
 
 
 def load_overlay(overlay):

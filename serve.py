@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import os
 
 try:
@@ -10,8 +9,6 @@ except ImportError:
 
 
 app = Flask(__name__)
-
-lang = 'en'
 
 
 @app.route('/')
@@ -34,9 +31,6 @@ def show_page(page):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) > 1:
-        lang = sys.argv[1]
-
-    basedir = 'output/{lang}/'.format(lang=lang)
+    basedir = 'output/site/'
 
     app.run(host='0.0.0.0', port=8080, debug=True)

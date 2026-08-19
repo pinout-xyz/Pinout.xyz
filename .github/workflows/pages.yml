@@ -25,15 +25,14 @@ jobs:
 
       - name: Build Packages
         run: |
-          make LANG=en
-          cp -r phatstack output/en
+          make site
           make -C api
-          cp -r api/v1 output/en
-          cp api/index.png output/en/v1/img/
+          cp -r api/v1 output/site
+          cp api/index.png output/site/v1/img/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./output/en
+            publish_dir: ./output/site
             cname: pinout.xyz

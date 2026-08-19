@@ -7,8 +7,6 @@ import markjaml
 import glob
 import pinout
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 
 pinout.load()

@@ -7,11 +7,6 @@ try:
 except ImportError:
     exit("This script requires the yaml module\nInstall with: sudo pip install PyYAML")
 
-try:
-    unicode('')
-except NameError:
-    unicode = str
-
 BUILD_ID = datetime.datetime.now().isoformat().replace(":","").replace("-", "").split(".")[0]
 PINOUT_FILE = 'pinout.yaml'
 SETTINGS_FILE = 'settings.yaml'
@@ -52,13 +47,13 @@ def render_html(*args, **kwargs):
     strings = args[2]
 
     for key in strings:
-        if type(strings[key]) in [str, unicode]:
+        if isinstance(strings[key], str):
             html = html.replace('{{strings:' + key + '}}', strings[key])
 
     settings = args[3]
 
     for key in settings:
-        if type(settings[key]) in [str, unicode]:
+        if isinstance(settings[key], str):
             html = html.replace('{{settings:' + key + '}}', settings[key])
 
     kwargs['v'] = BUILD_ID
@@ -67,7 +62,7 @@ def render_html(*args, **kwargs):
         if type(kwargs[key]) == dict:
             for (d_key, d_value) in kwargs[key].items():
                 html = html.replace('{{' + key + '_' + d_key + '}}', d_value)
-        elif type(kwargs[key]) in [str, unicode]:
+        elif isinstance(kwargs[key], str):
             html = html.replace('{{' + key + '}}', kwargs[key])
 
     return html
@@ -135,5 +130,9 @@ def load(lang='en'):
         pinout = yaml.safe_load(open(pinout_path).read())
     else:
         pinout = json.load(open(pinout_path))
+
+    site_url = get_setting('site_url') or ''
+    settings['site_url'] = site_url
+    settings['base_url'] = site_url + get_setting('base_url', '/pinout/')
 
     pins = pinout['pins']

@@ -217,7 +217,7 @@ Footer language nav
 */
 
 #lang {
-    display:block;
+    display:none;
     background:#C7C2AE;
     position:absolute;
     bottom:0px;

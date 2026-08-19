@@ -1,24 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import glob
 import os
 import re
-import sys
 import unicodedata
 
 import markjaml
 import pinout
-
-try:
-    reload(sys)
-except NameError:
-    from importlib import reload
-    reload(sys)
-
-try:
-    sys.setdefaultencoding('utf8')
-except AttributeError:  # Does not work in Python 3
-    unicode = str
 
 
 def url_slugify(value):
@@ -26,7 +14,7 @@ def url_slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
+    value = str(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub(r'[^\w\s-]', '', value).strip().lower()
     return re.sub(r'[-\s]+', '_', value)
@@ -104,9 +92,11 @@ def generate_for_lang(lang="en"):
             domain=domain, base_url=base_url, url=url[1])
 
 
-    url_lookup['index'] = '//{}'.format(domain)
+    site_url = pinout.get_setting('site_url', '')
 
-    url_lookup['boards'] = '//{}/boards'.format(domain)
+    url_lookup['index'] = '//{}{}'.format(domain, site_url)
+
+    url_lookup['boards'] = '//{}{}/boards'.format(domain, site_url)
 
     return url_lookup
 

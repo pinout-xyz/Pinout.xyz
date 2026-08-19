@@ -8,6 +8,7 @@
 		<link href='{{resource_url}}prettify/prettify.css' rel='stylesheet' />
 		<link href="{{resource_url}}pinout.css?v={{v}}" rel="stylesheet">
 		<link href="{{resource_url}}print.css" rel="stylesheet" media="print">
+		{{hreflang}}
 		<link rel="shortcut icon" href="{{resource_url}}pinout-logo.png" type="image/png">
 		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: {{v}}"/>
 		<!-- Build: {{v}} -->
@@ -16,11 +17,12 @@
 	<body class="{{body_class}}">
 		<a class="skip-link" href="#content">{{strings:skip_to_content}}</a>
 		<header>
-			<div class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/"><img src="{{resource_url}}pinout-logo.png" width="45" height="45" alt="Pinout Logo" />Raspberry Pi Pinout</a></div>
+			<div class="logo"><a title="Raspberry Pi GPIO Pinout home" href="{{settings:site_url}}/"><img src="{{resource_url}}pinout-logo.png" width="45" height="45" alt="Pinout Logo" />Raspberry Pi Pinout</a></div>
 		</header>
 		<main>
 			{{main_content}}
 		</main>
+		{{lang_links}}
 		<footer>
 			{{footer}}
 		</footer>

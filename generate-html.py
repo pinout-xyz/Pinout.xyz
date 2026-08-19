@@ -15,18 +15,6 @@ import markjaml
 import pinout
 import urlmapper
 
-try:
-    reload(sys)
-except NameError:
-    from importlib import reload
-    reload(sys)
-
-try:
-    sys.setdefaultencoding('utf8')
-except AttributeError:  # Does not work in Python 3
-    unicode = str
-
-
 DEBUG_LEVEL = 1
 
 # TODO: Why is this here and not loaded from pinout.yaml
@@ -97,7 +85,7 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    value = unicode(value)
+    value = str(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub(r'[^\w\s-]', '', value).strip().lower()
     return re.sub(r'[-\s]+', '_', value)
@@ -151,7 +139,7 @@ def load_overlay(overlay):
             if 'collected' in loaded:
                 details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
             else:
-                manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
+                manu_link = '<a href="{site_url}/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(site_url=site_url, manufacturer=loaded['manufacturer'])
                 details.append(strings['made_by'].format(manufacturer=manu_link))
 
         if 'pincount' in loaded:
@@ -309,7 +297,7 @@ def load_overlay(overlay):
         loaded['page_url'] = slugify(loaded['name'])
 
     loaded['rendered_html'] = render_overlay_page(loaded)
-    loaded['src'] = overlay
+    loaded['src'] = filename
     pages[loaded['page_url']] = loaded
     navs[loaded['page_url']] = render_nav(loaded['page_url'], overlay=loaded)
 
@@ -529,6 +517,13 @@ def get_hreflang_urls(src):
     return hreflang
 
 
+def render_lang_nav(langlinks):
+    if not langlinks:
+        return ''
+
+    return '<nav id="lang">\n\t\t\t{}\n\t\t</nav>'.format("\n\t\t\t".join(langlinks))
+
+
 def get_lang_urls(src):
     urls = []
     for url_lang in sorted(alternate_urls):
@@ -538,7 +533,7 @@ def get_lang_urls(src):
                 img_css = ' class="grayscale"'
             url = alternate_urls[url_lang][src]
             urls.append(
-                '<a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" width="16" height="11" /></a>'.format(
+                '<a href="{url}" rel="alternate" hreflang="{lang}"><img{css} src="{resource_url}{lang}.png" width="16" height="11" alt="{lang}" /></a>'.format(
                     lang=url_lang,
                     url=url,
                     resource_url=resource_url,
@@ -573,6 +568,7 @@ for key, val in default_strings.items():
         strings[key] = val
 
 base_url = pinout.get_setting('base_url', '/pinout/')             # eg: '/pinout-tr/pinout/'
+site_url = pinout.get_setting('site_url', '')
 resource_url = pinout.get_setting('resource_url', '/resources/')  # eg: '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')                 # eg: '.html'
 
@@ -772,7 +768,7 @@ if page404 is not None:
     navs['404'] = default_nav
 
 
-crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+crumbtrail = '<div id="crumbtrail"><p><a class="more" href="' + site_url + '/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
 navs['boards'] = default_nav
 
@@ -793,7 +789,7 @@ for pin in range(1, len(pinout.pins) + 1):
                                   template_footer,
                                   strings,
                                   pinout.settings,
-                                  lang_links="\n\t\t".join(langlinks),
+                                  lang_links=render_lang_nav(langlinks),
                                   hreflang="\n\t\t".join(hreflang),
                                   nav=pin_nav,
                                   content=pin_html,
@@ -853,20 +849,22 @@ for url in pages:
 
     body_class = ''
 
-    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="' + site_url + '/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
         if 'collected' not in pages[url]:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a> &raquo; {title}</p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="{site_url}/">{home}</a> &raquo; <a href="{site_url}/boards">{boards}</a> &raquo; <a href="{site_url}/boards#manufacturer={manufacturer}">{manufacturer}</a> &raquo; {title}</p></div>'.format(
+                site_url=site_url,
                 title=pages[url]['name'],
                 manufacturer=pages[url]['manufacturer'],
                 home=strings['home'],
                 boards=strings['boards']
             )
         else:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a> &raquo; {title}</p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="{site_url}/">{home}</a> &raquo; <a href="{site_url}/boards">{boards}</a> &raquo; <a href="{site_url}/boards#manufacturer={manufacturer}">{manufacturer}</a> &raquo; {title}</p></div>'.format(
+                site_url=site_url,
                 title=pages[url]['name'],
                 manufacturer=pages[url]['collected'],
                 home=strings['home'],
@@ -881,7 +879,7 @@ for url in pages:
                               strings,
                               pinout.settings,
                               opengraph=True,
-                              lang_links="\n\t\t".join(langlinks),
+                              lang_links=render_lang_nav(langlinks),
                               hreflang="\n\t\t".join(hreflang),
                               nav=nav,
                               content=content,

@@ -1,4 +1,5 @@
-domain: tr.pinout.xyz
+domain: pinout.xyz
+site_url: '/tr'
 base_url: /pinout/
 resource_url: /resources/
 url_suffix:

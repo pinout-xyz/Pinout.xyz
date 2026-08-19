@@ -522,7 +522,7 @@ Left Column
     text-align: center;
 
     div {
-        background: var(--color-green);
+        background: linear-gradient(to right, #00a63f, #008a32);
         line-height: 1em;
         font-size: 0.9em;
         grid-row: 1;

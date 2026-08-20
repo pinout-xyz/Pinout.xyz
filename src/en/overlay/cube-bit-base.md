@@ -11,9 +11,6 @@ buy: https://shop.4tronix.co.uk/products/cube-bit-base-for-power-microbit-and-ra
 image: 'cube-bit-base.png'
 pincount: 40
 eeprom: no
-
-pin:
-
 power:
   '2':
 

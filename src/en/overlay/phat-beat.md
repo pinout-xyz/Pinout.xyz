@@ -6,7 +6,6 @@ type: audio
 formfactor: pHAT
 manufacturer: Pimoroni
 description: Stereo I2S DAC, AMP and VU meter
-buy: https://shop.pimoroni.com/products/phat-beat
 github: https://github.com/pimoroni/phat-beat
 buy: https://shop.pimoroni.com/products/phat-beat
 image: 'phat-beat.png'

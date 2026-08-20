@@ -54,8 +54,6 @@ pin:
     mode: spi
   '40':
     mode: spi
-  '24':
-    mode: spi
 i2c:
   '0x48':
     name: Analog Input

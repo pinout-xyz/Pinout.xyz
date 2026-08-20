@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi One-Wire pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/1_wire" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/1_wire" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/1_wire" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/1_wire" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="1-WIRE at Raspberry Pi GPIO Pinout">
@@ -189,9 +189,9 @@ sudo dtoverlay w1-gpio gpiopin=27 # header pin 13
 </code></pre>
 <p>Devices found on any of the buses appear in <code>/sys/bus/w1/devices/</code>.</p>
 <p>Using w1-gpio on the Raspberry Pi typically needs a 4.7 kΩ pull-up resistor connected between the GPIO pin and a 3.3v supply (e.g. header pin 1 or 17). <a href="/pinout/i2c">GPIO 2 and GPIO 3</a> already have a 1.8 kΩ pull-up fitted, which will do the same job if you can spare the I2C pins. Other means of connecting 1-Wire devices to the Raspberry Pi are also possible, such as using i2c to 1-Wire bridge chips.</p>
-<table class="details"><tr><td><h2>Details</h2><ul>
+<div class="details"><h2>Details</h2><ul>
 <li><a href="https://www.kernel.org/doc/Documentation/w1/w1.generic">More Information</a></li>
-</ul></td><td></td></tr></table></article>
+</ul></div></article>
 			</section>
 
 		</main>
@@ -202,7 +202,7 @@ sudo dtoverlay w1-gpio gpiopin=27 # header pin 13
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

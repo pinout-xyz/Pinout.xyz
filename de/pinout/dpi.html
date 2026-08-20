@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi DPI pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/dpi" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dpi" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/dpi" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dpi" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="DPI at Raspberry Pi GPIO Pinout">
@@ -191,10 +191,10 @@
 <p>The parameter names belong to <code>vc4-kms-dpi-generic</code>, which is how a DPI display is set up from Raspberry Pi OS Bookworm onward. The mode numbers are the <code>output_format</code> field of the <code>dpi_output_format</code> setting it replaced. <code>dtoverlay=vga666</code> is a fixed setup for the Fen Logic VGA666 board and uses GPIO 2-21.</p>
 <p>Whichever mode you pick, DPI takes GPIO 0 to GPIO 3 for its clock and sync signals, so the HAT EEPROM pins and I2C1 are always gone. Any I2C or SPI overlay that overlaps has to be turned off too, with <code>dtparam=i2c_arm=off</code> and <code>dtparam=spi=off</code>.</p>
 <p>A padded 666 mode is the usual choice when you need pins back, freeing GPIO 10, 11, 18 and 19 in the middle of the bank as well as 26 and 27 at the top. GPIO 10 and GPIO 11 can carry <a href="/pinout/i2c">one of the extra I2C buses</a>, i2c5 on Pi 4 or i2c1 on Pi 5, which is enough for a touch controller alongside the display.</p>
-<table class="details"><tr><td><h2>Details</h2><ul>
+<div class="details"><h2>Details</h2><ul>
 <li>benutzt 28 GPIO Anschlüsse</li>
 <li><a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#display-parallel-interface-dpi">Mehr Informationen</a></li>
-</ul></td><td></td></tr></table></article>
+</ul></div></article>
 			</section>
 
 		</main>
@@ -206,7 +206,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

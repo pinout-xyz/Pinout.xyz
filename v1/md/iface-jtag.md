@@ -34,5 +34,13 @@ JTAG is a standardised interface for debugging integrated circuits which you can
 
 There are two separate JTAG interfaces available on the Pi:
 
-* Alt5 on GPIOs 4, 5, 6, 12 and 13
-* Alt4 on GPIOs 22, 23, 24, 25, 26 and 27
+| Signal | Alt4 | Alt5 |
+| --- | --- | --- |
+| TRST | GPIO 22 | |
+| RTCK | GPIO 23 | GPIO 6 |
+| TDO | GPIO 24 | GPIO 5 |
+| TCK | GPIO 25 | GPIO 13 |
+| TDI | GPIO 26 | GPIO 4 |
+| TMS | GPIO 27 | GPIO 12 |
+
+Alt4 also brings out TRST, which Alt5 has no pin for.

@@ -111,15 +111,17 @@ GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typicall
 
 i2c1 is the only bus available without an overlay. Pi 4 and Pi 5 both have several more, each on a pair of low-numbered GPIO pins, but the numbering differs between the two models:
 
-* GPIO 0 and GPIO 1: i2c0 on both, or i2c6 on Pi 4. Usually left alone for the HAT EEPROM.
-* GPIO 2 and GPIO 3: i2c1 on both, or i2c3 on Pi 4.
-* GPIO 4 and GPIO 5: i2c3 on Pi 4, i2c2 on Pi 5.
-* GPIO 6 and GPIO 7: i2c4 on Pi 4, i2c3 on Pi 5.
-* GPIO 8 and GPIO 9: i2c4 on Pi 4, i2c0 on Pi 5.
-* GPIO 10 and GPIO 11: i2c5 on Pi 4, i2c1 on Pi 5.
-* GPIO 12 and GPIO 13: i2c5 on Pi 4, i2c2 on Pi 5.
-* GPIO 14 and GPIO 15: i2c3 on Pi 5. These are also the UART pins.
-* GPIO 22 and GPIO 23: i2c6 on Pi 4, i2c3 on Pi 5.
+| Pins | Pi 4 | Pi 5 | Notes |
+| --- | --- | --- | --- |
+| GPIO 0 and GPIO 1 | i2c0 or i2c6 | i2c0 | Usually left alone for the HAT EEPROM |
+| GPIO 2 and GPIO 3 | i2c1 or i2c3 | i2c1 | |
+| GPIO 4 and GPIO 5 | i2c3 | i2c2 | |
+| GPIO 6 and GPIO 7 | i2c4 | i2c3 | |
+| GPIO 8 and GPIO 9 | i2c4 | i2c0 | |
+| GPIO 10 and GPIO 11 | i2c5 | i2c1 | |
+| GPIO 12 and GPIO 13 | i2c5 | i2c2 | |
+| GPIO 14 and GPIO 15 | | i2c3 | Also the UART pins |
+| GPIO 22 and GPIO 23 | i2c6 | i2c3 | |
 
 Each bus is enabled with a device tree overlay, and the pin pair is chosen with a parameter: `dtoverlay=i2c4,pins_6_7` on a Pi 4. On Pi 5 the overlays take a `-pi5` suffix, so the same pins are `dtoverlay=i2c3-pi5,pins_6_7`.
 

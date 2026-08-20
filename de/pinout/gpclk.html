@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi General Purpose Clock" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/gpclk" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpclk" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/gpclk" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpclk" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="GPCLK at Raspberry Pi GPIO Pinout">
@@ -176,17 +176,62 @@
 				<article class="page_gpclk"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>GPCLK - General Purpose CLock</h1>
 <p>General Purpose Clock pins can be set up to output a fixed frequency without any ongoing software control.</p>
 <p>The following clock sources are available:</p>
-<ul>
-<li>0 - Ground, 0 Hz</li>
-<li>1 - 19.2 MHz oscillator</li>
-<li>2 - testdebug0, 0 Hz</li>
-<li>3 - testdebug1, 0 Hz</li>
-<li>4 - PLLA, 0 Hz</li>
-<li>5 - PLLC, 1000 MHz, changes with overclock settings</li>
-<li>6 - PLLD, 500 MHz</li>
-<li>7 - HDMI auxiliary, 216 MHz</li>
-<li>8 to 15 - Ground, 0 Hz</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Clock</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Ground</td>
+<td>0 Hz</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Oscillator</td>
+<td>19.2 MHz</td>
+</tr>
+<tr>
+<td>2</td>
+<td>testdebug0</td>
+<td>0 Hz</td>
+</tr>
+<tr>
+<td>3</td>
+<td>testdebug1</td>
+<td>0 Hz</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PLLA</td>
+<td>0 Hz</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PLLC</td>
+<td>1000 MHz, changes with overclock settings</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PLLD</td>
+<td>500 MHz</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HDMI auxiliary</td>
+<td>216 MHz</td>
+</tr>
+<tr>
+<td>8 to 15</td>
+<td>Ground</td>
+<td>0 Hz</td>
+</tr>
+</tbody>
+</table></div>
 <p>Other frequencies can be achieved by setting a clock-divider in the form of <code>SOURCE/(DIV_I + DIV_F/4096)</code>. Note, that the <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf">BCM2835 ARM Peripherals</a> document contains an error and states that the denominator of the divider is 1024 instead of 4096.</p></article>
 			</section>
 
@@ -199,7 +244,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

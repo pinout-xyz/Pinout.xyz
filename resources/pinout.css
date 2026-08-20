@@ -102,22 +102,6 @@ table {
     td, th {border:1px solid var(--color-dark);padding:5px;}
     th {background:var(--color-dark);color:var(--color-content-bg);}
 
-    &.details {
-        font-size:inherit;
-        width:100%;
-
-        tr {
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-
-        td, th {
-            border:none;vertical-align:top;padding:0;
-        }
-
-        img {margin-top:54px;}
-    }
-
     &.pin-functions {
         width:100%;
 
@@ -308,8 +292,15 @@ section {
         margin-top: 1.5em;
     }
 
+    h2 {
+        border-bottom: 2px solid var(--color-dark);
+        padding-bottom: .2em;
+    }
+
     h1 + h2 {
         margin-top: 0;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     p, pre {
@@ -325,10 +316,17 @@ section {
     article {
         padding: 15px 8px;
         min-width: 0;
-        .pin-hover {cursor:help;color:#880000;}
+        .pin-hover {cursor:help;font-style:italic;}
         .pin-hover:hover {color:#AA0000;}
         img {max-width:100%;}
-        .details img {min-width:200px;max-width: 100%;}
+        .details {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 1em 0;
+
+            h2 {grid-column: 1 / -1;margin-bottom:1em;}
+            img {min-width:200px;max-width: 100%;}
+        }
         a {
             color: #C92C6D; /* Just scrape an AAA small text contrast pass */
             text-decoration: underline;
@@ -1013,6 +1011,11 @@ code {
         display: block;
         grid-column: 1;
         grid-row: 1/-1;
+        align-self: start;
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-y: auto;
     }
 
     #legend {
@@ -1087,8 +1090,9 @@ code {
     }
     section {
         background: #002B36;
+        h2 {border-bottom-color: var(--overlay-pin-bg);}
+        table td, table th {border-color: #406068;}
         article {
-            .pin-hover {color:#CC0000;}
             .pin-hover:hover {color:#EE0000;}
         }
     }
@@ -1152,8 +1156,18 @@ code {
         background: rgba(255, 255, 255, 10%);
     }
     pre, .prettyprint {
-        background-color: #f7f7f9;
+        background-color: #073642;
+        border-color: #406068;
     }
+    .prettyprint.linenums {
+        box-shadow: inset 40px 0 0 #002B36, inset 41px 0 0 #406068;
+    }
+    ol.linenums li {
+        color: #6b8b94;
+        text-shadow: none;
+    }
+    .pln {color: var(--overlay-pin-bg);}
+    .lit {color: var(--color-blue);}
 }
 
 @media (hover: hover) {

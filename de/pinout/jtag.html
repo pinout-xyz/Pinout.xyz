@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi JTAG pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/jtag" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/jtag" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/jtag" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/jtag" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="JTAG at Raspberry Pi GPIO Pinout">
@@ -176,10 +176,48 @@
 				<article class="page_jtag"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>JTAG - Joint Test Action Group</h1>
 <p>JTAG is a standardised interface for debugging integrated circuits which you can use to debug your Raspberry Pi.</p>
 <p>There are two separate JTAG interfaces available on the Pi:</p>
-<ul>
-<li>Alt5 on GPIOs 4, 5, 6, 12 and 13</li>
-<li>Alt4 on GPIOs 22, 23, 24, 25, 26 and 27</li>
-</ul></article>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Alt4</th>
+<th>Alt5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TRST</td>
+<td>GPIO 22</td>
+<td></td>
+</tr>
+<tr>
+<td>RTCK</td>
+<td>GPIO 23</td>
+<td>GPIO 6</td>
+</tr>
+<tr>
+<td>TDO</td>
+<td>GPIO 24</td>
+<td>GPIO 5</td>
+</tr>
+<tr>
+<td>TCK</td>
+<td>GPIO 25</td>
+<td>GPIO 13</td>
+</tr>
+<tr>
+<td>TDI</td>
+<td>GPIO 26</td>
+<td>GPIO 4</td>
+</tr>
+<tr>
+<td>TMS</td>
+<td>GPIO 27</td>
+<td>GPIO 12</td>
+</tr>
+</tbody>
+</table></div>
+<p>Alt4 also brings out TRST, which Alt5 has no pin for.</p></article>
 			</section>
 
 		</main>
@@ -191,7 +229,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

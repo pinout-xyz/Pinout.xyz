@@ -6,7 +6,7 @@
 		<meta name="description" content="An I2S DAC HAT with a 2x35w stereo amplifier for passive speakers" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/digiamp_plus" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/digiamp_plus" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/digiamp_plus" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/digiamp_plus" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="DigiAMP+ at Raspberry Pi GPIO Pinout">
@@ -178,7 +178,7 @@
 <p>The DigiAMP+ must be powered from an external 12-24V DC supply through a 5.5mm x 2.5mm centre-positive barrel connector, and delivers 5.1V at 2.5A back to the Raspberry Pi over the GPIO header. Do not apply power to the Raspberry Pi's own power input at the same time. P5 is an alternative power input for hard-wired installations, and observes polarity.</p>
 <p>The amplifier is muted at power-on, with the mute LED illuminated. Software drives GPIO22 to control the mute state and the LED. GPIO23/24 (rotary encoder), GPIO25 (IR receiver) and GPIO27 (encoder switch) are broken out for optional use.</p>
 <p>The DigiAMP+ is electrically equivalent to the IQaudIO Pi-DigiAMP+. The green Raspberry Pi boards carry an EEPROM that Raspberry Pi OS detects and configures automatically; the older black IQaudIO boards need a dtoverlay line in config.txt.</p>
-<table class="details"><tr><td><h2>Details</h2><ul>
+<div class="details"><h2>Details</h2><ul>
 <li>Hersteller: <a href="/de/boards#manufacturer=Raspberry Pi">Raspberry Pi</a></li>
 <li>HAT form-factor</li>
 <li>benutzt EEPROM</li>
@@ -187,7 +187,7 @@
 <li>benutzt I2C</li>
 <li>0x4c: tas5756m</li>
 <li><a href="https://www.raspberrypi.com/products/digiamp-plus/">Mehr Informationen</a></li>
-</ul></td><td><img loading="lazy" src="/resources/boards/raspberrypi-digiamp-plus.png" alt="DigiAMP+" /></td></tr></table></article>
+</ul><img loading="lazy" src="/resources/boards/raspberrypi-digiamp-plus.png" alt="DigiAMP+" /></div></article>
 			</section>
 
 		</main>
@@ -199,7 +199,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

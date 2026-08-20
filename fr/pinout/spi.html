@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi SPI pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/spi" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/spi" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="SPI Raspberry Pi GPIO Pinout">
@@ -188,18 +188,48 @@
 <p>For full details of the SPI dtoverlays (and others) see <a href="https://raw.githubusercontent.com/raspberrypi/firmware/master/boot/overlays/README">the Raspberry Pi dtoverlay README</a></p>
 <h2>More than two buses</h2>
 <p>Pi 4 and Pi 5 both have extra SPI controllers on the low-numbered GPIO pins, numbered differently between the two models. Each group runs CE0, MISO, MOSI then SCLK in ascending pin order:</p>
-<ul>
-<li>GPIO 0 to GPIO 3: spi3 on Pi 4, spi2 on Pi 5.</li>
-<li>GPIO 4 to GPIO 7: spi4 on Pi 4, spi3 on Pi 5. GPIO 7 is SPI0's CE1, so the two cannot both be in use.</li>
-<li>GPIO 12 to GPIO 15: spi5 on both models. GPIO 14 and GPIO 15 are also the UART pins.</li>
-<li>GPIO 18 to GPIO 21: spi6 on Pi 4, sharing SPI1's pins with CE0 on GPIO 18.</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Pins</th>
+<th>Pi 4</th>
+<th>Pi 5</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO 0 to GPIO 3</td>
+<td>spi3</td>
+<td>spi2</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 4 to GPIO 7</td>
+<td>spi4</td>
+<td>spi3</td>
+<td>GPIO 7 is SPI0's CE1, so the two cannot both be in use</td>
+</tr>
+<tr>
+<td>GPIO 12 to GPIO 15</td>
+<td>spi5</td>
+<td>spi5</td>
+<td>GPIO 14 and GPIO 15 are also the UART pins</td>
+</tr>
+<tr>
+<td>GPIO 18 to GPIO 21</td>
+<td>spi6</td>
+<td></td>
+<td>Shares SPI1's pins, with CE0 on GPIO 18</td>
+</tr>
+</tbody>
+</table></div>
 <p>Enable one with the matching overlay, in a <code>1cs</code> or <code>2cs</code> form for the number of chip selects you need: <code>dtoverlay=spi4-1cs</code> on a Pi 4, <code>dtoverlay=spi3-1cs-pi5</code> on a Pi 5. The <code>cs0_pin</code> parameter moves the chip select if the default clashes with something.</p>
 <p>The <code>spi2</code> overlay without a <code>-pi5</code> suffix is a different thing entirely: spi2 on GPIO 40 to GPIO 42, which only exists on Compute Modules.</p>
 <p>Raspberry Pi 5 documentation calls MISO and MOSI SIO1 and SIO0, since RP1's SPI blocks can run in modes where the data lines change direction.</p>
-<table class="details"><tr><td><h2>Détails</h2><ul>
+<div class="details"><h2>Détails</h2><ul>
 <li><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/">plus d'info</a></li>
-</ul></td><td></td></tr></table></article>
+</ul></div></article>
 			</section>
 
 		</main>
@@ -211,7 +241,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

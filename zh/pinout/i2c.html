@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi I2C pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T170254" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/i2c" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/i2c" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/i2c" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/i2c" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T170254"/>
-		<!-- Build: 20260820T170254 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
+		<!-- Build: 20260820T173812 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="I2C at Raspberry Pi GPIO Pinout">
@@ -182,22 +182,77 @@
 <p>GPIO 0 and GPIO 1 - I2C0 - can be used as an alternate I2C bus, but are typically used by the system to read the HAT EEPROM.</p>
 <h2>More than one bus</h2>
 <p>i2c1 is the only bus available without an overlay. Pi 4 and Pi 5 both have several more, each on a pair of low-numbered GPIO pins, but the numbering differs between the two models:</p>
-<ul>
-<li>GPIO 0 and GPIO 1: i2c0 on both, or i2c6 on Pi 4. Usually left alone for the HAT EEPROM.</li>
-<li>GPIO 2 and GPIO 3: i2c1 on both, or i2c3 on Pi 4.</li>
-<li>GPIO 4 and GPIO 5: i2c3 on Pi 4, i2c2 on Pi 5.</li>
-<li>GPIO 6 and GPIO 7: i2c4 on Pi 4, i2c3 on Pi 5.</li>
-<li>GPIO 8 and GPIO 9: i2c4 on Pi 4, i2c0 on Pi 5.</li>
-<li>GPIO 10 and GPIO 11: i2c5 on Pi 4, i2c1 on Pi 5.</li>
-<li>GPIO 12 and GPIO 13: i2c5 on Pi 4, i2c2 on Pi 5.</li>
-<li>GPIO 14 and GPIO 15: i2c3 on Pi 5. These are also the UART pins.</li>
-<li>GPIO 22 and GPIO 23: i2c6 on Pi 4, i2c3 on Pi 5.</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Pins</th>
+<th>Pi 4</th>
+<th>Pi 5</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO 0 and GPIO 1</td>
+<td>i2c0 or i2c6</td>
+<td>i2c0</td>
+<td>Usually left alone for the HAT EEPROM</td>
+</tr>
+<tr>
+<td>GPIO 2 and GPIO 3</td>
+<td>i2c1 or i2c3</td>
+<td>i2c1</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 4 and GPIO 5</td>
+<td>i2c3</td>
+<td>i2c2</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 6 and GPIO 7</td>
+<td>i2c4</td>
+<td>i2c3</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 8 and GPIO 9</td>
+<td>i2c4</td>
+<td>i2c0</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 10 and GPIO 11</td>
+<td>i2c5</td>
+<td>i2c1</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 12 and GPIO 13</td>
+<td>i2c5</td>
+<td>i2c2</td>
+<td></td>
+</tr>
+<tr>
+<td>GPIO 14 and GPIO 15</td>
+<td></td>
+<td>i2c3</td>
+<td>Also the UART pins</td>
+</tr>
+<tr>
+<td>GPIO 22 and GPIO 23</td>
+<td>i2c6</td>
+<td>i2c3</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
 <p>Each bus is enabled with a device tree overlay, and the pin pair is chosen with a parameter: <code>dtoverlay=i2c4,pins_6_7</code> on a Pi 4. On Pi 5 the overlays take a <code>-pi5</code> suffix, so the same pins are <code>dtoverlay=i2c3-pi5,pins_6_7</code>.</p>
 <p>Only GPIO 2 and GPIO 3 have pull-up resistors fitted. Every other pair needs your own, typically 4.7 kΩ to 3.3v.</p>
-<table class="details"><tr><td><h2>Details</h2><ul>
+<div class="details"><h2>Details</h2><ul>
 <li><a href="http://www.raspberry-projects.com/pi/programming-in-python/i2c-programming-in-python/using-the-i2c-interface-2">More Information</a></li>
-</ul></td><td></td></tr></table></article>
+</ul></div></article>
 			</section>
 
 		</main>
@@ -208,7 +263,7 @@
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T170254'></script>
+		<script src='/resources/pinout.js?v=20260820T173812'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

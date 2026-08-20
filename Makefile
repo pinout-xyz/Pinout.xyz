@@ -7,7 +7,7 @@ LANG := $(firstword $(LANG))
 PYTHON ?= python3
 PINOUTXYZ := $(PYTHON) -m pinoutxyz
 
-.PHONY: all deps html site serve watch translations check clean
+.PHONY: all deps html site serve watch translations check links clean
 
 all: site
 
@@ -31,6 +31,9 @@ translations:
 
 check:
 	$(PINOUTXYZ) translations check
+
+links:
+	$(PINOUTXYZ) links check
 
 clean:
 	rm -rf output

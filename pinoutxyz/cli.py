@@ -3,7 +3,7 @@ import os
 import shutil
 import sys
 
-from . import drafts, overlays, settings, translations, urls
+from . import drafts, links, overlays, settings, translations, urls
 from .build import build
 from .site import Reporter, Site
 
@@ -82,6 +82,10 @@ def command_translations_listing(args):
     return translations.report_listing(args.root, resolve(args.root, [args.lang])[0], args.action)
 
 
+def command_links_check(args):
+    return links.report_check(args.root, args.timeout, args.workers)
+
+
 def command_boards_list(args):
     for board in drafts.available(args.root):
         print('{:38} {}'.format(board, drafts.check(args.root, board) or 'ready to publish'))
@@ -138,6 +142,15 @@ def parser():
         action = translations_actions.add_parser(name, help=help_text)
         action.add_argument('lang')
         action.set_defaults(handler=command_translations_listing)
+
+    links_command = commands.add_parser(
+        'links', help='check external links in the board data (makes outbound requests)')
+    links_actions = links_command.add_subparsers(dest='action', required=True)
+
+    action = links_actions.add_parser('check', help='fetch every url, buy, github, schematic and docs link')
+    action.add_argument('--timeout', type=int, default=15, help='seconds per request')
+    action.add_argument('--workers', type=int, default=8, help='concurrent requests')
+    action.set_defaults(handler=command_links_check)
 
     boards_command = commands.add_parser('boards', help='manage draft board overlays')
     boards_actions = boards_command.add_subparsers(dest='action', required=True)

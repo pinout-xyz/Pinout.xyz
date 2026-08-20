@@ -158,6 +158,7 @@ python3 -m pinoutxyz build en --site    # one language, assembled into output/si
 python3 -m pinoutxyz serve --watch      # serve on :8080 and rebuild on change
 python3 -m pinoutxyz translations list  # translation coverage per language
 python3 -m pinoutxyz boards list        # drafts awaiting publication
+python3 -m pinoutxyz links check        # fetch every external link in the board data
 ```
 
 Add `--help` to any of them for the full set of options. `pip install -e .` puts a `pinoutxyz` command on your path if you'd rather not type `python3 -m`.

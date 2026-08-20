@@ -63,7 +63,7 @@ jQuery(document).ready(function(){
 
 	window.prettyPrint&&prettyPrint();
 
-	$('article p,article li').each(function(){
+	$('article p,article li,article td').each(function(){
 		html = $(this).html();
 
 		html = html.replace(
@@ -84,7 +84,7 @@ jQuery(document).ready(function(){
 		$(this).html(html);
 	});
 
-	$('article p .pin-hover, article li .pin-hover').hover(function(){
+	$('article p .pin-hover, article li .pin-hover, article td .pin-hover').hover(function(){
 		var pin = $(this).data('pin');
 		$('li.pin' + pin).addClass('hover-pin');
 	},function(){

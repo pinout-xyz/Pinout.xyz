@@ -46,7 +46,7 @@ def load_yaml(text, warn=None):
 
 
 def to_html(text):
-    html = markdown.markdown(text, extensions=['fenced_code'])
+    html = markdown.markdown(text, extensions=['fenced_code', 'tables'])
     return html.replace('<table', TABLE_SCROLL[0]).replace('</table>', TABLE_SCROLL[1])
 
 

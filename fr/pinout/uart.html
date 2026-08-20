@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi UART pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/uart" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/uart" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/uart" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/uart" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/uart" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="UART Raspberry Pi GPIO Pinout">
@@ -175,7 +175,7 @@
 			<section id="content" tabindex="-1">
 				<article class="page_uart"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>UART - Universal Asynchronous Receiver/Transmitter</h1>
 <ul>
-<li>UART pins in BCM mode are: GPIO 14, GPIO 15</li>
+<li>UART pins in BCM mode are: <span class="pin-hover" data-pin="8" title="Click for details about pin 8">GPIO 14</span>, <span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span></li>
 </ul>
 <p>UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.</p>
 <ul>
@@ -186,8 +186,9 @@
 </ul>
 <p>Asynchronous transmission allows data to be transmitted without the sender having to send a clock signal to the receiver. Instead, the sender and receiver agree on timing parameters in advance and special bits called 'start bits' are added to each word and used to synchronize the sending and receiving units.</p>
 <p>UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).</p>
-<p>It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.</p>
-<p>Only uart0, on GPIO 14 and GPIO 15, is enabled by default. On Pi 4 and earlier the mini UART (uart1) shares those pins with uart0 and becomes <code>/dev/serial0</code> if the Bluetooth module claims the full UART.</p>
+<p>The UART pins are 3.3v and are not level shifted. Wire them straight to a 5v device and you might conjure up some magic blue smoke, so use a level shifter or a USB to 3.3v serial adaptor.</p>
+<p>Only uart0, on <span class="pin-hover" data-pin="8" title="Click for details about pin 8">GPIO 14</span> and <span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span>, is enabled by default. On Pi 4 and earlier the mini UART (uart1) shares those pins with uart0 and becomes <code>/dev/serial0</code> if the Bluetooth module claims the full UART.</p>
+<p>Pi 5 is the exception: its primary UART is the dedicated three-pin debug header, not <span class="pin-hover" data-pin="8" title="Click for details about pin 8">GPIO 14</span> and <span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span>. Set <code>enable_uart=1</code> in <code>/boot/firmware/config.txt</code> to bring the console back to the header pins.</p>
 <p>Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins, but different numbering:</p>
 <div class="table-scroll"><table>
 <thead>
@@ -204,34 +205,34 @@
 <tr>
 <td>uart2</td>
 <td>uart1</td>
-<td>GPIO 0</td>
-<td>GPIO 1</td>
-<td>GPIO 2</td>
-<td>GPIO 3</td>
+<td><span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span></td>
+<td><span class="pin-hover" data-pin="28" title="Click for details about pin 28">GPIO 1</span></td>
+<td><span class="pin-hover" data-pin="3" title="Click for details about pin 3">GPIO 2</span></td>
+<td><span class="pin-hover" data-pin="5" title="Click for details about pin 5">GPIO 3</span></td>
 </tr>
 <tr>
 <td>uart3</td>
 <td>uart2</td>
-<td>GPIO 4</td>
-<td>GPIO 5</td>
-<td>GPIO 6</td>
-<td>GPIO 7</td>
+<td><span class="pin-hover" data-pin="7" title="Click for details about pin 7">GPIO 4</span></td>
+<td><span class="pin-hover" data-pin="29" title="Click for details about pin 29">GPIO 5</span></td>
+<td><span class="pin-hover" data-pin="31" title="Click for details about pin 31">GPIO 6</span></td>
+<td><span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span></td>
 </tr>
 <tr>
 <td>uart4</td>
 <td>uart3</td>
-<td>GPIO 8</td>
-<td>GPIO 9</td>
-<td>GPIO 10</td>
-<td>GPIO 11</td>
+<td><span class="pin-hover" data-pin="24" title="Click for details about pin 24">GPIO 8</span></td>
+<td><span class="pin-hover" data-pin="21" title="Click for details about pin 21">GPIO 9</span></td>
+<td><span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span></td>
+<td><span class="pin-hover" data-pin="23" title="Click for details about pin 23">GPIO 11</span></td>
 </tr>
 <tr>
 <td>uart5</td>
 <td>uart4</td>
-<td>GPIO 12</td>
-<td>GPIO 13</td>
-<td>GPIO 14</td>
-<td>GPIO 15</td>
+<td><span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span></td>
+<td><span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span></td>
+<td><span class="pin-hover" data-pin="8" title="Click for details about pin 8">GPIO 14</span></td>
+<td><span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -250,9 +251,8 @@
 <p>Traduction par <a href="https://github.com/RogueM">@RogueM</a> et <a href="https://github.com/smileyn64">@smileyn64</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

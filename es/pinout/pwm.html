@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi PWM pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/pwm" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pwm" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/pwm" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/pwm" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/pwm" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="PWM Raspberry Pi GPIO pinout">
@@ -181,22 +181,22 @@ motor (e.g. a fan).</p>
 a motor.</p>
 <p>The PWM controller that has outputs available on the Raspberry Pi header
 (<code>pwm@7e20c000</code>) has two independent channels. The output of the first can be
-routed to GPIO 12 or GPIO 18, the second's output to GPIO 13 or GPIO 19.</p>
-<p>On Pi 5 the RP1 PWM block has four channels instead of two, one each on GPIO 12,
-GPIO 13, GPIO 18 and GPIO 19.</p>
+routed to <span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span> or <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span>, the second's output to <span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span> or <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span>.</p>
+<p>On Pi 5 the RP1 PWM block has four channels instead of two, one each on <span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span>,
+<span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span>, <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span> and <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span>.</p>
 <h2>Enable via config.txt</h2>
 <p><code>dtoverlay=pwm</code> sets up one channel and <code>dtoverlay=pwm-2chan</code> sets up both, on
-GPIO 18 and GPIO 19 by default. The <code>pin</code> and <code>func</code> parameters move a channel to
+<span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span> and <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span> by default. The <code>pin</code> and <code>func</code> parameters move a channel to
 another of its pins:</p>
 <pre><code>dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4
 </code></pre>
-<p><code>func</code> is the function number for the pin you pick: 4 for GPIO 12 and GPIO 13, 2
-for GPIO 18 and GPIO 19. These are the numbers the older models use, and they
+<p><code>func</code> is the function number for the pin you pick: 4 for <span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span> and <span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span>, 2
+for <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span> and <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span>. These are the numbers the older models use, and they
 still work on Pi 5, where the RP1 GPIO driver maps each one to the closest
 matching RP1 function. Overlays written before Pi 5 don't need a Pi 5 variant.</p>
 <p>The onboard analogue audio output uses both channels, so it can't be used at the
-same time as PWM. GPIO 18 and GPIO 19 are also the I2S clock and frame select,
-which makes GPIO 12 and GPIO 13 the pair to use alongside an I2S audio HAT.</p>
+same time as PWM. <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span> and <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span> are also the I2S clock and frame select,
+which makes <span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span> and <span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span> the pair to use alongside an I2S audio HAT.</p>
 <p>Pi 5 also has <code>dtoverlay=pwm-pio</code>, which drives a PWM signal from PIO on any pin
 in bank 0 rather than from the PWM block.</p>
 <div class="details"><h2>Detalles</h2><ul>
@@ -211,9 +211,8 @@ in bank 0 rather than from the PWM block.</p>
 <p>Traducción <a href="https://github.com/ResonantWave">@ResonantWave</a> y <a href="https://github.com/IkerGarcia">@IkerGarcia</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

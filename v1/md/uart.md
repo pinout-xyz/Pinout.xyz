@@ -109,9 +109,11 @@ Asynchronous transmission allows data to be transmitted without the sender havin
 
 UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).
 
-It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
+The UART pins are 3.3v and are not level shifted. Wire them straight to a 5v device and you might conjure up some magic blue smoke, so use a level shifter or a USB to 3.3v serial adaptor.
 
 Only uart0, on GPIO 14 and GPIO 15, is enabled by default. On Pi 4 and earlier the mini UART (uart1) shares those pins with uart0 and becomes `/dev/serial0` if the Bluetooth module claims the full UART.
+
+Pi 5 is the exception: its primary UART is the dedicated three-pin debug header, not GPIO 14 and GPIO 15. Set `enable_uart=1` in `/boot/firmware/config.txt` to bring the console back to the header pins.
 
 Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins, but different numbering:
 

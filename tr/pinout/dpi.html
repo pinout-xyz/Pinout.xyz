@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi DPI pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/dpi" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dpi" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/dpi" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/dpi" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dpi" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="DPI - Raspberry Pi Pinleri">
@@ -180,17 +180,17 @@
 <h2>Colour depth modes</h2>
 <p>A narrower colour depth needs fewer data pins. The padded modes align each colour to the top of its byte, so the pins they free up are scattered through the bank rather than gathered at the top:</p>
 <ul>
-<li>565 on GPIO 0-19, leaving GPIO 20-27. Mode 2, or <code>rgb565</code>.</li>
-<li>565 on GPIO 0-8, 12-17 and 20-24, leaving GPIO 9-11, 18, 19 and 25-27. Mode 3, or <code>rgb565-padhi</code>.</li>
-<li>565 on GPIO 0-3, 5-9, 12-17 and 21-25, leaving GPIO 4, 10, 11, 18-20, 26 and 27. Mode 4 only, there's no overlay parameter for this one.</li>
-<li>666 on GPIO 0-21, leaving GPIO 22-27. Mode 5, the default, or <code>dtoverlay=dpi18</code>.</li>
-<li>666 on GPIO 0-9, 12-17 and 20-25, leaving GPIO 10, 11, 18, 19, 26 and 27. Mode 6, or <code>rgb666-padhi</code>, or <code>dtoverlay=dpi18cpadhi</code>.</li>
-<li>888 on GPIO 0-27, leaving nothing. Mode 7, or <code>rgb888</code>, or <code>dtoverlay=dpi24</code>.</li>
+<li>565 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-19, leaving <span class="pin-hover" data-pin="38" title="Click for details about pin 38">GPIO 20</span>-27. Mode 2, or <code>rgb565</code>.</li>
+<li>565 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-8, 12-17 and 20-24, leaving <span class="pin-hover" data-pin="21" title="Click for details about pin 21">GPIO 9</span>-11, 18, 19 and 25-27. Mode 3, or <code>rgb565-padhi</code>.</li>
+<li>565 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-3, 5-9, 12-17 and 21-25, leaving <span class="pin-hover" data-pin="7" title="Click for details about pin 7">GPIO 4</span>, 10, 11, 18-20, 26 and 27. Mode 4 only, there's no overlay parameter for this one.</li>
+<li>666 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-21, leaving <span class="pin-hover" data-pin="15" title="Click for details about pin 15">GPIO 22</span>-27. Mode 5, the default, or <code>dtoverlay=dpi18</code>.</li>
+<li>666 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-9, 12-17 and 20-25, leaving <span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span>, 11, 18, 19, 26 and 27. Mode 6, or <code>rgb666-padhi</code>, or <code>dtoverlay=dpi18cpadhi</code>.</li>
+<li>888 on <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span>-27, leaving nothing. Mode 7, or <code>rgb888</code>, or <code>dtoverlay=dpi24</code>.</li>
 </ul>
 <p>Each of the 666 and 888 modes also has a <code>bgr</code> form, such as <code>bgr666-padhi</code>, which swaps the red and blue channels over but uses the same pins.</p>
-<p>The parameter names belong to <code>vc4-kms-dpi-generic</code>, which is how a DPI display is set up from Raspberry Pi OS Bookworm onward. The mode numbers are the <code>output_format</code> field of the <code>dpi_output_format</code> setting it replaced. <code>dtoverlay=vga666</code> is a fixed setup for the Fen Logic VGA666 board and uses GPIO 2-21.</p>
-<p>Whichever mode you pick, DPI takes GPIO 0 to GPIO 3 for its clock and sync signals, so the HAT EEPROM pins and I2C1 are always gone. Any I2C or SPI overlay that overlaps has to be turned off too, with <code>dtparam=i2c_arm=off</code> and <code>dtparam=spi=off</code>.</p>
-<p>A padded 666 mode is the usual choice when you need pins back, freeing GPIO 10, 11, 18 and 19 in the middle of the bank as well as 26 and 27 at the top. GPIO 10 and GPIO 11 can carry <a href="/pinout/i2c">one of the extra I2C buses</a>, i2c5 on Pi 4 or i2c1 on Pi 5, which is enough for a touch controller alongside the display.</p>
+<p>The parameter names belong to <code>vc4-kms-dpi-generic</code>, which is how a DPI display is set up from Raspberry Pi OS Bookworm onward. The mode numbers are the <code>output_format</code> field of the <code>dpi_output_format</code> setting it replaced. <code>dtoverlay=vga666</code> is a fixed setup for the Fen Logic VGA666 board and uses <span class="pin-hover" data-pin="3" title="Click for details about pin 3">GPIO 2</span>-21.</p>
+<p>Whichever mode you pick, DPI takes <span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span> to <span class="pin-hover" data-pin="5" title="Click for details about pin 5">GPIO 3</span> for its clock and sync signals, so the HAT EEPROM pins and I2C1 are always gone. Any I2C or SPI overlay that overlaps has to be turned off too, with <code>dtparam=i2c_arm=off</code> and <code>dtparam=spi=off</code>.</p>
+<p>A padded 666 mode is the usual choice when you need pins back, freeing <span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span>, 11, 18 and 19 in the middle of the bank as well as 26 and 27 at the top. <span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span> and <span class="pin-hover" data-pin="23" title="Click for details about pin 23">GPIO 11</span> can carry <a href="/pinout/i2c">one of the extra I2C buses</a>, i2c5 on Pi 4 or i2c1 on Pi 5, which is enough for a touch controller alongside the display.</p>
 <div class="details"><h2>Details</h2><ul>
 <li>Kullanan 28 GPIO pins</li>
 <li><a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#display-parallel-interface-dpi">Daha fazla bilgi</a></li>
@@ -204,9 +204,8 @@
 <p>Translation by <a href="https://github.com/Ardakilic">@Ardakilic</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

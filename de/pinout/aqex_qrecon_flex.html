@@ -6,8 +6,8 @@
 		<meta name="description" content="qRecon Flex - Raspberry Pi HAT with Variable & Replaceable Relay Type" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/aqex_qrecon_flex" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/aqex_qrecon_flex" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/aqex_qrecon_flex" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/aqex_qrecon_flex" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/aqex_qrecon_flex" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="AQEX qReCon Flex at Raspberry Pi GPIO Pinout">
@@ -189,10 +189,10 @@
 <h2>GPIO selection</h2>
 <p>A DIP switch picks one of two GPIO banks per relay, to avoid clashes with other HATs:</p>
 <ul>
-<li>Relay 1: GPIO 21 (pin 40) in bank 1, GPIO 26 (pin 37) in bank 2</li>
-<li>Relay 2: GPIO 20 (pin 38) in bank 1, GPIO 19 (pin 35) in bank 2</li>
-<li>Relay 3: GPIO 16 (pin 36) in bank 1, GPIO 13 (pin 33) in bank 2</li>
-<li>Relay 4: GPIO 5 (pin 29) in bank 1, GPIO 6 (pin 31) in bank 2</li>
+<li>Relay 1: <span class="pin-hover" data-pin="40" title="Click for details about pin 40">GPIO 21</span> (pin 40) in bank 1, <span class="pin-hover" data-pin="37" title="Click for details about pin 37">GPIO 26</span> (pin 37) in bank 2</li>
+<li>Relay 2: <span class="pin-hover" data-pin="38" title="Click for details about pin 38">GPIO 20</span> (pin 38) in bank 1, <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span> (pin 35) in bank 2</li>
+<li>Relay 3: <span class="pin-hover" data-pin="36" title="Click for details about pin 36">GPIO 16</span> (pin 36) in bank 1, <span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span> (pin 33) in bank 2</li>
+<li>Relay 4: <span class="pin-hover" data-pin="29" title="Click for details about pin 29">GPIO 5</span> (pin 29) in bank 1, <span class="pin-hover" data-pin="31" title="Click for details about pin 31">GPIO 6</span> (pin 31) in bank 2</li>
 </ul>
 <h2>Trigger polarity</h2>
 <p>A second DIP switch selects the level that energises the relay:</p>
@@ -213,7 +213,7 @@
 <ul>
 <li>Fitting a relay with a coil voltage other than 5V may damage the HAT or the Pi.</li>
 <li>With AC loads the terminals can carry up to 250V. The high voltage side of the PCB is outlined and labelled.</li>
-<li>Relay 4 (GPIO 5 / GPIO 6) may energise at boot because of the Pi's internal pull-ups. Set the pin state in <code>/boot/firmware/config.txt</code> with <code>gpio=X=mode,state</code> to avoid this.</li>
+<li>Relay 4 (<span class="pin-hover" data-pin="29" title="Click for details about pin 29">GPIO 5</span> / <span class="pin-hover" data-pin="31" title="Click for details about pin 31">GPIO 6</span>) may energise at boot because of the Pi's internal pull-ups. Set the pin state in <code>/boot/firmware/config.txt</code> with <code>gpio=X=mode,state</code> to avoid this.</li>
 <li>Utilities and the user manual are in the <a href="https://github.com/aqexhu/qReCon">GitHub repository</a>.</li>
 </ul>
 <div class="details"><h2>Details</h2><ul>
@@ -234,9 +234,8 @@
 <p>Translation by <a href="https://github.com/rdmueller">@rdmueller</a> and <a href="https://github.com/KojoePi">@KojoePi</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

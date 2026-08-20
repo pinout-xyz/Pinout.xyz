@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi general purpose IO pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/gpio" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpio" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/gpio" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/gpio" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpio" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="GPIO - Raspberry Pi Pinleri">
@@ -244,7 +244,7 @@
 </tr>
 </tbody>
 </table></div>
-<p><a href="/pinout/i2c">GPIO 2 and GPIO 3</a> are the exception, with fixed 1.8 kΩ pull-ups fitted to the board.</p>
+<p><a href="/pinout/i2c"><span class="pin-hover" data-pin="3" title="Click for details about pin 3">GPIO 2</span> and <span class="pin-hover" data-pin="5" title="Click for details about pin 5">GPIO 3</span></a> are the exception, with fixed 1.8 kΩ pull-ups fitted to the board.</p>
 <p>Every pin is an input at power-on, and most have a default pull applied. The defaults are listed in the alternate function table in the Arm peripherals datasheet.</p>
 <h2>Alternate functions</h2>
 <p>Pi 4 and earlier have six alternate functions per pin, Alt0 to Alt5. Pi 5's RP1 has nine, F0 to F8, in a different order. Each pin's page lists them for all three generations.</p>
@@ -254,7 +254,7 @@
 <pre><code>gpio=12=op,dh
 gpio=0-27=a2
 </code></pre>
-<p>The first line makes GPIO 12 an output driven high. The second line puts every pin in bank 0 on alternate function 2 (<a href="/pinout/dpi">DPI</a>). The attributes are:</p>
+<p>The first line makes <span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span> an output driven high. The second line puts every pin in bank 0 on alternate function 2 (<a href="/pinout/dpi">DPI</a>). The attributes are:</p>
 <div class="table-scroll"><table>
 <thead>
 <tr>
@@ -295,9 +295,8 @@ gpio=0-27=a2
 <p>Translation by <a href="https://github.com/Ardakilic">@Ardakilic</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

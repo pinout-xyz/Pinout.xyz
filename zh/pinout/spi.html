@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi SPI pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/spi" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/spi" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/spi" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/spi" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="SPI at Raspberry Pi GPIO Pinout">
@@ -175,12 +175,12 @@
 			<section id="content" tabindex="-1">
 				<article class="page_spi"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>SPI - Serial Peripheral Interface</h1>
 <ul>
-<li>SPI0 pins are GPIO 7, GPIO 8, GPIO 9, GPIO 10, GPIO 11</li>
-<li>SPI1 pins are GPIO 16, GPIO 17, GPIO 18, GPIO 19, GPIO 20, GPIO 21</li>
+<li>SPI0 pins are <span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span>, <span class="pin-hover" data-pin="24" title="Click for details about pin 24">GPIO 8</span>, <span class="pin-hover" data-pin="21" title="Click for details about pin 21">GPIO 9</span>, <span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span>, <span class="pin-hover" data-pin="23" title="Click for details about pin 23">GPIO 11</span></li>
+<li>SPI1 pins are <span class="pin-hover" data-pin="36" title="Click for details about pin 36">GPIO 16</span>, <span class="pin-hover" data-pin="11" title="Click for details about pin 11">GPIO 17</span>, <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span>, <span class="pin-hover" data-pin="35" title="Click for details about pin 35">GPIO 19</span>, <span class="pin-hover" data-pin="38" title="Click for details about pin 38">GPIO 20</span>, <span class="pin-hover" data-pin="40" title="Click for details about pin 40">GPIO 21</span></li>
 </ul>
 <p>Known as the four-wire serial bus, SPI lets you attach multiple compatible devices to a single set of pins by assigning them different chip-select pins.</p>
 <p>To talk to an SPI device, you assert its corresponding chip-select pin.</p>
-<p>By default the Pi allows you to use SPI0 with chip select pins on CE0 on GPIO 8 and CE1 on GPIO 7.</p>
+<p>By default the Pi allows you to use SPI0 with chip select pins on CE0 on <span class="pin-hover" data-pin="24" title="Click for details about pin 24">GPIO 8</span> and CE1 on <span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span>.</p>
 <h2>Enable via config.txt</h2>
 <p>You can enable SPI1 with a dtoverlay configured in "/boot/firmware/config.txt", for example:</p>
 <pre><code>dtoverlay=spi1-3cs
@@ -199,28 +199,28 @@
 </thead>
 <tbody>
 <tr>
-<td>GPIO 0 to GPIO 3</td>
+<td><span class="pin-hover" data-pin="27" title="Click for details about pin 27">GPIO 0</span> to <span class="pin-hover" data-pin="5" title="Click for details about pin 5">GPIO 3</span></td>
 <td>spi3</td>
 <td>spi2</td>
 <td></td>
 </tr>
 <tr>
-<td>GPIO 4 to GPIO 7</td>
+<td><span class="pin-hover" data-pin="7" title="Click for details about pin 7">GPIO 4</span> to <span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span></td>
 <td>spi4</td>
 <td>spi3</td>
-<td>GPIO 7 is SPI0's CE1, so the two cannot both be in use</td>
+<td><span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span> is SPI0's CE1, so the two cannot both be in use</td>
 </tr>
 <tr>
-<td>GPIO 12 to GPIO 15</td>
+<td><span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span> to <span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span></td>
 <td>spi5</td>
 <td>spi5</td>
-<td>GPIO 14 and GPIO 15 are also the UART pins</td>
+<td><span class="pin-hover" data-pin="8" title="Click for details about pin 8">GPIO 14</span> and <span class="pin-hover" data-pin="10" title="Click for details about pin 10">GPIO 15</span> are also the UART pins</td>
 </tr>
 <tr>
-<td>GPIO 18 to GPIO 21</td>
+<td><span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span> to <span class="pin-hover" data-pin="40" title="Click for details about pin 40">GPIO 21</span></td>
 <td>spi6</td>
 <td></td>
-<td>Shares SPI1's pins, with CE0 on GPIO 18</td>
+<td>Shares SPI1's pins, with CE0 on <span class="pin-hover" data-pin="12" title="Click for details about pin 12">GPIO 18</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -238,9 +238,8 @@
 <p>Part of <a href="https://www.gadgetoid.com">gadgetoid.com</a>. Maintained by <a href="https://fosstodon.org/@gadgetoid">@Gadgetoid@fosstodon.org</a>.</p>
 <p>Help make Pinout.xyz better- please sponsor me at <a href="https://ko-fi.com/gadgetoid">Ko-Fi</a>, <a href="https://github.com/sponsors/Gadgetoid">GitHub</a> or <a href="https://www.patreon.com/gadgetoid">Patreon</a></p>
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

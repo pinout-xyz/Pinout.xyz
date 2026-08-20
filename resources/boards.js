@@ -1,142 +1,113 @@
-jQuery(document).ready(function(){
-	var dom_boards = $('#boards .board');
+const boards = [...document.querySelectorAll('#boards .board')]
+const facets = document.querySelector('.facets')
+const filters = new Map()
 
-	if(dom_boards.length == 0) return;
+const values = (board, key) => (board.dataset[key] ?? '').split(',').map(value => value.trim())
 
-	var facets = {};
-	var filters = {};
+const collect = () => {
+	const collected = new Map()
 
-	dom_boards.each(function(idx, obj){
-		var obj = $(obj);
-		for (var key in obj.data()){
-			if(typeof(key) !== 'undefined'){
+	for (const board of boards) {
+		for (const key of Object.keys(board.dataset)) {
+			const unique = collected.get(key) ?? new Set()
 
-				if(typeof(facets[key]) == 'undefined'){
-					facets[key] = {
-						'title':key.split(/(?=[A-Z])/).join(" ").toLowerCase(),
-						'key':key,
-						'items':[]
-					};
-					filters[key] = '';
-				}
-
-				var vals = obj.data(key).split(',');
-
-				for(var idx in vals){
-					var val = vals[idx].trim();
-
-					if(facets[key].items.indexOf(val) == -1){
-						facets[key].items.push(val);
-					}
-				}
-			}
-		}
-	});
-
-	var dom_facets = $('.facets');
-
-	for (var facet in facets){
-		var title = facets[facet].title;
-		var items = facets[facet].items;
-		var key = facets[facet].key;
-
-		items.sort(function(a,b) {
-						    a = a.toLowerCase();
-						    b = b.toLowerCase();
-						    if( a == b) return 0;
-						    if( a > b) return 1;
-						    return -1;
-						});
-
-		$('<h2>').text(title).appendTo(dom_facets);
-		var dom_facet = $('<ul>').addClass('facet').appendTo(dom_facets);
-
-		for(var idx in items){
-			var val = items[idx];
-
-			var text = val;
-
-			if(text.length <= 3){
-				text = text.toUpperCase();
+			for (const value of values(board, key)) {
+				unique.add(value)
 			}
 
-			$('<li>')
-				.addClass('item')
-				.data('key',key)
-				.data('val',val)
-				.text(text)
-				.appendTo(dom_facet);
+			collected.set(key, unique)
+			filters.set(key, '')
 		}
 	}
 
-	dom_facets.on('click','li',function(e){
-		var val = $(this).data('val');
-		var key = $(this).data('key');
+	return collected
+}
 
-		if(filters[key] != val){
-			filters[key] = val;
-			$(this).parents('ul').find('li').removeClass('selected');
-			$(this).addClass('selected');
-		}
-		else
-		{
-			filters[key] = '';
-			//filters[key].splice(filters[key].indexOf(val), 1);
-			$(this).removeClass('selected');
-		}
+const render = collected => {
+	for (const [key, unique] of collected) {
+		const heading = document.createElement('h2')
+		heading.textContent = key.split(/(?=[A-Z])/).join(' ').toLowerCase()
 
-		update_filters()
-	});
+		const list = document.createElement('ul')
+		list.className = 'facet'
 
-	function update_filters(){
-		dom_boards.each(function(idx, obj){
-			var obj = $(obj);
-			var hide = false;
-
-			for(var key in filters){
-				var selected = filters[key];
-
-				if(selected.length > 0){
-					if(obj.data(key).split(',').map(function(s) { return s.trim() }).indexOf(selected) == -1){
-						hide = true;
-					}
-				}
-			}
-
-			if(hide) {
-				obj.hide();
-			}
-			else
-			{
-				obj.show();
-			}
-		});
-
-		var hash = [];
-
-		for(var key in filters){
-			var selected = filters[key];
-			if(selected.length > 0){
-				hash.push(key + '=' + encodeURIComponent(filters[key]));
-			}
+		for (const value of [...unique].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))) {
+			const item = document.createElement('li')
+			item.className = 'item'
+			item.dataset.key = key
+			item.dataset.value = value
+			item.textContent = value.length <= 3 ? value.toUpperCase() : value
+			list.append(item)
 		}
 
-		window.location.hash = hash.join(':');
+		facets.append(heading, list)
+	}
+}
+
+const matches = (board, ignored) => [...filters].every(([key, value]) => key === ignored || !value || values(board, key).includes(value))
+
+const available = (key, value) => boards.some(board => values(board, key).includes(value) && matches(board, key))
+
+const update = () => {
+	for (const board of boards) {
+		board.hidden = !matches(board)
 	}
 
-	var hash = window.location.hash.split(':');
-	if(hash.length > 0){
-		for(var idx in hash){
-			var kv = hash[idx].replace('#','').split('=');
-			if(kv.length == 2 && typeof(filters[kv[0]]) != 'undefined'){
-				var val = decodeURIComponent(kv[1]);
-				filters[kv[0]] = val;
-				$('.item').each(function(idx,obj){
-					obj = $(obj);
-					if(obj.data('key') == kv[0] && obj.data('val') == val) obj.addClass('selected');
-				});
-			}
-		}
-		update_filters();
+	for (const item of facets.querySelectorAll('.item')) {
+		const {key, value} = item.dataset
+		const empty = filters.get(key) !== value && !available(key, value)
+
+		item.classList.toggle('disabled', empty)
+		item.setAttribute('aria-disabled', empty)
 	}
-});
+}
+
+const syncHash = () => {
+	window.location.hash = [...filters]
+		.filter(([, value]) => value)
+		.map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+		.join(':')
+}
+
+const restore = () => {
+	for (const pair of window.location.hash.replace('#', '').split(':')) {
+		const [key, encoded] = pair.split('=')
+
+		if (encoded && filters.has(key)) {
+			filters.set(key, decodeURIComponent(encoded))
+		}
+	}
+
+	for (const item of facets.querySelectorAll('.item')) {
+		const value = item.dataset.value
+		item.classList.toggle('selected', Boolean(value) && filters.get(item.dataset.key) === value)
+	}
+
+	update()
+}
+
+if (boards.length && facets) {
+	render(collect())
+
+	facets.addEventListener('click', event => {
+		const item = event.target.closest('.item')
+
+		if (!item || item.classList.contains('disabled')) {
+			return
+		}
+
+		const {key, value} = item.dataset
+		const selected = filters.get(key) !== value
+
+		for (const sibling of item.closest('ul').querySelectorAll('.item')) {
+			sibling.classList.remove('selected')
+		}
+
+		item.classList.toggle('selected', selected)
+		filters.set(key, selected ? value : '')
+		update()
+		syncHash()
+	})
+
+	restore()
+}

@@ -6,8 +6,8 @@
 		<meta name="description" content="An I2S DAC HAT providing 24-bit 192kHz analogue audio output" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/dac_plus" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dac_plus" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/dac_plus" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/dac_plus" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/dac_plus" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="DAC+ at Raspberry Pi GPIO Pinout">
@@ -176,7 +176,7 @@
 				<article class="page_dac"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>DAC+</h1>
 <p>The DAC+ uses a Texas Instruments PCM5122 to deliver 24-bit 192kHz analogue audio (0-2V RMS) to a pair of phono/RCA connectors, along with a dedicated headphone amplifier and 3.5mm jack. It is powered from the Raspberry Pi through the GPIO header.</p>
 <p>The header is re-exposed so that other boards and sensors can be stacked above the DAC+. The I2S and EEPROM pins are for its exclusive use; the I2C bus can be shared.</p>
-<p>GPIO22 (amplifier mute), GPIO23/24 (rotary encoder), GPIO25 (IR receiver) and GPIO27 (encoder switch) are broken out for optional use, and are free for other purposes if those parts are not fitted and enabled in software.</p>
+<p><span class="pin-hover" data-pin="15" title="Click for details about pin 15">GPIO22</span> (amplifier mute), <span class="pin-hover" data-pin="16" title="Click for details about pin 16">GPIO23</span>/<span class="pin-hover" data-pin="18" title="Click for details about pin 18">24</span> (rotary encoder), <span class="pin-hover" data-pin="22" title="Click for details about pin 22">GPIO25</span> (IR receiver) and <span class="pin-hover" data-pin="13" title="Click for details about pin 13">GPIO27</span> (encoder switch) are broken out for optional use, and are free for other purposes if those parts are not fitted and enabled in software.</p>
 <p>The DAC+ is electrically equivalent to the IQaudIO Pi-DAC+. The green Raspberry Pi boards carry an EEPROM that Raspberry Pi OS detects and configures automatically; the older black IQaudIO boards need a dtoverlay line in config.txt.</p>
 <div class="details"><h2>Details</h2><ul>
 <li>Made by <a href="/zh/boards#manufacturer=Raspberry Pi">Raspberry Pi</a></li>
@@ -196,9 +196,8 @@
 <p>Part of <a href="https://www.gadgetoid.com">gadgetoid.com</a>. Maintained by <a href="https://fosstodon.org/@gadgetoid">@Gadgetoid@fosstodon.org</a>.</p>
 <p>Help make Pinout.xyz better- please sponsor me at <a href="https://ko-fi.com/gadgetoid">Ko-Fi</a>, <a href="https://github.com/sponsors/Gadgetoid">GitHub</a> or <a href="https://www.patreon.com/gadgetoid">Patreon</a></p>
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

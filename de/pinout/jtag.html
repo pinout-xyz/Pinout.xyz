@@ -6,8 +6,8 @@
 		<meta name="description" content="Raspberry Pi JTAG pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
-		<link href="/resources/print.css" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/jtag" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/jtag" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/jtag" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/jtag" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/jtag" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
-		<!-- Build: 20260820T174220 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
+		<!-- Build: 20260820T181659 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="JTAG at Raspberry Pi GPIO Pinout">
@@ -187,37 +187,103 @@
 <tbody>
 <tr>
 <td>TRST</td>
-<td>GPIO 22</td>
+<td><span class="pin-hover" data-pin="15" title="Click for details about pin 15">GPIO 22</span></td>
 <td></td>
 </tr>
 <tr>
 <td>RTCK</td>
-<td>GPIO 23</td>
-<td>GPIO 6</td>
+<td><span class="pin-hover" data-pin="16" title="Click for details about pin 16">GPIO 23</span></td>
+<td><span class="pin-hover" data-pin="31" title="Click for details about pin 31">GPIO 6</span></td>
 </tr>
 <tr>
 <td>TDO</td>
-<td>GPIO 24</td>
-<td>GPIO 5</td>
+<td><span class="pin-hover" data-pin="18" title="Click for details about pin 18">GPIO 24</span></td>
+<td><span class="pin-hover" data-pin="29" title="Click for details about pin 29">GPIO 5</span></td>
 </tr>
 <tr>
 <td>TCK</td>
-<td>GPIO 25</td>
-<td>GPIO 13</td>
+<td><span class="pin-hover" data-pin="22" title="Click for details about pin 22">GPIO 25</span></td>
+<td><span class="pin-hover" data-pin="33" title="Click for details about pin 33">GPIO 13</span></td>
 </tr>
 <tr>
 <td>TDI</td>
-<td>GPIO 26</td>
-<td>GPIO 4</td>
+<td><span class="pin-hover" data-pin="37" title="Click for details about pin 37">GPIO 26</span></td>
+<td><span class="pin-hover" data-pin="7" title="Click for details about pin 7">GPIO 4</span></td>
 </tr>
 <tr>
 <td>TMS</td>
-<td>GPIO 27</td>
-<td>GPIO 12</td>
+<td><span class="pin-hover" data-pin="13" title="Click for details about pin 13">GPIO 27</span></td>
+<td><span class="pin-hover" data-pin="32" title="Click for details about pin 32">GPIO 12</span></td>
 </tr>
 </tbody>
 </table></div>
-<p>Alt4 also brings out TRST, which Alt5 has no pin for.</p></article>
+<p>Alt4 also brings out TRST, which Alt5 has no pin for.</p>
+<h2>Using a Pi as the debug probe</h2>
+<p>A Pi can also be the debugger rather than the target. OpenOCD bit-bangs JTAG or SWD over the GPIO pins, on a pinout of its own which has nothing to do with the Alt4 and Alt5 modes above:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>GPIO</th>
+<th>Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCK / SWCLK</td>
+<td><span class="pin-hover" data-pin="23" title="Click for details about pin 23">GPIO 11</span></td>
+<td><span class="pin-hover" data-pin="23">Physical Pin 23</span></td>
+</tr>
+<tr>
+<td>TMS / SWDIO</td>
+<td><span class="pin-hover" data-pin="24" title="Click for details about pin 24">GPIO 8</span></td>
+<td><span class="pin-hover" data-pin="24">Physical Pin 24</span></td>
+</tr>
+<tr>
+<td>TDI</td>
+<td><span class="pin-hover" data-pin="19" title="Click for details about pin 19">GPIO 10</span></td>
+<td><span class="pin-hover" data-pin="19">Physical Pin 19</span></td>
+</tr>
+<tr>
+<td>TDO</td>
+<td><span class="pin-hover" data-pin="21" title="Click for details about pin 21">GPIO 9</span></td>
+<td><span class="pin-hover" data-pin="21">Physical Pin 21</span></td>
+</tr>
+<tr>
+<td>TRST</td>
+<td><span class="pin-hover" data-pin="26" title="Click for details about pin 26">GPIO 7</span></td>
+<td><span class="pin-hover" data-pin="26">Physical Pin 26</span></td>
+</tr>
+<tr>
+<td>SRST</td>
+<td><span class="pin-hover" data-pin="18" title="Click for details about pin 18">GPIO 24</span></td>
+<td><span class="pin-hover" data-pin="18">Physical Pin 18</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>SWD needs only SWCLK and SWDIO. TRST and SRST are optional and are commented out in the shipped config, since they need a matching <code>reset_config</code>. You also need a ground connection, and <span class="pin-hover" data-pin="20">Physical Pin 20</span> is conveniently in amongst the signals.</p>
+<p>These are the SPI0 pins, so SPI0 and OpenOCD cannot both be in use.</p>
+<p>TMS/SWDIO used to be <span class="pin-hover" data-pin="22" title="Click for details about pin 22">GPIO 25</span>, <span class="pin-hover" data-pin="22">Physical Pin 22</span>. It moved because <span class="pin-hover" data-pin="22" title="Click for details about pin 22">GPIO 25</span> is pulled low at boot and both JTAG and SWD expect a pull-up at the target, whereas <span class="pin-hover" data-pin="24" title="Click for details about pin 24">GPIO 8</span> is pulled high. OpenOCD warns about the change on startup. The SWD-only <code>interface/raspberrypi-swd.cfg</code> keeps an older arrangement of its own, with SWCLK on <span class="pin-hover" data-pin="22" title="Click for details about pin 22">GPIO 25</span> and SWDIO on <span class="pin-hover" data-pin="18" title="Click for details about pin 18">GPIO 24</span>, which is what Raspberry Pi's Pico debugging guides wire up.</p>
+<p>Which config to pass depends on the model:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Config</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pi 4 and earlier, including Zero, Zero W and Zero 2 W</td>
+<td><code>interface/raspberrypi-native.cfg</code></td>
+</tr>
+<tr>
+<td>Pi 5</td>
+<td><code>interface/raspberrypi5-gpiod.cfg</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pi 5 needs its own file because the GPIO pins hang off the RP1 chip across PCIe, out of reach of the native bit-bang driver. It falls back to the generic Linux gpiod driver, which is slower and has no adjustable clock speed.</p></article>
 			</section>
 
 		</main>
@@ -227,9 +293,8 @@
 <p>Translation by <a href="https://github.com/rdmueller">@rdmueller</a> and <a href="https://github.com/KojoePi">@KojoePi</a>.</p>
 
 		</footer>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T174220'></script>
-		<script src='/resources/boards.js'></script>
+		<script src='/resources/pinout.js?v=20260820T181659'></script>
+		<script src='/resources/boards.js?v=20260820T181659'></script>
 </body>
 </html>

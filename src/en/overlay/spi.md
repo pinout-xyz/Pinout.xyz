@@ -103,10 +103,12 @@ For full details of the SPI dtoverlays (and others) see [the Raspberry Pi dtover
 
 Pi 4 and Pi 5 both have extra SPI controllers on the low-numbered GPIO pins, numbered differently between the two models. Each group runs CE0, MISO, MOSI then SCLK in ascending pin order:
 
-* GPIO 0 to GPIO 3: spi3 on Pi 4, spi2 on Pi 5.
-* GPIO 4 to GPIO 7: spi4 on Pi 4, spi3 on Pi 5. GPIO 7 is SPI0's CE1, so the two cannot both be in use.
-* GPIO 12 to GPIO 15: spi5 on both models. GPIO 14 and GPIO 15 are also the UART pins.
-* GPIO 18 to GPIO 21: spi6 on Pi 4, sharing SPI1's pins with CE0 on GPIO 18.
+| Pins | Pi 4 | Pi 5 | Notes |
+| --- | --- | --- | --- |
+| GPIO 0 to GPIO 3 | spi3 | spi2 | |
+| GPIO 4 to GPIO 7 | spi4 | spi3 | GPIO 7 is SPI0's CE1, so the two cannot both be in use |
+| GPIO 12 to GPIO 15 | spi5 | spi5 | GPIO 14 and GPIO 15 are also the UART pins |
+| GPIO 18 to GPIO 21 | spi6 | | Shares SPI1's pins, with CE0 on GPIO 18 |
 
 Enable one with the matching overlay, in a `1cs` or `2cs` form for the number of chip selects you need: `dtoverlay=spi4-1cs` on a Pi 4, `dtoverlay=spi3-1cs-pi5` on a Pi 5. The `cs0_pin` parameter moves the chip select if the default clashes with something.
 

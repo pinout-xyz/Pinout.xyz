@@ -116,9 +116,11 @@ Only uart0, on GPIO 14 and GPIO 15, is enabled by default. On Pi 4 and earlier t
 
 Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins, but different numbering:
 
-* uart2 on Pi 4, uart1 on Pi 5: TXD on GPIO 0, RXD on GPIO 1, CTS on GPIO 2, RTS on GPIO 3
-* uart3 on Pi 4, uart2 on Pi 5: TXD on GPIO 4, RXD on GPIO 5, CTS on GPIO 6, RTS on GPIO 7
-* uart4 on Pi 4, uart3 on Pi 5: TXD on GPIO 8, RXD on GPIO 9, CTS on GPIO 10, RTS on GPIO 11
-* uart5 on Pi 4, uart4 on Pi 5: TXD on GPIO 12, RXD on GPIO 13, CTS on GPIO 14, RTS on GPIO 15
+| Pi 4 | Pi 5 | TXD | RXD | CTS | RTS |
+| --- | --- | --- | --- | --- | --- |
+| uart2 | uart1 | GPIO 0 | GPIO 1 | GPIO 2 | GPIO 3 |
+| uart3 | uart2 | GPIO 4 | GPIO 5 | GPIO 6 | GPIO 7 |
+| uart4 | uart3 | GPIO 8 | GPIO 9 | GPIO 10 | GPIO 11 |
+| uart5 | uart4 | GPIO 12 | GPIO 13 | GPIO 14 | GPIO 15 |
 
 These are enabled with a device tree overlay - `dtoverlay=uart2` on Pi 4, `dtoverlay=uart1-pi5` on Pi 5 - and the CTS/RTS pins are enabled with an additional `ctsrts` parameter.

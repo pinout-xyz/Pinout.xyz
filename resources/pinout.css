@@ -1086,6 +1086,7 @@ code {
     section {
         background: #002B36;
         h2 {border-bottom-color: var(--overlay-pin-bg);}
+        table td, table th {border-color: #406068;}
         article {
             .pin-hover:hover {color:#EE0000;}
         }

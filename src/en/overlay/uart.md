@@ -97,7 +97,6 @@ pin:
 # UART - Universal Asynchronous Receiver/Transmitter
 
 * UART pins in BCM mode are: GPIO 14, GPIO 15
-* UART pins in WiringPi are: 15, 16
 
 UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.
 

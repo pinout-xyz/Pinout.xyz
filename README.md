@@ -35,9 +35,9 @@ If you've spotted an error, omission or have a suggestion, raise an [issue](http
 
 # Contributing
 
-If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/pinout-xyz/Pinout.xyz/blob/master/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
+If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template](https://github.com/pinout-xyz/Pinout.xyz/blob/main/draft/overlay/template.md) and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
 
-Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/pinout-xyz/Pinout.xyz/blob/master/draft/boards/template.png) is expected. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
+Note that as part of the submission, a top-down view of the board in the form of a [png](https://github.com/pinout-xyz/Pinout.xyz/blob/main/draft/boards/template.png) is expected. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
 
 Once your draft has been made, before filing a pull request, you should try to render the page and make sure it build and appears as intended. To do so:
 

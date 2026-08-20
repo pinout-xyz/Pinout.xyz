@@ -171,7 +171,7 @@ pre {
     font-weight: 600;
     align-self: center;
 
-    a {color:var(--color-dark);line-height:22px;}
+    a {color:var(--color-dark);line-height:22px;font-weight:500;}
 
     img {float:left;margin:0px 5px 0px 0px;width:45px;}
 
@@ -904,6 +904,7 @@ GPIO nav
 
 #boardsnav {
     grid-area: "pinout";
+    margin-top: 5px;
 }
 
 aside {display:contents;}

@@ -97,7 +97,6 @@ table {
     margin:1em 0;
     border-collapse:collapse;
     text-align:left;
-    font-size:.8em;
 
     td, th {border:1px solid var(--color-dark);padding:5px;}
     th {background:var(--color-dark);color:var(--color-content-bg);}
@@ -217,7 +216,7 @@ Pinout view controls
     display: flex;
     justify-content: flex-end;
     gap: 5px;
-    padding: 5px 0px 0 0px;
+    padding: 5px 0 5px 0;
 
     button {
         display: flex;
@@ -289,7 +288,7 @@ section {
 
     h2, h3 {
         font-size: 1.3em;
-        margin-top: 1.5em;
+        margin-top: 2em;
     }
 
     h2 {
@@ -300,13 +299,11 @@ section {
     h1 + h2 {
         margin-top: 0;
         border-bottom: none;
-        padding-bottom: 0;
     }
 
     p, pre {
-        margin-top: .5em;
-        line-height: 140%;
-        margin-bottom: 1em;
+        margin: 1em 0 1em 0;
+        line-height: 150%;
     }
 
     p img {
@@ -324,7 +321,7 @@ section {
             grid-template-columns: auto auto;
             margin: 1em 0;
 
-            h2 {grid-column: 1 / -1;margin-bottom:1em;}
+            h2 {grid-column: 1 / -1;}
             img {min-width:200px;max-width: 100%;}
         }
         a {
@@ -335,14 +332,11 @@ section {
         }
         li {margin:0;}
         ul {
-            margin:0 0 2em 25px;
+            margin:1em 0 2em 1.5em;
             line-height: 140%;
             li {
                 margin-bottom:.5em;
             }
-        }
-        p + ul {
-            margin-top: -0.5em;
         }
     }
 }
@@ -487,7 +481,7 @@ footer {
 
     p {
         line-height: 130%;
-        margin: .5em 0 .5em 0;
+        margin: 1em 0 1em 0;
     }
 }
 
@@ -539,7 +533,7 @@ Left Column
         grid-row: 1;
         color: #FFF;
         align-content: center;
-        padding: 8px;
+        padding: .8em;
 
         a, a:hover, a:visited, a:active {
             color: #FFF;
@@ -671,7 +665,7 @@ GPIO nav
         a {
             border-top-left-radius: 13px;
             border-bottom-left-radius: 13px;
-            padding-left: 58px;
+            padding-left: 55px;
         }
         .pin {
             left: 3px;
@@ -694,7 +688,7 @@ GPIO nav
         a {
             border-top-right-radius: 13px;
             border-bottom-right-radius: 13px;
-            padding-right: 58px;
+            padding-right: 55px;
         }
     }
 
@@ -1098,7 +1092,7 @@ code {
     }
     section {
         background: #002B36;
-        h2 {border-bottom-color: var(--overlay-pin-bg);}
+        h2 {border-bottom-color: #406068;}
         table td, table th {border-color: #406068;}
         article {
             .pin-hover:hover {color:#EE0000;}

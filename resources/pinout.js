@@ -1,79 +1,113 @@
-jQuery(document).ready(function(){
+const content = document.querySelector('main')
+const gpio = document.querySelector('#gpio')
+const view = document.querySelector('#pinout-view')
 
-	$('#pinout-view').removeAttr('hidden');
+const pinNav = (pin, suffix = '') => document.querySelectorAll(`#gpio li.pin${pin} ${suffix}`)
 
-	$('.pin-function-tabs').each(function(){
-		var group = $(this);
-		var tabs = group.find('[role="tab"]');
-		var panels = group.find('[role="tabpanel"]');
+const activate = (tab, focus) => {
+	const group = tab.closest('.pin-function-tabs')
 
-		function activate(tab, focus){
-			tabs.attr({'aria-selected': 'false', tabindex: '-1'});
-			panels.attr('hidden', 'hidden');
+	for (const other of group.querySelectorAll('[role="tab"]')) {
+		other.setAttribute('aria-selected', other === tab)
+		other.tabIndex = other === tab ? 0 : -1
+	}
 
-			$(tab).attr('aria-selected', 'true').removeAttr('tabindex');
-			$('#' + $(tab).attr('aria-controls')).removeAttr('hidden');
+	for (const panel of group.querySelectorAll('[role="tabpanel"]')) {
+		panel.hidden = panel.id !== tab.getAttribute('aria-controls')
+	}
 
-			if (focus) {
-				$(tab).trigger('focus');
-			}
-		}
+	if (focus) {
+		tab.focus()
+	}
+}
 
-		tabs.on('click', function(){
-			activate(this, false);
-		});
+for (const group of document.querySelectorAll('.pin-function-tabs')) {
+	const tabs = group.querySelectorAll('[role="tab"]')
 
-		tabs.on('keydown', function(event){
-			var index = tabs.index(this);
+	if (!tabs.length) {
+		continue
+	}
 
-			if (event.key === 'ArrowRight') {
-				activate(tabs.get((index + 1) % tabs.length), true);
-			}
+	group.classList.add('tabbed')
+	group.querySelector('.tabs').hidden = false
+	activate(group.querySelector('[role="tab"][aria-selected="true"]') ?? tabs[0], false)
+}
 
-			if (event.key === 'ArrowLeft') {
-				activate(tabs.get((index - 1 + tabs.length) % tabs.length), true);
-			}
-		});
+for (const block of document.querySelectorAll('pre')) {
+	block.classList.add('prettyprint', 'linenums')
+}
 
-		group.addClass('tabbed');
-		group.find('.tabs').removeAttr('hidden');
+window.prettyPrint?.()
 
-		activate(tabs.filter('[aria-selected="true"]').get(0) || tabs.get(0), false);
-	});
+content?.addEventListener('click', event => {
+	const tab = event.target.closest('[role="tab"]')
 
-	$('#gpio').on('animationend', function(event){
-		if (event.target === this) {
-			$(this).removeClass('flipping rotating rotating-back');
-		}
-	});
+	if (tab) {
+		activate(tab, false)
+		return
+	}
 
-	$('#pinout-view button').on('click', function(){
-		var view = $(this).hasClass('mirror') ? 'mirror' : 'rotate';
-		var pressed = !$('#gpio').hasClass(view);
-		var gpio = $('#gpio');
+	const reference = event.target.closest('article .pin-hover')
+	const link = reference && pinNav(reference.dataset.pin, 'a')[0]
 
-		gpio.toggleClass(view, pressed).removeClass('flipping rotating rotating-back');
-		gpio[0].offsetWidth;
-		gpio.addClass(view === 'mirror' ? 'flipping' : (pressed ? 'rotating' : 'rotating rotating-back'));
+	if (link) {
+		window.location = link.href
+	}
+})
 
-		$(this).attr('aria-pressed', pressed);
-	});
+content?.addEventListener('keydown', event => {
+	const step = {ArrowRight: 1, ArrowLeft: -1}[event.key]
+	const tab = step && event.target.closest('[role="tab"]')
 
-	$('pre').addClass('prettyprint').addClass('linenums');
+	if (!tab) {
+		return
+	}
 
-	window.prettyPrint&&prettyPrint();
+	const tabs = [...tab.closest('.pin-function-tabs').querySelectorAll('[role="tab"]')]
+	activate(tabs[(tabs.indexOf(tab) + step + tabs.length) % tabs.length], true)
+})
 
-	$('article .pin-hover').hover(function(){
-		var pin = $(this).data('pin');
-		$('li.pin' + pin).addClass('hover-pin');
-	},function(){
-		var pin = $(this).data('pin');
-		$('li.pin' + pin).removeClass('hover-pin');
-	});
+const highlight = (event, hovered) => {
+	const reference = event.target.closest('article .pin-hover')
 
-	$('article').on('click', '.pin-hover', function(){
-		var pin = $(this).data('pin');
-		window.location = $('li.pin' + pin + ' a').attr('href');
-	});
+	if (!reference) {
+		return
+	}
 
-});
+	for (const item of pinNav(reference.dataset.pin)) {
+		item.classList.toggle('hover-pin', hovered)
+	}
+}
+
+content?.addEventListener('mouseover', event => highlight(event, true))
+content?.addEventListener('mouseout', event => highlight(event, false))
+
+view?.removeAttribute('hidden')
+
+view?.addEventListener('click', event => {
+	const button = event.target.closest('button')
+
+	if (!button) {
+		return
+	}
+
+	const mode = button.classList.contains('mirror') ? 'mirror' : 'rotate'
+	const pressed = !gpio.classList.contains(mode)
+
+	gpio.classList.toggle(mode, pressed)
+	gpio.classList.remove('flipping', 'rotating', 'rotating-back')
+	void gpio.offsetWidth
+	gpio.classList.add(mode === 'mirror' ? 'flipping' : 'rotating')
+
+	if (mode === 'rotate' && !pressed) {
+		gpio.classList.add('rotating-back')
+	}
+
+	button.setAttribute('aria-pressed', pressed)
+})
+
+gpio?.addEventListener('animationend', event => {
+	if (event.target === gpio) {
+		gpio.classList.remove('flipping', 'rotating', 'rotating-back')
+	}
+})

@@ -362,6 +362,8 @@ Boards Page
     display:block;
     text-align:center;
 
+    &[hidden] {display:none;}
+
     a {
         padding-top: 20px;
         padding-bottom: 0px;
@@ -439,6 +441,11 @@ Boards Page
         &.selected {
             color: var(--color-green);
             background: #e8ff4d;
+        }
+
+        &.disabled {
+            opacity: .3;
+            cursor: default;
         }
     }
 

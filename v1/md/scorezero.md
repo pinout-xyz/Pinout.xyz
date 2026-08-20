@@ -9,7 +9,6 @@ collected: Other
 description: A super-simple and stylish soldering kit - makes an NES-style games controller when assembled.
 url: http://wonkyresistor.com/scorezero
 github: https://github.com/wonkyresistor/scorezero
-schematic: 
 buy: http://wonkyresistor.com/scorezero
 image: 'scorezero.png'
 pincount: 40

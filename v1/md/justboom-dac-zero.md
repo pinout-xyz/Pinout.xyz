@@ -6,8 +6,7 @@ type: audio
 formfactor: pHAT
 manufacturer: JustBoom
 description: The JustBoom DAC Zero is a plug and play, high resolution, digital-to-analog converter for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-dac-zero-phat/
-buy: https://www.justboom.co/product/justboom-dac-zero-phat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-dac-zero.png'
 pincount: 40
 eeprom: no

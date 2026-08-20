@@ -6,8 +6,7 @@ type: audio
 formfactor: HAT
 manufacturer: JustBoom
 description: The JustBoom Digi HAT is a high resolution digital audio output add on board for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-digi-hat/
-buy: https://www.justboom.co/product/justboom-digi-hat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-digi-hat.png'
 pincount: 40
 eeprom: setup

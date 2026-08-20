@@ -6,9 +6,7 @@ type: gesture
 formfactor: HAT
 manufacturer: Pi Supply
 description: Flick HAT is a 3D tracking and gesture pHAT.
-url: https://www.pi-supply.com/product/flick-large-standalone-3d-tracking-gesture-breakout/
 github: https://github.com/PiSupply/Flick
-buy: https://www.pi-supply.com/product/flick-hat-3d-tracking-gesture-hat-raspberry-pi/
 image: 'flick-hat.png'
 pincount: 40
 eeprom: setup

@@ -8,7 +8,6 @@ manufacturer: Pi Supply
 description: PaPiRus is an ePaper / eInk screen HAT module for the Raspberry Pi
 url: https://www.kickstarter.com/projects/pisupply/papirus-the-epaper-screen-hat-for-your-raspberry-p
 github: https://github.com/PiSupply/PaPiRus
-buy: https://www.pi-supply.com/product/papirus-epaper-eink-screen-hat-for-raspberry-pi/
 image: 'papirus-hat.png'
 pincount: 40
 eeprom: yes

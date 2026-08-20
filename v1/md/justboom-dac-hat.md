@@ -6,8 +6,7 @@ type: audio
 formfactor: HAT
 manufacturer: JustBoom
 description: The JustBoom DAC HAT is a plug and play, high resolution, digital-to-analog converter for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-dac-hat/
-buy: https://www.justboom.co/product/justboom-dac-hat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-dac-hat.png'
 pincount: 40
 eeprom: setup

@@ -8,7 +8,6 @@ manufacturer: Pi Supply
 description: The Pi PoE Switch HAT is a power over ethernet add-on board for the Raspberry Pi
 url: https://www.kickstarter.com/projects/pisupply/pi-poe-switch-hat-power-over-ethernet-for-raspberr
 github: https://github.com/PiSupply/PiPoE
-buy: https://www.pi-supply.com/product/pi-poe-switch-hat-power-over-ethernet-for-raspberry-pi/
 image: 'pi-poe.png'
 pincount: 40
 eeprom: yes

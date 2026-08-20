@@ -9,7 +9,6 @@ description: The Gert VGA 666 is a breakout/add on board for the Raspberry Pi fo
 url: https://www.kickstarter.com/projects/pisupply/gert-vga-666-kit-hardware-vga-for-raspberry-pi
 github: https://github.com/PiSupply/Gert-VGA-666
 schematic: https://github.com/fenlogic/vga666/blob/master/documents/vga_manual.pdf
-buy: https://www.pi-supply.com/product/gert-vga-666-hardware-vga-raspberry-pi/
 image: 'gertvga-666.png'
 pincount: 40
 eeprom: no

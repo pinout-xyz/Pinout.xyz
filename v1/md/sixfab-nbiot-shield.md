@@ -6,7 +6,7 @@ type: com
 formfactor: HAT
 manufacturer: Sixfab
 description: Connect from anywhere to the internet via NB-IoT on a Raspberry Pi
-github: https://github.com/sixfab/RPI-NB-IoT-Shield
+github: https://github.com/sixfab/Sixfab_RPi_NBIoT_Shield
 url: https://sixfab.com/product/raspberry-pi-nb-iot-shield/
 buy: https://sixfab.com/product/raspberry-pi-nb-iot-shield/
 image: 'sixfab-nbiot-shield.png'
@@ -14,6 +14,7 @@ pincount: 40
 eeprom: no
 power:
   '2':
+  '4':
 ground:
   '6':
   '9':
@@ -46,7 +47,7 @@ pin:
   '33':
     mode: input
     name: RI
-  '37':
+  '36':
     mode: output
     name: Reset
   '37':
@@ -55,7 +56,7 @@ pin:
   '38':
     mode: output
     name: User Led
-  '38':
+  '40':
     mode: input
     name: User Button
 -->

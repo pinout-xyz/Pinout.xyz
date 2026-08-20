@@ -16,7 +16,6 @@ power:
   '1':
   '2':
   '4':
-  '17': (not connected)
 ground:
   '6':
   '9':

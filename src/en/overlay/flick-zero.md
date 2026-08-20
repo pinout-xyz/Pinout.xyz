@@ -6,9 +6,7 @@ type: gesture
 formfactor: pHAT
 manufacturer: Pi Supply
 description: Flick Zero is a 3D tracking and gesture pHAT.
-url: https://www.pi-supply.com/product/flick-large-standalone-3d-tracking-gesture-breakout/
 github: https://github.com/PiSupply/Flick
-buy: https://www.pi-supply.com/product/flick-zero-3d-tracking-gesture-phat-pi-zero/
 image: 'flick-zero.png'
 pincount: 40
 eeprom: no

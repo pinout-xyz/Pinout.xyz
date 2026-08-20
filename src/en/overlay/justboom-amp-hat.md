@@ -6,8 +6,7 @@ type: audio
 formfactor: HAT
 manufacturer: JustBoom
 description: The JustBoom Amp HAT is a high quality audio amplifier designed specifically for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-amp-hat/
-buy: https://www.justboom.co/product/justboom-amp-hat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-amp-hat.png'
 pincount: 40
 eeprom: setup

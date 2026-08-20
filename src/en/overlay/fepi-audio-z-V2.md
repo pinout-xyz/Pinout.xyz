@@ -6,8 +6,7 @@ type: audio
 formfactor: pHAT
 manufacturer: Fe-Pi
 description: A complete audio solution for the Raspberry Pi
-url: https://fe-pi.com/products/fe-pi-audio-z-v2
-buy: https://fe-pi.com/products/fe-pi-audio-z-v2
+github: https://github.com/Fe-Pi
 image: 'fepi-audio-z-V2.png'
 pincount: 40
 eeprom: no

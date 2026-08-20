@@ -6,8 +6,7 @@ type: audio
 formfactor: HAT
 manufacturer: Fe-Pi
 description: A complete audio solution for the Raspberry Pi
-url: https://fe-pi.com/products/fe-pi-audio-v1
-buy: https://fe-pi.com/products/fe-pi-audio-v1
+github: https://github.com/Fe-Pi
 image: 'fepi-audio.png'
 pincount: 40
 eeprom: no

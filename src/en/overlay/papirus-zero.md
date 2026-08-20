@@ -8,7 +8,6 @@ manufacturer: Pi Supply
 description: PaPiRus Zero is an ePaper / eInk screen pHAT module for the Pi Zero
 url: https://www.kickstarter.com/projects/pisupply/papirus-the-epaper-screen-hat-for-your-raspberry-p
 github: https://github.com/PiSupply/PaPiRus
-buy: https://www.pi-supply.com/product/papirus-zero-epaper-screen-phat-pi-zero/
 image: 'papirus-zero.png'
 pincount: 40
 eeprom: no

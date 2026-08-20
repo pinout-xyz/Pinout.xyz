@@ -6,8 +6,7 @@ type: audio
 formfactor: pHAT
 manufacturer: JustBoom
 description: The JustBoom Digi Zero is a high resolution digital audio output add on board for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-digi-zero-phat/
-buy: https://www.justboom.co/product/justboom-digi-zero-phat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-digi-zero.png'
 pincount: 40
 eeprom: no

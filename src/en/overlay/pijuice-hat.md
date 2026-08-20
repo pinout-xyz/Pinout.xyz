@@ -6,9 +6,7 @@ type: power
 formfactor: HAT
 manufacturer: Pi Supply
 description: PiJuice uninterruptible power supply for the Raspberry Pi.
-url: https://uk.pi-supply.com/products/pijuice-standard
 github: https://github.com/PiSupply/PiJuice
-buy: https://uk.pi-supply.com
 image: 'pijuice-hat.png'
 pincount: 40
 eeprom: yes

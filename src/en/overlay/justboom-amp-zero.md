@@ -6,8 +6,7 @@ type: audio
 formfactor: pHAT
 manufacturer: JustBoom
 description: The JustBoom Amp Zero is a high quality audio amplifier designed specifically for the Raspberry Pi.
-url: https://www.justboom.co/product/justboom-amp-zero-phat/
-buy: https://www.justboom.co/product/justboom-amp-zero-phat/
+github: https://github.com/PiSupply/JustBoom
 image: 'justboom-amp-zero.png'
 pincount: 40
 eeprom: no

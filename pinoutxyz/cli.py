@@ -5,6 +5,7 @@ import sys
 
 from . import drafts, links, overlays, settings, translations, urls
 from .build import build
+from .pins import Pins
 from .site import Reporter, Site
 
 SITE_DIR = 'output/site'
@@ -26,7 +27,7 @@ def resolve(root, requested):
 
 def build_languages(root, languages, verbose=False):
     reporter = Reporter(verbose)
-    source = overlays.load_source(root, reporter.warn)
+    source = overlays.load_source(root, reporter.warn, Pins(root, overlays.SOURCE))
     alternates = urls.alternates(root, source)
 
     for lang in languages:

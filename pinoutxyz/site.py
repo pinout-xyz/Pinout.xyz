@@ -23,7 +23,7 @@ class Site:
         self.templates = Templates(root, lang)
         self.alternates = alternates if alternates is not None else urls.alternates(root)
 
-        self.overlays = overlays.load_all(root, lang, source, self.report.warn)
+        self.overlays = overlays.load_all(root, lang, source, self.report.warn, self.pins)
 
         found = {overlay['src']: overlay['page_url'] for overlay in self.overlays}
         for key, src, default in LEGEND_URLS:
@@ -44,7 +44,7 @@ class Site:
     def markdown(self, path):
         resolved = settings.resolve(self.root, 'src/{}/' + path.lstrip('/'), self.lang)
         try:
-            return documents.to_html(open(resolved).read())
+            return documents.to_html(open(resolved).read(), self.pins)
         except IOError:
             return ''
 

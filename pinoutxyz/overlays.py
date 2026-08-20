@@ -69,10 +69,10 @@ def load(path, warn=None):
     return data
 
 
-def load_source(root, warn=None):
+def load_source(root, warn=None, pins=None):
     source = {}
     for path in paths(root, SOURCE):
-        document = documents.load(path, warn)
+        document = documents.load(path, warn, pins)
         data = describe(document['data'], path, document['html'])
         normalise_modes(data, path, warn)
         add_eeprom_pins(data)
@@ -109,9 +109,9 @@ def merge(base, override, path, warn=None):
     return merged
 
 
-def load_all(root, lang, source=None, warn=None):
+def load_all(root, lang, source=None, warn=None, pins=None):
     if source is None:
-        source = load_source(root, warn)
+        source = load_source(root, warn, pins)
 
     if lang == SOURCE:
         return [finalise(copy.deepcopy(base)) for base in source.values()]
@@ -130,7 +130,7 @@ def load_all(root, lang, source=None, warn=None):
             loaded.append(finalise(copy.deepcopy(base), False))
             continue
 
-        document = documents.load(path, warn)
+        document = documents.load(path, warn, pins)
         merged = merge(base, document['data'] or {}, path, warn)
         merged['source'] = path
 

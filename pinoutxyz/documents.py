@@ -4,6 +4,8 @@ import re
 import markdown
 import yaml
 
+from .pinrefs import PinReferenceExtension
+
 FRONTMATTER = re.compile(r'<!--(JSON:|\n---\n)(.*?)-->', re.DOTALL)
 HEADING = re.compile(r'^#[^\#](.*)$', re.MULTILINE)
 TABLE_SCROLL = ('<div class="table-scroll"><table', '</table></div>')
@@ -45,8 +47,11 @@ def load_yaml(text, warn=None):
     return data
 
 
-def to_html(text):
-    html = markdown.markdown(text, extensions=['fenced_code', 'tables'])
+def to_html(text, pins=None):
+    extensions = ['fenced_code', 'tables']
+    if pins is not None:
+        extensions.append(PinReferenceExtension(pins))
+    html = markdown.markdown(text, extensions=extensions)
     return html.replace('<table', TABLE_SCROLL[0]).replace('</table>', TABLE_SCROLL[1])
 
 
@@ -81,6 +86,7 @@ def parse(text, warn=None):
     return data
 
 
-def load(path, warn=None):
+def load(path, warn=None, pins=None):
     text = open(path).read().replace('\r', '')
-    return {'data': parse(text, prefixed(path, warn)), 'html': to_html(FRONTMATTER.sub('', text))}
+    return {'data': parse(text, prefixed(path, warn)),
+            'html': to_html(FRONTMATTER.sub('', text), pins)}

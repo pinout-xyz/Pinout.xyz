@@ -1151,8 +1151,18 @@ code {
         background: rgba(255, 255, 255, 10%);
     }
     pre, .prettyprint {
-        background-color: #f7f7f9;
+        background-color: #073642;
+        border-color: #406068;
     }
+    .prettyprint.linenums {
+        box-shadow: inset 40px 0 0 #002B36, inset 41px 0 0 #406068;
+    }
+    ol.linenums li {
+        color: #6b8b94;
+        text-shadow: none;
+    }
+    .pln {color: var(--overlay-pin-bg);}
+    .lit {color: var(--color-blue);}
 }
 
 @media (hover: hover) {

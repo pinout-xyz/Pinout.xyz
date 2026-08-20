@@ -316,7 +316,7 @@ section {
     article {
         padding: 15px 8px;
         min-width: 0;
-        .pin-hover {cursor:help;color:#880000;}
+        .pin-hover {cursor:help;font-style:italic;}
         .pin-hover:hover {color:#AA0000;}
         img {max-width:100%;}
         .details {
@@ -1087,7 +1087,6 @@ code {
         background: #002B36;
         h2 {border-bottom-color: var(--overlay-pin-bg);}
         article {
-            .pin-hover {color:#CC0000;}
             .pin-hover:hover {color:#EE0000;}
         }
     }

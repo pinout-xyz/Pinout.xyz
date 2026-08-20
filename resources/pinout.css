@@ -527,6 +527,7 @@ Left Column
 
 #interfaces {
     grid-area: interfaces;
+    display: grid;
     grid-row-gap: 2px;
     padding: 0;
     text-align: center;
@@ -539,8 +540,7 @@ Left Column
         color: #FFF;
         align-content: center;
         padding: 8px;
-        margin-bottom: 2px;
-        
+
         a, a:hover, a:visited, a:active {
             color: #FFF;
             text-decoration: underline;
@@ -1182,15 +1182,15 @@ code {
        with a toggle on/off and no hover state. Normally a hover would "stick"
        on so we only enable it if the "hover" state is supported. */
     .facets .facet {
-        li:hover {
+        li:not(.disabled):hover {
             color: var(--color-green);
             background: #e8ff4d;
         }
-        &:nth-of-type(2) li:hover {
+        &:nth-of-type(2) li:not(.disabled):hover {
             color: var(--color-pink);
             background: #f3c8dd;
         }
-        &:nth-of-type(1) li:hover {
+        &:nth-of-type(1) li:not(.disabled):hover {
             color: var(--color-blue);
             background: #b8daf2;
         }

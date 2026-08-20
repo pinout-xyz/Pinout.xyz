@@ -40,9 +40,9 @@ pin:
   '40':
      mode: i2s
   '32':
-    name: GP12 pin 4
+    name: GP12 pin 1
   '33':
-    name: GP12 pin 3
+    name: GP12 pin 2
 -->
 # ReSpeaker 4 Mic Linear Array
 

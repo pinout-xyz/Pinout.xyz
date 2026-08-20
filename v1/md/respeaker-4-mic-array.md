@@ -31,8 +31,6 @@ pin:
     mode: i2c
   '12':
     mode: i2s
-  '19':
-    mode: i2s
   '35':
      mode: i2s
   '38':

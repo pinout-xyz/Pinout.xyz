@@ -19,19 +19,17 @@ ground:
   '39':
 pin:
   '12':
-    name: I2S
+    name: I2S BCLK
   '35':
-    name: I2S
+    name: I2S LRCLK
   '38':
-    name: I2S
+    name: I2S SDIN
   '29':
     name: Button A
   '31':
     name: Button B
   '36':
     name: Button X
-  '38':
-    name: Button Y
   '18':
     name: Button Y
   '33':

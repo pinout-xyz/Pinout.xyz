@@ -10,6 +10,8 @@ SOURCE = 'en'
 OVERLAY_DIR = 'overlay'
 
 OVERRIDE_KEYS = ('name', 'description', 'page_url', 'url', 'buy', 'github', 'schematic', 'docs')
+
+EEPROM_PINS = {'27': 'EEPROM Data', '28': 'EEPROM Clock'}
 OVERRIDE_MAPS = ('pin', 'i2c')
 OVERRIDE_ENTRY_KEYS = ('name', 'description')
 
@@ -39,6 +41,18 @@ def normalise_modes(data, path, warn):
         pin_data['mode'] = mode
 
 
+def add_eeprom_pins(data):
+    if str(data.get('eeprom')) != 'setup':
+        return
+
+    pins = data.setdefault('pin', None) or {}
+    data['pin'] = pins
+
+    for pin, name in EEPROM_PINS.items():
+        if pin not in pins and int(pin) not in pins:
+            pins[pin] = {'name': name, 'mode': 'i2c'}
+
+
 def describe(data, path, html):
     data['source'] = path
     data['src'] = os.path.basename(path)[:-len('.md')]
@@ -50,6 +64,7 @@ def load(path, warn=None):
     document = documents.load(path)
     data = describe(document['data'], path, document['html'])
     normalise_modes(data, path, warn)
+    add_eeprom_pins(data)
     data['page_url'] = page_url(data)
     return data
 
@@ -60,6 +75,7 @@ def load_source(root, warn=None):
         document = documents.load(path)
         data = describe(document['data'], path, document['html'])
         normalise_modes(data, path, warn)
+        add_eeprom_pins(data)
         source[os.path.basename(path)] = data
     return source
 

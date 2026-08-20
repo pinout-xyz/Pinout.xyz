@@ -44,12 +44,6 @@ pin:
     name: Atmel Chip Select
     mode: chipselect
     active: high
-  '27':
-    name: EEPROM Data
-    mode: i2c
-  '28':
-    name: EEPROM Clock
-    mode: i2c
 i2c:
   '0x5c':
     name: Pressure/Temp

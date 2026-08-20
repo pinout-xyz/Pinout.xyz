@@ -6,8 +6,8 @@
 		<meta name="description" content="an E-Ink display pHAT for with embedded controller, communicating via SPI interface." />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T181659" rel="stylesheet">
-		<link href="/resources/print.css?v=20260820T181659" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260820T183022" rel="stylesheet">
+		<link href="/resources/print.css?v=20260820T183022" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/213_inch_e_paper_phat" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/213_inch_e_paper_phat" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/213_inch_e_paper_phat" hreflang="es"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/213_inch_e_paper_phat" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/213_inch_e_paper_phat" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T181659"/>
-		<!-- Build: 20260820T181659 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T183022"/>
+		<!-- Build: 20260820T183022 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="2.13 Inch E-Paper pHAT Raspberry Pi GPIO Pinout">
@@ -44,7 +44,7 @@
 						<aside>
 				<nav id="gpio" aria-label="GPIO header">
 					<ul class="bottom" aria-label="Odd-numbered pins">
-<li class="pin1 pow3v3 overlay-power"><a href="/fr/pinout/pin1_alimentation_33v" title=""><span class="default"> Alimentation 3.3v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">1</span></span></a></li>
+<li class="pin1 pow3v3"><a href="/fr/pinout/pin1_alimentation_33v" title=""><span class="default"> Alimentation 3.3v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">1</span></span></a></li>
 <li class="pin3 gpio i2c"><a href="/fr/pinout/pin3_gpio2" title="broche Wiring Pi 8"><span class="default"> <span class="name">GPIO 2</span> <small>(SDA)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">3</span></span></a></li>
 <li class="pin5 gpio i2c"><a href="/fr/pinout/pin5_gpio3" title="broche Wiring Pi 9"><span class="default"> <span class="name">GPIO 3</span> <small>(SCL)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">5</span></span></a></li>
 <li class="pin7 gpio"><a href="/fr/pinout/pin7_gpio4" title="broche Wiring Pi 7"><span class="default"> <span class="name">GPIO 4</span> <small>(GPCLK0)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">7</span></span></a></li>
@@ -66,7 +66,7 @@
 <li class="pin39 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
 </ul>
 <ul class="top" aria-label="Even-numbered pins">
-<li class="pin2 pow5v"><a href="/fr/pinout/pin2_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
+<li class="pin2 pow5v overlay-power"><a href="/fr/pinout/pin2_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
 <li class="pin4 pow5v"><a href="/fr/pinout/pin4_alimentation_5v" title=""><span class="default"> Alimentation 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">4</span></span></a></li>
 <li class="pin6 gnd overlay-ground"><a href="/fr/pinout/masse" title=""><span class="default"> Masse</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">6</span></span></a></li>
 <li class="pin8 gpio uart"><a href="/fr/pinout/pin8_gpio14" title="broche Wiring Pi 15"><span class="default"> <span class="name">GPIO 14</span> <small>(TXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">8</span></span></a></li>
@@ -176,6 +176,7 @@
 				<article class="page_213_inch_e_paper_phat"><p class="translate-me"><a href="https://github.com/pinout-xyz/Pinout.xyz">This page needs translating, can you help?</a></p><h1>2.13 Inch E-Ink Display pHAT</h1>
 <p>This is an E-Ink display HAT for Raspberry Pi, 2.13inch, 250x122 resolution, with embedded controller, communicating via SPI interface, supports partial refresh.</p>
 <p>Due to the advantages like ultra low power consumption, wide viewing angle, clear display without electricity, it is an ideal choice for applications such as shelf label, industrial instrument, and so on.</p>
+<p>This pHAT is powered from 5v, not 3v3, and regulates its own 3.3v rail on board. That regulator is switched rather than always on, so the display's supply can be cut to save power.</p>
 <h2>Features</h2>
 <ul>
 <li>250x122 resolution</li>
@@ -186,7 +187,7 @@
 <div class="details"><h2>Détails</h2><ul>
 <li>fabriqué par <a href="/fr/boards#manufacturer=Waveshare">Waveshare</a></li>
 <li>carte au format pHAT</li>
-<li>alimentation 3v3</li>
+<li>alimentation 5v</li>
 <li>6 broches GPIO actives</li>
 <li><a href="http://www.waveshare.com/wiki/2.13inch_e-Paper_HAT">plus d'info</a></li>
 <li><a href="https://www.waveshare.com/product/2.13inch-e-paper-hat.htm">achat</a></li>
@@ -201,7 +202,7 @@
 
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T181659'></script>
-		<script src='/resources/boards.js?v=20260820T181659'></script>
+		<script src='/resources/pinout.js?v=20260820T183022'></script>
+		<script src='/resources/boards.js?v=20260820T183022'></script>
 </body>
 </html>

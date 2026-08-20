@@ -12,7 +12,7 @@ image: 'waveshare213paper.png'
 pincount: 40
 eeprom: no
 power:
-  '1':
+  '2':
 ground:
   '6':
   '9':
@@ -41,6 +41,8 @@ pin:
 This is an E-Ink display HAT for Raspberry Pi, 2.13inch, 250x122 resolution, with embedded controller, communicating via SPI interface, supports partial refresh.
 
 Due to the advantages like ultra low power consumption, wide viewing angle, clear display without electricity, it is an ideal choice for applications such as shelf label, industrial instrument, and so on.
+
+This pHAT is powered from 5v, not 3v3, and regulates its own 3.3v rail on board. That regulator is switched rather than always on, so the display's supply can be cut to save power.
 
 ## Features
 

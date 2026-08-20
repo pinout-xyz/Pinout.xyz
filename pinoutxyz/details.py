@@ -183,9 +183,9 @@ def describe(site, overlay, warn):
     if not found and not image:
         return overlay['long_description']
 
-    table = '<table class="details"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>'.format(
+    details = '<div class="details"><h2>{}</h2>{}{}</div>'.format(
         site.strings['details'],
         markdown.markdown('\n'.join('* ' + item for item in found)),
         image)
 
-    return '{}\n{}'.format(overlay['long_description'], table)
+    return '{}\n{}'.format(overlay['long_description'], details)

@@ -102,22 +102,6 @@ table {
     td, th {border:1px solid var(--color-dark);padding:5px;}
     th {background:var(--color-dark);color:var(--color-content-bg);}
 
-    &.details {
-        font-size:inherit;
-        width:100%;
-
-        tr {
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-
-        td, th {
-            border:none;vertical-align:top;padding:0;
-        }
-
-        img {margin-top:54px;}
-    }
-
     &.pin-functions {
         width:100%;
 
@@ -328,7 +312,14 @@ section {
         .pin-hover {cursor:help;color:#880000;}
         .pin-hover:hover {color:#AA0000;}
         img {max-width:100%;}
-        .details img {min-width:200px;max-width: 100%;}
+        .details {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 1em 0;
+
+            h2 {grid-column: 1 / -1;margin-bottom:1em;}
+            img {min-width:200px;max-width: 100%;}
+        }
         a {
             color: #C92C6D; /* Just scrape an AAA small text contrast pass */
             text-decoration: underline;

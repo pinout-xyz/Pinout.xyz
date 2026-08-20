@@ -14,6 +14,8 @@ eeprom: yes
 power:
   '1':
   '2':
+  '4':
+  '17':
 ground:
   '6':
   '9':
@@ -34,9 +36,15 @@ pin:
   '16':
     mode: gpio
     name: Button
+  '22':
+    mode: output
+    name: LED
   '35':
     mode: i2s
     name: I2S LRCLK
+  '36':
+    mode: output
+    name: Amp Enable
   '38':
     mode: i2s
     name: I2S SDIN

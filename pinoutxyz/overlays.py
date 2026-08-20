@@ -61,7 +61,7 @@ def describe(data, path, html):
 
 
 def load(path, warn=None):
-    document = documents.load(path)
+    document = documents.load(path, warn)
     data = describe(document['data'], path, document['html'])
     normalise_modes(data, path, warn)
     add_eeprom_pins(data)
@@ -72,7 +72,7 @@ def load(path, warn=None):
 def load_source(root, warn=None):
     source = {}
     for path in paths(root, SOURCE):
-        document = documents.load(path)
+        document = documents.load(path, warn)
         data = describe(document['data'], path, document['html'])
         normalise_modes(data, path, warn)
         add_eeprom_pins(data)
@@ -130,7 +130,7 @@ def load_all(root, lang, source=None, warn=None):
             loaded.append(finalise(copy.deepcopy(base), False))
             continue
 
-        document = documents.load(path)
+        document = documents.load(path, warn)
         merged = merge(base, document['data'] or {}, path, warn)
         merged['source'] = path
 

@@ -6,7 +6,7 @@
 		<meta name="description" content="Raspberry Pi general purpose IO pins" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260820T173812" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T174220" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/gpio" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpio" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/gpio" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/gpio" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T173812"/>
-		<!-- Build: 20260820T173812 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T174220"/>
+		<!-- Build: 20260820T174220 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="GPIO - Assegnazione pin GPIO del Raspberry Pi">
@@ -178,24 +178,72 @@
 <h2>Logic levels</h2>
 <p>GPIO pins are 3.3v. The Pi's GPIO are not 5v tolerant and could be damaged by 5v devices- use an appropriate level shifter or divider.</p>
 <p>An input doesn't need a full 3.3v to read high, and the thresholds differ by model:</p>
-<ul>
-<li>Pi 1-3, Zero: low below 0.9v, high above 1.6v</li>
-<li>Pi 4, 400, CM4: low below 0.8v, high above 2.0v</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Reads low below</th>
+<th>Reads high above</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pi 1-3, Zero</td>
+<td>0.9v</td>
+<td>1.6v</td>
+</tr>
+<tr>
+<td>Pi 4, 400, CM4</td>
+<td>0.8v</td>
+<td>2.0v</td>
+</tr>
+</tbody>
+</table></div>
 <p>If you can find equivalent figures for the Pi 5's RP1, let me know!</p>
 <h2>Drive strength</h2>
 <p>Drive strength is configurable. Both the default and the maximum differ by model:</p>
-<ul>
-<li>Pi 1-3, Zero: 8mA by default, 16mA at most</li>
-<li>Pi 4, 400, CM4: 4mA by default, 8mA at most</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Default</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pi 1-3, Zero</td>
+<td>8mA</td>
+<td>16mA</td>
+</tr>
+<tr>
+<td>Pi 4, 400, CM4</td>
+<td>4mA</td>
+<td>8mA</td>
+</tr>
+</tbody>
+</table></div>
 <p>These are drive strength settings rather than a rating for how much current a pin can safely supply. <a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio">Raspberry Pi's GPIO documentation</a> gives no per-pin or total limit for the header. Treat an output as a control signal: anything that needs powering should be fed from the <a href="/pinout/3v3_power">3v3</a> or <a href="/pinout/5v_power">5v</a> pins, or from its own supply.</p>
 <h2>Pull-ups and pull-downs</h2>
 <p>Every GPIO pin has an internal pull-up and pull-down resistor that can be enabled in software:</p>
-<ul>
-<li>Pi 1-3, Zero: 50 to 65 kΩ</li>
-<li>Pi 4, 400, CM4: 33 to 73 kΩ</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Internal pull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pi 1-3, Zero</td>
+<td>50 to 65 kΩ</td>
+</tr>
+<tr>
+<td>Pi 4, 400, CM4</td>
+<td>33 to 73 kΩ</td>
+</tr>
+</tbody>
+</table></div>
 <p><a href="/pinout/i2c">GPIO 2 and GPIO 3</a> are the exception, with fixed 1.8 kΩ pull-ups fitted to the board.</p>
 <p>Every pin is an input at power-on, and most have a default pull applied. The defaults are listed in the alternate function table in the Arm peripherals datasheet.</p>
 <h2>Alternate functions</h2>
@@ -207,12 +255,32 @@
 gpio=0-27=a2
 </code></pre>
 <p>The first line makes GPIO 12 an output driven high. The second line puts every pin in bank 0 on alternate function 2 (<a href="/pinout/dpi">DPI</a>). The attributes are:</p>
-<ul>
-<li><code>ip</code> and <code>op</code> for input and output</li>
-<li><code>a0</code> to <code>a5</code> for the alternate functions</li>
-<li><code>dh</code> and <code>dl</code> to drive an output high or low</li>
-<li><code>pu</code>, <code>pd</code> and <code>pn</code> for pull up, pull down and no pull</li>
-</ul>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ip</code>, <code>op</code></td>
+<td>Input or output</td>
+</tr>
+<tr>
+<td><code>a0</code> to <code>a5</code></td>
+<td>One of the alternate functions</td>
+</tr>
+<tr>
+<td><code>dh</code>, <code>dl</code></td>
+<td>Drive an output high or low</td>
+</tr>
+<tr>
+<td><code>pu</code>, <code>pd</code>, <code>pn</code></td>
+<td>Pull up, pull down or no pull</td>
+</tr>
+</tbody>
+</table></div>
 <p>These settings take a few seconds to apply after power is connected, and longer when booting from the network or from USB storage. Anything set up later by an overlay or the <code>pinctrl</code> tool overrides them.</p>
 <div class="details"><h2>Details</h2><ul>
 <li>Utilizza 28 GPIO pins</li>
@@ -229,7 +297,7 @@ gpio=0-27=a2
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260820T173812'></script>
+		<script src='/resources/pinout.js?v=20260820T174220'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

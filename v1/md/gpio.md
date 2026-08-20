@@ -45,8 +45,10 @@ GPIO pins are 3.3v. The Pi's GPIO are not 5v tolerant and could be damaged by 5v
 
 An input doesn't need a full 3.3v to read high, and the thresholds differ by model:
 
-* Pi 1-3, Zero: low below 0.9v, high above 1.6v
-* Pi 4, 400, CM4: low below 0.8v, high above 2.0v
+| Model | Reads low below | Reads high above |
+| --- | --- | --- |
+| Pi 1-3, Zero | 0.9v | 1.6v |
+| Pi 4, 400, CM4 | 0.8v | 2.0v |
 
 If you can find equivalent figures for the Pi 5's RP1, let me know!
 
@@ -54,8 +56,10 @@ If you can find equivalent figures for the Pi 5's RP1, let me know!
 
 Drive strength is configurable. Both the default and the maximum differ by model:
 
-* Pi 1-3, Zero: 8mA by default, 16mA at most
-* Pi 4, 400, CM4: 4mA by default, 8mA at most
+| Model | Default | Maximum |
+| --- | --- | --- |
+| Pi 1-3, Zero | 8mA | 16mA |
+| Pi 4, 400, CM4 | 4mA | 8mA |
 
 These are drive strength settings rather than a rating for how much current a pin can safely supply. [Raspberry Pi's GPIO documentation](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio) gives no per-pin or total limit for the header. Treat an output as a control signal: anything that needs powering should be fed from the [3v3](/pinout/3v3_power) or [5v](/pinout/5v_power) pins, or from its own supply.
 
@@ -63,8 +67,10 @@ These are drive strength settings rather than a rating for how much current a pi
 
 Every GPIO pin has an internal pull-up and pull-down resistor that can be enabled in software:
 
-* Pi 1-3, Zero: 50 to 65 kΩ
-* Pi 4, 400, CM4: 33 to 73 kΩ
+| Model | Internal pull |
+| --- | --- |
+| Pi 1-3, Zero | 50 to 65 kΩ |
+| Pi 4, 400, CM4 | 33 to 73 kΩ |
 
 [GPIO 2 and GPIO 3](/pinout/i2c) are the exception, with fixed 1.8 kΩ pull-ups fitted to the board.
 
@@ -87,9 +93,11 @@ gpio=0-27=a2
 
 The first line makes GPIO 12 an output driven high. The second line puts every pin in bank 0 on alternate function 2 ([DPI](/pinout/dpi)). The attributes are:
 
-* `ip` and `op` for input and output
-* `a0` to `a5` for the alternate functions
-* `dh` and `dl` to drive an output high or low
-* `pu`, `pd` and `pn` for pull up, pull down and no pull
+| Attribute | Sets |
+| --- | --- |
+| `ip`, `op` | Input or output |
+| `a0` to `a5` | One of the alternate functions |
+| `dh`, `dl` | Drive an output high or low |
+| `pu`, `pd`, `pn` | Pull up, pull down or no pull |
 
 These settings take a few seconds to apply after power is connected, and longer when booting from the network or from USB storage. Anything set up later by an overlay or the `pinctrl` tool overrides them.

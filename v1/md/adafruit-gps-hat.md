@@ -11,9 +11,10 @@ schematic: https://learn.adafruit.com/assets/21938
 buy: https://www.adafruit.com/products/2324
 image: 'adafruit-gps-hat.png'
 pincount: 40
-eeprom: no
+eeprom: yes
 power:
   '1':
+  '17':
 ground:
   '6':
   '9':

@@ -48,6 +48,14 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '29':
+    name: Button A
+  '31':
+    name: Button B
+  '36':
+    name: Button C
+  '18':
+    name: Button D
 i2c:
   '0x50':
     device: Inky ID EEPROM

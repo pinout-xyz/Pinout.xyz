@@ -6,7 +6,7 @@
 		<meta name="description" content="A 128x64 display with jostick and buttons for your Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 		<link href='/resources/prettify/prettify.css' rel='stylesheet' />
-		<link href="/resources/pinout.css?v=20260819T220303" rel="stylesheet">
+		<link href="/resources/pinout.css?v=20260820T075538" rel="stylesheet">
 		<link href="/resources/print.css" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/oled_bonnet" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/oled_bonnet" hreflang="en"/>
@@ -17,8 +17,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/oled_bonnet" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/oled_bonnet" hreflang="x-default"/>
 		<link rel="shortcut icon" href="/resources/pinout-logo.png" type="image/png">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260819T220303"/>
-		<!-- Build: 20260819T220303 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260820T075538"/>
+		<!-- Build: 20260820T075538 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="OLED Bonnet Raspberry Pi GPIO pinout">
@@ -52,7 +52,7 @@
 <li class="pin11 gpio overlay-pin"><a href="/es/pinout/pin11_gpio17" title="pin Wiring Pi 0"><span class="default"> <span class="name">GPIO 17</span> <small>(Joystick up)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">11</span></span></a></li>
 <li class="pin13 gpio overlay-pin"><a href="/es/pinout/pin13_gpio27" title="pin Wiring Pi 2"><span class="default"> <span class="name">GPIO 27</span> <small>(Joystick left)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">13</span></span></a></li>
 <li class="pin15 gpio overlay-pin"><a href="/es/pinout/pin15_gpio22" title="pin Wiring Pi 3"><span class="default"> <span class="name">GPIO 22</span> <small>(Joystick down)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">15</span></span></a></li>
-<li class="pin17 pow3v3"><a href="/es/pinout/pin17_alimentacion_3v3" title=""><span class="default"> Alimentación 3v3</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">17</span></span></a></li>
+<li class="pin17 pow3v3 overlay-power"><a href="/es/pinout/pin17_alimentacion_3v3" title=""><span class="default"> Alimentación 3v3</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">17</span></span></a></li>
 <li class="pin19 gpio spi"><a href="/es/pinout/pin19_gpio10" title="pin Wiring Pi 12"><span class="default"> <span class="name">GPIO 10</span> <small>(MOSI)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">19</span></span></a></li>
 <li class="pin21 gpio spi"><a href="/es/pinout/pin21_gpio9" title="pin Wiring Pi 13"><span class="default"> <span class="name">GPIO 9</span> <small>(MISO)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">21</span></span></a></li>
 <li class="pin23 gpio spi"><a href="/es/pinout/pin23_gpio11" title="pin Wiring Pi 14"><span class="default"> <span class="name">GPIO 11</span> <small>(SCLK)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">23</span></span></a></li>
@@ -66,8 +66,8 @@
 <li class="pin39 gnd overlay-ground"><a href="/es/pinout/masa" title=""><span class="default"> Masa</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">39</span></span></a></li>
 </ul>
 <ul class="top" aria-label="Even-numbered pins">
-<li class="pin2 pow5v"><a href="/es/pinout/pin2_alimentacion_5v" title=""><span class="default"> Alimentación 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
-<li class="pin4 pow5v"><a href="/es/pinout/pin4_alimentacion_5v" title=""><span class="default"> Alimentación 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">4</span></span></a></li>
+<li class="pin2 pow5v overlay-power"><a href="/es/pinout/pin2_alimentacion_5v" title=""><span class="default"> Alimentación 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">2</span></span></a></li>
+<li class="pin4 pow5v overlay-power"><a href="/es/pinout/pin4_alimentacion_5v" title=""><span class="default"> Alimentación 5v</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">4</span></span></a></li>
 <li class="pin6 gnd overlay-ground"><a href="/es/pinout/masa" title=""><span class="default"> Masa</span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">6</span></span></a></li>
 <li class="pin8 gpio uart"><a href="/es/pinout/pin8_gpio14" title="pin Wiring Pi 15"><span class="default"> <span class="name">GPIO 14</span> <small>(TXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">8</span></span></a></li>
 <li class="pin10 gpio uart"><a href="/es/pinout/pin10_gpio15" title="pin Wiring Pi 16"><span class="default"> <span class="name">GPIO 15</span> <small>(RXD)</small></span><span class="pin"><span class="visually-hidden">physical pin </span><span class="phys">10</span></span></a></li>
@@ -186,12 +186,13 @@ sudo python setup.py install
 <table class="details"><tr><td><h2>Detalles</h2><ul>
 <li>Fabricado por <a href="/es/boards#manufacturer=Adafruit">Adafruit</a></li>
 <li>formato pHAT</li>
-<li>Alimentación 3v3</li>
+<li>Alimentación 5v y 3v3</li>
 <li>Usa 9 pines GPIO</li>
 <li>Usa I2C</li>
 <li>0x3c: ssd1306</li>
 <li><a href="https://learn.adafruit.com/adafruit-128x64-oled-bonnet-for-raspberry-pi">Más información</a></li>
 <li><a href="https://github.com/adafruit/Adafruit_Python_SSD1306">GitHub</a></li>
+<li><a href="https://learn.adafruit.com/assets/42397">Diagrama</a></li>
 <li><a href="https://www.adafruit.com/product/3531">Comprar</a></li>
 </ul></td><td><img loading="lazy" src="/resources/boards/adafruit-oled-bonnet.png" alt="OLED Bonnet" /></td></tr></table></article>
 			</section>
@@ -205,7 +206,7 @@ sudo python setup.py install
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260819T220303'></script>
+		<script src='/resources/pinout.js?v=20260820T075538'></script>
 		<script src='/resources/boards.js'></script>
 </body>
 </html>

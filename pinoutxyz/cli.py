@@ -3,7 +3,7 @@ import os
 import shutil
 import sys
 
-from . import drafts, links, overlays, settings, translations, urls
+from . import drafts, links, minify, overlays, settings, translations, urls
 from .build import build
 from .pins import Pins
 from .site import Reporter, Site
@@ -37,7 +37,11 @@ def build_languages(root, languages, verbose=False):
     return reporter
 
 
-def assemble(root, languages):
+def report_minified(name, before, after):
+    print('  {:<32} {:>6} -> {:>6} bytes'.format(name, before, after))
+
+
+def assemble(root, languages, compress=False):
     site = os.path.join(root, SITE_DIR)
     shutil.rmtree(site, ignore_errors=True)
 
@@ -49,13 +53,21 @@ def assemble(root, languages):
     for shared in SHARED_DIRS:
         shutil.copytree(os.path.join(root, shared), os.path.join(site, shared), dirs_exist_ok=True)
 
+    if compress:
+        before, after = minify.run(site, report_minified)
+        print('\nMinified {} bytes of css and js down to {}'.format(before, after))
+
 
 def command_build(args):
     languages = resolve(args.root, args.languages)
+
+    if args.minify:
+        minify.minifiers()
+
     reporter = build_languages(args.root, languages, args.verbose)
 
     if args.site:
-        assemble(args.root, languages)
+        assemble(args.root, languages, args.minify)
         print('\nAssembled {}'.format(os.path.join(args.root, SITE_DIR)))
 
     return 1 if args.strict and reporter.warnings else 0
@@ -119,6 +131,7 @@ def parser():
     build_command.add_argument('languages', nargs='*', help='language codes, default all')
     build_command.add_argument('--site', action='store_true', help='assemble output/site')
     build_command.add_argument('--strict', action='store_true', help='fail on warnings')
+    build_command.add_argument('--minify', action='store_true', help='minify css and js in output/site')
     build_command.set_defaults(handler=command_build)
 
     serve_command = commands.add_parser('serve', help='build and serve one language')

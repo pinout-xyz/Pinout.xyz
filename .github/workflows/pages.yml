@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Packages
         run: |
-          make site
+          make dist
           make -C api
           cp -r api/v1 output/site
           cp api/index.png output/site/v1/img/

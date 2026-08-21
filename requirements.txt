@@ -4,6 +4,8 @@ itsdangerous
 Jinja2
 Markdown
 MarkupSafe
-PyYAML
-Werkzeug
 pillow
+PyYAML
+rcssmin
+rjsmin
+Werkzeug

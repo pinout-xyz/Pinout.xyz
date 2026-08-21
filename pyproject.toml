@@ -15,6 +15,7 @@ dependencies = [
 [project.optional-dependencies]
 serve = ["Flask"]
 api = ["pillow"]
+minify = ["rcssmin", "rjsmin"]
 
 [project.scripts]
 pinoutxyz = "pinoutxyz.cli:main"

@@ -964,6 +964,42 @@ code {
     font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
 
+/*
+Code blocks
+
+Prettify adds the token classes and the line-number list at runtime. Only the
+tokens its default lexer actually emits are styled here.
+*/
+
+.prettyprint {
+    padding: 8px;
+    background-color: rgba(250, 250, 250, 0.5);
+    border: 1px solid #e1e1e8;
+}
+
+.prettyprint.linenums {
+    box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+ol.linenums {
+    margin: 0;
+}
+
+ol.linenums li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #fff;
+    margin-bottom: 0;
+}
+
+.pln {color: #778;}
+.com, .pun {color: #93a1a1;}
+.lit {color: #195f91;}
+.str {color: #D6264F;}
+.kwd {color: #425AD6;}
+.typ {color: #60B22E;}
+
 @media screen and (min-width: 540px) {
     #lang {
         display: flex;

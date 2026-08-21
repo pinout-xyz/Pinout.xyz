@@ -174,7 +174,7 @@ pre {
 
     img {float:left;margin:0px 5px 0px 0px;width:45px;}
 
-    a:hover span, a:hover, a:hover span.out {
+    a:hover {
         color:var(--color-dark);
     }
 }
@@ -265,7 +265,7 @@ Footer language nav
 Content Area
 */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
     line-height: 120%;
 }
@@ -275,12 +275,6 @@ section {
     background: var(--color-content-bg);
     padding-bottom: 20px;
     min-width: 0;
-
-    hr {
-        border:none;
-        background:none;
-        border-top:2px solid rgba(219, 210, 176, 0.5);
-    }
 
     h1 {
         font-size: 1.8em;
@@ -304,10 +298,6 @@ section {
     p, pre {
         margin: 1em 0 1em 0;
         line-height: 150%;
-    }
-
-    p img {
-        margin-top: 1.5em;
     }
 
     article {
@@ -377,15 +367,6 @@ Boards Page
         font-family: 'Avenir', sans-serif;
         font-weight: 500;
         color:#FFFFFF;
-        margin: 0;
-        padding: 0 5px;
-        display:block;
-    }
-
-    span {
-        color: #FFFFFF;
-        font-size: 0.75em;
-        font-weight: normal;
         margin: 0;
         padding: 0 5px;
         display:block;
@@ -542,11 +523,6 @@ Left Column
         a:hover {
             text-decoration: none;
         }
-    }
-
-    small {
-        font-size: 0.6em;
-        display: block;
     }
 
     ul {

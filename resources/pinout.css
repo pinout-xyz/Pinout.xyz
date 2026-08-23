@@ -753,30 +753,6 @@ GPIO nav
         flex-direction: column-reverse;
     }
 
-    &.flipping {
-        animation: pinout-flip .3s linear;
-
-        a {
-            animation: pinout-flip .3s steps(2, jump-none);
-        }
-    }
-
-    &.rotating {
-        animation: pinout-rotate .3s linear;
-
-        a {
-            animation: pinout-rotate-content .3s steps(2, jump-none);
-        }
-    }
-
-    &.rotating-back {
-        animation-name: pinout-rotate-back;
-
-        a {
-            animation-name: pinout-rotate-content-back;
-        }
-    }
-
     .gnd .default {color:rgba(233, 229, 210, 0.5);}
     &:hover {color:rgba(6, 53, 65, 0.5);}
 
@@ -889,7 +865,7 @@ aside {display:contents;}
         margin-top:5px;
         margin-bottom:5px;
     }
-    img {
+    .pi-orientation {
         margin-top: calc(1.5em + 12px);
         width: 100%;
         height: auto;
@@ -935,6 +911,42 @@ aside {display:contents;}
         top: 2px;
     }
 }
+
+svg.pi-orientation {
+    transform-origin: center;
+
+    /* Each label is placed by --place, then flipped back about its own centre
+       so it stays with its region but reads the right way up. */
+    [aria-label] {
+        transform-box: view-box;
+        transform-origin: 0 0;
+        transform: var(--place)
+            translate(var(--cx), var(--cy))
+            var(--flip, scale(1))
+            translate(calc(var(--cx) * -1), calc(var(--cy) * -1));
+    }
+
+    aside:has(#gpio.mirror) & {
+        --flip: scaleX(-1);
+        transform: scaleX(-1);
+
+        /* Underside views can't see the header */
+        :is(use[href="#pin"], rect:not([fill]), rect[fill="#8d5f2c"]) {
+            display: none;
+        }
+    }
+
+    aside:has(#gpio.rotate) & {
+        --flip: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    aside:has(#gpio.mirror.rotate) & {
+        --flip: scaleY(-1);
+        transform: scaleY(-1);
+    }
+}
+
 
 code {
     font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -1201,37 +1213,5 @@ ol.linenums li {
             color: var(--color-blue);
             background: #b8daf2;
         }
-    }
-}
-
-@keyframes pinout-flip {
-    from {transform: scaleX(-1);}
-    to {transform: none;}
-}
-
-@keyframes pinout-rotate {
-    from {transform: rotate(180deg);}
-    to {transform: none;}
-}
-
-@keyframes pinout-rotate-content {
-    from {transform: rotate(-180deg);}
-    to {transform: none;}
-}
-
-@keyframes pinout-rotate-back {
-    from {transform: rotate(-180deg);}
-    to {transform: none;}
-}
-
-@keyframes pinout-rotate-content-back {
-    from {transform: rotate(180deg);}
-    to {transform: none;}
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #gpio.flipping, #gpio.flipping a,
-    #gpio.rotating, #gpio.rotating a {
-        animation: none;
     }
 }

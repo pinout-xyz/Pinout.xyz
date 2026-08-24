@@ -929,11 +929,6 @@ svg.pi-orientation {
     aside:has(#gpio.mirror) & {
         --flip: scaleX(-1);
         transform: scaleX(-1);
-
-        /* Underside views can't see the header */
-        :is(use[href="#pin"], rect:not([fill]), rect[fill="#8d5f2c"]) {
-            display: none;
-        }
     }
 
     aside:has(#gpio.rotate) & {

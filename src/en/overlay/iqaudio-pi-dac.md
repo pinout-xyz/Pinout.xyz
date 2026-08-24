@@ -11,6 +11,7 @@ buy: http://www.iqaudio.co.uk
 image: 'iqaudio-pi-dac.png'
 pincount: 40
 eeprom: yes
+dtoverlay: iqaudio-dacplus
 power:
   '1':
   '2':

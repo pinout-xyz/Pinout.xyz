@@ -59,6 +59,13 @@ def eeprom(site, overlay):
     return None
 
 
+def dtoverlay(site, overlay):
+    value = overlay.get('dtoverlay')
+    if value is None:
+        return None
+    return site.strings['overlay_in_config'].format('`dtoverlay={}`'.format(value))
+
+
 def power(site, overlay):
     uses_5v = False
     uses_3v3 = False
@@ -163,6 +170,7 @@ def describe(site, overlay, warn):
     for value in (manufacturer(site, overlay),
                   form_factor(site, overlay) if 'pincount' in overlay else None,
                   eeprom(site, overlay) if 'eeprom' in overlay else None,
+                  dtoverlay(site, overlay),
                   power(site, overlay) if 'power' in overlay and 'power' not in overlay['type'] else None):
         if value is not None:
             found.append(value)

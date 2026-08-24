@@ -13,6 +13,7 @@ strings:
 - type_classic: 'Classic form-factor'
 - eeprom_detect: 'EEPROM product ID'
 - eeprom_setup: 'EEPROM auto configuration'
+- overlay_in_config: 'Needs {} in /boot/firmware/config.txt'
 - uses_i2c: 'Communication over I2C'
 - uses_spi: 'Communication over SPI'
 - uses_5v_and_3v3: 'Needs 5v and 3v3 power'

@@ -57,7 +57,8 @@ MANDATORY
 
 DESIRABLE
 * pincount: the header pin count, typically 26 or 40 but shims/custom boards are acceptable.
-* eeprom: whether the board includes an eeprom (required by 'HAT' specs!).
+* eeprom: whether the board includes an eeprom (required by 'HAT' specs!). Use 'setup' when the eeprom carries a device tree atom the firmware applies at boot, so no config.txt entry is needed.
+* dtoverlay: everything after 'dtoverlay=' on the /boot/firmware/config.txt line the board needs, eg 'papirus,panel=e2271cs021'. Only set this where a manual entry is required; leave it out when 'eeprom: setup' already covers it.
 * power: the header pins the board draws power from, listed like the pin array. Pins 2 and 4 are read as 5v, pins 1 and 17 as 3v3. Boards which supply power to the Pi should list the pins they feed.
 * i2c: if the board uses i2c, a list of the bus address(es) and device(s) identification.
 

@@ -19,6 +19,7 @@ DEFAULTS = {
     'type_classic': 'Classic form-factor',
     'eeprom_detect': 'Uses VID/PID',
     'eeprom_setup': 'Uses EEPROM',
+    'overlay_in_config': 'Needs {} in /boot/firmware/config.txt',
     'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
     'uses_5v': 'Needs 5v power',
     'uses_3v3': 'Needs 3v3 power',

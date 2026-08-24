@@ -312,7 +312,7 @@ section {
             margin: 1em 0;
 
             h2 {grid-column: 1 / -1;}
-            img {min-width:200px;max-width: 100%;}
+            img {min-width:200px;max-width: 100%;margin-top: 1em;}
         }
         a {
             color: #C92C6D; /* Just scrape an AAA small text contrast pass */

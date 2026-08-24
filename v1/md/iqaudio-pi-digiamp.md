@@ -11,6 +11,7 @@ buy: http://www.iqaudio.co.uk
 image: 'iqaudio-pi-digiamp.png'
 pincount: 40
 eeprom: yes
+dtoverlay: iqaudio-dacplus,auto_mute_amp
 power:
   '1':
   '2':

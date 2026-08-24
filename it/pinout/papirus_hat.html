@@ -5,8 +5,8 @@
 		<title>PaPiRus HAT - Assegnazione pin GPIO del Raspberry Pi</title>
 		<meta name="description" content="PaPiRus is an ePaper / eInk screen HAT module for the Raspberry Pi" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-		<link href="/resources/pinout.css?v=20260824T113728" rel="stylesheet">
-		<link href="/resources/print.css?v=20260824T113728" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260824T202210" rel="stylesheet">
+		<link href="/resources/print.css?v=20260824T202210" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/papirus_hat" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/papirus_hat" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/papirus_hat" hreflang="es"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/papirus_hat" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/papirus_hat" hreflang="x-default"/>
 		<link rel="icon" href="/resources/pinout-logo.svg" type="image/svg+xml">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260824T113728"/>
-		<!-- Build: 20260824T113728 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260824T202210"/>
+		<!-- Build: 20260824T202210 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="PaPiRus HAT - Assegnazione pin GPIO del Raspberry Pi">
@@ -187,6 +187,7 @@
 <li>Optional reset pin header (for wake on alarm with RTC)</li>
 <li>4 x optional slimline switches on top</li>
 </ul>
+<p>The <code>panel</code> parameter is required and must match the screen fitted: 1.44": <code>e1144cs021</code>, 2.0": <code>e2200cs021</code>, 2.7": <code>e2271cs021</code>.</p>
 <p>To get the HAT set up and ready to go you can use the one-line product installer:</p>
 <pre><code class="language-bash">curl -sSL https://pisupp.ly/papiruscode | sudo bash
 </code></pre>
@@ -194,6 +195,7 @@
 <li>Prodotto da <a href="/it/boards#manufacturer=Pi Supply">Pi Supply</a></li>
 <li>Fattore di forma HAT</li>
 <li>Prodotto ID EEPROM</li>
+<li>Needs <code>dtoverlay=papirus,panel=e2271cs021</code> in /boot/firmware/config.txt</li>
 <li>Alimentazione a 5v+3.3V</li>
 <li>Utilizza 19 GPIO pins</li>
 <li>Utilizza SPI</li>
@@ -213,7 +215,7 @@
 
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260824T113728'></script>
-		<script src='/resources/boards.js?v=20260824T113728'></script>
+		<script src='/resources/pinout.js?v=20260824T202210'></script>
+		<script src='/resources/boards.js?v=20260824T202210'></script>
 </body>
 </html>

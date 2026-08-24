@@ -11,6 +11,7 @@ github: https://github.com/PiSupply/PaPiRus
 image: 'papirus-zero.png'
 pincount: 40
 eeprom: no
+dtoverlay: papirus,panel=e2200cs021
 power:
   '1':
   '2':
@@ -88,6 +89,8 @@ Unlike conventional displays, ePaper reflects light, and is capable of holding t
 * Digital temperature sensor and thermal watchdog
 * GPIO breakout solder pads
 * 5 x optional slimline switches on top
+
+The `panel` parameter is required and must match the screen fitted: 1.44": `e1144cs021`, 2.0": `e2200cs021`.
 
 To get the pHAT set up and ready to go you can use the one-line product installer:
 

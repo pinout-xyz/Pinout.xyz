@@ -10,7 +10,8 @@ buy: https://shop.pimoroni.com/products/picade-hat
 github: https://github.com/pimoroni/picade-hat
 image: 'picade-hat.png'
 pincount: 40
-eeprom: setup
+eeprom: yes
+dtoverlay: picade
 power:
   '1':
   '2':

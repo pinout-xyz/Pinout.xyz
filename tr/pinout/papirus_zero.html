@@ -5,8 +5,8 @@
 		<title>PaPiRus Zero - Raspberry Pi Pinleri</title>
 		<meta name="description" content="PaPiRus Zero is an ePaper / eInk screen pHAT module for the Pi Zero" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-		<link href="/resources/pinout.css?v=20260824T113728" rel="stylesheet">
-		<link href="/resources/print.css?v=20260824T113728" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260824T202210" rel="stylesheet">
+		<link href="/resources/print.css?v=20260824T202210" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/pinout/papirus_zero" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/papirus_zero" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/pinout/papirus_zero" hreflang="es"/>
@@ -16,8 +16,8 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/pinout/papirus_zero" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/pinout/papirus_zero" hreflang="x-default"/>
 		<link rel="icon" href="/resources/pinout-logo.svg" type="image/svg+xml">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260824T113728"/>
-		<!-- Build: 20260824T113728 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260824T202210"/>
+		<!-- Build: 20260824T202210 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="PaPiRus Zero - Raspberry Pi Pinleri">
@@ -183,12 +183,14 @@
 <li>GPIO breakout solder pads</li>
 <li>5 x optional slimline switches on top</li>
 </ul>
+<p>The <code>panel</code> parameter is required and must match the screen fitted: 1.44": <code>e1144cs021</code>, 2.0": <code>e2200cs021</code>.</p>
 <p>To get the pHAT set up and ready to go you can use the one-line product installer:</p>
 <pre><code class="language-bash">curl -sSL https://pisupp.ly/papiruscode | sudo bash
 </code></pre>
 <div class="details"><h2>Details</h2><ul>
 <li>Yapılan <a href="/tr/boards#manufacturer=Pi Supply">Pi Supply</a></li>
 <li>pHAT form-factor</li>
+<li>Needs <code>dtoverlay=papirus,panel=e2200cs021</code> in /boot/firmware/config.txt</li>
 <li>5v ve 3.3V Güç</li>
 <li>Kullanan 18 GPIO pins</li>
 <li>Kullanan SPI</li>
@@ -207,7 +209,7 @@
 
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260824T113728'></script>
-		<script src='/resources/boards.js?v=20260824T113728'></script>
+		<script src='/resources/pinout.js?v=20260824T202210'></script>
+		<script src='/resources/boards.js?v=20260824T202210'></script>
 </body>
 </html>

@@ -12,6 +12,7 @@ github: https://github.com/google/aiyprojects-raspbian
 image: 'voice-hat.png'
 pincount: 40
 eeprom: yes
+dtoverlay: googlevoicehat-soundcard
 power:
   '1':
   '2':

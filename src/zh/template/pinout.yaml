@@ -1,0 +1,224 @@
+---
+name: 树莓派 GPIO 引脚定义
+pins:
+  '1':
+    name: 3v3 电源
+    type: "+3v3"
+  '2':
+    name: 5v 电源
+    type: "+5v"
+  '3':
+    name: I2C1 SDA
+    description: I2C 数据线
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 8
+      bcm: 2
+      bcmAlt: 0
+  '4':
+    name: 5v 电源
+    type: "+5v"
+  '5':
+    name: I2C1 SCL
+    description: I2C 时钟线
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 9
+      bcm: 3
+      bcmAlt: 1
+  '6':
+    name: 地线
+    type: GND
+  '7':
+    name: GPCLK0
+    type: GPIO
+    scheme:
+      wiringpi: 7
+      bcm: 4
+  '8':
+    name: UART0 TX
+    description: UART 发送
+    type: GPIO/UART
+    scheme:
+      wiringpi: 15
+      bcm: 14
+  '9':
+    name: 地线
+    type: GND
+  '10':
+    name: UART0 RX
+    description: UART 接收
+    type: GPIO/UART
+    scheme:
+      wiringpi: 16
+      bcm: 15
+  '11':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 0
+      bcm: 17
+  '12':
+    name: PCM CLK
+    description: PCM 时钟
+    type: GPIO/PCM
+    scheme:
+      wiringpi: 1
+      bcm: 18
+  '13':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 2
+      bcm: 27
+      bcmAlt: 21
+  '14':
+    name: 地线
+    type: GND
+  '15':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 3
+      bcm: 22
+  '16':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 4
+      bcm: 23
+  '17':
+    name: 3v3 电源
+    type: "+3v3"
+  '18':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 5
+      bcm: 24
+  '19':
+    name: SPI0 MOSI
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 12
+      bcm: 10
+  '20':
+    name: 地线
+    type: GND
+  '21':
+    name: SPI0 MISO
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 13
+      bcm: 9
+  '22':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 6
+      bcm: 25
+  '23':
+    name: SPI0 SCLK
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 14
+      bcm: 11
+  '24':
+    name: SPI0 CE0
+    description: SPI 片选 0
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 10
+      bcm: 8
+  '25':
+    name: 地线
+    type: GND
+  '26':
+    name: SPI0 CE1
+    description: SPI 片选 1
+    type: GPIO/SPI
+    scheme:
+      wiringpi: 11
+      bcm: 7
+  '27':
+    name: EEPROM SDA
+    description: 扩展板 EEPROM i2c 数据线
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 30
+      bcm: 0
+  '28':
+    name: EEPROM SCL
+    description: 扩展板 EEPROM i2c 时钟线
+    type: GPIO/I2C
+    scheme:
+      wiringpi: 31
+      bcm: 1
+  '29':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 21
+      bcm: 5
+  '30':
+    name: 地线
+    type: GND
+  '31':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 22
+      bcm: 6
+  '32':
+    name: PWM0
+    type: GPIO
+    description: PWM0
+    scheme:
+      wiringpi: 26
+      bcm: 12
+  '33':
+    name: PWM1
+    type: GPIO
+    description: PWM1
+    scheme:
+      wiringpi: 23
+      bcm: 13
+  '34':
+    name: 地线
+    type: GND
+  '35':
+    name: PCM FS
+    description: PCM 帧同步
+    type: GPIO/PCM
+    scheme:
+      wiringpi: 24
+      bcm: 19
+  '36':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 27
+      bcm: 16
+  '37':
+    name: ''
+    type: GPIO
+    scheme:
+      wiringpi: 25
+      bcm: 26
+  '38':
+    name: PCM DIN
+    description: PCM 数据输入
+    type: GPIO/PCM
+    scheme:
+      wiringpi: 28
+      bcm: 20
+  '39':
+    name: 地线
+    type: GND
+  '40':
+    name: PCM DOUT
+    description: PCM 数据输出
+    type: GPIO/PCM
+    scheme:
+      wiringpi: 29
+      bcm: 21

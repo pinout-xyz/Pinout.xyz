@@ -6,7 +6,7 @@ This GPIO Pinout is an interactive reference to the Raspberry Pi GPIO pins, and 
 
 ## Other Pinouts
 
-We've created Pinouts for the Raspberry Pi Pico range of boards, too, you can find them here:
+We've created Pinouts for the Raspberry Pi Pico range of boards, you can find them here:
 
 * [Raspberry Pi Pico Pinout](https://pico.pinout.xyz)
 * [Raspberry Pi Pico W Pinout](https://picow.pinout.xyz)
@@ -18,7 +18,7 @@ Plus chip planners for the RP2350A and RP2350B chips:
 * [Raspberry Pi RP2350A QFN-60 Pinout](https://rp2350a.pinout.xyz)
 * [Raspberry Pi RP2350B QFN-80 Pinout](https://rp2350b.pinout.xyz)
 
-And some experimental pinouts, too:
+And some experimental pinouts:
 
 * [Minimal Raspberry Pi 40-pin Pinout](https://pi.pinout.xyz)
 * [Espressif ESP32 C5 DevKitC Pinout](https://esp32c5.pinout.xyz)
@@ -33,5 +33,5 @@ And some experimental pinouts, too:
 
 * GPIO - General Purpose Input/Output, aka "BCM" or "Broadcom". These are the big numbers, e.g. "GPIO 22". You'll use these with RPi.GPIO and GPIO Zero.
 * Physical - or "Board" correspond to the pin's physical location on the header. These are the small numbers next to the header, e.g. "Physical Pin 15".
-* WiringPi - for Gordon Henderson's Wiring Pi library. These are shown as a tooltip when you mouseover a pin.
+* WiringPi - for the Wiring Pi library. These are shown as a tooltip when you mouseover a pin.
 * Rev 1 Pi - alternate GPIO/BCM numbers for the original, 26-pin model "A" and "B" Pi. The 40-pin header is a superset of that 26-pin one: pins 1 to 26 carry the same signals, so a 26-pin board or wiring diagram still applies.

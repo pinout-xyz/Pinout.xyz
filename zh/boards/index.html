@@ -2,11 +2,11 @@
 <html lang="zh">
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<title>Raspberry Pi GPIO Pinout</title>
-		<meta name="description" content="The comprehensive add-on boards & GPIO Pinout guide for the Raspberry Pi" />
+		<title>引路派 - 树莓派 GPIO 引脚介绍</title>
+		<meta name="description" content="简洁易懂的树莓派 GPIO 引脚图和扩展板介绍站点。" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-		<link href="/resources/pinout.css?v=20260913T061137" rel="stylesheet">
-		<link href="/resources/print.css?v=20260913T061137" rel="stylesheet" media="print">
+		<link href="/resources/pinout.css?v=20260928T134537" rel="stylesheet">
+		<link href="/resources/print.css?v=20260928T134537" rel="stylesheet" media="print">
 		<link rel="alternate" href="https://pinout.xyz/de/boards" hreflang="de"/>
 		<link rel="alternate" href="https://pinout.xyz/boards" hreflang="en"/>
 		<link rel="alternate" href="https://pinout.xyz/es/boards" hreflang="es"/>
@@ -16,12 +16,12 @@
 		<link rel="alternate" href="https://pinout.xyz/zh/boards" hreflang="zh"/>
 		<link rel="alternate" href="https://pinout.xyz/boards" hreflang="x-default"/>
 		<link rel="icon" href="/resources/pinout-logo.svg" type="image/svg+xml">
-		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260913T061137"/>
-		<!-- Build: 20260913T061137 -->
+		<meta name="generator" content="Pinout.xyz @ https://github.com/pinout-xyz/pinout.xyz, timestamp: 20260928T134537"/>
+		<!-- Build: 20260928T134537 -->
 		<meta property="og:site_name" content="pinout.xyz">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="Raspberry Pi GPIO Pinout">
-		<meta property="og:description" content="The comprehensive add-on boards & GPIO Pinout guide for the Raspberry Pi">
+		<meta property="og:title" content="引路派 - 树莓派 GPIO 引脚介绍">
+		<meta property="og:description" content="简洁易懂的树莓派 GPIO 引脚图和扩展板介绍站点。">
 		<meta property="og:image" content="https://pinout.xyz/v1/img/boards.png">
 		<meta property="og:locale" content="zh_CN">
 	</head>
@@ -29,7 +29,7 @@
 		<a class="skip-link" href="#content">Skip to content</a>
 		<header>
 			<div class="logo"><a title="Raspberry Pi GPIO Pinout home" href="/zh/"><img src="/resources/pinout-logo.svg" width="45" height="45" alt="Pinout Logo" />Raspberry Pi Pinout</a></div>
-			<nav id="lang" aria-label="Choose a language">
+			<nav id="lang" aria-label="选择一种语言">
 				<a href="https://pinout.xyz/de/boards" rel="alternate" hreflang="de" lang="de" title="Deutsch"><img src="/resources/flags/de.svg" width="16" height="12" alt="Deutsch" /></a>
 				<a href="https://pinout.xyz/boards" rel="alternate" hreflang="en" lang="en" title="English"><img src="/resources/flags/gb.svg" width="16" height="12" alt="English" /></a>
 				<a href="https://pinout.xyz/es/boards" rel="alternate" hreflang="es" lang="es" title="Español"><img src="/resources/flags/es.svg" width="16" height="12" alt="Español" /></a>
@@ -50,12 +50,12 @@
 					Support me: <a href="https://www.pcbway.com/?from=pinout.xyz04">Build your first project with <strong>PCBWay</strong></a>
 				</div>
 				<ul>
-				<li><a href="/zh/pinout/gpio">GPIO</a></li><li><a href="/zh/pinout/3v3_power">3v3 Power</a></li><li><a href="/zh/pinout/5v_power">5v Power</a></li><li><a href="/zh/pinout/ground">Ground</a></li><li><a href="/zh/pinout/1_wire">1-WIRE</a></li><li><a href="/zh/pinout/dpi">DPI</a></li><li><a href="/zh/pinout/gpclk">GPCLK</a></li><li><a href="/zh/pinout/i2c">I2C</a></li><li><a href="/zh/pinout/jtag">JTAG</a></li><li><a href="/zh/pinout/pcm">PCM</a></li><li><a href="/zh/pinout/pwm">PWM</a></li><li><a href="/zh/pinout/sdio">SDIO</a></li><li><a href="/zh/pinout/spi">SPI</a></li><li><a href="/zh/pinout/uart">UART</a></li><li><a href="/zh/pinout/wiringpi">WiringPi</a></li>
+				<li><a href="/zh/pinout/gpio">GPIO</a></li><li><a href="/zh/pinout/3v3">3V3 电源</a></li><li><a href="/zh/pinout/5v">5V 电源</a></li><li><a href="/zh/pinout/1_wire">1-WIRE</a></li><li><a href="/zh/pinout/dpi">DPI</a></li><li><a href="/zh/pinout/gpclk">GPCLK</a></li><li><a href="/zh/pinout/i2c">I2C</a></li><li><a href="/zh/pinout/jtag">JTAG</a></li><li><a href="/zh/pinout/pcm">PCM</a></li><li><a href="/zh/pinout/pwm">PWM</a></li><li><a href="/zh/pinout/sdio">SDIO</a></li><li><a href="/zh/pinout/spi">SPI</a></li><li><a href="/zh/pinout/uart">UART</a></li><li><a href="/zh/pinout/wiringpi">WiringPi</a></li><li><a href="/zh/pinout/">地线</a></li>
 				</ul>
 			</div>
 			<div id="crumbtrail">
 				<p>
-					<a class="more" href="/zh/">&laquo; Click here to return to the Raspberry Pi GPIO Pinout</a>
+					<a class="more" href="/zh/">&laquo; 点击这里返回到树莓派 GPIO 引脚图</a>
 				</p>
 			</div>
 			<section id="content" tabindex="-1">
@@ -69,15 +69,12 @@
 			</section>
 		</main>
 		<footer>
-			<p>Spotted an error, want to add your board's pinout? <a href="https://github.com/pinout-xyz/Pinout.xyz">Contribute to Pinout.xyz at GitHub</a></p>
-<p>Part of <a href="https://www.gadgetoid.com">gadgetoid.com</a>. Maintained by <a href="https://fosstodon.org/@gadgetoid">@Gadgetoid@fosstodon.org</a>.</p>
-<p>See also: <a title="Raspberry Pi Pico Pinout" href="https://pico.pinout.xyz/">Pico Pinout</a>
-| <a title="Raspberry Pi Pico W Pinout" href="https://picow.pinout.xyz/">Pico W Pinout</a>
-| <a title="Raspberry Pi Pico 2 Pinout" href="https://pico2.pinout.xyz/">Pico 2 Pinout</a>
-| <a title="Raspberry Pi Pico 2 W Pinout" href="https://pico2w.pinout.xyz/">Pico 2 W Pinout</a></p>
+			<p>如果发现错误，或者想添加新内容，请 <a href="https://github.com/pinout-xyz/Pinout.xyz">在 GitHub 上贡献代码</a></p>
+<p>本站是 <a href="https://www.gadgetoid.com">gadgetoid.com</a> 的一部分。由 <a href="https://fosstodon.org/@gadgetoid">@Gadgetoid@fosstodon.org</a> 维护。</p>
+<p>在 <a href="https://ko-fi.com/gadgetoid">Ko-Fi</a> 、 <a href="https://github.com/sponsors/Gadgetoid">GitHub</a> 或者 <a href="https://www.patreon.com/gadgetoid">Patreon</a> 上打赏，以激励我继续创作。</p>
 		</footer>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-		<script src='/resources/pinout.js?v=20260913T061137'></script>
-		<script src='/resources/boards.js?v=20260913T061137'></script>
+		<script src='/resources/pinout.js?v=20260928T134537'></script>
+		<script src='/resources/boards.js?v=20260928T134537'></script>
 </body>
 </html>

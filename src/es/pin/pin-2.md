@@ -1,5 +1,3 @@
-### Los pines de alimentación de 5v están conectados directamente a la alimentación de entrada de la Pi, y son capaces de proporcionar la totalidad de la corriente de tu fuente de alimentación, menos lo usado por la Pi.
+Los pines de alimentación de 5v están conectados directamente a la entrada de alimentación de la Pi y pueden proporcionar sin problemas toda la corriente de tu adaptador de corriente, menos la que utiliza la propia Pi.
 
-Con una fuente de alimentación decente, como la oficial de Raspberry Pi, puedes llegar a sacar sobre 1.5A.
-
-Que no te disuada lo que suena como un insignificante bajo voltaje. Puedes hacer mucho con 5v. Alimentar Arduinos, e incluso un pequeño inversor de cable Electroluminiscente directamente del pin de 5v!
+Con una fuente de alimentación adecuada, como el adaptador oficial de 3 A de la Pi 4, puedes esperar obtener aproximadamente entre 1 A y 2 A.
